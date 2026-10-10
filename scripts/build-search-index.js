@@ -188,8 +188,10 @@ function processCipherPage(file) {
   const eraKw   = eraKeywordFromText(eraText) || eraKeyword(eraCls);
 
   const secText = extractFirstBadge(html, 'sec-');
-  const kind    = classifyKind(hall.href, secText);
-  const tags    = buildTags(eraKw, hallDisp, secText);
+  // Preserve descriptive metadata; use the canonical trust label when no legacy badge remains.
+  const badgeText = secText || extractTag(html, 'trust-label__text');
+  const kind    = classifyKind(hall.href, secText || badgeText);
+  const tags    = buildTags(eraKw, hallDisp, badgeText);
 
   return {
     t: title,
@@ -197,7 +199,7 @@ function processCipherPage(file) {
     k: kind,
     h: hallDisp || '—',
     c: eraText  || '—',
-    b: secText  || '—',
+    b: badgeText || '—',
     s: summary,
     g: tags,
   };
