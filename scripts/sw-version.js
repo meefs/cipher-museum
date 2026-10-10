@@ -4,9 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-// Not precached, but loaded by nearly every exhibit page and served
-// cache-first once fetched, so a stale copy is just as damaging as a stale
-// CORE asset. Keep in sync with scripts/build-min.js TARGETS.
+// Every generated bundle participates in freshness, whether precached via
+// CORE or cached after its first fetch. Keep in sync with the minifier TARGETS.
 const EXTRA = [
   'js/ciphers/all-engines.min.js',
   'js/demo-loader.min.js',

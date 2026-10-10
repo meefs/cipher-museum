@@ -102,7 +102,7 @@ const failures = [];
 let judged = 0;
 const skipped = [];
 
-console.log(`\n━━━ Engine complexity: ${names.length} engines, ratio limit 10x ━━━\n`);
+console.log(`\n━━━ Engine complexity: ${names.length} engines, ratio limit ${RATIO_LIMIT}x ━━━\n`);
 for (const name of names) {
   const measurement = measureEngine(name, registry[name]);
   if (measurement.skipped) { skipped.push(measurement.skipped); continue; }

@@ -2355,4 +2355,5 @@
     }
   }
 };
+  if (typeof global.dispatchEvent === 'function') global.dispatchEvent(new global.Event('artifact-cards-ready'));
 })(typeof window !== "undefined" ? window : globalThis);

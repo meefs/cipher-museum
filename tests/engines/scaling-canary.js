@@ -2,7 +2,7 @@
 'use strict';
 
 const assert = require('node:assert/strict');
-const { measureEngine, run, assertCoverage } = require('./scaling');
+const { run, assertCoverage } = require('./scaling');
 
 // Real quadratic work, independent of any museum engine. Returning the input
 // keeps correctness intact; only the complexity guard can reject this mutant.
@@ -17,12 +17,18 @@ const quadratic = {
   },
   decode(text) { return text; }
 };
-const measured = measureEngine('quadratic-canary', quadratic);
-assert(!measured.skipped, 'Quadratic mutant must be measured');
-assert(measured.ratio > 10, `Quadratic work must exceed the unchanged 10x bound; observed ${measured.ratio.toFixed(2)}x`);
+// Exercise the production decision, not a second copy of its threshold. If
+// RATIO_LIMIT is weakened to 20, quadratic work is accepted and this assertion
+// fails. Positive controls ensure a guard that rejects everything also fails.
+assert.doesNotThrow(() => run({
+  caesar: global.CipherEngines.caesar,
+  otp: global.CipherEngines.otp
+}), 'Legitimate engines must pass the production guard');
+assert.throws(() => run({ quadraticCanary: quadratic }), /Engine scaling bound exceeded/,
+  'The production guard must reject real quadratic work');
 assert.throws(() => run({ invalidKey: { encode() { throw new Error('bad key'); }, decode(t) { return t; } } }),
   /not timeable/, 'Unmeasured engines must fail coverage, never silently pass');
 assert.throws(() => assertCoverage(84, 85), /coverage/, 'One missing registry engine fails coverage');
 assert.throws(() => assertCoverage(40, 85), /coverage/, 'The old forty-engine minimum is insufficient');
 assertCoverage(85, 85);
-console.log(`Complexity canary caught quadratic work (${measured.ratio.toFixed(2)}x); invalid-key coverage failure caught; checksum ${checksum}.`);
+console.log(`Production guard accepted Caesar/OTP controls and rejected quadratic work; invalid-key coverage failure caught; checksum ${checksum}.`);

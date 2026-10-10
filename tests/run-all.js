@@ -20,6 +20,7 @@ const suites = [
   'tests/test-nav-active.js',
   'tests/test-counts.js',
   'tests/test-trust-labels.js',
+  'tests/test-artifact-loading.js',
   'tests/test-exhibit-examples.js',
   'tests/test-min-fresh.js',
   'tests/test-sw-version.js',
