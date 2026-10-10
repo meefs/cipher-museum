@@ -180,6 +180,14 @@ for (const [slug, number, label, hall] of [
     Object.entries(require('../data/trust-labels.json')[label]).filter(([key]) => key !== 'icon')) });
   assert.equal(artifactData.cards[slug].securityFailure, entries.find(e => e.path === rel).note);
   assert.match(read('sw.js'), new RegExp(`'/ciphers/${slug}\\.html'`), `${slug}: precached for offline use`);
+  const core = [...read('sw.js').match(/const CORE = \[([\s\S]*?)\];/)[1].matchAll(/['"]([^'"]+)['"]/g)]
+    .map(match => match[1].replace(/^\//, ''));
+  const page = new JSDOM(read(rel));
+  for (const node of page.window.document.querySelectorAll('script[src], link[rel="stylesheet"]')) {
+    const asset = path.posix.normalize(path.posix.join('ciphers', node.getAttribute('src') || node.getAttribute('href')));
+    assert(core.includes(asset), `${slug}: cold-offline dependency ${asset} is precached`);
+  }
+  page.window.close();
 }
 for (const [page, target] of [['m209', 'hagelin-c36'], ['hagelin-c36', 'm209'],
   ['cardano-grille', 'turning-grille'], ['turning-grille', 'cardano-grille'], ['columnar', 'myszkowski'], ['myszkowski', 'columnar']]) {
