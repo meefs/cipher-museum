@@ -1,0 +1,189 @@
+{
+  "ref": null,
+  "archivedFiles": 308,
+  "allBytesPreserved": true,
+  "manifestChecks": [
+    {
+      "manifest": "docs/pr-review-2026-10-10/evidence-sha256.json",
+      "entries": 116
+    },
+    {
+      "manifest": "docs/pr-repair-2026-10-10/evidence-sha256.json",
+      "entries": 89
+    },
+    {
+      "manifest": "docs/pr-repair-2026-10-10/original-review-hashes.json",
+      "entries": 118
+    },
+    {
+      "manifest": "docs/pr-hostile-audit-2026-10-10/evidence-sha256.json",
+      "entries": 97
+    },
+    {
+      "manifest": "docs/pr-hostile-audit-2026-10-10/original-audit-hashes.json",
+      "entries": 209
+    }
+  ],
+  "localLinks": [
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/",
+      "target": "docs/pr-review-2026-10-10"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/evidence-sha256.json",
+      "target": "docs/pr-review-2026-10-10/evidence-sha256.json"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/browser-followup.js",
+      "target": "docs/pr-review-2026-10-10/browser-followup.js"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/browser-followup-results.json",
+      "target": "docs/pr-review-2026-10-10/browser-followup-results.json"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/threshold-mutation.js",
+      "target": "docs/pr-review-2026-10-10/threshold-mutation.js"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/threshold-mutation-results.json",
+      "target": "docs/pr-review-2026-10-10/threshold-mutation-results.json"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/threshold-mutation-canary.log",
+      "target": "docs/pr-review-2026-10-10/threshold-mutation-canary.log"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/timing-review-results.json",
+      "target": "docs/pr-review-2026-10-10/timing-review-results.json"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/browser-results.json",
+      "target": "docs/pr-review-2026-10-10/browser-results.json"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/pr2-mutation-results.json",
+      "target": "docs/pr-review-2026-10-10/pr2-mutation-results.json"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/ui-followup-results.json",
+      "target": "docs/pr-review-2026-10-10/ui-followup-results.json"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/generator-checks.js",
+      "target": "docs/pr-review-2026-10-10/generator-checks.js"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/corpus-accounting.json",
+      "target": "docs/pr-review-2026-10-10/corpus-accounting.json"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/preservation-results.json",
+      "target": "docs/pr-review-2026-10-10/preservation-results.json"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/history-and-tags-changes.json",
+      "target": "docs/pr-review-2026-10-10/history-and-tags-changes.json"
+    },
+    {
+      "report": "docs/pr-review-2026-10-10.md",
+      "href": "pr-review-2026-10-10/sw-independent-results.json",
+      "target": "docs/pr-review-2026-10-10/sw-independent-results.json"
+    },
+    {
+      "report": "docs/pr-repair-2026-10-10.md",
+      "href": "pr-review-2026-10-10.md",
+      "target": "docs/pr-review-2026-10-10.md"
+    },
+    {
+      "report": "docs/pr-repair-2026-10-10.md",
+      "href": "pr-repair-2026-10-10/pr1-validation.json",
+      "target": "docs/pr-repair-2026-10-10/pr1-validation.json"
+    },
+    {
+      "report": "docs/pr-repair-2026-10-10.md",
+      "href": "pr-repair-2026-10-10/pr2-validation.json",
+      "target": "docs/pr-repair-2026-10-10/pr2-validation.json"
+    },
+    {
+      "report": "docs/pr-repair-2026-10-10.md",
+      "href": "pr-repair-2026-10-10/corpus-accounting.json",
+      "target": "docs/pr-repair-2026-10-10/corpus-accounting.json"
+    },
+    {
+      "report": "docs/pr-repair-2026-10-10.md",
+      "href": "pr-repair-2026-10-10/preservation-results.json",
+      "target": "docs/pr-repair-2026-10-10/preservation-results.json"
+    },
+    {
+      "report": "docs/pr-repair-2026-10-10.md",
+      "href": "pr-repair-2026-10-10/before-browser-results.json",
+      "target": "docs/pr-repair-2026-10-10/before-browser-results.json"
+    },
+    {
+      "report": "docs/pr-repair-2026-10-10.md",
+      "href": "pr-repair-2026-10-10/after-browser-results.json",
+      "target": "docs/pr-repair-2026-10-10/after-browser-results.json"
+    },
+    {
+      "report": "docs/pr-repair-2026-10-10.md",
+      "href": "pr-repair-2026-10-10/after-additional-browser-results.json",
+      "target": "docs/pr-repair-2026-10-10/after-additional-browser-results.json"
+    },
+    {
+      "report": "docs/pr-repair-2026-10-10.md",
+      "href": "pr-repair-2026-10-10/after-mutation-results.json",
+      "target": "docs/pr-repair-2026-10-10/after-mutation-results.json"
+    },
+    {
+      "report": "docs/pr-repair-2026-10-10.md",
+      "href": "pr-repair-2026-10-10/timing-mutation-results.json",
+      "target": "docs/pr-repair-2026-10-10/timing-mutation-results.json"
+    },
+    {
+      "report": "docs/pr-completion-2026-10-10.md",
+      "href": "pr-review-2026-10-10.md",
+      "target": "docs/pr-review-2026-10-10.md"
+    },
+    {
+      "report": "docs/pr-completion-2026-10-10.md",
+      "href": "pr-repair-2026-10-10.md",
+      "target": "docs/pr-repair-2026-10-10.md"
+    },
+    {
+      "report": "docs/pr-completion-2026-10-10.md",
+      "href": "pr-hostile-audit-2026-10-10.md",
+      "target": "docs/pr-hostile-audit-2026-10-10.md"
+    },
+    {
+      "report": "docs/pr-completion-2026-10-10.md",
+      "href": "pr-completion-2026-10-10/suite-accounting.json",
+      "target": "docs/pr-completion-2026-10-10/suite-accounting.json"
+    },
+    {
+      "report": "docs/pr-completion-2026-10-10.md",
+      "href": "pr-completion-2026-10-10/archive-inventory.json",
+      "target": "docs/pr-completion-2026-10-10/archive-inventory.json"
+    },
+    {
+      "report": "docs/pr-completion-2026-10-10.md",
+      "href": "pr-completion-2026-10-10/verify-audit-archive.py",
+      "target": "docs/pr-completion-2026-10-10/verify-audit-archive.py"
+    }
+  ]
+}

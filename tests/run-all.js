@@ -19,6 +19,8 @@ const suites = [
   'tests/test-nav-reciprocity.js',
   'tests/test-nav-active.js',
   'tests/test-counts.js',
+  'tests/test-trust-labels.js',
+  'tests/test-artifact-loading.js',
   'tests/test-exhibit-examples.js',
   'tests/test-min-fresh.js',
   'tests/test-sw-version.js',
@@ -35,6 +37,8 @@ const suites = [
   'hall-of-foundations/foundations-links.test.js'
 ];
 
+const failures = [];
+
 for (const suite of suites) {
   console.log(`\n=== Running ${suite} ===`);
   const result = spawnSync(process.execPath, [suite], {
@@ -43,8 +47,12 @@ for (const suite of suites) {
   });
 
   if (result.status !== 0) {
-    process.exit(result.status || 1);
+    failures.push(suite);
   }
 }
 
+if (failures.length) {
+  console.error('\nFailed suites: ' + failures.join(', '));
+  process.exit(1);
+}
 console.log('\nAll test suites passed.');

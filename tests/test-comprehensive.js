@@ -484,7 +484,8 @@ if (fs.existsSync(ARTIFACT_CARDS_JSON)) {
       const card = parsed.cards[slug] || {};
       for (const key of required) {
         ok(`artifact card ${slug}.${key} populated`,
-          typeof card[key] === 'string' && card[key].trim().length > 0,
+          key === 'securityFailure' && card.trust === null ? card[key] === null :
+            typeof card[key] === 'string' && card[key].trim().length > 0,
           `value=${JSON.stringify(card[key])}`);
       }
     }

@@ -1,0 +1,44 @@
+[
+  {
+    "width": 1280,
+    "slug": "nema",
+    "keyboardRun": true,
+    "reset": false
+  },
+  {
+    "width": 1280,
+    "slug": "turning-grille",
+    "keyboardRun": true,
+    "reset": true
+  },
+  {
+    "width": 1280,
+    "slug": "myszkowski",
+    "initial": "Ranks: 4 3 2 1 4 3. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+    "invalidRanks": "Ranks: 4 3 2 1 4 3. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+    "output": "",
+    "gridCount": 0,
+    "status": "Use a keyword of 2–24 letters."
+  },
+  {
+    "width": 390,
+    "slug": "nema",
+    "keyboardRun": true,
+    "reset": false
+  },
+  {
+    "width": 390,
+    "slug": "turning-grille",
+    "keyboardRun": true,
+    "reset": true
+  },
+  {
+    "width": 390,
+    "slug": "myszkowski",
+    "initial": "Ranks: 4 3 2 1 4 3. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+    "invalidRanks": "Ranks: 4 3 2 1 4 3. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+    "output": "",
+    "gridCount": 0,
+    "status": "Use a keyword of 2–24 letters."
+  }
+]

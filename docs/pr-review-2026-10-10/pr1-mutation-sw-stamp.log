@@ -1,0 +1,9 @@
+━━━ Service-worker cache version ━━━
+
+  ✅  CORE parsed out of sw.js
+  ✅  every precached cache-first asset is hashed
+  ✅  minified bundles are hashed
+  ✅  every hashed file exists on disk
+
+  ❌ Service-worker version stale or incomplete (18 files hashed)
+  ❌  sw.js VERSION is current (cipher-museum-00000000)  →  declared 'cipher-museum-00000000', assets hash to 'cipher-museum-9664d4d3' — run: npm run build:js

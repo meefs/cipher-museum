@@ -1,0 +1,30 @@
+{
+  "baseRefName": "main",
+  "baseRefOid": "55266306b5904c743429288481aaa5cf09e709b8",
+  "headRefName": "fix/trust-label-audit",
+  "headRefOid": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+  "number": 1,
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-10T12:03:51Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/systemslibrarian/cipher-museum/actions/runs/38050397591/job/114208188224",
+      "name": "test",
+      "startedAt": "2026-10-10T12:00:30Z",
+      "status": "COMPLETED",
+      "workflowName": "CI"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-10T12:00:28Z",
+      "conclusion": "SKIPPED",
+      "detailsUrl": "https://github.com/systemslibrarian/cipher-museum/actions/runs/38050397591/job/114208189253",
+      "name": "validate-corpus",
+      "startedAt": "2026-10-10T12:00:28Z",
+      "status": "COMPLETED",
+      "workflowName": "CI"
+    }
+  ]
+}

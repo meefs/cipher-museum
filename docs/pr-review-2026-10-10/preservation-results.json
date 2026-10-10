@@ -1,0 +1,66 @@
+[
+  {
+    "pr": 1,
+    "artifactChanges": [],
+    "searchChanges": [
+      {
+        "u": "ciphers/aeneas-tacticus.html",
+        "field": "k",
+        "before": "cipher",
+        "after": "exhibit"
+      },
+      {
+        "u": "ciphers/chaocipher.html",
+        "field": "s",
+        "before": "Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher that permutes both alphabets after every character. Algorithm kept secret for 92 years until the 2010 disclosure; never cryptanalytically broken.",
+        "after": "Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher. Disclosed in 2010; published known-plaintext and in-depth ciphertext-only attacks recover its keys."
+      },
+      {
+        "u": "ciphers/great-cipher.html",
+        "field": "k",
+        "before": "exhibit",
+        "after": "cipher"
+      }
+    ],
+    "removedSearch": [],
+    "newSearch": [],
+    "counts": {
+      "artifactBefore": 143,
+      "artifactAfter": 143,
+      "searchBefore": 188,
+      "searchAfter": 188
+    }
+  },
+  {
+    "pr": 2,
+    "artifactChanges": [],
+    "searchChanges": [
+      {
+        "u": "halls/machines.html",
+        "field": "c",
+        "before": "Hall VII · 1467 – 1945",
+        "after": "Hall VII · 1467 – 1950s"
+      },
+      {
+        "u": "museum-map.html",
+        "field": "s",
+        "before": "Navigate all 13 exhibit halls, the Hall of Foundations mathematics annex, and 160 exhibits in The Cipher Museum. Find your next cryptographic adventure.",
+        "after": "Navigate all 13 exhibit halls, the Hall of Foundations mathematics annex, and 164 exhibits in The Cipher Museum. Find your next cryptographic adventure."
+      }
+    ],
+    "removedSearch": [],
+    "newSearch": [
+      "ciphers/hagelin-c36.html",
+      "ciphers/myszkowski.html",
+      "ciphers/nema.html",
+      "ciphers/turning-grille.html"
+    ],
+    "counts": {
+      "artifactBefore": 143,
+      "artifactAfter": 147,
+      "searchBefore": 188,
+      "searchAfter": 192
+    },
+    "preservedManifest": 160
+  }
+]

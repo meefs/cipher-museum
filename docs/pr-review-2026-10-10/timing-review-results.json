@@ -1,0 +1,787 @@
+{
+  "environment": {
+    "node": "v22.23.3",
+    "clock": "process.cpuUsage",
+    "minPositiveMicroseconds": 1,
+    "zeroStepsIn10000": 6462
+  },
+  "measurements": {
+    "adfgvx": {
+      "repeats": 16,
+      "small": 26.082,
+      "large": 133.521,
+      "ratio": 5.119277662755923
+    },
+    "adfgx": {
+      "repeats": 16,
+      "small": 27.659,
+      "large": 137.102,
+      "ratio": 4.95686756571098
+    },
+    "aeneasTacticus": {
+      "repeats": 16,
+      "small": 28.698,
+      "large": 129.07,
+      "ratio": 4.497525959997212
+    },
+    "affine": {
+      "repeats": 16,
+      "small": 22.05,
+      "large": 89.715,
+      "ratio": 4.068707482993197
+    },
+    "alberti": {
+      "repeats": 64,
+      "small": 34.758,
+      "large": 158.264,
+      "ratio": 4.553311467863513
+    },
+    "argenti": {
+      "repeats": 16,
+      "small": 36.498,
+      "large": 171.181,
+      "ratio": 4.69014740533728
+    },
+    "arnoldAndre": {
+      "repeats": 8,
+      "small": 20.076,
+      "large": 124.329,
+      "ratio": 6.192916915720263
+    },
+    "atbash": {
+      "repeats": 32,
+      "small": 31.885,
+      "large": 148.872,
+      "ratio": 4.669029324133605
+    },
+    "autokey": {
+      "repeats": 16,
+      "small": 21.834,
+      "large": 74.285,
+      "ratio": 3.4022625263350736
+    },
+    "babington": {
+      "repeats": 4,
+      "small": 25.737,
+      "large": 114.925,
+      "ratio": 4.465361153203559
+    },
+    "bacon": {
+      "repeats": 2,
+      "small": 26.421,
+      "large": 119.023,
+      "ratio": 4.50486355550509
+    },
+    "bazeries": {
+      "repeats": 8,
+      "small": 26.238,
+      "large": 133.466,
+      "ratio": 5.0867444164951605
+    },
+    "beale": {
+      "repeats": 64,
+      "small": 31.962,
+      "large": 120.475,
+      "ratio": 3.7693198172830233
+    },
+    "beaufort": {
+      "repeats": 64,
+      "small": 21.441,
+      "large": 106.581,
+      "ratio": 4.970896879809711
+    },
+    "bifid": {
+      "repeats": 16,
+      "small": 20.516,
+      "large": 86.343,
+      "ratio": 4.208568921817119
+    },
+    "bookCipher": {
+      "repeats": 16,
+      "small": 23.616,
+      "large": 100.049,
+      "ratio": 4.236492208672087
+    },
+    "caesar": {
+      "repeats": 32,
+      "small": 29.117,
+      "large": 121.938,
+      "ratio": 4.187862760586599
+    },
+    "cardanoAutokey": {
+      "repeats": 64,
+      "small": 31.193,
+      "large": 159.533,
+      "ratio": 5.114384637578944
+    },
+    "cardanoGrille": {
+      "repeats": 4,
+      "small": 24.075,
+      "large": 102.822,
+      "ratio": 4.2709034267912775
+    },
+    "chaocipher": {
+      "repeats": 2,
+      "small": 30.082,
+      "large": 146.615,
+      "ratio": 4.873844824147331
+    },
+    "chineseTelegraph": {
+      "repeats": 4,
+      "small": 23.875,
+      "large": 120.113,
+      "ratio": 5.0309109947643975
+    },
+    "columnar": {
+      "repeats": 32,
+      "small": 23.654,
+      "large": 119.21,
+      "ratio": 5.039739578929567
+    },
+    "commercialCode": {
+      "repeats": 4,
+      "small": 23.055,
+      "large": 102.444,
+      "ratio": 4.443461288223813
+    },
+    "confederateVigenere": {
+      "repeats": 32,
+      "small": 25.203,
+      "large": 125.417,
+      "ratio": 4.976272665952466
+    },
+    "copiale": {
+      "repeats": 4,
+      "small": 21.77,
+      "large": 87.639,
+      "ratio": 4.025677537896187
+    },
+    "culperRing": {
+      "repeats": 8,
+      "small": 27.518,
+      "large": 109.192,
+      "ratio": 3.968020931753761
+    },
+    "diana": {
+      "repeats": 8,
+      "small": 24.079,
+      "large": 92.609,
+      "ratio": 3.8460484239378707
+    },
+    "dictionaryCode": {
+      "repeats": 8,
+      "small": 28.869,
+      "large": 103.531,
+      "ratio": 3.586234369046382
+    },
+    "doubleTransposition": {
+      "repeats": 16,
+      "small": 20.767,
+      "large": 104.556,
+      "ratio": 5.034718543843598
+    },
+    "enigma": {
+      "repeats": 4,
+      "small": 33.381,
+      "large": 130.3,
+      "ratio": 3.903418112099698
+    },
+    "fialka": {
+      "repeats": 1,
+      "small": 35.671,
+      "large": 141.402,
+      "ratio": 3.9640604412548006
+    },
+    "foursquare": {
+      "repeats": 8,
+      "small": 27.42,
+      "large": 119.552,
+      "ratio": 4.360029175784099
+    },
+    "fractionatedMorse": {
+      "repeats": 4,
+      "small": 25.694,
+      "large": 104.257,
+      "ratio": 4.057639915933682
+    },
+    "geezMonastic": {
+      "repeats": 32,
+      "small": 39.541,
+      "large": 184.249,
+      "ratio": 4.659695000126451
+    },
+    "geheimschreiber": {
+      "repeats": 8,
+      "small": 23.381,
+      "large": 78.363,
+      "ratio": 3.35156751208246
+    },
+    "greatCipher": {
+      "repeats": 4,
+      "small": 28.82,
+      "large": 137.741,
+      "ratio": 4.779354614850798
+    },
+    "gronsfeld": {
+      "repeats": 32,
+      "small": 20.327,
+      "large": 92.827,
+      "ratio": 4.566684705072071
+    },
+    "hill": {
+      "repeats": 16,
+      "small": 23.202,
+      "large": 83.817,
+      "ratio": 3.6124903025601234
+    },
+    "homophonic": {
+      "repeats": 16,
+      "small": 43.527,
+      "large": 170.506,
+      "ratio": 3.9172467663748938
+    },
+    "jefferson": {
+      "repeats": 32,
+      "small": 29.556,
+      "large": 122.691,
+      "ratio": 4.15113682501015
+    },
+    "jn25": {
+      "repeats": 8,
+      "small": 42.136,
+      "large": 199.111,
+      "ratio": 4.725436681222707
+    },
+    "kamaSutra": {
+      "repeats": 16,
+      "small": 30.746,
+      "large": 135.148,
+      "ratio": 4.39562869966825
+    },
+    "kl7": {
+      "repeats": 1,
+      "small": 22.092,
+      "large": 88.945,
+      "ratio": 4.026118051783451
+    },
+    "kryha": {
+      "repeats": 32,
+      "small": 22.67,
+      "large": 98.638,
+      "ratio": 4.351036612262902
+    },
+    "kryptos": {
+      "repeats": 32,
+      "small": 33.21,
+      "large": 141.951,
+      "ratio": 4.274345076784101
+    },
+    "lorenz": {
+      "repeats": 16,
+      "small": 35.914,
+      "large": 140.353,
+      "ratio": 3.908030294592638
+    },
+    "m209": {
+      "repeats": 32,
+      "small": 25.232,
+      "large": 108.615,
+      "ratio": 4.30465282181357
+    },
+    "m94": {
+      "repeats": 32,
+      "small": 28.131,
+      "large": 120.526,
+      "ratio": 4.284454871849561
+    },
+    "monoalphabetic": {
+      "repeats": 16,
+      "small": 23.476,
+      "large": 101.067,
+      "ratio": 4.30512012267848
+    },
+    "morse": {
+      "repeats": 16,
+      "small": 32.705,
+      "large": 141.094,
+      "ratio": 4.314141568567497
+    },
+    "navajo": {
+      "repeats": 16,
+      "small": 38.817,
+      "large": 168.88,
+      "ratio": 4.350671097714919
+    },
+    "nihilist": {
+      "repeats": 16,
+      "small": 40.882,
+      "large": 168.379,
+      "ratio": 4.118658578347439
+    },
+    "nomenclator": {
+      "repeats": 16,
+      "small": 36.733,
+      "large": 145.093,
+      "ratio": 3.9499360248278115
+    },
+    "nullCipher": {
+      "repeats": 1,
+      "small": 35.327,
+      "large": 136.982,
+      "ratio": 3.8775440880912617
+    },
+    "otp": {
+      "repeats": 64,
+      "small": 24.577,
+      "large": 108.777,
+      "ratio": 4.4259673678642635
+    },
+    "patterson": {
+      "repeats": 64,
+      "small": 20.345,
+      "large": 136.155,
+      "ratio": 6.6923076923076925
+    },
+    "pigpen": {
+      "repeats": 16,
+      "small": 33.179,
+      "large": 138.491,
+      "ratio": 4.174055878718467
+    },
+    "playfair": {
+      "repeats": 16,
+      "small": 28.566,
+      "large": 176.178,
+      "ratio": 6.1674018063432055
+    },
+    "polybius": {
+      "repeats": 16,
+      "small": 22.965,
+      "large": 107.831,
+      "ratio": 4.695449597213151
+    },
+    "porta": {
+      "repeats": 64,
+      "small": 20.72,
+      "large": 109.013,
+      "ratio": 5.261245173745174
+    },
+    "purple": {
+      "repeats": 16,
+      "small": 32.237,
+      "large": 133.237,
+      "ratio": 4.13304587895896
+    },
+    "railFence": {
+      "repeats": 32,
+      "small": 32.174,
+      "large": 142.906,
+      "ratio": 4.441660968483869
+    },
+    "redTypeA": {
+      "repeats": 32,
+      "small": 30.658,
+      "large": 134.023,
+      "ratio": 4.371550655620066
+    },
+    "rot13": {
+      "repeats": 32,
+      "small": 26.963,
+      "large": 108.196,
+      "ratio": 4.012758224233208
+    },
+    "runningKey": {
+      "repeats": 128,
+      "small": 41.866,
+      "large": 200.546,
+      "ratio": 4.790187741843023
+    },
+    "scytale": {
+      "repeats": 32,
+      "small": 29.593,
+      "large": 146.983,
+      "ratio": 4.96681647686953
+    },
+    "sigaba": {
+      "repeats": 32,
+      "small": 22.799,
+      "large": 83.775,
+      "ratio": 3.6745032676871796
+    },
+    "slidex": {
+      "repeats": 16,
+      "small": 24.555,
+      "large": 95.78,
+      "ratio": 3.9006312360008146
+    },
+    "solitaire": {
+      "repeats": 1,
+      "small": 35.427,
+      "large": 150.248,
+      "ratio": 4.241059079233353
+    },
+    "stager": {
+      "repeats": 16,
+      "small": 33.318,
+      "large": 293.307,
+      "ratio": 8.80325949936971
+    },
+    "straddlingCheckerboard": {
+      "repeats": 32,
+      "small": 31.041,
+      "large": 122.541,
+      "ratio": 3.9477143133275345
+    },
+    "tapCode": {
+      "repeats": 4,
+      "small": 28.043,
+      "large": 123.036,
+      "ratio": 4.387405056520344
+    },
+    "trifid": {
+      "repeats": 16,
+      "small": 27.115,
+      "large": 146.194,
+      "ratio": 5.3916282500461
+    },
+    "trithemius": {
+      "repeats": 32,
+      "small": 26.535,
+      "large": 115.191,
+      "ratio": 4.341096664782363
+    },
+    "twosquare": {
+      "repeats": 16,
+      "small": 26.882,
+      "large": 140.706,
+      "ratio": 5.2342087642288515
+    },
+    "typex": {
+      "repeats": 2,
+      "small": 29.415,
+      "large": 128.059,
+      "ratio": 4.353527112017678
+    },
+    "venonaPadReuse": {
+      "repeats": 32,
+      "small": 20.757,
+      "large": 101.799,
+      "ratio": 4.904321433733198
+    },
+    "vernam": {
+      "repeats": 128,
+      "small": 31.754,
+      "large": 109.844,
+      "ratio": 3.4592177363481764
+    },
+    "vic": {
+      "repeats": 8,
+      "small": 37.019,
+      "large": 233.756,
+      "ratio": 6.3144871552446045
+    },
+    "vigenere": {
+      "repeats": 64,
+      "small": 24.796,
+      "large": 104.781,
+      "ratio": 4.225721890627521
+    },
+    "voynich": {
+      "repeats": 32,
+      "small": 35.152,
+      "large": 136.056,
+      "ratio": 3.87050523441056
+    },
+    "wadsworth": {
+      "repeats": 32,
+      "small": 28.706,
+      "large": 127.66,
+      "ratio": 4.447153905106946
+    },
+    "wallisCiphers": {
+      "repeats": 16,
+      "small": 34.188,
+      "large": 177.487,
+      "ratio": 5.191499941499941
+    },
+    "wheatstone": {
+      "repeats": 64,
+      "small": 38.143,
+      "large": 190.88,
+      "ratio": 5.004325826495031
+    },
+    "zimmermann": {
+      "repeats": 16,
+      "small": 42.078,
+      "large": 191.222,
+      "ratio": 4.544465041114122
+    }
+  },
+  "summary": {
+    "engines": 85,
+    "minRepeats": 1,
+    "maxRepeats": 128,
+    "maxRatio": 8.80325949936971
+  },
+  "actualCaesarQuadraticMutation": {
+    "measurement": {
+      "repeats": 1,
+      "small": 21.793,
+      "large": 353.722,
+      "ratio": 16.230991602808242
+    },
+    "rejected": true,
+    "correctnessPreserved": true,
+    "checksum": 20
+  },
+  "runnerContinuation": [
+    {
+      "script": "tests/engines/run.js",
+      "exit": 1,
+      "calls": [
+        [
+          "--test",
+          "--test-concurrency=4",
+          "tests/engines/specs/adfgvx.spec.js",
+          "tests/engines/specs/adfgx.spec.js",
+          "tests/engines/specs/aeneasTacticus.spec.js",
+          "tests/engines/specs/affine.spec.js",
+          "tests/engines/specs/alberti.spec.js",
+          "tests/engines/specs/argenti.spec.js",
+          "tests/engines/specs/arnoldAndre.spec.js",
+          "tests/engines/specs/atbash.spec.js",
+          "tests/engines/specs/autokey.spec.js",
+          "tests/engines/specs/babington.spec.js",
+          "tests/engines/specs/bacon.spec.js",
+          "tests/engines/specs/bazeries.spec.js",
+          "tests/engines/specs/beale.spec.js",
+          "tests/engines/specs/beaufort.spec.js",
+          "tests/engines/specs/bifid.spec.js",
+          "tests/engines/specs/bookCipher.spec.js",
+          "tests/engines/specs/caesar.spec.js",
+          "tests/engines/specs/cardanoAutokey.spec.js",
+          "tests/engines/specs/cardanoGrille.spec.js",
+          "tests/engines/specs/chaocipher.spec.js",
+          "tests/engines/specs/chineseTelegraph.spec.js",
+          "tests/engines/specs/columnar.spec.js",
+          "tests/engines/specs/commercialCode.spec.js",
+          "tests/engines/specs/confederateVigenere.spec.js",
+          "tests/engines/specs/copiale.spec.js",
+          "tests/engines/specs/culperRing.spec.js",
+          "tests/engines/specs/diana.spec.js",
+          "tests/engines/specs/dictionaryCode.spec.js",
+          "tests/engines/specs/doubleTransposition.spec.js",
+          "tests/engines/specs/enigma.spec.js",
+          "tests/engines/specs/fialka.spec.js",
+          "tests/engines/specs/foursquare.spec.js",
+          "tests/engines/specs/fractionatedMorse.spec.js",
+          "tests/engines/specs/geezMonastic.spec.js",
+          "tests/engines/specs/geheimschreiber.spec.js",
+          "tests/engines/specs/greatCipher.spec.js",
+          "tests/engines/specs/gronsfeld.spec.js",
+          "tests/engines/specs/hill.spec.js",
+          "tests/engines/specs/homophonic.spec.js",
+          "tests/engines/specs/jefferson.spec.js",
+          "tests/engines/specs/jn25.spec.js",
+          "tests/engines/specs/kamaSutra.spec.js",
+          "tests/engines/specs/kl7.spec.js",
+          "tests/engines/specs/kryha.spec.js",
+          "tests/engines/specs/kryptos.spec.js",
+          "tests/engines/specs/lorenz.spec.js",
+          "tests/engines/specs/m209.spec.js",
+          "tests/engines/specs/m94.spec.js",
+          "tests/engines/specs/monoalphabetic.spec.js",
+          "tests/engines/specs/morse.spec.js",
+          "tests/engines/specs/navajo.spec.js",
+          "tests/engines/specs/nihilist.spec.js",
+          "tests/engines/specs/nomenclator.spec.js",
+          "tests/engines/specs/nullCipher.spec.js",
+          "tests/engines/specs/otp.spec.js",
+          "tests/engines/specs/patterson.spec.js",
+          "tests/engines/specs/pigpen.spec.js",
+          "tests/engines/specs/playfair.spec.js",
+          "tests/engines/specs/polybius.spec.js",
+          "tests/engines/specs/porta.spec.js",
+          "tests/engines/specs/purple.spec.js",
+          "tests/engines/specs/railFence.spec.js",
+          "tests/engines/specs/redTypeA.spec.js",
+          "tests/engines/specs/rot13.spec.js",
+          "tests/engines/specs/runningKey.spec.js",
+          "tests/engines/specs/scytale.spec.js",
+          "tests/engines/specs/sigaba.spec.js",
+          "tests/engines/specs/slidex.spec.js",
+          "tests/engines/specs/solitaire.spec.js",
+          "tests/engines/specs/stager.spec.js",
+          "tests/engines/specs/straddlingCheckerboard.spec.js",
+          "tests/engines/specs/tapCode.spec.js",
+          "tests/engines/specs/trifid.spec.js",
+          "tests/engines/specs/trithemius.spec.js",
+          "tests/engines/specs/twosquare.spec.js",
+          "tests/engines/specs/typex.spec.js",
+          "tests/engines/specs/venonaPadReuse.spec.js",
+          "tests/engines/specs/vernam.spec.js",
+          "tests/engines/specs/vic.spec.js",
+          "tests/engines/specs/vigenere.spec.js",
+          "tests/engines/specs/voynich.spec.js",
+          "tests/engines/specs/wadsworth.spec.js",
+          "tests/engines/specs/wallisCiphers.spec.js",
+          "tests/engines/specs/wheatstone.spec.js",
+          "tests/engines/specs/zimmermann.spec.js"
+        ],
+        [
+          "tests/engines/scaling.js"
+        ],
+        [
+          "tests/engines/scaling-canary.js"
+        ],
+        [
+          "tests/engines/canary.js"
+        ],
+        [
+          "tests/test-all-engines.js"
+        ],
+        [
+          "tests/test-deep-ciphers.js"
+        ],
+        [
+          "tests/test-enigma.js"
+        ],
+        [
+          "tests/engines/corpus-replay.js"
+        ]
+      ],
+      "logs": [
+        "\n=== Property, edge, state, and performance specs ===",
+        "\n=== Engine complexity (serial — timing needs a quiet process) ===",
+        "\n=== Complexity canary (guard must catch quadratic work) ===",
+        "\n=== Mutation canary (suite must catch a corrupted engine) ===",
+        "\n=== Legacy engine integration checks ===",
+        "\n=== Known-answer and deep checks ===",
+        "\n=== Full Enigma reference vectors ===",
+        "\n=== Cipher Corpus replay ===",
+        "\nFailed suites: Engine complexity (serial — timing needs a quiet process)"
+      ]
+    },
+    {
+      "script": "tests/run-all.js",
+      "exit": 1,
+      "calls": [
+        [
+          "tests/test-all-engines.js"
+        ],
+        [
+          "tests/engines/run.js"
+        ],
+        [
+          "tests/test-deep-ciphers.js"
+        ],
+        [
+          "tests/test-comprehensive.js"
+        ],
+        [
+          "tests/test-accessibility.js"
+        ],
+        [
+          "tests/test-mobile.js"
+        ],
+        [
+          "tests/test-demo-pages.js"
+        ],
+        [
+          "tests/test-playground.js"
+        ],
+        [
+          "tests/test-structural.js"
+        ],
+        [
+          "tests/test-local-links.js"
+        ],
+        [
+          "tests/test-nav-reciprocity.js"
+        ],
+        [
+          "tests/test-nav-active.js"
+        ],
+        [
+          "tests/test-counts.js"
+        ],
+        [
+          "tests/test-trust-labels.js"
+        ],
+        [
+          "tests/test-exhibit-examples.js"
+        ],
+        [
+          "tests/test-min-fresh.js"
+        ],
+        [
+          "tests/test-sw-version.js"
+        ],
+        [
+          "tests/test-protocol-math.js"
+        ],
+        [
+          "tests/test-protocol-pages.js"
+        ],
+        [
+          "hall-of-foundations/lattice-math.test.js"
+        ],
+        [
+          "hall-of-foundations/lwe-math.test.js"
+        ],
+        [
+          "hall-of-foundations/crypto-algebra.test.js"
+        ],
+        [
+          "hall-of-foundations/ec-math.test.js"
+        ],
+        [
+          "hall-of-foundations/foundations-properties.test.js"
+        ],
+        [
+          "hall-of-foundations/exhibit-examples.test.js"
+        ],
+        [
+          "hall-of-foundations/exhibit-interaction.test.js"
+        ],
+        [
+          "hall-of-foundations/foundations-claims.test.js"
+        ],
+        [
+          "hall-of-foundations/foundations-links.test.js"
+        ]
+      ],
+      "logs": [
+        "\n=== Running tests/test-all-engines.js ===",
+        "\n=== Running tests/engines/run.js ===",
+        "\n=== Running tests/test-deep-ciphers.js ===",
+        "\n=== Running tests/test-comprehensive.js ===",
+        "\n=== Running tests/test-accessibility.js ===",
+        "\n=== Running tests/test-mobile.js ===",
+        "\n=== Running tests/test-demo-pages.js ===",
+        "\n=== Running tests/test-playground.js ===",
+        "\n=== Running tests/test-structural.js ===",
+        "\n=== Running tests/test-local-links.js ===",
+        "\n=== Running tests/test-nav-reciprocity.js ===",
+        "\n=== Running tests/test-nav-active.js ===",
+        "\n=== Running tests/test-counts.js ===",
+        "\n=== Running tests/test-trust-labels.js ===",
+        "\n=== Running tests/test-exhibit-examples.js ===",
+        "\n=== Running tests/test-min-fresh.js ===",
+        "\n=== Running tests/test-sw-version.js ===",
+        "\n=== Running tests/test-protocol-math.js ===",
+        "\n=== Running tests/test-protocol-pages.js ===",
+        "\n=== Running hall-of-foundations/lattice-math.test.js ===",
+        "\n=== Running hall-of-foundations/lwe-math.test.js ===",
+        "\n=== Running hall-of-foundations/crypto-algebra.test.js ===",
+        "\n=== Running hall-of-foundations/ec-math.test.js ===",
+        "\n=== Running hall-of-foundations/foundations-properties.test.js ===",
+        "\n=== Running hall-of-foundations/exhibit-examples.test.js ===",
+        "\n=== Running hall-of-foundations/exhibit-interaction.test.js ===",
+        "\n=== Running hall-of-foundations/foundations-claims.test.js ===",
+        "\n=== Running hall-of-foundations/foundations-links.test.js ===",
+        "\nFailed suites: tests/engines/run.js"
+      ]
+    }
+  ]
+}

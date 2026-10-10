@@ -1,0 +1,41 @@
+{"name":"unauthorized-secure","script":"tests/test-trust-labels.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  throw new AssertionError(obj);","AssertionError [ERR_ASSERTION]: ciphers/caesar.html: Secure (Modern) is reserved for the explicit allowlist","  actual: true,","  expected: false,"]}
+{"name":"secure-identity","script":"tests/test-trust-labels.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  throw new AssertionError(obj);","AssertionError [ERR_ASSERTION]: Secure exhibit identity stays fixed","  actual: 999,","  expected: 36,"]}
+{"name":"restore-broken","script":"tests/test-trust-labels.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  throw new AssertionError(obj);","AssertionError [ERR_ASSERTION]: scytale: documented breaks retain Broken","+ actual - expected","  actual: 'historical',","  expected: 'broken',"]}
+{"name":"context-hall-badge","script":"tests/test-trust-labels.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  throw new AssertionError(obj);","AssertionError [ERR_ASSERTION]: halls/ancient.html: every linked exhibit renders or omits its canonical label","  actual: 1,","  expected: 0,"]}
+{"name":"legacy-caesar-badge","script":"tests/test-trust-labels.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  throw new AssertionError(obj);","AssertionError [ERR_ASSERTION]: ciphers/caesar.html: no independent legacy security badge","  actual: 1,","  expected: 0,"]}
+{"name":"historical-definition","script":"tests/test-trust-labels.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  throw new AssertionError(obj);","AssertionError [ERR_ASSERTION]: Agreed historical definition","+ actual - expected","  actual: 'Old and secure.',","  expected: 'No longer in use, or never confirmed broken/deciphered.',"]}
+{"name":"search-prefix","script":"tests/test-trust-labels.js","exit":1,"expected":"reject","pass":true,"diagnostic":["AssertionError [ERR_ASSERTION]: Search uses neutral Trust prefix","  actual: false,","  expected: true,"]}
+{"name":"comparison-sigaba","script":"tests/test-trust-labels.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  throw new AssertionError(obj);","AssertionError [ERR_ASSERTION]: All rendered badges are current; run npm run build:trust-labels","+ actual - expected","  actual: [ 'comparison.html' ],","  expected: [],"]}
+{"name":"artifact-chaocipher","script":"tests/test-trust-labels.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  throw new AssertionError(obj);","AssertionError [ERR_ASSERTION]: ciphers/chaocipher.html: artifact history is current and separate from classification","+ actual - expected","  actual: 'Never cryptanalytically broken.',","  expected: 'Published key-recovery attacks by Lasry, Rubin, Kopal and Wacker (2016).',"]}
+{"name":"legend","script":"tests/test-trust-labels.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  throw new AssertionError(obj);","AssertionError [ERR_ASSERTION]: Legend prose uses exact shared definition","+ actual - expected","+ 'Historically secure.'","  actual: 'Historically secure.',","  expected: 'No longer in use, or never confirmed broken/deciphered.',"]}
+{"name":"sw-stamp","script":"tests/test-sw-version.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  ❌ Service-worker version stale or incomplete (18 files hashed)","  ❌  sw.js VERSION is current (cipher-museum-00000000)  →  declared 'cipher-museum-00000000', assets hash to 'cipher-museum-9664d4d3' — run: npm run build:js"]}
+{"name":"sw-crlf","script":"tests/test-sw-version.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  ✅  binary CRLF bytes are preserved in the hash","  ❌  CRLF checkout produces the same version as LF"]}
+{"name":"sw-binary","script":"tests/test-sw-version.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  ❌ Service-worker version stale or incomplete (18 files hashed)","  ❌  sw.js VERSION is current (cipher-museum-9664d4d3)  →  declared 'cipher-museum-9664d4d3', assets hash to 'cipher-museum-164a0c79' — run: npm run build:js"]}
+{"name":"timing-coverage","script":"tests/engines/scaling-canary.js","exit":1,"expected":"reject","pass":true,"diagnostic":["  ✅ 0 within linear bound   ❌ 0 worse than linear","  throw new AssertionError(obj);","AssertionError [ERR_ASSERTION]: Missing expected exception: One missing registry engine fails coverage","  actual: undefined,","  expected: /coverage/,"]}
+node:assert:150
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: All temporary source mutations restored
++ actual - expected
+
++ '?? node_modules\n'
+- ''
+
+    at Object.<anonymous> (/private/tmp/cipher-final-review-evidence/mutations.js:32:105)
+    at Module._compile (node:internal/modules/cjs/loader:1781:14)
+    at Object..js (node:internal/modules/cjs/loader:1913:10)
+    at Module.load (node:internal/modules/cjs/loader:1505:32)
+    at Function._load (node:internal/modules/cjs/loader:1309:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '?? node_modules\n',
+  expected: '',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.3

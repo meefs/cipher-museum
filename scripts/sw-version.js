@@ -4,9 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-// Not precached, but loaded by nearly every exhibit page and served
-// cache-first once fetched, so a stale copy is just as damaging as a stale
-// CORE asset. Keep in sync with scripts/build-min.js TARGETS.
+// Every generated bundle participates in freshness, whether precached via
+// CORE or cached after its first fetch. Keep in sync with the minifier TARGETS.
 const EXTRA = [
   'js/ciphers/all-engines.min.js',
   'js/demo-loader.min.js',
@@ -48,7 +47,11 @@ function swVersionFor(root) {
   const hash = crypto.createHash('sha256');
   for (const rel of bundlesFor(root)) {
     hash.update(rel);                 // a rename must change the version too
-    hash.update(fs.readFileSync(path.join(root, rel)));
+    // Git commits these text assets with LF. Hash their canonical bytes even
+    // when a local checkout uses CRLF; binary files must stay byte-for-byte.
+    const bytes = fs.readFileSync(path.join(root, rel));
+    hash.update(/\.(css|js|json|svg|webmanifest)$/i.test(rel)
+      ? Buffer.from(bytes.toString('utf8').replace(/\r\n/g, '\n')) : bytes);
   }
   return `cipher-museum-${hash.digest('hex').slice(0, 8)}`;
 }

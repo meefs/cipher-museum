@@ -1,0 +1,120 @@
+node:assert:883
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: nema: precached for offline use
+    at Object.<anonymous> (/private/tmp/cipher-final-review-mutations/tests/test-historical-exhibits.js:145:10)
+    at Module._compile (node:internal/modules/cjs/loader:1781:14)
+    at Object..js (node:internal/modules/cjs/loader:1913:10)
+    at Module.load (node:internal/modules/cjs/loader:1505:32)
+    at Function._load (node:internal/modules/cjs/loader:1309:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '/**\n' +
+    ' * THE CIPHER MUSEUM — Service Worker\n' +
+    ' * Offline support for classrooms and flaky connections.\n' +
+    ' *\n' +
+    ' * Strategy:\n' +
+    ' *   - HTML navigations: network-first, falling back to cache (content stays fresh\n' +
+    ' *     online; the whole museum keeps working offline once pages are visited).\n' +
+    ' *   - Static assets (css/js/images/json): cache-first with background refresh.\n' +
+    ' *   - The multi-megabyte corpus downloads under /public/ are never cached.\n' +
+    ' *\n' +
+    ' * VERSION is stamped automatically by `npm run build:js` from a hash of every\n' +
+    ' * asset served cache-first — the minified bundles plus the non-HTML entries of\n' +
+    ' * CORE below, read straight out of this list (scripts/sw-version.js).\n' +
+    ' * tests/test-sw-version.js fails the suite if it drifts. Old caches are purged\n' +
+    ' * on activate, so adding an asset to CORE also re-stamps VERSION.\n' +
+    ' */\n' +
+    "'use strict';\n" +
+    '\n' +
+    "const VERSION = 'cipher-museum-9bf65fa0';\n" +
+    '\n' +
+    'const CORE = [\n' +
+    "  '/',\n" +
+    "  '/index.html',\n" +
+    "  '/ciphers/myszkowski.html',\n" +
+    "  '/ciphers/turning-grille.html',\n" +
+    "  '/ciphers/hagelin-c36.html',\n" +
+    "  '/css/museum.css',\n" +
+    "  '/css/historical-demos.css',\n" +
+    "  '/js/historical-ciphers.js',\n" +
+    "  '/js/historical-demos.js',\n" +
+    "  '/js/nav.js',\n" +
+    "  '/js/footer.js',\n" +
+    "  '/js/breadcrumbs.js',\n" +
+    "  '/js/ui-delegates.js',\n" +
+    "  '/js/trust-labels.js',\n" +
+    "  '/js/search.js',\n" +
+    "  '/js/search-index.json',\n" +
+    "  '/js/artifact-cards.js',\n" +
+    "  '/hall-of-foundations/index.html',\n" +
+    "  '/hall-of-foundations/foundations.css',\n" +
+    "  '/images/icons.svg',\n" +
+    "  '/favicon.svg',\n" +
+    "  '/manifest.webmanifest',\n" +
+    "  '/images/icons/icon-192.png',\n" +
+    "  '/images/icons/icon-512.png'\n" +
+    '];\n' +
+    '\n' +
+    "self.addEventListener('install', (event) => {\n" +
+    '  event.waitUntil(\n' +
+    '    caches.open(VERSION).then((cache) => cache.addAll(CORE)).then(() => self.skipWaiting())\n' +
+    '  );\n' +
+    '});\n' +
+    '\n' +
+    "self.addEventListener('activate', (event) => {\n" +
+    '  event.waitUntil(\n' +
+    '    caches.keys()\n' +
+    '      .then((keys) => Promise.all(keys.filter((k) => k !== VERSION).map((k) => caches.delete(k))))\n' +
+    '      .then(() => self.clients.claim())\n' +
+    '  );\n' +
+    '});\n' +
+    '\n' +
+    "self.addEventListener('fetch', (event) => {\n" +
+    '  const req = event.request;\n' +
+    "  if (req.method !== 'GET') return;\n" +
+    '  const url = new URL(req.url);\n' +
+    '  if (url.origin !== self.location.origin) return;\n' +
+    '  // Never cache the corpus downloads — they are enormous and versioned separately.\n' +
+    "  if (url.pathname.startsWith('/public/')) return;\n" +
+    '\n' +
+    "  if (req.mode === 'navigate') {\n" +
+    '    // Network-first for pages.\n' +
+    '    event.respondWith(\n' +
+    '      fetch(req)\n' +
+    '        .then((res) => {\n' +
+    '          const copy = res.clone();\n' +
+    '          caches.open(VERSION).then((cache) => cache.put(req, copy));\n' +
+    '          return res;\n' +
+    '        })\n' +
+    "        .catch(() => caches.match(req).then((hit) => hit || caches.match('/index.html')))\n" +
+    '    );\n' +
+    '    return;\n' +
+    '  }\n' +
+    '\n' +
+    '  // Cache-first with background refresh for static assets.\n' +
+    '  event.respondWith(\n' +
+    '    caches.match(req).then((hit) => {\n' +
+    '      const refresh = fetch(req)\n' +
+    '        .then((res) => {\n' +
+    '          if (res && res.ok) {\n' +
+    '            const copy = res.clone();\n' +
+    '            caches.open(VERSION).then((cache) => cache.put(req, copy));\n' +
+    '          }\n' +
+    '          return res;\n' +
+    '        })\n' +
+    '        .catch(() => hit);\n' +
+    '      return hit || refresh;\n' +
+    '    })\n' +
+    '  );\n' +
+    '});\n',
+  expected: /'\/ciphers\/nema\.html'/,
+  operator: 'match',
+  diff: 'simple'
+}
+
+Node.js v22.23.3

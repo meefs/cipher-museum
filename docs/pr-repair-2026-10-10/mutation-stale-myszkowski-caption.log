@@ -1,0 +1,27 @@
+node:assert:150
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Rejected key clears derived rank explanation
++ actual - expected
+
++ 'Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.'
+- ''
+
+    at Object.<anonymous> (/private/tmp/cipher-repair-20261010-mutation/tests/test-historical-exhibits.js:135:8)
+    at Module._compile (node:internal/modules/cjs/loader:1781:14)
+    at Object..js (node:internal/modules/cjs/loader:1913:10)
+    at Module.load (node:internal/modules/cjs/loader:1505:32)
+    at Function._load (node:internal/modules/cjs/loader:1309:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.',
+  expected: '',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.3

@@ -1,0 +1,1604 @@
+{
+  "history": [
+    {
+      "slug": "adfgvx",
+      "before": "Broken",
+      "after": "Georges Painvin · 48 hours of continuous work",
+      "note": "Georges Painvin · 48 hours of continuous work"
+    },
+    {
+      "slug": "adfgx",
+      "before": "Broken",
+      "after": "Georges Painvin · 1918 · Differential frequency analysis",
+      "note": "Georges Painvin · 1918 · Differential frequency analysis"
+    },
+    {
+      "slug": "aeneas-tacticus",
+      "before": "Trivial",
+      "after": null
+    },
+    {
+      "slug": "aes",
+      "before": "Secure (no practical attack)",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "affine",
+      "before": "Trivial",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "agnes-driscoll",
+      "before": "Codebreaker Biography",
+      "after": null,
+      "note": "Codebreaker Biography"
+    },
+    {
+      "slug": "alberti-disk",
+      "before": "Broken",
+      "after": "Index of Coincidence · Frequency analysis",
+      "note": "Index of Coincidence · Frequency analysis"
+    },
+    {
+      "slug": "argenti",
+      "before": "Secure for its time · obsoleted by frequency analysis",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "atbash",
+      "before": "Trivial",
+      "after": "Inspection (it is its own inverse)",
+      "note": "Inspection (it is its own inverse)"
+    },
+    {
+      "slug": "autokey",
+      "before": "Statistical (Friedman, 1920s)",
+      "after": "Friedman's index of coincidence + autokey-aware crib dragging (1920s)",
+      "note": "Friedman's index of coincidence + autokey-aware crib dragging (1920s)"
+    },
+    {
+      "slug": "babington",
+      "before": "Broken in days · Mary executed 1587",
+      "after": "Thomas Phelippes, working for Sir Francis Walsingham · within days of interception",
+      "note": "Thomas Phelippes, working for Sir Francis Walsingham · within days of interception"
+    },
+    {
+      "slug": "bach-motif",
+      "before": "Musical cryptogram",
+      "after": null,
+      "note": "Musical cryptogram"
+    },
+    {
+      "slug": "bacon",
+      "before": "Broken",
+      "after": "Pattern recognition · Statistical analysis of A/B distribution",
+      "note": "Pattern recognition · Statistical analysis of A/B distribution"
+    },
+    {
+      "slug": "bazeries",
+      "before": "Broken",
+      "after": "Layered frequency analysis",
+      "note": "Layered frequency analysis"
+    },
+    {
+      "slug": "beaufort",
+      "before": "Broken",
+      "after": "Kasiski Examination · Index of Coincidence",
+      "note": "Kasiski Examination · Index of Coincidence"
+    },
+    {
+      "slug": "beurling",
+      "before": "Codebreaker Biography",
+      "after": null,
+      "note": "Codebreaker Biography"
+    },
+    {
+      "slug": "bible-code",
+      "before": "Debunked",
+      "after": null,
+      "note": "Debunked"
+    },
+    {
+      "slug": "bifid",
+      "before": "Broken",
+      "after": "Statistical analysis · Hill climbing",
+      "note": "Statistical analysis · Hill climbing"
+    },
+    {
+      "slug": "bill-tutte",
+      "before": "Codebreaker Biography",
+      "after": null,
+      "note": "Codebreaker Biography"
+    },
+    {
+      "slug": "bletchley-park",
+      "before": "Historical",
+      "after": null
+    },
+    {
+      "slug": "book-cipher",
+      "before": "Secure if the book is unguessable; broken otherwise",
+      "after": "Identifying the book — the Beale Cipher 2 was solved when the anonymous pamphleteer (published by James Ward, 1885) tried the Declaration of Independence",
+      "note": "Identifying the book — the Beale Cipher 2 was solved when the anonymous pamphleteer (published by James Ward, 1885) tried the Declaration of Independence"
+    },
+    {
+      "slug": "cabinet-noir",
+      "before": "Historical",
+      "after": null
+    },
+    {
+      "slug": "caesar",
+      "before": "Broken",
+      "after": "Frequency Analysis · Al-Kindi · 850 AD",
+      "note": "Frequency Analysis · Al-Kindi · 850 AD"
+    },
+    {
+      "slug": "chaocipher",
+      "before": "Strong (until disclosed)",
+      "after": "Published key-recovery attacks by Lasry, Rubin, Kopal and Wacker (2016).",
+      "note": "Published key-recovery attacks by Lasry, Rubin, Kopal and Wacker (2016)."
+    },
+    {
+      "slug": "che-guevara",
+      "before": "Broken (capture of materials)",
+      "after": "Bolivian Army capture (1967)",
+      "note": "Bolivian Army capture (1967)"
+    },
+    {
+      "slug": "chinese-telegraph",
+      "before": "Public codebook (super-enciphered when secret)",
+      "after": null,
+      "note": "Public codebook (super-enciphered when secret)"
+    },
+    {
+      "slug": "cicada-3301",
+      "before": "Multi-stage ARG / recruitment puzzle",
+      "after": null,
+      "note": "Multi-stage ARG / recruitment puzzle"
+    },
+    {
+      "slug": "columnar",
+      "before": "Broken",
+      "after": "Frequency analysis · Anagramming",
+      "note": "Frequency analysis · Anagramming"
+    },
+    {
+      "slug": "confederate-vigenere",
+      "before": "Broken",
+      "after": "Union cryptanalysts · Kasiski (published 1863)",
+      "note": "Union cryptanalysts · Kasiski (published 1863)"
+    },
+    {
+      "slug": "copiale",
+      "before": "Broken (2011)",
+      "after": "Knight, Megyesi, Schaefer (USC/Uppsala, 2011)",
+      "note": "Knight, Megyesi, Schaefer (USC/Uppsala, 2011)"
+    },
+    {
+      "slug": "da-vinci-code",
+      "before": "Pop Culture",
+      "after": null,
+      "note": "Pop Culture"
+    },
+    {
+      "slug": "dancing-men",
+      "before": "Fictional substitution cipher",
+      "after": null,
+      "note": "Fictional substitution cipher"
+    },
+    {
+      "slug": "diana-cryptosystem",
+      "before": "Unbroken (correct use)",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "dictionary-code",
+      "before": "Broken",
+      "after": "Known dictionary + position lookup",
+      "note": "Known dictionary + position lookup"
+    },
+    {
+      "slug": "diffie-hellman",
+      "before": "Secure (with 2048+ bit groups)",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "dilly-knox",
+      "before": "Codebreaker Biography",
+      "after": null,
+      "note": "Codebreaker Biography"
+    },
+    {
+      "slug": "dorabella",
+      "before": "Unsolved",
+      "after": "Nobody — over 125 years of attempts, no consensus solution",
+      "note": "Nobody — over 125 years of attempts, no consensus solution"
+    },
+    {
+      "slug": "double-transposition",
+      "before": "Weak",
+      "after": "Anagramming · Hill climbing (difficult)",
+      "note": "Anagramming · Hill climbing (difficult)"
+    },
+    {
+      "slug": "dunin",
+      "before": "Living Legend",
+      "after": null,
+      "note": "Living Legend"
+    },
+    {
+      "slug": "ecdsa",
+      "before": "Secure (with a sound nonce)",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "egyptian-substitution",
+      "before": "Decorative concealment",
+      "after": null,
+      "note": "Decorative concealment"
+    },
+    {
+      "slug": "elizebeth-friedman",
+      "before": "Codebreaker Biography",
+      "after": null,
+      "note": "Codebreaker Biography"
+    },
+    {
+      "slug": "enigma",
+      "before": "Broken",
+      "after": "Bombe machine · Crib attacks · Alan Turing · Bletchley Park",
+      "note": "Bombe machine · Crib attacks · Alan Turing · Bletchley Park"
+    },
+    {
+      "slug": "fialka",
+      "before": "Never broken (in service)",
+      "after": "Never publicly broken by cryptanalysis in operational service; obsolete today.",
+      "note": "Never publicly broken by cryptanalysis in operational service; obsolete today."
+    },
+    {
+      "slug": "field-hollers",
+      "before": "Historical (social steganography)",
+      "after": null,
+      "note": "Historical (social steganography)"
+    },
+    {
+      "slug": "four-square",
+      "before": "Moderate",
+      "after": "Digram frequency analysis · simulated annealing",
+      "note": "Digram frequency analysis · simulated annealing"
+    },
+    {
+      "slug": "fractionated-morse",
+      "before": "Broken",
+      "after": "Structural analysis of Morse patterns",
+      "note": "Structural analysis of Morse patterns"
+    },
+    {
+      "slug": "freemason-pigpen",
+      "before": "Fraternal symbol-substitution alphabet",
+      "after": null,
+      "note": "Fraternal symbol-substitution alphabet"
+    },
+    {
+      "slug": "gchq-trio",
+      "before": "Invention Biography",
+      "after": null,
+      "note": "Invention Biography"
+    },
+    {
+      "slug": "gold-bug",
+      "before": "Fictional substitution cipher",
+      "after": null,
+      "note": "Fictional substitution cipher"
+    },
+    {
+      "slug": "gravity-falls",
+      "before": "Pop Culture",
+      "after": null,
+      "note": "Pop Culture"
+    },
+    {
+      "slug": "great-cipher",
+      "before": "Historical security profile varies",
+      "after": "Étienne Bazeries (1893): syllabic frequency analysis and contextual cribs.",
+      "note": "Étienne Bazeries (1893): syllabic frequency analysis and contextual cribs."
+    },
+    {
+      "slug": "gronsfeld",
+      "before": "Broken",
+      "after": "Kasiski · Only 10 possible shifts per position",
+      "note": "Kasiski · Only 10 possible shifts per position"
+    },
+    {
+      "slug": "hill",
+      "before": "Broken",
+      "after": "Known plaintext attack (matrix algebra)",
+      "note": "Known plaintext attack (matrix algebra)"
+    },
+    {
+      "slug": "homophonic",
+      "before": "Weak",
+      "after": "Statistical analysis · Structural pattern detection",
+      "note": "Statistical analysis · Structural pattern detection"
+    },
+    {
+      "slug": "ira-ciphers",
+      "before": "Broken (key text identifiable)",
+      "after": "Jim Gillogly — hill climbing over column orders",
+      "note": "Jim Gillogly — hill climbing over column orders"
+    },
+    {
+      "slug": "jefferson-disk",
+      "before": "Broken",
+      "after": "Brute force · Probable word attack",
+      "note": "Brute force · Probable word attack"
+    },
+    {
+      "slug": "jn-25",
+      "before": "Broken in depth",
+      "after": "Station HYPO and allied Pacific units",
+      "note": "Station HYPO and allied Pacific units"
+    },
+    {
+      "slug": "joan-clarke",
+      "before": "Codebreaker Biography",
+      "after": null,
+      "note": "Codebreaker Biography"
+    },
+    {
+      "slug": "kahn",
+      "before": "Cryptohistory Biography",
+      "after": null,
+      "note": "Cryptohistory Biography"
+    },
+    {
+      "slug": "kama-sutra",
+      "before": "Trivial",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "kerckhoffs",
+      "before": "Principle (not a cipher)",
+      "after": null,
+      "note": "Principle (not a cipher)"
+    },
+    {
+      "slug": "kl-7",
+      "before": "Never broken cryptanalytically",
+      "after": "Never publicly broken by cryptanalysis in operational service; stolen keys exposed traffic.",
+      "note": "Never publicly broken by cryptanalysis in operational service; stolen keys exposed traffic."
+    },
+    {
+      "slug": "krypto-arg",
+      "before": "Promotional / collaborative cipher hunts",
+      "after": null,
+      "note": "Promotional / collaborative cipher hunts"
+    },
+    {
+      "slug": "lasry",
+      "before": "Living Legend",
+      "after": null,
+      "note": "Living Legend"
+    },
+    {
+      "slug": "leo-marks",
+      "before": "Codebreaker Biography",
+      "after": null,
+      "note": "Codebreaker Biography"
+    },
+    {
+      "slug": "lorenz",
+      "before": "Broken",
+      "after": "Bill Tutte · Known plaintext · Colossus computer (1944)",
+      "note": "Bill Tutte · Known plaintext · Colossus computer (1944)"
+    },
+    {
+      "slug": "mavis-batey",
+      "before": "Codebreaker Biography",
+      "after": null,
+      "note": "Codebreaker Biography"
+    },
+    {
+      "slug": "microdot",
+      "before": "Broken (FBI discovers technique)",
+      "after": "Physical discovery — the FBI photographically enlarged suspicious punctuation",
+      "note": "Physical discovery — the FBI photographically enlarged suspicious punctuation"
+    },
+    {
+      "slug": "mit-mystery-hunt",
+      "before": "Annual collaborative puzzle hunt",
+      "after": null,
+      "note": "Annual collaborative puzzle hunt"
+    },
+    {
+      "slug": "monoalphabetic",
+      "before": "Broken",
+      "after": "Al-Kindi · Frequency Analysis · 850 AD",
+      "note": "Al-Kindi · Frequency Analysis · 850 AD"
+    },
+    {
+      "slug": "morse",
+      "before": "Encoding, not encryption",
+      "after": null,
+      "note": "Encoding, not encryption"
+    },
+    {
+      "slug": "national-treasure",
+      "before": "Pop Culture",
+      "after": null,
+      "note": "Pop Culture"
+    },
+    {
+      "slug": "navajo-code-talkers",
+      "before": "Never Broken",
+      "after": "Never publicly broken in wartime service; a historical military code.",
+      "note": "Never publicly broken in wartime service; a historical military code."
+    },
+    {
+      "slug": "nihilist",
+      "before": "Broken",
+      "after": "Frequency analysis of digit pairs · Kasiski-equivalent",
+      "note": "Frequency analysis of digit pairs · Kasiski-equivalent"
+    },
+    {
+      "slug": "nomenclator",
+      "before": "Statistical + intercept-volume",
+      "after": "Black Chambers (Vienna, Paris, London) c. 1700–1850 by sheer intercept volume",
+      "note": "Black Chambers (Vienna, Paris, London) c. 1700–1850 by sheer intercept volume"
+    },
+    {
+      "slug": "one-time-pad",
+      "before": "Provably Secure*",
+      "after": "Requires a secret, truly random, message-length pad used once.",
+      "note": "Requires a secret, truly random, message-length pad used once."
+    },
+    {
+      "slug": "phaistos-disc",
+      "before": "Undeciphered script",
+      "after": null,
+      "note": "Undeciphered script"
+    },
+    {
+      "slug": "pigpen",
+      "before": "Broken",
+      "after": "Symbol frequency analysis · Pattern recognition",
+      "note": "Symbol frequency analysis · Pattern recognition"
+    },
+    {
+      "slug": "playfair",
+      "before": "Broken",
+      "after": "Digraph statistics · hill climbing",
+      "note": "Digraph statistics · hill climbing"
+    },
+    {
+      "slug": "polybius",
+      "before": "Broken",
+      "after": "Frequency analysis",
+      "note": "Frequency analysis"
+    },
+    {
+      "slug": "porta",
+      "before": "Broken",
+      "after": "Index of Coincidence · Statistical analysis",
+      "note": "Index of Coincidence · Statistical analysis"
+    },
+    {
+      "slug": "purple",
+      "before": "Broken (1940)",
+      "after": "Frank Rowlett, Genevieve Grotjan & the US SIS · 20 September 1940",
+      "note": "Frank Rowlett, Genevieve Grotjan & the US SIS · 20 September 1940"
+    },
+    {
+      "slug": "rail-fence",
+      "before": "Broken",
+      "after": "Brute force · Trivial keyspace",
+      "note": "Brute force · Trivial keyspace"
+    },
+    {
+      "slug": "red-army-faction",
+      "before": "Unbroken (pads not recovered)",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "rochefort",
+      "before": "Codebreaker Biography",
+      "after": null,
+      "note": "Codebreaker Biography"
+    },
+    {
+      "slug": "rosetta-stone",
+      "before": "Solved 1822 (Champollion)",
+      "after": null,
+      "note": "Solved 1822 (Champollion)"
+    },
+    {
+      "slug": "rot13",
+      "before": "Trivial",
+      "after": "Knowing the system",
+      "note": "Knowing the system"
+    },
+    {
+      "slug": "rsa",
+      "before": "Secure (with 2048+ bit keys)",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "running-key",
+      "before": "Weak",
+      "after": "Source text identification · Statistical analysis",
+      "note": "Source text identification · Statistical analysis"
+    },
+    {
+      "slug": "sator-square",
+      "before": "Palindromic word square / hidden acrostic",
+      "after": null,
+      "note": "Palindromic word square / hidden acrostic"
+    },
+    {
+      "slug": "scytale",
+      "before": "Broken",
+      "after": "Brute force — try different rod diameters",
+      "note": "Brute force — try different rod diameters"
+    },
+    {
+      "slug": "sha256",
+      "before": "Secure (no practical collision)",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "shamir-secret-sharing",
+      "before": "Information-theoretically secure",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "sigaba",
+      "before": "Never broken in service",
+      "after": "Never publicly broken by cryptanalysis in wartime service; obsolete today.",
+      "note": "Never publicly broken by cryptanalysis in wartime service; obsolete today."
+    },
+    {
+      "slug": "sigsaly",
+      "before": "Unbroken",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "solitaire",
+      "before": "Moderate",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "stager",
+      "before": "Weak",
+      "after": "Never broken in wartime — superseded after the war",
+      "note": "Never broken in wartime — superseded after the war"
+    },
+    {
+      "slug": "station-hypo",
+      "before": "Broken (JN-25)",
+      "after": null,
+      "note": "Broken (JN-25)"
+    },
+    {
+      "slug": "tap-code",
+      "before": "Broken",
+      "after": "Frequency analysis · Grid deduction",
+      "note": "Frequency analysis · Grid deduction"
+    },
+    {
+      "slug": "trifid",
+      "before": "Broken",
+      "after": "Statistical analysis",
+      "note": "Statistical analysis"
+    },
+    {
+      "slug": "two-square",
+      "before": "Weak",
+      "after": "Digram frequency · same-row leak",
+      "note": "Digram frequency · same-row leak"
+    },
+    {
+      "slug": "typex",
+      "before": "Never confirmed broken; far stronger than Enigma in service",
+      "after": "Never publicly broken by cryptanalysis in wartime service; obsolete today.",
+      "note": "Never publicly broken by cryptanalysis in wartime service; obsolete today."
+    },
+    {
+      "slug": "vernam",
+      "before": "Weak (if key reused)",
+      "after": "Secure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.",
+      "note": "Secure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure."
+    },
+    {
+      "slug": "vic",
+      "before": "Weak",
+      "after": "Never broken by cryptanalysis — exposed by defector (1957)",
+      "note": "Never broken by cryptanalysis — exposed by defector (1957)"
+    },
+    {
+      "slug": "vietnamese-underground",
+      "before": "Partially broken",
+      "after": "SIGINT (NSA/ARVN), captured materials",
+      "note": "SIGINT (NSA/ARVN), captured materials"
+    },
+    {
+      "slug": "vigenere",
+      "before": "Broken 1863",
+      "after": "Babbage ~1854 · Kasiski 1863",
+      "note": "Babbage ~1854 · Kasiski 1863"
+    },
+    {
+      "slug": "voynich",
+      "before": "Historical security profile varies",
+      "after": "No one. Every published \"solution\" has been refuted.",
+      "note": "No one. Every published \"solution\" has been refuted."
+    },
+    {
+      "slug": "wadsworth-cipher",
+      "before": "Broken",
+      "after": "Ciphertext-only stochastic hill climbing (2020)",
+      "note": "Ciphertext-only stochastic hill climbing (2020)"
+    },
+    {
+      "slug": "yardley",
+      "before": "Codebreaker Biography",
+      "after": null,
+      "note": "Codebreaker Biography"
+    },
+    {
+      "slug": "zero-knowledge-proofs",
+      "before": "Secure (foundational result)",
+      "after": "See the exhibit’s documented attacks and limitations."
+    },
+    {
+      "slug": "zodiac",
+      "before": "Solved 2020",
+      "after": "Oranchak, Blake & Van Eycke (2020)",
+      "note": "Oranchak, Blake & Van Eycke (2020)"
+    }
+  ],
+  "tags": [
+    {
+      "path": "ciphers/aeneas-tacticus.html",
+      "removed": [
+        "trivial"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/aes.html",
+      "removed": [
+        "secure (no practical attack)"
+      ],
+      "added": [
+        "secure (modern)"
+      ]
+    },
+    {
+      "path": "ciphers/affine.html",
+      "removed": [
+        "trivial"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/agnes-driscoll.html",
+      "removed": [
+        "codebreaker biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/amharic-ge-ez-ciphers.html",
+      "removed": [
+        "historical (low security)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/arabic-nomenclators.html",
+      "removed": [
+        "broken (by its own inventors)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/argenti.html",
+      "removed": [
+        "secure for its time · obsoleted by frequency analysis"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/arnold-andre.html",
+      "removed": [
+        "compromised by capture (1780)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/atbash.html",
+      "removed": [
+        "trivial"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/autokey.html",
+      "removed": [
+        "statistical (friedman, 1920s)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/babington.html",
+      "removed": [
+        "broken in days · mary executed 1587"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/bach-motif.html",
+      "removed": [
+        "musical cryptogram"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/beale.html",
+      "removed": [
+        "unsolved (beale 1 & 3)"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/beurling.html",
+      "removed": [
+        "codebreaker biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/bible-code.html",
+      "removed": [
+        "debunked"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/bill-tutte.html",
+      "removed": [
+        "codebreaker biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/bletchley-park.html",
+      "removed": [
+        "historical"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/book-cipher.html",
+      "removed": [
+        "secure if the book is unguessable; broken otherwise"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/cabinet-noir.html",
+      "removed": [
+        "historical"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/cardano-autokey.html",
+      "removed": [
+        "easy (recovery cascade)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/cardano-grille.html",
+      "removed": [
+        "weak (steganography, not encryption)"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/chaocipher.html",
+      "removed": [
+        "strong (until disclosed)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/che-guevara.html",
+      "removed": [
+        "broken (capture of materials)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/chinese-telegraph.html",
+      "removed": [
+        "public codebook (super-enciphered when secret)"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/cicada-3301.html",
+      "removed": [
+        "multi-stage arg / recruitment puzzle"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/commercial-codebooks.html",
+      "removed": [
+        "public codebooks (compression, not secrecy)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/copiale.html",
+      "removed": [
+        "broken (2011)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/culper-ring.html",
+      "removed": [
+        "codebook (never captured, never broken)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/da-vinci-code.html",
+      "removed": [
+        "pop culture"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/dagapeyeff.html",
+      "removed": [
+        "unsolved challenge cipher"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/dancing-men.html",
+      "removed": [
+        "fictional substitution cipher"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/des.html",
+      "removed": [
+        "broken (brute force, 1998)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/diana-cryptosystem.html",
+      "removed": [
+        "unbroken (correct use)"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/diffie-hellman.html",
+      "removed": [
+        "secure (with 2048+ bit groups)"
+      ],
+      "added": [
+        "secure (modern)"
+      ]
+    },
+    {
+      "path": "ciphers/dilly-knox.html",
+      "removed": [
+        "codebreaker biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/dorabella.html",
+      "removed": [
+        "unsolved"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/double-transposition.html",
+      "removed": [
+        "weak"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/dunin.html",
+      "removed": [
+        "living legend"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/ecdsa.html",
+      "removed": [
+        "secure (with a sound nonce)"
+      ],
+      "added": [
+        "secure (modern)"
+      ]
+    },
+    {
+      "path": "ciphers/egyptian-substitution.html",
+      "removed": [
+        "decorative concealment"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/elizebeth-friedman.html",
+      "removed": [
+        "codebreaker biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/fialka.html",
+      "removed": [
+        "never broken (in service)"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/field-hollers.html",
+      "removed": [
+        "historical (social steganography)"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/four-square.html",
+      "removed": [
+        "moderate"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/freemason-pigpen.html",
+      "removed": [
+        "fraternal symbol-substitution alphabet"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/gchq-trio.html",
+      "removed": [
+        "invention biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/geheimschreiber.html",
+      "removed": [
+        "broken (beurling, 1940)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/gold-bug.html",
+      "removed": [
+        "fictional substitution cipher"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/gravity-falls.html",
+      "removed": [
+        "pop culture"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/histiaeus-tattoo.html",
+      "removed": [
+        "steganography (concealment)"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/homophonic.html",
+      "removed": [
+        "weak"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/ira-ciphers.html",
+      "removed": [
+        "broken (key text identifiable)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/jn-25.html",
+      "removed": [
+        "broken in depth"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/joan-clarke.html",
+      "removed": [
+        "codebreaker biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/kahn.html",
+      "removed": [
+        "cryptohistory biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/kama-sutra.html",
+      "removed": [
+        "trivial"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/kerckhoffs.html",
+      "removed": [
+        "principle (not a cipher)"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/kl-7.html",
+      "removed": [
+        "never broken cryptanalytically"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/kryha.html",
+      "removed": [
+        "broken (friedman, 1933)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/krypto-arg.html",
+      "removed": [
+        "promotional / collaborative cipher hunts"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/kryptos.html",
+      "removed": [
+        "k1–k3 broken · k4 unsolved"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/lasry.html",
+      "removed": [
+        "living legend"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/latin-american-codebooks.html",
+      "removed": [
+        "low (commercial, not military)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/leo-marks.html",
+      "removed": [
+        "codebreaker biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/m-94.html",
+      "removed": [
+        "tactical only"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/m209.html",
+      "removed": [
+        "strong (tactical)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/mary-stuart-castelnau-letters.html",
+      "removed": [
+        "solved 2022 — after 436 years"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/mavis-batey.html",
+      "removed": [
+        "codebreaker biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/mccormick.html",
+      "removed": [
+        "unsolved homicide-evidence cipher"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/microdot.html",
+      "removed": [
+        "broken (fbi discovers technique)"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/mit-mystery-hunt.html",
+      "removed": [
+        "annual collaborative puzzle hunt"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/morse.html",
+      "removed": [
+        "encoding, not encryption"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/national-treasure.html",
+      "removed": [
+        "pop culture"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/navajo-code-talkers.html",
+      "removed": [
+        "never broken"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/nomenclator.html",
+      "removed": [
+        "statistical + intercept-volume"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/null-cipher.html",
+      "removed": [
+        "weak (concealment, not encryption)"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/one-time-pad.html",
+      "removed": [
+        "provably secure*"
+      ],
+      "added": [
+        "secure (modern)"
+      ]
+    },
+    {
+      "path": "ciphers/patterson-jefferson-cipher.html",
+      "removed": [
+        "solved 2007 — after 206 years"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/phaistos-disc.html",
+      "removed": [
+        "undeciphered script"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/purple.html",
+      "removed": [
+        "broken (1940)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/red-army-faction.html",
+      "removed": [
+        "unbroken (pads not recovered)"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/red-type-a.html",
+      "removed": [
+        "broken by sis"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/rochefort.html",
+      "removed": [
+        "codebreaker biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/rosetta-stone.html",
+      "removed": [
+        "solved 1822 (champollion)"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/rot13.html",
+      "removed": [
+        "trivial"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/rsa.html",
+      "removed": [
+        "secure (with 2048+ bit keys)"
+      ],
+      "added": [
+        "secure (modern)"
+      ]
+    },
+    {
+      "path": "ciphers/running-key.html",
+      "removed": [
+        "weak"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/sator-square.html",
+      "removed": [
+        "palindromic word square / hidden acrostic"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/sha256.html",
+      "removed": [
+        "secure (no practical collision)"
+      ],
+      "added": [
+        "secure (modern)"
+      ]
+    },
+    {
+      "path": "ciphers/shamir-secret-sharing.html",
+      "removed": [
+        "information-theoretically secure"
+      ],
+      "added": [
+        "secure (modern)"
+      ]
+    },
+    {
+      "path": "ciphers/shugborough.html",
+      "removed": [
+        "unsolved monument inscription"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/sigaba.html",
+      "removed": [
+        "never broken in service"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/sigsaly.html",
+      "removed": [
+        "unbroken"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/slidex.html",
+      "removed": [
+        "tactical (intentionally weak)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/solitaire.html",
+      "removed": [
+        "moderate"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/somerton-man.html",
+      "removed": [
+        "unsolved cold-war-era inscription"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/stager.html",
+      "removed": [
+        "weak"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/station-hypo.html",
+      "removed": [
+        "broken (jn-25)"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/straddling-checkerboard.html",
+      "removed": [
+        "weak (alone) · strong (in vic)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/trithemius.html",
+      "removed": [
+        "easy"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/two-square.html",
+      "removed": [
+        "weak"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/typex.html",
+      "removed": [
+        "never confirmed broken; far stronger than enigma in service"
+      ],
+      "added": [
+        "historical only"
+      ]
+    },
+    {
+      "path": "ciphers/venona.html",
+      "removed": [
+        "partial break (key reuse exploit)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/vernam.html",
+      "removed": [
+        "weak (if key reused)"
+      ],
+      "added": [
+        "secure (modern)"
+      ]
+    },
+    {
+      "path": "ciphers/vic.html",
+      "removed": [
+        "weak"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/vietnamese-underground.html",
+      "removed": [
+        "partially broken"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/vigenere.html",
+      "removed": [
+        "broken 1863"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/wallis-ciphers.html",
+      "removed": [
+        "royalist nomenclators — broken by wallis"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/wheatstone.html",
+      "removed": [
+        "weak (1867 standards)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/yardley.html",
+      "removed": [
+        "codebreaker biography"
+      ],
+      "added": []
+    },
+    {
+      "path": "ciphers/zero-knowledge-proofs.html",
+      "removed": [
+        "secure (foundational result)"
+      ],
+      "added": [
+        "secure (modern)"
+      ]
+    },
+    {
+      "path": "ciphers/zimmermann.html",
+      "removed": [
+        "broken (room 40)"
+      ],
+      "added": [
+        "broken"
+      ]
+    },
+    {
+      "path": "ciphers/zodiac.html",
+      "removed": [
+        "solved 2020"
+      ],
+      "added": [
+        "broken"
+      ]
+    }
+  ]
+}

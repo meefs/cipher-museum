@@ -1,0 +1,1079 @@
+diff --git a/README.md b/README.md
+index 570e735..920a14a 100644
+--- a/README.md
++++ b/README.md
+@@ -134,7 +134,7 @@ All 140 cipher exhibits, alphabetically. Biographies and context pages are noted
+ | [Caesar Cipher](https://ciphermuseum.com/ciphers/caesar.html) | Ancient Rome | Caesar cipher — the simplest substitution cipher, used by Julius Caesar around 58 BC with a shift of 3. Broken by Al-Kindi's frequency analysis circa 850 AD. | Exhaustive search: 25 possible shifts; frequency analysis immediate |
+ | [Cardano Autokey 1550 · the original self-keying cipher](https://ciphermuseum.com/ciphers/cardano-autokey.html) | Italian Renaissance · 1550 | Girolamo Cardano's 1550 autokey — prime the keystream with a single seed letter, then continue it with the plaintext itself. The first published self-keying scheme. | Pattern repetition + frequency analysis on the reused-key segments |
+ | [Cardano Grille 1550 · steganography by template](https://ciphermuseum.com/ciphers/cardano-grille.html) | Italian Renaissance · 1550 | Girolamo Cardano's 1550 grille — a card with cut-out windows. Write the secret through the windows; fill the rest with innocuous text; the recipient overlays an identical grille to read. | Geometric reconstruction; visual pattern search for the grille shape |
+-| [Chaocipher](https://ciphermuseum.com/ciphers/chaocipher.html) | Modern · 1918 | Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher that permutes both alphabets after every character. Unsolved for 90 years until Rubin's 2010 break. | Cryptanalysis by Moshe Rubin (2010) after algorithm finally published |
++| [Chaocipher](https://ciphermuseum.com/ciphers/chaocipher.html) | Modern · 1918 | Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher, disclosed in 2010 after 92 years. | Known-plaintext key recovery (2010); in-depth cryptanalysis by Lasry, Rubin, Kopal & Wacker (2016) |
+ | [Che Guevara's VIC Variant](https://ciphermuseum.com/ciphers/che-guevara.html) | Cold War · 1956–1967 | Ernesto 'Che' Guevara used a modified VIC straddling-checkerboard cipher for guerrilla communications in Bolivia and the Congo, 1956–1967. | VIC variant; traffic analysis & probable-word attack by CIA/FBI |
+ | [Chinese Telegraph Code Standard Telegraph Codebook · 1881](https://ciphermuseum.com/ciphers/chinese-telegraph.html) | Late Qing → PRC · 1881–1980s | The 1881 Chinese Telegraph Code mapped 7,000+ Chinese characters to 4-digit code groups so they could ride the same Morse-style telegraph network as the Latin alphabet — and was super-enciphered for diplomatic and military traffic in the 20th century. | Codebook capture; frequency analysis on the numeric groups |
+ | [Cicada 3301](https://ciphermuseum.com/ciphers/cicada-3301.html) | Internet era · 2012–2014 | An anonymous 2012–2014 internet recruitment puzzle that combined steganography, classical ciphers, GPS coordinates on physical posters, and a copy of the Liber Primus hand-illustrated in glyphic runes. | Community crowd-sourced; each layer solved with open-source analysis |
+@@ -406,7 +406,22 @@ cipher-museum/
+ 
+ ## 🧪 Testing
+ 
+-The museum ships with two layers of tests, **all green**: the site suites (rendered DOM, accessibility, links, demo pages) and a dedicated engine verification suite governed by [docs/CIPHER_ENGINE_STANDARD.md](docs/CIPHER_ENGINE_STANDARD.md).
++Trust labels are classified in `data/exhibit-trust.json` for all 160 exhibits;
++`null` omits all trust classifications for context exhibits. Shared definitions
++live in `data/trust-labels.json`; historical evidence and usage qualifications
++are separate notes. After editing either source, run `npm run build:metadata`
++and `npm run build:js`. The trust-label suite checks headers, quick facts, hall
++cards, map rows and legends, search rendering, comparison filters, and live
++artifact cards against an independent nine-entry Secure (Modern) allowlist.
++
++Use Node 22, matching CI. The serial complexity guard batches 25 KB round trips
++until they consume measurable CPU time, then measures the same batch at 100 KB.
++All 85 registry engines must be measured; the 10× scaling bound is unchanged.
++A quadratic canary and incomplete-coverage cases prove that the guard rejects
++regressions. Cache versions normalize text line endings while preserving binary
++bytes, so LF and CRLF checkouts generate the same version.
++
++The museum ships with two layers of tests: the site suites (rendered DOM, accessibility, links, demo pages) and a dedicated engine verification suite governed by [docs/CIPHER_ENGINE_STANDARD.md](docs/CIPHER_ENGINE_STANDARD.md).
+ 
+ ```bash
+ # One-time setup (needed for the demo-page simulator and fast-check)
+diff --git a/js/artifact-cards.js b/js/artifact-cards.js
+index 0730099..ee3e8fd 100644
+--- a/js/artifact-cards.js
++++ b/js/artifact-cards.js
+@@ -32,14 +32,15 @@
+   var grid = document.createElement('dl');
+   grid.className = 'artifact-card-grid';
+ 
+-  function addField(label, value) {
++  function addField(label, value, trust) {
+     var dt = document.createElement('dt');
+     dt.className = 'artifact-card-label';
+     dt.textContent = label;
+ 
+     var dd = document.createElement('dd');
+     dd.className = 'artifact-card-value';
+-    dd.textContent = value || 'Not specified';
++    if (trust) dd.innerHTML = window.TrustLabels.badge(trust);
++    else dd.textContent = value || 'Not specified';
+ 
+     grid.appendChild(dt);
+     grid.appendChild(dd);
+@@ -52,7 +53,10 @@
+   addField('Used By', card.usedBy);
+   addField('Key Type', card.keyType);
+   addField('Key Idea', card.keyIdea);
+-  addField('Security Failure', card.securityFailure);
++  if (card.trust) {
++    addField('Trust', card.trust.text, card.trust);
++    addField('Security History / Limits', card.securityFailure);
++  }
+   addField('Modern Lesson', card.modernLesson);
+ 
+   section.appendChild(title);
+diff --git a/js/search.js b/js/search.js
+index 7b8e9e8..8d29994 100644
+--- a/js/search.js
++++ b/js/search.js
+@@ -45,6 +45,8 @@
+             hall: e.h,
+             created: e.c,
+             broken: e.b,
++            trust: e.trust || null,
++            note: e.n || '',
+             summary: e.s,
+             tags: e.g || [],
+             _hay: (
+diff --git a/package.json b/package.json
+index 7f56aec..a3b4f4f 100644
+--- a/package.json
++++ b/package.json
+@@ -20,7 +20,10 @@
+     "build:search-index": "node scripts/build-search-index.js",
+     "build:js": "node scripts/build-min.js",
+     "lint:html": "htmlhint \"ciphers/*.html\" \"halls/*.html\" \"*.html\" \"lab/*.html\" \"tours/*.html\" \"community/*.html\" \"hall-of-foundations/*.html\"",
+-    "build:counts": "node scripts/build-counts.js"
++    "build:counts": "node scripts/build-counts.js",
++    "build:trust-labels": "node scripts/build-trust-labels.js",
++    "build:artifact-cards": "node scripts/build-artifact-cards.js",
++    "build:metadata": "npm run build:trust-labels && npm run build:search-index && npm run build:artifact-cards"
+   },
+   "repository": {
+     "type": "git",
+@@ -38,4 +41,4 @@
+     "ajv": "^8.20.0",
+     "ajv-formats": "^2.1.1"
+   }
+-}
+\ No newline at end of file
++}
+diff --git a/scripts/build-artifact-cards.js b/scripts/build-artifact-cards.js
+index d55e479..8dc6943 100644
+--- a/scripts/build-artifact-cards.js
++++ b/scripts/build-artifact-cards.js
+@@ -9,6 +9,8 @@ const ciphersDir = path.join(repo, 'ciphers');
+ const outDir = path.join(repo, 'data');
+ const outJson = path.join(outDir, 'artifact-cards.json');
+ const outJs = path.join(repo, 'js', 'artifact-cards-data.js');
++const { loadTrust } = require('./exhibit-trust');
++const { byPath, trustFor } = loadTrust(repo);
+ 
+ function titleizeSlug(slug) {
+   return slug
+@@ -72,11 +74,6 @@ function eraFromHtml(html) {
+   return 'Historical period varies';
+ }
+ 
+-function securityFromHtml(html) {
+-  const sec = between(html, /<span class="badge\s+sec-[^"]*">([\s\S]*?)<\/span>/i);
+-  return sec ? stripTags(sec) : 'Historical security profile varies';
+-}
+-
+ function hallFromHtml(html) {
+   const hall = html.match(/<a href="\.\.\/halls\/[^"]+\.html">([^<]*Hall[^<]*)<\/a>/i);
+   return hall ? stripTags(hall[1]) : 'Museum exhibit';
+@@ -88,7 +85,8 @@ function lessonFromHtml(html) {
+   return 'Security depends on design quality, key management, and implementation.';
+ }
+ 
+-function main() {
++function main(check = false) {
++  const outputs = new Map();
+   const files = fs.readdirSync(ciphersDir).filter((f) => f.endsWith('.html')).sort();
+   const cards = {};
+ 
+@@ -131,6 +129,8 @@ function main() {
+     const title = stripTags(between(html, /<h1[^>]*>([\s\S]*?)<\/h1>/i, titleizeSlug(slug)));
+     const hall = hallFromHtml(html);
+     const family = familyFromHall(hall);
++    const trust = trustFor('ciphers/' + file);
++    const entry = byPath.get('ciphers/' + file);
+ 
+     cards[slug] = {
+       name: title || titleizeSlug(slug),
+@@ -145,7 +145,8 @@ function main() {
+       usedBy: 'Historical operators, states, or communities documented for this exhibit',
+       keyType: keyTypeFromHtml(html),
+       keyIdea: `${family} transformation of plaintext into protected form`,
+-      securityFailure: securityFromHtml(html),
++      trust,
++      securityFailure: trust ? (entry.note || 'See the exhibit’s documented attacks and limitations.') : null,
+       modernLesson: lessonFromHtml(html)
+     };
+     if (OVERRIDES[slug]) Object.assign(cards[slug], OVERRIDES[slug]);
+@@ -158,7 +159,14 @@ function main() {
+     totalExhibits: files.length,
+     cards
+   }, null, 2) + '\n';
+-  fs.writeFileSync(outJson, jsonText, 'utf8');
++  let output = jsonText;
++  if (fs.existsSync(outJson)) {
++    const previous = JSON.parse(fs.readFileSync(outJson, 'utf8'));
++    const next = JSON.parse(jsonText);
++    delete previous.generatedAt; delete next.generatedAt;
++    if (JSON.stringify(previous) === JSON.stringify(next)) output = fs.readFileSync(outJson, 'utf8');
++  }
++  outputs.set(outJson, output);
+ 
+   const jsText = [
+     "'use strict';",
+@@ -167,11 +175,18 @@ function main() {
+     '})(typeof window !== "undefined" ? window : globalThis);',
+     ''
+   ].join('\n');
+-  fs.writeFileSync(outJs, jsText, 'utf8');
++  outputs.set(outJs, jsText);
++  for (const [file, expected] of outputs) {
++    if (!check) { fs.writeFileSync(file, expected, 'utf8'); continue; }
++    if (!fs.existsSync(file) || fs.readFileSync(file, 'utf8') !== expected) {
++      console.error(`Stale artifact metadata: ${path.relative(repo, file)}`);
++      process.exitCode = 1;
++    }
++  }
+ 
+   console.log(`Built artifact cards for ${files.length} exhibits.`);
+   console.log(`- ${path.relative(repo, outJson)}`);
+   console.log(`- ${path.relative(repo, outJs)}`);
+ }
+ 
+-main();
++main(process.argv.includes('--check'));
+diff --git a/scripts/build-search-index.js b/scripts/build-search-index.js
+index 1980712..9d8a8f1 100644
+--- a/scripts/build-search-index.js
++++ b/scripts/build-search-index.js
+@@ -19,6 +19,8 @@ const path = require('path');
+ 
+ const ROOT = path.resolve(__dirname, '..');
+ const OUT  = path.join(ROOT, 'js', 'search-index.json');
++const { loadTrust } = require('./exhibit-trust');
++const { byPath, trustFor } = loadTrust(ROOT);
+ 
+ // ── HTML entity decoder ───────────────────────────────────────────────────────
+ 
+@@ -187,9 +189,12 @@ function processCipherPage(file) {
+   // Derive era keyword: prefer text content (reliable) over CSS class (can be mismatched)
+   const eraKw   = eraKeywordFromText(eraText) || eraKeyword(eraCls);
+ 
+-  const secText = extractFirstBadge(html, 'sec-');
+-  const kind    = classifyKind(hall.href, secText);
+-  const tags    = buildTags(eraKw, hallDisp, secText);
++  const rel = 'ciphers/' + slug;
++  const trust = trustFor(rel);
++  const note = byPath.get(rel).note || '';
++  const badgeText = trust?.text || '';
++  const kind    = classifyKind(hall.href, note || badgeText);
++  const tags    = buildTags(eraKw, hallDisp, badgeText);
+ 
+   return {
+     t: title,
+@@ -197,7 +202,9 @@ function processCipherPage(file) {
+     k: kind,
+     h: hallDisp || '—',
+     c: eraText  || '—',
+-    b: secText  || '—',
++    b: badgeText || '—',
++    trust,
++    n: note,
+     s: summary,
+     g: tags,
+   };
+@@ -402,7 +409,11 @@ function main() {
+     generated: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
+     entries,
+   };
+-  fs.writeFileSync(OUT, JSON.stringify(out));
++  const existing = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : null;
++  const current = existing && JSON.stringify(existing.entries) === JSON.stringify(entries);
++  if (process.argv.includes('--check')) {
++    if (!current) { console.error('Search index is stale.'); process.exitCode = 1; }
++  } else if (!current) fs.writeFileSync(OUT, JSON.stringify(out));
+ 
+   // Report
+   const kinds = {};
+diff --git a/scripts/build-trust-labels.js b/scripts/build-trust-labels.js
+new file mode 100644
+index 0000000..923885a
+--- /dev/null
++++ b/scripts/build-trust-labels.js
+@@ -0,0 +1,148 @@
++#!/usr/bin/env node
++'use strict';
++
++// data/exhibit-trust.json owns trust classification. HTML is generated output:
++// exhibit headers, all hall cards, map rows/legend, and comparison metadata.
++// null means omit the badge; it is not a fifth visitor-facing category.
++const fs = require('fs');
++const path = require('path');
++
++const ROOT = path.resolve(__dirname, '..');
++const { loadTrust, LABELS } = require('./exhibit-trust');
++const { badge: renderBadge, escapeHTML } = require('../js/trust-labels');
++
++function compactLabel(key, labels = LABELS) {
++  return key === null ? '' : renderBadge({ key, ...labels[key] });
++}
++
++function exhibitLabel(key, labels = LABELS) {
++  if (key === null) return '';
++  const { icon } = labels[key];
++  const text = escapeHTML(labels[key].text), description = escapeHTML(labels[key].description);
++  return `<div class="trust-label-wrap"><a class="trust-label trust-label--${key}" href="../museum-map.html#trust-labels" title="${description}" aria-label="Trust label: ${text}. ${description}"><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icon}</svg><span class="trust-label__text">${text}</span></a></div>`;
++}
++
++function buildTrustLabels({ root = ROOT, check = false } = {}) {
++  const { exhibits, byPath, labels } = loadTrust(root);
++
++  // Assemble all outputs before writing, so a missing roster row fails before
++  // any HTML is changed. Only the small badge fragments are regenerated.
++  const outputs = new Map();
++  for (const entry of exhibits) {
++    const html = fs.readFileSync(path.join(root, entry.path), 'utf8');
++    const badge = exhibitLabel(entry.label, labels);
++    const blocks = html.match(/<div class="trust-label-wrap">[\s\S]*?<\/div>/g) || [];
++    if (blocks.length > 1) throw new Error(`Duplicate trust label: ${entry.path}`);
++    let next = html;
++    if (blocks.length) {
++      next = badge ? html.replace(blocks[0], badge)
++        : html.replace(/^[ \t]*<div class="trust-label-wrap">[\s\S]*?<\/div>\r?\n/m, '');
++    } else if (badge) {
++      if (!/<h1\b[^>]*>[\s\S]*?<\/h1>/.test(html)) throw new Error(`Missing exhibit heading: ${entry.path}`);
++      const newline = html.includes('\r\n') ? '\r\n' : '\n';
++      next = html.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)/, `$1${newline}  ${badge}`);
++    }
++    // Retire independent security badges. Historical/usage notes are prose,
++    // separate from classification, and remain available in generated metadata.
++    next = next.replace(/^[ \t]*<span class="badge\s+sec-[^"]*">[\s\S]*?<\/span>\r?\n/gm, '')
++      .replace(/^[ \t]*<p class="exhibit-status-note">[\s\S]*?<\/p>\r?\n?/gm, '');
++    if (entry.note) next = next.replace(/(<p class="page-tagline">[\s\S]*?<\/p>)/,
++      `$1\n  <p class="exhibit-status-note">${escapeHTML(entry.note)}</p>`);
++    if (entry.path.startsWith('ciphers/') && !next.includes('src="../js/trust-labels.js"')) {
++      next = next.replace(/(<script\b[^>]*src="\.\.\/js\/[^"]+"[^>]*>)/,
++        '<script src="../js/trust-labels.js"></script>\n$1');
++    }
++    next = next.replace(/<tr><td>(?:Security|Trust)<\/td><td>[\s\S]*?<\/td><\/tr>/g,
++      entry.label === null ? '' : `<tr><td>Trust</td><td>${compactLabel(entry.label, labels)}</td></tr>`);
++    next = next.replace(/<div class="fact"><span class="fact-label">(?:Security|Trust)<\/span><span class="fact-value">[\s\S]*?<\/span><\/div>/g,
++      entry.label === null ? '' : `<div class="fact"><span class="fact-label">Trust</span><span class="fact-value">${compactLabel(entry.label, labels)}</span></div>`);
++    outputs.set(entry.path, next);
++  }
++
++  const rosterPaths = new Set();
++  const mapHtml = fs.readFileSync(path.join(root, 'museum-map.html'), 'utf8');
++  outputs.set('museum-map.html', mapHtml.replace(
++    /(<tr><td>(\d+)<\/td><td><a href="(ciphers\/[^"]+\.html)">[^<]+<\/a>)([\s\S]*?)(<\/td><td>[^<]+<\/td><\/tr>)/g,
++    (row, start, number, href, old, end) => {
++      const entry = byPath.get(href);
++      if (!entry || entry.number !== Number(number)) throw new Error(`Roster identity differs from trust source: ${href}`);
++      if (rosterPaths.has(href)) throw new Error(`Duplicate roster entry: ${href}`);
++      rosterPaths.add(href);
++      return start + compactLabel(entry.label, labels) + end;
++    }
++  ));
++  for (const entry of exhibits.filter(e => e.path.startsWith('ciphers/'))) {
++    if (!rosterPaths.has(entry.path)) throw new Error(`Missing roster entry: ${entry.path}`);
++  }
++
++  for (const file of fs.readdirSync(path.join(root, 'halls')).filter(f => f.endsWith('.html'))) {
++    const rel = `halls/${file}`;
++    const html = fs.readFileSync(path.join(root, rel), 'utf8');
++    outputs.set(rel, html.replace(/<a\b[^>]*class="cipher-card"[^>]*>[\s\S]*?<\/a>/g, card => {
++      const href = card.match(/href="\.\.\/([^"]+)"/)?.[1];
++      const entry = byPath.get(href);
++      if (!entry) return card;
++      // Every exhibit card receives its classification, including cards which
++      // used only legacy sec-* markup or carried no badge before this audit.
++      card = card.replace(/<span class="badge\s+sec-[^"]*">([^<]*)<\/span>/g, (old, text) =>
++        /^(Track |Broke:)/.test(text) ? `<span class="badge">${text}</span>` : '')
++        .replace(/<span class="trust-label\b[^>]*>[\s\S]*?<\/span>/g, '');
++      const badge = compactLabel(entry.label, labels);
++      if (badge) {
++        if (/class="card-badges"/.test(card)) card = card.replace(/(<div class="card-badges">)/, '$1' + badge);
++        else if (/class="card-foot"/.test(card)) card = card.replace(/(<div class="card-foot">)/,
++          '$1<div class="card-badges">' + badge + '</div>');
++        else throw new Error(`Missing hall card footer: ${href}`);
++      }
++      return card.replace(/<div class="card-badges">\s*<\/div>/g, '');
++    }).replace(/<span class="badge\s+sec-[^"]*">[^<]*<\/span>/g, ''));
++  }
++
++  // Definitions are generated alongside the roster, rather than independently
++  // authored in HTML. The same exact description is used in every tooltip.
++  const legend = '<div class="trust-legend" role="list" aria-label="Trust label categories">\n' +
++    Object.entries(labels).map(([key, definition]) =>
++      `    <div class="trust-legend__item" role="listitem">${compactLabel(key, labels)}<p class="trust-legend__desc">${escapeHTML(definition.description)}</p></div>`
++    ).join('\n') + '\n  </div>';
++  outputs.set('museum-map.html', outputs.get('museum-map.html').replace(
++    /<div class="trust-legend"[^>]*>[\s\S]*?\n  <\/div>/, legend));
++
++  const comparison = fs.readFileSync(path.join(root, 'comparison.html'), 'utf8');
++  let compared = comparison.replace(/\{ name:[^\n]+href:'([^']+)'[^\n]+\}/g, (row, href) => {
++    const entry = byPath.get(href);
++    if (!entry) throw new Error(`Unknown comparison exhibit: ${href}`);
++    const trust = entry.label === null ? null : { key: entry.label, text: labels[entry.label].text, description: labels[entry.label].description };
++    return row.replace(/security:(?:'[^']*'|"[^"]*")/, 'security:' + JSON.stringify(trust?.text || ''))
++      .replace(/, trust:[\s\S]*?(?= \}$)/, '')
++      .replace(/ \}$/, ', trust:' + JSON.stringify(trust) + ' }');
++  });
++  compared = compared.replace(/(<select\b[^>]*id="security-filter"[^>]*>)[\s\S]*?<\/select>/,
++    '$1\n        <option value="">All Trust Labels</option>\n' +
++    Object.values(labels).map(d => `        <option value="${escapeHTML(d.text)}">${escapeHTML(d.text)}</option>`).join('\n') + '\n      </select>');
++  outputs.set('comparison.html', compared);
++
++  const changed = [];
++  for (const [rel, generated] of outputs) {
++    const file = path.join(root, rel);
++    const existing = fs.readFileSync(file, 'utf8');
++    if (existing === generated) continue;
++    const html = generated.replace(/^[ \t]+(?=\r?$)/gm, '');
++    if (existing === html) continue;
++    changed.push(rel);
++    if (!check) fs.writeFileSync(file, html);
++  }
++  return changed;
++}
++
++if (require.main === module) {
++  const check = process.argv.includes('--check');
++  const changed = buildTrustLabels({ check });
++  if (check && changed.length) {
++    console.error(`Trust labels need regeneration: ${changed.join(', ')}`);
++    process.exitCode = 1;
++  } else {
++    console.log(check ? 'Trust labels are current.' : `Trust labels regenerated (${changed.length} files changed).`);
++  }
++}
++
++module.exports = { buildTrustLabels, LABELS };
+diff --git a/scripts/exhibit-trust.js b/scripts/exhibit-trust.js
+new file mode 100644
+index 0000000..5811bf7
+--- /dev/null
++++ b/scripts/exhibit-trust.js
+@@ -0,0 +1,31 @@
++'use strict';
++
++const fs = require('fs');
++const path = require('path');
++const ROOT = path.resolve(__dirname, '..');
++
++function loadTrust(root = ROOT) {
++  const labels = JSON.parse(fs.readFileSync(path.join(root, 'data/trust-labels.json'), 'utf8'));
++  const { exhibits } = JSON.parse(fs.readFileSync(path.join(root, 'data/exhibit-trust.json'), 'utf8'));
++  const byPath = new Map();
++  const numbers = new Set();
++  for (const entry of exhibits) {
++    if (byPath.has(entry.path) || numbers.has(entry.number)) throw new Error(`Duplicate exhibit: ${entry.path}`);
++    if (!Number.isInteger(entry.number) || !/^(ciphers|hall-of-foundations)\/[a-z0-9-]+\.html$/.test(entry.path)) {
++      throw new Error(`Invalid exhibit identity: ${entry.path}`);
++    }
++    if (entry.label !== null && !Object.hasOwn(labels, entry.label)) throw new Error(`Unknown trust label: ${entry.label}`);
++    byPath.set(entry.path, entry);
++    numbers.add(entry.number);
++  }
++  function trustFor(rel) {
++    const entry = byPath.get(rel);
++    if (!entry) throw new Error(`Exhibit missing from trust source: ${rel}`);
++    if (entry.label === null) return null;
++    const definition = labels[entry.label];
++    return { key: entry.label, text: definition.text, description: definition.description };
++  }
++  return { labels, exhibits, byPath, trustFor };
++}
++
++module.exports = { loadTrust, LABELS: loadTrust().labels };
+diff --git a/scripts/sw-version.js b/scripts/sw-version.js
+index eb248f4..4e66162 100644
+--- a/scripts/sw-version.js
++++ b/scripts/sw-version.js
+@@ -48,7 +48,11 @@ function swVersionFor(root) {
+   const hash = crypto.createHash('sha256');
+   for (const rel of bundlesFor(root)) {
+     hash.update(rel);                 // a rename must change the version too
+-    hash.update(fs.readFileSync(path.join(root, rel)));
++    // Git commits these text assets with LF. Hash their canonical bytes even
++    // when a local checkout uses CRLF; binary files must stay byte-for-byte.
++    const bytes = fs.readFileSync(path.join(root, rel));
++    hash.update(/\.(css|js|json|svg|webmanifest)$/i.test(rel)
++      ? Buffer.from(bytes.toString('utf8').replace(/\r\n/g, '\n')) : bytes);
+   }
+   return `cipher-museum-${hash.digest('hex').slice(0, 8)}`;
+ }
+diff --git a/search.html b/search.html
+index 6ddcaca..c0a5b57 100644
+--- a/search.html
++++ b/search.html
+@@ -113,6 +113,7 @@
+ </style>
+ 
+ <script src="js/nav.js" defer></script>
++<script src="js/trust-labels.js" defer></script>
+ <script src="js/search.js" defer></script>
+ <script defer>
+   document.addEventListener('DOMContentLoaded', function () {
+@@ -155,7 +156,7 @@
+         else meta.push('Page');
+         if (e.hall && e.hall !== '—') meta.push('Hall: ' + escapeHTML(e.hall));
+         if (e.created && e.created !== '—') meta.push('Created: ' + escapeHTML(e.created));
+-        if (e.broken && e.broken !== '—') meta.push('Broken: ' + escapeHTML(e.broken));
++        if (e.trust) meta.push('Trust: ' + window.TrustLabels.badge(e.trust));
+         var tags = e.tags.slice(0, 6).map(function (t) {
+           return '<span class="sr-tag">' + escapeHTML(t) + '</span>';
+         }).join('');
+@@ -167,6 +168,7 @@
+             '</div>' +
+             '<div class="sr-meta">' + meta.join(' · ') + '</div>' +
+             '<p class="sr-summary">' + hl(e.summary, raw) + '</p>' +
++            (e.note ? '<p class="sr-summary">' + escapeHTML(e.note) + '</p>' : '') +
+             (tags ? '<div class="sr-tags">' + tags + '</div>' : '') +
+           '</a>';
+       }).join('');
+diff --git a/tests/engines/run.js b/tests/engines/run.js
+index aa72a4c..e758a09 100644
+--- a/tests/engines/run.js
++++ b/tests/engines/run.js
+@@ -24,6 +24,7 @@ if (specs.length !== engineCount) {
+ const commands = [
+   ['Property, edge, state, and performance specs', ['--test', '--test-concurrency=4', ...specs]],
+   ['Engine complexity (serial — timing needs a quiet process)', ['tests/engines/scaling.js']],
++  ['Complexity canary (guard must catch quadratic work)', ['tests/engines/scaling-canary.js']],
+   ['Mutation canary (suite must catch a corrupted engine)', ['tests/engines/canary.js']],
+   ['Legacy engine integration checks', ['tests/test-all-engines.js']],
+   ['Known-answer and deep checks', ['tests/test-deep-ciphers.js']],
+@@ -31,10 +32,16 @@ const commands = [
+   ['Cipher Corpus replay', ['tests/engines/corpus-replay.js']]
+ ];
+ 
++const failures = [];
++
+ for (const [label, args] of commands) {
+   console.log(`\n=== ${label} ===`);
+   const result = spawnSync(process.execPath, args, { cwd: root, stdio: 'inherit' });
+-  if (result.status !== 0) process.exit(result.status || 1);
++  if (result.status !== 0) failures.push(label);
+ }
+ 
++if (failures.length) {
++  console.error('\nFailed suites: ' + failures.join(', '));
++  process.exit(1);
++}
+ console.log('\nAll cipher engine verification suites passed.');
+\ No newline at end of file
+diff --git a/tests/engines/scaling-canary.js b/tests/engines/scaling-canary.js
+new file mode 100644
+index 0000000..7686f07
+--- /dev/null
++++ b/tests/engines/scaling-canary.js
+@@ -0,0 +1,28 @@
++#!/usr/bin/env node
++'use strict';
++
++const assert = require('node:assert/strict');
++const { measureEngine, run, assertCoverage } = require('./scaling');
++
++// Real quadratic work, independent of any museum engine. Returning the input
++// keeps correctness intact; only the complexity guard can reject this mutant.
++let checksum = 0;
++const quadratic = {
++  encode(text) {
++    const n = Math.ceil(text.length / 64);
++    for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) {
++      checksum ^= text.charCodeAt((i + j) % text.length) + i * j;
++    }
++    return text;
++  },
++  decode(text) { return text; }
++};
++const measured = measureEngine('quadratic-canary', quadratic);
++assert(!measured.skipped, 'Quadratic mutant must be measured');
++assert(measured.ratio > 10, `Quadratic work must exceed the unchanged 10x bound; observed ${measured.ratio.toFixed(2)}x`);
++assert.throws(() => run({ invalidKey: { encode() { throw new Error('bad key'); }, decode(t) { return t; } } }),
++  /not timeable/, 'Unmeasured engines must fail coverage, never silently pass');
++assert.throws(() => assertCoverage(84, 85), /coverage/, 'One missing registry engine fails coverage');
++assert.throws(() => assertCoverage(40, 85), /coverage/, 'The old forty-engine minimum is insufficient');
++assertCoverage(85, 85);
++console.log(`Complexity canary caught quadratic work (${measured.ratio.toFixed(2)}x); invalid-key coverage failure caught; checksum ${checksum}.`);
+diff --git a/tests/engines/scaling.js b/tests/engines/scaling.js
+index 84951d0..7533903 100644
+--- a/tests/engines/scaling.js
++++ b/tests/engines/scaling.js
+@@ -9,11 +9,10 @@
+  * thing this file exists for.
+  *
+  * Why this is its own serial script rather than part of the property specs:
+- * the spec suite runs at --test-concurrency=4, and under that contention the
+- * *larger* of the two runs is proportionally more likely to absorb a GC pause
+- * or a scheduler preemption. That produced 10-15x readings for engines which
+- * measure 2-6x on a quiet process — false alarms that would have trained people
+- * to ignore this check. Measurement needs a quiet room.
++ * the spec suite runs at --test-concurrency=4, and concurrent work can perturb
++ * the process itself (for example, through garbage collection). CPU time keeps
++ * unrelated scheduler pauses out of the measurement, while serial execution
++ * keeps process-local contention low.
+  *
+  * Why it exists at all: autokey decrypted in quadratic time for the entire life
+  * of this repo. It indexed back into a string it was building with `+=`, and V8
+@@ -22,10 +21,10 @@
+  * complexity class is still the right answer, just slowly.
+  *
+  * Coverage note: an engine is only judged once its baseline is long enough for
+- * the timing to mean anything, so the input is doubled until it is. At a fixed
+- * 25 KB only 8 of 85 engines were slow enough to judge; escalating brings the
+- * check to most of the registry. Engines that stay too fast to measure even at
+- * the cap are reported as skipped rather than silently passed.
++ * the timing to mean anything. Fast engines are measured in batches of repeated
++ * 25 KB roundtrips, then the same batch size is measured at 100 KB. Runtime no
++ * longer decides whether a fast engine counts toward coverage. Every registry
++ * engine must be measurable; one with a special key format needs an entry below.
+  */
+ 
+ const assert = require('node:assert/strict');
+@@ -35,14 +34,14 @@ require('../../js/ciphers/all-engines.js');
+ const engines = global.CipherEngines;
+ 
+ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+-const MEASURABLE_MS = 20;      // below this, jitter swamps the signal
++const MEASURABLE_CPU_MS = 20;  // below this, timer granularity swamps the signal
+ const BASE_BYTES = 25 * 1024;
+-const MAX_BASE_BYTES = 8 * BASE_BYTES;
+ const RATIO_LIMIT = 10;        // linear 4, quadratic 16
+-const SAMPLES = 3;             // best-of, to shrug off a single pause
++const SAMPLES = 3;             // best-of, to shrug off transient process work
++const MAX_REPEATS = 128;
+ 
+ // Keys that satisfy each engine's documented format. An engine whose key format
+-// is not represented here simply cannot be timed generically, and is skipped.
++// is not represented here is reported as skipped and fails the coverage check.
+ const KEYS = {
+   hill: '3,3,2,5', trifid: 'FELIX', railFence: '3', scytale: '3', stager: '2',
+   alberti: '3', bazeries: '42', jefferson: '3,1,5,2,4,6', enigma: 'AAA',
+@@ -53,53 +52,68 @@ const KEYS = {
+ };
+ 
+ const build = size => ALPHABET.repeat(Math.ceil(size / ALPHABET.length)).slice(0, size);
++const keyFor = (name, text) => name === 'otp'
++  ? 'K'.repeat(text.length)
++  : (KEYS[name] || 'KEY');
+ 
+-function timeRoundtrip(engine, text, key) {
++function timeRoundtrip(engine, text, key, repeats) {
+   let best = Infinity;
+   for (let i = 0; i < SAMPLES; i++) {
+-    const startedAt = process.hrtime.bigint();
++    const startedAt = process.cpuUsage();
+     try {
+-      engine.decode(engine.encode(text, key), key);
++      for (let repeat = 0; repeat < repeats; repeat++) {
++        engine.decode(engine.encode(text, key), key);
++      }
+     } catch (err) {
+       return null;
+     }
+-    const ms = Number(process.hrtime.bigint() - startedAt) / 1e6;
++    const usage = process.cpuUsage(startedAt);
++    const ms = (usage.user + usage.system) / 1000;
+     if (ms < best) best = ms;
+   }
+   return best;
+ }
+ 
+-const names = Object.keys(engines).sort();
+-const failures = [];
+-let judged = 0;
+-const skipped = [];
+-
+-console.log(`\n━━━ Engine complexity: ${names.length} engines, ratio limit ${RATIO_LIMIT}x ━━━\n`);
++function measureEngine(name, engine) {
++  let repeats = 1;
++  const smallText = build(BASE_BYTES);
++  const smallKey = keyFor(name, smallText);
++  let small = timeRoundtrip(engine, smallText, smallKey, repeats);
++  while (small !== null && small < MEASURABLE_CPU_MS && repeats < MAX_REPEATS) {
++    repeats *= 2;
++    small = timeRoundtrip(engine, smallText, smallKey, repeats);
++  }
+ 
+-for (const name of names) {
+-  const engine = engines[name];
+-  const key = KEYS[name] || 'KEY';
+-
+-  let baseBytes = BASE_BYTES;
+-  let small = timeRoundtrip(engine, build(baseBytes), key);
+-  while (small !== null && small < MEASURABLE_MS && baseBytes < MAX_BASE_BYTES) {
+-    baseBytes *= 2;
+-    small = timeRoundtrip(engine, build(baseBytes), key);
++  if (small === null) return { skipped: `${name} (key format not timeable here)` };
++  if (small < MEASURABLE_CPU_MS) {
++    return { skipped: `${name} (too fast to time in ${MAX_REPEATS} × ${BASE_BYTES / 1024} KB batch)` };
+   }
+ 
+-  if (small === null) { skipped.push(`${name} (key format not timeable here)`); continue; }
+-  if (small < MEASURABLE_MS) { skipped.push(`${name} (too fast to time at ${MAX_BASE_BYTES / 1024} KB)`); continue; }
++  const largeText = build(BASE_BYTES * 4);
++  const large = timeRoundtrip(engine, largeText, keyFor(name, largeText), repeats);
++  if (large === null) return { skipped: `${name} (failed at 4x)` };
++
++  return { repeats, small, large, ratio: large / small };
++}
+ 
+-  const large = timeRoundtrip(engine, build(baseBytes * 4), key);
+-  if (large === null) { skipped.push(`${name} (failed at 4x)`); continue; }
++function run(registry = engines) {
++const names = Object.keys(registry).sort();
++const failures = [];
++let judged = 0;
++const skipped = [];
+ 
++console.log(`\n━━━ Engine complexity: ${names.length} engines, ratio limit 10x ━━━\n`);
++for (const name of names) {
++  const measurement = measureEngine(name, registry[name]);
++  if (measurement.skipped) { skipped.push(measurement.skipped); continue; }
++  const { repeats, small, large } = measurement;
+   judged++;
+   const ratio = large / small;
+   if (ratio > RATIO_LIMIT) {
+-    failures.push({ name, baseBytes, small, large, ratio });
++    failures.push({ name, repeats, small, large, ratio });
+     console.error(`  ❌  ${name.padEnd(24)} ${ratio.toFixed(1)}x  ` +
+-      `(${Math.round(baseBytes / 1024)} KB ${small.toFixed(1)}ms → ` +
+-      `${Math.round(baseBytes * 4 / 1024)} KB ${large.toFixed(1)}ms)`);
++      `(${repeats} × ${BASE_BYTES / 1024} KB ${small.toFixed(1)} CPU-ms → ` +
++      `${repeats} × ${BASE_BYTES * 4 / 1024} KB ${large.toFixed(1)} CPU-ms)`);
+   }
+ }
+ 
+@@ -116,7 +130,15 @@ if (failures.length) {
+   console.error('  - building a string with += and then indexing back into it (autokey)');
+   console.error('  - an O(n) lookup inside the per-character loop');
+   console.error('  - re-deriving per-message state on every character\n');
+-  process.exit(1);
++  throw new Error('Engine scaling bound exceeded');
+ }
+ 
+-assert.ok(judged >= 40, `only ${judged} engines were timeable — coverage has regressed`);
++assertCoverage(judged, names.length);
++
++}
++
++function assertCoverage(judged, total) {
++  assert.equal(judged, total, `${total - judged} engines were not timeable — coverage has regressed`);
++}
++module.exports = { measureEngine, run, assertCoverage };
++if (require.main === module) run();
+diff --git a/tests/run-all.js b/tests/run-all.js
+index b7c7825..668df6f 100644
+--- a/tests/run-all.js
++++ b/tests/run-all.js
+@@ -19,6 +19,7 @@ const suites = [
+   'tests/test-nav-reciprocity.js',
+   'tests/test-nav-active.js',
+   'tests/test-counts.js',
++  'tests/test-trust-labels.js',
+   'tests/test-exhibit-examples.js',
+   'tests/test-min-fresh.js',
+   'tests/test-sw-version.js',
+@@ -35,6 +36,8 @@ const suites = [
+   'hall-of-foundations/foundations-links.test.js'
+ ];
+ 
++const failures = [];
++
+ for (const suite of suites) {
+   console.log(`\n=== Running ${suite} ===`);
+   const result = spawnSync(process.execPath, [suite], {
+@@ -43,8 +46,12 @@ for (const suite of suites) {
+   });
+ 
+   if (result.status !== 0) {
+-    process.exit(result.status || 1);
++    failures.push(suite);
+   }
+ }
+ 
++if (failures.length) {
++  console.error('\nFailed suites: ' + failures.join(', '));
++  process.exit(1);
++}
+ console.log('\nAll test suites passed.');
+diff --git a/tests/test-comprehensive.js b/tests/test-comprehensive.js
+index 95f1cb2..b01465e 100644
+--- a/tests/test-comprehensive.js
++++ b/tests/test-comprehensive.js
+@@ -484,7 +484,8 @@ if (fs.existsSync(ARTIFACT_CARDS_JSON)) {
+       const card = parsed.cards[slug] || {};
+       for (const key of required) {
+         ok(`artifact card ${slug}.${key} populated`,
+-          typeof card[key] === 'string' && card[key].trim().length > 0,
++          key === 'securityFailure' && card.trust === null ? card[key] === null :
++            typeof card[key] === 'string' && card[key].trim().length > 0,
+           `value=${JSON.stringify(card[key])}`);
+       }
+     }
+diff --git a/tests/test-sw-version.js b/tests/test-sw-version.js
+index 96d716d..5e10ef5 100644
+--- a/tests/test-sw-version.js
++++ b/tests/test-sw-version.js
+@@ -18,6 +18,7 @@
+ 
+ const fs = require('fs');
+ const path = require('path');
++const os = require('os');
+ const { swVersionFor, bundlesFor, EXTRA } = require('../scripts/sw-version.js');
+ 
+ const ROOT = path.join(__dirname, '..');
+@@ -52,3 +53,33 @@ ok('every hashed file exists on disk', missing.length === 0, missing.join(', '))
+ 
+ console.log(`\n  ${fail ? '❌' : '✅'} Service-worker version ${fail ? 'stale or incomplete' : 'fresh'} (${hashed.size} files hashed)`);
+ if (fail) process.exit(1);
++
++// A checkout's line endings cannot alter the generated version. Reproduce the
++// reviewed CRLF mistake in an isolated fixture, and also prove real text and
++// binary changes still invalidate the cache.
++const fixture = fs.mkdtempSync(path.join(os.tmpdir(), 'museum-sw-version-'));
++try {
++  for (const rel of ['sw.js', ...hashed]) {
++    const dest = path.join(fixture, rel);
++    fs.mkdirSync(path.dirname(dest), { recursive: true });
++    fs.copyFileSync(path.join(ROOT, rel), dest);
++  }
++  const original = swVersionFor(fixture);
++  for (const rel of hashed) {
++    if (!/\.(css|js|json|svg|webmanifest)$/i.test(rel)) continue;
++    const file = path.join(fixture, rel);
++    fs.writeFileSync(file, fs.readFileSync(file, 'utf8').replace(/\r?\n/g, '\r\n'));
++  }
++  ok('CRLF checkout produces the same version as LF', swVersionFor(fixture) === original);
++  const script = path.join(fixture, 'js/ui-delegates.js');
++  fs.appendFileSync(script, '\r\n// genuine changed content\r\n');
++  ok('real text changes still invalidate the version', swVersionFor(fixture) !== original);
++  const binary = path.join(fixture, 'images/icons/icon-192.png');
++  fs.writeFileSync(binary, Buffer.from([13, 10]));
++  const binaryVersion = swVersionFor(fixture);
++  fs.writeFileSync(binary, Buffer.from([10]));
++  ok('binary CRLF bytes are preserved in the hash', swVersionFor(fixture) !== binaryVersion);
++} finally {
++  fs.rmSync(fixture, { recursive: true, force: true });
++}
++if (fail) process.exit(1);
+diff --git a/tests/test-trust-labels.js b/tests/test-trust-labels.js
+new file mode 100644
+index 0000000..98656a4
+--- /dev/null
++++ b/tests/test-trust-labels.js
+@@ -0,0 +1,258 @@
++#!/usr/bin/env node
++'use strict';
++
++// Policy is deliberately independent of the manifest: adding a secure entry
++// to the data source must not silently expand the modern-security allowlist.
++const assert = require('assert/strict');
++const fs = require('fs');
++const path = require('path');
++const { JSDOM, VirtualConsole } = require('jsdom');
++const { buildTrustLabels, LABELS } = require('../scripts/build-trust-labels');
++const { loadTrust } = require('../scripts/exhibit-trust');
++const { spawnSync } = require('child_process');
++
++const ROOT = path.resolve(__dirname, '..');
++const SECURE_ALLOWLIST = new Set([
++  'ciphers/one-time-pad.html',
++  'ciphers/vernam.html',
++  'ciphers/aes.html',
++  'ciphers/rsa.html',
++  'ciphers/sha256.html',
++  'ciphers/diffie-hellman.html',
++  'ciphers/ecdsa.html',
++  'ciphers/shamir-secret-sharing.html',
++  'ciphers/zero-knowledge-proofs.html'
++]);
++const HISTORICAL_SYSTEMS = ['sigaba', 'typex', 'kl-7', 'fialka', 'navajo-code-talkers'];
++const CONTEXT_EXHIBITS = [
++  'egyptian-substitution', 'aeneas-tacticus', 'rosetta-stone', 'chinese-telegraph', 'morse',
++  'phaistos-disc', 'bletchley-park', 'cabinet-noir', 'kerckhoffs', 'station-hypo', 'bible-code',
++  'rochefort', 'beurling', 'dilly-knox', 'yardley', 'mavis-batey', 'gchq-trio', 'kahn',
++  'dunin', 'lasry', 'agnes-driscoll', 'bill-tutte', 'elizebeth-friedman', 'joan-clarke', 'leo-marks',
++  'freemason-pigpen', 'bach-motif', 'sator-square', 'field-hollers', 'gold-bug', 'dancing-men',
++  'da-vinci-code', 'national-treasure', 'gravity-falls', 'cicada-3301', 'mit-mystery-hunt', 'krypto-arg'
++];
++const SECURE_NUMBERS = {
++  'one-time-pad': 36, vernam: 37, 'diffie-hellman': 60, rsa: 61, aes: 62,
++  sha256: 63, ecdsa: 158, 'shamir-secret-sharing': 159, 'zero-knowledge-proofs': 160
++};
++
++function read(rel) { return fs.readFileSync(path.join(ROOT, rel), 'utf8'); }
++function parse(rel) {
++  return new JSDOM(read(rel), { runScripts: 'outside-only', virtualConsole: new VirtualConsole(), url: `https://ciphermuseum.com/${rel}` });
++}
++function htmlFiles(dir) {
++  return fs.readdirSync(path.join(ROOT, dir)).filter(f => f.endsWith('.html')).map(f => `${dir}/${f}`);
++}
++
++const { exhibits } = JSON.parse(read('data/exhibit-trust.json'));
++assert.equal(SECURE_ALLOWLIST.size, 9, 'Exactly nine modern systems');
++assert.equal(LABELS.historical.description, 'No longer in use, or never confirmed broken/deciphered.', 'Agreed historical definition');
++assert.deepEqual(Object.keys(LABELS).sort(), ['broken', 'educational', 'historical', 'secure']);
++const { trustFor } = loadTrust(ROOT);
++const cards = JSON.parse(read('data/artifact-cards.json')).cards;
++const byPath = new Map(exhibits.map(e => [e.path, e]));
++assert.equal(byPath.size, exhibits.length, 'Every manifest path is unique');
++assert.equal(new Set(exhibits.map(e => e.number)).size, exhibits.length, 'Every exhibit number is unique');
++assert.deepEqual([...byPath.keys()].sort(), [
++  ...htmlFiles('ciphers'), ...htmlFiles('hall-of-foundations').filter(f => !f.endsWith('/index.html'))
++].sort(), 'The audit covers every cipher, protocol, and Foundations exhibit on disk');
++
++for (const entry of exhibits) {
++  assert(entry.label === null || Object.hasOwn(LABELS, entry.label), `${entry.path}: known category or no label`);
++  assert.equal(entry.label === 'secure', SECURE_ALLOWLIST.has(entry.path),
++    `${entry.path}: Secure (Modern) is reserved for the explicit allowlist`);
++  if (entry.label === 'secure') assert.equal(entry.number, SECURE_NUMBERS[path.basename(entry.path, '.html')], 'Secure exhibit identity stays fixed');
++  if (entry.path.startsWith('hall-of-foundations/')) {
++    assert.equal(entry.label, null, `${entry.path}: mathematics carries no cipher trust label`);
++  }
++}
++for (const slug of CONTEXT_EXHIBITS) {
++  assert.equal(byPath.get(`ciphers/${slug}.html`)?.label, null, `${slug}: context has no cipher trust label`);
++}
++for (const slug of HISTORICAL_SYSTEMS) {
++  const rel = `ciphers/${slug}.html`;
++  assert.equal(byPath.get(rel)?.label, 'historical', `${slug}: obsolete service success is Historical Only`);
++  const dom = parse(rel);
++  assert.match(dom.window.document.querySelector('.cipher-significance').textContent,
++    /never publicly broken/i, `${slug}: qualify the historical claim in exhibit prose`);
++  assert.equal(dom.window.document.querySelector('.page-meta .sec-secure'), null,
++    `${slug}: service history must not use a green security badge`);
++  dom.window.close();
++}
++for (const slug of ['scytale', 'caesar', 'polybius', 'pigpen', 'bacon', 'tap-code', 'atbash', 'rot13',
++  'enigma', 'lorenz', 'purple', 'des', 'great-cipher', 'm209', 'chaocipher',
++  'copiale', 'mary-stuart-castelnau-letters', 'venona']) {
++  assert.equal(byPath.get(`ciphers/${slug}.html`)?.label, 'broken', `${slug}: documented breaks retain Broken`);
++}
++
++// Check what a visitor actually sees, not only what the source data says.
++function checkBadge(badge, entry, surface) {
++  assert(entry, `${surface}: badge belongs to a known exhibit`);
++  assert.notEqual(entry.label, null, `${surface}: context must not render a badge`);
++  const definition = LABELS[entry.label];
++  assert.equal(badge.textContent.trim(), definition.text, `${surface}: visible label matches source`);
++  const modifiers = [...badge.classList].filter(c => /^trust-label--/.test(c) && c !== 'trust-label--sm');
++  assert.deepEqual(modifiers, [`trust-label--${entry.label}`], `${surface}: class agrees with visible label`);
++  if (badge.tagName === 'SPAN') {
++    assert.equal(badge.title, definition.description, `${surface}: tooltip matches category`);
++  } else {
++    assert.equal(badge.title, definition.description, `${surface}: tooltip matches category`);
++    assert.match(badge.getAttribute('aria-label'), new RegExp(definition.text.replace(/[()]/g, '\\$&')),
++      `${surface}: accessible label agrees with visible label`);
++    assert.equal(badge.getAttribute('href'), '../museum-map.html#trust-labels', `${surface}: badge links to definitions`);
++  }
++  if (badge.classList.contains('trust-label--secure') || badge.textContent.includes('Secure (Modern)')) {
++    assert(SECURE_ALLOWLIST.has(entry.path), `${surface}: unauthorized Secure (Modern) on ${entry.path}`);
++  }
++}
++
++const allHtml = [
++  ...fs.readdirSync(ROOT).filter(f => f.endsWith('.html')),
++  ...['ciphers', 'halls', 'hall-of-foundations', 'lab', 'tours', 'community'].flatMap(htmlFiles)
++];
++const rosterPaths = new Set();
++for (const rel of allHtml) {
++  const dom = parse(rel);
++  const d = dom.window.document;
++  const ownEntry = byPath.get(rel);
++  if (ownEntry) {
++    assert.equal(d.querySelectorAll('[class*="sec-"]').length, 0, `${rel}: no independent legacy security badge`);
++    assert.equal(d.querySelectorAll('.trust-label-wrap').length, ownEntry.label === null ? 0 : 1,
++      `${rel}: exactly the expected number of badge wrappers`);
++    assert.equal(d.querySelectorAll('.trust-label').length, ownEntry.label === null ? 0 :
++      1 + [...d.querySelectorAll('tr')].filter(row => row.cells[0]?.textContent === 'Trust').length +
++      [...d.querySelectorAll('.fact-label')].filter(n => n.textContent === 'Trust').length,
++      `${rel}: exactly the expected number of trust badges`);
++    assert(![...d.querySelectorAll('tr')].some(row => row.cells[0]?.textContent === 'Security'), `${rel}: quick facts have no independent classification`);
++  }
++  if (rel.startsWith('halls/')) {
++    assert.equal(d.querySelectorAll('[class*="sec-"]').length, 0, `${rel}: legacy hall security badges are retired`);
++    for (const card of d.querySelectorAll('a.cipher-card')) {
++      const entry = byPath.get(card.getAttribute('href').replace(/^\.\.\//, ''));
++      if (entry) assert.equal(card.querySelectorAll('.trust-label').length, entry.label === null ? 0 : 1,
++        `${rel}: every linked exhibit renders or omits its canonical label`);
++    }
++  }
++  if (rel === 'museum-map.html') {
++    for (const row of d.querySelectorAll('.cipher-table tbody tr')) {
++      const href = row.querySelector('a').getAttribute('href');
++      const entry = byPath.get(href);
++      assert(entry, `${href}: roster entry exists in manifest`);
++      assert(!rosterPaths.has(href), `${href}: appears in roster exactly once`);
++      rosterPaths.add(href);
++      assert.equal(Number(row.cells[0].textContent), entry.number, `${href}: roster number matches source`);
++      assert.equal(row.querySelectorAll('.trust-label').length, entry.label === null ? 0 : 1,
++        `${href}: map renders or omits the badge according to source`);
++    }
++  }
++  for (const badge of d.querySelectorAll('.trust-label')) {
++    if (rel === 'museum-map.html' && badge.closest('#trust-labels')) {
++      const key = Object.keys(LABELS).find(k => badge.classList.contains(`trust-label--${k}`));
++      assert.equal(badge.textContent.trim(), LABELS[key]?.text, 'Map legend uses one of the four existing categories');
++      assert.equal(badge.title, LABELS[key].description, 'Legend tooltip uses shared definition');
++      assert.equal(badge.closest('.trust-legend__item').querySelector('.trust-legend__desc').textContent,
++        LABELS[key].description, 'Legend prose uses exact shared definition');
++      continue;
++    }
++    let entry = ownEntry;
++    if (rel === 'museum-map.html') entry = byPath.get(badge.closest('tr')?.querySelector('a')?.getAttribute('href'));
++    if (rel.startsWith('halls/')) entry = byPath.get(badge.closest('a.cipher-card')?.getAttribute('href')?.replace(/^\.\.\//, ''));
++    checkBadge(badge, entry, rel);
++  }
++
++  // Catch the exact modern label even if someone uses legacy badge markup,
++  // plain text, a tooltip, or an accessible name instead of .trust-label.
++  const nodes = d.querySelectorAll('body *:not(script):not(style)');
++  for (const node of nodes) {
++    const ownText = [...node.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent).join(' ');
++    if (![ownText, node.title, node.getAttribute('aria-label')].some(t => t?.includes('Secure (Modern)'))) continue;
++    if (rel === 'museum-map.html' && node.closest('#trust-labels')) continue;
++    if (rel === 'comparison.html' && node.closest('#security-filter')) continue;
++    let target = ownEntry?.path;
++    if (rel === 'museum-map.html') target = node.closest('tr')?.querySelector('a')?.getAttribute('href');
++    if (rel.startsWith('halls/')) target = node.closest('a.cipher-card')?.getAttribute('href')?.replace(/^\.\.\//, '');
++    assert(SECURE_ALLOWLIST.has(target), `${rel}: Secure (Modern) appears outside the explicit allowlist (${target})`);
++  }
++  if (ownEntry && rel.startsWith('ciphers/')) {
++    const card = cards[path.basename(rel, '.html')];
++    assert.deepEqual(card.trust, trustFor(rel), `${rel}: artifact classification and definition match source`);
++    assert.equal(card.securityFailure, ownEntry.label === null ? null : (ownEntry.note || 'See the exhibit’s documented attacks and limitations.'),
++      `${rel}: artifact history is current and separate from classification`);
++    assert(d.querySelector('script[src="../js/trust-labels.js"]'), `${rel}: shared badge renderer is loaded`);
++    dom.window.eval(read('js/trust-labels.js'));
++    dom.window.eval(read('js/artifact-cards-data.min.js'));
++    dom.window.eval(read('js/artifact-cards.js'));
++    const artifact = d.querySelector('.artifact-card');
++    assert(artifact, `${rel}: artifact renderer runs`);
++    assert.equal(artifact.querySelectorAll('.trust-label').length, ownEntry.label === null ? 0 : 1,
++      `${rel}: artifact omits context trust classification`);
++    if (ownEntry.label !== null) checkBadge(artifact.querySelector('.trust-label'), ownEntry, `${rel}: live artifact`);
++  }
++  dom.window.close();
++}
++assert.deepEqual([...rosterPaths].sort(), exhibits.filter(e => e.path.startsWith('ciphers/')).map(e => e.path).sort(),
++  'Every cipher and protocol appears in the roster');
++const searchEntries = new Map(JSON.parse(read('js/search-index.json')).entries.map(e => [e.u, e]));
++for (const slug of HISTORICAL_SYSTEMS) {
++  const rel = `ciphers/${slug}.html`;
++  assert.equal(searchEntries.get(rel)?.b, 'Historical Only',
++    `${rel}: search uses the canonical label after service-history badges are removed`);
++}
++for (const entry of exhibits) {
++  const search = searchEntries.get(entry.path);
++  assert(search, `${entry.path}: search entry exists`);
++  // Foundations are context pages, and their search records omit trust data.
++  assert.deepEqual(search.trust || null, trustFor(entry.path), `${entry.path}: search classification and definition match source`);
++  assert.equal(search.b, entry.label === null ? '—' : LABELS[entry.label].text, `${entry.path}: canonical search status`);
++}
++assert.deepEqual(buildTrustLabels({ check: true }), [], 'All rendered badges are current; run npm run build:trust-labels');
++for (const generator of ['build-search-index', 'build-artifact-cards']) {
++  const result = spawnSync(process.execPath, [`scripts/${generator}.js`, '--check'], { cwd: ROOT, encoding: 'utf8' });
++  assert.equal(result.status, 0, `${generator}: generated metadata is fresh\n${result.stdout}${result.stderr}`);
++}
++
++async function checkInteractiveSurfaces() {
++  const comparison = parse('comparison.html');
++  comparison.window.eval(read('js/trust-labels.js'));
++  const script = [...comparison.window.document.scripts].find(s => s.textContent.includes('var CIPHERS ='));
++  comparison.window.eval(script.textContent);
++  const rows = [...comparison.window.document.querySelectorAll('#cipher-tbody tr')];
++  assert(rows.length > 100, 'Comparison renders its collection');
++  for (const row of rows) {
++    const entry = byPath.get(row.querySelector('a').getAttribute('href'));
++    assert.equal(row.querySelectorAll('.trust-label').length, entry.label === null ? 0 : 1, `${entry.path}: live comparison omits context`);
++    if (entry.label !== null) checkBadge(row.querySelector('.trust-label'), entry, `${entry.path}: live comparison`);
++  }
++  const filter = comparison.window.document.getElementById('security-filter');
++  assert.deepEqual([...filter.options].map(o => o.value), ['', ...Object.values(LABELS).map(d => d.text)], 'Comparison filters use shared categories');
++  for (const [key, definition] of Object.entries(LABELS)) {
++    filter.value = definition.text;
++    filter.dispatchEvent(new comparison.window.Event('change'));
++    for (const row of rows) assert.equal(!row.classList.contains('hidden'),
++      byPath.get(row.querySelector('a').getAttribute('href')).label === key, 'Comparison filter agrees with rendered classification');
++  }
++  comparison.window.close();
++
++  for (const slug of ['sigaba', 'caesar', 'vernam', 'chaocipher', 'bletchley-park', 'freemason-pigpen']) {
++    const dom = new JSDOM(read('search.html'), { runScripts: 'outside-only', url: `https://ciphermuseum.com/search.html?q=${slug}`, virtualConsole: new VirtualConsole() });
++    dom.window.fetch = async () => ({ ok: true, json: async () => JSON.parse(read('js/search-index.json')) });
++    dom.window.eval(read('js/trust-labels.js'));
++    dom.window.eval(read('js/search.js'));
++    const script = [...dom.window.document.scripts].find(s => s.textContent.includes("document.addEventListener('DOMContentLoaded'"));
++    dom.window.eval(script.textContent);
++    await new Promise(resolve => dom.window.setTimeout(resolve, 20));
++    const rel = `ciphers/${slug}.html`, entry = byPath.get(rel);
++    const result = [...dom.window.document.querySelectorAll('.sr-card')].find(n => n.getAttribute('href') === rel);
++    assert(result, `${rel}: live search result`);
++    assert.equal(result.querySelectorAll('.trust-label').length, entry.label === null ? 0 : 1, `${rel}: search omits context badges`);
++    if (entry.label !== null) {
++      checkBadge(result.querySelector('.trust-label'), entry, `${rel}: live search`);
++      assert(result.querySelector('.sr-meta').textContent.includes(`Trust: ${LABELS[entry.label].text}`), 'Search uses neutral Trust prefix');
++    }
++    assert(!result.textContent.includes('Broken:'), 'Search does not present every result as broken');
++    dom.window.close();
++  }
++  console.log(`Trust-label audit passed: ${exhibits.length} exhibits, exactly nine modern systems; headers, map, halls, legends, search, comparison and live artifacts agree.`);
++}
++checkInteractiveSurfaces().catch(error => { console.error(error); process.exitCode = 1; });

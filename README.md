@@ -134,7 +134,7 @@ All 140 cipher exhibits, alphabetically. Biographies and context pages are noted
 | [Caesar Cipher](https://ciphermuseum.com/ciphers/caesar.html) | Ancient Rome | Caesar cipher — the simplest substitution cipher, used by Julius Caesar around 58 BC with a shift of 3. Broken by Al-Kindi's frequency analysis circa 850 AD. | Exhaustive search: 25 possible shifts; frequency analysis immediate |
 | [Cardano Autokey 1550 · the original self-keying cipher](https://ciphermuseum.com/ciphers/cardano-autokey.html) | Italian Renaissance · 1550 | Girolamo Cardano's 1550 autokey — prime the keystream with a single seed letter, then continue it with the plaintext itself. The first published self-keying scheme. | Pattern repetition + frequency analysis on the reused-key segments |
 | [Cardano Grille 1550 · steganography by template](https://ciphermuseum.com/ciphers/cardano-grille.html) | Italian Renaissance · 1550 | Girolamo Cardano's 1550 grille — a card with cut-out windows. Write the secret through the windows; fill the rest with innocuous text; the recipient overlays an identical grille to read. | Geometric reconstruction; visual pattern search for the grille shape |
-| [Chaocipher](https://ciphermuseum.com/ciphers/chaocipher.html) | Modern · 1918 | Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher that permutes both alphabets after every character. Unsolved for 90 years until Rubin's 2010 break. | Cryptanalysis by Moshe Rubin (2010) after algorithm finally published |
+| [Chaocipher](https://ciphermuseum.com/ciphers/chaocipher.html) | Modern · 1918 | Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher, disclosed in 2010 after 92 years. | Known-plaintext key recovery (2010); in-depth cryptanalysis by Lasry, Rubin, Kopal & Wacker (2016) |
 | [Che Guevara's VIC Variant](https://ciphermuseum.com/ciphers/che-guevara.html) | Cold War · 1956–1967 | Ernesto 'Che' Guevara used a modified VIC straddling-checkerboard cipher for guerrilla communications in Bolivia and the Congo, 1956–1967. | VIC variant; traffic analysis & probable-word attack by CIA/FBI |
 | [Chinese Telegraph Code Standard Telegraph Codebook · 1881](https://ciphermuseum.com/ciphers/chinese-telegraph.html) | Late Qing → PRC · 1881–1980s | The 1881 Chinese Telegraph Code mapped 7,000+ Chinese characters to 4-digit code groups so they could ride the same Morse-style telegraph network as the Latin alphabet — and was super-enciphered for diplomatic and military traffic in the 20th century. | Codebook capture; frequency analysis on the numeric groups |
 | [Cicada 3301](https://ciphermuseum.com/ciphers/cicada-3301.html) | Internet era · 2012–2014 | An anonymous 2012–2014 internet recruitment puzzle that combined steganography, classical ciphers, GPS coordinates on physical posters, and a copy of the Liber Primus hand-illustrated in glyphic runes. | Community crowd-sourced; each layer solved with open-source analysis |
@@ -406,7 +406,22 @@ cipher-museum/
 
 ## 🧪 Testing
 
-The museum ships with two layers of tests, **all green**: the site suites (rendered DOM, accessibility, links, demo pages) and a dedicated engine verification suite governed by [docs/CIPHER_ENGINE_STANDARD.md](docs/CIPHER_ENGINE_STANDARD.md).
+Trust labels are classified in `data/exhibit-trust.json` for all 160 exhibits;
+`null` omits all trust classifications for context exhibits. Shared definitions
+live in `data/trust-labels.json`; historical evidence and usage qualifications
+are separate notes. After editing either source, run `npm run build:metadata`
+and `npm run build:js`. The trust-label suite checks headers, quick facts, hall
+cards, map rows and legends, search rendering, comparison filters, and live
+artifact cards against an independent nine-entry Secure (Modern) allowlist.
+
+Use Node 22, matching CI. The serial complexity guard batches 25 KB round trips
+until they consume measurable CPU time, then measures the same batch at 100 KB.
+All 85 registry engines must be measured; the 10× scaling bound is unchanged.
+A quadratic canary and incomplete-coverage cases prove that the guard rejects
+regressions. Cache versions normalize text line endings while preserving binary
+bytes, so LF and CRLF checkouts generate the same version.
+
+The museum ships with two layers of tests: the site suites (rendered DOM, accessibility, links, demo pages) and a dedicated engine verification suite governed by [docs/CIPHER_ENGINE_STANDARD.md](docs/CIPHER_ENGINE_STANDARD.md).
 
 ```bash
 # One-time setup (needed for the demo-page simulator and fast-check)

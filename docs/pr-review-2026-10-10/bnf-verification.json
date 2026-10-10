@@ -1,0 +1,10 @@
+{
+  "url": "https://catalogue.bnf.fr/ark:/12148/cb31000990s",
+  "verified_via": "curl -L (web extractor could not open the record)",
+  "title": "Cryptographie indéchiffrable, basée sur de nouvelles combinaisons rationnelles",
+  "author": "Lt-colonel Émile-Victor-Théodore Myszkowski",
+  "publisher": "Société française d’imprimerie et de librairie, Paris",
+  "year": 1902,
+  "linked_scan_url": "https://gallica.bnf.fr/ark:/12148/bpt6k1265620p",
+  "linked_scan_access": "HTTP 403 during review; book contents not read from this scan"
+}

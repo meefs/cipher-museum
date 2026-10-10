@@ -1,0 +1,7 @@
+const fs=require('fs'),cp=require('child_process'),path=require('path');
+const label=process.argv[2],root='/tmp/cipher-hostile-20261010-'+label,results=[];
+const sha=cp.execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
+const base=label==='pr1'?'55266306b5904c743429288481aaa5cf09e709b8':'c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72';
+const steps=[['node-version','node',['--version']],['lfs-checkout','git',['lfs','checkout']],['npm-ci','npm',['ci']],...(label==='pr2'?[['test-engines','npm',['run','test:engines']]]:[]),['npm-test','npm',['test']],['html-lint','npm',['run','lint:html']],['corpus-schema','npm',['run','validate:corpus']],['generators','node',[__dirname+'/generator-checks.js',root,label]],['diff-check','git',['diff','--check']],['range-diff-check','git',['diff','--check',base,'HEAD']],['tracked-status','git',['status','--porcelain','--untracked-files=no']]];
+for(const[name,exe,args]of steps){const start=new Date().toISOString();console.log(label+': '+name+' started '+start);const r=cp.spawnSync(exe,args,{cwd:root,encoding:'utf8',maxBuffer:30e6});fs.writeFileSync(path.join(__dirname,`${label}-${name}.log`),r.stdout+r.stderr);results.push({name,sha,start,end:new Date().toISOString(),command:[exe,...args],exit:r.status,error:r.error?.message});fs.writeFileSync(path.join(__dirname,`${label}-validation.json`),JSON.stringify({sha,base,results},null,2)+'\n');console.log(label+': '+name+' exit '+r.status);}
+process.exitCode=results.every(r=>r.exit===0)?0:1;

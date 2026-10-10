@@ -24,6 +24,7 @@ if (specs.length !== engineCount) {
 const commands = [
   ['Property, edge, state, and performance specs', ['--test', '--test-concurrency=4', ...specs]],
   ['Engine complexity (serial — timing needs a quiet process)', ['tests/engines/scaling.js']],
+  ['Complexity canary (guard must catch quadratic work)', ['tests/engines/scaling-canary.js']],
   ['Mutation canary (suite must catch a corrupted engine)', ['tests/engines/canary.js']],
   ['Legacy engine integration checks', ['tests/test-all-engines.js']],
   ['Known-answer and deep checks', ['tests/test-deep-ciphers.js']],
@@ -31,10 +32,16 @@ const commands = [
   ['Cipher Corpus replay', ['tests/engines/corpus-replay.js']]
 ];
 
+const failures = [];
+
 for (const [label, args] of commands) {
   console.log(`\n=== ${label} ===`);
   const result = spawnSync(process.execPath, args, { cwd: root, stdio: 'inherit' });
-  if (result.status !== 0) process.exit(result.status || 1);
+  if (result.status !== 0) failures.push(label);
 }
 
+if (failures.length) {
+  console.error('\nFailed suites: ' + failures.join(', '));
+  process.exit(1);
+}
 console.log('\nAll cipher engine verification suites passed.');

@@ -1,0 +1,32 @@
+{
+  "root": {
+    "head": "1e190e0e7d347e5684d36a40827e602ac821045d",
+    "trackedStatus": ""
+  },
+  "review-pr1": {
+    "head": "663cbffe736b88353ac4d17ecff300c5d6ae665e",
+    "trackedStatus": ""
+  },
+  "review-pr2": {
+    "head": "1e190e0e7d347e5684d36a40827e602ac821045d",
+    "trackedStatus": ""
+  },
+  "mutations-pr1": {
+    "head": "663cbffe736b88353ac4d17ecff300c5d6ae665e",
+    "trackedStatus": ""
+  },
+  "mutations-pr2": {
+    "head": "1e190e0e7d347e5684d36a40827e602ac821045d",
+    "trackedStatus": ""
+  },
+  "js/nav.js": {
+    "sameProblematicFragmentOnMainAndPR1": true,
+    "fragment": "  companions.forEach(function(f){\n    var s = document.createElement('script');\n    s.src = pre + 'js/' + f;\n    s.defer = true;\n    document.body.appendChild(s);\n  });"
+  },
+  "js/artifact-cards.js": {
+    "sameProblematicFragmentOnMainAndPR1": true,
+    "fragment": "  var data = (window.__ARTIFACT_CARDS__ && window.__ARTIFACT_CARDS__.cards) || {};\n  var card = data[slug];\n  if (!card) return;"
+  },
+  "localServerStopped": true,
+  "timestampUTC": "2026-10-10T11:01:46.071657+00:00"
+}

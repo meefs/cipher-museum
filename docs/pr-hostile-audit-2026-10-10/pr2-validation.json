@@ -1,0 +1,139 @@
+{
+  "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+  "base": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+  "results": [
+    {
+      "name": "node-version",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:35:06.442Z",
+      "end": "2026-10-10T12:35:06.456Z",
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "lfs-checkout",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:35:06.457Z",
+      "end": "2026-10-10T12:35:06.535Z",
+      "command": [
+        "git",
+        "lfs",
+        "checkout"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "npm-ci",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:35:06.536Z",
+      "end": "2026-10-10T12:35:07.211Z",
+      "command": [
+        "npm",
+        "ci"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "test-engines",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:35:07.211Z",
+      "end": "2026-10-10T12:36:04.924Z",
+      "command": [
+        "npm",
+        "run",
+        "test:engines"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "npm-test",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:36:04.924Z",
+      "end": "2026-10-10T12:37:27.315Z",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "html-lint",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:37:27.316Z",
+      "end": "2026-10-10T12:37:28.299Z",
+      "command": [
+        "npm",
+        "run",
+        "lint:html"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "corpus-schema",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:37:28.299Z",
+      "end": "2026-10-10T12:37:29.871Z",
+      "command": [
+        "npm",
+        "run",
+        "validate:corpus"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "generators",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:37:29.872Z",
+      "end": "2026-10-10T12:37:33.462Z",
+      "command": [
+        "node",
+        "/private/tmp/cipher-hostile-20261010-evidence/generator-checks.js",
+        "/tmp/cipher-hostile-20261010-pr2",
+        "pr2"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "diff-check",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:37:33.463Z",
+      "end": "2026-10-10T12:37:35.513Z",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "range-diff-check",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:37:35.514Z",
+      "end": "2026-10-10T12:37:35.552Z",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+        "HEAD"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "tracked-status",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "start": "2026-10-10T12:37:35.553Z",
+      "end": "2026-10-10T12:37:35.571Z",
+      "command": [
+        "git",
+        "status",
+        "--porcelain",
+        "--untracked-files=no"
+      ],
+      "exit": 0
+    }
+  ]
+}

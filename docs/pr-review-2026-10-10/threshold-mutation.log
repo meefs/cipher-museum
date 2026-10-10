@@ -1,0 +1,22 @@
+
+━━━ Engine complexity: 1 engines, ratio limit 10x ━━━
+
+
+  judged 1, skipped 0
+
+══════════════════════════════════════════════════════════════════════
+  ✅ 1 within linear bound   ❌ 0 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+{
+  "canaryStatus": 0,
+  "measurement": {
+    "repeats": 1,
+    "small": 20.167,
+    "large": 325.688,
+    "ratio": 16.149551247086823
+  },
+  "quadraticAccepted": true,
+  "checksum": 0,
+  "restored": true
+}

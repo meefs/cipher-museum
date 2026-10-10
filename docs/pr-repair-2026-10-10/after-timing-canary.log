@@ -1,0 +1,38 @@
+
+━━━ Engine complexity: 2 engines, ratio limit 10x ━━━
+
+
+  judged 2, skipped 0
+
+══════════════════════════════════════════════════════════════════════
+  ✅ 2 within linear bound   ❌ 0 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+
+━━━ Engine complexity: 1 engines, ratio limit 10x ━━━
+
+  ❌  quadraticCanary          16.6x  (128 × 25 KB 35.6 CPU-ms → 128 × 100 KB 591.1 CPU-ms)
+
+  judged 1, skipped 0
+
+══════════════════════════════════════════════════════════════════════
+  ❌ 0 within linear bound   ❌ 1 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+An engine scaling worse than linearly is usually one of:
+  - building a string with += and then indexing back into it (autokey)
+  - an O(n) lookup inside the per-character loop
+  - re-deriving per-message state on every character
+
+
+━━━ Engine complexity: 1 engines, ratio limit 10x ━━━
+
+
+  judged 0, skipped 1
+  skipped: invalidKey (key format not timeable here)
+
+══════════════════════════════════════════════════════════════════════
+  ✅ 0 within linear bound   ❌ 0 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+Production guard accepted Caesar/OTP controls and rejected quadratic work; invalid-key coverage failure caught; checksum 52502.

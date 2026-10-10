@@ -1,0 +1,1090 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "stage": "valid-TOMATO",
+      "ranks": "Ranks: 4 3 2 1 4 3. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "T 4",
+        "O 3",
+        "M 2",
+        "A 1",
+        "T 4",
+        "O 3",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "rejected",
+      "key": "",
+      "ranks": "",
+      "columns": "",
+      "cells": [],
+      "output": "",
+      "status": "Use a keyword of 2–24 letters.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "recovered-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ERDSOEEFEAOCWIREEAECVDLTN",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "decrypted-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "WEAREDISCOVEREDFLEEATONCE",
+      "status": "Decrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": false,
+          "pressed": "false"
+        },
+        {
+          "mode": "decrypt",
+          "active": true,
+          "pressed": "true"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "valid-TOMATO",
+      "ranks": "Ranks: 4 3 2 1 4 3. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "T 4",
+        "O 3",
+        "M 2",
+        "A 1",
+        "T 4",
+        "O 3",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "rejected",
+      "key": "A",
+      "ranks": "",
+      "columns": "",
+      "cells": [],
+      "output": "",
+      "status": "Use a keyword of 2–24 letters.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "recovered-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ERDSOEEFEAOCWIREEAECVDLTN",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "decrypted-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "WEAREDISCOVEREDFLEEATONCE",
+      "status": "Decrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": false,
+          "pressed": "false"
+        },
+        {
+          "mode": "decrypt",
+          "active": true,
+          "pressed": "true"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "valid-TOMATO",
+      "ranks": "Ranks: 4 3 2 1 4 3. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "T 4",
+        "O 3",
+        "M 2",
+        "A 1",
+        "T 4",
+        "O 3",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "rejected",
+      "key": "123!",
+      "ranks": "",
+      "columns": "",
+      "cells": [],
+      "output": "",
+      "status": "Use a keyword of 2–24 letters.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "recovered-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ERDSOEEFEAOCWIREEAECVDLTN",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "decrypted-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "WEAREDISCOVEREDFLEEATONCE",
+      "status": "Decrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": false,
+          "pressed": "false"
+        },
+        {
+          "mode": "decrypt",
+          "active": true,
+          "pressed": "true"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "valid-TOMATO",
+      "ranks": "Ranks: 4 3 2 1 4 3. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "T 4",
+        "O 3",
+        "M 2",
+        "A 1",
+        "T 4",
+        "O 3",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "rejected",
+      "key": "",
+      "ranks": "",
+      "columns": "",
+      "cells": [],
+      "output": "",
+      "status": "Use a keyword of 2–24 letters.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "recovered-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ERDSOEEFEAOCWIREEAECVDLTN",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "decrypted-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "WEAREDISCOVEREDFLEEATONCE",
+      "status": "Decrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": false,
+          "pressed": "false"
+        },
+        {
+          "mode": "decrypt",
+          "active": true,
+          "pressed": "true"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "valid-TOMATO",
+      "ranks": "Ranks: 4 3 2 1 4 3. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "T 4",
+        "O 3",
+        "M 2",
+        "A 1",
+        "T 4",
+        "O 3",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "rejected",
+      "key": "A",
+      "ranks": "",
+      "columns": "",
+      "cells": [],
+      "output": "",
+      "status": "Use a keyword of 2–24 letters.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "recovered-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ERDSOEEFEAOCWIREEAECVDLTN",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "decrypted-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "WEAREDISCOVEREDFLEEATONCE",
+      "status": "Decrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": false,
+          "pressed": "false"
+        },
+        {
+          "mode": "decrypt",
+          "active": true,
+          "pressed": "true"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "valid-TOMATO",
+      "ranks": "Ranks: 4 3 2 1 4 3. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "T 4",
+        "O 3",
+        "M 2",
+        "A 1",
+        "T 4",
+        "O 3",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "rejected",
+      "key": "123!",
+      "ranks": "",
+      "columns": "",
+      "cells": [],
+      "output": "",
+      "status": "Use a keyword of 2–24 letters.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "recovered-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "ERDSOEEFEAOCWIREEAECVDLTN",
+      "status": "Encrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": true,
+          "pressed": "true"
+        },
+        {
+          "mode": "decrypt",
+          "active": false,
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "decrypted-BANANA",
+      "ranks": "Ranks: 2 1 3 1 3 1. Equal ranks are read across rows together. Grid shows at most twelve message rows.",
+      "columns": "repeat(6, minmax(2.75rem, 1fr))",
+      "cells": [
+        "B 2",
+        "A 1",
+        "N 3",
+        "A 1",
+        "N 3",
+        "A 1",
+        "W",
+        "E",
+        "A",
+        "R",
+        "E",
+        "D",
+        "I",
+        "S",
+        "C",
+        "O",
+        "V",
+        "E",
+        "R",
+        "E",
+        "D",
+        "F",
+        "L",
+        "E",
+        "E",
+        "A",
+        "T",
+        "O",
+        "N",
+        "C",
+        "E"
+      ],
+      "output": "WEAREDISCOVEREDFLEEATONCE",
+      "status": "Decrypted 25 letters; no padding added.",
+      "modes": [
+        {
+          "mode": "encrypt",
+          "active": false,
+          "pressed": "false"
+        },
+        {
+          "mode": "decrypt",
+          "active": true,
+          "pressed": "true"
+        }
+      ]
+    }
+  ]
+}

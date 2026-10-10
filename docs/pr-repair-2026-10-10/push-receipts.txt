@@ -1,0 +1,3 @@
+PR #1: normal push 663cbff..c29a866 HEAD -> fix/trust-label-audit
+PR #2: normal push 1e190e0..abaacee HEAD -> feat/four-historical-exhibits
+Final remote head/base/state verified through GitHub API; see pr*-final-state.json.

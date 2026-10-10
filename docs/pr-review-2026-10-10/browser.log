@@ -1,0 +1,387 @@
+{
+  "environment": {
+    "browser": "154.0.8037.98",
+    "playwright": "1.63.0",
+    "node": "v22.23.3"
+  },
+  "checks": 150,
+  "passed": 134,
+  "failures": [
+    {
+      "name": "PR1/1280: neutral search sigaba",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR1/1280: neutral search vernam",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR1/1280: comparison sigaba",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR1/1280: comparison navajo-code-talkers",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR1/390: neutral search sigaba",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR1/390: neutral search vernam",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR1/390: comparison sigaba",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR1/390: comparison navajo-code-talkers",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR2/1280: neutral search sigaba",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR2/1280: neutral search vernam",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR2/1280: comparison sigaba",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR2/1280: comparison navajo-code-talkers",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR2/390: neutral search sigaba",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR2/390: neutral search vernam",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR2/390: comparison sigaba",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR2/390: comparison navajo-code-talkers",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    }
+  ],
+  "findings": [
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/1280/caesar",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/1280/sigaba",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/1280/vernam",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/1280/aeneas-tacticus",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/390/caesar",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/390/sigaba",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/1280/nema",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/1280/hagelin-c36",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/1280/turning-grille",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/1280/myszkowski",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/390/nema",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/390/hagelin-c36",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/390/turning-grille",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/390/myszkowski",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "delayed-artifact-dependency",
+      "pr": 1,
+      "title": "Caesar Cipher — The Cipher Museum",
+      "heading": "Caesar Cipher",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "kind": "delayed-artifact-dependency",
+      "pr": 2,
+      "title": "NEMA — Swiss Rotor Machine — The Cipher Museum",
+      "heading": "NEMA — Swiss Rotor Machine",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        }
+      ],
+      "output": "HRSBVOOTZUCRWLMGRMGVWYWOVNF",
+      "overflow": false
+    }
+  ],
+  "offline": [
+    {
+      "pr": 1,
+      "warm": false,
+      "slug": "caesar",
+      "heading": "Explore the History of Encryption",
+      "artifacts": 0,
+      "errors": [
+        "/ciphers/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/ciphers/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/ciphers/css/museum.css: net::ERR_FAILED",
+        "/ciphers/images/icons.svg: net::ERR_FAILED",
+        "/ciphers/js/lightbox.js: net::ERR_FAILED",
+        "/ciphers/js/nav.js: net::ERR_FAILED",
+        "/ciphers/favicon.svg: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 1,
+      "warm": false,
+      "slug": "sigaba",
+      "heading": "Explore the History of Encryption",
+      "artifacts": 0,
+      "errors": [
+        "/ciphers/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/ciphers/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/ciphers/css/museum.css: net::ERR_FAILED",
+        "/ciphers/images/icons.svg: net::ERR_FAILED",
+        "/ciphers/js/lightbox.js: net::ERR_FAILED",
+        "/ciphers/js/nav.js: net::ERR_FAILED",
+        "/ciphers/favicon.svg: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 1,
+      "warm": true,
+      "slug": "caesar",
+      "heading": "Caesar Cipher",
+      "artifacts": 0,
+      "errors": []
+    },
+    {
+      "pr": 1,
+      "warm": true,
+      "slug": "sigaba",
+      "heading": "SIGABA (ECM Mark II)",
+      "artifacts": 0,
+      "errors": []
+    },
+    {
+      "pr": 2,
+      "warm": false,
+      "slug": "nema",
+      "heading": "NEMA — Swiss Rotor Machine",
+      "artifacts": 0,
+      "output": "HRSBVOOTZUCRWLMGRMGVWYWOVNF",
+      "errors": [
+        "/fonts/jetbrains-mono-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-italic-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-500-latin.woff2: net::ERR_FAILED",
+        "/js/demo-loader.min.js: net::ERR_FAILED",
+        "/js/lightbox.js: net::ERR_FAILED",
+        "/js/artifact-cards-data.min.js: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 2,
+      "warm": false,
+      "slug": "hagelin-c36",
+      "heading": "Hagelin C-36 / C-52 Lineage",
+      "artifacts": 0,
+      "errors": [
+        "/js/demo-loader.min.js: net::ERR_FAILED",
+        "/js/lightbox.js: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-italic-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-500-latin.woff2: net::ERR_FAILED",
+        "/js/artifact-cards-data.min.js: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 2,
+      "warm": false,
+      "slug": "turning-grille",
+      "heading": "Fleissner Turning Grille",
+      "artifacts": 0,
+      "output": "ABCEMDFGNOIHPJKL",
+      "errors": [
+        "/fonts/jetbrains-mono-400-latin.woff2: net::ERR_FAILED",
+        "/js/demo-loader.min.js: net::ERR_FAILED",
+        "/js/lightbox.js: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-italic-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-500-latin.woff2: net::ERR_FAILED",
+        "/js/artifact-cards-data.min.js: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 2,
+      "warm": false,
+      "slug": "myszkowski",
+      "heading": "Myszkowski Transposition",
+      "artifacts": 0,
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "errors": [
+        "/fonts/jetbrains-mono-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-italic-400-latin.woff2: net::ERR_FAILED",
+        "/js/demo-loader.min.js: net::ERR_FAILED",
+        "/js/lightbox.js: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-500-latin.woff2: net::ERR_FAILED",
+        "/js/artifact-cards-data.min.js: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 2,
+      "warm": true,
+      "slug": "nema",
+      "heading": "NEMA — Swiss Rotor Machine",
+      "artifacts": 1,
+      "output": "HRSBVOOTZUCRWLMGRMGVWYWOVNF",
+      "errors": []
+    },
+    {
+      "pr": 2,
+      "warm": true,
+      "slug": "hagelin-c36",
+      "heading": "Hagelin C-36 / C-52 Lineage",
+      "artifacts": 0,
+      "errors": []
+    },
+    {
+      "pr": 2,
+      "warm": true,
+      "slug": "turning-grille",
+      "heading": "Fleissner Turning Grille",
+      "artifacts": 0,
+      "output": "ABCEMDFGNOIHPJKL",
+      "errors": []
+    },
+    {
+      "pr": 2,
+      "warm": true,
+      "slug": "myszkowski",
+      "heading": "Myszkowski Transposition",
+      "artifacts": 0,
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "errors": []
+    }
+  ]
+}

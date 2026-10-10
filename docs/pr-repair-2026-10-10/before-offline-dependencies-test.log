@@ -1,0 +1,11 @@
+━━━ Service-worker cache version ━━━
+
+  ✅  sw.js VERSION is current (cipher-museum-166c7644)
+  ✅  CORE parsed out of sw.js
+  ✅  every precached cache-first asset is hashed
+  ✅  minified bundles are hashed
+  ❌  shared exhibit dependencies are precached  →  js/artifact-cards-data.min.js, js/demo-loader.min.js, js/lightbox.js
+  ❌  museum font dependencies are precached and hashed  →  fonts/cinzel-400-latin-ext.woff2, fonts/cinzel-400-latin.woff2, fonts/cinzel-600-latin-ext.woff2, fonts/cinzel-600-latin.woff2, fonts/cinzel-700-latin-ext.woff2, fonts/cinzel-700-latin.woff2, fonts/cormorant-garamond-italic-300-latin-ext.woff2, fonts/cormorant-garamond-italic-300-latin.woff2, fonts/cormorant-garamond-italic-400-latin-ext.woff2, fonts/cormorant-garamond-italic-400-latin.woff2, fonts/cormorant-garamond-italic-600-latin-ext.woff2, fonts/cormorant-garamond-italic-600-latin.woff2, fonts/cormorant-garamond-300-latin-ext.woff2, fonts/cormorant-garamond-300-latin.woff2, fonts/cormorant-garamond-400-latin-ext.woff2, fonts/cormorant-garamond-400-latin.woff2, fonts/cormorant-garamond-600-latin-ext.woff2, fonts/cormorant-garamond-600-latin.woff2, fonts/cormorant-garamond-700-latin-ext.woff2, fonts/cormorant-garamond-700-latin.woff2, fonts/jetbrains-mono-300-latin-ext.woff2, fonts/jetbrains-mono-300-latin.woff2, fonts/jetbrains-mono-400-latin-ext.woff2, fonts/jetbrains-mono-400-latin.woff2, fonts/jetbrains-mono-500-latin-ext.woff2, fonts/jetbrains-mono-500-latin.woff2, fonts/jetbrains-mono-700-latin-ext.woff2, fonts/jetbrains-mono-700-latin.woff2
+  ✅  every hashed file exists on disk
+
+  ❌ Service-worker version stale or incomplete (18 files hashed)

@@ -1,0 +1,31 @@
+{
+  "reports": [
+    {
+      "pr": 1,
+      "declared": "cipher-museum-9664d4d3",
+      "independentLF": "cipher-museum-9664d4d3",
+      "independentCRLF": "cipher-museum-9664d4d3",
+      "pages": [],
+      "count": 18
+    },
+    {
+      "pr": 2,
+      "declared": "cipher-museum-9bf65fa0",
+      "independentLF": "cipher-museum-9bf65fa0",
+      "independentCRLF": "cipher-museum-9bf65fa0",
+      "pages": [
+        "ciphers/hagelin-c36.html",
+        "ciphers/myszkowski.html",
+        "ciphers/nema.html",
+        "ciphers/turning-grille.html"
+      ],
+      "count": 21
+    }
+  ],
+  "mutation": {
+    "restamped": true,
+    "exit": 1,
+    "binaryPropertyRejects": true
+  },
+  "restored": true
+}

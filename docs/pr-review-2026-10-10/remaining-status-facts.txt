@@ -1,0 +1,36 @@
+ciphers/argenti.html:70:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Standard Vatican system into the 17th century</span></div>
+ciphers/argenti.html:117:            <tr><td>Status</td><td>Standard Vatican system into the 17th century</td></tr>
+ciphers/aes.html:68:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Universal standard; NSA-approved for TOP SECRET data with 192/256-bit keys (CNSA Suite)</span></div>
+ciphers/aes.html:122:            <tr><td>Status</td><td>Universal standard; NSA-approved for TOP SECRET data with 192/256-bit keys (CNSA Suite)</td></tr>
+ciphers/atbash.html:110:            <tr><td>Security through obscurity fails</td><td>Kerckhoffs' principle: only the key should be secret</td></tr>
+ciphers/commercial-codebooks.html:71:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Mostly public; private codebooks added a confidentiality layer</span></div>
+ciphers/commercial-codebooks.html:113:            <tr><td>Status</td><td>Mostly public; private codebooks added a confidentiality layer</td></tr>
+ciphers/chinese-telegraph.html:70:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Still used today as a transliteration index for legal names</span></div>
+ciphers/chinese-telegraph.html:112:            <tr><td>Status</td><td>Still used today as a transliteration index for legal names</td></tr>
+ciphers/culper-ring.html:71:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">No British break of the cipher itself recorded</span></div>
+ciphers/culper-ring.html:125:            <tr><td>Status</td><td>No British break of the cipher itself recorded</td></tr>
+ciphers/diffie-hellman.html:68:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">In active use everywhere; modern variant ECDH (X25519) preferred over classical DH</span></div>
+ciphers/diffie-hellman.html:122:            <tr><td>Status</td><td>In active use everywhere; modern variant ECDH (X25519) preferred over classical DH</td></tr>
+ciphers/des.html:69:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Withdrawn 2005; replaced by AES; 3DES deprecated 2023</span></div>
+ciphers/des.html:122:            <tr><td>Status</td><td>Withdrawn 2005; replaced by AES; 3DES deprecated 2023</td></tr>
+ciphers/ecdsa.html:69:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Signs TLS certificates, Bitcoin and Ethereum transactions, and software updates</span></div>
+ciphers/fialka.html:71:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">No public break of operational traffic; declassified after 1991</span></div>
+ciphers/fialka.html:114:            <tr><td>Status</td><td>No public break of operational traffic; declassified after 1991</td></tr>
+ciphers/jn-25.html:149:            <tr><td>Security Model</td><td>Enciphered codebook</td></tr>
+ciphers/great-cipher.html:197:            <tr><td>Security through operator skill, not algorithm</td><td>Modern principle (Kerckhoffs): the algorithm should be public; only the key must be secret</td></tr>
+ciphers/great-cipher.html:215:            <tr><td>Security (then)</td><td>Effectively unbreakable for 200 years</td></tr>
+ciphers/great-cipher.html:216:            <tr><td>Security (today)</td><td>Broken by hill-climbing</td></tr>
+ciphers/m-94.html:71:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Tactical only; never trusted for strategic traffic</span></div>
+ciphers/m-94.html:113:            <tr><td>Status</td><td>Tactical only; never trusted for strategic traffic</td></tr>
+ciphers/navajo-code-talkers.html:173:            <tr><td>Security through linguistic complexity</td><td>Security through mathematical complexity — AES relies on unsolved mathematical problems</td></tr>
+ciphers/red-army-faction.html:69:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Communications evidence, no pads recovered</span></div>
+ciphers/red-army-faction.html:99:        <table class="cipher-table"><tbody><tr><td>Organization</td><td>Red Army Faction (RAF), West Germany</td></tr><tr><td>Era</td><td>1970–1998</td></tr><tr><td>Supply Chain</td><td>East German Stasi / KGB</td></tr><tr><td>Cipher</td><td>One-Time Pad (Soviet standard field format)</td></tr><tr><td>Status</td><td>Communications evidence, no pads recovered</td></tr><tr><td>Modern Lesson</td><td>State sponsor infrastructure dramatically elevates non-state actor crypto capabilities</td></tr></tbody></table>
+ciphers/purple.html:170:            <tr><td>Status</td><td>Broken (1940)</td></tr>
+ciphers/red-type-a.html:152:            <tr><td>Status</td><td>Broken by pre-war SIS effort</td></tr>
+ciphers/sha256.html:68:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Secure; SHA-3 (Keccak) standardised 2015 as a structural alternative, not a replacement</span></div>
+ciphers/sha256.html:123:            <tr><td>Status</td><td>Secure; SHA-3 (Keccak) standardised 2015 as a structural alternative, not a replacement</td></tr>
+ciphers/shamir-secret-sharing.html:69:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Used for DNSSEC root key ceremonies, HSM master keys, and cryptocurrency custody</span></div>
+ciphers/rsa.html:68:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">In daily use; NIST is preparing a post-quantum migration (RSA breaks under Shor's algorithm on a sufficiently large quantum computer)</span></div>
+ciphers/rsa.html:122:            <tr><td>Status</td><td>In daily use; NIST is preparing a post-quantum migration (RSA breaks under Shor's algorithm on a sufficiently large quantum computer)</td></tr>
+ciphers/voynich.html:222:            <tr><td>Status</td><td>Unsolved</td></tr>
+ciphers/zero-knowledge-proofs.html:69:    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Underlies private cryptocurrencies, blockchain rollups, and modern anonymous credentials</span></div>

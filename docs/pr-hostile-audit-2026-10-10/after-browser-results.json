@@ -1,0 +1,1853 @@
+{
+  "phase": "after",
+  "results": [
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "artifact-loading-order",
+      "delayed": "artifact-cards-data.min.js",
+      "order": [
+        "renderer",
+        "data"
+      ],
+      "first": 1,
+      "afterReload": 1
+    },
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "artifact-loading-order",
+      "delayed": "artifact-cards.js",
+      "order": [
+        "data",
+        "renderer"
+      ],
+      "first": 1,
+      "afterReload": 1
+    },
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "live-artifact-trust",
+      "slug": "caesar",
+      "trust": "Broken"
+    },
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "live-artifact-trust",
+      "slug": "sigaba",
+      "trust": "Historical Only"
+    },
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "live-artifact-trust",
+      "slug": "vernam",
+      "trust": "Secure (Modern)"
+    },
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "live-artifact-trust",
+      "slug": "aeneas-tacticus",
+      "trust": null
+    },
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "map-hall-comparison",
+      "pass": true
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "artifact-loading-order",
+      "delayed": "artifact-cards-data.min.js",
+      "order": [
+        "renderer",
+        "data"
+      ],
+      "first": 1,
+      "afterReload": 1
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "artifact-loading-order",
+      "delayed": "artifact-cards.js",
+      "order": [
+        "data",
+        "renderer"
+      ],
+      "first": 1,
+      "afterReload": 1
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "live-artifact-trust",
+      "slug": "caesar",
+      "trust": "Broken"
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "live-artifact-trust",
+      "slug": "sigaba",
+      "trust": "Historical Only"
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "live-artifact-trust",
+      "slug": "vernam",
+      "trust": "Secure (Modern)"
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "live-artifact-trust",
+      "slug": "aeneas-tacticus",
+      "trust": null
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "map-hall-comparison",
+      "pass": true
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "artifact-loading-order",
+      "delayed": "artifact-cards-data.min.js",
+      "order": [
+        "renderer",
+        "data"
+      ],
+      "first": 1,
+      "afterReload": 1
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "artifact-loading-order",
+      "delayed": "artifact-cards.js",
+      "order": [
+        "data",
+        "renderer"
+      ],
+      "first": 1,
+      "afterReload": 1
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "myszkowski-rejected-key",
+      "key": "",
+      "ranks": "",
+      "grid": 0,
+      "columns": "",
+      "output": "",
+      "status": "Use a keyword of 2–24 letters."
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "myszkowski-rejected-key",
+      "key": "A",
+      "ranks": "",
+      "grid": 0,
+      "columns": "",
+      "output": "",
+      "status": "Use a keyword of 2–24 letters."
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "myszkowski-rejected-key",
+      "key": "123!",
+      "ranks": "",
+      "grid": 0,
+      "columns": "",
+      "output": "",
+      "status": "Use a keyword of 2–24 letters."
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "live-artifact-trust",
+      "slug": "caesar",
+      "trust": "Broken"
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "live-artifact-trust",
+      "slug": "sigaba",
+      "trust": "Historical Only"
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "live-artifact-trust",
+      "slug": "vernam",
+      "trust": "Secure (Modern)"
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "live-artifact-trust",
+      "slug": "aeneas-tacticus",
+      "trust": null
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "map-hall-comparison",
+      "pass": true
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "artifact-loading-order",
+      "delayed": "artifact-cards-data.min.js",
+      "order": [
+        "renderer",
+        "data"
+      ],
+      "first": 1,
+      "afterReload": 1
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "artifact-loading-order",
+      "delayed": "artifact-cards.js",
+      "order": [
+        "data",
+        "renderer"
+      ],
+      "first": 1,
+      "afterReload": 1
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "myszkowski-rejected-key",
+      "key": "",
+      "ranks": "",
+      "grid": 0,
+      "columns": "",
+      "output": "",
+      "status": "Use a keyword of 2–24 letters."
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "myszkowski-rejected-key",
+      "key": "A",
+      "ranks": "",
+      "grid": 0,
+      "columns": "",
+      "output": "",
+      "status": "Use a keyword of 2–24 letters."
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "myszkowski-rejected-key",
+      "key": "123!",
+      "ranks": "",
+      "grid": 0,
+      "columns": "",
+      "output": "",
+      "status": "Use a keyword of 2–24 letters."
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "live-artifact-trust",
+      "slug": "caesar",
+      "trust": "Broken"
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "live-artifact-trust",
+      "slug": "sigaba",
+      "trust": "Historical Only"
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "live-artifact-trust",
+      "slug": "vernam",
+      "trust": "Secure (Modern)"
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "live-artifact-trust",
+      "slug": "aeneas-tacticus",
+      "trust": null
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "map-hall-comparison",
+      "pass": true
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "fresh-profile-first-use-offline",
+      "slug": "nema",
+      "heading": "NEMA — Swiss Rotor Machine",
+      "artifacts": 1,
+      "data": true,
+      "trust": "Historical Only",
+      "output": "HRSBVOOTZUCRWLMGRMGVWYWOVNF",
+      "errors": [],
+      "allFailures": [
+        {
+          "path": "/ciphers/nema.html",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/museum.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/historical-demos.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/trust-labels.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/demo-loader.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-ciphers.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-demos.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/lightbox.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/nav.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/images/icons.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/breadcrumbs.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/footer.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/ui-delegates.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards-data.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-500-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/favicon.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        }
+      ],
+      "initialCache": {
+        "cipher-museum-437eacda": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/js/demo-loader.min.js",
+          "/js/lightbox.js",
+          "/fonts/cinzel-400-latin-ext.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/cinzel-600-latin-ext.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cinzel-700-latin-ext.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin.woff2",
+          "/fonts/cormorant-garamond-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-300-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/fonts/cormorant-garamond-700-latin-ext.woff2",
+          "/fonts/cormorant-garamond-700-latin.woff2",
+          "/fonts/jetbrains-mono-300-latin-ext.woff2",
+          "/fonts/jetbrains-mono-300-latin.woff2",
+          "/fonts/jetbrains-mono-400-latin-ext.woff2",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin-ext.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin-ext.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      }
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "fresh-profile-first-use-offline",
+      "slug": "hagelin-c36",
+      "heading": "Hagelin C-36 / C-52 Lineage",
+      "artifacts": 1,
+      "data": true,
+      "trust": "Broken",
+      "errors": [],
+      "allFailures": [
+        {
+          "path": "/ciphers/hagelin-c36.html",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/museum.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/trust-labels.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/demo-loader.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/lightbox.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/nav.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/images/icons.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/breadcrumbs.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/footer.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/ui-delegates.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards-data.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-500-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/favicon.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        }
+      ],
+      "initialCache": {
+        "cipher-museum-437eacda": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/js/demo-loader.min.js",
+          "/js/lightbox.js",
+          "/fonts/cinzel-400-latin-ext.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/cinzel-600-latin-ext.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cinzel-700-latin-ext.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin.woff2",
+          "/fonts/cormorant-garamond-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-300-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/fonts/cormorant-garamond-700-latin-ext.woff2",
+          "/fonts/cormorant-garamond-700-latin.woff2",
+          "/fonts/jetbrains-mono-300-latin-ext.woff2",
+          "/fonts/jetbrains-mono-300-latin.woff2",
+          "/fonts/jetbrains-mono-400-latin-ext.woff2",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin-ext.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin-ext.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      }
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "fresh-profile-first-use-offline",
+      "slug": "turning-grille",
+      "heading": "Fleissner Turning Grille",
+      "artifacts": 1,
+      "data": true,
+      "trust": "Broken",
+      "output": "ABCEMDFGNOIHPJKL",
+      "errors": [],
+      "allFailures": [
+        {
+          "path": "/ciphers/turning-grille.html",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/museum.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/historical-demos.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/trust-labels.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/demo-loader.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-ciphers.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-demos.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/lightbox.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/nav.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/images/icons.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-500-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/breadcrumbs.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/footer.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/ui-delegates.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards-data.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/favicon.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        }
+      ],
+      "initialCache": {
+        "cipher-museum-437eacda": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/js/demo-loader.min.js",
+          "/js/lightbox.js",
+          "/fonts/cinzel-400-latin-ext.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/cinzel-600-latin-ext.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cinzel-700-latin-ext.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin.woff2",
+          "/fonts/cormorant-garamond-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-300-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/fonts/cormorant-garamond-700-latin-ext.woff2",
+          "/fonts/cormorant-garamond-700-latin.woff2",
+          "/fonts/jetbrains-mono-300-latin-ext.woff2",
+          "/fonts/jetbrains-mono-300-latin.woff2",
+          "/fonts/jetbrains-mono-400-latin-ext.woff2",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin-ext.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin-ext.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      }
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "fresh-profile-first-use-offline",
+      "slug": "myszkowski",
+      "heading": "Myszkowski Transposition",
+      "artifacts": 1,
+      "data": true,
+      "trust": "Broken",
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "errors": [],
+      "allFailures": [
+        {
+          "path": "/ciphers/myszkowski.html",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/museum.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/historical-demos.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/trust-labels.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/demo-loader.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-ciphers.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-demos.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/lightbox.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/nav.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/images/icons.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/breadcrumbs.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/footer.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/ui-delegates.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards-data.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-500-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/favicon.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        }
+      ],
+      "initialCache": {
+        "cipher-museum-437eacda": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/js/demo-loader.min.js",
+          "/js/lightbox.js",
+          "/fonts/cinzel-400-latin-ext.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/cinzel-600-latin-ext.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cinzel-700-latin-ext.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin.woff2",
+          "/fonts/cormorant-garamond-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-300-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/fonts/cormorant-garamond-700-latin-ext.woff2",
+          "/fonts/cormorant-garamond-700-latin.woff2",
+          "/fonts/jetbrains-mono-300-latin-ext.woff2",
+          "/fonts/jetbrains-mono-300-latin.woff2",
+          "/fonts/jetbrains-mono-400-latin-ext.woff2",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin-ext.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin-ext.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      }
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "fresh-profile-first-use-offline",
+      "slug": "nema",
+      "heading": "NEMA — Swiss Rotor Machine",
+      "artifacts": 1,
+      "data": true,
+      "trust": "Historical Only",
+      "output": "HRSBVOOTZUCRWLMGRMGVWYWOVNF",
+      "errors": [],
+      "allFailures": [
+        {
+          "path": "/ciphers/nema.html",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/museum.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/historical-demos.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/trust-labels.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/demo-loader.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-ciphers.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-demos.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/lightbox.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/nav.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/images/icons.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-500-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/breadcrumbs.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/footer.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/ui-delegates.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards-data.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/favicon.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        }
+      ],
+      "initialCache": {
+        "cipher-museum-437eacda": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/js/demo-loader.min.js",
+          "/js/lightbox.js",
+          "/fonts/cinzel-400-latin-ext.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/cinzel-600-latin-ext.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cinzel-700-latin-ext.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin.woff2",
+          "/fonts/cormorant-garamond-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-300-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/fonts/cormorant-garamond-700-latin-ext.woff2",
+          "/fonts/cormorant-garamond-700-latin.woff2",
+          "/fonts/jetbrains-mono-300-latin-ext.woff2",
+          "/fonts/jetbrains-mono-300-latin.woff2",
+          "/fonts/jetbrains-mono-400-latin-ext.woff2",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin-ext.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin-ext.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      }
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "fresh-profile-first-use-offline",
+      "slug": "hagelin-c36",
+      "heading": "Hagelin C-36 / C-52 Lineage",
+      "artifacts": 1,
+      "data": true,
+      "trust": "Broken",
+      "errors": [],
+      "allFailures": [
+        {
+          "path": "/ciphers/hagelin-c36.html",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/museum.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/trust-labels.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/demo-loader.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/lightbox.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/nav.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/images/icons.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/breadcrumbs.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/footer.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/ui-delegates.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards-data.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-500-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/favicon.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        }
+      ],
+      "initialCache": {
+        "cipher-museum-437eacda": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/js/demo-loader.min.js",
+          "/js/lightbox.js",
+          "/fonts/cinzel-400-latin-ext.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/cinzel-600-latin-ext.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cinzel-700-latin-ext.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin.woff2",
+          "/fonts/cormorant-garamond-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-300-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/fonts/cormorant-garamond-700-latin-ext.woff2",
+          "/fonts/cormorant-garamond-700-latin.woff2",
+          "/fonts/jetbrains-mono-300-latin-ext.woff2",
+          "/fonts/jetbrains-mono-300-latin.woff2",
+          "/fonts/jetbrains-mono-400-latin-ext.woff2",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin-ext.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin-ext.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      }
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "fresh-profile-first-use-offline",
+      "slug": "turning-grille",
+      "heading": "Fleissner Turning Grille",
+      "artifacts": 1,
+      "data": true,
+      "trust": "Broken",
+      "output": "ABCEMDFGNOIHPJKL",
+      "errors": [],
+      "allFailures": [
+        {
+          "path": "/ciphers/turning-grille.html",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/museum.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/historical-demos.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/trust-labels.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/demo-loader.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-ciphers.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-demos.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/lightbox.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/nav.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/images/icons.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-500-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/breadcrumbs.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/footer.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/ui-delegates.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards-data.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/favicon.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        }
+      ],
+      "initialCache": {
+        "cipher-museum-437eacda": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/js/demo-loader.min.js",
+          "/js/lightbox.js",
+          "/fonts/cinzel-400-latin-ext.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/cinzel-600-latin-ext.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cinzel-700-latin-ext.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin.woff2",
+          "/fonts/cormorant-garamond-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-300-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/fonts/cormorant-garamond-700-latin-ext.woff2",
+          "/fonts/cormorant-garamond-700-latin.woff2",
+          "/fonts/jetbrains-mono-300-latin-ext.woff2",
+          "/fonts/jetbrains-mono-300-latin.woff2",
+          "/fonts/jetbrains-mono-400-latin-ext.woff2",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin-ext.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin-ext.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      }
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "fresh-profile-first-use-offline",
+      "slug": "myszkowski",
+      "heading": "Myszkowski Transposition",
+      "artifacts": 1,
+      "data": true,
+      "trust": "Broken",
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "errors": [],
+      "allFailures": [
+        {
+          "path": "/ciphers/myszkowski.html",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/museum.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/css/historical-demos.css",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/trust-labels.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/demo-loader.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-ciphers.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/historical-demos.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/lightbox.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/nav.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/images/icons.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/breadcrumbs.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/footer.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/ui-delegates.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards-data.min.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/js/artifact-cards.js",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cormorant-garamond-600-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-400-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/cinzel-700-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/fonts/jetbrains-mono-500-latin.woff2",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "path": "/favicon.svg",
+          "serviceWorker": true,
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        }
+      ],
+      "initialCache": {
+        "cipher-museum-437eacda": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/js/demo-loader.min.js",
+          "/js/lightbox.js",
+          "/fonts/cinzel-400-latin-ext.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/cinzel-600-latin-ext.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cinzel-700-latin-ext.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-300-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-italic-600-latin.woff2",
+          "/fonts/cormorant-garamond-300-latin-ext.woff2",
+          "/fonts/cormorant-garamond-300-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin-ext.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin-ext.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/fonts/cormorant-garamond-700-latin-ext.woff2",
+          "/fonts/cormorant-garamond-700-latin.woff2",
+          "/fonts/jetbrains-mono-300-latin-ext.woff2",
+          "/fonts/jetbrains-mono-300-latin.woff2",
+          "/fonts/jetbrains-mono-400-latin-ext.woff2",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin-ext.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin-ext.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      }
+    }
+  ]
+}

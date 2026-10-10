@@ -1,0 +1,24 @@
+{
+  "timestampUTC": "2026-10-10T12:08:36.977001+00:00",
+  "originalReviewFilesUnchanged": 118,
+  "localServersStopped": true,
+  "mutationsRestored": true,
+  "worktrees": {
+    "root": {
+      "head": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "trackedStatus": ""
+    },
+    "pr1": {
+      "head": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+      "trackedStatus": ""
+    },
+    "pr2": {
+      "head": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "trackedStatus": ""
+    },
+    "mutations": {
+      "head": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "trackedStatus": ""
+    }
+  }
+}

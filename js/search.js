@@ -45,6 +45,8 @@
             hall: e.h,
             created: e.c,
             broken: e.b,
+            trust: e.trust || null,
+            note: e.n || '',
             summary: e.s,
             tags: e.g || [],
             _hay: (

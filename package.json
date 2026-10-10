@@ -20,7 +20,10 @@
     "build:search-index": "node scripts/build-search-index.js",
     "build:js": "node scripts/build-min.js",
     "lint:html": "htmlhint \"ciphers/*.html\" \"halls/*.html\" \"*.html\" \"lab/*.html\" \"tours/*.html\" \"community/*.html\" \"hall-of-foundations/*.html\"",
-    "build:counts": "node scripts/build-counts.js"
+    "build:counts": "node scripts/build-counts.js",
+    "build:trust-labels": "node scripts/build-trust-labels.js",
+    "build:artifact-cards": "node scripts/build-artifact-cards.js",
+    "build:metadata": "npm run build:trust-labels && npm run build:search-index && npm run build:artifact-cards"
   },
   "repository": {
     "type": "git",

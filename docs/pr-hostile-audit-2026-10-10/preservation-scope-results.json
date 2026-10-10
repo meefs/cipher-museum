@@ -1,0 +1,47 @@
+[
+  {
+    "pr": 1,
+    "before": "663cbffe736b88353ac4d17ecff300c5d6ae665e",
+    "head": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+    "unchanged": {
+      "data/exhibit-trust.json": true,
+      "data/trust-labels.json": true,
+      "data/artifact-cards.json": true,
+      "js/search-index.json": true,
+      "sitemap.xml": true,
+      "public/corpus/all.jsonl": true,
+      "tests/engines/corpus-replay.js": true,
+      "js/ciphers/all-engines.js": true
+    }
+  },
+  {
+    "pr": 2,
+    "before": "1e190e0e7d347e5684d36a40827e602ac821045d",
+    "head": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+    "unchanged": {
+      "data/exhibit-trust.json": true,
+      "data/trust-labels.json": true,
+      "data/artifact-cards.json": true,
+      "js/search-index.json": true,
+      "sitemap.xml": true,
+      "public/corpus/all.jsonl": true,
+      "tests/engines/corpus-replay.js": true,
+      "js/ciphers/all-engines.js": true,
+      "js/historical-ciphers.js": true
+    }
+  },
+  {
+    "artifactRacePresentOnMain": true,
+    "navByteIdenticalMainToHead": true,
+    "ecaFiles": [
+      "js/artifact-cards-data.js",
+      "js/artifact-cards-data.min.js",
+      "js/artifact-cards.js",
+      "scripts/build-artifact-cards.js",
+      "sw.js",
+      "tests/run-all.js",
+      "tests/test-artifact-loading.js"
+    ],
+    "ecaOnlyReadinessRepair": true
+  }
+]
