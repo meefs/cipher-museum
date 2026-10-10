@@ -80,8 +80,10 @@ universal-substitution wording duplicated on timeline lines 308/312; both were
 qualified. Literal count markers inside README code fences were removed and
 current inventory prose now avoids an independent fixed engine total.
 
-Eight older narrative pages have apparent widget controls without working
-click delegation (SIGSALY, microdot, Cabinet Noir, Kerckhoffs, field hollers,
-Da Vinci Code, National Treasure, Gravity Falls). They are excluded from the
-**working** interactive count. Their repair is unrelated and deferred; no
-historical exhibit or canonical trust identity was removed.
+A first JSDOM recheck omitted nav.js's dynamically loaded ui-delegates.js,
+which made eight legacy widgets appear inert. Loading that actual dependency
+proved the controls work. Their registrations were corrected too: §109, 110,
+112, 113, 124, 127, 128, 129. Final baseline counts are **143 interactive
+exhibits**, including **123 cipher/history exhibits**. The earlier 135/115
+intermediate figures above record the first correction, not the final totals.
+Tests now bind the real companion script before exercising those controls.

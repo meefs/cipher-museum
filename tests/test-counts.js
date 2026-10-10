@@ -52,5 +52,14 @@ for (const [id,file,input,value,output,expected] of [
  assert.match(dom.window.document.getElementById(output).textContent,expected,file+' real control');
  dom.window.close();
 }
+for (const id of [109,110,112,113,124,127,128,129]) {
+ const e=es.find(e=>e.number===id);assert.equal(e.interactive,true,e.path);
+ const dom=new JSDOM(read(e.path),{runScripts:'dangerously',pretendToBeVisual:true});
+ dom.window.eval(read('js/ui-delegates.js'));
+ dom.window.document.dispatchEvent(new dom.window.Event('DOMContentLoaded'));
+ if(id===124){dom.window.document.querySelector('[data-fn="runHollerCode"]').click();assert(dom.window.document.getElementById('hollerOutput').textContent.length>0);}
+ else {dom.window.document.getElementById('input').value='REVIEWINPUT';dom.window.document.querySelector('[data-fn="encode"]').click();assert(dom.window.document.getElementById('output').textContent.length>0,e.path+' real delegated control');}
+ dom.window.close();
+}
 for (const block of read('README.md').matchAll(/```[\s\S]*?```/g)) assert(!block[0].includes('<!-- count:'),'Count plumbing must not display inside fenced code');
 console.log('Count registrations, categories, canonical search identities, static totals and idempotence passed: '+JSON.stringify(c));
