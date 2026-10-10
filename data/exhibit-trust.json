@@ -160,6 +160,10 @@
     {"number":157,"path":"hall-of-foundations/learning-with-errors.html","label":null},
     {"number":158,"path":"ciphers/ecdsa.html","label":"secure"},
     {"number":159,"path":"ciphers/shamir-secret-sharing.html","label":"secure"},
-    {"number":160,"path":"ciphers/zero-knowledge-proofs.html","label":"secure"}
+    {"number":160,"path":"ciphers/zero-knowledge-proofs.html","label":"secure"},
+    {"number":161,"path":"ciphers/nema.html","label":"historical","note":"Obsolete Swiss military rotor machine. The demo fixes one historical wheel configuration; the 17,576-keypress state period is not its key space."},
+    {"number":162,"path":"ciphers/hagelin-c36.html","label":"broken","note":"The pin-and-lug family has published cryptanalytic attacks; Greenough’s 1999 C-52 attack uses known plaintext."},
+    {"number":163,"path":"ciphers/turning-grille.html","label":"broken","note":"A transposition cipher: quarter-turn holes permute a complete block, preserving letter frequencies."},
+    {"number":164,"path":"ciphers/myszkowski.html","label":"broken","note":"Repeated-keyword transposition preserves letter frequencies and is vulnerable to statistical and keyword-search attacks."}
   ]
 }

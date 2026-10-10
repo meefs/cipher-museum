@@ -74,6 +74,7 @@ function eraFromHtml(html) {
   return 'Historical period varies';
 }
 
+
 function hallFromHtml(html) {
   const hall = html.match(/<a href="\.\.\/halls\/[^"]+\.html">([^<]*Hall[^<]*)<\/a>/i);
   return hall ? stripTags(hall[1]) : 'Museum exhibit';
@@ -95,6 +96,30 @@ function main(check = false) {
   // key agreement, a hash, a signature, a sharing scheme and a proof system
   // all protect something without encrypting anything.
   const OVERRIDES = {
+    'nema': {
+      region: 'Switzerland', usedBy: 'Swiss Army; training and war-reserve configurations',
+      keyType: 'Wheel selection and pairing; ten starting window letters',
+      keyIdea: 'Four wired rotors and a moving reflector controlled by separate stepping wheels',
+      modernLesson: 'Count the state period separately from the initial key space'
+    },
+    'hagelin-c36': {
+      region: 'Sweden and Switzerland', usedBy: 'Military and diplomatic operators of Hagelin pin-and-lug machines',
+      keyType: 'Pin patterns, lug settings, wheel selection and starting positions',
+      keyIdea: 'Pin-and-lug mechanisms produce a changing numerical shift; configurations vary by model',
+      modernLesson: 'Public cryptanalysis and independent supplier review are separate requirements'
+    },
+    'turning-grille': {
+      region: 'Austria and wartime Europe', usedBy: 'German Army in WWI; other military grille users',
+      keyType: 'Hole pattern, starting orientation and rotation direction',
+      keyIdea: 'Four quarter-turns visit each cell once, permuting a complete message block',
+      modernLesson: 'A stencil can rearrange a message without concealing its existence'
+    },
+    'myszkowski': {
+      region: 'France', usedBy: 'Classical cipher practitioners and puzzle solvers',
+      keyType: 'Keyword with repeated letters assigned identical ranks',
+      keyIdea: 'Read single columns downwards and tied columns together across rows',
+      modernLesson: 'Specify tie handling and incomplete rows to make a permutation reversible'
+    },
     'diffie-hellman': {
       keyIdea: 'Two parties derive a shared secret over a public channel; nothing is encrypted',
       keyType: 'No key input — the protocol produces one',

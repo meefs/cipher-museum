@@ -16,11 +16,19 @@
  */
 'use strict';
 
-const VERSION = 'cipher-museum-db092287';
+const VERSION = 'cipher-museum-437eacda';
+
 const CORE = [
   '/',
   '/index.html',
+  '/ciphers/myszkowski.html',
+  '/ciphers/turning-grille.html',
+  '/ciphers/hagelin-c36.html',
+  '/ciphers/nema.html',
   '/css/museum.css',
+  '/css/historical-demos.css',
+  '/js/historical-ciphers.js',
+  '/js/historical-demos.js',
   '/js/nav.js',
   '/js/footer.js',
   '/js/breadcrumbs.js',

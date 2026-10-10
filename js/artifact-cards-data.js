@@ -1006,6 +1006,23 @@
       "securityFailure": "Kasiski · Only 10 possible shifts per position",
       "modernLesson": "Key alphabet size matters"
     },
+    "hagelin-c36": {
+      "name": "Hagelin C-36 / C-52 Lineage",
+      "hall": "VII",
+      "era": "1930s–1950s · Sweden / Switzerland",
+      "family": "Mechanical and Rotor Machines",
+      "region": "Sweden and Switzerland",
+      "usedBy": "Military and diplomatic operators of Hagelin pin-and-lug machines",
+      "keyType": "Pin patterns, lug settings, wheel selection and starting positions",
+      "keyIdea": "Pin-and-lug mechanisms produce a changing numerical shift; configurations vary by model",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "The pin-and-lug family has published cryptanalytic attacks; Greenough’s 1999 C-52 attack uses known plaintext.",
+      "modernLesson": "Public cryptanalysis and independent supplier review are separate requirements"
+    },
     "hill": {
       "name": "Hill Cipher",
       "hall": "II",
@@ -1429,6 +1446,23 @@
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
+    "myszkowski": {
+      "name": "Myszkowski Transposition",
+      "hall": "IV",
+      "era": "1902 · France",
+      "family": "Transposition",
+      "region": "France",
+      "usedBy": "Classical cipher practitioners and puzzle solvers",
+      "keyType": "Keyword with repeated letters assigned identical ranks",
+      "keyIdea": "Read single columns downwards and tied columns together across rows",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Repeated-keyword transposition preserves letter frequencies and is vulnerable to statistical and keyword-search attacks.",
+      "modernLesson": "Specify tie handling and incomplete rows to make a permutation reversible"
+    },
     "national-treasure": {
       "name": "National Treasure",
       "hall": "XIII",
@@ -1458,6 +1492,23 @@
       },
       "securityFailure": "Never publicly broken in wartime service; a historical military code.",
       "modernLesson": "Security through complexity · pre-shared keys"
+    },
+    "nema": {
+      "name": "NEMA — Swiss Rotor Machine",
+      "hall": "VII",
+      "era": "Postwar Switzerland · 1947",
+      "family": "Mechanical and Rotor Machines",
+      "region": "Switzerland",
+      "usedBy": "Swiss Army; training and war-reserve configurations",
+      "keyType": "Wheel selection and pairing; ten starting window letters",
+      "keyIdea": "Four wired rotors and a moving reflector controlled by separate stepping wheels",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "Obsolete Swiss military rotor machine. The demo fixes one historical wheel configuration; the 17,576-keypress state period is not its key space.",
+      "modernLesson": "Count the state period separately from the initial key space"
     },
     "nihilist": {
       "name": "Nihilist Cipher",
@@ -2033,6 +2084,23 @@
       },
       "securityFailure": "Easy",
       "modernLesson": "A predictable keystream is barely a keystream"
+    },
+    "turning-grille": {
+      "name": "Fleissner Turning Grille",
+      "hall": "IV",
+      "era": "1881 · German WWI use",
+      "family": "Transposition",
+      "region": "Austria and wartime Europe",
+      "usedBy": "German Army in WWI; other military grille users",
+      "keyType": "Hole pattern, starting orientation and rotation direction",
+      "keyIdea": "Four quarter-turns visit each cell once, permuting a complete message block",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "A transposition cipher: quarter-turn holes permute a complete block, preserving letter frequencies.",
+      "modernLesson": "A stencil can rearrange a message without concealing its existence"
     },
     "two-square": {
       "name": "Two-Square Cipher",

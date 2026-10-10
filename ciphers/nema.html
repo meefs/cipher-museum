@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEMA — Swiss Rotor Machine — The Cipher Museum</title>
+  <meta name="description" content="Swiss NEMA rotor machine (1947) — four cipher wheels, independent stepping wheels, and a moving reflector. Explore historical military encryption and decryption.">
+  <meta property="og:title" content="NEMA — Swiss Rotor Machine — The Cipher Museum">
+  <meta property="og:description" content="Swiss NEMA rotor machine (1947) — four cipher wheels, independent stepping wheels, and a moving reflector. Explore historical military encryption and decryption.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciphermuseum.com/ciphers/nema.html">
+  <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NEMA — Swiss Rotor Machine — The Cipher Museum">
+  <meta name="twitter:description" content="Swiss NEMA rotor machine (1947) — four cipher wheels, independent stepping wheels, and a moving reflector. Explore historical military encryption and decryption.">
+  <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://ciphermuseum.com/ciphers/nema.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="stylesheet" href="../css/museum.css">
+  <link rel="stylesheet" href="../css/historical-demos.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="2" fill="currentColor"/>
+      </svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../museum-map.html">Explore</a></li>
+      <li><a href="../timeline.html">Timeline</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../cipher-corpus.html">Cipher Corpus</a></li>
+      <li><a href="../cryptanalysis.html">Cryptanalysis</a></li>
+      <li><a href="../challenges.html">Challenges</a></li>
+      <li><a href="../lab/workbench.html">Lab</a></li>
+      <li><a href="../search.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+<div class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Entrance</a><span>&rsaquo;</span><a href="../halls/machines.html">Hall VII: Mechanical Cipher Machines</a><span>&rsaquo;</span>NEMA</div>
+  <div class="page-meta"><span class="page-num">Exhibit 161 of 164</span><span class="badge era-coldwar">Postwar Switzerland · 1947</span></div>
+  <h1 class="page-title">NEMA — Swiss Rotor Machine</h1>
+  <div class="trust-label-wrap"><a class="trust-label trust-label--historical" href="../museum-map.html#trust-labels" title="No longer in use, or never confirmed broken/deciphered." aria-label="Trust label: Historical Only. No longer in use, or never confirmed broken/deciphered."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h11v12a2 2 0 0 0 2 2H6a3 3 0 0 1-3-3V7z"/><path d="M16 5a2 2 0 0 1 2 2v8h3a0 0 0 0 1 0 0v2a2 2 0 0 1-2 2"/></svg><span class="trust-label__text">Historical Only</span></a></div>
+  <p class="page-tagline">Switzerland’s new machine: separate the wiring from the wheels that decide when it moves</p>
+  <p class="exhibit-status-note">Obsolete Swiss military rotor machine. The demo fixes one historical wheel configuration; the 17,576-keypress state period is not its key space.</p>
+  <div class="exhibit-facts">
+    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Swiss Army · manufactured by Zellweger, Uster</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1947</span></div>
+    <div class="fact"><span class="fact-label">Family</span><span class="fact-value">Electromechanical rotor cipher</span></div>
+    <div class="fact"><span class="fact-label">Key</span><span class="fact-value">Wheel selection, pairing, and ten starting positions</span></div>
+    <div class="fact"><span class="fact-label">Trust</span><span class="fact-value"><span class="trust-label trust-label--historical trust-label--sm" title="No longer in use, or never confirmed broken/deciphered.">Historical Only</span></span></div>
+  </div>
+</div>
+
+<div class="demo-section" data-historical-demo="nema">
+  <div class="demo-panel">
+    <div class="demo-head"><span class="demo-title">Try It Yourself</span></div>
+    <div class="demo-body">
+      <div class="demo-col">
+        <div class="mode-toggle" role="group" aria-label="Cipher mode">
+          <button type="button" class="mode-btn active" data-mode="encrypt" aria-pressed="true">Encrypt</button>
+          <button type="button" class="mode-btn" data-mode="decrypt" aria-pressed="false">Decrypt</button>
+        </div>
+        <div class="input-group"><label class="input-label" for="historical-message">Message</label><textarea class="museum-input" id="historical-message" rows="3" maxlength="4096" aria-describedby="demo-limits">AAAAAAAAAAAAAAAAAAAAAAAAAAA</textarea></div>
+        <div class="input-group"><label class="input-label" for="nema-windows">Ten window letters (left to right)</label><input class="museum-input" id="nema-windows" type="text" value="MQQPZQSOEV" maxlength="10" spellcheck="false" aria-describedby="nema-config"></div><p id="nema-config" class="historical-grid-caption">Fixed military configuration: A/12, B/13, C/14, D/15 (left to right); red wheel 22/1. Each run starts at these windows.</p>
+        <p id="demo-limits" class="historical-grid-caption">Historical wiring and military stepping; a fixed configuration, not all NEMA variants. The demo uppercases letters, removes accents, and discards spaces, punctuation, and digits.</p>
+      </div>
+      <div class="demo-col">
+        <div class="btn-group"><button type="button" class="btn btn-primary" id="historical-run">Run Cipher</button><button type="button" class="btn btn-secondary" id="historical-use-output">Use output in opposite mode</button></div>
+        <div class="input-group"><span class="input-label" id="historical-output-label">Output</span><div class="output-box" id="historical-output" role="status" aria-live="polite" aria-labelledby="historical-output-label"></div></div>
+        <p id="historical-status" role="status" aria-live="polite" class="historical-grid-caption"></p>
+        <div class="historical-trace"><table class="cipher-table"><caption>First twelve keypresses, after stepping</caption><thead><tr><th scope="col">Step</th><th scope="col">In</th><th scope="col">Out</th><th scope="col">Windows</th></tr></thead><tbody id="nema-trace"></tbody></table></div>
+      </div>
+    </div>
+  </div>
+  <noscript><p>Enable JavaScript to use this interactive. The worked example below explains the same steps.</p></noscript>
+</div>
+
+<div class="exhibit-layout">
+  <div class="exhibit-main">
+    <div class="cipher-significance"><h2>Why This Matters</h2><p>NEMA shows that a rotor cipher has two designs to understand: the permutations inside its electrical wheels and the mechanism that moves them. Switzerland gave those jobs separate wheels. The resulting machine is more instructive than an Enigma with an extra rotor: its stepping decisions come from two mechanical drive systems.</p></div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
+      <div class="panel-body"><p>NEMA, short for <em>NEue MAschine</em> (“new machine”), replaced the Swiss Army’s commercial Enigma K after its traffic had proved vulnerable. Development began during WWII; the Swiss Army issued NEMA operating instructions dated 30 April 1947. Zellweger manufactured the machine in Uster. Training and war-reserve versions used different stepping wheels; diplomatic machines were another variant.</p><p>The 1947 date identifies the postwar machine, rather than its wartime design work. The military configuration in this exhibit is deliberately fixed so that visitors can follow every wheel position.</p></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
+      <div class="panel-body"><p>Current enters a static entry wheel, passes through four cipher rotors, reaches a rotating reflector, and returns through the rotors in reverse. There is no plugboard. The reflector makes the operation reciprocal: reset to the same key and run the ciphertext to recover the plaintext.</p><p>Each cipher wheel has a separate mechanical stepping wheel. Notches determine which neighbouring wheels can move, and a second track on the red drive wheel gates a slower transmission. Decisions are made from the old positions; eligible wheels then step backwards before the letter is transformed. The reflector can step too.</p><pre>Fixed wheels (left → right): A/12  B/13  C/14  D/15
+Red wheel: 22/1
+Start windows: MQQPZQSOEV
+Input:  AAAAAAAAAAAAAAAAAAAAAAAAAAA
+Output: HRSBVOOTZUCRWLMGRMGVWYWOVNF</pre><p>This example is checked against the published rmsk2 NEMA test, whose reference ciphertext came from Geoff Sullivan’s simulator. Decryption must start at <code>MQQPZQSOEV</code>, not at the final windows printed by the demo.</p></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Security and Cryptanalytic Limits</span></div>
+      <div class="panel-body"><p>The military mechanism has a maximum state period of 17,576 keypresses. A reflector also prevents a letter from encrypting to itself. Those structures constrain a cryptanalyst’s search even though the number of possible initial settings is much larger than the period.</p><p>This exhibit does not assert a documented operational break of Swiss NEMA traffic. It presents an obsolete machine and makes no claim of modern security. A message, key schedule, and operating procedure must be evaluated together.</p></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">What This Demo Models</span></div>
+      <div class="panel-body"><p>The demo implements the historical A–D wiring, the military 12–15 stepping wheels, red wheel 22/1, moving reflector, and ten lower-row window positions. It omits alternative wheel selections, training and diplomatic variants, number-shift conventions, and message-key procedures. It is a reconstruction for study, not a tool for protecting messages.</p></div>
+    </div>
+  </div>
+  <div class="exhibit-side">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-swords"/></svg></span><span class="panel-title">Quick Facts</span></div>
+      <div class="panel-body"><table class="cipher-table"><tbody><tr><td>Exhibit</td><td>161 of 164</td></tr><tr><td>Origin</td><td>Swiss Army · manufactured by Zellweger, Uster</td></tr><tr><td>Year</td><td>1947</td></tr><tr><td>Family</td><td>Electromechanical rotor cipher</td></tr><tr><td>Key</td><td>Wheel selection, pairing, and ten starting positions</td></tr><tr><td>Trust</td><td><span class="trust-label trust-label--historical trust-label--sm" title="No longer in use, or never confirmed broken/deciphered.">Historical Only</span></td></tr></tbody></table></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Sources and Further Reading</span></div>
+      <div class="panel-body"><p><a href="https://www.cryptomuseum.com/crypto/nema/index.htm">Crypto Museum: measured wiring, stepping, and 1947 Swiss Army manual</a>; <a href="https://www.cryptomuseum.com/pub/files/WS_nema.pdf">Walter Schmid, <em>Die Chiffriermaschine Nema</em> (2005)</a>; <a href="https://github.com/rmsk2/rmsk2/blob/master/nema_test.cpp">rmsk2 independent simulator test vector</a>.</p></div>
+    </div>
+  </div>
+</div>
+
+<section class="related-exhibits">
+  <h2 class="related-exhibits__heading">Related Exhibits</h2>
+  <div class="related-exhibits__grid">
+    <a href="../ciphers/enigma.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Enigma</span><span class="related-card__tag">Compare reciprocal rotor wiring and stepping</span></a>
+    <a href="../ciphers/sigaba.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">SIGABA</span><span class="related-card__tag">Another approach to irregular stepping</span></a>
+    <a href="../ciphers/hagelin-c36.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Hagelin C-36 / C-52</span><span class="related-card__tag">Mechanical key streams without electrical rotors</span></a>
+  </div>
+</section>
+<div class="hall-nav">
+  <a href="../ciphers/m209.html" class="hall-nav-link"><span class="hall-nav-dir">&larr; Previous</span><span class="hall-nav-name">M-209 (Hagelin C-38)</span></a>
+  <a href="../ciphers/hagelin-c36.html" class="hall-nav-link next"><span class="hall-nav-dir">Next &rarr;</span><span class="hall-nav-name">Hagelin C-36 / C-52</span></a>
+</div>
+</main>
+<footer></footer>
+<script src="../js/trust-labels.js"></script>
+<script src="../js/demo-loader.min.js"></script>
+<script src="../js/historical-ciphers.js"></script>
+<script src="../js/historical-demos.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/lightbox.js"></script>
+</body>
+</html>

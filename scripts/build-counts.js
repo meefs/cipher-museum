@@ -49,12 +49,22 @@ function computeCounts() {
     protocols,
     halls,
     total: ciphers + foundations + protocols,
-    // §-ranges the prose quotes: Foundations runs from the first number after
-    // the cipher exhibits, and the protocol exhibits follow it.
-    foundationsFirst: ciphers + 1,
-    foundationsLast: ciphers + foundations,
-    protocolsFirst: ciphers + foundations + 1,
-    protocolsLast: ciphers + foundations + protocols
+    // Allocated exhibit numbers remain stable when new cipher pages are
+    // appended after §160. The shared manifest owns those identities.
+    ...numberRanges()
+  };
+}
+
+function numberRanges() {
+  const { exhibits } = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/exhibit-trust.json'), 'utf8'));
+  const foundationNumbers = exhibits.filter(e => e.path.startsWith('hall-of-foundations/')).map(e => e.number);
+  const protocolNumbers = exhibits.filter(e => PROTOCOL_EXHIBITS.some(s => e.path === `ciphers/${s}.html`)).map(e => e.number);
+  if (!foundationNumbers.length || protocolNumbers.length !== PROTOCOL_EXHIBITS.length) {
+    throw new Error('Exhibit manifest is missing Foundations or protocol identities.');
+  }
+  return {
+    foundationsFirst: Math.min(...foundationNumbers), foundationsLast: Math.max(...foundationNumbers),
+    protocolsFirst: Math.min(...protocolNumbers), protocolsLast: Math.max(...protocolNumbers)
   };
 }
 
