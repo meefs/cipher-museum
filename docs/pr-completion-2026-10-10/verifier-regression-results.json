@@ -1,0 +1,81 @@
+{
+  "historicalDefectiveHelperSHA": "80810c1c6209ffbeadffcceee93b2536d8d6b63d",
+  "fixedCandidateHelperSHA256": "7cecb72b8c978c834c28094e468a811ad4ec3f2fc157acebc4c95283f7f63f86",
+  "note": "Candidate working-file checks before documentation commit, not a museum test run or a final-head CI claim.",
+  "fixedChecks": {
+    "verifier": "/private/tmp/cipher-completion-20261010-pr1/docs/pr-completion-2026-10-10/verify-audit-archive.py",
+    "checksPassed": 10,
+    "results": [
+      {
+        "case": "valid",
+        "PYTHONOPTIMIZE": "0",
+        "exit": 0,
+        "expectedResultConfirmed": true
+      },
+      {
+        "case": "valid",
+        "PYTHONOPTIMIZE": "1",
+        "exit": 0,
+        "expectedResultConfirmed": true
+      },
+      {
+        "case": "corrupt-evidence",
+        "PYTHONOPTIMIZE": "0",
+        "exit": 1,
+        "expectedResultConfirmed": true
+      },
+      {
+        "case": "corrupt-evidence",
+        "PYTHONOPTIMIZE": "1",
+        "exit": 1,
+        "expectedResultConfirmed": true
+      },
+      {
+        "case": "corrupt-manifest-target",
+        "PYTHONOPTIMIZE": "0",
+        "exit": 1,
+        "expectedResultConfirmed": true
+      },
+      {
+        "case": "corrupt-manifest-target",
+        "PYTHONOPTIMIZE": "1",
+        "exit": 1,
+        "expectedResultConfirmed": true
+      },
+      {
+        "case": "broken-link",
+        "PYTHONOPTIMIZE": "0",
+        "exit": 1,
+        "expectedResultConfirmed": true
+      },
+      {
+        "case": "broken-link",
+        "PYTHONOPTIMIZE": "1",
+        "exit": 1,
+        "expectedResultConfirmed": true
+      },
+      {
+        "case": "missing-blob",
+        "PYTHONOPTIMIZE": "0",
+        "exit": 1,
+        "expectedResultConfirmed": true
+      },
+      {
+        "case": "missing-blob",
+        "PYTHONOPTIMIZE": "1",
+        "exit": 1,
+        "expectedResultConfirmed": true
+      }
+    ]
+  },
+  "originalReviewerReproducer": {
+    "corruptTree": "4827594b83cdc3790e5b7e6affd0a1d03e3a8c8c",
+    "PYTHONOPTIMIZE": "1",
+    "fixedExit": 1,
+    "error": "Traceback (most recent call last):\n  File \"/tmp/cipher-completion-20261010-pr1/docs/pr-completion-2026-10-10/verify-audit-archive.py\", line 41, in <module>\n    require(hashlib.sha256(blobs[rel]).hexdigest() == expected, f'Archived bytes changed: {rel}')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/cipher-completion-20261010-pr1/docs/pr-completion-2026-10-10/verify-audit-archive.py\", line 18, in require\n    raise ValueError(message)\nValueError: Archived bytes changed: docs/pr-review-2026-10-10/browser.log\n"
+  },
+  "oldHelperNegativeControl": {
+    "exit": 1,
+    "error": "Traceback (most recent call last):\n  File \"/var/folders/wz/rhjpp_9d3ql1ykjyrjtwjjwr0000gn/T/cipher-archive-old-helper-5jaf0who/test-verify-audit-archive.py\", line 71, in <module>\n    raise RuntimeError(f'{case}, PYTHONOPTIMIZE={optimization}: exit {result.returncode}\\n{result.stdout}\\n{result.stderr}')\nRuntimeError: corrupt-evidence, PYTHONOPTIMIZE=1: exit 0\n{\n  \"ref\": \"5251a2948b9e9dc5b117b74d59ab996696ef5394\",\n  \"archivedFiles\": 3,\n  \"allBytesPreserved\": true,\n  \"manifestChecks\": [\n    {\n      \"manifest\": \"docs/pr-review-2026-10-10/evidence-sha256.json\",\n      \"entries\": 1\n    }\n  ],\n  \"localLinks\": [\n    {\n      \"report\": \"docs/pr-review-2026-10-10.md\",\n      \"href\": \"pr-review-2026-10-10/browser.log\",\n      \"target\": \"docs/pr-review-2026-10-10/browser.log\"\n    },\n    {\n      \"report\": \"docs/pr-completion-2026-10-10.md\",\n      \"href\": \"pr-review-2026-10-10.md\",\n      \"target\": \"docs/pr-review-2026-10-10.md\"\n    }\n  ]\n}\n\n\n"
+  }
+}
