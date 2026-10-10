@@ -14,10 +14,13 @@
     $('manual-play').setAttribute('aria-pressed', 'false');
   }
   function key() {
-    if (name === 'rasterschluessel44') return {
-      startRow: Number($('rs-row').value) - 1, startColumn: Number($('rs-column').value) - 1,
-      minute: Number($('rs-minute').value), strict: $('rs-policy').value === 'strict'
-    };
+    if (name === 'rasterschluessel44') {
+      for (const id of ['rs-row', 'rs-column', 'rs-minute']) {
+        if (!$(id).value.trim()) throw new Error('Beginning row, column and minute are required.');
+      }
+      return { startRow: Number($('rs-row').value) - 1, startColumn: Number($('rs-column').value) - 1,
+        minute: Number($('rs-minute').value), strict: $('rs-policy').value === 'strict' };
+    }
     if (name === 'doublePlayfair') return {
       squareA: $('dp-a').value, squareB: $('dp-b').value, filler: $('dp-filler').value, strict: true
     };

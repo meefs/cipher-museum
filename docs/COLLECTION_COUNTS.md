@@ -41,3 +41,8 @@ accounting and archived audit results are outside this generator's ownership.
 Order after changing registrations: counts → trust labels → search/artifact
 metadata → minified bundles and service-worker version. Full validation remains
 `npm test`, `npm run test:engines`, `npm run lint:html` and corpus replay.
+
+The comparison table is a curated subset and includes historical/cultural context.
+`comparisonExhibits` counts its actual registered rows, validates every row against
+the same collection identities, and generates its heading and metadata. Undated
+specifications remain undated and sort after dated entries.

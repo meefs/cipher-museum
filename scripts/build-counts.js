@@ -26,11 +26,22 @@ function computeCounts() {
   const range = name => [Math.min(...group(name).map(e => e.number)), Math.max(...group(name).map(e => e.number))];
   const context = { window: {} };
   vm.runInNewContext(read('js/ciphers/all-engines.js'), context);
+  // This is a curated subset, not the collection total. Count actual rows and
+  // validate their identities against the existing authoritative registry.
+  const comparison = read('comparison.html').match(/var CIPHERS = (\[[\s\S]*?\n  \]);/);
+  if (!comparison) throw new Error('Missing comparison registry');
+  const comparisonRows = vm.runInNewContext('(' + comparison[1] + ')');
+  const compared = new Set();
+  for (const row of comparisonRows) {
+    if (!paths.has(row.href) || compared.has(row.href)) throw new Error('Invalid comparison registration: ' + row.href);
+    compared.add(row.href);
+  }
   return {
     cipherHistory: group('cipher-history').length,
     foundations: group('foundations').length, protocols: group('protocols').length,
     halls: fs.readdirSync(path.join(ROOT, 'halls')).filter(f => f.endsWith('.html')).length,
     total: exhibits.length, engines: Object.keys(context.window.CipherEngines).length,
+    comparisonExhibits: comparisonRows.length,
     interactiveExhibits: exhibits.filter(e => e.interactive).length,
     interactiveCipherHistory: group('cipher-history').filter(e => e.interactive).length,
     foundationsFirst: range('foundations')[0], foundationsLast: range('foundations')[1],
@@ -46,12 +57,13 @@ function renderCounts(c = computeCounts()) {
       return open + c[key] + close;
     });
   const { exhibits } = JSON.parse(read('data/exhibit-trust.json'));
-  for (const rel of ['index.html', 'museum-map.html', 'search.html', 'js/footer.js', 'cipher-corpus.html']) {
+  for (const rel of ['index.html', 'museum-map.html', 'search.html', 'comparison.html', 'js/footer.js', 'cipher-corpus.html']) {
     let s = slot(read(rel));
-    s = s.replace(/\b\d+ exhibits\b/g, `${c.total} exhibits`)
+    s = s.replace(/\b\d+ exhibits\b/g, `${rel === 'comparison.html' ? c.comparisonExhibits : c.total} exhibits`)
       .replace(/\b\d+ cipher and history exhibits\b/g, `${c.cipherHistory} cipher and history exhibits`)
       .replace(/\b\d+ protocols and constructions\b/g, `${c.protocols} protocols and constructions`);
     if (rel === 'search.html') s = s.replace(/(CipherSearch\._count \|\| ')\d+(')/, `$1${c.total}$2`);
+    if (rel === 'comparison.html') s = s.replace(/\b\d+-exhibit (collection|roster)\b/gi, (_, noun) => `${c.total}-exhibit ${noun}`);
     out.set(rel, s);
   }
   for (const e of exhibits) {

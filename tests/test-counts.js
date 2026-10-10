@@ -3,6 +3,7 @@
 const assert = require('node:assert/strict');
 const fs = require('fs');
 const path = require('path');
+const { JSDOM } = require('jsdom');
 const { computeCounts, renderCounts } = require('../scripts/build-counts');
 const root = path.resolve(__dirname, '..');
 const read = p => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
@@ -30,6 +31,16 @@ assert.deepEqual([...renderCounts(c)], [...renderCounts(c)], 'Rendering is deter
 assert.match(read('index.html'), /Cipher &amp; History Exhibits/);
 assert.doesNotMatch(read('museum-map.html'), /140 Ciphers/);
 assert.match(read('museum-map.html'), /data-count="cipherHistory"/);
+const comp = new JSDOM(read('comparison.html'));
+const comparisonRows = read('comparison.html').match(/var CIPHERS = (\[[\s\S]*?\n  \]);/)[1];
+const comparisonCount = require('vm').runInNewContext('(' + comparisonRows + ')').length;
+assert.equal(c.comparisonExhibits, comparisonCount);
+assert.match(comp.window.document.querySelector('.page-hero').textContent, new RegExp(comparisonCount + ' Compared Exhibits'));
+for (const meta of comp.window.document.querySelectorAll('meta[name="description"],meta[property="og:description"],meta[name="twitter:description"]')) {
+  assert.match(meta.content, new RegExp(comparisonCount + ' exhibits'));
+  assert.match(meta.content, new RegExp(c.total + '-exhibit collection'));
+}
+comp.window.close();
 const search = JSON.parse(read('js/search-index.json')).entries;
 assert.deepEqual(search.filter(e=>e.exhibitNumber).map(e=>[e.exhibitNumber,e.u,e.collection]).sort((a,b)=>a[0]-b[0]),
   es.map(e=>[e.number,e.path,e.collection]).sort((a,b)=>a[0]-b[0]), 'Search registrations preserve canonical IDs');
@@ -37,7 +48,6 @@ assert.match(read('search.html'), /Number\.isInteger\(e\.exhibitNumber\)/);
 assert.equal(es.find(e=>e.path==='ciphers/dorabella.html').interactive, true);
 assert.equal(es.find(e=>e.path==='ciphers/hagelin-c36.html').interactive, false);
 // A real controllable visualization counts even without a button/demo marker.
-const { JSDOM } = require('jsdom');
 for (const [id,file,input,value,output,expected] of [
  [144,'hall-of-foundations/prime-number-theorem.html','xr','2000','pread',/π\(2000\) = 303/],
  [151,'hall-of-foundations/entropy.html','pr','25','hread',/entropy = 0\.811/],

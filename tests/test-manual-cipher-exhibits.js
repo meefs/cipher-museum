@@ -71,6 +71,9 @@ for (const [slug, engine, number, hall, roman, vector, invalidId, bad, good] of 
   }
   if (slug === 'rs44') {
     assert.match(raw, /tactical time 1203/, 'Original March manual §28 uses time 1203');
+    input('rs-minute', ''); assert.equal($('manual-output').textContent, '', 'An empty minute is not silently zero');
+    assert.match($('manual-status').textContent, /minute are required/);
+    input('rs-minute', '3'); assert.equal($('manual-output').textContent, vector.cipher);
     input('manual-message', 'A'.repeat(59)); assert.equal($('manual-output').textContent, '');
     input('rs-policy', 'short'); assert.equal($('manual-output').textContent.length, 59);
     input('manual-message', 'A'.repeat(201)); assert.equal($('manual-output').textContent, '');
