@@ -16,7 +16,7 @@
  */
 'use strict';
 
-const VERSION = 'cipher-museum-f028d3aa';
+const VERSION = 'cipher-museum-9664d4d3';
 const CORE = [
   '/',
   '/index.html',
@@ -25,6 +25,10 @@ const CORE = [
   '/js/footer.js',
   '/js/breadcrumbs.js',
   '/js/ui-delegates.js',
+  '/js/trust-labels.js',
+  '/js/search.js',
+  '/js/search-index.json',
+  '/js/artifact-cards.js',
   '/hall-of-foundations/index.html',
   '/hall-of-foundations/foundations.css',
   '/images/icons.svg',

@@ -19,6 +19,8 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT  = path.join(ROOT, 'js', 'search-index.json');
+const { loadTrust } = require('./exhibit-trust');
+const { byPath, trustFor } = loadTrust(ROOT);
 
 // ── HTML entity decoder ───────────────────────────────────────────────────────
 
@@ -187,10 +189,11 @@ function processCipherPage(file) {
   // Derive era keyword: prefer text content (reliable) over CSS class (can be mismatched)
   const eraKw   = eraKeywordFromText(eraText) || eraKeyword(eraCls);
 
-  const secText = extractFirstBadge(html, 'sec-');
-  // Preserve descriptive metadata; use the canonical trust label when no legacy badge remains.
-  const badgeText = secText || extractTag(html, 'trust-label__text');
-  const kind    = classifyKind(hall.href, secText || badgeText);
+  const rel = 'ciphers/' + slug;
+  const trust = trustFor(rel);
+  const note = byPath.get(rel).note || '';
+  const badgeText = trust?.text || '';
+  const kind    = classifyKind(hall.href, note || badgeText);
   const tags    = buildTags(eraKw, hallDisp, badgeText);
 
   return {
@@ -200,6 +203,8 @@ function processCipherPage(file) {
     h: hallDisp || '—',
     c: eraText  || '—',
     b: badgeText || '—',
+    trust,
+    n: note,
     s: summary,
     g: tags,
   };
@@ -404,7 +409,11 @@ function main() {
     generated: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
     entries,
   };
-  fs.writeFileSync(OUT, JSON.stringify(out));
+  const existing = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : null;
+  const current = existing && JSON.stringify(existing.entries) === JSON.stringify(entries);
+  if (process.argv.includes('--check')) {
+    if (!current) { console.error('Search index is stale.'); process.exitCode = 1; }
+  } else if (!current) fs.writeFileSync(OUT, JSON.stringify(out));
 
   // Report
   const kinds = {};

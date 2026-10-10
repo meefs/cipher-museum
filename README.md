@@ -407,12 +407,21 @@ cipher-museum/
 ## 🧪 Testing
 
 Trust labels are classified in `data/exhibit-trust.json` for all 160 exhibits;
-`null` omits the badge for context exhibits. After editing that source, run
-`npm run build:trust-labels` and `npm run build:search-index`. The
-`tests/test-trust-labels.js` suite checks generated HTML and an independent
-allowlist for Secure (Modern), including the map, exhibit pages, and hall cards.
+`null` omits all trust classifications for context exhibits. Shared definitions
+live in `data/trust-labels.json`; historical evidence and usage qualifications
+are separate notes. After editing either source, run `npm run build:metadata`
+and `npm run build:js`. The trust-label suite checks headers, quick facts, hall
+cards, map rows and legends, search rendering, comparison filters, and live
+artifact cards against an independent nine-entry Secure (Modern) allowlist.
 
-The museum ships with two layers of tests, **all green**: the site suites (rendered DOM, accessibility, links, demo pages) and a dedicated engine verification suite governed by [docs/CIPHER_ENGINE_STANDARD.md](docs/CIPHER_ENGINE_STANDARD.md).
+Use Node 22, matching CI. The serial complexity guard batches 25 KB round trips
+until they consume measurable CPU time, then measures the same batch at 100 KB.
+All 85 registry engines must be measured; the 10× scaling bound is unchanged.
+A quadratic canary and incomplete-coverage cases prove that the guard rejects
+regressions. Cache versions normalize text line endings while preserving binary
+bytes, so LF and CRLF checkouts generate the same version.
+
+The museum ships with two layers of tests: the site suites (rendered DOM, accessibility, links, demo pages) and a dedicated engine verification suite governed by [docs/CIPHER_ENGINE_STANDARD.md](docs/CIPHER_ENGINE_STANDARD.md).
 
 ```bash
 # One-time setup (needed for the demo-page simulator and fast-check)

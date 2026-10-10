@@ -113,6 +113,7 @@
 </style>
 
 <script src="js/nav.js" defer></script>
+<script src="js/trust-labels.js" defer></script>
 <script src="js/search.js" defer></script>
 <script defer>
   document.addEventListener('DOMContentLoaded', function () {
@@ -155,7 +156,7 @@
         else meta.push('Page');
         if (e.hall && e.hall !== '—') meta.push('Hall: ' + escapeHTML(e.hall));
         if (e.created && e.created !== '—') meta.push('Created: ' + escapeHTML(e.created));
-        if (e.broken && e.broken !== '—') meta.push('Broken: ' + escapeHTML(e.broken));
+        if (e.trust) meta.push('Trust: ' + window.TrustLabels.badge(e.trust));
         var tags = e.tags.slice(0, 6).map(function (t) {
           return '<span class="sr-tag">' + escapeHTML(t) + '</span>';
         }).join('');
@@ -167,6 +168,7 @@
             '</div>' +
             '<div class="sr-meta">' + meta.join(' · ') + '</div>' +
             '<p class="sr-summary">' + hl(e.summary, raw) + '</p>' +
+            (e.note ? '<p class="sr-summary">' + escapeHTML(e.note) + '</p>' : '') +
             (tags ? '<div class="sr-tags">' + tags + '</div>' : '') +
           '</a>';
       }).join('');

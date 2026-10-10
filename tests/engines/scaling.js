@@ -74,16 +74,7 @@ function timeRoundtrip(engine, text, key, repeats) {
   return best;
 }
 
-const names = Object.keys(engines).sort();
-const failures = [];
-let judged = 0;
-const skipped = [];
-
-console.log(`\n━━━ Engine complexity: ${names.length} engines, ratio limit ${RATIO_LIMIT}x ━━━\n`);
-
-for (const name of names) {
-  const engine = engines[name];
-
+function measureEngine(name, engine) {
   let repeats = 1;
   const smallText = build(BASE_BYTES);
   const smallKey = keyFor(name, smallText);
@@ -93,16 +84,29 @@ for (const name of names) {
     small = timeRoundtrip(engine, smallText, smallKey, repeats);
   }
 
-  if (small === null) { skipped.push(`${name} (key format not timeable here)`); continue; }
+  if (small === null) return { skipped: `${name} (key format not timeable here)` };
   if (small < MEASURABLE_CPU_MS) {
-    skipped.push(`${name} (too fast to time in ${MAX_REPEATS} × ${BASE_BYTES / 1024} KB batch)`);
-    continue;
+    return { skipped: `${name} (too fast to time in ${MAX_REPEATS} × ${BASE_BYTES / 1024} KB batch)` };
   }
 
   const largeText = build(BASE_BYTES * 4);
   const large = timeRoundtrip(engine, largeText, keyFor(name, largeText), repeats);
-  if (large === null) { skipped.push(`${name} (failed at 4x)`); continue; }
+  if (large === null) return { skipped: `${name} (failed at 4x)` };
 
+  return { repeats, small, large, ratio: large / small };
+}
+
+function run(registry = engines) {
+const names = Object.keys(registry).sort();
+const failures = [];
+let judged = 0;
+const skipped = [];
+
+console.log(`\n━━━ Engine complexity: ${names.length} engines, ratio limit 10x ━━━\n`);
+for (const name of names) {
+  const measurement = measureEngine(name, registry[name]);
+  if (measurement.skipped) { skipped.push(measurement.skipped); continue; }
+  const { repeats, small, large } = measurement;
   judged++;
   const ratio = large / small;
   if (ratio > RATIO_LIMIT) {
@@ -126,8 +130,15 @@ if (failures.length) {
   console.error('  - building a string with += and then indexing back into it (autokey)');
   console.error('  - an O(n) lookup inside the per-character loop');
   console.error('  - re-deriving per-message state on every character\n');
-  process.exit(1);
+  throw new Error('Engine scaling bound exceeded');
 }
 
-assert.equal(judged, names.length,
-  `${names.length - judged} engines were not timeable — coverage has regressed`);
+assertCoverage(judged, names.length);
+
+}
+
+function assertCoverage(judged, total) {
+  assert.equal(judged, total, `${total - judged} engines were not timeable — coverage has regressed`);
+}
+module.exports = { measureEngine, run, assertCoverage };
+if (require.main === module) run();
