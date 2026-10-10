@@ -13,6 +13,10 @@ root = args.repo.resolve()
 def git(*params, **kwargs):
     return subprocess.check_output(['git', *params], cwd=root, **kwargs)
 
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
 inventory_path = 'docs/pr-completion-2026-10-10/archive-inventory.json'
 read = lambda rel: git('show', f'{args.ref}:{rel}') if args.ref else (root / rel).read_bytes()
 inventory = json.loads(read(inventory_path))
@@ -24,17 +28,17 @@ if args.ref:
     for rel in inventory:
         end = result.stdout.index(b'\n', cursor)
         header = result.stdout[cursor:end].decode().split()
-        assert len(header) == 3 and header[1] == 'blob', (rel, header)
+        require(len(header) == 3 and header[1] == 'blob', f'Invalid archived blob: {rel}: {header}')
         size = int(header[2]); cursor = end + 1
         blobs[rel] = result.stdout[cursor:cursor + size]; cursor += size + 1
-    assert cursor == len(result.stdout)
+    require(cursor == len(result.stdout), 'Unexpected bytes after archived blobs')
     read = lambda rel: blobs[rel] if rel in blobs else git('show', f'{args.ref}:{rel}')
 else:
     paths = {p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file() and '.git' not in p.parts and 'node_modules' not in p.parts}
     blobs = {rel: read(rel) for rel in inventory}
 
 for rel, expected in inventory.items():
-    assert hashlib.sha256(blobs[rel]).hexdigest() == expected, f'Archived bytes changed: {rel}'
+    require(hashlib.sha256(blobs[rel]).hexdigest() == expected, f'Archived bytes changed: {rel}')
 manifest_checks = []
 for rel in inventory:
     if not rel.endswith(('evidence-sha256.json', 'original-review-hashes.json', 'original-audit-hashes.json')):
@@ -42,7 +46,7 @@ for rel in inventory:
     manifest = json.loads(read(rel))
     for name, expected in manifest.items():
         target = name if name.startswith('docs/') else posixpath.join(posixpath.dirname(rel), name)
-        assert hashlib.sha256(read(target)).hexdigest() == expected, f'{rel}: {target}'
+        require(hashlib.sha256(read(target)).hexdigest() == expected, f'{rel}: {target}')
     manifest_checks.append({'manifest': rel, 'entries': len(manifest)})
 links = []
 reports = [p for p in inventory if p.endswith('.md')]
@@ -54,6 +58,6 @@ for rel in reports:
             continue
         local = unquote(href.split('#')[0].split('?')[0])
         target = posixpath.normpath(posixpath.join(posixpath.dirname(rel), local)) if local else rel
-        assert target in paths or any(p.startswith(target.rstrip('/') + '/') for p in paths), f'Broken report link: {rel} -> {href}'
+        require(target in paths or any(p.startswith(target.rstrip('/') + '/') for p in paths), f'Broken report link: {rel} -> {href}')
         links.append({'report': rel, 'href': href, 'target': target})
 print(json.dumps({'ref': args.ref, 'archivedFiles': len(inventory), 'allBytesPreserved': True, 'manifestChecks': manifest_checks, 'localLinks': links}, indent=2))
