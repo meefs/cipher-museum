@@ -403,6 +403,12 @@ function main() {
     }
   }
 
+  // Canonical identities are independent of the descriptive search kind.
+  for (const entry of entries) {
+    const exhibit = byPath.get(entry.u);
+    if (exhibit) { entry.exhibitNumber = exhibit.number; entry.collection = exhibit.collection; }
+  }
+
   // Write
   const out = {
     version:   1,

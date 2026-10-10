@@ -1,0 +1,10 @@
+{
+  "docs/evidence/rs44-stencil-2026-10-10/root-comparison.json": "cb056fc1f004d9c1bee5a05f16e8574fd48636a168cca8904244f0b028ff38e5",
+  "docs/evidence/rs44-stencil-2026-10-10/source-reference.json": "936ece4d9d5f9a53a2155286648d72ec1a5803be8562e727d0678daf724e999b",
+  "docs/evidence/rs44-stencil-2026-10-10/README.md": "03cf3e7c37103d0346915c7cc2a08c0084ddd910fb6980a5a5a7210b3f01a065",
+  "docs/evidence/rs44-stencil-2026-10-10/negative-control.json": "6c8d9a1eb03da00313c3de68bdebbee9b481f64e0240b06de3c9c8db1ff0418c",
+  "docs/rs44-stencil-check.js": "45e6deb86993fac7b19b7cb1455ba4f1318dbbd59b489d28f947094e9ed7bb88",
+  "docs/rs44-stencil-independent-verification-2026-10-10.md": "224f32ae1b46758b11b84ca8c442297338595fe502a10977fad23faaf0d9552f",
+  "docs/evidence/rs44-independent-blind-stencil-2026-10-10.json": "20fe434e55259e1a2d8eb8490d0ac88c5d1854f1e31ba92f1c76ca11bbb8af4a",
+  "docs/evidence/rs44-independent-stencil-comparison-2026-10-10.json": "ef2fdff44d837308eeb6791f1dba8a1057f499662d8528ddb1072328f28dee10"
+}

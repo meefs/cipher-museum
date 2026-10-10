@@ -43,6 +43,7 @@ const MAX_REPEATS = 128;
 // Keys that satisfy each engine's documented format. An engine whose key format
 // is not represented here is reported as skipped and fails the coverage check.
 const KEYS = {
+  rasterschluessel44: 'manual', doublePlayfair: 'manual', amsco: '41325',
   hill: '3,3,2,5', trifid: 'FELIX', railFence: '3', scytale: '3', stager: '2',
   alberti: '3', bazeries: '42', jefferson: '3,1,5,2,4,6', enigma: 'AAA',
   gronsfeld: '31415', patterson: '13,34,57,65,22,78,49',
@@ -76,24 +77,29 @@ function timeRoundtrip(engine, text, key, repeats) {
 
 function measureEngine(name, engine) {
   let repeats = 1;
-  const smallText = build(BASE_BYTES);
+  // RS44 has a documented 200-letter capacity. Measure actual valid 50/200
+  // letter transformations, with more repeats if needed for clock resolution.
+  // Do not time rejection of oversized text and call it engine coverage.
+  const baseBytes = name === 'rasterschluessel44' ? 50 : BASE_BYTES;
+  const maxRepeats = name === 'rasterschluessel44' ? 8192 : MAX_REPEATS;
+  const smallText = build(baseBytes);
   const smallKey = keyFor(name, smallText);
   let small = timeRoundtrip(engine, smallText, smallKey, repeats);
-  while (small !== null && small < MEASURABLE_CPU_MS && repeats < MAX_REPEATS) {
+  while (small !== null && small < MEASURABLE_CPU_MS && repeats < maxRepeats) {
     repeats *= 2;
     small = timeRoundtrip(engine, smallText, smallKey, repeats);
   }
 
   if (small === null) return { skipped: `${name} (key format not timeable here)` };
   if (small < MEASURABLE_CPU_MS) {
-    return { skipped: `${name} (too fast to time in ${MAX_REPEATS} × ${BASE_BYTES / 1024} KB batch)` };
+    return { skipped: `${name} (too fast to time in ${maxRepeats} × ${baseBytes} letter batch)` };
   }
 
-  const largeText = build(BASE_BYTES * 4);
+  const largeText = build(baseBytes * 4);
   const large = timeRoundtrip(engine, largeText, keyFor(name, largeText), repeats);
   if (large === null) return { skipped: `${name} (failed at 4x)` };
 
-  return { repeats, small, large, ratio: large / small };
+  return { repeats, small, large, baseBytes, ratio: large / small };
 }
 
 function run(registry = engines) {
@@ -106,14 +112,14 @@ console.log(`\n━━━ Engine complexity: ${names.length} engines, ratio limit
 for (const name of names) {
   const measurement = measureEngine(name, registry[name]);
   if (measurement.skipped) { skipped.push(measurement.skipped); continue; }
-  const { repeats, small, large } = measurement;
+  const { repeats, small, large, baseBytes } = measurement;
   judged++;
   const ratio = large / small;
   if (ratio > RATIO_LIMIT) {
     failures.push({ name, repeats, small, large, ratio });
     console.error(`  ❌  ${name.padEnd(24)} ${ratio.toFixed(1)}x  ` +
-      `(${repeats} × ${BASE_BYTES / 1024} KB ${small.toFixed(1)} CPU-ms → ` +
-      `${repeats} × ${BASE_BYTES * 4 / 1024} KB ${large.toFixed(1)} CPU-ms)`);
+      `(${repeats} × ${baseBytes} letters ${small.toFixed(1)} CPU-ms → ` +
+      `${repeats} × ${baseBytes * 4} letters ${large.toFixed(1)} CPU-ms)`);
   }
 }
 

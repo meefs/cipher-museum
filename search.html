@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search — The Cipher Museum</title>
-  <meta name="description" content="Search 164 exhibits across 13 halls and the Foundations annex, codebreaker biographies, and cryptanalysis techniques across The Cipher Museum.">
+  <meta name="description" content="Search 167 exhibits across 13 halls and the Foundations annex, codebreaker biographies, and cryptanalysis techniques across The Cipher Museum.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="canonical" href="https://ciphermuseum.com/search.html">
@@ -44,7 +44,7 @@
     <span class="section-eyebrow">Site Search</span>
     <h1 class="section-title">Search the Museum</h1>
     <p class="section-deck" style="margin:.5rem auto 0;max-width:640px;color:var(--tx2);">
-      Across 164 exhibits, 13 halls, codebreaker biographies, cryptanalysis techniques, and the timeline.
+      Across 167 exhibits, 13 halls, codebreaker biographies, cryptanalysis techniques, and the timeline.
     </p>
   </div>
 
@@ -133,7 +133,7 @@
         resultsEl.innerHTML = '';
         emptyEl.style.display = 'none';
         suggestionsEl.style.display = '';
-        statusEl.textContent = 'Type to search · ' + (window.CipherSearch._count || '164') + ' exhibits · 13 halls · indexed pages';
+        statusEl.textContent = 'Type to search · ' + (window.CipherSearch._count || '167') + ' exhibits · 13 halls · indexed pages';
         return;
       }
       suggestionsEl.style.display = 'none';
@@ -189,11 +189,8 @@
 
     function init(entries) {
       var list = Array.isArray(entries) ? entries : [];
-      // Index entries carry their type on `k`, not `kind`. Reading the wrong
-      // field silently counted zero and fell through to list.length, which
-      // includes halls and utility pages — the status line claimed 188.
-      var EXHIBIT_KINDS = { cipher: 1, exhibit: 1, person: 1, unsolved: 1 };
-      var exhibitCount = list.filter(function (e) { return EXHIBIT_KINDS[e.k]; }).length;
+      // Count canonical exhibit identities, not descriptive kinds or utility pages.
+      var exhibitCount = list.filter(function (e) { return Number.isInteger(e.exhibitNumber); }).length;
       window.CipherSearch._count = exhibitCount || '?';
       render();
     }

@@ -16,7 +16,7 @@
  */
 'use strict';
 
-const VERSION = 'cipher-museum-437eacda';
+const VERSION = 'cipher-museum-f5453758';
 
 const CORE = [
   '/',
@@ -25,6 +25,12 @@ const CORE = [
   '/ciphers/turning-grille.html',
   '/ciphers/hagelin-c36.html',
   '/ciphers/nema.html',
+  '/ciphers/rs44.html',
+  '/ciphers/double-playfair.html',
+  '/ciphers/amsco.html',
+  '/css/manual-cipher-demos.css',
+  '/js/manual-cipher-demos.js',
+  '/js/ciphers/all-engines.min.js',
   '/css/museum.css',
   '/css/historical-demos.css',
   '/js/historical-ciphers.js',

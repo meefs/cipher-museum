@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cipher Comparison — The Cipher Museum</title>
-  <meta name="description" content="Compare 117 cipher systems from the 160-exhibit collection side by side. Sort by era, type, security level, hall, solved status, key method, and more.">
+  <meta name="description" content="Compare 120 exhibits from the 167-exhibit collection side by side. Sort by era, type, security level, hall, solved status, key method, and more.">
   <meta property="og:title" content="Cipher Comparison — The Cipher Museum">
-  <meta property="og:description" content="Compare 117 cipher systems from the 160-exhibit collection side by side. Sort by era, type, security level, hall, solved status, key method, and more.">
+  <meta property="og:description" content="Compare 120 exhibits from the 167-exhibit collection side by side. Sort by era, type, security level, hall, solved status, key method, and more.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/comparison.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cipher Comparison — The Cipher Museum">
-  <meta name="twitter:description" content="Compare 117 cipher systems from the 160-exhibit collection side by side. Sort by era, type, security level, hall, solved status, key method, and more.">
+  <meta name="twitter:description" content="Compare 120 exhibits from the 167-exhibit collection side by side. Sort by era, type, security level, hall, solved status, key method, and more.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/comparison.html">
@@ -94,9 +94,9 @@
     <a href="index.html">Entrance</a><span>&rsaquo;</span>
     Cipher Comparison
   </div>
-  <span class="page-eyebrow">117 Cipher Systems from the 160-exhibit Collection</span>
+  <span class="page-eyebrow">120 Compared Exhibits from the 167-exhibit Collection</span>
   <h1 class="page-title">Cipher Comparison Table</h1>
-  <p class="page-tagline">Sort, filter, and compare every cipher system in the museum by type, era, security, and method. Biographies and context-only exhibits are not included here — see the <a href="museum-map.html">Museum Map</a> for the full 160-exhibit roster.</p>
+  <p class="page-tagline">Sort, filter, and compare this selection of cipher systems and historical or cultural exhibits by type, era, trust, and method. See the <a href="museum-map.html">Museum Map</a> for the full 167-exhibit roster.</p>
 </div>
 
 <section class="section">
@@ -194,6 +194,9 @@
 <script>
 (function() {
   var CIPHERS = [
+    { name:'Rasterschlüssel 44', href:'ciphers/rs44.html', era:'World War II', year:1944, type:'Transposition', key:'Stencil, ranks, beginning and minute', security:"Broken", hall:'IV', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
+    { name:'German Double Playfair', href:'ciphers/double-playfair.html', era:'World War II', year:1941, type:'Substitution', key:'Two squares; 17-column paired rows', security:"Broken", hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
+    { name:'AMSCO', href:'ciphers/amsco.html', era:'Modern', year:null, type:'Transposition', key:'Column rank permutation and first-cell size', security:"Broken", hall:'IV', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
     { name:'Atbash',               href:'ciphers/atbash.html',               era:'Ancient',       year:-600,  type:'Substitution',    key:'Reversed alphabet',         security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
     { name:'Scytale',              href:'ciphers/scytale.html',              era:'Ancient',       year:-500,  type:'Transposition',   key:'Rod diameter',              security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
     { name:'Caesar',               href:'ciphers/caesar.html',               era:'Ancient',       year:-58,   type:'Substitution',    key:'Shift number (0–25)',       security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
@@ -333,7 +336,7 @@
   CIPHERS.forEach(function(c, i) {
     var tr = document.createElement('tr');
     tr.dataset.index = i;
-    var yearDisplay = c.year < 0 ? Math.abs(c.year) + ' BC' : c.year;
+    var yearDisplay = c.year === null ? 'Undated specification' : c.year < 0 ? Math.abs(c.year) + ' BC' : c.year;
     tr.innerHTML =
       '<td><a href="' + c.href + '">' + c.name + '</a></td>' +
       '<td><span class="comp-era era-' + (eraClasses[c.era]||'') + '">' + c.era + '</span></td>' +
@@ -366,6 +369,10 @@
       var ai = +a.dataset.index, bi = +b.dataset.index;
       var ca = CIPHERS[ai], cb = CIPHERS[bi];
       var va, vb;
+      // An undated specification is not year zero; keep it after dated entries.
+      if (sortCol === 'year' || sortCol === 'era') {
+        if (ca.year === null || cb.year === null) return ca.year === cb.year ? 0 : ca.year === null ? 1 : -1;
+      }
       if (sortCol === 'year') { va = ca.year; vb = cb.year; }
       else if (sortCol === 'name') { va = ca.name.toLowerCase(); vb = cb.name.toLowerCase(); }
       else if (sortCol === 'era') { va = ca.year; vb = cb.year; }

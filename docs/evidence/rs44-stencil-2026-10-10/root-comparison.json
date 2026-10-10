@@ -1,0 +1,33 @@
+{
+  "testedHead": "2f7bc497b6fc5f562f886fcad7391ee0947e276f",
+  "sourcePdfSha256": "3ac21e12454d93236b6d23b470bae102bb107cd3f678a40bf0e94cbedbd5bf6f",
+  "sourceReferenceSha256": "936ece4d9d5f9a53a2155286648d72ec1a5803be8562e727d0678daf724e999b",
+  "orientation": "Row1 at printed top, column1 at printed left, increasing down/right; no rotation/mirror",
+  "engineComparisons": [
+    {
+      "file": "js/ciphers/all-engines.js",
+      "cellsCompared": 600,
+      "white": 240,
+      "blocked": 360,
+      "differences": [],
+      "rankDifferences": []
+    },
+    {
+      "file": "js/ciphers/all-engines.min.js",
+      "cellsCompared": 600,
+      "white": 240,
+      "blocked": 360,
+      "differences": [],
+      "rankDifferences": []
+    }
+  ],
+  "renderedComparison": {
+    "cellsCompared": 600,
+    "differences": [],
+    "rowHeaders": 24,
+    "columnHeaders": 25,
+    "sourceOrigin": "top-left",
+    "mirrored": false,
+    "rotated": false
+  }
+}

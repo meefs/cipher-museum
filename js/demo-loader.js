@@ -7,6 +7,9 @@
 
 (function () {
   const CONFIGS = {
+    rasterschluessel44: { label:'RS44 (27 March 1944; max 200 prepared letters)', engine:'rasterschluessel44', defaultMsg:'FEINDGREIFTSEITELFXVIERFUENFUHRBEIAAIGQALFISIGQALFISEEMITAQTPANZNAQSUEDWESTAN', inputs:[{type:'text',id:'keyword',label:'Key: manual, or JSON settings (short teaching mode)',value:'manual'}] },
+    doublePlayfair: { label:'German Double Playfair (December 1941; J→II; odd filler Z)', engine:'doublePlayfair', defaultMsg:'FEINDLIQERANGRIFFAUFSTRASZEADORFSTRIQBEHAUSENABGEWEHRT', inputs:[{type:'text',id:'keyword',label:'Key: manual, or JSON squares/filler/strict',value:'manual'}] },
+    amsco: { label:'AMSCO (ACA digraph-first)', engine:'amsco', defaultMsg:'INCOMPLETECOLUMNARWITHALTERNATINGSINGLELETTERSANDDIGRAPHS', inputs:[{type:'text',id:'keyword',label:'Column ranks (or JSON order/first)',value:'41325'}] },
     caesar: {
       label: 'Caesar Cipher', engine: 'caesar', defaultMsg: 'THE QUICK BROWN FOX',
       inputs: [{ type: 'range', id: 'shift', label: 'Shift', min: 1, max: 25, value: 3 }]

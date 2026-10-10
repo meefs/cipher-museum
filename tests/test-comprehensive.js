@@ -60,6 +60,7 @@ const HAND_BUILT = new Set(['caesar', 'playfair', 'vigenere', 'zodiac',
 // modern-crypto math walkthroughs, unsolved manuscripts, biography pages.
 const STATIC_PAGES = new Set([
   // Historical expansion: bespoke demos, plus a narrative lineage exhibit.
+  'rs44', 'double-playfair', 'amsco',
   'nema', 'hagelin-c36', 'turning-grille', 'myszkowski',
   // Modern protocol exhibits: bespoke interactives, no demo-loader CONFIG
   'ecdsa', 'shamir-secret-sharing', 'zero-knowledge-proofs',
@@ -92,7 +93,7 @@ function configHasEngine(slug) {
 const allPages = fs.readdirSync(CIPHERS_DIR).filter(f => f.endsWith('.html')).sort();
 const exhibitCounts = require('../scripts/build-counts').computeCounts();
 ok('Cipher pages count agrees with the inventory',
-  allPages.length === exhibitCounts.ciphers + exhibitCounts.protocols, `actual=${allPages.length}`);
+  allPages.length === exhibitCounts.cipherHistory + exhibitCounts.protocols, `actual=${allPages.length}`);
 
 // Broad detection of interactive demo markup for hand-built pages
 const HAND_BUILT_MARKERS = /(?:onclick|data-fn)="(setMode|runCipher|runVigenere|encrypt|decrypt|zReveal|zAssignLetter|encode|decode|cipher|runHollerCode)/i;
@@ -155,6 +156,9 @@ section('3. Roundtrip fuzzing (deterministic engines)');
 
 // Per-engine: { key, samples?, mode: 'roundtrip'|'self-reciprocal'|'encrypt-only'|'random-key' }
 const ENGINE_PROFILES = {
+  rasterschluessel44:     { key: 'manual',                            mode: 'roundtrip' },
+  doublePlayfair:         { key: 'manual',                            mode: 'roundtrip-double-playfair' },
+  amsco:                 { key: '41325',                             mode: 'roundtrip' },
   caesar:                 { key: '7',                                mode: 'roundtrip' },
   monoalphabetic:         { key: 'ZEBRA',                            mode: 'roundtrip' },
   polybius:               { key: '',                                 mode: 'roundtrip-ij' },
@@ -277,7 +281,13 @@ for (const name of ENGINES) {
   for (const sample of SAMPLE_TEXTS) {
     let okThis = true, why = '';
     try {
-      if (mode === 'roundtrip' || mode === 'roundtrip-padded' || mode === 'roundtrip-padded-ij' || mode === 'roundtrip-playfair' || mode === 'roundtrip-ij' || mode === 'roundtrip-bacon') {
+      if (mode === 'roundtrip-double-playfair') {
+        const prepared = sample.toUpperCase().replace(/[^A-Z]/g, '').replace(/J/g, 'II');
+        const want = prepared + (prepared.length % 2 ? 'Z' : '');
+        const enc = eng.encode(sample, key), dec = eng.decode(enc, key);
+        okThis = dec === want;
+        why = `December 1941 J→II and retained odd filler: expect=${want} got=${dec}`;
+      } else if (mode === 'roundtrip' || mode === 'roundtrip-padded' || mode === 'roundtrip-padded-ij' || mode === 'roundtrip-playfair' || mode === 'roundtrip-ij' || mode === 'roundtrip-bacon') {
         const enc = eng.encode(sample, key);
         const dec = eng.decode(enc, key);
         why = `enc=${enc.slice(0, 30)}\u2026 dec=${dec.slice(0, 30)}\u2026`;

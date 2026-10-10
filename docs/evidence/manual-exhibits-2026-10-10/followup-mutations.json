@@ -1,0 +1,27 @@
+{
+  "testedHead": "8bcb59b38180b7617945602bfc060d1d4723d9de",
+  "node": "v22.23.3",
+  "results": [
+    {
+      "name": "Stale comparison metadata",
+      "file": "comparison.html",
+      "command": "node tests/test-counts.js",
+      "exitCode": 1,
+      "rejected": true,
+      "guard": "117 exhibits",
+      "evidence": "n</option>\\n' +\n    '        <option value=\"Transposition\">Transposition</option>\\n' +\n    '        <option value=\"Polyalphabetic\">Polyalphabetic</option>\\n' +\n    '        <option value=\"Fractionation\">Fractionation</option>\\n' +\n    '        <option value=\"Machine\">Machine</option>\\n' +\n    '        <option value=\"Steganography\">Steganography</option>\\n' +\n    '        <option value=\"Code\">Code</option>\\n' +\n    '        <option value=\"Stream\">Stream</option>\\n' +\n    '        <option value=\"Nomenclator\">Nomenclator</option>\\n' +\n    '        <option value=\"Asymmetric\">Asymmetric</option>\\n' +\n    '        <option value=\"Hash\">Hash</option>\\n' +\n    '        <option value=\"ARG\">ARG / Puzzle</option>\\n' +\n    '        <option value=\"Cultural\">Cultural</option>\\n' +\n    '        <option value=\"Unsolved\">Unsolved</option>\\n' +\n    '        <option value=\"Signal Encoding\">Signal Encoding</option>\\n' +\n    '        <option value=\"Wordplay\">Wordplay</option>\\n' +\n    '        <option value=\"Intelligence\">Intelligence</option>\\n' +\n    '      </select>\\n' +\n    '      <select class=\"comp-filter\" id=\"era-filter\" aria-label=\"Filter by era\">\\n' +\n    '        <option value=\"\">All Eras</option>\\n' +\n    '        <option value=\"Ancient\">Ancient</option>\\n' +\n    '        <option value=\"Medieval\">Medieval</option>\\n' +\n    '        <option value=\"Renaissance\">Renaissance</option>\\n' +\n    '        <option value=\"Baroque\">Baroque</option>\\n' +\n    '        <option value=\"19th Century\">19th Century</option>\\n' +\n    '        <option value=\"World War I\">World War I / Interwar</option>\\n' +\n    '        <option value=\"World War II\">World War II</option>\\n' +\n    '        <option value=\"Modern\">Modern</option>\\n' +\n    '      </select>\\n' +\n    '      <select class=\"comp-filter\" id=\"security-filter\" aria-label=\"Filter by trust label\">\\n' +\n    '        <option value=\"\">All Trust Labels</option>\\n' +\n    '        <option value=\"Broken\">Broken</option>\\n' +\n    '        <option value=\"Historical Only\">Historical Only</option>\\n' +\n    '        <option value=\"Educational\">Educational</option>\\n' +\n    '        <option value=\"Secure (Modern)\">Secure (Modern)</option>\\n' +\n    '      </select>\\n' +\n    '      <select class=\"comp-filter\" id=\"hall-filter\" aria-label=\"Filter by hall\">\\n' +\n    '        <option value=\"\">All Halls</option>\\n' +\n    '        <option value=\"I\">Hall I</option>\\n' +\n    '        <option value=\"II\">Hall II</option>\\n' +\n    '        <option value=\"III\">Hall III</option>\\n' +\n    '        <option value=\"IV\">Hall IV</option>\\n' +\n    '        <option value=\"V\">Hall V</option>\\n' +\n    '        <option value=\"VI\">Hall VI</option>\\n' +\n    '        <option value=\"VII\">Hall VII</option>\\n' +\n    '        <option value=\"VIII\">Hall VIII</option>\\n' +\n    '        <option value=\"IX\">Hall IX</option>\\n' +\n    '        <option value=\"X\">Hall X</option>\\n' +\n    '        <option value=\"XI\">Hall XI</option>\\n' +\n    '        <option value=\"XII\">Hall XII</option>\\n' +\n    '        <option value=\"XIII\">Hall XIII</option>\\n' +\n    '      </select>\\n' +\n    '      <select class=\"comp-filter\" id=\"solved-filter\" aria-label=\"Filter by solved status\">\\n' +\n    '        <option value=\"\">All Statuses</option>\\n' +\n    '        <option value=\"Solved\">Solved</option>\\n' +\n    '        <option value=\"Unsolved\">Unsolved</option>\\n' +\n    '      </select>\\n' +\n    '    '... 43600 more characters,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v22.23.3\n"
+    },
+    {
+      "name": "Missing RS44 minute silently becomes zero",
+      "file": "js/manual-cipher-demos.js",
+      "command": "node tests/test-manual-cipher-exhibits.js",
+      "exitCode": 1,
+      "rejected": true,
+      "guard": "An empty minute is not silently zero",
+      "evidence": "node:assert:150\n  throw new AssertionError(obj);\n  ^\n\nAssertionError [ERR_ASSERTION]: An empty minute is not silently zero\n+ actual - expected\n\n+ 'AGQQLWIBSFFXUTITEEAAENIQSSIRLIEFESELTDIANMRQTVFNNRISIFFGPUEFZGNAEEHAEUTAIIEAD'\n- ''\n\n    at Object.<anonymous> (/private/tmp/cipher-manual-mutations/tests/test-manual-cipher-exhibits.js:74:36)\n    at Module._compile (node:internal/modules/cjs/loader:1781:14)\n    at Object..js (node:internal/modules/cjs/loader:1913:10)\n    at Module.load (node:internal/modules/cjs/loader:1505:32)\n    at Function._load (node:internal/modules/cjs/loader:1309:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 'AGQQLWIBSFFXUTITEEAAENIQSSIRLIEFESELTDIANMRQTVFNNRISIFFGPUEFZGNAEEHAEUTAIIEAD',\n  expected: '',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v22.23.3\n"
+    }
+  ],
+  "restored": false,
+  "targetReviewedHead": "5217889b0d012fbdbc4b20303d8126520b141846",
+  "sameCodeTree": true
+}

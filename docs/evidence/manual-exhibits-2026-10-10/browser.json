@@ -1,0 +1,141 @@
+{
+  "testedHead": "102a2fb01ec71405f6be6518c62710471b4f24b7",
+  "node": "v22.23.3",
+  "browser": "154.0.8037.98",
+  "origin": "http://localhost:8714",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "page": "rs44",
+      "sourceVector": true,
+      "roundtrip": true,
+      "invalidRecovery": true,
+      "keyboardFocus": true,
+      "reducedMotion": true,
+      "artifactCards": 1,
+      "dimensions": {
+        "viewport": 1280,
+        "body": 1280
+      }
+    },
+    {
+      "viewport": "desktop",
+      "page": "double-playfair",
+      "sourceVector": true,
+      "roundtrip": true,
+      "invalidRecovery": true,
+      "keyboardFocus": true,
+      "reducedMotion": true,
+      "artifactCards": 1,
+      "dimensions": {
+        "viewport": 1280,
+        "body": 1280
+      }
+    },
+    {
+      "viewport": "desktop",
+      "page": "amsco",
+      "sourceVector": true,
+      "roundtrip": true,
+      "invalidRecovery": true,
+      "keyboardFocus": true,
+      "reducedMotion": true,
+      "artifactCards": 1,
+      "dimensions": {
+        "viewport": 1280,
+        "body": 1280
+      }
+    },
+    {
+      "viewport": "desktop",
+      "normalPlayPause": true,
+      "pageErrors": [],
+      "failedRequests": []
+    },
+    {
+      "viewport": "mobile",
+      "page": "rs44",
+      "sourceVector": true,
+      "roundtrip": true,
+      "invalidRecovery": true,
+      "keyboardFocus": true,
+      "reducedMotion": true,
+      "artifactCards": 1,
+      "dimensions": {
+        "viewport": 390,
+        "body": 390
+      }
+    },
+    {
+      "viewport": "mobile",
+      "page": "double-playfair",
+      "sourceVector": true,
+      "roundtrip": true,
+      "invalidRecovery": true,
+      "keyboardFocus": true,
+      "reducedMotion": true,
+      "artifactCards": 1,
+      "dimensions": {
+        "viewport": 390,
+        "body": 390
+      }
+    },
+    {
+      "viewport": "mobile",
+      "page": "amsco",
+      "sourceVector": true,
+      "roundtrip": true,
+      "invalidRecovery": true,
+      "keyboardFocus": true,
+      "reducedMotion": true,
+      "artifactCards": 1,
+      "dimensions": {
+        "viewport": 390,
+        "body": 390
+      }
+    },
+    {
+      "viewport": "mobile",
+      "normalPlayPause": true,
+      "pageErrors": [],
+      "failedRequests": []
+    },
+    {
+      "freshProfileOffline": true,
+      "page": "rs44",
+      "sourceVector": true,
+      "decryption": true,
+      "animation": true,
+      "artifactCards": 1
+    },
+    {
+      "freshProfileOffline": true,
+      "page": "double-playfair",
+      "sourceVector": true,
+      "decryption": true,
+      "animation": true,
+      "artifactCards": 1
+    },
+    {
+      "freshProfileOffline": true,
+      "page": "amsco",
+      "sourceVector": true,
+      "decryption": true,
+      "animation": true,
+      "artifactCards": 1
+    }
+  ],
+  "failures": [],
+  "offline": {
+    "installed": {
+      "worker": "http://localhost:8714/sw.js",
+      "caches": [
+        "cipher-museum-f5453758"
+      ]
+    },
+    "failedRequests": [],
+    "pageErrors": [],
+    "exhibitsPreviouslyVisited": false,
+    "metadataPreviouslyVisited": false
+  }
+}
