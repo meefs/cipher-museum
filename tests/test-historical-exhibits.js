@@ -132,6 +132,29 @@ assert.match(m.$('myszkowski-ranks').textContent, /2 1 3 1 3 1/);
 m.input('myszkowski-key', '');
 assert.match(m.$('historical-status').textContent, /keyword/);
 assert.equal(m.$('historical-output').textContent, '');
+assert.equal(m.$('myszkowski-ranks').textContent, '', 'Rejected key clears derived rank explanation');
+assert.equal(m.$('myszkowski-grid').children.length, 0);
+assert.equal(m.$('myszkowski-grid').style.gridTemplateColumns, '', 'Rejected key clears derived grid width');
+m.d.querySelector('[data-mode="encrypt"]').click();
+m.input('historical-message', 'WEAREDISCOVEREDFLEEATONCE');
+for (const rejected of ['', 'A', '123!']) {
+  m.input('myszkowski-key', 'TOMATO');
+  assert.equal(m.$('historical-output').textContent, 'ROFOACDTEDSEEEACWEIVRLENE');
+  assert.match(m.$('myszkowski-ranks').textContent, /4 3 2 1 4 3/);
+  m.input('myszkowski-key', rejected);
+  assert.equal(m.$('historical-output').textContent, '');
+  assert.equal(m.$('myszkowski-ranks').textContent, '');
+  assert.equal(m.$('myszkowski-grid').children.length, 0);
+  assert.equal(m.$('myszkowski-grid').style.gridTemplateColumns, '');
+  m.input('myszkowski-key', 'BANANA');
+  assert.match(m.$('myszkowski-ranks').textContent, /2 1 3 1 3 1/);
+  assert.equal(m.$('historical-output').textContent, 'ERDSOEEFEAOCWIREEAECVDLTN');
+  assert(m.$('myszkowski-grid').children.length > 0);
+  m.$('historical-use-output').click();
+  assert.equal(m.$('historical-output').textContent, 'WEAREDISCOVEREDFLEEATONCE');
+  m.d.querySelector('[data-mode="encrypt"]').click();
+  m.input('historical-message', 'WEAREDISCOVEREDFLEEATONCE');
+}
 m.dom.window.close();
 
 const entries = JSON.parse(read('data/exhibit-trust.json')).exhibits;

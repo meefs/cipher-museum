@@ -101,7 +101,11 @@
       $('historical-status').textContent = error.message;
       if (cipher === 'turning-grille') drawGrille();
       if (cipher === 'nema') $('nema-trace').replaceChildren();
-      if (cipher === 'myszkowski') $('myszkowski-grid').replaceChildren();
+      if (cipher === 'myszkowski') {
+        $('myszkowski-grid').replaceChildren();
+        $('myszkowski-grid').style.gridTemplateColumns = '';
+        $('myszkowski-ranks').textContent = '';
+      }
     }
   }
 
