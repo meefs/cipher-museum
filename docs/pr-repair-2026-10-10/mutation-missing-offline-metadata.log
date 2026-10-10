@@ -1,0 +1,11 @@
+━━━ Service-worker cache version ━━━
+
+  ✅  sw.js VERSION is current (cipher-museum-db092287)
+  ✅  CORE parsed out of sw.js
+  ✅  every precached cache-first asset is hashed
+  ✅  minified bundles are hashed
+  ✅  museum font dependencies are precached and hashed
+  ✅  every hashed file exists on disk
+
+  ❌ Service-worker version stale or incomplete (47 files hashed)
+  ❌  shared exhibit dependencies are precached  →  js/artifact-cards-data.min.js

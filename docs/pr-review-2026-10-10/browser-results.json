@@ -1,0 +1,1721 @@
+{
+  "environment": {
+    "browser": "154.0.8037.98",
+    "playwright": "1.63.0",
+    "node": "v22.23.3"
+  },
+  "results": [
+    {
+      "name": "PR1/1280/caesar: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/caesar: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/caesar: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/sigaba: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/sigaba: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/sigaba: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/vernam: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/vernam: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/vernam: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/aeneas-tacticus: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/aeneas-tacticus: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280/aeneas-tacticus: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280: shared Historical legend",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280: context hall omits trust",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280: neutral search sigaba",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR1/1280: neutral search vernam",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR1/1280: neutral search bletchley",
+      "pass": true
+    },
+    {
+      "name": "PR1/1280: comparison sigaba",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR1/1280: comparison navajo-code-talkers",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR1/390/caesar: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/caesar: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/caesar: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/sigaba: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/sigaba: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/sigaba: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/vernam: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/vernam: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/vernam: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/aeneas-tacticus: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/aeneas-tacticus: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR1/390/aeneas-tacticus: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR1/390: shared Historical legend",
+      "pass": true
+    },
+    {
+      "name": "PR1/390: context hall omits trust",
+      "pass": true
+    },
+    {
+      "name": "PR1/390: neutral search sigaba",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR1/390: neutral search vernam",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR1/390: neutral search bletchley",
+      "pass": true
+    },
+    {
+      "name": "PR1/390: comparison sigaba",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR1/390: comparison navajo-code-talkers",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR2/1280/nema: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/nema: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/nema: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/nema: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/nema: invalid windows clear stale result",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/nema: reflector prevents self-encryption",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/nema: second live roundtrip",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/nema: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/hagelin-c36: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/hagelin-c36: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/hagelin-c36: M-209 described as a related simulation",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/hagelin-c36: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/turning-grille: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/turning-grille: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/turning-grille: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/turning-grille: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/turning-grille: four rotations visit all cells once",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/turning-grille: 6x6 roundtrip retains real and padding Xs",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/turning-grille: 8x8 roundtrip retains real and padding Xs",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/turning-grille: edited 8x8 mask remains valid",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/turning-grille: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/myszkowski: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/myszkowski: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/myszkowski: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/myszkowski: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/myszkowski: tied-all-columns and text normalization",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/myszkowski: 24-letter key and incomplete row roundtrip",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/myszkowski: invalid key clears result",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280/myszkowski: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280: shared Historical legend",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280: context hall omits trust",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280: neutral search sigaba",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR2/1280: neutral search vernam",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR2/1280: neutral search bletchley",
+      "pass": true
+    },
+    {
+      "name": "PR2/1280: comparison sigaba",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR2/1280: comparison navajo-code-talkers",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR2/390/nema: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/nema: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/nema: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/nema: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/nema: invalid windows clear stale result",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/nema: reflector prevents self-encryption",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/nema: second live roundtrip",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/nema: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/hagelin-c36: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/hagelin-c36: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/hagelin-c36: M-209 described as a related simulation",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/hagelin-c36: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/turning-grille: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/turning-grille: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/turning-grille: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/turning-grille: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/turning-grille: four rotations visit all cells once",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/turning-grille: 6x6 roundtrip retains real and padding Xs",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/turning-grille: 8x8 roundtrip retains real and padding Xs",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/turning-grille: edited 8x8 mask remains valid",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/turning-grille: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/myszkowski: no uncaught script errors",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/myszkowski: no page-width overflow",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/myszkowski: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/myszkowski: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/myszkowski: tied-all-columns and text normalization",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/myszkowski: 24-letter key and incomplete row roundtrip",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/myszkowski: invalid key clears result",
+      "pass": true
+    },
+    {
+      "name": "PR2/390/myszkowski: canonical header",
+      "pass": true
+    },
+    {
+      "name": "PR2/390: shared Historical legend",
+      "pass": true
+    },
+    {
+      "name": "PR2/390: context hall omits trust",
+      "pass": true
+    },
+    {
+      "name": "PR2/390: neutral search sigaba",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR2/390: neutral search vernam",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('Trust:'))\n"
+    },
+    {
+      "name": "PR2/390: neutral search bletchley",
+      "pass": true
+    },
+    {
+      "name": "PR2/390: comparison sigaba",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR2/390: comparison navajo-code-talkers",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HISTORICAL ONLY'\n- 'Historical Only'\n"
+    },
+    {
+      "name": "PR2 offline cold nema: correct exhibit HTML",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold nema: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold nema: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold nema: invalid windows clear stale result",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold nema: reflector prevents self-encryption",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold nema: second live roundtrip",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold hagelin-c36: correct exhibit HTML",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold turning-grille: correct exhibit HTML",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold turning-grille: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold turning-grille: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold turning-grille: four rotations visit all cells once",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold turning-grille: 6x6 roundtrip retains real and padding Xs",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold turning-grille: 8x8 roundtrip retains real and padding Xs",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold turning-grille: edited 8x8 mask remains valid",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold myszkowski: correct exhibit HTML",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold myszkowski: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold myszkowski: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold myszkowski: tied-all-columns and text normalization",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold myszkowski: 24-letter key and incomplete row roundtrip",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline cold myszkowski: invalid key clears result",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm nema: correct exhibit HTML",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm nema: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm nema: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm nema: invalid windows clear stale result",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm nema: reflector prevents self-encryption",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm nema: second live roundtrip",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm hagelin-c36: correct exhibit HTML",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm turning-grille: correct exhibit HTML",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm turning-grille: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm turning-grille: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm turning-grille: four rotations visit all cells once",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm turning-grille: 6x6 roundtrip retains real and padding Xs",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm turning-grille: 8x8 roundtrip retains real and padding Xs",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm turning-grille: edited 8x8 mask remains valid",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm myszkowski: correct exhibit HTML",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm myszkowski: known ciphertext",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm myszkowski: actual decrypt control",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm myszkowski: tied-all-columns and text normalization",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm myszkowski: 24-letter key and incomplete row roundtrip",
+      "pass": true
+    },
+    {
+      "name": "PR2 offline warm myszkowski: invalid key clears result",
+      "pass": true
+    }
+  ],
+  "snapshots": [
+    {
+      "label": "PR1/1280/caesar",
+      "title": "Caesar Cipher — The Cipher Museum",
+      "heading": "Caesar Cipher",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR1/1280/sigaba",
+      "title": "SIGABA (ECM Mark II) — The Cipher Museum",
+      "heading": "SIGABA (ECM Mark II)",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR1/1280/vernam",
+      "title": "Vernam Cipher — The Cipher Museum",
+      "heading": "Vernam Cipher",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Secure (Modern)",
+          "title": "Still considered secure when used correctly with modern key handling."
+        },
+        {
+          "text": "Secure (Modern)",
+          "title": "Still considered secure when used correctly with modern key handling."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR1/1280/aeneas-tacticus",
+      "title": "Aeneas Tacticus — Water-Clock Signal Code — The Cipher Museum",
+      "heading": "Aeneas Tacticus Water-Clock Signal Code",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR1/390/caesar",
+      "title": "Caesar Cipher — The Cipher Museum",
+      "heading": "Caesar Cipher",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR1/390/sigaba",
+      "title": "SIGABA (ECM Mark II) — The Cipher Museum",
+      "heading": "SIGABA (ECM Mark II)",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR1/390/vernam",
+      "title": "Vernam Cipher — The Cipher Museum",
+      "heading": "Vernam Cipher",
+      "artifacts": 1,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Secure (Modern)",
+          "title": "Still considered secure when used correctly with modern key handling."
+        },
+        {
+          "text": "Secure (Modern)",
+          "title": "Still considered secure when used correctly with modern key handling."
+        },
+        {
+          "text": "Secure (Modern)",
+          "title": "Still considered secure when used correctly with modern key handling."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR1/390/aeneas-tacticus",
+      "title": "Aeneas Tacticus — Water-Clock Signal Code — The Cipher Museum",
+      "heading": "Aeneas Tacticus Water-Clock Signal Code",
+      "artifacts": 1,
+      "artifactData": true,
+      "badges": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR2/1280/nema",
+      "title": "NEMA — Swiss Rotor Machine — The Cipher Museum",
+      "heading": "NEMA — Swiss Rotor Machine",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        }
+      ],
+      "output": "HRSBVOOTZUCRWLMGRMGVWYWOVNF",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR2/1280/hagelin-c36",
+      "title": "Hagelin C-36 / C-52 Lineage — The Cipher Museum",
+      "heading": "Hagelin C-36 / C-52 Lineage",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR2/1280/turning-grille",
+      "title": "Fleissner Turning Grille — The Cipher Museum",
+      "heading": "Fleissner Turning Grille",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "output": "ABCEMDFGNOIHPJKL",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR2/1280/myszkowski",
+      "title": "Myszkowski Transposition — The Cipher Museum",
+      "heading": "Myszkowski Transposition",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR2/390/nema",
+      "title": "NEMA — Swiss Rotor Machine — The Cipher Museum",
+      "heading": "NEMA — Swiss Rotor Machine",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        }
+      ],
+      "output": "HRSBVOOTZUCRWLMGRMGVWYWOVNF",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR2/390/hagelin-c36",
+      "title": "Hagelin C-36 / C-52 Lineage — The Cipher Museum",
+      "heading": "Hagelin C-36 / C-52 Lineage",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR2/390/turning-grille",
+      "title": "Fleissner Turning Grille — The Cipher Museum",
+      "heading": "Fleissner Turning Grille",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "output": "ABCEMDFGNOIHPJKL",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "PR2/390/myszkowski",
+      "title": "Myszkowski Transposition — The Cipher Museum",
+      "heading": "Myszkowski Transposition",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "findings": [
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/1280/caesar",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/1280/sigaba",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/1280/vernam",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/1280/aeneas-tacticus",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/390/caesar",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR1/390/sigaba",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/1280/nema",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/1280/hagelin-c36",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/1280/turning-grille",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/1280/myszkowski",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/390/nema",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/390/hagelin-c36",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/390/turning-grille",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "missing-online-artifact",
+      "label": "PR2/390/myszkowski",
+      "artifactData": true,
+      "artifacts": 0
+    },
+    {
+      "kind": "delayed-artifact-dependency",
+      "pr": 1,
+      "title": "Caesar Cipher — The Cipher Museum",
+      "heading": "Caesar Cipher",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "kind": "delayed-artifact-dependency",
+      "pr": 2,
+      "title": "NEMA — Swiss Rotor Machine — The Cipher Museum",
+      "heading": "NEMA — Swiss Rotor Machine",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        }
+      ],
+      "output": "HRSBVOOTZUCRWLMGRMGVWYWOVNF",
+      "overflow": false
+    }
+  ],
+  "offline": [
+    {
+      "pr": 1,
+      "warm": false,
+      "slug": "caesar",
+      "cached": {
+        "cipher-museum-9664d4d3": [
+          "/",
+          "/index.html",
+          "/css/museum.css",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      },
+      "title": "The Cipher Museum — Interactive History of Encryption",
+      "heading": "Explore the History of Encryption",
+      "artifacts": 0,
+      "artifactData": false,
+      "badges": [],
+      "overflow": false,
+      "errors": [
+        "/ciphers/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/ciphers/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/ciphers/css/museum.css: net::ERR_FAILED",
+        "/ciphers/images/icons.svg: net::ERR_FAILED",
+        "/ciphers/js/lightbox.js: net::ERR_FAILED",
+        "/ciphers/js/nav.js: net::ERR_FAILED",
+        "/ciphers/favicon.svg: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 1,
+      "warm": false,
+      "slug": "sigaba",
+      "cached": {
+        "cipher-museum-9664d4d3": [
+          "/",
+          "/index.html",
+          "/css/museum.css",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      },
+      "title": "The Cipher Museum — Interactive History of Encryption",
+      "heading": "Explore the History of Encryption",
+      "artifacts": 0,
+      "artifactData": false,
+      "badges": [],
+      "overflow": false,
+      "errors": [
+        "/ciphers/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/ciphers/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/ciphers/css/museum.css: net::ERR_FAILED",
+        "/ciphers/images/icons.svg: net::ERR_FAILED",
+        "/ciphers/js/lightbox.js: net::ERR_FAILED",
+        "/ciphers/js/nav.js: net::ERR_FAILED",
+        "/ciphers/favicon.svg: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 1,
+      "warm": true,
+      "slug": "caesar",
+      "cached": {
+        "cipher-museum-9664d4d3": [
+          "/",
+          "/index.html",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png",
+          "/ciphers/caesar.html",
+          "/js/ciphers/caesar.js",
+          "/js/ciphers/caesar-break.js",
+          "/images/artifacts/mechanical-cipher-disk.png",
+          "/ciphers/sigaba.html",
+          "/css/museum.css",
+          "/js/trust-labels.js",
+          "/js/demo-loader.min.js",
+          "/js/ciphers/all-engines.min.js",
+          "/js/lightbox.js",
+          "/js/nav.js",
+          "/images/icons.svg",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/js/breadcrumbs.js",
+          "/js/footer.js",
+          "/js/ui-delegates.js",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/fonts/cinzel-700-latin.woff2",
+          "/favicon.svg"
+        ]
+      },
+      "title": "Caesar Cipher — The Cipher Museum",
+      "heading": "Caesar Cipher",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "pr": 1,
+      "warm": true,
+      "slug": "sigaba",
+      "cached": {
+        "cipher-museum-9664d4d3": [
+          "/",
+          "/index.html",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png",
+          "/ciphers/caesar.html",
+          "/js/ciphers/caesar.js",
+          "/js/ciphers/caesar-break.js",
+          "/images/artifacts/mechanical-cipher-disk.png",
+          "/ciphers/sigaba.html",
+          "/css/museum.css",
+          "/js/trust-labels.js",
+          "/js/demo-loader.min.js",
+          "/js/ciphers/all-engines.min.js",
+          "/js/lightbox.js",
+          "/js/nav.js",
+          "/images/icons.svg",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/js/breadcrumbs.js",
+          "/js/footer.js",
+          "/js/ui-delegates.js",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/fonts/cinzel-700-latin.woff2",
+          "/favicon.svg"
+        ]
+      },
+      "title": "SIGABA (ECM Mark II) — The Cipher Museum",
+      "heading": "SIGABA (ECM Mark II)",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "pr": 2,
+      "warm": false,
+      "slug": "nema",
+      "cached": {
+        "cipher-museum-9bf65fa0": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      },
+      "title": "NEMA — Swiss Rotor Machine — The Cipher Museum",
+      "heading": "NEMA — Swiss Rotor Machine",
+      "artifacts": 0,
+      "artifactData": false,
+      "badges": [
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        }
+      ],
+      "output": "HRSBVOOTZUCRWLMGRMGVWYWOVNF",
+      "overflow": false,
+      "errors": [
+        "/fonts/jetbrains-mono-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-italic-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-500-latin.woff2: net::ERR_FAILED",
+        "/js/demo-loader.min.js: net::ERR_FAILED",
+        "/js/lightbox.js: net::ERR_FAILED",
+        "/js/artifact-cards-data.min.js: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 2,
+      "warm": false,
+      "slug": "hagelin-c36",
+      "cached": {
+        "cipher-museum-9bf65fa0": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      },
+      "title": "Hagelin C-36 / C-52 Lineage — The Cipher Museum",
+      "heading": "Hagelin C-36 / C-52 Lineage",
+      "artifacts": 0,
+      "artifactData": false,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "overflow": false,
+      "errors": [
+        "/js/demo-loader.min.js: net::ERR_FAILED",
+        "/js/lightbox.js: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-italic-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-500-latin.woff2: net::ERR_FAILED",
+        "/js/artifact-cards-data.min.js: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 2,
+      "warm": false,
+      "slug": "turning-grille",
+      "cached": {
+        "cipher-museum-9bf65fa0": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      },
+      "title": "Fleissner Turning Grille — The Cipher Museum",
+      "heading": "Fleissner Turning Grille",
+      "artifacts": 0,
+      "artifactData": false,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "output": "ABCEMDFGNOIHPJKL",
+      "overflow": false,
+      "errors": [
+        "/fonts/jetbrains-mono-400-latin.woff2: net::ERR_FAILED",
+        "/js/demo-loader.min.js: net::ERR_FAILED",
+        "/js/lightbox.js: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-italic-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-500-latin.woff2: net::ERR_FAILED",
+        "/js/artifact-cards-data.min.js: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 2,
+      "warm": false,
+      "slug": "myszkowski",
+      "cached": {
+        "cipher-museum-9bf65fa0": [
+          "/",
+          "/index.html",
+          "/ciphers/myszkowski.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/nema.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/nav.js",
+          "/js/footer.js",
+          "/js/breadcrumbs.js",
+          "/js/ui-delegates.js",
+          "/js/trust-labels.js",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/js/artifact-cards.js",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/images/icons.svg",
+          "/favicon.svg",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png"
+        ]
+      },
+      "title": "Myszkowski Transposition — The Cipher Museum",
+      "heading": "Myszkowski Transposition",
+      "artifacts": 0,
+      "artifactData": false,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "overflow": false,
+      "errors": [
+        "/fonts/jetbrains-mono-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-italic-400-latin.woff2: net::ERR_FAILED",
+        "/js/demo-loader.min.js: net::ERR_FAILED",
+        "/js/lightbox.js: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cormorant-garamond-600-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-400-latin.woff2: net::ERR_FAILED",
+        "/fonts/cinzel-700-latin.woff2: net::ERR_FAILED",
+        "/fonts/jetbrains-mono-500-latin.woff2: net::ERR_FAILED",
+        "/js/artifact-cards-data.min.js: net::ERR_FAILED"
+      ]
+    },
+    {
+      "pr": 2,
+      "warm": true,
+      "slug": "nema",
+      "cached": {
+        "cipher-museum-9bf65fa0": [
+          "/",
+          "/index.html",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png",
+          "/ciphers/nema.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/myszkowski.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/trust-labels.js",
+          "/js/demo-loader.min.js",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/lightbox.js",
+          "/js/nav.js",
+          "/images/icons.svg",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/js/breadcrumbs.js",
+          "/js/footer.js",
+          "/js/ui-delegates.js",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/favicon.svg"
+        ]
+      },
+      "title": "NEMA — Swiss Rotor Machine — The Cipher Museum",
+      "heading": "NEMA — Swiss Rotor Machine",
+      "artifacts": 1,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        },
+        {
+          "text": "Historical Only",
+          "title": "No longer in use, or never confirmed broken/deciphered."
+        }
+      ],
+      "output": "HRSBVOOTZUCRWLMGRMGVWYWOVNF",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "pr": 2,
+      "warm": true,
+      "slug": "hagelin-c36",
+      "cached": {
+        "cipher-museum-9bf65fa0": [
+          "/",
+          "/index.html",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png",
+          "/ciphers/nema.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/myszkowski.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/trust-labels.js",
+          "/js/demo-loader.min.js",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/lightbox.js",
+          "/js/nav.js",
+          "/images/icons.svg",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/js/breadcrumbs.js",
+          "/js/footer.js",
+          "/js/ui-delegates.js",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/favicon.svg"
+        ]
+      },
+      "title": "Hagelin C-36 / C-52 Lineage — The Cipher Museum",
+      "heading": "Hagelin C-36 / C-52 Lineage",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "pr": 2,
+      "warm": true,
+      "slug": "turning-grille",
+      "cached": {
+        "cipher-museum-9bf65fa0": [
+          "/",
+          "/index.html",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png",
+          "/ciphers/nema.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/myszkowski.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/trust-labels.js",
+          "/js/demo-loader.min.js",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/lightbox.js",
+          "/js/nav.js",
+          "/images/icons.svg",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/js/breadcrumbs.js",
+          "/js/footer.js",
+          "/js/ui-delegates.js",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/favicon.svg"
+        ]
+      },
+      "title": "Fleissner Turning Grille — The Cipher Museum",
+      "heading": "Fleissner Turning Grille",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "output": "ABCEMDFGNOIHPJKL",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "pr": 2,
+      "warm": true,
+      "slug": "myszkowski",
+      "cached": {
+        "cipher-museum-9bf65fa0": [
+          "/",
+          "/index.html",
+          "/js/search.js",
+          "/js/search-index.json",
+          "/hall-of-foundations/index.html",
+          "/hall-of-foundations/foundations.css",
+          "/manifest.webmanifest",
+          "/images/icons/icon-192.png",
+          "/images/icons/icon-512.png",
+          "/ciphers/nema.html",
+          "/ciphers/hagelin-c36.html",
+          "/ciphers/turning-grille.html",
+          "/ciphers/myszkowski.html",
+          "/css/museum.css",
+          "/css/historical-demos.css",
+          "/js/trust-labels.js",
+          "/js/demo-loader.min.js",
+          "/js/historical-ciphers.js",
+          "/js/historical-demos.js",
+          "/js/lightbox.js",
+          "/js/nav.js",
+          "/images/icons.svg",
+          "/fonts/jetbrains-mono-400-latin.woff2",
+          "/fonts/cinzel-600-latin.woff2",
+          "/fonts/cormorant-garamond-italic-400-latin.woff2",
+          "/fonts/cormorant-garamond-400-latin.woff2",
+          "/fonts/cinzel-400-latin.woff2",
+          "/fonts/jetbrains-mono-500-latin.woff2",
+          "/fonts/jetbrains-mono-700-latin.woff2",
+          "/fonts/cinzel-700-latin.woff2",
+          "/fonts/cormorant-garamond-600-latin.woff2",
+          "/js/breadcrumbs.js",
+          "/js/footer.js",
+          "/js/ui-delegates.js",
+          "/js/artifact-cards.js",
+          "/js/artifact-cards-data.min.js",
+          "/favicon.svg"
+        ]
+      },
+      "title": "Myszkowski Transposition — The Cipher Museum",
+      "heading": "Myszkowski Transposition",
+      "artifacts": 0,
+      "artifactData": true,
+      "badges": [
+        {
+          "text": "Broken",
+          "title": "Cryptographically broken — historically important but unsafe to use today."
+        }
+      ],
+      "output": "ROFOACDTEDSEEEACWEIVRLENE",
+      "overflow": false,
+      "errors": []
+    }
+  ]
+}

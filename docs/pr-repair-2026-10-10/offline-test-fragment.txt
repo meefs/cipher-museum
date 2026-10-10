@@ -1,0 +1,8 @@
+  const core = [...read('sw.js').match(/const CORE = \[([\s\S]*?)\];/)[1].matchAll(/['"]([^'"]+)['"]/g)]
+    .map(match => match[1].replace(/^\//, ''));
+  const page = new JSDOM(read(rel));
+  for (const node of page.window.document.querySelectorAll('script[src], link[rel="stylesheet"]')) {
+    const asset = path.posix.normalize(path.posix.join('ciphers', node.getAttribute('src') || node.getAttribute('href')));
+    assert(core.includes(asset), `${slug}: cold-offline dependency ${asset} is precached`);
+  }
+  page.window.close();

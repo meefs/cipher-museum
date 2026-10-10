@@ -1,0 +1,407 @@
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>None (open code)</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Trivial</td></tr>
+-            <tr><td>Security</td><td>Statistical (Friedman, 1920s)</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Unsolved (Beale 1 & 3)</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-       title="Cryptographically broken — historically important but unsafe to use today."
+-       aria-label="Trust label: Broken.">
+-           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+-        <rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/>
+-      </svg>
+-    </a>
+-  </div>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Secure if the book is unguessable; broken otherwise</td></tr>
+-  <meta name="description" content="Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher that permutes both alphabets after every character. Algorithm kept secret for 92 years until the 2010 disclosure; never cryptanalytically broken.">
++  <meta name="description" content="Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher. Disclosed in 2010; published known-plaintext and in-depth ciphertext-only attacks recover its keys.">
+-  <meta property="og:description" content="Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher that permutes both alphabets after every character. Unsolved for 90 years until Rubin's 2010 break.">
++  <meta property="og:description" content="Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher. Disclosed in 2010; published known-plaintext and in-depth ciphertext-only attacks recover its keys.">
+-  <meta name="twitter:description" content="Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher that permutes both alphabets after every character. Unsolved for 90 years until Rubin's 2010 break.">
++  <meta name="twitter:description" content="Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher. Disclosed in 2010; published known-plaintext and in-depth ciphertext-only attacks recover its keys.">
+-  <p class="page-tagline">John Byrne's 1918 disk cipher — unsolved for 90 years</p>
++  <p class="page-tagline">John Byrne's 1918 disk cipher — disclosed after 92 years, then cryptanalyzed</p>
+-    <div class="fact"><span class="fact-label">Famous fact</span><span class="fact-value">Held secret for 92 years; never broken until disclosure</span></div>
++    <div class="fact"><span class="fact-label">Famous fact</span><span class="fact-value">Held secret for 92 years; public cryptanalysis followed the 2010 disclosure</span></div>
+-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Disclosure (2010)</div><div class="attack-diff">The only known "break"</div><p class="attack-desc">Despite four decades of public challenge ciphertexts and serious attention from professional cryptanalysts, no published cryptanalytic break of Chaocipher exists. The cipher was "broken" only when its algorithm was finally disclosed by the Byrne family in 2010 — vindicating Byrne's belief while also confirming Kerckhoffs' principle: any cipher can be defeated if the algorithm becomes known and the key is short.</p></div><div class="attack-panel"><div class="attack-name">Known-Plaintext Attack</div><div class="attack-diff">Complexity: Moderate (now that algorithm is public)</div><p class="attack-desc">Modern researchers have shown that with sufficient known plaintext (a few hundred characters), the initial wheel orderings can be recovered by tracing back the deterministic permutations. Pure ciphertext-only attacks remain difficult.</p></div></div>
++      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Disclosure (2010)</div><div class="attack-diff">Algorithm disclosure enabled public analysis</div><p class="attack-desc">The Byrne family donated the Chaocipher papers to the National Cryptologic Museum in 2010, making the algorithm public after 92 years. Disclosure itself was not a cryptanalytic break; it allowed researchers to study the keyed construction.</p></div><div class="attack-panel"><div class="attack-name">Known-Plaintext and In-Depth Attacks</div><div class="attack-diff">Published key-recovery attacks</div><p class="attack-desc">A known-plaintext key-recovery method was published in 2010. In 2016, George Lasry, Moshe Rubin, Nils Kopal, and Arno Wacker published a hill-climbing attack against multiple messages encrypted with the same initial settings, plus a known-plaintext attack on short in-depth messages. Their <a href="https://doi.org/10.1080/01611194.2015.1091797" target="_blank" rel="noopener">Cryptologia paper</a> establishes weaknesses in the classic cipher; it does not claim a general ciphertext-only break of every isolated message.</p></div></div>
+-            <tr><td>Security</td><td>Strong (until disclosed)</td></tr>
+-            <tr><td>Famous fact</td><td>Held secret for 92 years; never broken until disclosure</td></tr>
++            <tr><td>Famous fact</td><td>Held secret for 92 years; public cryptanalysis followed the 2010 disclosure</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken (2011)</td></tr>
+-    <div class="fact"><span class="fact-label">Security</span><span class="fact-value">Theoretically unbreakable if pad not reused</span></div>
+-        <table class="cipher-table"><tbody><tr><td>Origin</td><td>US Army Special Forces / NSA</td></tr><tr><td>Era</td><td>~1960–1995</td></tr><tr><td>Family</td><td>One-Time Pad (trigraphic variant)</td></tr><tr><td>Key Material</td><td>Printed pad cards, 13 trigraph columns</td></tr><tr><td>Security</td><td>Theoretically unbreakable if pad not reused</td></tr><tr><td>Modern Lesson</td><td>Correct OTP use is unbreakable; logistics often fail before the math</td></tr></tbody></table>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Unsolved</td></tr>
+-            <tr><td>Security</td><td>Weak</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Moderate</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Weak</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Trivial</td></tr>
+-      <p>The KL-7, code-named ADONIS, was the rotor machine that carried NATO’s most sensitive traffic for almost two decades. It encrypted everything from US Navy submarine orders to NATO command messages. By 1965 the United States alone had over 25,000 KL-7 units in service.</p><p style="margin-top:1rem;">Cryptanalytically, the KL-7 was never broken. Operationally, it suffered the most damaging spy compromise in modern American history: Navy Chief Warrant Officer John Walker sold its key lists to the Soviets from 1968 to 1985, allowing the KGB to read US Navy traffic in near real time.</p>
++      <p>The KL-7, code-named ADONIS, was the rotor machine that carried NATO’s most sensitive traffic for almost two decades. It encrypted everything from US Navy submarine orders to NATO command messages. By 1965 the United States alone had over 25,000 KL-7 units in service.</p><p style="margin-top:1rem;">No public cryptanalytic break of operational KL-7 traffic is documented. Operationally, it suffered the most damaging spy compromise in modern American history: Navy Chief Warrant Officer John Walker sold its key lists to the Soviets from 1968 to 1985, allowing the KGB to read US Navy traffic in near real time.</p>
+-            <tr><td>Security</td><td>K1–K3 Broken · K4 Unsolved</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Strong (tactical)</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Never broken</span></div>
+-            <tr><td>Security</td><td>Never Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Statistical + intercept-volume</td></tr>
+-            <tr><td>Security</td><td>Provably Secure*</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Trivial</td></tr>
+-            <tr><td>Security</td><td>Weak</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Never broken in service</td></tr>
+-    <div class="fact"><span class="fact-label">Security</span><span class="fact-value">Theoretically unbreakable — voice one-time pad</span></div>
+-      <div class="panel-body"><table class="cipher-table"><tbody><tr><td>Development</td><td>Bell Laboratories (Claude Shannon, et al.), 1941–1943</td></tr><tr><td>Security</td><td>Theoretically unbreakable — voice one-time pad</td></tr><tr><td>Machine size</td><td>50 tons; 40+ racks of vacuum tubes; 12 rooms</td></tr><tr><td>Synchronization</td><td>Matched vinyl phonograph records as key material</td></tr><tr><td>Lines installed</td><td>Washington D.C., London, Paris, Algiers, Brisbane, Guam, SHAEF HQ</td></tr><tr><td>Modern Lesson</td><td>The first practical secure voice communication predates digital age by 50 years</td></tr></tbody></table></div>
+-            <tr><td>Security</td><td>Moderate</td></tr>
+-            <tr><td>Security</td><td>Weak</td></tr>
+-            <tr><td>Security</td><td>Weak (alone) · Strong (in VIC)</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Weak</td></tr>
+-            <tr><td>Security</td><td>Never confirmed broken; far stronger than Enigma in service</td></tr>
+-            <tr><td>Security</td><td>Weak if key reused</td></tr>
+-            <tr><td>Security</td><td>Weak</td></tr>
+-            <tr><td>Security</td><td>Broken</td></tr>
+-            <tr><td>Security</td><td>Solved 2020</td></tr>
+-      <select class="comp-filter" id="security-filter" aria-label="Filter by security level">
+-        <option value="">All Security Levels</option>
+-        <option value="Trivial">Trivial</option>
+-        <option value="Weak">Weak</option>
+-        <option value="Moderate">Moderate</option>
+-        <option value="Strong">Strong</option>
++      <select class="comp-filter" id="security-filter" aria-label="Filter by trust label">
++        <option value="">All Trust Labels</option>
+-        <option value="Unbreakable">Unbreakable</option>
++        <option value="Historical Only">Historical Only</option>
++        <option value="Educational">Educational</option>
++        <option value="Secure (Modern)">Secure (Modern)</option>
+-            <th data-col="security">Security</th>
++            <th data-col="security">Trust</th>
+-    { name:'Atbash',               href:'ciphers/atbash.html',               era:'Ancient',       year:-600,  type:'Substitution',    key:'Reversed alphabet',         security:'Trivial',     hall:'I' },
+-    { name:'Scytale',              href:'ciphers/scytale.html',              era:'Ancient',       year:-500,  type:'Transposition',   key:'Rod diameter',              security:'Trivial',     hall:'I' },
+-    { name:'Caesar',               href:'ciphers/caesar.html',               era:'Ancient',       year:-58,   type:'Substitution',    key:'Shift number (0–25)',       security:'Trivial',     hall:'I' },
+-    { name:'Polybius Square',      href:'ciphers/polybius.html',             era:'Ancient',       year:-150,  type:'Fractionation',   key:'Grid arrangement',          security:'Trivial',     hall:'I' },
+-    { name:'ROT13',                href:'ciphers/rot13.html',                era:'Modern',        year:1980,  type:'Substitution',    key:'Fixed shift of 13',         security:'Trivial',     hall:'I' },
+-    { name:'Monoalphabetic',       href:'ciphers/monoalphabetic.html',       era:'Medieval',      year:850,   type:'Substitution',    key:'Permuted alphabet',         security:'Weak',        hall:'II' },
+-    { name:'Homophonic',           href:'ciphers/homophonic.html',           era:'Renaissance',   year:1401,  type:'Substitution',    key:'Substitution table',        security:'Moderate',    hall:'II' },
+-    { name:'Babington Plot',       href:'ciphers/babington.html',            era:'Renaissance',   year:1586,  type:'Nomenclator',     key:'Symbol set + nomenclator',  security:'Weak',        hall:'II' },
+-    { name:'Great Cipher (Rossignols)', href:'ciphers/great-cipher.html',    era:'Baroque',       year:1626,  type:'Nomenclator',     key:'Codebook (~587 codewords)', security:'Strong',      hall:'II' },
+-    { name:'Playfair',             href:'ciphers/playfair.html',             era:'19th Century',  year:1854,  type:'Substitution',    key:'5×5 key square',            security:'Moderate',    hall:'II' },
+-    { name:'Four-Square',          href:'ciphers/four-square.html',          era:'19th Century',  year:1902,  type:'Substitution',    key:'Two 5×5 key squares',       security:'Moderate',    hall:'II' },
+-    { name:'Two-Square',           href:'ciphers/two-square.html',           era:'19th Century',  year:1901,  type:'Substitution',    key:'Two 5×5 key squares',       security:'Moderate',    hall:'II' },
+-    { name:'Hill',                 href:'ciphers/hill.html',                 era:'Modern',        year:1929,  type:'Substitution',    key:'Matrix key',                security:'Moderate',    hall:'II' },
+-    { name:'Vigenère',             href:'ciphers/vigenere.html',             era:'Renaissance',   year:1553,  type:'Polyalphabetic',  key:'Keyword',                   security:'Moderate',    hall:'III' },
+-    { name:'Beaufort',             href:'ciphers/beaufort.html',             era:'19th Century',  year:1857,  type:'Polyalphabetic',  key:'Keyword',                   security:'Moderate',    hall:'III' },
+-    { name:'Porta',                href:'ciphers/porta.html',                era:'Renaissance',   year:1563,  type:'Polyalphabetic',  key:'Keyword',                   security:'Moderate',    hall:'III' },
+-    { name:'Gronsfeld',            href:'ciphers/gronsfeld.html',            era:'Baroque',   year:1655,  type:'Polyalphabetic',  key:'Numeric key',               security:'Weak',        hall:'III' },
+-    { name:'Running Key',          href:'ciphers/running-key.html',          era:'19th Century',  year:1800,  type:'Polyalphabetic',  key:'Book/text key',             security:'Moderate',    hall:'III' },
+-    { name:'Rail Fence',           href:'ciphers/rail-fence.html',           era:'Ancient',       year:-500,  type:'Transposition',   key:'Number of rails',           security:'Trivial',     hall:'IV' },
+-    { name:'Columnar',             href:'ciphers/columnar.html',             era:'19th Century',  year:1850,  type:'Transposition',   key:'Keyword',                   security:'Weak',        hall:'IV' },
+-    { name:'Double Transposition', href:'ciphers/double-transposition.html', era:'World War I',   year:1914,  type:'Transposition',   key:'Two keywords',              security:'Strong',      hall:'IV' },
+-    { name:'Bifid',                href:'ciphers/bifid.html',                era:'19th Century',  year:1901,  type:'Fractionation',   key:'5×5 key square',            security:'Moderate',    hall:'IV' },
+-    { name:'Trifid',               href:'ciphers/trifid.html',               era:'19th Century',  year:1901,  type:'Fractionation',   key:'3×3×3 key cube',            security:'Moderate',    hall:'IV' },
+-    { name:'Fractionated Morse',   href:'ciphers/fractionated-morse.html',   era:'19th Century',  year:1890,  type:'Fractionation',   key:'Keyword alphabet',          security:'Moderate',    hall:'IV' },
+-    { name:'Nihilist',             href:'ciphers/nihilist.html',             era:'19th Century',  year:1880,  type:'Polyalphabetic',  key:'Polybius + keyword',        security:'Moderate',    hall:'V' },
+-    { name:'ADFGX',                href:'ciphers/adfgx.html',                era:'World War I',   year:1918,  type:'Fractionation',   key:'Polybius + transposition',  security:'Strong',      hall:'V' },
+-    { name:'ADFGVX',               href:'ciphers/adfgvx.html',               era:'World War I',   year:1918,  type:'Fractionation',   key:'Polybius + transposition',  security:'Strong',      hall:'V' },
+-    { name:'Bazeries',             href:'ciphers/bazeries.html',             era:'19th Century',  year:1898,  type:'Substitution',    key:'Number + reversed segment', security:'Moderate',    hall:'V' },
+-    { name:'Straddling Checkerboard', href:'ciphers/straddling-checkerboard.html', era:'19th Century', year:1880, type:'Fractionation', key:'Frequency-weighted grid', security:'Moderate',    hall:'V' },
+-    { name:'VIC',                  href:'ciphers/vic.html',                  era:'Modern',  year:1953,  type:'Substitution',    key:'Complex key derivation',    security:'Strong',      hall:'V' },
+-    { name:'Stager',               href:'ciphers/stager.html',               era:'19th Century',  year:1861,  type:'Transposition',   key:'Route pattern',             security:'Weak',        hall:'VI' },
+-    { name:'Confederate Vigenère', href:'ciphers/confederate-vigenere.html', era:'19th Century',  year:1862,  type:'Polyalphabetic',  key:'Keyword + brass disk',      security:'Moderate',    hall:'VI' },
+-    { name:'Dictionary Code',      href:'ciphers/dictionary-code.html',      era:'19th Century',  year:1860,  type:'Code',            key:'Shared dictionary',         security:'Moderate',    hall:'VI' },
+-    { name:'Alberti Disk',         href:'ciphers/alberti-disk.html',         era:'Renaissance',   year:1467,  type:'Polyalphabetic',  key:'Disk setting + indicator',  security:'Moderate',    hall:'VII' },
+-    { name:'Jefferson Disk',       href:'ciphers/jefferson-disk.html',       era:'19th Century',  year:1795,  type:'Polyalphabetic',  key:'26-disk arrangement',       security:'Strong',      hall:'VII' },
+-    { name:'Chaocipher',           href:'ciphers/chaocipher.html',           era:'World War I',   year:1918,  type:'Machine',         key:'Two permuting alphabets',   security:'Strong',      hall:'VII' },
+-    { name:'Enigma',               href:'ciphers/enigma.html',               era:'World War II',  year:1923,  type:'Machine',         key:'Rotor order + plugboard',   security:'Strong',      hall:'VII' },
+-    { name:'M-209 (Hagelin C-38)', href:'ciphers/m209.html',                 era:'World War II',  year:1940,  type:'Machine',         key:'Six-wheel pin/lug',         security:'Moderate',    hall:'VII' },
+-    { name:'Lorenz',               href:'ciphers/lorenz.html',               era:'World War II',  year:1940,  type:'Machine',         key:'12-wheel settings',         security:'Strong',      hall:'VII' },
+-    { name:'Purple (Type 97)',     href:'ciphers/purple.html',               era:'World War II',  year:1939,  type:'Machine',         key:'Stepping switch wiring',    security:'Strong',      hall:'VII' },
+-    { name:'Navajo Code Talkers',  href:'ciphers/navajo-code-talkers.html',  era:'World War II',  year:1942,  type:'Code',            key:'Navajo language',           security:'Unbreakable', hall:'VII' },
+-    { name:'Pigpen',               href:'ciphers/pigpen.html',               era:'Baroque',      year:1700,  type:'Substitution',    key:'Grid positions',            security:'Trivial',     hall:'VIII' },
+-    { name:'Bacon\'s Cipher',      href:'ciphers/bacon.html',                era:'Renaissance',   year:1605,  type:'Steganography',   key:'Binary font encoding',      security:'Weak',        hall:'VIII' },
+-    { name:'Tap Code',             href:'ciphers/tap-code.html',             era:'Modern',  year:1965,  type:'Fractionation',   key:'Polybius variant',          security:'Trivial',     hall:'VIII' },
+-    { name:'Voynich Manuscript',   href:'ciphers/voynich.html',              era:'Renaissance',   year:1420,  type:'Unsolved',        key:'Unknown',                   security:'Unbreakable', hall:'VIII' },
+-    { name:'Copiale Cipher',       href:'ciphers/copiale.html',              era:'Baroque',       year:1730,  type:'Substitution',    key:'Homophonic + nulls',        security:'Moderate',    hall:'VIII' },
+-    { name:'Beale Ciphers',        href:'ciphers/beale.html',                era:'19th Century',  year:1885,  type:'Code',            key:'Book cipher',               security:'Strong',      hall:'VIII' },
+-    { name:'Zodiac Cipher',        href:'ciphers/zodiac.html',               era:'Modern',        year:1969,  type:'Substitution',    key:'Homophonic + transposition',security:'Strong',      hall:'VIII' },
+-    { name:'Kryptos',              href:'ciphers/kryptos.html',              era:'Modern',        year:1990,  type:'Polyalphabetic',  key:'Vigenère + transposition',  security:'Unbreakable', hall:'VIII' },
+-    { name:'One-Time Pad',         href:'ciphers/one-time-pad.html',         era:'19th Century',   year:1882,  type:'Stream',          key:'Random key = message length',security:'Unbreakable',hall:'IX' },
+-    { name:'Vernam',               href:'ciphers/vernam.html',               era:'World War I',   year:1917,  type:'Stream',          key:'Random tape',               security:'Unbreakable', hall:'IX' },
+-    { name:'Solitaire / Pontifex', href:'ciphers/solitaire.html',            era:'Modern',        year:1999,  type:'Stream',          key:'Card deck + passphrase',    security:'Strong',      hall:'IX' },
+-    { name:'Egyptian Substitution',href:'ciphers/egyptian-substitution.html',era:'Ancient',       year:-1900, type:'Substitution',    key:'Pictographic alphabet',     security:'Trivial',     hall:'I' },
+-    { name:'Histiaeus Tattoo',     href:'ciphers/histiaeus-tattoo.html',     era:'Ancient',       year:-499,  type:'Steganography',   key:'Shaved scalp concealment',  security:'Trivial',     hall:'I' },
+-    { name:'Aeneas Tacticus',      href:'ciphers/aeneas-tacticus.html',      era:'Ancient',       year:-360,  type:'Steganography',   key:'Hydraulic / hole pattern',  security:'Weak',        hall:'I' },
+-    { name:'Kama Sutra Cipher',    href:'ciphers/kama-sutra.html',           era:'Ancient',       year:400,   type:'Substitution',    key:'Paired letter exchange',    security:'Trivial',     hall:'I' },
+-    { name:'Arabic Nomenclators',  href:'ciphers/arabic-nomenclators.html',  era:'Medieval',      year:855,   type:'Nomenclator',     key:'Letter codes + keywords',   security:'Weak',        hall:'I' },
+-    { name:'Wadsworth Cipher',    href:'ciphers/wadsworth-cipher.html',    era:'19th Century',  year:1817,  type:'Machine',         key:'Two geared disks, 26:33',   security:'Moderate',    hall:'VII' },
+-    { name:'Amharic Ge\'ez Ciphers',href:'ciphers/amharic-ge-ez-ciphers.html',era:'Medieval',     year:1300,  type:'Substitution',    key:'Keyed monoalphabetic',      security:'Trivial',     hall:'I' },
+-    { name:'Nomenclator (generic)',href:'ciphers/nomenclator.html',          era:'Renaissance',   year:1380,  type:'Nomenclator',     key:'Codebook + cipher alphabet',security:'Moderate',    hall:'II' },
+-    { name:'Trithemius',           href:'ciphers/trithemius.html',           era:'Renaissance',   year:1518,  type:'Polyalphabetic',  key:'Progressive shift table',   security:'Weak',        hall:'III' },
+-    { name:'Affine Cipher',        href:'ciphers/affine.html',               era:'Renaissance',   year:1500,  type:'Substitution',    key:'Two integers a, b mod 26',  security:'Weak',        hall:'III' },
+-    { name:'Autokey (generic)',    href:'ciphers/autokey.html',              era:'Renaissance',   year:1553,  type:'Polyalphabetic',  key:'Plaintext-primed key',      security:'Moderate',    hall:'III' },
+-    { name:'Wallis Ciphers',       href:'ciphers/wallis-ciphers.html',       era:'Baroque',       year:1643,  type:'Polyalphabetic',  key:'Polyalphabetic + codes',    security:'Moderate',    hall:'III' },
+-    { name:'Wheatstone Cryptograph',href:'ciphers/wheatstone.html',          era:'19th Century',  year:1867,  type:'Machine',         key:'Two-disk mechanical device',security:'Moderate',    hall:'III' },
+-    { name:'Cardano Autokey',      href:'ciphers/cardano-autokey.html',      era:'Renaissance',   year:1550,  type:'Polyalphabetic',  key:'Reciprocal key derivation', security:'Moderate',    hall:'V' },
+-    { name:'Argenti Family',       href:'ciphers/argenti.html',              era:'Renaissance',   year:1591,  type:'Nomenclator',     key:'Codebook + polyalphabetic', security:'Strong',      hall:'V' },
+-    { name:'Cardano Grille',       href:'ciphers/cardano-grille.html',       era:'Renaissance',   year:1550,  type:'Steganography',   key:'Physical grille template',  security:'Moderate',    hall:'V' },
+-    { name:'Culper Ring Code',     href:'ciphers/culper-ring.html',          era:'19th Century',  year:1778,  type:'Code',            key:'Numbered codebook',         security:'Moderate',    hall:'V' },
+-    { name:'Null Cipher',          href:'ciphers/null-cipher.html',          era:'Renaissance',   year:1550,  type:'Steganography',   key:'Word/position pattern',     security:'Weak',        hall:'V' },
+-    { name:'Book Cipher (generic)',href:'ciphers/book-cipher.html',          era:'Baroque',       year:1680,  type:'Code',            key:'Shared book + page/line',   security:'Moderate',    hall:'V' },
+-    { name:'Arnold-André Cipher',  href:'ciphers/arnold-andre.html',         era:'19th Century',  year:1780,  type:'Code',            key:'Book cipher (Blackstone)',  security:'Moderate',    hall:'V' },
+-    { name:'IRA Book Cipher',      href:'ciphers/ira-ciphers.html',      era:'Modern',        year:1970,  type:'Code',            key:'Book cipher',               security:'Moderate',    hall:'V' },
+-    { name:'Che Guevara VIC',      href:'ciphers/che-guevara.html',          era:'Modern',        year:1960,  type:'Substitution',    key:'Checkerboard + date key',   security:'Strong',      hall:'V' },
+-    { name:'Diana Cryptosystem',   href:'ciphers/diana-cryptosystem.html',   era:'Modern',        year:1961,  type:'Stream',          key:'Diana table + OTP pad',     security:'Moderate',    hall:'V' },
+-    { name:'Vietnamese Underground',href:'ciphers/vietnamese-underground.html',era:'Modern',      year:1965,  type:'Code',            key:'Party phrase books',        security:'Moderate',    hall:'V' },
+-    { name:'Red Army Faction OTP', href:'ciphers/red-army-faction.html',     era:'Modern',        year:1970,  type:'Stream',          key:'One-time pad',              security:'Unbreakable', hall:'V' },
+-    { name:'Chinese Telegraph',    href:'ciphers/chinese-telegraph.html',    era:'19th Century',  year:1871,  type:'Code',            key:'Numeric codebook',          security:'Moderate',    hall:'VI' },
+-    { name:'Morse Code',           href:'ciphers/morse.html',                era:'19th Century',  year:1844,  type:'Signal Encoding', key:'Dot-dash alphabet',         security:'Trivial',     hall:'VI' },
+-    { name:'Zimmermann Telegram',  href:'ciphers/zimmermann.html',           era:'World War I',   year:1917,  type:'Code',            key:'Diplomatic codebook',       security:'Weak',        hall:'VI' },
+-    { name:'Commercial Codebooks', href:'ciphers/commercial-codebooks.html', era:'19th Century',  year:1870,  type:'Code',            key:'Commercial codebook',       security:'Moderate',    hall:'VI' },
+-    { name:'Latin American Codebooks',href:'ciphers/latin-american-codebooks.html',era:'19th Century',year:1880,type:'Code',          key:'Adapted ATP codebook',      security:'Moderate',    hall:'VI' },
+-    { name:'Slidex',               href:'ciphers/slidex.html',               era:'World War II',  year:1943,  type:'Code',            key:'Card + sliding strips',     security:'Broken',      hall:'VI' },
+-    { name:'Fialka M-125',         href:'ciphers/fialka.html',               era:'Modern',        year:1956,  type:'Machine',         key:'10-rotor + plugboard',      security:'Strong',      hall:'VII' },
+-    { name:'KL-7',                 href:'ciphers/kl-7.html',                 era:'Modern',        year:1952,  type:'Machine',         key:'Rotor + stepping',          security:'Strong',      hall:'VII' },
+-    { name:'SIGABA',               href:'ciphers/sigaba.html',               era:'World War II',  year:1935,  type:'Machine',         key:'15-rotor machine',          security:'Strong',      hall:'VII' },
+-    { name:'Typex',                href:'ciphers/typex.html',                era:'World War II',  year:1937,  type:'Machine',         key:'5-rotor machine',           security:'Strong',      hall:'VII' },
+-    { name:'Geheimschreiber T52',  href:'ciphers/geheimschreiber.html',      era:'World War II',  year:1932,  type:'Machine',         key:'10-wheel XOR stream',       security:'Strong',      hall:'VII' },
+-    { name:'Kryha',                href:'ciphers/kryha.html',                era:'World War I',   year:1926,  type:'Machine',         key:'Rotating disk (irregular)', security:'Weak',        hall:'VII' },
+-    { name:'M-94 / M-138-A',       href:'ciphers/m-94.html',                 era:'World War I',   year:1922,  type:'Machine',         key:'25-disk wheel cipher',      security:'Moderate',    hall:'VII' },
+-    { name:'Red (Type A)',         href:'ciphers/red-type-a.html',           era:'World War II',  year:1931,  type:'Machine',         key:'Stepping switch (6-20)',     security:'Moderate',    hall:'VII' },
+-    { name:'JN-25',                href:'ciphers/jn-25.html',                era:'World War II',  year:1939,  type:'Code',            key:'Additive codebook',         security:'Strong',      hall:'VII' },
+-    { name:'Freemason Pigpen',     href:'ciphers/freemason-pigpen.html',     era:'Medieval',      year:1700,  type:'Substitution',    key:'Grid / tic-tac-toe positions',security:'Trivial',   hall:'VIII' },
+-    { name:'Bach BACH Motif',      href:'ciphers/bach-motif.html',           era:'Baroque',       year:1685,  type:'Substitution',    key:'B♭-A-C-B musical cipher',   security:'Trivial',     hall:'VIII' },
+-    { name:'Sator Square',         href:'ciphers/sator-square.html',         era:'Ancient',       year:79,    type:'Wordplay',        key:'Palindrome word square',    security:'Trivial',     hall:'VIII' },
+-    { name:'Dorabella Cipher',     href:'ciphers/dorabella.html',            era:'19th Century',  year:1897,  type:'Unsolved',        key:'Unknown (87 chars, 24 symbols)',      security:'Unbreakable', hall:'XII' },
+-    { name:'Shugborough Inscription',href:'ciphers/shugborough.html',        era:'Baroque',       year:1748,  type:'Unsolved',        key:'Unknown (OUOSVAVV)',        security:'Unbreakable', hall:'XII' },
+-    { name:'D\'Agapeyeff',         href:'ciphers/dagapeyeff.html',           era:'Modern',        year:1939,  type:'Unsolved',        key:'Unknown',                   security:'Unbreakable', hall:'XII' },
+-    { name:'Somerton Man',         href:'ciphers/somerton-man.html',         era:'Modern',        year:1948,  type:'Unsolved',        key:'Unknown',                   security:'Unbreakable', hall:'XII' },
+-    { name:'McCormick',            href:'ciphers/mccormick.html',            era:'Modern',        year:1999,  type:'Unsolved',        key:'Unknown',                   security:'Unbreakable', hall:'XII' },
+-    { name:'Phaistos Disc',        href:'ciphers/phaistos-disc.html',        era:'Ancient',       year:-1700, type:'Unsolved',        key:'Unknown (241 impressions)', security:'Unbreakable', hall:'XII' },
+-    { name:'Field Hollers',        href:'ciphers/field-hollers.html',        era:'19th Century',  year:1860,  type:'Steganography',   key:'Musical / vocal coding',    security:'Moderate',    hall:'XIII' },
+-    { name:'Gold-Bug',             href:'ciphers/gold-bug.html',             era:'19th Century',  year:1843,  type:'Cultural',        key:'Monoalphabetic (fiction)',  security:'Trivial',     hall:'XIII' },
+-    { name:'Dancing Men',          href:'ciphers/dancing-men.html',          era:'19th Century',  year:1903,  type:'Cultural',        key:'Pictographic substitution', security:'Trivial',     hall:'XIII' },
+-    { name:'Da Vinci Code',        href:'ciphers/da-vinci-code.html',        era:'Modern',        year:2003,  type:'Cultural',        key:'Atbash + Fibonacci',        security:'Trivial',     hall:'XIII' },
+-    { name:'National Treasure',    href:'ciphers/national-treasure.html',    era:'Modern',        year:2004,  type:'Cultural',        key:'Book cipher (Declaration)', security:'Trivial',     hall:'XIII' },
+-    { name:'Gravity Falls Ciphers',href:'ciphers/gravity-falls.html',        era:'Modern',        year:2012,  type:'Cultural',        key:'Caesar / Vigenère / Atbash',security:'Trivial',     hall:'XIII' },
+-    { name:'Cicada 3301',          href:'ciphers/cicada-3301.html',          era:'Modern',        year:2012,  type:'ARG',             key:'Multi-layer (RSA + rune + steganography)',security:'Strong', hall:'XIII' },
+-    { name:'MIT Mystery Hunt',     href:'ciphers/mit-mystery-hunt.html',     era:'Modern',        year:1981,  type:'ARG',             key:'Puzzle competition format', security:'Moderate',    hall:'XIII' },
+-    { name:'DES',                  href:'ciphers/des.html',                  era:'Modern',        year:1975,  type:'Machine',         key:'56-bit key (Feistel)',       security:'Broken',      hall:'XI' },
+-    { name:'AES',                  href:'ciphers/aes.html',                  era:'Modern',        year:2001,  type:'Machine',         key:'128/192/256-bit key',       security:'Unbreakable', hall:'XI' },
+-    { name:'RSA',                  href:'ciphers/rsa.html',                  era:'Modern',        year:1977,  type:'Asymmetric',      key:'Prime factorization',       security:'Strong',      hall:'XI' },
+-    { name:'Diffie-Hellman',       href:'ciphers/diffie-hellman.html',       era:'Modern',        year:1976,  type:'Asymmetric',      key:'Discrete logarithm',        security:'Strong',      hall:'XI' },
+-    { name:'SHA-256',              href:'ciphers/sha256.html',               era:'Modern',        year:2001,  type:'Hash',            key:'Fixed 256-bit digest',      security:'Strong',      hall:'XI' },
+-    { name:'VENONA',               href:'ciphers/venona.html',               era:'World War II',  year:1943,  type:'Intelligence',    key:'OTP pad reuse analysis',    security:'Strong',      hall:'XI' },
+-    { name:'SIGSALY',              href:'ciphers/sigsaly.html',              era:'World War II',  year:1943,  type:'Machine',         key:'Thermal noise + OTP',       security:'Unbreakable', hall:'XI' },
+-    { name:'Microdot',             href:'ciphers/microdot.html',             era:'World War II',  year:1925,  type:'Steganography',   key:'Physical size reduction',   security:'Moderate',    hall:'XI' }
++    { name:'Atbash',               href:'ciphers/atbash.html',               era:'Ancient',       year:-600,  type:'Substitution',    key:'Reversed alphabet',         security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Scytale',              href:'ciphers/scytale.html',              era:'Ancient',       year:-500,  type:'Transposition',   key:'Rod diameter',              security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Caesar',               href:'ciphers/caesar.html',               era:'Ancient',       year:-58,   type:'Substitution',    key:'Shift number (0–25)',       security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Polybius Square',      href:'ciphers/polybius.html',             era:'Ancient',       year:-150,  type:'Fractionation',   key:'Grid arrangement',          security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'ROT13',                href:'ciphers/rot13.html',                era:'Modern',        year:1980,  type:'Substitution',    key:'Fixed shift of 13',         security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Monoalphabetic',       href:'ciphers/monoalphabetic.html',       era:'Medieval',      year:850,   type:'Substitution',    key:'Permuted alphabet',         security:"Broken",        hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Homophonic',           href:'ciphers/homophonic.html',           era:'Renaissance',   year:1401,  type:'Substitution',    key:'Substitution table',        security:"Broken",    hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Babington Plot',       href:'ciphers/babington.html',            era:'Renaissance',   year:1586,  type:'Nomenclator',     key:'Symbol set + nomenclator',  security:"Broken",        hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Great Cipher (Rossignols)', href:'ciphers/great-cipher.html',    era:'Baroque',       year:1626,  type:'Nomenclator',     key:'Codebook (~587 codewords)', security:"Broken",      hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Playfair',             href:'ciphers/playfair.html',             era:'19th Century',  year:1854,  type:'Substitution',    key:'5×5 key square',            security:"Broken",    hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Four-Square',          href:'ciphers/four-square.html',          era:'19th Century',  year:1902,  type:'Substitution',    key:'Two 5×5 key squares',       security:"Broken",    hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Two-Square',           href:'ciphers/two-square.html',           era:'19th Century',  year:1901,  type:'Substitution',    key:'Two 5×5 key squares',       security:"Broken",    hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Hill',                 href:'ciphers/hill.html',                 era:'Modern',        year:1929,  type:'Substitution',    key:'Matrix key',                security:"Broken",    hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Vigenère',             href:'ciphers/vigenere.html',             era:'Renaissance',   year:1553,  type:'Polyalphabetic',  key:'Keyword',                   security:"Broken",    hall:'III', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Beaufort',             href:'ciphers/beaufort.html',             era:'19th Century',  year:1857,  type:'Polyalphabetic',  key:'Keyword',                   security:"Broken",    hall:'III', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Porta',                href:'ciphers/porta.html',                era:'Renaissance',   year:1563,  type:'Polyalphabetic',  key:'Keyword',                   security:"Broken",    hall:'III', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Gronsfeld',            href:'ciphers/gronsfeld.html',            era:'Baroque',   year:1655,  type:'Polyalphabetic',  key:'Numeric key',               security:"Broken",        hall:'III', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Running Key',          href:'ciphers/running-key.html',          era:'19th Century',  year:1800,  type:'Polyalphabetic',  key:'Book/text key',             security:"Broken",    hall:'III', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Rail Fence',           href:'ciphers/rail-fence.html',           era:'Ancient',       year:-500,  type:'Transposition',   key:'Number of rails',           security:"Broken",     hall:'IV', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Columnar',             href:'ciphers/columnar.html',             era:'19th Century',  year:1850,  type:'Transposition',   key:'Keyword',                   security:"Broken",        hall:'IV', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Double Transposition', href:'ciphers/double-transposition.html', era:'World War I',   year:1914,  type:'Transposition',   key:'Two keywords',              security:"Broken",      hall:'IV', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Bifid',                href:'ciphers/bifid.html',                era:'19th Century',  year:1901,  type:'Fractionation',   key:'5×5 key square',            security:"Broken",    hall:'IV', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Trifid',               href:'ciphers/trifid.html',               era:'19th Century',  year:1901,  type:'Fractionation',   key:'3×3×3 key cube',            security:"Broken",    hall:'IV', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Fractionated Morse',   href:'ciphers/fractionated-morse.html',   era:'19th Century',  year:1890,  type:'Fractionation',   key:'Keyword alphabet',          security:"Broken",    hall:'IV', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Nihilist',             href:'ciphers/nihilist.html',             era:'19th Century',  year:1880,  type:'Polyalphabetic',  key:'Polybius + keyword',        security:"Broken",    hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'ADFGX',                href:'ciphers/adfgx.html',                era:'World War I',   year:1918,  type:'Fractionation',   key:'Polybius + transposition',  security:"Broken",      hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'ADFGVX',               href:'ciphers/adfgvx.html',               era:'World War I',   year:1918,  type:'Fractionation',   key:'Polybius + transposition',  security:"Broken",      hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Bazeries',             href:'ciphers/bazeries.html',             era:'19th Century',  year:1898,  type:'Substitution',    key:'Number + reversed segment', security:"Broken",    hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Straddling Checkerboard', href:'ciphers/straddling-checkerboard.html', era:'19th Century', year:1880, type:'Fractionation', key:'Frequency-weighted grid', security:"Broken",    hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'VIC',                  href:'ciphers/vic.html',                  era:'Modern',  year:1953,  type:'Substitution',    key:'Complex key derivation',    security:"Broken",      hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Stager',               href:'ciphers/stager.html',               era:'19th Century',  year:1861,  type:'Transposition',   key:'Route pattern',             security:"Broken",        hall:'VI', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Confederate Vigenère', href:'ciphers/confederate-vigenere.html', era:'19th Century',  year:1862,  type:'Polyalphabetic',  key:'Keyword + brass disk',      security:"Broken",    hall:'VI', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Dictionary Code',      href:'ciphers/dictionary-code.html',      era:'19th Century',  year:1860,  type:'Code',            key:'Shared dictionary',         security:"Broken",    hall:'VI', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Alberti Disk',         href:'ciphers/alberti-disk.html',         era:'Renaissance',   year:1467,  type:'Polyalphabetic',  key:'Disk setting + indicator',  security:"Broken",    hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Jefferson Disk',       href:'ciphers/jefferson-disk.html',       era:'19th Century',  year:1795,  type:'Polyalphabetic',  key:'26-disk arrangement',       security:"Broken",      hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Chaocipher',           href:'ciphers/chaocipher.html',           era:'World War I',   year:1918,  type:'Machine',         key:'Two permuting alphabets',   security:"Broken",      hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Enigma',               href:'ciphers/enigma.html',               era:'World War II',  year:1923,  type:'Machine',         key:'Rotor order + plugboard',   security:"Broken",      hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'M-209 (Hagelin C-38)', href:'ciphers/m209.html',                 era:'World War II',  year:1940,  type:'Machine',         key:'Six-wheel pin/lug',         security:"Broken",    hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Lorenz',               href:'ciphers/lorenz.html',               era:'World War II',  year:1940,  type:'Machine',         key:'12-wheel settings',         security:"Broken",      hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Purple (Type 97)',     href:'ciphers/purple.html',               era:'World War II',  year:1939,  type:'Machine',         key:'Stepping switch wiring',    security:"Broken",      hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Navajo Code Talkers',  href:'ciphers/navajo-code-talkers.html',  era:'World War II',  year:1942,  type:'Code',            key:'Navajo language',           security:"Historical Only", hall:'VII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Pigpen',               href:'ciphers/pigpen.html',               era:'Baroque',      year:1700,  type:'Substitution',    key:'Grid positions',            security:"Broken",     hall:'VIII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Bacon\'s Cipher',      href:'ciphers/bacon.html',                era:'Renaissance',   year:1605,  type:'Steganography',   key:'Binary font encoding',      security:"Broken",        hall:'VIII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Tap Code',             href:'ciphers/tap-code.html',             era:'Modern',  year:1965,  type:'Fractionation',   key:'Polybius variant',          security:"Broken",     hall:'VIII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Voynich Manuscript',   href:'ciphers/voynich.html',              era:'Renaissance',   year:1420,  type:'Unsolved',        key:'Unknown',                   security:"Historical Only", hall:'VIII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Copiale Cipher',       href:'ciphers/copiale.html',              era:'Baroque',       year:1730,  type:'Substitution',    key:'Homophonic + nulls',        security:"Broken",    hall:'VIII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Beale Ciphers',        href:'ciphers/beale.html',                era:'19th Century',  year:1885,  type:'Code',            key:'Book cipher',               security:"Historical Only",      hall:'VIII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Zodiac Cipher',        href:'ciphers/zodiac.html',               era:'Modern',        year:1969,  type:'Substitution',    key:'Homophonic + transposition',security:"Broken",      hall:'VIII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Kryptos',              href:'ciphers/kryptos.html',              era:'Modern',        year:1990,  type:'Polyalphabetic',  key:'Vigenère + transposition',  security:"Historical Only", hall:'VIII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'One-Time Pad',         href:'ciphers/one-time-pad.html',         era:'19th Century',   year:1882,  type:'Stream',          key:'Random key = message length',security:"Secure (Modern)",hall:'IX', trust:{"key":"secure","text":"Secure (Modern)","description":"Still considered secure when used correctly with modern key handling."} },
++    { name:'Vernam',               href:'ciphers/vernam.html',               era:'World War I',   year:1917,  type:'Stream',          key:'Random tape',               security:"Secure (Modern)", hall:'IX', trust:{"key":"secure","text":"Secure (Modern)","description":"Still considered secure when used correctly with modern key handling."} },
++    { name:'Solitaire / Pontifex', href:'ciphers/solitaire.html',            era:'Modern',        year:1999,  type:'Stream',          key:'Card deck + passphrase',    security:"Historical Only",      hall:'IX', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Egyptian Substitution',href:'ciphers/egyptian-substitution.html',era:'Ancient',       year:-1900, type:'Substitution',    key:'Pictographic alphabet',     security:"",     hall:'I', trust:null },
++    { name:'Histiaeus Tattoo',     href:'ciphers/histiaeus-tattoo.html',     era:'Ancient',       year:-499,  type:'Steganography',   key:'Shaved scalp concealment',  security:"Historical Only",     hall:'I', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Aeneas Tacticus',      href:'ciphers/aeneas-tacticus.html',      era:'Ancient',       year:-360,  type:'Steganography',   key:'Hydraulic / hole pattern',  security:"",        hall:'I', trust:null },
++    { name:'Kama Sutra Cipher',    href:'ciphers/kama-sutra.html',           era:'Ancient',       year:400,   type:'Substitution',    key:'Paired letter exchange',    security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Arabic Nomenclators',  href:'ciphers/arabic-nomenclators.html',  era:'Medieval',      year:855,   type:'Nomenclator',     key:'Letter codes + keywords',   security:"Broken",        hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Wadsworth Cipher',    href:'ciphers/wadsworth-cipher.html',    era:'19th Century',  year:1817,  type:'Machine',         key:'Two geared disks, 26:33',   security:"Broken",    hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Amharic Ge\'ez Ciphers',href:'ciphers/amharic-ge-ez-ciphers.html',era:'Medieval',     year:1300,  type:'Substitution',    key:'Keyed monoalphabetic',      security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Nomenclator (generic)',href:'ciphers/nomenclator.html',          era:'Renaissance',   year:1380,  type:'Nomenclator',     key:'Codebook + cipher alphabet',security:"Broken",    hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Trithemius',           href:'ciphers/trithemius.html',           era:'Renaissance',   year:1518,  type:'Polyalphabetic',  key:'Progressive shift table',   security:"Broken",        hall:'III', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Affine Cipher',        href:'ciphers/affine.html',               era:'Renaissance',   year:1500,  type:'Substitution',    key:'Two integers a, b mod 26',  security:"Broken",        hall:'III', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Autokey (generic)',    href:'ciphers/autokey.html',              era:'Renaissance',   year:1553,  type:'Polyalphabetic',  key:'Plaintext-primed key',      security:"Broken",    hall:'III', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Wallis Ciphers',       href:'ciphers/wallis-ciphers.html',       era:'Baroque',       year:1643,  type:'Polyalphabetic',  key:'Polyalphabetic + codes',    security:"Broken",    hall:'III', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Wheatstone Cryptograph',href:'ciphers/wheatstone.html',          era:'19th Century',  year:1867,  type:'Machine',         key:'Two-disk mechanical device',security:"Broken",    hall:'III', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Cardano Autokey',      href:'ciphers/cardano-autokey.html',      era:'Renaissance',   year:1550,  type:'Polyalphabetic',  key:'Reciprocal key derivation', security:"Broken",    hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Argenti Family',       href:'ciphers/argenti.html',              era:'Renaissance',   year:1591,  type:'Nomenclator',     key:'Codebook + polyalphabetic', security:"Broken",      hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Cardano Grille',       href:'ciphers/cardano-grille.html',       era:'Renaissance',   year:1550,  type:'Steganography',   key:'Physical grille template',  security:"Historical Only",    hall:'V', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Culper Ring Code',     href:'ciphers/culper-ring.html',          era:'19th Century',  year:1778,  type:'Code',            key:'Numbered codebook',         security:"Broken",    hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Null Cipher',          href:'ciphers/null-cipher.html',          era:'Renaissance',   year:1550,  type:'Steganography',   key:'Word/position pattern',     security:"Historical Only",        hall:'V', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Book Cipher (generic)',href:'ciphers/book-cipher.html',          era:'Baroque',       year:1680,  type:'Code',            key:'Shared book + page/line',   security:"Broken",    hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Arnold-André Cipher',  href:'ciphers/arnold-andre.html',         era:'19th Century',  year:1780,  type:'Code',            key:'Book cipher (Blackstone)',  security:"Broken",    hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'IRA Book Cipher',      href:'ciphers/ira-ciphers.html',      era:'Modern',        year:1970,  type:'Code',            key:'Book cipher',               security:"Broken",    hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Che Guevara VIC',      href:'ciphers/che-guevara.html',          era:'Modern',        year:1960,  type:'Substitution',    key:'Checkerboard + date key',   security:"Broken",      hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Diana Cryptosystem',   href:'ciphers/diana-cryptosystem.html',   era:'Modern',        year:1961,  type:'Stream',          key:'Diana table + OTP pad',     security:"Historical Only",    hall:'V', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Vietnamese Underground',href:'ciphers/vietnamese-underground.html',era:'Modern',      year:1965,  type:'Code',            key:'Party phrase books',        security:"Broken",    hall:'V', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Red Army Faction OTP', href:'ciphers/red-army-faction.html',     era:'Modern',        year:1970,  type:'Stream',          key:'One-time pad',              security:"Historical Only", hall:'V', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Chinese Telegraph',    href:'ciphers/chinese-telegraph.html',    era:'19th Century',  year:1871,  type:'Code',            key:'Numeric codebook',          security:"",    hall:'VI', trust:null },
++    { name:'Morse Code',           href:'ciphers/morse.html',                era:'19th Century',  year:1844,  type:'Signal Encoding', key:'Dot-dash alphabet',         security:"",     hall:'VI', trust:null },
++    { name:'Zimmermann Telegram',  href:'ciphers/zimmermann.html',           era:'World War I',   year:1917,  type:'Code',            key:'Diplomatic codebook',       security:"Broken",        hall:'VI', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Commercial Codebooks', href:'ciphers/commercial-codebooks.html', era:'19th Century',  year:1870,  type:'Code',            key:'Commercial codebook',       security:"Broken",    hall:'VI', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Latin American Codebooks',href:'ciphers/latin-american-codebooks.html',era:'19th Century',year:1880,type:'Code',          key:'Adapted ATP codebook',      security:"Broken",    hall:'VI', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Slidex',               href:'ciphers/slidex.html',               era:'World War II',  year:1943,  type:'Code',            key:'Card + sliding strips',     security:"Broken",      hall:'VI', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Fialka M-125',         href:'ciphers/fialka.html',               era:'Modern',        year:1956,  type:'Machine',         key:'10-rotor + plugboard',      security:"Historical Only",      hall:'VII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'KL-7',                 href:'ciphers/kl-7.html',                 era:'Modern',        year:1952,  type:'Machine',         key:'Rotor + stepping',          security:"Historical Only",      hall:'VII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'SIGABA',               href:'ciphers/sigaba.html',               era:'World War II',  year:1935,  type:'Machine',         key:'15-rotor machine',          security:"Historical Only",      hall:'VII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Typex',                href:'ciphers/typex.html',                era:'World War II',  year:1937,  type:'Machine',         key:'5-rotor machine',           security:"Historical Only",      hall:'VII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Geheimschreiber T52',  href:'ciphers/geheimschreiber.html',      era:'World War II',  year:1932,  type:'Machine',         key:'10-wheel XOR stream',       security:"Broken",      hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Kryha',                href:'ciphers/kryha.html',                era:'World War I',   year:1926,  type:'Machine',         key:'Rotating disk (irregular)', security:"Broken",        hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'M-94 / M-138-A',       href:'ciphers/m-94.html',                 era:'World War I',   year:1922,  type:'Machine',         key:'25-disk wheel cipher',      security:"Broken",    hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Red (Type A)',         href:'ciphers/red-type-a.html',           era:'World War II',  year:1931,  type:'Machine',         key:'Stepping switch (6-20)',     security:"Broken",    hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'JN-25',                href:'ciphers/jn-25.html',                era:'World War II',  year:1939,  type:'Code',            key:'Additive codebook',         security:"Broken",      hall:'VII', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'Freemason Pigpen',     href:'ciphers/freemason-pigpen.html',     era:'Medieval',      year:1700,  type:'Substitution',    key:'Grid / tic-tac-toe positions',security:"",   hall:'VIII', trust:null },
++    { name:'Bach BACH Motif',      href:'ciphers/bach-motif.html',           era:'Baroque',       year:1685,  type:'Substitution',    key:'B♭-A-C-B musical cipher',   security:"",     hall:'VIII', trust:null },
++    { name:'Sator Square',         href:'ciphers/sator-square.html',         era:'Ancient',       year:79,    type:'Wordplay',        key:'Palindrome word square',    security:"",     hall:'VIII', trust:null },
++    { name:'Dorabella Cipher',     href:'ciphers/dorabella.html',            era:'19th Century',  year:1897,  type:'Unsolved',        key:'Unknown (87 chars, 24 symbols)',      security:"Historical Only", hall:'XII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Shugborough Inscription',href:'ciphers/shugborough.html',        era:'Baroque',       year:1748,  type:'Unsolved',        key:'Unknown (OUOSVAVV)',        security:"Historical Only", hall:'XII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'D\'Agapeyeff',         href:'ciphers/dagapeyeff.html',           era:'Modern',        year:1939,  type:'Unsolved',        key:'Unknown',                   security:"Historical Only", hall:'XII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Somerton Man',         href:'ciphers/somerton-man.html',         era:'Modern',        year:1948,  type:'Unsolved',        key:'Unknown',                   security:"Historical Only", hall:'XII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'McCormick',            href:'ciphers/mccormick.html',            era:'Modern',        year:1999,  type:'Unsolved',        key:'Unknown',                   security:"Historical Only", hall:'XII', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Phaistos Disc',        href:'ciphers/phaistos-disc.html',        era:'Ancient',       year:-1700, type:'Unsolved',        key:'Unknown (241 impressions)', security:"", hall:'XII', trust:null },
++    { name:'Field Hollers',        href:'ciphers/field-hollers.html',        era:'19th Century',  year:1860,  type:'Steganography',   key:'Musical / vocal coding',    security:"",    hall:'XIII', trust:null },
++    { name:'Gold-Bug',             href:'ciphers/gold-bug.html',             era:'19th Century',  year:1843,  type:'Cultural',        key:'Monoalphabetic (fiction)',  security:"",     hall:'XIII', trust:null },
++    { name:'Dancing Men',          href:'ciphers/dancing-men.html',          era:'19th Century',  year:1903,  type:'Cultural',        key:'Pictographic substitution', security:"",     hall:'XIII', trust:null },
++    { name:'Da Vinci Code',        href:'ciphers/da-vinci-code.html',        era:'Modern',        year:2003,  type:'Cultural',        key:'Atbash + Fibonacci',        security:"",     hall:'XIII', trust:null },
++    { name:'National Treasure',    href:'ciphers/national-treasure.html',    era:'Modern',        year:2004,  type:'Cultural',        key:'Book cipher (Declaration)', security:"",     hall:'XIII', trust:null },
++    { name:'Gravity Falls Ciphers',href:'ciphers/gravity-falls.html',        era:'Modern',        year:2012,  type:'Cultural',        key:'Caesar / Vigenère / Atbash',security:"",     hall:'XIII', trust:null },
++    { name:'Cicada 3301',          href:'ciphers/cicada-3301.html',          era:'Modern',        year:2012,  type:'ARG',             key:'Multi-layer (RSA + rune + steganography)',security:"", hall:'XIII', trust:null },
++    { name:'MIT Mystery Hunt',     href:'ciphers/mit-mystery-hunt.html',     era:'Modern',        year:1981,  type:'ARG',             key:'Puzzle competition format', security:"",    hall:'XIII', trust:null },
++    { name:'DES',                  href:'ciphers/des.html',                  era:'Modern',        year:1975,  type:'Machine',         key:'56-bit key (Feistel)',       security:"Broken",      hall:'XI', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'AES',                  href:'ciphers/aes.html',                  era:'Modern',        year:2001,  type:'Machine',         key:'128/192/256-bit key',       security:"Secure (Modern)", hall:'XI', trust:{"key":"secure","text":"Secure (Modern)","description":"Still considered secure when used correctly with modern key handling."} },
++    { name:'RSA',                  href:'ciphers/rsa.html',                  era:'Modern',        year:1977,  type:'Asymmetric',      key:'Prime factorization',       security:"Secure (Modern)",      hall:'XI', trust:{"key":"secure","text":"Secure (Modern)","description":"Still considered secure when used correctly with modern key handling."} },
++    { name:'Diffie-Hellman',       href:'ciphers/diffie-hellman.html',       era:'Modern',        year:1976,  type:'Asymmetric',      key:'Discrete logarithm',        security:"Secure (Modern)",      hall:'XI', trust:{"key":"secure","text":"Secure (Modern)","description":"Still considered secure when used correctly with modern key handling."} },
++    { name:'SHA-256',              href:'ciphers/sha256.html',               era:'Modern',        year:2001,  type:'Hash',            key:'Fixed 256-bit digest',      security:"Secure (Modern)",      hall:'XI', trust:{"key":"secure","text":"Secure (Modern)","description":"Still considered secure when used correctly with modern key handling."} },
++    { name:'VENONA',               href:'ciphers/venona.html',               era:'World War II',  year:1943,  type:'Intelligence',    key:'OTP pad reuse analysis',    security:"Broken",      hall:'XI', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
++    { name:'SIGSALY',              href:'ciphers/sigsaly.html',              era:'World War II',  year:1943,  type:'Machine',         key:'Thermal noise + OTP',       security:"Historical Only", hall:'XI', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} },
++    { name:'Microdot',             href:'ciphers/microdot.html',             era:'World War II',  year:1925,  type:'Steganography',   key:'Physical size reduction',   security:"Historical Only",    hall:'XI', trust:{"key":"historical","text":"Historical Only","description":"No longer in use, or never confirmed broken/deciphered."} }
+-  var secClasses = { 'Trivial':'trivial','Weak':'weak','Moderate':'moderate','Strong':'strong','Unbreakable':'unbreakable' };
+-      '<td><span class="comp-level level-' + (secClasses[c.security]||'').toLowerCase() + '">' + c.security + '</span></td>' +
+-        var order = { Trivial:0, Weak:1, Moderate:2, Strong:3, Unbreakable:4 };
+-        va = order[ca.security]; vb = order[cb.security];
++        va = ca.security; vb = cb.security;
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
++      <div class="card-foot"><span class="card-arrow">&rarr;</span></div>
+-    <p class="section-sub">Every cipher exhibit carries one of four labels indicating its modern security status. Click a label on any exhibit to return here.</p>
++    <p class="section-sub">Cipher and protocol exhibits carry one of four labels indicating their modern security status. People, places, institutions, principles, fiction, cultural exhibits, and mathematical foundations carry no cipher trust label. Click a label on any exhibit to return here.</p>
+-    <div class="trust-legend__item" role="listitem">
+-      </span>
+-      <p class="trust-legend__desc">Historically important and well-studied, but cryptographically broken. Use only for learning — never for real secrets.</p>
+-    </div>
+-    <div class="trust-legend__item" role="listitem">
+-      </span>
+-      <p class="trust-legend__desc">Curiosities, primitive shifts, undeciphered manuscripts, and steganographic devices. Important to the story of cryptography; never serious modern security.</p>
+-    </div>
+-    <div class="trust-legend__item" role="listitem">
+-      </span>
+-      <p class="trust-legend__desc">Useful for teaching a specific cryptographic concept (substitution, fractionation, key reuse) but not intended for security. Reserved for explicitly didactic constructions.</p>
+-    </div>
+-    <div class="trust-legend__item" role="listitem">
+-      </span>
+-      <p class="trust-legend__desc">Still considered secure when used correctly with modern key handling — AES, RSA, SHA-256, Diffie–Hellman, and the one classical cipher that survives: the one-time pad.</p>
+-    </div>
++            <tr><td>64</td><td><a href="ciphers/egyptian-substitution.html">Egyptian Substitution</a></td><td>I</td></tr>
++            <tr><td>66</td><td><a href="ciphers/aeneas-tacticus.html">Aeneas Tacticus</a></td><td>I</td></tr>
++            <tr><td>71</td><td><a href="ciphers/rosetta-stone.html">Rosetta Stone</a></td><td>I</td></tr>
++            <tr><td>87</td><td><a href="ciphers/chinese-telegraph.html">Chinese Telegraph Code</a></td><td>VI</td></tr>
++            <tr><td>88</td><td><a href="ciphers/morse.html">Morse Code</a></td><td>VI</td></tr>
++            <tr><td>100</td><td><a href="ciphers/freemason-pigpen.html">Freemason Pigpen</a></td><td>XIII</td></tr>
++            <tr><td>101</td><td><a href="ciphers/bach-motif.html">Bach BACH Motif</a></td><td>XIII</td></tr>
++            <tr><td>102</td><td><a href="ciphers/sator-square.html">Sator Word Square</a></td><td>XIII</td></tr>
++            <tr><td>107</td><td><a href="ciphers/phaistos-disc.html">Phaistos Disc</a></td><td>XII</td></tr>
++            <tr><td>111</td><td><a href="ciphers/bletchley-park.html">Bletchley Park</a></td><td>XI</td></tr>
++            <tr><td>112</td><td><a href="ciphers/cabinet-noir.html">Cabinet Noir</a></td><td>XI</td></tr>
++            <tr><td>113</td><td><a href="ciphers/kerckhoffs.html">Kerckhoffs's Principle</a></td><td>XI</td></tr>
++            <tr><td>114</td><td><a href="ciphers/station-hypo.html">Station HYPO</a></td><td>XI</td></tr>
++            <tr><td>115</td><td><a href="ciphers/rochefort.html">Joseph Rochefort</a></td><td>X</td></tr>
++            <tr><td>116</td><td><a href="ciphers/beurling.html">Arne Beurling</a></td><td>X</td></tr>
++            <tr><td>117</td><td><a href="ciphers/dilly-knox.html">Dilly Knox</a></td><td>X</td></tr>
++            <tr><td>118</td><td><a href="ciphers/yardley.html">Herbert Yardley</a></td><td>X</td></tr>
++            <tr><td>119</td><td><a href="ciphers/mavis-batey.html">Mavis Batey</a></td><td>X</td></tr>
++            <tr><td>120</td><td><a href="ciphers/gchq-trio.html">GCHQ Trio</a></td><td>X</td></tr>
++            <tr><td>121</td><td><a href="ciphers/kahn.html">David Kahn</a></td><td>X</td></tr>
++            <tr><td>122</td><td><a href="ciphers/dunin.html">Elonka Dunin</a></td><td>X</td></tr>
++            <tr><td>123</td><td><a href="ciphers/lasry.html">George Lasry</a></td><td>X</td></tr>
++            <tr><td>124</td><td><a href="ciphers/field-hollers.html">Field Hollers</a></td><td>XIII</td></tr>
++            <tr><td>125</td><td><a href="ciphers/gold-bug.html">Gold-Bug (Poe)</a></td><td>XIII</td></tr>
++            <tr><td>126</td><td><a href="ciphers/dancing-men.html">Dancing Men (Conan Doyle)</a></td><td>XIII</td></tr>
++            <tr><td>127</td><td><a href="ciphers/da-vinci-code.html">Da Vinci Code</a></td><td>XIII</td></tr>
++            <tr><td>128</td><td><a href="ciphers/national-treasure.html">National Treasure</a></td><td>XIII</td></tr>
++            <tr><td>129</td><td><a href="ciphers/gravity-falls.html">Gravity Falls Ciphers</a></td><td>XIII</td></tr>
++            <tr><td>130</td><td><a href="ciphers/cicada-3301.html">Cicada 3301</a></td><td>XIII</td></tr>
++            <tr><td>131</td><td><a href="ciphers/mit-mystery-hunt.html">MIT Mystery Hunt</a></td><td>XIII</td></tr>
++            <tr><td>132</td><td><a href="ciphers/krypto-arg.html">Krypto ARG</a></td><td>XIII</td></tr>
++            <tr><td>133</td><td><a href="ciphers/agnes-driscoll.html">Agnes Meyer Driscoll</a></td><td>X</td></tr>
++            <tr><td>134</td><td><a href="ciphers/bill-tutte.html">Bill Tutte</a></td><td>X</td></tr>
++            <tr><td>135</td><td><a href="ciphers/elizebeth-friedman.html">Elizebeth Smith Friedman</a></td><td>X</td></tr>
++            <tr><td>136</td><td><a href="ciphers/joan-clarke.html">Joan Clarke</a></td><td>X</td></tr>
++            <tr><td>137</td><td><a href="ciphers/leo-marks.html">Leo Marks</a></td><td>X</td></tr>
++            <tr><td>140</td><td><a href="ciphers/bible-code.html">Bible Code (ELS)</a></td><td>VIII</td></tr>
+-        if (e.broken && e.broken !== '—') meta.push('Broken: ' + escapeHTML(e.broken));
++            (e.note ? '<p class="sr-summary">' + escapeHTML(e.note) + '</p>' : '') +

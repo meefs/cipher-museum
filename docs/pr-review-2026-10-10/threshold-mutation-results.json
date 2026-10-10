@@ -1,0 +1,12 @@
+{
+  "canaryStatus": 0,
+  "measurement": {
+    "repeats": 1,
+    "small": 20.167,
+    "large": 325.688,
+    "ratio": 16.149551247086823
+  },
+  "quadraticAccepted": true,
+  "checksum": 0,
+  "restored": true
+}

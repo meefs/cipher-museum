@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "name": "threshold20-old-canary",
+      "sha": "663cbffe736b88353ac4d17ecff300c5d6ae665e",
+      "script": "tests/engines/scaling-canary.js",
+      "exit": 0
+    },
+    {
+      "name": "threshold20-quadratic-production-acceptance",
+      "sha": "663cbffe736b88353ac4d17ecff300c5d6ae665e",
+      "measurement": {
+        "repeats": 1,
+        "small": 20.569,
+        "large": 288.098,
+        "ratio": 14.006417424279256
+      },
+      "accepted": true,
+      "checksum": 48777024
+    },
+    {
+      "name": "nema-wrong-prose-trust",
+      "sha": "1e190e0e7d347e5684d36a40827e602ac821045d",
+      "script": "tests/test-trust-labels.js",
+      "exit": 0
+    },
+    {
+      "name": "nema-wrong-prose-historical",
+      "sha": "1e190e0e7d347e5684d36a40827e602ac821045d",
+      "script": "tests/test-historical-exhibits.js",
+      "exit": 0
+    },
+    {
+      "name": "hagelin-c36-wrong-prose-trust",
+      "sha": "1e190e0e7d347e5684d36a40827e602ac821045d",
+      "script": "tests/test-trust-labels.js",
+      "exit": 0
+    },
+    {
+      "name": "hagelin-c36-wrong-prose-historical",
+      "sha": "1e190e0e7d347e5684d36a40827e602ac821045d",
+      "script": "tests/test-historical-exhibits.js",
+      "exit": 0
+    }
+  ],
+  "allRestored": true
+}

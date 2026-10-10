@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+49 !== 0
+
+    at /private/tmp/cipher-repair-20261010-evidence/browser-repair.js:47:15 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 49,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

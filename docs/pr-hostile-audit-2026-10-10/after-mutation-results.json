@@ -1,0 +1,95 @@
+{
+  "results": [
+    {
+      "name": "old-artifact-renderer",
+      "sha": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+      "command": [
+        "/Users/gmcas/.npm/_npx/52027bd8fc0022aa/node_modules/node/bin/node",
+        "tests/test-artifact-loading.js"
+      ],
+      "exit": 1,
+      "diagnostic": "rendering survives either dependency order"
+    },
+    {
+      "name": "silent-artifact-publisher",
+      "sha": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+      "command": [
+        "/Users/gmcas/.npm/_npx/52027bd8fc0022aa/node_modules/node/bin/node",
+        "tests/test-artifact-loading.js"
+      ],
+      "exit": 1,
+      "diagnostic": "rendering survives either dependency order"
+    },
+    {
+      "name": "threshold20",
+      "sha": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+      "command": [
+        "/Users/gmcas/.npm/_npx/52027bd8fc0022aa/node_modules/node/bin/node",
+        "tests/engines/scaling-canary.js"
+      ],
+      "exit": 1,
+      "diagnostic": "Missing expected exception: The production guard must reject real quadratic work"
+    },
+    {
+      "name": "missing-offline-metadata",
+      "sha": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+      "command": [
+        "/Users/gmcas/.npm/_npx/52027bd8fc0022aa/node_modules/node/bin/node",
+        "tests/test-sw-version.js"
+      ],
+      "exit": 1,
+      "diagnostic": "shared exhibit dependencies are precached"
+    },
+    {
+      "name": "independent-nema-classification",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "command": [
+        "/Users/gmcas/.npm/_npx/52027bd8fc0022aa/node_modules/node/bin/node",
+        "tests/test-historical-exhibits.js"
+      ],
+      "exit": 1,
+      "diagnostic": "classification statements must use canonical badges"
+    },
+    {
+      "name": "independent-hagelin-c36-classification",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "command": [
+        "/Users/gmcas/.npm/_npx/52027bd8fc0022aa/node_modules/node/bin/node",
+        "tests/test-historical-exhibits.js"
+      ],
+      "exit": 1,
+      "diagnostic": "classification statements must use canonical badges"
+    },
+    {
+      "name": "stale-myszkowski-caption",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "command": [
+        "/Users/gmcas/.npm/_npx/52027bd8fc0022aa/node_modules/node/bin/node",
+        "tests/test-historical-exhibits.js"
+      ],
+      "exit": 1,
+      "diagnostic": "Rejected key clears derived rank explanation"
+    },
+    {
+      "name": "original-nema-classification-wording",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "command": [
+        "/Users/gmcas/.npm/_npx/52027bd8fc0022aa/node_modules/node/bin/node",
+        "tests/test-historical-exhibits.js"
+      ],
+      "exit": 1,
+      "diagnostic": "classification statements must use canonical badges"
+    },
+    {
+      "name": "original-hagelin-c36-classification-wording",
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "command": [
+        "/Users/gmcas/.npm/_npx/52027bd8fc0022aa/node_modules/node/bin/node",
+        "tests/test-historical-exhibits.js"
+      ],
+      "exit": 1,
+      "diagnostic": "classification statements must use canonical badges"
+    }
+  ],
+  "allRestored": true
+}

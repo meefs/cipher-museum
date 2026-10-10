@@ -1,0 +1,59 @@
+
+━━━ Engine complexity: 1 engines, ratio limit 10x ━━━
+
+  ❌  caesar                   15.7x  (1 × 25 KB 44.8 CPU-ms → 1 × 100 KB 701.9 CPU-ms)
+
+  judged 1, skipped 0
+
+══════════════════════════════════════════════════════════════════════
+  ❌ 0 within linear bound   ❌ 1 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+An engine scaling worse than linearly is usually one of:
+  - building a string with += and then indexing back into it (autokey)
+  - an O(n) lookup inside the per-character loop
+  - re-deriving per-message state on every character
+
+{
+  "environment": {
+    "node": "v22.23.3",
+    "clock": "process.cpuUsage",
+    "minPositiveMicroseconds": 1,
+    "zeroStepsIn10000": 6462
+  },
+  "summary": {
+    "engines": 85,
+    "minRepeats": 1,
+    "maxRepeats": 128,
+    "maxRatio": 8.80325949936971
+  },
+  "actualCaesarQuadraticMutation": {
+    "measurement": {
+      "repeats": 1,
+      "small": 21.793,
+      "large": 353.722,
+      "ratio": 16.230991602808242
+    },
+    "rejected": true,
+    "correctnessPreserved": true,
+    "checksum": 20
+  },
+  "runnerContinuation": [
+    {
+      "script": "tests/engines/run.js",
+      "exit": 1,
+      "children": 8,
+      "last": [
+        "tests/engines/corpus-replay.js"
+      ]
+    },
+    {
+      "script": "tests/run-all.js",
+      "exit": 1,
+      "children": 28,
+      "last": [
+        "hall-of-foundations/foundations-links.test.js"
+      ]
+    }
+  ]
+}

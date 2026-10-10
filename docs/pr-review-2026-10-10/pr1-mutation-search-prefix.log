@@ -1,0 +1,9 @@
+AssertionError [ERR_ASSERTION]: Search uses neutral Trust prefix
+    at checkInteractiveSurfaces (/private/tmp/cipher-final-review-mutations-pr1/tests/test-trust-labels.js:251:7) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

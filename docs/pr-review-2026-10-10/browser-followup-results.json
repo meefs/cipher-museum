@@ -1,0 +1,224 @@
+[
+  {
+    "pr": 1,
+    "width": 1280,
+    "surface": "search",
+    "slug": "sigaba",
+    "text": "SIGABA (ECM Mark II)cipherCipher · Hall: Mechanical Machines · Created: WWII · 1940 · Trust: Historical OnlySIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.Never publicly broken by cryptanalysis in wartime service; obsolete today.wwiimechanical machineshistorical only",
+    "rendered": "SIGABA (ECM Mark II)\nCIPHER\nCIPHER · HALL: MECHANICAL MACHINES · CREATED: WWII · 1940 · TRUST: HISTORICAL ONLY\n\nSIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.\n\nNever publicly broken by cryptanalysis in wartime service; obsolete today.\n\nwwii\nmechanical machines\nhistorical only",
+    "pass": true
+  },
+  {
+    "pr": 1,
+    "width": 1280,
+    "surface": "search",
+    "slug": "vernam",
+    "text": "Vernam CiphercipherCipher · Hall: The Unbreakable · Created: 1917 · Trust: Secure (Modern)Vernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.Secure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.wwithe unbreakablesecure (modern)",
+    "rendered": "Vernam Cipher\nCIPHER\nCIPHER · HALL: THE UNBREAKABLE · CREATED: 1917 · TRUST: SECURE (MODERN)\n\nVernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.\n\nSecure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.\n\nwwi\nthe unbreakable\nsecure (modern)",
+    "pass": true
+  },
+  {
+    "pr": 1,
+    "width": 1280,
+    "surface": "search",
+    "slug": "bletchley-park",
+    "text": "Bletchley ParkpersonPage · Hall: Hall of Codebreakers · Created: WWII · 1939–1945Bletchley Park (Station X) was the British WWII signals intelligence headquarters where 10,000 people broke Enigma, Lorenz, and dozens of other Axis ciphers — arguably shortening the war by two years.wwiihall of codebreakers",
+    "rendered": "Bletchley Park\nPERSON\nPAGE · HALL: HALL OF CODEBREAKERS · CREATED: WWII · 1939–1945\n\nBletchley Park (Station X) was the British WWII signals intelligence headquarters where 10,000 people broke Enigma, Lorenz, and dozens of other Axis ciphers — arguably shortening the war by two years.\n\nwwii\nhall of codebreakers",
+    "pass": true
+  },
+  {
+    "pr": 1,
+    "width": 1280,
+    "surface": "comparison",
+    "slug": "sigaba",
+    "pass": true
+  },
+  {
+    "pr": 1,
+    "width": 1280,
+    "surface": "comparison",
+    "slug": "navajo-code-talkers",
+    "pass": true
+  },
+  {
+    "pr": 1,
+    "width": 390,
+    "surface": "search",
+    "slug": "sigaba",
+    "text": "SIGABA (ECM Mark II)cipherCipher · Hall: Mechanical Machines · Created: WWII · 1940 · Trust: Historical OnlySIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.Never publicly broken by cryptanalysis in wartime service; obsolete today.wwiimechanical machineshistorical only",
+    "rendered": "SIGABA (ECM Mark II)\nCIPHER\nCIPHER · HALL: MECHANICAL MACHINES · CREATED: WWII · 1940 · TRUST: HISTORICAL ONLY\n\nSIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.\n\nNever publicly broken by cryptanalysis in wartime service; obsolete today.\n\nwwii\nmechanical machines\nhistorical only",
+    "pass": true
+  },
+  {
+    "pr": 1,
+    "width": 390,
+    "surface": "search",
+    "slug": "vernam",
+    "text": "Vernam CiphercipherCipher · Hall: The Unbreakable · Created: 1917 · Trust: Secure (Modern)Vernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.Secure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.wwithe unbreakablesecure (modern)",
+    "rendered": "Vernam Cipher\nCIPHER\nCIPHER · HALL: THE UNBREAKABLE · CREATED: 1917 · TRUST: SECURE (MODERN)\n\nVernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.\n\nSecure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.\n\nwwi\nthe unbreakable\nsecure (modern)",
+    "pass": true
+  },
+  {
+    "pr": 1,
+    "width": 390,
+    "surface": "search",
+    "slug": "bletchley-park",
+    "text": "Bletchley ParkpersonPage · Hall: Hall of Codebreakers · Created: WWII · 1939–1945Bletchley Park (Station X) was the British WWII signals intelligence headquarters where 10,000 people broke Enigma, Lorenz, and dozens of other Axis ciphers — arguably shortening the war by two years.wwiihall of codebreakers",
+    "rendered": "Bletchley Park\nPERSON\nPAGE · HALL: HALL OF CODEBREAKERS · CREATED: WWII · 1939–1945\n\nBletchley Park (Station X) was the British WWII signals intelligence headquarters where 10,000 people broke Enigma, Lorenz, and dozens of other Axis ciphers — arguably shortening the war by two years.\n\nwwii\nhall of codebreakers",
+    "pass": true
+  },
+  {
+    "pr": 1,
+    "width": 390,
+    "surface": "comparison",
+    "slug": "sigaba",
+    "pass": true
+  },
+  {
+    "pr": 1,
+    "width": 390,
+    "surface": "comparison",
+    "slug": "navajo-code-talkers",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 1280,
+    "surface": "search",
+    "slug": "sigaba",
+    "text": "SIGABA (ECM Mark II)cipherCipher · Hall: Mechanical Machines · Created: WWII · 1940 · Trust: Historical OnlySIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.Never publicly broken by cryptanalysis in wartime service; obsolete today.wwiimechanical machineshistorical only",
+    "rendered": "SIGABA (ECM Mark II)\nCIPHER\nCIPHER · HALL: MECHANICAL MACHINES · CREATED: WWII · 1940 · TRUST: HISTORICAL ONLY\n\nSIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.\n\nNever publicly broken by cryptanalysis in wartime service; obsolete today.\n\nwwii\nmechanical machines\nhistorical only",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 1280,
+    "surface": "search",
+    "slug": "vernam",
+    "text": "Vernam CiphercipherCipher · Hall: The Unbreakable · Created: 1917 · Trust: Secure (Modern)Vernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.Secure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.wwithe unbreakablesecure (modern)",
+    "rendered": "Vernam Cipher\nCIPHER\nCIPHER · HALL: THE UNBREAKABLE · CREATED: 1917 · TRUST: SECURE (MODERN)\n\nVernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.\n\nSecure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.\n\nwwi\nthe unbreakable\nsecure (modern)",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 1280,
+    "surface": "search",
+    "slug": "bletchley-park",
+    "text": "Bletchley ParkpersonPage · Hall: Hall of Codebreakers · Created: WWII · 1939–1945Bletchley Park (Station X) was the British WWII signals intelligence headquarters where 10,000 people broke Enigma, Lorenz, and dozens of other Axis ciphers — arguably shortening the war by two years.wwiihall of codebreakers",
+    "rendered": "Bletchley Park\nPERSON\nPAGE · HALL: HALL OF CODEBREAKERS · CREATED: WWII · 1939–1945\n\nBletchley Park (Station X) was the British WWII signals intelligence headquarters where 10,000 people broke Enigma, Lorenz, and dozens of other Axis ciphers — arguably shortening the war by two years.\n\nwwii\nhall of codebreakers",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 1280,
+    "surface": "comparison",
+    "slug": "sigaba",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 1280,
+    "surface": "comparison",
+    "slug": "navajo-code-talkers",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 390,
+    "surface": "search",
+    "slug": "sigaba",
+    "text": "SIGABA (ECM Mark II)cipherCipher · Hall: Mechanical Machines · Created: WWII · 1940 · Trust: Historical OnlySIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.Never publicly broken by cryptanalysis in wartime service; obsolete today.wwiimechanical machineshistorical only",
+    "rendered": "SIGABA (ECM Mark II)\nCIPHER\nCIPHER · HALL: MECHANICAL MACHINES · CREATED: WWII · 1940 · TRUST: HISTORICAL ONLY\n\nSIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.\n\nNever publicly broken by cryptanalysis in wartime service; obsolete today.\n\nwwii\nmechanical machines\nhistorical only",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 390,
+    "surface": "search",
+    "slug": "vernam",
+    "text": "Vernam CiphercipherCipher · Hall: The Unbreakable · Created: 1917 · Trust: Secure (Modern)Vernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.Secure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.wwithe unbreakablesecure (modern)",
+    "rendered": "Vernam Cipher\nCIPHER\nCIPHER · HALL: THE UNBREAKABLE · CREATED: 1917 · TRUST: SECURE (MODERN)\n\nVernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.\n\nSecure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.\n\nwwi\nthe unbreakable\nsecure (modern)",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 390,
+    "surface": "search",
+    "slug": "bletchley-park",
+    "text": "Bletchley ParkpersonPage · Hall: Hall of Codebreakers · Created: WWII · 1939–1945Bletchley Park (Station X) was the British WWII signals intelligence headquarters where 10,000 people broke Enigma, Lorenz, and dozens of other Axis ciphers — arguably shortening the war by two years.wwiihall of codebreakers",
+    "rendered": "Bletchley Park\nPERSON\nPAGE · HALL: HALL OF CODEBREAKERS · CREATED: WWII · 1939–1945\n\nBletchley Park (Station X) was the British WWII signals intelligence headquarters where 10,000 people broke Enigma, Lorenz, and dozens of other Axis ciphers — arguably shortening the war by two years.\n\nwwii\nhall of codebreakers",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 390,
+    "surface": "comparison",
+    "slug": "sigaba",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 390,
+    "surface": "comparison",
+    "slug": "navajo-code-talkers",
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 390,
+    "surface": "8x8 local scroll",
+    "initial": {
+      "width": 292,
+      "scrollWidth": 369,
+      "scrollLeft": 0,
+      "overflowX": "auto",
+      "firstX": 49,
+      "lastX": 373.734375
+    },
+    "last": {
+      "width": 292,
+      "scrollWidth": 369,
+      "scrollLeft": 77,
+      "overflowX": "auto",
+      "firstX": -28,
+      "lastX": 296.734375
+    },
+    "first": {
+      "width": 292,
+      "scrollWidth": 369,
+      "scrollLeft": 0,
+      "overflowX": "auto",
+      "firstX": 49,
+      "lastX": 373.734375
+    },
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "width": 390,
+    "surface": "24-column local scroll",
+    "grid": {
+      "width": 292,
+      "scrollWidth": 1111,
+      "overflowX": "auto",
+      "columns": 49
+    },
+    "pass": true
+  },
+  {
+    "pr": 1,
+    "surface": "dependency order proof",
+    "before": 0,
+    "data": 143,
+    "after": 1,
+    "pass": true
+  },
+  {
+    "pr": 2,
+    "surface": "dependency order proof",
+    "before": 0,
+    "data": 147,
+    "after": 1,
+    "pass": true
+  }
+]

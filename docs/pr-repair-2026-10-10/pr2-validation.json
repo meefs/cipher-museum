@@ -1,0 +1,78 @@
+{
+  "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+  "node": "v22.23.3",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "base": "c29a866",
+  "results": [
+    {
+      "name": "npm-test",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit": 0,
+      "started": "2026-10-10T11:53:54.006Z",
+      "ended": "2026-10-10T11:55:16.629Z"
+    },
+    {
+      "name": "html-lint",
+      "command": [
+        "npm",
+        "run",
+        "lint:html"
+      ],
+      "exit": 0,
+      "started": "2026-10-10T11:55:16.630Z",
+      "ended": "2026-10-10T11:55:17.154Z"
+    },
+    {
+      "name": "corpus-schema",
+      "command": [
+        "npm",
+        "run",
+        "validate:corpus"
+      ],
+      "exit": 0,
+      "started": "2026-10-10T11:55:17.154Z",
+      "ended": "2026-10-10T11:55:17.808Z"
+    },
+    {
+      "name": "generators",
+      "command": [
+        "/Users/gmcas/.npm/_npx/52027bd8fc0022aa/node_modules/node/bin/node",
+        "/private/tmp/cipher-repair-20261010-evidence/generator-checks.js",
+        "/tmp/cipher-repair-20261010-pr2",
+        "pr2"
+      ],
+      "exit": 0,
+      "started": "2026-10-10T11:55:17.808Z",
+      "ended": "2026-10-10T11:55:19.986Z"
+    },
+    {
+      "name": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "started": "2026-10-10T11:55:19.986Z",
+      "ended": "2026-10-10T11:55:20.007Z"
+    },
+    {
+      "name": "base-diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "c29a866",
+        "HEAD"
+      ],
+      "exit": 0,
+      "started": "2026-10-10T11:55:20.007Z",
+      "ended": "2026-10-10T11:55:20.044Z"
+    }
+  ],
+  "trackedStatus": ""
+}

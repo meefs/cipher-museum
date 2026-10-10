@@ -1,0 +1,72 @@
+{
+  "reports": [
+    {
+      "pr": 1,
+      "declared": "cipher-museum-9664d4d3",
+      "independentLF": "cipher-museum-9664d4d3",
+      "independentCRLF": "cipher-museum-9664d4d3",
+      "files": [
+        "css/museum.css",
+        "favicon.svg",
+        "hall-of-foundations/foundations.css",
+        "images/icons.svg",
+        "images/icons/icon-192.png",
+        "images/icons/icon-512.png",
+        "js/artifact-cards-data.min.js",
+        "js/artifact-cards.js",
+        "js/breadcrumbs.js",
+        "js/ciphers/all-engines.min.js",
+        "js/demo-loader.min.js",
+        "js/footer.js",
+        "js/nav.js",
+        "js/search-index.json",
+        "js/search.js",
+        "js/trust-labels.js",
+        "js/ui-delegates.js",
+        "manifest.webmanifest"
+      ],
+      "pages": []
+    },
+    {
+      "pr": 2,
+      "declared": "cipher-museum-9bf65fa0",
+      "independentLF": "cipher-museum-9bf65fa0",
+      "independentCRLF": "cipher-museum-9bf65fa0",
+      "files": [
+        "css/historical-demos.css",
+        "css/museum.css",
+        "favicon.svg",
+        "hall-of-foundations/foundations.css",
+        "images/icons.svg",
+        "images/icons/icon-192.png",
+        "images/icons/icon-512.png",
+        "js/artifact-cards-data.min.js",
+        "js/artifact-cards.js",
+        "js/breadcrumbs.js",
+        "js/ciphers/all-engines.min.js",
+        "js/demo-loader.min.js",
+        "js/footer.js",
+        "js/historical-ciphers.js",
+        "js/historical-demos.js",
+        "js/nav.js",
+        "js/search-index.json",
+        "js/search.js",
+        "js/trust-labels.js",
+        "js/ui-delegates.js",
+        "manifest.webmanifest"
+      ],
+      "pages": [
+        "ciphers/hagelin-c36.html",
+        "ciphers/myszkowski.html",
+        "ciphers/nema.html",
+        "ciphers/turning-grille.html"
+      ]
+    }
+  ],
+  "mutation": {
+    "restamped": true,
+    "exit": 1,
+    "binaryPropertyRejects": true
+  },
+  "restored": true
+}
