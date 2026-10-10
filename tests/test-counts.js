@@ -42,6 +42,8 @@ for (const meta of comp.window.document.querySelectorAll('meta[name="description
 }
 comp.window.close();
 const search = JSON.parse(read('js/search-index.json')).entries;
+assert.equal(search.find(e=>e.u==='comparison.html').c, `${comparisonCount} Compared Exhibits from the ${c.total}-exhibit Collection`,
+  'Comparison heading remains available to the established search extractor');
 assert.deepEqual(search.filter(e=>e.exhibitNumber).map(e=>[e.exhibitNumber,e.u,e.collection]).sort((a,b)=>a[0]-b[0]),
   es.map(e=>[e.number,e.path,e.collection]).sort((a,b)=>a[0]-b[0]), 'Search registrations preserve canonical IDs');
 assert.match(read('search.html'), /Number\.isInteger\(e\.exhibitNumber\)/);

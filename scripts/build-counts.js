@@ -63,7 +63,8 @@ function renderCounts(c = computeCounts()) {
       .replace(/\b\d+ cipher and history exhibits\b/g, `${c.cipherHistory} cipher and history exhibits`)
       .replace(/\b\d+ protocols and constructions\b/g, `${c.protocols} protocols and constructions`);
     if (rel === 'search.html') s = s.replace(/(CipherSearch\._count \|\| ')\d+(')/, `$1${c.total}$2`);
-    if (rel === 'comparison.html') s = s.replace(/\b\d+-exhibit (collection|roster)\b/gi, (_, noun) => `${c.total}-exhibit ${noun}`);
+    if (rel === 'comparison.html') s = s.replace(/\b\d+-exhibit (collection|roster)\b/gi, (_, noun) => `${c.total}-exhibit ${noun}`)
+      .replace(/\b\d+ Compared Exhibits\b/g, `${c.comparisonExhibits} Compared Exhibits`);
     out.set(rel, s);
   }
   for (const e of exhibits) {
