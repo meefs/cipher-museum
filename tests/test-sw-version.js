@@ -48,6 +48,20 @@ const unhashed = core.filter(rel => !hashed.has(rel));
 ok('every precached cache-first asset is hashed', unhashed.length === 0, unhashed.join(', '));
 ok('minified bundles are hashed', EXTRA.every(rel => hashed.has(rel)));
 
+// Hashing a dependency is insufficient: a newly precached exhibit must be
+// usable before its first online visit has warmed the runtime cache.
+const exhibitDependencies = [
+  'js/artifact-cards-data.min.js', 'js/artifact-cards.js', 'js/trust-labels.js',
+  'js/nav.js', 'js/demo-loader.min.js', 'js/lightbox.js'
+];
+ok('shared exhibit dependencies are precached', exhibitDependencies.every(rel => core.includes(rel)),
+  exhibitDependencies.filter(rel => !core.includes(rel)).join(', '));
+const css = fs.readFileSync(path.join(ROOT, 'css/museum.css'), 'utf8');
+const fonts = [...css.matchAll(/url\(\.\.\/(fonts\/[^)]+)\)/g)].map(m => m[1]);
+ok('museum font dependencies are precached and hashed', fonts.length > 0 &&
+  fonts.every(rel => core.includes(rel) && hashed.has(rel)),
+  fonts.filter(rel => !core.includes(rel) || !hashed.has(rel)).join(', '));
+
 const missing = [...hashed].filter(rel => !fs.existsSync(path.join(ROOT, rel)));
 ok('every hashed file exists on disk', missing.length === 0, missing.join(', '));
 
@@ -74,6 +88,9 @@ try {
   const script = path.join(fixture, 'js/ui-delegates.js');
   fs.appendFileSync(script, '\r\n// genuine changed content\r\n');
   ok('real text changes still invalidate the version', swVersionFor(fixture) !== original);
+  const metadataVersion = swVersionFor(fixture);
+  fs.appendFileSync(path.join(fixture, 'js/artifact-cards-data.min.js'), '\n// changed artifact metadata\n');
+  ok('artifact metadata changes invalidate the version', swVersionFor(fixture) !== metadataVersion);
   const binary = path.join(fixture, 'images/icons/icon-192.png');
   fs.writeFileSync(binary, Buffer.from([13, 10]));
   const binaryVersion = swVersionFor(fixture);
