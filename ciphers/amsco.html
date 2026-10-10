@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMSCO Transposition — The Cipher Museum</title>
+  <meta name="description" content="AMSCO from the American Cryptogram Association specification: alternate one-letter and two-letter cells, read keyed columns, and reconstruct an incomplete final row.">
+  <meta property="og:title" content="AMSCO Transposition — The Cipher Museum">
+  <meta property="og:description" content="AMSCO from the American Cryptogram Association specification: alternate one-letter and two-letter cells, read keyed columns, and reconstruct an incomplete final row.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciphermuseum.com/ciphers/amsco.html">
+  <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AMSCO Transposition — The Cipher Museum">
+  <meta name="twitter:description" content="AMSCO from the American Cryptogram Association specification: alternate one-letter and two-letter cells, read keyed columns, and reconstruct an incomplete final row.">
+  <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://ciphermuseum.com/ciphers/amsco.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="stylesheet" href="../css/museum.css">
+  <link rel="stylesheet" href="../css/manual-cipher-demos.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="2" fill="currentColor"/>
+      </svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../museum-map.html">Explore</a></li>
+      <li><a href="../timeline.html">Timeline</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../cipher-corpus.html">Cipher Corpus</a></li>
+      <li><a href="../cryptanalysis.html">Cryptanalysis</a></li>
+      <li><a href="../challenges.html">Challenges</a></li>
+      <li><a href="../lab/workbench.html">Lab</a></li>
+      <li><a href="../search.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+<div class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Entrance</a><span>&rsaquo;</span><a href="../halls/transposition.html">Hall IV: Transposition Ciphers</a><span>&rsaquo;</span>AMSCO Transposition</div>
+  <div class="page-meta"><span class="page-num">Exhibit 167 of 167</span><span class="badge era-modern">American Cryptogram Association specification</span></div>
+  <h1 class="page-title">AMSCO Transposition</h1>
+  <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
+  <p class="page-tagline">Single letters and digraphs share a grid without losing their boundaries</p>
+  <p class="exhibit-status-note">Variable-cell transposition preserves frequencies and is susceptible to probable-word and scored permutation search.</p>
+  <div class="exhibit-facts">
+<div class="fact"><span class="fact-label">Origin</span><span class="fact-value">ACA cipher-puzzle tradition</span></div>
+<div class="fact"><span class="fact-label">Family</span><span class="fact-value">Variable-cell columnar transposition</span></div>
+<div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Permutation of column ranks; first cell length</span></div>
+<div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Decryption must reconstruct cell lengths before filling columns</span></div>
+</div>
+</div>
+<div class="demo-section" data-manual-demo="amsco">
+  <div class="demo-panel">
+    <div class="demo-head"><span class="demo-title">Try the documented procedure</span></div>
+    <div class="demo-body">
+      <div class="demo-col">
+        <div class="mode-toggle" role="group" aria-label="Cipher mode"><button type="button" class="mode-btn active" data-mode="encrypt" aria-pressed="true">Encrypt</button><button type="button" class="mode-btn" data-mode="decrypt" aria-pressed="false">Decrypt</button></div>
+        <div class="input-group"><label class="input-label" for="manual-message">Prepared message</label><textarea class="museum-input" id="manual-message" rows="4" maxlength="4096" aria-describedby="manual-limits">INCOMPLETECOLUMNARWITHALTERNATINGSINGLELETTERSANDDIGRAPHS</textarea></div>
+        <div class="input-group"><label class="input-label" for="amsco-key">Column ranks (a permutation; e.g. 41325)</label><input class="museum-input" id="amsco-key" type="text" value="41325" spellcheck="false" aria-describedby="amsco-key-help"></div><p id="amsco-key-help" class="manual-caption">Use 2–25 ranks. For more than nine columns, separate every rank with spaces.</p><div class="input-group"><label class="input-label" for="amsco-first">First cell length</label><select class="museum-input" id="amsco-first"><option value="2">Two letters (ACA worked example)</option><option value="1">One letter (also allowed by ACA)</option></select></div>
+        <p id="manual-limits" class="manual-caption">Uppercase A–Z; accents stripped; spaces, punctuation and digits discarded. No padding. Cell lengths alternate across both rows and columns, including even-width grids. The last cell keeps only the letters actually present.</p>
+      </div>
+      <div class="demo-col">
+        <div class="btn-group"><button type="button" class="btn btn-primary" id="manual-run">Run Cipher</button><button type="button" class="btn btn-secondary" id="manual-use-output">Use output in opposite mode</button></div>
+        <div class="input-group"><span class="input-label" id="manual-output-label">Complete result</span><div class="output-box" id="manual-output" role="status" aria-live="polite" aria-labelledby="manual-output-label"></div></div>
+        <p id="manual-status" role="status" aria-live="polite" class="manual-caption"></p>
+      </div>
+    </div>
+    <div class="manual-visual">
+      <div class="btn-group" role="group" aria-label="Procedure animation"><button type="button" class="btn btn-secondary" id="manual-step">Step</button><button type="button" class="btn btn-secondary" id="manual-play" aria-pressed="false">Play</button><button type="button" class="btn btn-secondary" id="manual-reset">Reset animation</button></div>
+      <p id="manual-caption" class="manual-caption"></p>
+      <div class="manual-scroll" tabindex="0" role="region" aria-label="Cipher arrangement, scroll horizontally if needed"><div id="manual-grid"></div></div>
+      <p id="manual-animation-status" role="status" aria-live="polite" class="manual-caption"></p>
+      <div class="input-group"><span class="input-label" id="manual-progress-label">Animation: extracted or reconstructed so far</span><div class="output-box" id="manual-progress-output" aria-labelledby="manual-progress-label"></div></div>
+      <p class="manual-caption">Step, Play/Pause and Reset keep keyboard focus on the control. With reduced motion enabled, Play shows the completed arrangement immediately.</p>
+    </div>
+  </div>
+  <noscript><p>Enable JavaScript for the animation. The worked example below gives the same documented procedure.</p></noscript>
+</div>
+<div class="exhibit-layout"><div class="exhibit-main">
+<div class="cipher-significance"><h2>Why This Matters</h2><p>Decryption must reconstruct cell lengths before filling columns. Following a complete original example makes conventions observable: a changed boundary, pairing rule or final cell changes the ciphertext.</p></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div><div class="panel-body"><p>AMSCO belongs to the American Cryptogram Association’s repertoire of hand-solvable transposition puzzles. This exhibit uses the <a href="https://www.cryptogram.org/downloads/aca.info/ciphers/Amsco.pdf">ACA specification and complete worked example</a>, printed p. 32 of its Cipher Exchange Guidelines. The sheet permits either a single letter or a digraph in the first cell.</p><p>The specification is not a dated military operating manual. It does not establish a particular invention date or operational deployment, so this page does not invent one. Its educational value lies in a small change to <a href="columnar.html">columnar transposition</a> that makes decryption geometry less obvious.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Exact ACA Procedure</span></div><div class="panel-body"><ol><li>Choose a permutation of the column ranks. This demo uses 41325: physical columns are read in order 2, 4, 3, 1, 5 (ranks 1–5).</li><li>Choose the starting cell length: two letters by default here, as in the worked example. Fill left to right, alternating digraph and single-letter cells. Alternate the starting length on each new row as well. Thus the first column also alternates.</li><li>If text ends inside a digraph cell, leave that final cell with one letter. Do not append null letters or fill later cells.</li><li>Read each column from top to bottom, in ascending rank order.</li><li>To decrypt, use the ciphertext length, column count and first-cell convention to reconstruct the cell geometry and actual final-cell length. Calculate each column’s capacity, fill columns in rank order, then read cells by rows.</li></ol><p>For an even number of columns, alternating the first cell on the next row matters: a continuous alternation through a flattened list of cells implements a different cipher.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">ACA Worked Example</span></div><div class="panel-body"><p>Key <code>41325</code>, digraph first. The first row is <code>IN | C | OM | P | LE</code>; the second is <code>T | EC | O | LU | M</code>. The final row is incomplete: <code>A | PH | S</code>. The prepared message has 57 letters.</p><pre>Plaintext:
+INCOMPLETECOLUMNARWITHALTERNATINGSINGLELETTERSANDDIGRAPHS
+
+Ciphertext:
+CECRTEGLENPHPLUTNANTEIOMOWIRSITDDSINTNALINESAALEMHATGLRGR</pre><p>This complete answer is transcribed from the ACA sheet. An additional hand-derived even-width check uses key <code>12</code>, digraph first: <code>ABCDEF</code> makes rows <code>AB | C</code> and <code>D | EF</code>, yielding <code>ABDCEF</code>.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Cryptanalysis and Limits</span></div><div class="panel-body"><p>AMSCO preserves letters and their frequencies. A solver has to discover the width, column order and initial cell length, then judge reconstructed neighbouring letters. Probable words, anagramming and scored permutation search are applicable transposition attacks. There is no claim here of a named wartime break: the cited ACA sheet specifies a puzzle, not an operational cryptanalytic history.</p><p>For a fixed width n, the rank order has n! possibilities and there are two starting-cell conventions. This is a settings count, not a security estimate; language structure provides information that exhaustive counting ignores.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Reconstruction and Teaching Limits</span></div><div class="panel-body"><p>The engine implements the ACA’s cell-length convention and exact incomplete-row reconstruction. Both first-cell conventions are selectable. It needs a genuine permutation, with no repeated or missing ranks: use 2–25 columns in this interface. Ranks greater than nine must be space-separated.</p><p>Case folding, accent stripping and nonletter removal are stated input conveniences. No escape sequence or padding is introduced, and decryption returns the normalized letters rather than the original punctuation. Animated cell boundaries show why the receiver must reconstruct geometry before inserting ciphertext.</p></div></div>
+</div><div class="exhibit-side">
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Quick Facts</span></div><div class="panel-body"><table class="cipher-table"><tbody><tr><td>Exhibit</td><td>167 of 167</td></tr><tr><td>Origin</td><td>ACA cipher-puzzle tradition</td></tr><tr><td>Family</td><td>Variable-cell columnar transposition</td></tr><tr><td>Key</td><td>Permutation of column ranks; first cell length</td></tr></tbody></table></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Sources and Further Reading</span></div><div class="panel-body"><p><a href="https://www.cryptogram.org/downloads/aca.info/ciphers/Amsco.pdf">American Cryptogram Association, <em>AMSCO</em></a>, Cipher Exchange Guidelines, printed p. 32: normative cell convention, 41325 key and complete worked example. The sheet is undated.</p><p>The diagrams are this site’s original rendering. Factual example strings are credited to ACA; no PDF scan, source artwork or extended source quotation is reproduced.</p></div></div>
+</div></div>
+<section class="related-exhibits"><h2 class="related-exhibits__heading">Related Exhibits</h2><div class="related-exhibits__grid"><a href="../ciphers/columnar.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Columnar Transposition</span><span class="related-card__tag">Uniform cells and an incomplete final row</span></a><a href="../ciphers/myszkowski.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Myszkowski Transposition</span><span class="related-card__tag">Tied ranks change extraction order</span></a><a href="../ciphers/rs44.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Rasterschlüssel 44</span><span class="related-card__tag">Irregular writing cells with keyed readout</span></a></div></section>
+<div class="hall-nav">
+<a href="../ciphers/rs44.html" class="hall-nav-link"><span class="hall-nav-dir">&larr; Previous</span><span class="hall-nav-name">Rasterschlüssel 44</span></a>
+<a href="../ciphers/myszkowski.html" class="hall-nav-link next"><span class="hall-nav-dir">Next &rarr;</span><span class="hall-nav-name">Myszkowski Transposition</span></a>
+</div>
+</main>
+<footer></footer>
+<script src="../js/trust-labels.js"></script>
+<script src="../js/ciphers/all-engines.min.js"></script>
+<script src="../js/demo-loader.min.js"></script>
+<script src="../js/manual-cipher-demos.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/lightbox.js"></script>
+</body>
+</html>

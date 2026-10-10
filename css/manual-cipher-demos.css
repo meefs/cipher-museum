@@ -1,0 +1,20 @@
+/* Scoped displays for the three original-procedure exhibits. */
+[data-manual-demo] { max-width: 100%; }
+.manual-visual { padding: 1rem; border-top: 1px solid var(--bd); min-width: 0; }
+.manual-scroll { max-width: 100%; overflow-x: auto; margin-block: .75rem; }
+.manual-scroll:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.manual-table { width: max-content; min-width: 100%; border-collapse: collapse; }
+.manual-table caption, .manual-square caption { text-align: left; font-family: var(--fm); padding-block: .5rem; }
+.manual-table td, .manual-table th { min-width: 1.6rem; height: 1.7rem; padding: .15rem; text-align: center; border: 1px solid var(--bd); font-family: var(--fm); }
+.manual-table td[data-length="2"] { min-width: 2.5rem; }
+.manual-blocked { background: var(--bg); color: var(--tx3); }
+.manual-cell { background: var(--s2); }
+.manual-read { color: var(--gold-lt); background: var(--s3); }
+.manual-active { outline: 2px solid var(--gold); outline-offset: -2px; background: var(--s3); font-weight: bold; }
+.manual-start { box-shadow: inset 0 0 0 1px var(--blue); }
+.manual-squares { display: flex; flex-wrap: wrap; gap: 1rem; }
+.manual-square { width: auto; }
+.manual-square td { padding: .3rem .6rem; text-align: center; border: 1px solid var(--bd); }
+.manual-caption { font-family: var(--fm); font-size: .8rem; color: var(--tx2); line-height: 1.6; overflow-wrap: anywhere; }
+.manual-visual .output-box { min-height: 2.5rem; overflow-wrap: anywhere; }
+@media (max-width: 600px) { .manual-visual { padding: .75rem; } .manual-square td { padding: .25rem .5rem; } }

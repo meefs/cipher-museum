@@ -194,6 +194,9 @@
 <script>
 (function() {
   var CIPHERS = [
+    { name:'Rasterschlüssel 44', href:'ciphers/rs44.html', era:'World War II', year:1944, type:'Transposition', key:'Stencil, ranks, beginning and minute', security:"Broken", hall:'IV', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
+    { name:'German Double Playfair', href:'ciphers/double-playfair.html', era:'World War II', year:1941, type:'Substitution', key:'Two squares; 17-column paired rows', security:"Broken", hall:'II', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
+    { name:'AMSCO', href:'ciphers/amsco.html', era:'Modern', year:null, type:'Transposition', key:'Column rank permutation and first-cell size', security:"Broken", hall:'IV', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
     { name:'Atbash',               href:'ciphers/atbash.html',               era:'Ancient',       year:-600,  type:'Substitution',    key:'Reversed alphabet',         security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
     { name:'Scytale',              href:'ciphers/scytale.html',              era:'Ancient',       year:-500,  type:'Transposition',   key:'Rod diameter',              security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
     { name:'Caesar',               href:'ciphers/caesar.html',               era:'Ancient',       year:-58,   type:'Substitution',    key:'Shift number (0–25)',       security:"Broken",     hall:'I', trust:{"key":"broken","text":"Broken","description":"Cryptographically broken — historically important but unsafe to use today."} },
@@ -333,7 +336,7 @@
   CIPHERS.forEach(function(c, i) {
     var tr = document.createElement('tr');
     tr.dataset.index = i;
-    var yearDisplay = c.year < 0 ? Math.abs(c.year) + ' BC' : c.year;
+    var yearDisplay = c.year === null ? 'Undated specification' : c.year < 0 ? Math.abs(c.year) + ' BC' : c.year;
     tr.innerHTML =
       '<td><a href="' + c.href + '">' + c.name + '</a></td>' +
       '<td><span class="comp-era era-' + (eraClasses[c.era]||'') + '">' + c.era + '</span></td>' +
@@ -366,6 +369,10 @@
       var ai = +a.dataset.index, bi = +b.dataset.index;
       var ca = CIPHERS[ai], cb = CIPHERS[bi];
       var va, vb;
+      // An undated specification is not year zero; keep it after dated entries.
+      if (sortCol === 'year' || sortCol === 'era') {
+        if (ca.year === null || cb.year === null) return ca.year === cb.year ? 0 : ca.year === null ? 1 : -1;
+      }
       if (sortCol === 'year') { va = ca.year; vb = cb.year; }
       else if (sortCol === 'name') { va = ca.name.toLowerCase(); vb = cb.name.toLowerCase(); }
       else if (sortCol === 'era') { va = ca.year; vb = cb.year; }

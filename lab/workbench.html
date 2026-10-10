@@ -152,6 +152,9 @@
   var CE = window.CipherEngines;
   var engineCountCopy = document.getElementById('engine-count-copy');
   var CIPHERS = [
+    {id:'rasterschluessel44',name:'RS44 (27 March 1944; prepared letters, max 200)',hasKey:true,keyLabel:'Key: manual, or JSON settings (short teaching mode by default)',keyDefault:'manual'},
+    {id:'doublePlayfair',name:'German Double Playfair (December 1941; J→II, odd filler Z)',hasKey:true,keyLabel:'Key: manual, or JSON squares/filler/strict (no operational limit by default)',keyDefault:'manual'},
+    {id:'amsco',name:'AMSCO (ACA digraph-first)',hasKey:true,keyLabel:'Column rank permutation, or JSON order/first',keyDefault:'41325'},
     {id:'caesar',name:'Caesar',hasKey:true,keyLabel:'Shift (0-25)',keyDefault:'3'},
     {id:'monoalphabetic',name:'Monoalphabetic',hasKey:true,keyLabel:'Keyword',keyDefault:'KEYWORD'},
     {id:'vigenere',name:'Vigenère',hasKey:true,keyLabel:'Key',keyDefault:'KEY'},

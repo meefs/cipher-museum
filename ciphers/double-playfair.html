@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doppelkastenschlüssel — German Double Playfair — The Cipher Museum</title>
+  <meta name="description" content="German Double Playfair: reconstruct the December 1941 Doppelkastenschlüssel manual, including 17-column pairing, two substitution stages and its published example.">
+  <meta property="og:title" content="Doppelkastenschlüssel — German Double Playfair — The Cipher Museum">
+  <meta property="og:description" content="German Double Playfair: reconstruct the December 1941 Doppelkastenschlüssel manual, including 17-column pairing, two substitution stages and its published example.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciphermuseum.com/ciphers/double-playfair.html">
+  <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Doppelkastenschlüssel — German Double Playfair — The Cipher Museum">
+  <meta name="twitter:description" content="German Double Playfair: reconstruct the December 1941 Doppelkastenschlüssel manual, including 17-column pairing, two substitution stages and its published example.">
+  <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://ciphermuseum.com/ciphers/double-playfair.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="stylesheet" href="../css/museum.css">
+  <link rel="stylesheet" href="../css/manual-cipher-demos.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="2" fill="currentColor"/>
+      </svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../museum-map.html">Explore</a></li>
+      <li><a href="../timeline.html">Timeline</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../cipher-corpus.html">Cipher Corpus</a></li>
+      <li><a href="../cryptanalysis.html">Cryptanalysis</a></li>
+      <li><a href="../challenges.html">Challenges</a></li>
+      <li><a href="../lab/workbench.html">Lab</a></li>
+      <li><a href="../search.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+<div class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Entrance</a><span>&rsaquo;</span><a href="../halls/substitution.html">Hall II: Classical Substitution</a><span>&rsaquo;</span>Doppelkastenschlüssel — German Double Playfair</div>
+  <div class="page-meta"><span class="page-num">Exhibit 166 of 167</span><span class="badge era-wwii">German armed forces · December 1941 edition</span></div>
+  <h1 class="page-title">Doppelkastenschlüssel — German Double Playfair</h1>
+  <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
+  <p class="page-tagline">Two rows, vertical pairs, and two successive substitutions</p>
+  <p class="exhibit-status-note">Allied crib and digraph-statistical attacks are documented for German double-box field ciphers; variants must be distinguished.</p>
+  <div class="exhibit-facts">
+<div class="fact"><span class="fact-label">Origin</span><span class="fact-value">German armed forces</span></div>
+<div class="fact"><span class="fact-label">Family</span><span class="fact-value">Two-stage digraph substitution</span></div>
+<div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Two ordered 5 × 5 squares; 17-column pairing</span></div>
+<div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Pair formation is part of the cipher, not mere presentation</span></div>
+</div>
+</div>
+<div class="demo-section" data-manual-demo="doublePlayfair">
+  <div class="demo-panel">
+    <div class="demo-head"><span class="demo-title">Try the documented procedure</span></div>
+    <div class="demo-body">
+      <div class="demo-col">
+        <div class="mode-toggle" role="group" aria-label="Cipher mode"><button type="button" class="mode-btn active" data-mode="encrypt" aria-pressed="true">Encrypt</button><button type="button" class="mode-btn" data-mode="decrypt" aria-pressed="false">Decrypt</button></div>
+        <div class="input-group"><label class="input-label" for="manual-message">Prepared message</label><textarea class="museum-input" id="manual-message" rows="4" maxlength="4096" aria-describedby="manual-limits">FEINDLIQERANGRIFFAUFSTRASZEADORFSTRIQBEHAUSENABGEWEHRT</textarea></div>
+        <div class="input-group"><label class="input-label" for="dp-a">Square A, row order (25 letters, omit J)</label><input class="museum-input" id="dp-a" type="text" value="HILQETUARSBKXFGPWCOZDVYMN" maxlength="25" spellcheck="false"></div><div class="input-group"><label class="input-label" for="dp-b">Square B, row order (25 letters, omit J)</label><input class="museum-input" id="dp-b" type="text" value="ZNOCHBXAVIUDTGWMYELSKPQRF" maxlength="25" spellcheck="false"></div><div class="input-group"><label class="input-label" for="dp-filler">Odd-length filler (retained on decryption)</label><select class="museum-input" id="dp-filler"><option value="Z">Z</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option><option value="I">I</option><option value="K">K</option><option value="L">L</option><option value="M">M</option><option value="N">N</option><option value="O">O</option><option value="P">P</option><option value="Q">Q</option><option value="R">R</option><option value="S">S</option><option value="T">T</option><option value="U">U</option><option value="V">V</option><option value="W">W</option><option value="Y">Y</option></select></div>
+        <p id="manual-limits" class="manual-caption">December 1941 procedure only. Uppercase A–Z; accents stripped; J becomes II; nonletters discarded. Odd plaintext gets the selected filler (default Z, not X). Ciphertext must omit J and have complete pairs; transmitted body maximum 500 letters.</p>
+      </div>
+      <div class="demo-col">
+        <div class="btn-group"><button type="button" class="btn btn-primary" id="manual-run">Run Cipher</button><button type="button" class="btn btn-secondary" id="manual-use-output">Use output in opposite mode</button></div>
+        <div class="input-group"><span class="input-label" id="manual-output-label">Complete result</span><div class="output-box" id="manual-output" role="status" aria-live="polite" aria-labelledby="manual-output-label"></div></div>
+        <p id="manual-status" role="status" aria-live="polite" class="manual-caption"></p>
+      </div>
+    </div>
+    <div class="manual-visual">
+      <div class="btn-group" role="group" aria-label="Procedure animation"><button type="button" class="btn btn-secondary" id="manual-step">Step</button><button type="button" class="btn btn-secondary" id="manual-play" aria-pressed="false">Play</button><button type="button" class="btn btn-secondary" id="manual-reset">Reset animation</button></div>
+      <p id="manual-caption" class="manual-caption"></p>
+      <div class="manual-scroll" tabindex="0" role="region" aria-label="Cipher arrangement, scroll horizontally if needed"><div id="manual-grid"></div></div>
+<div id="manual-squares" class="manual-squares"></div>
+      <p id="manual-animation-status" role="status" aria-live="polite" class="manual-caption"></p>
+      <div class="input-group"><span class="input-label" id="manual-progress-label">Animation: extracted or reconstructed so far</span><div class="output-box" id="manual-progress-output" aria-labelledby="manual-progress-label"></div></div>
+      <p class="manual-caption">Step, Play/Pause and Reset keep keyboard focus on the control. With reduced motion enabled, Play shows the completed arrangement immediately.</p>
+    </div>
+  </div>
+  <noscript><p>Enable JavaScript for the animation. The worked example below gives the same documented procedure.</p></noscript>
+</div>
+<div class="exhibit-layout"><div class="exhibit-main">
+<div class="cipher-significance"><h2>Why This Matters</h2><p>Pair formation is part of the cipher, not mere presentation. Following a complete original example makes conventions observable: a changed boundary, pairing rule or final cell changes the ciphertext.</p></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div><div class="panel-body"><p>This page reconstructs one edition: <a href="https://cryptocellar.org/wmc/schluesselanleitung-dk-1941.pdf"><em>Vorläufige Schlüsselanleitung zum Doppelkastenschlüssel</em>, Ausgabe Dezember 1941</a>. The German armed forces used a two-box digraph cipher in WWII; its arrangement and repeated substitution distinguish it from the generic <a href="two-square.html">Two-Square exhibit</a>.</p><p>Related procedures changed over time. The 1940 instructions, the later <em>Truppenschlüssel</em> and <em>Nachrichtenschlüssel</em> are not interchangeable names for this implementation. In particular, the Truppenschlüssel’s single-stage substitution must not be substituted for this edition’s two stages. RS44 began replacing Double Playfair during 1944.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Exact December 1941 Procedure</span></div><div class="panel-body"><ol><li>Prepare letters; J is represented by II (two letters), as §4 requires. If the length is odd, append an operator-selected letter other than X. This demo chooses Z by default and never removes it automatically.</li><li>Write each full 34-letter block as two rows of 17. Divide a final shorter, even block equally between two shorter rows; do not pad it to 17 columns.</li><li>Form pairs vertically: top-row letter first, bottom-row letter second. Locate the first in square A and the second in square B.</li><li>If the positions share a row, replace each by its right neighbour, wrapping at the edge, and output the B replacement first. Otherwise take the rectangle corners: first output from B at A’s row and B’s column, second from A at B’s row and A’s column.</li><li>Apply that same rule again to the intermediate pair, still locating its first letter in A and its second in B. The second result is ciphertext.</li></ol><p>For decryption, locate the ciphertext pair’s first letter in B and second in A. Apply the inverse rule twice: same-row moves are leftward, and rectangle corners cross back. Rebuild the two plaintext rows and read the top row before the bottom. Adjacent repeated letters are not split by a Playfair-style X.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Original Manual Example</span></div><div class="panel-body"><p>The squares and 54-letter message come from printed pp. 4–6, §§9–23. Two short examples pin both branches: <code>AA → VR → FY</code> and <code>FA → TR → VD</code>. The full message uses a 34-letter block followed by a 20-letter block.</p><pre>Square A: HILQETUARSBKXFGPWCOZDVYMN
+Square B: ZNOCHBXAVIUDTGWMYELSKPQRF
+
+Prepared plaintext:
+FEINDLIQERANGRIFFAUFSTRASZEADORFSTRIQBEHAUSENABGEWEHRT
+
+Ciphertext body:
+VDLGCTUQZREOMFCIFEALFYLBAPKWCTEIWBTYMFLNMVMQZTVLHUPILF</pre><p>The engine is checked against these printed answers in both directions. No output from this engine was used to invent the expected values.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Cryptanalysis and Limits</span></div><div class="panel-body"><p>Ostwald and Weierud describe Allied work on Double Playfair by John Tiltman’s British team and U.S. cryptanalysts, including Joseph S. Schick’s account of the 849th Signal Intelligence Service, using known or probable plaintext and digraph statistics. The cipher’s plaintext arrangement changes which letters are paired; it does not remove statistical structure.</p><p>Their modern hill-climbing results concern the related <em>Truppenschlüssel</em>. Those results must not be described as a test of this December 1941 two-stage engine. The daily key consists of two ordered 25-letter squares; a nominal settings count does not establish resistance to crib-based cryptanalysis.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Reconstruction and Teaching Limits</span></div><div class="panel-body"><p>The demo models this edition’s pairing, same-row rule, two substitution stages and inverse reconstruction. The museum applies accent stripping and discards punctuation and digits. German field-message abbreviations, umlaut expansion, spelled-out numbers, operational headers, identification groups, daily-key distribution and emergency square construction are left to the operator and are not simulated.</p><p>The real operator chose an odd-length filler from the allowed letters. A selectable, repeatable filler makes testing understandable; it is not an undocumented escape protocol. A genuine trailing Z remains indistinguishable from a filler Z. The UI enforces the 500-letter transmitted-body limit. The pure engine can process longer blocks for complexity testing when that operational check is explicitly disabled.</p></div></div>
+</div><div class="exhibit-side">
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Quick Facts</span></div><div class="panel-body"><table class="cipher-table"><tbody><tr><td>Exhibit</td><td>166 of 167</td></tr><tr><td>Origin</td><td>German armed forces</td></tr><tr><td>Family</td><td>Two-stage digraph substitution</td></tr><tr><td>Key</td><td>Two ordered 5 × 5 squares; 17-column pairing</td></tr></tbody></table></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Sources and Further Reading</span></div><div class="panel-body"><p><a href="https://cryptocellar.org/wmc/schluesselanleitung-dk-1941.pdf">Original December 1941 manual</a>: printed pp. 3–6, §§4, 9–23; NARA RG 457, Box 7, Nr. 57; facsimile curated by Frode Weierud at <a href="https://cryptocellar.org/wmc/index.html">CryptoCellar</a>.</p><p><a href="https://cryptocellar.org/pubs/mcts.pdf">Olaf Ostwald and Frode Weierud, <em>Modern Cryptanalysis of the Truppenschlüssel</em></a> (2021 author manuscript; published in <em>Cryptologia</em> 47(3), 2023, pp. 261–281): historical comparison and procedure distinctions. Its attack results target Truppenschlüssel.</p><p>Square diagrams are rendered from factual key letters; no source scans or third-party images are reproduced.</p></div></div>
+</div></div>
+<section class="related-exhibits"><h2 class="related-exhibits__heading">Related Exhibits</h2><div class="related-exhibits__grid"><a href="../ciphers/playfair.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Playfair</span><span class="related-card__tag">One square and different repeated-letter rules</span></a><a href="../ciphers/two-square.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Two-Square</span><span class="related-card__tag">Compare the museum’s generic one-stage procedure</span></a><a href="../ciphers/rs44.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Rasterschlüssel 44</span><span class="related-card__tag">The later German field transposition system</span></a></div></section>
+<div class="hall-nav">
+<a href="../ciphers/two-square.html" class="hall-nav-link"><span class="hall-nav-dir">&larr; Previous</span><span class="hall-nav-name">Two-Square</span></a>
+<a href="../ciphers/four-square.html" class="hall-nav-link next"><span class="hall-nav-dir">Next &rarr;</span><span class="hall-nav-name">Four-Square</span></a>
+</div>
+</main>
+<footer></footer>
+<script src="../js/trust-labels.js"></script>
+<script src="../js/ciphers/all-engines.min.js"></script>
+<script src="../js/demo-loader.min.js"></script>
+<script src="../js/manual-cipher-demos.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/lightbox.js"></script>
+</body>
+</html>

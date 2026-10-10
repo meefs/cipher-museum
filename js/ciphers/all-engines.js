@@ -3943,6 +3943,171 @@ window.CipherEngines = (() => {
     return { encode: run, decode: run };
   })();
 
+  // Historical procedures below are DOM-free. trace() exposes the same operation
+  // used by encode/decode; UI code never reimplements a cipher.
+  const historicalKey = (key, defaults) => {
+    if (key === undefined || key === null || key === '' || key === 'manual') return { ...defaults };
+    if (typeof key === 'string') {
+      try { key = JSON.parse(key); } catch (_) { throw new Error('Use a JSON key object or manual.'); }
+    }
+    if (!key || typeof key !== 'object' || Array.isArray(key)) throw new Error('Use a key object.');
+    return { ...defaults, ...key };
+  };
+  const historicalEngine = trace => ({
+    trace,
+    encode(text, key) { try { return trace(text, key, false, false).output; } catch (e) { return 'Error: ' + e.message; } },
+    decode(text, key) { try { return trace(text, key, true, false).output; } catch (e) { return 'Error: ' + e.message; } }
+  });
+
+  const RS44_GRID = [
+    "##..###..#..#.##.#.##.###",
+    ".##.#.#..#.##.##.###.##.#",
+    "..#.#..##.##.###.#..#####",
+    "####..##...#..###..###.##",
+    ".###.#..#.#.##.###.##..##",
+    "#####..##.#..#.##.#.###..",
+    "###.###.##.#.#.##.#..#..#",
+    "####.##.###..#.###..#.#..",
+    "##.####.###..###.#...#..#",
+    "#####.##.##.#.##..#.#.#..",
+    "#.#...##.#.#.##.#.##.####",
+    "#####.#.#.#...#..#.###.##",
+    "###..#..##...###..###.###",
+    ".#...#.###.#.#.##.#.#####",
+    "####.##.##.#.##.#...#..##",
+    "#..#...##.###..###..#####",
+    ".##.#..#.#####...##..####",
+    "##.###.###.#.#.#.###..#..",
+    "#...#..##.##.#.##.##.####",
+    ".#.#..#.#.###.#.##.#.####",
+    "####.#.##.##.###..#..#..#",
+    "..#..#.####.#..##.##.####",
+    "#.##.##...#.####.#.#.#.##",
+    "#####.#.#..#.###..#.##.#."
+  ];
+  const RS44_ORDER = [3,20,8,13,5,19,1,14,9,21,18,15,24,2,12,7,10,22,4,16,25,11,23,17,6];
+  const rasterschluessel44 = historicalEngine((text, key, decrypt) => {
+    const k = historicalKey(key, { grid: RS44_GRID, order: RS44_ORDER, startRow: 4, startColumn: 13, minute: 3, strict: false });
+    if (!Array.isArray(k.grid) || k.grid.length !== 24 || k.grid.some(row =>
+      typeof row !== 'string' || !/^[.#]{25}$/.test(row) || [...row].filter(x=>x==='.').length !== 10)) {
+      throw new Error('RS44 needs 24 rows of 25 cells, exactly ten permitted (.) cells per row.');
+    }
+    if (!Array.isArray(k.order) || k.order.length !== 25 ||
+        new Set(k.order).size !== 25 || k.order.some(n=>!Number.isInteger(n)||n<1||n>25)) {
+      throw new Error('Column ranks must be a permutation of 1–25.');
+    }
+    if (!Number.isInteger(k.startRow) || k.startRow<0 || k.startRow>23 ||
+        !Number.isInteger(k.startColumn) || k.startColumn<0 || k.startColumn>24 ||
+        !Number.isInteger(k.minute) || k.minute<0 || k.minute>59 || typeof k.strict !== 'boolean') {
+      throw new Error('Choose row 1–24, column 1–25 and minute 00–59.');
+    }
+    const input = clean(text);
+    if (input.length>200 || (k.strict && input.length<60)) throw new Error('March 1944 messages require 60–200 letters; short teaching mode still has a 200-letter maximum.');
+    const permitted = [];
+    k.grid.forEach((row,r)=>[...row].forEach((cell,c)=> { if(cell==='.') permitted.push(r*25+c); }));
+    const beginning = k.startRow*25+k.startColumn;
+    let offset = permitted.findIndex(i=>i>=beginning);
+    if (offset<0) offset=0;
+    const placement = Array.from({length:input.length},(_,i)=>permitted[(offset+i)%240]);
+    const used = new Set(placement);
+    // Count physical columns rightward from the indicated beginning column,
+    // excluding it only at the initial step. Re-entry on wrap counts normally.
+    const sum = [...String(k.minute).padStart(2,'0')+String(input.length)].reduce((s,n)=>s+Number(n),0);
+    const readColumn = (k.startColumn+sum)%25;
+    const firstRank = k.order[readColumn];
+    const columns = Array.from({length:25},(_,i)=>k.order.indexOf((firstRank-1+i)%25+1));
+    const extraction = [];
+    for (const col of columns) for(let row=0;row<24;row++) if(used.has(row*25+col)) extraction.push(row*25+col);
+    const cells = Array(600).fill('');
+    const entry = decrypt ? extraction : placement;
+    entry.forEach((pos,i)=>{cells[pos]=input[i];});
+    const output = (decrypt ? placement : extraction).map(i=>cells[i]).join('');
+    return { input, output, cells, grid: [...k.grid], order: [...k.order], placement, extraction, columns,
+      beginning, actualBeginning:placement[0]??null, sum, readColumn, firstRank, decrypt, padding:0 };
+  });
+
+  const doublePlayfair = historicalEngine((text, key, decrypt, capture = true) => {
+    const k = historicalKey(key, { squareA:'HILQETUARSBKXFGPWCOZDVYMN', squareB:'ZNOCHBXAVIUDTGWMYELSKPQRF', filler:'Z', strict:false });
+    const alphabet = 'ABCDEFGHIKLMNOPQRSTUVWXYZ';
+    for (const square of [k.squareA,k.squareB]) if(typeof square !== 'string' || square.length!==25 ||
+      new Set(square).size!==25 || [...square].some(c=>!alphabet.includes(c))) throw new Error('Each square must contain every A–Z letter except J exactly once.');
+    if (typeof k.filler!=='string' || k.filler.length!==1 || !alphabet.includes(k.filler) || k.filler==='X') throw new Error('Choose one filler letter except J or X; the 1941 manual excludes X.');
+    if (typeof k.strict!=='boolean') throw new Error('Strict message limit must be boolean.');
+    let input = clean(text);
+    if (decrypt && input.includes('J')) throw new Error('Ciphertext squares omit J; a ciphertext J is invalid.');
+    if (!decrypt) input = input.replace(/J/g,'II');
+    if (k.strict && input.length>500) throw new Error('The December 1941 transmitted message limit is 500 letters.');
+    if (decrypt && input.length%2) throw new Error('Ciphertext must contain complete two-letter pairs.');
+    const padding = !decrypt && input.length%2 ? 1 : 0;
+    if(padding) input+=k.filler;
+    const aPos = new Map([...k.squareA].map((c,i)=>[c,i]));
+    const bPos = new Map([...k.squareB].map((c,i)=>[c,i]));
+    const substitute = (pair, reverse) => {
+      const left = reverse ? k.squareB : k.squareA, right = reverse ? k.squareA : k.squareB;
+      const li=(reverse?bPos:aPos).get(pair[0]), ri=(reverse?aPos:bPos).get(pair[1]);
+      const lr=Math.floor(li/5), rr=Math.floor(ri/5), lc=li%5, rc=ri%5;
+      const sameRow=lr===rr;
+      const result = sameRow ? right[rr*5+(rc+(reverse?4:1))%5]+left[lr*5+(lc+(reverse?4:1))%5]
+        : right[lr*5+rc]+left[rr*5+lc];
+      // Bulk encode/decode needs the same substitution but not retained visual
+      // objects per pair. Avoid making GC cost part of the large-message path.
+      return capture ? { pair, result, sameRow, positions:[li,ri] } : result;
+    };
+    const pairs=[], blocks=[], output=[];
+    for(let start=0;start<input.length;start+=34) {
+      const block=input.slice(start,start+34), half=block.length/2;
+      if(!decrypt) {
+        const top=block.slice(0,half),bottom=block.slice(half);
+        if (capture) blocks.push({top,bottom});
+        for(let i=0;i<half;i++) {
+          const pair=top[i]+bottom[i], stage1=substitute(pair,false),stage2=substitute(capture ? stage1.result : stage1,false);
+          if (capture) pairs.push({pair,stage1,stage2,block:blocks.length-1,column:i});
+          output.push(capture ? stage2.result : stage2);
+        }
+      } else {
+        const top=[],bottom=[]; const blockIndex=blocks.length;
+        for(let i=0;i<block.length;i+=2) {
+          const pair=block.slice(i,i+2),stage1=substitute(pair,true),stage2=substitute(capture ? stage1.result : stage1,true);
+          if (capture) pairs.push({pair,stage1,stage2,block:blockIndex,column:i/2});
+          const result = capture ? stage2.result : stage2;
+          top.push(result[0]);bottom.push(result[1]);
+        }
+        if (capture) blocks.push({top:top.join(''),bottom:bottom.join('')});
+        output.push(top.join('')+bottom.join(''));
+      }
+    }
+    return { input,output:output.join(''),blocks,pairs,squareA:k.squareA,squareB:k.squareB,padding,decrypt };
+  });
+
+  const amsco = historicalEngine((text, key, decrypt) => {
+    let k;
+    if(typeof key==='string' && /^\d+(?:[ ,]+\d+)*$/.test(key.trim())) {
+      const values=/[ ,]/.test(key.trim())?key.trim().split(/[ ,]+/).map(Number):[...key.trim()].map(Number);
+      k={order:values,first:2};
+    } else k=historicalKey(key,{order:[4,1,3,2,5],first:2});
+    if(!Array.isArray(k.order)||k.order.length<2||k.order.length>25||new Set(k.order).size!==k.order.length||
+      k.order.some(n=>!Number.isInteger(n)||n<1||n>k.order.length)) throw new Error('AMSCO key must be a permutation of 1–N, with 2–25 columns. Separate ranks above 9 with spaces.');
+    if(k.first!==1&&k.first!==2) throw new Error('The first cell must hold one or two letters.');
+    const input=clean(text),cells=[],width=k.order.length;
+    let remaining=input.length,position=0;
+    while(remaining>0) {
+      const row=Math.floor(position/width),col=position%width;
+      const requested=(row+col)%2===0?k.first:3-k.first;
+      const length=Math.min(requested,remaining);
+      cells.push({row,col,length,value:''});remaining-=length;position++;
+    }
+    // Both the first row AND first column alternate, even at even widths.
+    const byColumn=Array.from({length:width},()=>[]);
+    cells.forEach((cell,i)=>byColumn[cell.col].push(i));
+    const order=Array.from({length:width},(_,rank)=>k.order.indexOf(rank+1));
+    const extraction=order.flatMap(col=>byColumn[col]);
+    const placement=cells.map((_,i)=>i);
+    let cursor=0;
+    for(const i of decrypt?extraction:placement){cells[i].value=input.slice(cursor,cursor+cells[i].length);cursor+=cells[i].length;}
+    return {input,output:(decrypt?placement:extraction).map(i=>cells[i].value).join(''),cells,placement,extraction,
+      order:[...k.order],first:k.first,width,decrypt,padding:0};
+  });
+
   return {
     caesar, monoalphabetic, polybius, homophonic, playfair, hill,
     vigenere, beaufort, gronsfeld, porta, runningKey,
@@ -3964,6 +4129,6 @@ window.CipherEngines = (() => {
     culperRing, arnoldAndre,
     argenti, wallisCiphers,
     patterson, wadsworth, geezMonastic,
-    diana
+    diana, rasterschluessel44, doublePlayfair, amsco
   };
 })();

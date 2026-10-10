@@ -207,4 +207,7 @@
   <url><loc>https://ciphermuseum.com/ciphers/hagelin-c36.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://ciphermuseum.com/ciphers/turning-grille.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://ciphermuseum.com/ciphers/myszkowski.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ciphermuseum.com/ciphers/rs44.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ciphermuseum.com/ciphers/double-playfair.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ciphermuseum.com/ciphers/amsco.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

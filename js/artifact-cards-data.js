@@ -130,6 +130,23 @@
       "securityFailure": "Historical (low security)",
       "modernLesson": "Large syllabic alphabets complicate frequency analysis"
     },
+    "amsco": {
+      "name": "AMSCO Transposition",
+      "hall": "IV",
+      "era": "American Cryptogram Association specification",
+      "family": "Transposition",
+      "region": "Global",
+      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "keyType": "Permutation of column ranks; first cell length",
+      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Variable-cell transposition preserves frequencies and is susceptible to probable-word and scored permutation search.",
+      "modernLesson": "Decryption must reconstruct cell lengths before filling columns"
+    },
     "arabic-nomenclators": {
       "name": "Arabic Nomenclators",
       "hall": "I",
@@ -748,6 +765,23 @@
       },
       "securityFailure": "Nobody — over 125 years of attempts, no consensus solution",
       "modernLesson": "Tiny ciphertexts (87 chars) don't give cryptanalysis enough statistical signal"
+    },
+    "double-playfair": {
+      "name": "Doppelkastenschlüssel — German Double Playfair",
+      "hall": "II",
+      "era": "German armed forces · December 1941 edition",
+      "family": "Substitution",
+      "region": "Global",
+      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "keyType": "Two ordered 5 × 5 squares; 17-column pairing",
+      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Allied crib and digraph-statistical attacks are documented for German double-box field ciphers; variants must be distinguished.",
+      "modernLesson": "Pair formation is part of the cipher, not mere presentation"
     },
     "double-transposition": {
       "name": "Double Transposition",
@@ -1786,6 +1820,23 @@
       },
       "securityFailure": "Knowing the system",
       "modernLesson": "Obfuscation ≠ encryption"
+    },
+    "rs44": {
+      "name": "Rasterschlüssel 44 (RS44)",
+      "hall": "IV",
+      "era": "German field cipher · 1944",
+      "family": "Transposition",
+      "region": "Global",
+      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "keyType": "Daily stencil, column ranks, starting cell and minute",
+      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Published Allied attacks used captured stencils, retransmissions and probable plaintext; isolated traffic could remain difficult.",
+      "modernLesson": "A large settings count is not evidence of security"
     },
     "rsa": {
       "name": "RSA",

@@ -55,10 +55,14 @@ function renderCounts(c = computeCounts()) {
     out.set(rel, s);
   }
   for (const e of exhibits) {
-    out.set(e.path, slot(read(e.path)).replace(/Exhibit\s+(\d+)\s+of\s+\d+/g, (_, n) => {
+    const identity = n => {
       if (Number(n) !== e.number) throw new Error(`Wrong exhibit ID on ${e.path}: ${n}`);
-      return `Exhibit ${n} of ${c.total}`;
-    }));
+      return `${n} of ${c.total}`;
+    };
+    out.set(e.path, slot(read(e.path))
+      .replace(/Exhibit\s+(\d+)\s+of\s+\d+/g, (_, n) => 'Exhibit ' + identity(n))
+      .replace(/(<tr><td>Exhibit<\/td><td>)(\d+)\s+of\s+\d+(<\/td><\/tr>)/g,
+        (_, open, n, close) => open + identity(n) + close));
   }
   out.set('README.md', read('README.md').replace(/<!-- count:(\w+) -->\d+<!-- \/count -->/g, (_, key) => {
     if (!(key in c)) throw new Error(`Unknown README count: ${key}`);

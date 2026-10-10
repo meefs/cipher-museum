@@ -165,6 +165,9 @@
     {"number":161,"path":"ciphers/nema.html","label":"historical","note":"Obsolete Swiss military rotor machine. The demo fixes one historical wheel configuration; the 17,576-keypress state period is not its key space.","collection":"cipher-history","interactive":true},
     {"number":162,"path":"ciphers/hagelin-c36.html","label":"broken","note":"The pin-and-lug family has published cryptanalytic attacks; Greenough’s 1999 C-52 attack uses known plaintext.","collection":"cipher-history","interactive":false},
     {"number":163,"path":"ciphers/turning-grille.html","label":"broken","note":"A transposition cipher: quarter-turn holes permute a complete block, preserving letter frequencies.","collection":"cipher-history","interactive":true},
-    {"number":164,"path":"ciphers/myszkowski.html","label":"broken","note":"Repeated-keyword transposition preserves letter frequencies and is vulnerable to statistical and keyword-search attacks.","collection":"cipher-history","interactive":true}
+    {"number":164,"path":"ciphers/myszkowski.html","label":"broken","note":"Repeated-keyword transposition preserves letter frequencies and is vulnerable to statistical and keyword-search attacks.","collection":"cipher-history","interactive":true},
+    {"number":165,"path":"ciphers/rs44.html","label":"broken","note":"Published Allied attacks used captured stencils, retransmissions and probable plaintext; isolated traffic could remain difficult.","collection":"cipher-history","interactive":true},
+    {"number":166,"path":"ciphers/double-playfair.html","label":"broken","note":"Allied crib and digraph-statistical attacks are documented for German double-box field ciphers; variants must be distinguished.","collection":"cipher-history","interactive":true},
+    {"number":167,"path":"ciphers/amsco.html","label":"broken","note":"Variable-cell transposition preserves frequencies and is susceptible to probable-word and scored permutation search.","collection":"cipher-history","interactive":true}
   ]
 }

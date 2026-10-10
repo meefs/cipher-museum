@@ -158,7 +158,7 @@ for (const rejected of ['', 'A', '123!']) {
 m.dom.window.close();
 
 const entries = JSON.parse(read('data/exhibit-trust.json')).exhibits;
-assert.deepEqual(entries.map(e => e.number).sort((a, b) => a - b), Array.from({ length: 164 }, (_, i) => i + 1));
+assert.deepEqual(entries.map(e => e.number).sort((a, b) => a - b), Array.from({ length: computeCounts().total }, (_, i) => i + 1));
 const counts = computeCounts();
 assert.deepEqual([counts.foundationsFirst, counts.foundationsLast, counts.protocolsFirst, counts.protocolsLast],
   [141, 157, 158, 160], 'Appending new ciphers must not renumber existing wings');

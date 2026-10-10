@@ -20,6 +20,8 @@ for (const e of es) {
   const html = read(e.path);
   const chip = /Exhibit\s+(\d+)\s+of\s+(\d+)/.exec(html);
   if (chip) assert.deepEqual(chip.slice(1).map(Number), [e.number, c.total], e.path);
+  const quickFact = /<tr><td>Exhibit<\/td><td>(\d+) of (\d+)<\/td><\/tr>/.exec(html);
+  if (quickFact) assert.deepEqual(quickFact.slice(1).map(Number), [e.number, c.total], e.path + ' Quick Facts');
   // Check the declared interactive has an actual entry point, not a menu.
   if (e.interactive) assert.match(html, /data-cipher=|historical-(?:message|demo)|<main[\s\S]*(?:<button|<input|<select)/, e.path);
 }

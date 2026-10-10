@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rasterschlüssel 44 (RS44) — The Cipher Museum</title>
+  <meta name="description" content="Reconstruct the 27 March 1944 RS44 operating procedure with its original example stencil. Animate permitted-cell entry and keyed extraction.">
+  <meta property="og:title" content="Rasterschlüssel 44 (RS44) — The Cipher Museum">
+  <meta property="og:description" content="Reconstruct the 27 March 1944 RS44 operating procedure with its original example stencil. Animate permitted-cell entry and keyed extraction.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciphermuseum.com/ciphers/rs44.html">
+  <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rasterschlüssel 44 (RS44) — The Cipher Museum">
+  <meta name="twitter:description" content="Reconstruct the 27 March 1944 RS44 operating procedure with its original example stencil. Animate permitted-cell entry and keyed extraction.">
+  <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://ciphermuseum.com/ciphers/rs44.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="stylesheet" href="../css/museum.css">
+  <link rel="stylesheet" href="../css/manual-cipher-demos.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="2" fill="currentColor"/>
+      </svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../museum-map.html">Explore</a></li>
+      <li><a href="../timeline.html">Timeline</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../cipher-corpus.html">Cipher Corpus</a></li>
+      <li><a href="../cryptanalysis.html">Cryptanalysis</a></li>
+      <li><a href="../challenges.html">Challenges</a></li>
+      <li><a href="../lab/workbench.html">Lab</a></li>
+      <li><a href="../search.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+<div class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Entrance</a><span>&rsaquo;</span><a href="../halls/transposition.html">Hall IV: Transposition Ciphers</a><span>&rsaquo;</span>Rasterschlüssel 44 (RS44)</div>
+  <div class="page-meta"><span class="page-num">Exhibit 165 of 167</span><span class="badge era-wwii">German field cipher · 1944</span></div>
+  <h1 class="page-title">Rasterschlüssel 44 (RS44)</h1>
+  <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
+  <p class="page-tagline">An irregular writing stencil, a precise starting cell, and a keyed column readout</p>
+  <p class="exhibit-status-note">Published Allied attacks used captured stencils, retransmissions and probable plaintext; isolated traffic could remain difficult.</p>
+  <div class="exhibit-facts">
+<div class="fact"><span class="fact-label">Origin</span><span class="fact-value">German armed forces</span></div>
+<div class="fact"><span class="fact-label">Family</span><span class="fact-value">Disrupted transposition</span></div>
+<div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Daily stencil, column ranks, starting cell and minute</span></div>
+<div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">A large settings count is not evidence of security</span></div>
+</div>
+</div>
+<div class="demo-section" data-manual-demo="rasterschluessel44">
+  <div class="demo-panel">
+    <div class="demo-head"><span class="demo-title">Try the documented procedure</span></div>
+    <div class="demo-body">
+      <div class="demo-col">
+        <div class="mode-toggle" role="group" aria-label="Cipher mode"><button type="button" class="mode-btn active" data-mode="encrypt" aria-pressed="true">Encrypt</button><button type="button" class="mode-btn" data-mode="decrypt" aria-pressed="false">Decrypt</button></div>
+        <div class="input-group"><label class="input-label" for="manual-message">Prepared message</label><textarea class="museum-input" id="manual-message" rows="4" maxlength="4096" aria-describedby="manual-limits">FEINDGREIFTSEITELFXVIERFUENFUHRBEIAAIGQALFISIGQALFISEEMITAQTPANZNAQSUEDWESTAN</textarea></div>
+        <div class="input-group"><label class="input-label" for="rs-row">Beginning row (1–24; row 5 is ae)</label><input class="museum-input" id="rs-row" type="number" value="5" min="1" max="24" step="1"></div><div class="input-group"><label class="input-label" for="rs-column">Beginning column (1–25; column 14 is bb)</label><input class="museum-input" id="rs-column" type="number" value="14" min="1" max="25" step="1"></div><div class="input-group"><label class="input-label" for="rs-minute">Tactical-time minute (00–59)</label><input class="museum-input" id="rs-minute" type="number" value="3" min="0" max="59" step="1"></div><div class="input-group"><label class="input-label" for="rs-policy">Message-length policy</label><select class="museum-input" id="rs-policy"><option value="strict">Historical: 60–200 prepared letters</option><option value="short">Teaching: allow 0–59; maximum remains 200</option></select></div>
+        <p id="manual-limits" class="manual-caption">Fixed original-manual stencil and column ranks. Prepare the German field message yourself. The interface uppercases, strips accents and discards non-A–Z characters; it does not encode names, spell out numbers, or add Wahlwörter.</p>
+      </div>
+      <div class="demo-col">
+        <div class="btn-group"><button type="button" class="btn btn-primary" id="manual-run">Run Cipher</button><button type="button" class="btn btn-secondary" id="manual-use-output">Use output in opposite mode</button></div>
+        <div class="input-group"><span class="input-label" id="manual-output-label">Complete result</span><div class="output-box" id="manual-output" role="status" aria-live="polite" aria-labelledby="manual-output-label"></div></div>
+        <p id="manual-status" role="status" aria-live="polite" class="manual-caption"></p>
+      </div>
+    </div>
+    <div class="manual-visual">
+      <div class="btn-group" role="group" aria-label="Procedure animation"><button type="button" class="btn btn-secondary" id="manual-step">Step</button><button type="button" class="btn btn-secondary" id="manual-play" aria-pressed="false">Play</button><button type="button" class="btn btn-secondary" id="manual-reset">Reset animation</button></div>
+      <p id="manual-caption" class="manual-caption"></p>
+      <div class="manual-scroll" tabindex="0" role="region" aria-label="Cipher arrangement, scroll horizontally if needed"><div id="manual-grid"></div></div>
+      <p id="manual-animation-status" role="status" aria-live="polite" class="manual-caption"></p>
+      <div class="input-group"><span class="input-label" id="manual-progress-label">Animation: extracted or reconstructed so far</span><div class="output-box" id="manual-progress-output" aria-labelledby="manual-progress-label"></div></div>
+      <p class="manual-caption">Step, Play/Pause and Reset keep keyboard focus on the control. With reduced motion enabled, Play shows the completed arrangement immediately.</p>
+    </div>
+  </div>
+  <noscript><p>Enable JavaScript for the animation. The worked example below gives the same documented procedure.</p></noscript>
+</div>
+<div class="exhibit-layout"><div class="exhibit-main">
+<div class="cipher-significance"><h2>Why This Matters</h2><p>A large settings count is not evidence of security. Following a complete original example makes conventions observable: a changed boundary, pairing rule or final cell changes the ciphertext.</p></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div><div class="panel-body"><p>The <em>Rasterschlüssel 44</em> was a German paper-and-pencil field cipher intended to replace Double Playfair in 1944. This exhibit follows <a href="https://cryptocellar.org/wmc/schluesselanleitung-zum-rs44.pdf"><em>Schlüsselanleitung zum Rasterschlüssel 44</em>, Ausgabe 27. März 1944</a>, with the second addendum’s clarification of the beginning boundary and column counting. It does not implement the October 1944 change to a directly selected readout column.</p><p>A daily key supplied the black-and-white stencil, permuted column ranks, coordinate labels, name alphabets and indicator substitution. Operators wrote on thin grid paper over the stencil. A planned 1 August introduction appears in contemporary Allied reports; actual adoption varied across services and units.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Exact Procedure</span></div><div class="panel-body"><ol><li>Select an indicated beginning row and physical column. If their intersection is black, advance in row order to the next white cell. Include the beginning itself when it is white.</li><li>Enter prepared plaintext left to right through white cells only. Continue through successive rows, wrapping from the bottom to the top if necessary. The stencil has 24 × 25 cells, with exactly ten writing cells in each row: 240 available cells.</li><li>Add the digits of the tactical-time minute and message length. From the indicated beginning column, move that many physical columns to the right, wrapping at column 25. The first step excludes the beginning column; returning to it after a full circuit counts normally.</li><li>Read the occupied cells top to bottom in the selected column, then by ascending numerical column rank, cycling from 25 to 1. Skip every unoccupied cell, including an unused gap when the message wraps.</li><li>For decryption, mark the same occupied cells from the length and starting position. Fill them in that column order, then read in the original writing order.</li></ol><p>The transmitted body was 60–200 letters, leaving at least 40 white cells unused. Shorter messages required operator-chosen <em>Wahlwörter</em>, with doubled boundary letters. Longer messages were divided into separately keyed parts of differing lengths. The teaching mode permits shorter bodies without silently adding fillers.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Original Manual Example</span></div><div class="panel-body"><p>Printed pp. 12–13 and Fig. 2 on p. 18 give a complete 77-letter example. Beginning: row <code>ae</code> (5), column <code>bb</code> (14); tactical time 1203. The digit sum is 0 + 3 + 7 + 7 = 17, so readout begins in physical column <code>ee</code> (6), rank 19.</p><pre>Prepared plaintext:
+FEINDGREIFTSEITELFXVIERFUENFUHRBEIAAIGQALFISIGQALFISEEMITAQTPANZNAQSUEDWESTAN
+
+Ciphertext body:
+DIANMRQTVFNNRISIFFGPUEFZGNAEEHAEUTAIIEADAGQQLWIBSFFXUTITEEAAENIQSSIRLIEFESELT</pre><p>The test suite also reproduces the 64-letter wrap example on printed pp. 14–15 and Fig. 4, p. 20. These expected ciphertexts were transcribed from the manual, not generated by the new engine.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Cryptanalysis and Limits</span></div><div class="panel-body"><p>Captain Walter J. Fried’s reports document Allied work during 1944. Report F-79 (22 August) describes fitting messages to a captured stencil. F-93 (18 September) reports recovering stencil rows from retransmissions and messages sent twice from the same starting point, then exploiting stereotyped traffic and cribs. It also describes constructing 36 sliding masks to test probable plaintext against known column order.</p><p>These are conditional attacks, not a claim that every isolated message was solved. Captured material, repeated arrangements and operator habits mattered. The daily stencil and 25-column permutation create many possible settings, but counting them as “bits of security” ignores their structure and the traffic available to an attacker. Letter frequencies are preserved.</p></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Reconstruction and Teaching Limits</span></div><div class="panel-body"><p>The default stencil and ranks are factual transcriptions of the manual’s worked key. You can vary the beginning and minute; the engine also accepts a validated custom stencil and rank permutation. This page fixes the daily stencil so the published answer stays reproducible.</p><p>The demo accepts prepared A–Z text. It does not reproduce German preprocessing (CH/CK → Q, ß → SZ, umlauts written out, number words), place-name substitution, encoded message headers, key distribution, coordinate-use marks, emergency procedures or operator-chosen filler words. Accent stripping is a museum input convenience and is <em>not</em> historical German message preparation. No padding or escape scheme is added.</p></div></div>
+</div><div class="exhibit-side">
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Quick Facts</span></div><div class="panel-body"><table class="cipher-table"><tbody><tr><td>Exhibit</td><td>165 of 167</td></tr><tr><td>Origin</td><td>German armed forces</td></tr><tr><td>Family</td><td>Disrupted transposition</td></tr><tr><td>Key</td><td>Daily stencil, column ranks, starting cell and minute</td></tr></tbody></table></div></div>
+<div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Sources and Further Reading</span></div><div class="panel-body"><p><a href="https://cryptocellar.org/wmc/schluesselanleitung-zum-rs44.pdf">Original RS44 manual</a>: edition 27 March 1944; §§7–40, printed pp. 3–14; worked-key figures pp. 17–20; second addendum in the scan.</p><p><a href="https://cryptocellar.org/wmc/captain-w.j.fried-on-rs44.pdf">Captain W. J. Fried’s contemporary reports</a>: F-79 (22 August 1944), F-93 (18 September 1944), pp. 1–2. Facsimiles curated by Frode Weierud at <a href="https://cryptocellar.org/wmc/index.html">CryptoCellar</a>.</p><p>The diagrams here are drawn by this site’s renderer. No archival scans or third-party images are reproduced.</p></div></div>
+</div></div>
+<section class="related-exhibits"><h2 class="related-exhibits__heading">Related Exhibits</h2><div class="related-exhibits__grid"><a href="../ciphers/turning-grille.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Fleissner Turning Grille</span><span class="related-card__tag">A rotating mask, rather than a fixed irregular writing stencil</span></a><a href="../ciphers/columnar.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Columnar Transposition</span><span class="related-card__tag">Compare uniform writing rows and keyed columns</span></a><a href="../ciphers/myszkowski.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Myszkowski Transposition</span><span class="related-card__tag">A different treatment of ranked columns</span></a></div></section>
+<div class="hall-nav">
+<a href="../ciphers/columnar.html" class="hall-nav-link"><span class="hall-nav-dir">&larr; Previous</span><span class="hall-nav-name">Columnar Transposition</span></a>
+<a href="../ciphers/amsco.html" class="hall-nav-link next"><span class="hall-nav-dir">Next &rarr;</span><span class="hall-nav-name">AMSCO</span></a>
+</div>
+</main>
+<footer></footer>
+<script src="../js/trust-labels.js"></script>
+<script src="../js/ciphers/all-engines.min.js"></script>
+<script src="../js/demo-loader.min.js"></script>
+<script src="../js/manual-cipher-demos.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/lightbox.js"></script>
+</body>
+</html>

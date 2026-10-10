@@ -112,6 +112,7 @@ const HAND_BUILT = new Set(['caesar.html', 'playfair.html', 'vigenere.html', 'zo
 // Pure-content modern-crypto, unsolved pages, and biography pages with no interactive demo:
 const STATIC_PAGES = new Set(['aes.html', 'des.html', 'diffie-hellman.html',
   // Bespoke historical demos are exercised in test-historical-exhibits.js.
+  'rs44.html', 'double-playfair.html', 'amsco.html',
   'nema.html', 'hagelin-c36.html', 'turning-grille.html', 'myszkowski.html',
   // Modern protocol exhibits (bespoke interactives, no demo-loader CONFIG):
   'ecdsa.html', 'shamir-secret-sharing.html', 'zero-knowledge-proofs.html',
