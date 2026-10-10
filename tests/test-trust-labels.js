@@ -82,7 +82,8 @@ function checkBadge(badge, entry, surface) {
   const modifiers = [...badge.classList].filter(c => /^trust-label--/.test(c) && c !== 'trust-label--sm');
   assert.deepEqual(modifiers, [`trust-label--${entry.label}`], `${surface}: class agrees with visible label`);
   if (badge.tagName === 'SPAN') {
-    assert.equal(badge.title, definition.text, `${surface}: tooltip agrees with visible label`);
+    const tooltip = entry.label === 'historical' ? definition.description : definition.text;
+    assert.equal(badge.title, tooltip, `${surface}: tooltip matches category`);
   } else {
     assert.equal(badge.title, definition.description, `${surface}: tooltip matches category`);
     assert.match(badge.getAttribute('aria-label'), new RegExp(definition.text.replace(/[()]/g, '\\$&')),

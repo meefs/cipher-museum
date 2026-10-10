@@ -16,7 +16,7 @@ const LABELS = {
   },
   historical: {
     text: 'Historical Only',
-    description: 'Historical interest only — never used for serious modern security.',
+    description: 'No longer in use, or never confirmed broken/deciphered.',
     icon: '<path d="M3 7a2 2 0 0 1 2-2h11v12a2 2 0 0 0 2 2H6a3 3 0 0 1-3-3V7z"/><path d="M16 5a2 2 0 0 1 2 2v8h3a0 0 0 0 1 0 0v2a2 2 0 0 1-2 2"/>'
   },
   educational: {
@@ -33,8 +33,9 @@ const LABELS = {
 
 function compactLabel(key) {
   if (key === null) return '';
-  const { text } = LABELS[key];
-  return `<span class="trust-label trust-label--${key} trust-label--sm" title="${text}">${text}</span>`;
+  const { text, description } = LABELS[key];
+  const tooltip = key === 'historical' ? description : text;
+  return `<span class="trust-label trust-label--${key} trust-label--sm" title="${tooltip}">${text}</span>`;
 }
 
 function exhibitLabel(key) {
