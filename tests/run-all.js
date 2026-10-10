@@ -25,6 +25,7 @@ const suites = [
   'tests/test-sw-version.js',
   'tests/test-protocol-math.js',
   'tests/test-protocol-pages.js',
+  'tests/test-historical-exhibits.js',
   'hall-of-foundations/lattice-math.test.js',
   'hall-of-foundations/lwe-math.test.js',
   'hall-of-foundations/crypto-algebra.test.js',

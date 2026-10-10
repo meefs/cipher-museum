@@ -6,7 +6,7 @@
 
 Exploring 3,900+ years of encryption, cryptanalysis, and hidden history.
 
-The Cipher Museum is part digital exhibit, part cipher playground, and part codebreaking classroom exploring **3,900+ years** of encryption, cryptanalysis, and hidden history across **160 exhibits** — 140 cipher exhibits in **13 exhibit halls**, the 17-exhibit **Hall of Foundations** mathematics annex (§141–157), and 3 **modern-protocol exhibits** (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs). 110 of the 140 cipher exhibits ship a fully interactive encrypt/decrypt demo or hand-built widget — the remaining 30 are codebreaker biographies and historical context pages. Modern cryptography uses more than ciphers — secure systems combine key exchange, encryption, hashing, signatures, secret sharing, and proofs.
+The Cipher Museum is part digital exhibit, part cipher playground, and part codebreaking classroom exploring **3,900+ years** of encryption, cryptanalysis, and hidden history across **164 exhibits** — 144 cipher exhibits in **13 exhibit halls**, the 17-exhibit **Hall of Foundations** mathematics annex (§141–157), and 3 **modern-protocol exhibits** (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs). 113 of the 144 cipher exhibits ship a fully interactive encrypt/decrypt demo or hand-built widget — the remaining 31 are biographies, historical context, and narrative cipher pages. Modern cryptography uses more than ciphers — secure systems combine key exchange, encryption, hashing, signatures, secret sharing, and proofs.
 
 **[Live Site →](https://ciphermuseum.com)**
 
@@ -14,6 +14,7 @@ The Cipher Museum is part digital exhibit, part cipher playground, and part code
 
 ## 📰 Latest Update
 
+- **Historical expansion — §161–164** — [NEMA](https://ciphermuseum.com/ciphers/nema.html), [Hagelin C-36 / C-52](https://ciphermuseum.com/ciphers/hagelin-c36.html), [Fleissner Turning Grille](https://ciphermuseum.com/ciphers/turning-grille.html), and [Myszkowski Transposition](https://ciphermuseum.com/ciphers/myszkowski.html). NEMA, turning grille, and Myszkowski have bespoke encrypt/decrypt demos; the Hagelin lineage links to the M-209 demo and separates public cryptanalysis from the Crypto AG supplier history. Existing exhibit numbers remain stable.
 - **Modern-protocol exhibits — §158–160** — three new exhibits extend **Hall XI (Modern Cryptography)** beyond ciphers into the protocols that secure the modern internet: **[ECDSA](https://ciphermuseum.com/ciphers/ecdsa.html)** (elliptic-curve signatures), **[Shamir's Secret Sharing](https://ciphermuseum.com/ciphers/shamir-secret-sharing.html)** (information-theoretic threshold splitting), and **[Zero-Knowledge Proofs](https://ciphermuseum.com/ciphers/zero-knowledge-proofs.html)** (prove a statement while revealing nothing). Each ships a working interactive and cross-links to the mathematics beneath it in the Hall of Foundations. Alongside them, **§157 [Learning With Errors](https://ciphermuseum.com/hall-of-foundations/learning-with-errors.html)** joins the Hall of Foundations as its own exhibit — the lattice algebra ML-KEM and ML-DSA are actually keyed on.
 - **Hall of Foundations** ([hall-of-foundations/](https://ciphermuseum.com/hall-of-foundations/index.html)) — a 17-exhibit mathematics annex (**§141–157**) on the number theory, hardness assumptions, and structures under modern cryptography: finite fields, Euler–Fermat, the Prime Number Theorem, one-way functions, lattices (SVP / CVP / Learning With Errors), polynomial rings, random oracles, Shamir interpolation, and bilinear pairings — each with a working interactive in the museum's dark/gold design system.
   - **Integrated museum-wide** — floor-plan annex on the museum map, a "Mathematics Under Cryptography" guided tour, timeline entries (Fermat 1640, Euler 1763, Shor 1994), 11 new glossary terms, site-search coverage, and two-way cross-links with the RSA, Diffie–Hellman, One-Time Pad, SHA-256, and AES exhibits ("the mathematics beneath").
@@ -31,7 +32,7 @@ The Cipher Museum is part digital exhibit, part cipher playground, and part code
 
 ## ✨ Features
 
-### 🗺️ Thirteen Exhibit Halls · 140 Cipher Exhibits · The Foundations Annex
+### 🗺️ Thirteen Exhibit Halls · 144 Cipher Exhibits · The Foundations Annex
 
 Beyond the 13 cipher halls below, the **[Hall of Foundations](https://ciphermuseum.com/hall-of-foundations/index.html)** annex (§141–157) exhibits the mathematics under the cryptography — from modular arithmetic to lattices and pairings — and three **modern-protocol exhibits** (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs) extend Hall XI beyond ciphers.
 
@@ -58,13 +59,13 @@ Beyond the 13 cipher halls below, the **[Hall of Foundations](https://ciphermuse
 3. **How It Was Broken** — The specific technique, with context
 4. **What It Teaches Modern Crypto** — The direct line from this cipher to AES/RSA
 
-### 🎯 84 Cipher Engines · 110 Interactive Demos
+### 🎯 84 Cipher Engines · 113 Interactive Demos
 
-The 140-exhibit collection includes **84 working cipher engines** plus **~27 hand-built widgets** — **110 of the 140 exhibits ship a fully interactive demo**, all built in vanilla JavaScript with no frameworks or build tools. The remaining 30 exhibits are codebreaker biographies, historical context pages (e.g. Cabinet Noir, Bletchley Park figures), and a small number of cipher pages not yet wired with a demo.
+The 144-exhibit collection includes **84 working cipher engines** plus **~30 hand-built widgets** — **113 of the 144 exhibits ship a fully interactive demo**, all built in vanilla JavaScript with no frameworks or build tools. The remaining 31 exhibits are codebreaker biographies, historical context pages (e.g. Cabinet Noir, Bletchley Park figures), and a small number of cipher pages without an inline demo.
 
 Type a message, set a key, and watch the cipher work in real time. Demos are dynamically generated by [js/demo-loader.js](js/demo-loader.js) from the engine implementations in [js/ciphers/all-engines.js](js/ciphers/all-engines.js), and the same engines power the [Codebreaker's Workbench](https://ciphermuseum.com/lab/workbench.html).
 
-For a sortable, filterable view of every cipher system in the museum (era, type, security, hall, solved status, key method) see the [Cipher Comparison Table](https://ciphermuseum.com/comparison.html). For the full 140-exhibit roster including biographies and context pages, see the [Museum Map](https://ciphermuseum.com/museum-map.html).
+For a sortable, filterable view of every cipher system in the museum (era, type, security, hall, solved status, key method) see the [Cipher Comparison Table](https://ciphermuseum.com/comparison.html). For the full 144-exhibit roster including biographies and context pages, see the [Museum Map](https://ciphermuseum.com/museum-map.html).
 
 ### 📊 Additional Tools
 - **[Cipher Corpus](https://ciphermuseum.com/cipher-corpus.html)** — The most comprehensive open library of known-answer ciphertext challenges for classical ciphers, with 100,026+ test cases across 82 algorithms. Includes:
@@ -84,7 +85,7 @@ For a sortable, filterable view of every cipher system in the museum (era, type,
     - **Side-by-side Encrypt/Decrypt panes** with copy-to-clipboard and a swap button so you can iterate on a key without retyping ciphertext.
     - **Same engine source as the exhibits** — the workbench pulls from [js/ciphers/all-engines.js](js/ciphers/all-engines.js), so anything you reproduce here matches every demo on the site.
 - **[Cipher Detective](https://ciphermuseum.com/cipher-detective.html)** — Identify likely cipher families from unknown ciphertext using IoC, chi-square, and Kasiski evidence, then pivot into ranked suspects and next-attack guidance.
-- **[Site Search](https://ciphermuseum.com/search.html)** — Search across all 160 exhibits (140 ciphers, the Hall of Foundations annex, and the modern-protocol exhibits), 13 exhibit halls, codebreaker biographies, cryptanalysis techniques, and the timeline. Index-driven, no backend, deep-link via `?q=`.
+- **[Site Search](https://ciphermuseum.com/search.html)** — Search across all 164 exhibits (144 ciphers, the Hall of Foundations annex, and the modern-protocol exhibits), 13 exhibit halls, codebreaker biographies, cryptanalysis techniques, and the timeline. Index-driven, no backend, deep-link via `?q=`.
 - **[Cryptanalysis Techniques](https://ciphermuseum.com/cryptanalysis.html)** — 10 interactive techniques: frequency analysis, Kasiski examination, index of coincidence, crib dragging, known-plaintext attack, hill climbing, simulated annealing, stepping-switch cryptanalysis (Purple), HMM/SMT decoding (Copiale), and Chaocipher reconstruction.
 - **[Cipher Challenges](https://ciphermuseum.com/challenges.html)** — 10 progressive puzzles from Caesar to Enigma with hints and solutions.
 - **[Timeline](https://ciphermuseum.com/timeline.html)** — Interactive 3,900+-year history with era filtering, scroll-spy, and 50+ clickable exhibit events.
@@ -100,7 +101,7 @@ For a sortable, filterable view of every cipher system in the museum (era, type,
 
 ## 📖 Complete Cipher Index
 
-All 140 cipher exhibits, alphabetically. Biographies and context pages are noted; plain text entries are dedicated cipher exhibits. The 17 Hall of Foundations exhibits (§141–157) and the 3 modern-protocol exhibits (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs) are listed separately above.
+All 144 cipher exhibits, alphabetically. Biographies and context pages are noted; plain text entries are dedicated cipher exhibits. The 17 Hall of Foundations exhibits (§141–157) and the 3 modern-protocol exhibits (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs) are listed separately above.
 
 
 | Cipher | Era | Brief Description | How It Was Broken / Status |
@@ -161,6 +162,7 @@ All 140 cipher exhibits, alphabetically. Biographies and context pages are noted
 | [Ethiopian Geʼez Monastic Ciphers](https://ciphermuseum.com/ciphers/amharic-ge-ez-ciphers.html) | East Africa · 14th–19th c. | Ethiopian Orthodox monasteries used syllabary-based substitution ciphers in Ge'ez script to protect sacred texts and inter-monastery communications from the 14th century onward. | Symbol frequency analysis on the limited syllabary |
 | [Fialka M-125 Soviet 10-rotor machine · 1956](https://ciphermuseum.com/ciphers/fialka.html) | Cold War · 1956 | The Soviet Cold-War rotor machine. Ten rotors, half stepping forward and half backward, plus a punch-card key sheet — the answer to every weakness Soviet analysts saw in Enigma. | No publicly known break; retired by design |
 | [Field Hollers and Coding Songs](https://ciphermuseum.com/ciphers/field-hollers.html) | Americas · 1619–1865 | American enslaved workers used field hollers, work songs, and coded idiom as covert communication — "Follow the Drinking Gourd" encoding an escape route along the Underground Railroad. | N/A — cultural/historical context page |
+| [Fleissner Turning Grille](https://ciphermuseum.com/ciphers/turning-grille.html) | 1881 · German WWI use | Four 90° rotations fill a message grid; transposition rather than Cardano steganography. | Probable-word reconstruction; van der Harst, Dutch Army exercise, 1913 |
 | [Four-Square Cipher](https://ciphermuseum.com/ciphers/four-square.html) | Late 19th Century · ~1902 | Four-Square cipher (1902) — Delastelle's digram cipher using two keyed and two standard 5x5 squares. Disrupts Playfair frequencies but breaks to digrams. | Digraph frequency analysis; flat distribution betrays the 4-square grid |
 | [Fractionated Morse Cipher](https://ciphermuseum.com/ciphers/fractionated-morse.html) | 19th Century | Fractionated Morse — converts text to Morse, regroups dots, dashes, and separators in trigrams, then substitutes via a keyed alphabet. Broken by trigram stats. | Bigram/trigram frequency on the fractionated triplets |
 | [Freemason Pigpen Tradition](https://ciphermuseum.com/ciphers/freemason-pigpen.html) | Early modern Europe · 17th–19th c. | The geometric pigpen alphabet — fragments of grids and X-shapes — used by Freemasons, Rosicrucians, and the Hellfire Club from the 17th century onwards as a fraternal cipher and ritual marker. | Symbol substitution; grid lookup trivially reverses it |
@@ -171,6 +173,7 @@ All 140 cipher exhibits, alphabetically. Biographies and context pages are noted
 | [The Great Cipher](https://ciphermuseum.com/ciphers/great-cipher.html) | Baroque · ~1626 | Great Cipher of Louis XIV (1626) — the Rossignol father-and-son syllabic nomenclator with delete-previous-letter traps. Broken by Bazeries in 1893. | Frequency + syllabic hypothesis; broken by Étienne Bazeries c. 1893 |
 | [Gronsfeld Cipher](https://ciphermuseum.com/ciphers/gronsfeld.html) | 17th Century | Gronsfeld cipher (1655) — a Vigenère variant restricted to numeric keys (0-9), making it field-portable but with a smaller key space that falls fast to Kasiski. | Kasiski examination; identical to Vigenère with digit key 0–9 |
 | [Herbert Yardley](https://ciphermuseum.com/ciphers/yardley.html) | Interwar · USA | Herbert Osborne Yardley founded America's Black Chamber in 1919, broke Japanese diplomatic codes at the 1921 Washington Naval Conference, and then infamously published the secrets in his 1931 bestseller. | N/A — codebreaker biography |
+| [Hagelin C-36 / C-52 Lineage](https://ciphermuseum.com/ciphers/hagelin-c36.html) | 1930s–1950s | Pin-and-lug lineage, M-209 connection, and Crypto AG supplier history. | Public known-plaintext attacks on C-52-family configurations; Greenough, 1999 |
 | [Hill Cipher](https://ciphermuseum.com/ciphers/hill.html) | 1929 | Hill cipher (1929) — Lester S. Hill's matrix-based polygraphic cipher, first to apply linear algebra to encryption. Broken by known-plaintext (mod-26 system). | Known-plaintext attack: P·K=C → K=P⁻¹·C (matrix inversion mod 26) |
 | [Histiaeus's Tattooed Messenger](https://ciphermuseum.com/ciphers/histiaeus-tattoo.html) | Classical Greece · ~499 BCE | Histiaeus of Miletus (~499 BCE) — the Greek tyrant who tattooed a secret revolt order on a slave's shaved scalp, then waited for the hair to regrow before sending him. | Discovery of the messenger; physical search reveals message |
 | [Homophonic Substitution](https://ciphermuseum.com/ciphers/homophonic.html) | Renaissance · ~1400 | Homophonic substitution (1400s) — replace each letter with one of several numeric codes to flatten frequencies. Defeated Mary in 1586; Great Cipher in 1893. | Frequency analysis with pooled homophones; traffic volume collapses it |
@@ -196,8 +199,10 @@ All 140 cipher exhibits, alphabetically. Biographies and context pages are noted
 | [MIT Mystery Hunt](https://ciphermuseum.com/ciphers/mit-mystery-hunt.html) | MIT · 1981–present | An annual three-day puzzle marathon at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus. | N/A — puzzle competition page |
 | [Monoalphabetic Substitution](https://ciphermuseum.com/ciphers/monoalphabetic.html) | Medieval · ~800 AD | Monoalphabetic substitution — replace each letter with a fixed substitute. Foundation of all substitution ciphers; broken by Al-Kindi's frequency analysis ~850. | Frequency analysis; Caesar to complex substitution all fall the same way |
 | [Morse Code Telegraphy's universal alphabet · 1840s](https://ciphermuseum.com/ciphers/morse.html) | Telegraph age · 1840s → | International Morse code — the dot-dash telegraph alphabet that made the wired world possible and provided the carrier signal for a century of military and amateur ciphers. | N/A — encoding system, not a cipher |
+| [Myszkowski Transposition](https://ciphermuseum.com/ciphers/myszkowski.html) | France · 1902 | Repeated keyword letters share ranks; tied columns are read together across rows. | Statistical transposition search and probable-word attacks |
 | [National Treasure](https://ciphermuseum.com/ciphers/national-treasure.html) | Fiction · 2004 | The 2004 Disney film National Treasure sent audiences hunting for cipher clues on the US dollar bill, the Liberty Bell, and Independence Hall — all real historical sites. | N/A — fictional film; Bacon cipher used as plot device |
 | [Navajo Code Talkers](https://ciphermuseum.com/ciphers/navajo-code-talkers.html) | WWII · 1942–1945 | Navajo Code (1942-1945) — a constructed military vocabulary spoken by 420 Marine Code Talkers. Never broken in wartime; declassified in 1968 after long use. | Never broken in WWII; Japanese could not isolate the language structure |
+| [NEMA — Swiss Rotor Machine](https://ciphermuseum.com/ciphers/nema.html) | Switzerland · 1947 | Four cipher wheels, independent stepping wheels, and a moving reflector; historical military demo. | Historical Only; no operational break asserted |
 | [Nihilist Cipher](https://ciphermuseum.com/ciphers/nihilist.html) | 1880s · Russia | Nihilist cipher (1880s) — the Russian revolutionary classic adding Polybius numbers to a repeating keyword's Polybius numbers (mod 100). Broken early 1900s. | Double-Polybius structure; IC + frequency analysis on the digit pairs |
 | [Nomenclator](https://ciphermuseum.com/ciphers/nomenclator.html) | Renaissance · 1400s–1800s | Nomenclator (1400s) — The 400-year diplomatic compromise: a small substitution alphabet plus a large code dictionary. Hall II of The Cipher Museum. | Frequency analysis on the codewords; Walsingham's team, 1580s |
 | [Null Cipher Concealment by selective reading · ancient → modern](https://ciphermuseum.com/ciphers/null-cipher.html) | Antiquity → present | The null cipher — hide the secret in plain sight by spelling it out with the first letters of an innocuous message. Used by spies, prisoners, and Bacon, since at least the Roman empire. | Pattern recognition and positional analysis of the cover text |
@@ -327,7 +332,7 @@ cipher-museum/
 │   ├── puzzle.html           ← Hall VII: Puzzle & Novelty
 │   ├── unbreakable.html      ← Hall IX: The Unbreakable
 │   └── codebreakers.html     ← Special Exhibition: Hall of Codebreakers
-├── ciphers/                  ← 143 exhibit pages (140 ciphers + ECDSA/Shamir/ZKP protocol exhibits)
+├── ciphers/                  ← 147 exhibit pages (144 ciphers + ECDSA/Shamir/ZKP protocol exhibits)
 │   ├── caesar.html            ← with interactive demo + SVG wheel diagram
 │   ├── enigma.html            ← with rotor wiring SVG diagram
 │   ├── vigenere.html          ← with tabula recta SVG + Kasiski analysis
@@ -338,7 +343,7 @@ cipher-museum/
 │   ├── finite-fields.html     ← …and 16 more (lattices, LWE, pairings, interpolation…)
 │   └── *-math.js              ← lattice-math / crypto-algebra / ec-math engines, unit-tested
 ├── data/
-│   └── artifact-cards.json  ← Metadata cards (era, family, region, key type…) for all 143 ciphers/protocol exhibits
+│   └── artifact-cards.json  ← Metadata cards (era, family, region, key type…) for all 147 ciphers/protocol exhibits
 ├── scripts/                  ← Corpus tools and cryptanalysis solvers
 │   ├── hill-climbing-solver.js  ← Monoalphabetic solver: hill climbing + quadgram scoring
 │   ├── sa-solver.js             ← Simulated annealing solver (better on short ciphertexts)
@@ -406,7 +411,7 @@ cipher-museum/
 
 ## 🧪 Testing
 
-Trust labels are classified in `data/exhibit-trust.json` for all 160 exhibits;
+Trust labels are classified in `data/exhibit-trust.json` for all 164 exhibits;
 `null` omits the badge for context exhibits. After editing that source, run
 `npm run build:trust-labels` and `npm run build:search-index`. The
 `tests/test-trust-labels.js` suite checks generated HTML and an independent

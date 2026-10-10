@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-04T20:05:08.261Z",
-  "totalExhibits": 143,
+  "generatedAt": "2026-10-10T00:38:06.867Z",
+  "totalExhibits": 147,
   "cards": {
     "adfgvx": {
       "name": "ADFGVX Cipher",
@@ -360,7 +360,7 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Two scrambled 26-letter alphabets",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Strong (until disclosed)",
+      "securityFailure": "Published key-recovery attacks",
       "modernLesson": "Self-modifying ciphers can be strong with simple parts"
     },
     "che-guevara": {
@@ -648,7 +648,7 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Never broken (in service)",
+      "securityFailure": "Historical Only",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "field-hollers": {
@@ -756,7 +756,7 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Codebook of ~587 numbered syllables",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Historical security profile varies",
+      "securityFailure": "Broken",
       "modernLesson": "Decoy tokens & variable-length codewords"
     },
     "gronsfeld": {
@@ -770,6 +770,18 @@
       "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
       "securityFailure": "Broken",
       "modernLesson": "Key alphabet size matters"
+    },
+    "hagelin-c36": {
+      "name": "Hagelin C-36 / C-52 Lineage",
+      "hall": "VII",
+      "era": "1930s–1950s · Sweden / Switzerland",
+      "family": "Mechanical and Rotor Machines",
+      "region": "Sweden and Switzerland",
+      "usedBy": "Military and diplomatic operators of Hagelin pin-and-lug machines",
+      "keyType": "Pin patterns, lug settings, wheel selection and starting positions",
+      "keyIdea": "Pin-and-lug mechanisms produce a changing numerical shift; configurations vary by model",
+      "securityFailure": "Broken",
+      "modernLesson": "Public cryptanalysis and independent supplier review are separate requirements"
     },
     "hill": {
       "name": "Hill Cipher",
@@ -900,7 +912,7 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Never broken cryptanalytically",
+      "securityFailure": "Historical Only",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "kryha": {
@@ -1095,6 +1107,18 @@
       "securityFailure": "Encoding, not encryption",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
+    "myszkowski": {
+      "name": "Myszkowski Transposition",
+      "hall": "IV",
+      "era": "1902 · France",
+      "family": "Transposition",
+      "region": "France",
+      "usedBy": "Classical cipher practitioners and puzzle solvers",
+      "keyType": "Keyword with repeated letters assigned identical ranks",
+      "keyIdea": "Read single columns downwards and tied columns together across rows",
+      "securityFailure": "Broken",
+      "modernLesson": "Specify tie handling and incomplete rows to make a permutation reversible"
+    },
     "national-treasure": {
       "name": "National Treasure",
       "hall": "XIII",
@@ -1116,8 +1140,20 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Natural language (Navajo)",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Never Broken",
+      "securityFailure": "Historical Only",
       "modernLesson": "Security through complexity · pre-shared keys"
+    },
+    "nema": {
+      "name": "NEMA — Swiss Rotor Machine",
+      "hall": "VII",
+      "era": "Postwar Switzerland · 1947",
+      "family": "Mechanical and Rotor Machines",
+      "region": "Switzerland",
+      "usedBy": "Swiss Army; training and war-reserve configurations",
+      "keyType": "Wheel selection and pairing; ten starting window letters",
+      "keyIdea": "Four wired rotors and a moving reflector controlled by separate stepping wheels",
+      "securityFailure": "Historical Only",
+      "modernLesson": "Count the state period separately from the initial key space"
     },
     "nihilist": {
       "name": "Nihilist Cipher",
@@ -1416,7 +1452,7 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "15 rotors arranged as 3 banks of 5 (cipher × 5, control × 5, index × 5)",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Never broken in service",
+      "securityFailure": "Historical Only",
       "modernLesson": "Pseudorandom rotor stepping defeats the regularities that broke Enigma"
     },
     "sigsaly": {
@@ -1539,6 +1575,18 @@
       "securityFailure": "Easy",
       "modernLesson": "A predictable keystream is barely a keystream"
     },
+    "turning-grille": {
+      "name": "Fleissner Turning Grille",
+      "hall": "IV",
+      "era": "1881 · German WWI use",
+      "family": "Transposition",
+      "region": "Austria and wartime Europe",
+      "usedBy": "German Army in WWI; other military grille users",
+      "keyType": "Hole pattern, starting orientation and rotation direction",
+      "keyIdea": "Four quarter-turns visit each cell once, permuting a complete message block",
+      "securityFailure": "Broken",
+      "modernLesson": "A stencil can rearrange a message without concealing its existence"
+    },
     "two-square": {
       "name": "Two-Square Cipher",
       "hall": "II",
@@ -1560,7 +1608,7 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "5 rotors (3 stepping + 2 stator) chosen from a set of 10 or 14",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Never confirmed broken; far stronger than Enigma in service",
+      "securityFailure": "Historical Only",
       "modernLesson": "Removing a weakness (Enigma's plugboard quirks) by adding rotors trades operator burden for cryptanalytic strength"
     },
     "venona": {
@@ -1632,7 +1680,7 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Historical security profile varies",
+      "securityFailure": "Historical Only",
       "modernLesson": "Statistical signatures alone cannot tell cipher from constructed language from hoax"
     },
     "wadsworth-cipher": {

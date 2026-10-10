@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myszkowski Transposition — The Cipher Museum</title>
+  <meta name="description" content="Myszkowski transposition (1902) — repeated keyword letters share a rank. Encrypt and decrypt interactively, including incomplete final rows, and compare columnar transposition.">
+  <meta property="og:title" content="Myszkowski Transposition — The Cipher Museum">
+  <meta property="og:description" content="Myszkowski transposition (1902) — repeated keyword letters share a rank. Encrypt and decrypt interactively, including incomplete final rows, and compare columnar transposition.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciphermuseum.com/ciphers/myszkowski.html">
+  <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Myszkowski Transposition — The Cipher Museum">
+  <meta name="twitter:description" content="Myszkowski transposition (1902) — repeated keyword letters share a rank. Encrypt and decrypt interactively, including incomplete final rows, and compare columnar transposition.">
+  <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://ciphermuseum.com/ciphers/myszkowski.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="stylesheet" href="../css/museum.css">
+  <link rel="stylesheet" href="../css/historical-demos.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="2" fill="currentColor"/>
+      </svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../museum-map.html">Explore</a></li>
+      <li><a href="../timeline.html">Timeline</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../cipher-corpus.html">Cipher Corpus</a></li>
+      <li><a href="../cryptanalysis.html">Cryptanalysis</a></li>
+      <li><a href="../challenges.html">Challenges</a></li>
+      <li><a href="../lab/workbench.html">Lab</a></li>
+      <li><a href="../search.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+<div class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Entrance</a><span>&rsaquo;</span><a href="../halls/transposition.html">Hall IV: Transposition &amp; Fractionation</a><span>&rsaquo;</span>Myszkowski Transposition</div>
+  <div class="page-meta"><span class="page-num">Exhibit 164 of 164</span><span class="badge era-19c">1902 · France</span></div>
+  <h1 class="page-title">Myszkowski Transposition</h1>
+  <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
+  <p class="page-tagline">Repeated keyword letters change the route: tied columns are read together across rows</p>
+  <div class="exhibit-facts">
+    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Émile Victor Théodore Myszkowski</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1902</span></div>
+    <div class="fact"><span class="fact-label">Family</span><span class="fact-value">Keyword transposition</span></div>
+    <div class="fact"><span class="fact-label">Key</span><span class="fact-value">A word with repeated letters</span></div>
+    <div class="fact"><span class="fact-label">Example</span><span class="fact-value">TOMATO → 4 3 2 1 4 3</span></div>
+  </div>
+</div>
+
+<div class="demo-section" data-historical-demo="myszkowski">
+  <div class="demo-panel">
+    <div class="demo-head"><span class="demo-title">Try It Yourself</span></div>
+    <div class="demo-body">
+      <div class="demo-col">
+        <div class="mode-toggle" role="group" aria-label="Cipher mode">
+          <button type="button" class="mode-btn active" data-mode="encrypt" aria-pressed="true">Encrypt</button>
+          <button type="button" class="mode-btn" data-mode="decrypt" aria-pressed="false">Decrypt</button>
+        </div>
+        <div class="input-group"><label class="input-label" for="historical-message">Message</label><textarea class="museum-input" id="historical-message" rows="3" maxlength="4096" aria-describedby="demo-limits">WEAREDISCOVEREDFLEEATONCE</textarea></div>
+        <div class="input-group"><label class="input-label" for="myszkowski-key">Keyword (repeated letters share a rank)</label><input class="museum-input" id="myszkowski-key" type="text" value="TOMATO" maxlength="24" spellcheck="false"></div>
+        <p id="demo-limits" class="historical-grid-caption">The standard repeated-rank convention, with incomplete final rows and no padding. A keyword without repeats reduces to ordinary columnar transposition. The demo uppercases letters, removes accents, and discards spaces, punctuation, and digits.</p>
+      </div>
+      <div class="demo-col">
+        <div class="btn-group"><button type="button" class="btn btn-primary" id="historical-run">Run Cipher</button><button type="button" class="btn btn-secondary" id="historical-use-output">Use output in opposite mode</button></div>
+        <div class="input-group"><span class="input-label" id="historical-output-label">Output</span><div class="output-box" id="historical-output" role="status" aria-live="polite" aria-labelledby="historical-output-label"></div></div>
+        <p id="historical-status" role="status" aria-live="polite" class="historical-grid-caption"></p>
+        <p id="myszkowski-ranks" class="historical-grid-caption"></p><div id="myszkowski-grid" class="historical-grid" role="group" aria-label="Myszkowski keyword ranks and message rows"></div>
+      </div>
+    </div>
+  </div>
+  <noscript><p>Enable JavaScript to use this interactive. The worked example below explains the same steps.</p></noscript>
+</div>
+
+<div class="exhibit-layout">
+  <div class="exhibit-main">
+    <div class="cipher-significance"><h2>Why This Matters</h2><p>Most <a href="columnar.html">columnar transposition</a> implementations break ties between repeated key letters from left to right. Myszkowski assigns those letters the same rank. That one change turns a set of separate columns into a group read across each row, making repeated letters part of the permutation instead of an inconvenience to resolve.</p></div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
+      <div class="panel-body"><p>Myszkowski published <em>Cryptographie indéchiffrable</em> in Paris in 1902. The title’s claim of indecipherability did not make the system secure. The exhibit follows the repeated-rank convention documented by the American Cryptogram Association: write the message by rows; read single columns downward and tied columns together across rows.</p><p>Like other hand transpositions, the method changes positions rather than letter identities. It offers a compact lesson in how a key and an exact tie rule determine a reversible permutation.</p></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
+      <div class="panel-body"><p>Sort the distinct letters of the keyword alphabetically and number them. Every occurrence of the same letter receives the same rank. With <code>TOMATO</code>, A = 1, M = 2, O = 3, and T = 4, giving <code>4 3 2 1 4 3</code>.</p><p>Write the message in rows six letters wide. Read rank 1 down its column, then rank 2. For rank 3, read both O columns from left to right in each row before going to the next row. Do the same for the two T columns at rank 4. Skip missing cells in an incomplete final row.</p><pre>Key:     T O M A T O
+Ranks:   4 3 2 1 4 3
+         W E A R E D
+         I S C O V E
+         R E D F L E
+         E A T O N C
+         E
+
+Rank 1: ROFO
+Rank 2: ACDT
+Rank 3: EDSEEEAC
+Rank 4: WEIVRLENE
+Output: ROFOACDTEDSEEEACWEIVRLENE</pre><p>To decrypt, construct the same occupied cells from the ciphertext length and keyword width. Fill them in rank order using the same tie rule, then read the restored grid by rows. This demo does not add padding, including when the final row is short.</p></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Compare Columnar Transposition</span></div>
+      <div class="panel-body"><p>For ordinary columnar transposition, repeated letters usually receive separate positions; TOMATO would have ranks <code>5 3 2 1 6 4</code>. Myszkowski’s ranks are <code>4 3 2 1 4 3</code>. The difference is visible in the demo’s grid header.</p><p>With a keyword containing no repeated letters, the two routes agree under the same no-padding convention. Try ZEBRA here and in <a href="columnar.html">Columnar Transposition</a> to study how a tie rule changes the cipher rather than the underlying message.</p></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">How It Can Be Broken</span></div>
+      <div class="panel-body"><p>The cipher preserves single-letter frequencies. A suspected keyword width gives a candidate grid shape; probable words and neighbouring-letter scores constrain which positions should become adjacent. Dictionary searches can try likely keywords, while broader searches can score candidate rank patterns directly. A keyword that is easy to remember may also be easy to guess.</p><p>This is a broken classical transposition method for study and puzzles. Neither repeated ranks nor the 1902 book’s title provide modern confidentiality. It supplies no integrity check: rearranging the ciphertext can also rearrange the recovered text.</p></div>
+    </div>
+  </div>
+  <div class="exhibit-side">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-swords"/></svg></span><span class="panel-title">Quick Facts</span></div>
+      <div class="panel-body"><table class="cipher-table"><tbody><tr><td>Exhibit</td><td>164 of 164</td></tr><tr><td>Origin</td><td>Émile Victor Théodore Myszkowski</td></tr><tr><td>Year</td><td>1902</td></tr><tr><td>Family</td><td>Keyword transposition</td></tr><tr><td>Key</td><td>A word with repeated letters</td></tr><tr><td>Example</td><td>TOMATO → 4 3 2 1 4 3</td></tr></tbody></table></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Sources and Further Reading</span></div>
+      <div class="panel-body"><p><a href="https://gallica.bnf.fr/ark:/12148/bpt6k1265620p">Myszkowski’s 1902 book (Bibliothèque nationale de France)</a>; <a href="https://www.cryptogram.org/downloads/aca.info/ciphers/Myszkowski.pdf">American Cryptogram Association: repeated-rank rules and worked example</a>.</p></div>
+    </div>
+  </div>
+</div>
+
+<section class="related-exhibits">
+  <h2 class="related-exhibits__heading">Related Exhibits</h2>
+  <div class="related-exhibits__grid">
+    <a href="../ciphers/columnar.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Columnar Transposition</span><span class="related-card__tag">Compare left-to-right tie breaking</span></a>
+    <a href="../ciphers/double-transposition.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Double Transposition</span><span class="related-card__tag">Compose two keyword permutations</span></a>
+    <a href="../ciphers/turning-grille.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Fleissner Turning Grille</span><span class="related-card__tag">A physical mask supplies the permutation</span></a>
+  </div>
+</section>
+<div class="hall-nav">
+  <a href="../ciphers/columnar.html" class="hall-nav-link"><span class="hall-nav-dir">&larr; Previous</span><span class="hall-nav-name">Columnar Transposition</span></a>
+  <a href="../ciphers/fractionated-morse.html" class="hall-nav-link next"><span class="hall-nav-dir">Next &rarr;</span><span class="hall-nav-name">Fractionated Morse</span></a>
+</div>
+</main>
+<footer></footer>
+<script src="../js/demo-loader.min.js"></script>
+<script src="../js/historical-ciphers.js"></script>
+<script src="../js/historical-demos.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/lightbox.js"></script>
+</body>
+</html>

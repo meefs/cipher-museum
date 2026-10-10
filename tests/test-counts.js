@@ -109,11 +109,11 @@ for (const f of fs.readdirSync(cipherDir).filter(n => n.endsWith('.html'))) {
   const text = fs.readFileSync(path.join(cipherDir, f), 'utf8');
   const chip = /Exhibit\s+(\d+)\s+of\s+(\d+)/.exec(text);
   if (!chip) continue;
-  ok(`${f}: chip denominator`, Number(chip[2]) === counts.ciphers,
-    `says "of ${chip[2]}", should be "of ${counts.ciphers}"`);
+  ok(`${f}: chip denominator`, Number(chip[2]) === counts.total,
+    `says "of ${chip[2]}", should be "of ${counts.total}" (the global exhibit sequence)`);
   ok(`${f}: chip numerator in range`,
-    Number(chip[1]) >= 1 && Number(chip[1]) <= counts.protocolsLast,
-    `exhibit number ${chip[1]} is outside 1..${counts.protocolsLast}`);
+    Number(chip[1]) >= 1 && Number(chip[1]) <= counts.total,
+    `exhibit number ${chip[1]} is outside 1..${counts.total}`);
 }
 
 console.log(`\n━━━ Exhibit-count consistency ━━━\n`);

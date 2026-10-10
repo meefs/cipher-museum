@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleissner Turning Grille — The Cipher Museum</title>
+  <meta name="description" content="Fleissner turning grille — a transposition cipher used by Germany in WWI. Rotate an interactive mask 90 degrees and contrast it with Cardano steganography.">
+  <meta property="og:title" content="Fleissner Turning Grille — The Cipher Museum">
+  <meta property="og:description" content="Fleissner turning grille — a transposition cipher used by Germany in WWI. Rotate an interactive mask 90 degrees and contrast it with Cardano steganography.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciphermuseum.com/ciphers/turning-grille.html">
+  <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fleissner Turning Grille — The Cipher Museum">
+  <meta name="twitter:description" content="Fleissner turning grille — a transposition cipher used by Germany in WWI. Rotate an interactive mask 90 degrees and contrast it with Cardano steganography.">
+  <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://ciphermuseum.com/ciphers/turning-grille.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="stylesheet" href="../css/museum.css">
+  <link rel="stylesheet" href="../css/historical-demos.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="2" fill="currentColor"/>
+      </svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../museum-map.html">Explore</a></li>
+      <li><a href="../timeline.html">Timeline</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../cipher-corpus.html">Cipher Corpus</a></li>
+      <li><a href="../cryptanalysis.html">Cryptanalysis</a></li>
+      <li><a href="../challenges.html">Challenges</a></li>
+      <li><a href="../lab/workbench.html">Lab</a></li>
+      <li><a href="../search.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+<div class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Entrance</a><span>&rsaquo;</span><a href="../halls/transposition.html">Hall IV: Transposition &amp; Fractionation</a><span>&rsaquo;</span>Turning Grille</div>
+  <div class="page-meta"><span class="page-num">Exhibit 163 of 164</span><span class="badge era-wwi">1881 · German WWI use</span></div>
+  <h1 class="page-title">Fleissner Turning Grille</h1>
+  <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
+  <p class="page-tagline">Four turns, one complete grid: a stencil that scrambles the message instead of hiding it</p>
+  <div class="exhibit-facts">
+    <div class="fact"><span class="fact-label">Associated with</span><span class="fact-value">Edouard Fleissner von Wostrowitz</span></div>
+    <div class="fact"><span class="fact-label">Publication</span><span class="fact-value">Handbuch der Kryptographie · 1881</span></div>
+    <div class="fact"><span class="fact-label">Military use</span><span class="fact-value">German Army · World War I</span></div>
+    <div class="fact"><span class="fact-label">Family</span><span class="fact-value">Block transposition</span></div>
+    <div class="fact"><span class="fact-label">Key</span><span class="fact-value">Hole pattern, starting orientation, and rotation direction</span></div>
+  </div>
+</div>
+
+<div class="demo-section" data-historical-demo="turning-grille">
+  <div class="demo-panel">
+    <div class="demo-head"><span class="demo-title">Try It Yourself</span></div>
+    <div class="demo-body">
+      <div class="demo-col">
+        <div class="mode-toggle" role="group" aria-label="Cipher mode">
+          <button type="button" class="mode-btn active" data-mode="encrypt" aria-pressed="true">Encrypt</button>
+          <button type="button" class="mode-btn" data-mode="decrypt" aria-pressed="false">Decrypt</button>
+        </div>
+        <div class="input-group"><label class="input-label" for="historical-message">Message</label><textarea class="museum-input" id="historical-message" rows="3" maxlength="4096" aria-describedby="demo-limits">ABCDEFGHIJKLMNOP</textarea></div>
+        <div class="input-group"><label class="input-label" for="grille-size">Grid size</label><select class="museum-input" id="grille-size"><option value="4">4 × 4</option><option value="6">6 × 6</option><option value="8">8 × 8</option></select></div><p class="historical-grid-caption">Click a cell to move its orbit’s hole there. The other three cells in that orbit remain covered in the starting mask. The demo always keeps a valid grille.</p><div class="btn-group"><button type="button" class="btn btn-secondary" id="grille-reset">Reset hole pattern</button></div><p class="historical-grid-caption">Starting holes (zero-based row-major): <span id="grille-key"></span></p>
+        <p id="demo-limits" class="historical-grid-caption">Even-sized grids only. Encrypt pads the last block with X; Decrypt preserves all padding. The rotation button changes the view, while encryption always begins at 0°. The demo uppercases letters, removes accents, and discards spaces, punctuation, and digits.</p>
+      </div>
+      <div class="demo-col">
+        <div class="btn-group"><button type="button" class="btn btn-primary" id="historical-run">Run Cipher</button><button type="button" class="btn btn-secondary" id="historical-use-output">Use output in opposite mode</button></div>
+        <div class="input-group"><span class="input-label" id="historical-output-label">Output</span><div class="output-box" id="historical-output" role="status" aria-live="polite" aria-labelledby="historical-output-label"></div></div>
+        <p id="historical-status" role="status" aria-live="polite" class="historical-grid-caption"></p>
+        <div class="btn-group"><button type="button" class="btn btn-primary" id="grille-rotate">Rotate mask 90°</button></div><p id="grille-angle" role="status" aria-live="polite" class="historical-grid-caption"></p><div id="grille-grid" class="historical-grid" role="group" aria-label="Turning grille: select hole positions"></div><p id="grille-reading" role="status" aria-live="polite" class="historical-grid-caption"></p>
+      </div>
+    </div>
+  </div>
+  <noscript><p>Enable JavaScript to use this interactive. The worked example below explains the same steps.</p></noscript>
+</div>
+
+<div class="exhibit-layout">
+  <div class="exhibit-main">
+    <div class="cipher-significance"><h2>Why This Matters</h2><p>A turning grille uses a stencil as a permutation. Its holes visit different cells at each quarter-turn until every cell holds a message letter. Unlike <a href="cardano-grille.html">Cardano’s fixed grille</a>, it produces a visibly scrambled block, with no innocent cover letter to hide the secret’s existence.</p></div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
+      <div class="panel-body"><p>Fleissner described the turning grille in his 1881 <em>Handbuch der Kryptographie</em>, although rotating masks have earlier precedents. Germany used grille transposition for field traffic during WWI. William Friedman’s 1935 <em>Advanced Military Cryptography</em> records German use in 1915 and named grids of different sizes; other historical accounts describe German turning-grille traffic in late 1916–early 1917.</p><p>The distinction matters: this exhibit does not claim Fleissner invented all stencil systems, or that all wartime grilles shared one size and schedule. The demo uses an even-sided square and four clockwise turns.</p></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
+      <div class="panel-body"><p>Cut one hole from each group of four cells that rotate into one another. Place the mask at its agreed starting orientation and write plaintext through the holes in row order. Turn it clockwise 90° and continue writing. Repeat at 180° and 270°, then lift the mask and read the filled grid in ordinary row order.</p><p>A valid even-sided grille has N²/4 holes. Four rotations must cover all N² cells exactly once: an overlap means a lost letter and an uncovered cell. The recipient writes ciphertext into the grid by rows and reads through the holes in the same four orientations.</p><pre>4×4 starting holes (zero-based): 0, 1, 2, 5
+Input:  ABCDEFGHIJKLMNOP
+Grid:   A B C E
+        M D F G
+        N O I H
+        P J K L
+Output: ABCEMDFGNOIHPJKL</pre><p>The interactive pads incomplete blocks with X and retains those Xs when decrypting. Because X can also be a real letter, the recipient needs the original length to remove padding unambiguously. Odd-sided historical grids need a separate rule for the central cell; this demo omits them.</p></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Cardano Grille versus Turning Grille</span></div>
+      <div class="panel-body"><table class="cipher-table"><thead><tr><th scope="col">Cardano’s fixed grille</th><th scope="col">Fleissner’s turning grille</th></tr></thead><tbody><tr><td>Secret letters occupy selected positions in cover text.</td><td>Every grid cell is filled by the secret message or padding.</td></tr><tr><td>Steganography: conceal that a message exists.</td><td>Transposition: conceal the order of an evident ciphertext.</td></tr><tr><td>Read one agreed stencil placement.</td><td>Read four successive orientations.</td></tr></tbody></table><p>Visit <a href="cardano-grille.html">Cardano Grille</a> to compare the fixed mask. Sharing a physical stencil does not make their security goals identical.</p></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">How It Was Broken</span></div>
+      <div class="panel-body"><p>Captain C.J.H. van der Harst solved a Dutch Army turning-grille message during a <strong>1913 exercise</strong>. He used likely military words and repeated-letter patterns to reconstruct hole positions, then checked how those positions behaved under rotation. The surviving archival case is analysed in Karl de Leeuw’s HistoCrypt 2018 paper.</p><p>More generally, the cipher preserves letter frequencies and repeats the same block permutation when a grille is reused. Cribs, multiple messages under one mask, and language scoring help recover the ordering. The small 4×4 demo has only 4⁴ = 256 starting hole patterns, before varying its fixed direction or readout convention.</p></div>
+    </div>
+  </div>
+  <div class="exhibit-side">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-swords"/></svg></span><span class="panel-title">Quick Facts</span></div>
+      <div class="panel-body"><table class="cipher-table"><tbody><tr><td>Exhibit</td><td>163 of 164</td></tr><tr><td>Associated with</td><td>Edouard Fleissner von Wostrowitz</td></tr><tr><td>Publication</td><td>Handbuch der Kryptographie · 1881</td></tr><tr><td>Military use</td><td>German Army · World War I</td></tr><tr><td>Family</td><td>Block transposition</td></tr><tr><td>Key</td><td>Hole pattern, starting orientation, and rotation direction</td></tr></tbody></table></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Sources and Further Reading</span></div>
+      <div class="panel-body"><p><a href="https://www.nsa.gov/Portals/75/documents/news-features/declassified-documents/friedman-documents/publications/FOLDER_235/41760719079986.pdf">Friedman, <em>Advanced Military Cryptography</em> (1935), grille construction and German wartime use</a>; <a href="https://ep.liu.se/ecp/149/012/ecp18149012.pdf">Karl de Leeuw, the Dutch 1913 turning-grille break (HistoCrypt 2018)</a>.</p></div>
+    </div>
+  </div>
+</div>
+
+<section class="related-exhibits">
+  <h2 class="related-exhibits__heading">Related Exhibits</h2>
+  <div class="related-exhibits__grid">
+    <a href="../ciphers/cardano-grille.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Cardano Grille</span><span class="related-card__tag">Fixed-mask steganography, not four-turn transposition</span></a>
+    <a href="../ciphers/rail-fence.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Rail Fence</span><span class="related-card__tag">A zigzag path supplies another transposition</span></a>
+    <a href="../ciphers/myszkowski.html" class="related-card"><span class="related-card__number">Related</span><span class="related-card__name">Myszkowski Transposition</span><span class="related-card__tag">A keyword controls the readout instead of a stencil</span></a>
+  </div>
+</section>
+<div class="hall-nav">
+  <a href="../ciphers/cardano-grille.html" class="hall-nav-link"><span class="hall-nav-dir">&larr; Previous</span><span class="hall-nav-name">Cardano Grille</span></a>
+  <a href="../ciphers/null-cipher.html" class="hall-nav-link next"><span class="hall-nav-dir">Next &rarr;</span><span class="hall-nav-name">Null Cipher</span></a>
+</div>
+</main>
+<footer></footer>
+<script src="../js/demo-loader.min.js"></script>
+<script src="../js/historical-ciphers.js"></script>
+<script src="../js/historical-demos.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/lightbox.js"></script>
+</body>
+</html>

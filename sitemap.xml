@@ -203,4 +203,8 @@
   <url><loc>https://ciphermuseum.com/tours/index.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://ciphermuseum.com/tours/tour.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://ciphermuseum.com/community/index.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ciphermuseum.com/ciphers/nema.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ciphermuseum.com/ciphers/hagelin-c36.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ciphermuseum.com/ciphers/turning-grille.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ciphermuseum.com/ciphers/myszkowski.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

@@ -16,11 +16,14 @@
  */
 'use strict';
 
-const VERSION = 'cipher-museum-f028d3aa';
+const VERSION = 'cipher-museum-940f038b';
 const CORE = [
   '/',
   '/index.html',
   '/css/museum.css',
+  '/css/historical-demos.css',
+  '/js/historical-ciphers.js',
+  '/js/historical-demos.js',
   '/js/nav.js',
   '/js/footer.js',
   '/js/breadcrumbs.js',

@@ -160,6 +160,10 @@
     {"number":157,"path":"hall-of-foundations/learning-with-errors.html","label":null},
     {"number":158,"path":"ciphers/ecdsa.html","label":"secure"},
     {"number":159,"path":"ciphers/shamir-secret-sharing.html","label":"secure"},
-    {"number":160,"path":"ciphers/zero-knowledge-proofs.html","label":"secure"}
+    {"number":160,"path":"ciphers/zero-knowledge-proofs.html","label":"secure"},
+    {"number":161,"path":"ciphers/nema.html","label":"historical"},
+    {"number":162,"path":"ciphers/hagelin-c36.html","label":"broken"},
+    {"number":163,"path":"ciphers/turning-grille.html","label":"broken"},
+    {"number":164,"path":"ciphers/myszkowski.html","label":"broken"}
   ]
 }
