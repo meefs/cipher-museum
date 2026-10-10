@@ -37,6 +37,8 @@ const suites = [
   'hall-of-foundations/foundations-links.test.js'
 ];
 
+const failures = [];
+
 for (const suite of suites) {
   console.log(`\n=== Running ${suite} ===`);
   const result = spawnSync(process.execPath, [suite], {
@@ -45,8 +47,12 @@ for (const suite of suites) {
   });
 
   if (result.status !== 0) {
-    process.exit(result.status || 1);
+    failures.push(suite);
   }
 }
 
+if (failures.length) {
+  console.error('\nFailed suites: ' + failures.join(', '));
+  process.exit(1);
+}
 console.log('\nAll test suites passed.');

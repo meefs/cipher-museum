@@ -9,6 +9,8 @@ const ciphersDir = path.join(repo, 'ciphers');
 const outDir = path.join(repo, 'data');
 const outJson = path.join(outDir, 'artifact-cards.json');
 const outJs = path.join(repo, 'js', 'artifact-cards-data.js');
+const { loadTrust } = require('./exhibit-trust');
+const { byPath, trustFor } = loadTrust(repo);
 
 function titleizeSlug(slug) {
   return slug
@@ -72,11 +74,6 @@ function eraFromHtml(html) {
   return 'Historical period varies';
 }
 
-function securityFromHtml(html) {
-  const sec = between(html, /<span class="badge\s+sec-[^"]*">([\s\S]*?)<\/span>/i);
-  const trust = between(html, /<span class="trust-label__text">([^<]+)<\/span>/i);
-  return stripTags(sec || trust || 'Historical security profile varies');
-}
 
 function hallFromHtml(html) {
   const hall = html.match(/<a href="\.\.\/halls\/[^"]+\.html">([^<]*Hall[^<]*)<\/a>/i);
@@ -89,7 +86,8 @@ function lessonFromHtml(html) {
   return 'Security depends on design quality, key management, and implementation.';
 }
 
-function main() {
+function main(check = false) {
+  const outputs = new Map();
   const files = fs.readdirSync(ciphersDir).filter((f) => f.endsWith('.html')).sort();
   const cards = {};
 
@@ -156,6 +154,8 @@ function main() {
     const title = stripTags(between(html, /<h1[^>]*>([\s\S]*?)<\/h1>/i, titleizeSlug(slug)));
     const hall = hallFromHtml(html);
     const family = familyFromHall(hall);
+    const trust = trustFor('ciphers/' + file);
+    const entry = byPath.get('ciphers/' + file);
 
     cards[slug] = {
       name: title || titleizeSlug(slug),
@@ -170,7 +170,8 @@ function main() {
       usedBy: 'Historical operators, states, or communities documented for this exhibit',
       keyType: keyTypeFromHtml(html),
       keyIdea: `${family} transformation of plaintext into protected form`,
-      securityFailure: securityFromHtml(html),
+      trust,
+      securityFailure: trust ? (entry.note || 'See the exhibit’s documented attacks and limitations.') : null,
       modernLesson: lessonFromHtml(html)
     };
     if (OVERRIDES[slug]) Object.assign(cards[slug], OVERRIDES[slug]);
@@ -183,7 +184,14 @@ function main() {
     totalExhibits: files.length,
     cards
   }, null, 2) + '\n';
-  fs.writeFileSync(outJson, jsonText, 'utf8');
+  let output = jsonText;
+  if (fs.existsSync(outJson)) {
+    const previous = JSON.parse(fs.readFileSync(outJson, 'utf8'));
+    const next = JSON.parse(jsonText);
+    delete previous.generatedAt; delete next.generatedAt;
+    if (JSON.stringify(previous) === JSON.stringify(next)) output = fs.readFileSync(outJson, 'utf8');
+  }
+  outputs.set(outJson, output);
 
   const jsText = [
     "'use strict';",
@@ -192,11 +200,18 @@ function main() {
     '})(typeof window !== "undefined" ? window : globalThis);',
     ''
   ].join('\n');
-  fs.writeFileSync(outJs, jsText, 'utf8');
+  outputs.set(outJs, jsText);
+  for (const [file, expected] of outputs) {
+    if (!check) { fs.writeFileSync(file, expected, 'utf8'); continue; }
+    if (!fs.existsSync(file) || fs.readFileSync(file, 'utf8') !== expected) {
+      console.error(`Stale artifact metadata: ${path.relative(repo, file)}`);
+      process.exitCode = 1;
+    }
+  }
 
   console.log(`Built artifact cards for ${files.length} exhibits.`);
   console.log(`- ${path.relative(repo, outJson)}`);
   console.log(`- ${path.relative(repo, outJs)}`);
 }
 
-main();
+main(process.argv.includes('--check'));

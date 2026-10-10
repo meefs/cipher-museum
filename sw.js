@@ -16,10 +16,15 @@
  */
 'use strict';
 
-const VERSION = 'cipher-museum-940f038b';
+const VERSION = 'cipher-museum-9bf65fa0';
+
 const CORE = [
   '/',
   '/index.html',
+  '/ciphers/myszkowski.html',
+  '/ciphers/turning-grille.html',
+  '/ciphers/hagelin-c36.html',
+  '/ciphers/nema.html',
   '/css/museum.css',
   '/css/historical-demos.css',
   '/js/historical-ciphers.js',
@@ -28,6 +33,10 @@ const CORE = [
   '/js/footer.js',
   '/js/breadcrumbs.js',
   '/js/ui-delegates.js',
+  '/js/trust-labels.js',
+  '/js/search.js',
+  '/js/search-index.json',
+  '/js/artifact-cards.js',
   '/hall-of-foundations/index.html',
   '/hall-of-foundations/foundations.css',
   '/images/icons.svg',

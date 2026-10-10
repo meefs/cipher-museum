@@ -11,7 +11,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "6×6 Polybius square + columnar key",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Georges Painvin · 48 hours of continuous work",
       "modernLesson": "Layered cipher rounds"
     },
     "adfgx": {
@@ -23,7 +28,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Polybius key square + columnar key",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Georges Painvin · 1918 · Differential frequency analysis",
       "modernLesson": "Substitution + transposition = modern cipher rounds"
     },
     "aeneas-tacticus": {
@@ -35,7 +45,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Trivial",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Out-of-band synchronization is a real cryptographic primitive"
     },
     "aes": {
@@ -47,7 +58,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Modern Cryptography transformation of plaintext into protected form",
-      "securityFailure": "Secure (no practical attack)",
+      "trust": {
+        "key": "secure",
+        "text": "Secure (Modern)",
+        "description": "Still considered secure when used correctly with modern key handling."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "affine": {
@@ -59,7 +75,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Pair (a,b) — a coprime to 26 → 12·26 = 312 keys",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Trivial",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Linearity is fatal to security"
     },
     "agnes-driscoll": {
@@ -71,7 +92,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Codebreaker Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "alberti-disk": {
@@ -83,7 +105,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Physical rotating disk (two alphabets)",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Index of Coincidence · Frequency analysis",
       "modernLesson": "Physical key material → rotor machines"
     },
     "amharic-ge-ez-ciphers": {
@@ -95,6 +122,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Historical (low security)",
       "modernLesson": "Large syllabic alphabets complicate frequency analysis"
     },
@@ -107,6 +139,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Broken (by its own inventors)",
       "modernLesson": "Cryptanalysis is the indispensable counterweight to cryptography"
     },
@@ -119,7 +156,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Secure for its time · obsoleted by frequency analysis",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "arnold-andre": {
@@ -131,6 +173,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Compromised by capture (1780)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -143,7 +190,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "None (fixed reflection)",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Trivial",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Inspection (it is its own inverse)",
       "modernLesson": "Ciphers without keys offer no security"
     },
     "autokey": {
@@ -155,7 +207,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Short keyword, then plaintext itself extends the key",
       "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
-      "securityFailure": "Statistical (Friedman, 1920s)",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Friedman's index of coincidence + autokey-aware crib dragging (1920s)",
       "modernLesson": "Self-keyed schemes still leak: the key is no longer random once it carries plaintext statistics"
     },
     "babington": {
@@ -167,7 +224,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Nomenclator: 23 letter symbols + 36 codewords + 4 nulls + 1 \"doubleth\"",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Broken in days · Mary executed 1587",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Thomas Phelippes, working for Sir Francis Walsingham · within days of interception",
       "modernLesson": "Cryptography is an operational system, not just an algorithm — channel security and forgery resistance matter"
     },
     "bach-motif": {
@@ -179,7 +241,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Musical cryptogram",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "bacon": {
@@ -191,7 +254,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "5-bit binary (A/B patterns)",
       "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Pattern recognition · Statistical analysis of A/B distribution",
       "modernLesson": "Binary encoding — direct ancestor of all digital data"
     },
     "bazeries": {
@@ -203,7 +271,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Numeric keyword (Polybius + transposition)",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Layered frequency analysis",
       "modernLesson": "Key-controlled multi-layer operations"
     },
     "beale": {
@@ -215,6 +288,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
       "securityFailure": "Unsolved (Beale 1 & 3)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -227,7 +305,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Repeating keyword",
       "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Kasiski Examination · Index of Coincidence",
       "modernLesson": "Symmetric operations in stream ciphers"
     },
     "beurling": {
@@ -239,7 +322,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Codebreaker Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "bible-code": {
@@ -251,7 +335,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Debunked",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "The law of large numbers always produces patterns — the question is whether they exceed expectation"
     },
     "bifid": {
@@ -263,7 +348,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "5×5 keyword square",
       "keyIdea": "Transposition transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Statistical analysis · Hill climbing",
       "modernLesson": "Confusion + diffusion combined"
     },
     "bill-tutte": {
@@ -275,7 +365,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Codebreaker Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "bletchley-park": {
@@ -287,7 +378,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Historical",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "book-cipher": {
@@ -299,7 +391,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "An agreed-upon book; ciphertext is a list of (page, line, word) or (page, word) coordinates",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Secure if the book is unguessable; broken otherwise",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Identifying the book — the Beale Cipher 2 was solved when the anonymous pamphleteer (published by James Ward, 1885) tried the Declaration of Independence",
       "modernLesson": "Key distribution is the hard part; the underlying primitive can be trivial"
     },
     "cabinet-noir": {
@@ -311,7 +408,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Historical",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Signals intelligence is as old as the written word"
     },
     "caesar": {
@@ -323,7 +421,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Shift (1–25)",
       "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Frequency Analysis · Al-Kindi · 850 AD",
       "modernLesson": "S-boxes in AES"
     },
     "cardano-autokey": {
@@ -335,6 +438,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Single priming letter",
       "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Easy (recovery cascade)",
       "modernLesson": "Key reuse from the plaintext is not the same as key freshness"
     },
@@ -347,6 +455,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "The grille pattern (positions of the holes)",
       "keyIdea": "Transposition transformation of plaintext into protected form",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
       "securityFailure": "Weak (steganography, not encryption)",
       "modernLesson": "Hiding a message ≠ encrypting a message"
     },
@@ -359,7 +472,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Two scrambled 26-letter alphabets",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Published key-recovery attacks",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Published key-recovery attacks by Lasry, Rubin, Kopal and Wacker (2016).",
       "modernLesson": "Self-modifying ciphers can be strong with simple parts"
     },
     "che-guevara": {
@@ -371,7 +489,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Personal key phrase + numeric ladder",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken (capture of materials)",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Bolivian Army capture (1967)",
       "modernLesson": "Physical security of key material is the hardest problem"
     },
     "chinese-telegraph": {
@@ -383,7 +506,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "American and Civil War Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Public codebook (super-enciphered when secret)",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "cicada-3301": {
@@ -395,7 +519,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Multi-stage ARG / recruitment puzzle",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "columnar": {
@@ -407,7 +532,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Column-ordering keyword",
       "keyIdea": "Transposition transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Frequency analysis · Anagramming",
       "modernLesson": "Column-mixing in AES MixColumns"
     },
     "commercial-codebooks": {
@@ -419,6 +549,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "American and Civil War Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Public codebooks (compression, not secrecy)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -431,7 +566,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Vigenère keyword (15 letters typical)",
       "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Union cryptanalysts · Kasiski (published 1863)",
       "modernLesson": "Operational security failures"
     },
     "copiale": {
@@ -443,7 +583,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken (2011)",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Knight, Megyesi, Schaefer (USC/Uppsala, 2011)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "culper-ring": {
@@ -455,6 +600,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Codebook (never captured, never broken)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -467,7 +617,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Pop Culture",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "dagapeyeff": {
@@ -479,6 +630,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
       "securityFailure": "Unsolved challenge cipher",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -491,7 +647,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Fictional substitution cipher",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "des": {
@@ -503,6 +660,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Modern Cryptography transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Broken (brute force, 1998)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -515,7 +677,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Unbroken (correct use)",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Correct OTP use is unbreakable; logistics often fail before the math"
     },
     "dictionary-code": {
@@ -527,7 +694,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Page and word number from shared dictionary",
       "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Known dictionary + position lookup",
       "modernLesson": "Shared key material management"
     },
     "diffie-hellman": {
@@ -539,7 +711,12 @@
       "usedBy": "Every TLS handshake negotiating forward secrecy",
       "keyType": "No key input — the protocol produces one",
       "keyIdea": "Two parties derive a shared secret over a public channel; nothing is encrypted",
-      "securityFailure": "Secure (with 2048+ bit groups)",
+      "trust": {
+        "key": "secure",
+        "text": "Secure (Modern)",
+        "description": "Still considered secure when used correctly with modern key handling."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "dilly-knox": {
@@ -551,7 +728,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Codebreaker Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "dorabella": {
@@ -563,7 +741,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Custom 24-symbol alphabet of arcs and orientations",
       "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Unsolved",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "Nobody — over 125 years of attempts, no consensus solution",
       "modernLesson": "Tiny ciphertexts (87 chars) don't give cryptanalysis enough statistical signal"
     },
     "double-transposition": {
@@ -575,7 +758,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Two columnar keywords",
       "keyIdea": "Transposition transformation of plaintext into protected form",
-      "securityFailure": "Weak",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Anagramming · Hill climbing (difficult)",
       "modernLesson": "Multiple cipher rounds"
     },
     "dunin": {
@@ -587,7 +775,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Living Legend",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "ecdsa": {
@@ -599,7 +788,12 @@
       "usedBy": "TLS certificates, Bitcoin and Ethereum transactions, secure-boot chains",
       "keyType": "Private scalar d with public point Q = dG",
       "keyIdea": "Proves authorship of a message hash using a private scalar on an elliptic curve",
-      "securityFailure": "Secure (with a sound nonce)",
+      "trust": {
+        "key": "secure",
+        "text": "Secure (Modern)",
+        "description": "Still considered secure when used correctly with modern key handling."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "egyptian-substitution": {
@@ -611,7 +805,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Decorative concealment",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "The line between cipher, code, and ornament is older than writing itself"
     },
     "elizebeth-friedman": {
@@ -623,7 +818,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Codebreaker Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "enigma": {
@@ -635,7 +831,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Rotor wiring + plugboard settings",
       "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Bombe machine · Crib attacks · Alan Turing · Bletchley Park",
       "modernLesson": "Complexity ≠ security without proper operational discipline"
     },
     "fialka": {
@@ -647,7 +848,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Historical Only",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "Never publicly broken by cryptanalysis in operational service; obsolete today.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "field-hollers": {
@@ -659,7 +865,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Historical (social steganography)",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Steganography hides existence of message; cryptography hides content"
     },
     "four-square": {
@@ -671,7 +878,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Two keywords (two keyed squares)",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Moderate",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Digram frequency analysis · simulated annealing",
       "modernLesson": "Fixed mappings preserve digram statistics"
     },
     "fractionated-morse": {
@@ -683,7 +895,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Substitution alphabet for Morse triples",
       "keyIdea": "Transposition transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Structural analysis of Morse patterns",
       "modernLesson": "Irregular encoding for security"
     },
     "freemason-pigpen": {
@@ -695,7 +912,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Fraternal symbol-substitution alphabet",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "gchq-trio": {
@@ -707,7 +925,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Invention Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "geheimschreiber": {
@@ -719,6 +938,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Broken (Beurling, 1940)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -731,7 +955,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Fictional substitution cipher",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "gravity-falls": {
@@ -743,7 +968,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Pop Culture",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "great-cipher": {
@@ -755,7 +981,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Codebook of ~587 numbered syllables",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Étienne Bazeries (1893): syllabic frequency analysis and contextual cribs.",
       "modernLesson": "Decoy tokens & variable-length codewords"
     },
     "gronsfeld": {
@@ -767,7 +998,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Numeric keyword (digits 0-9)",
       "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Kasiski · Only 10 possible shifts per position",
       "modernLesson": "Key alphabet size matters"
     },
     "hagelin-c36": {
@@ -779,7 +1015,12 @@
       "usedBy": "Military and diplomatic operators of Hagelin pin-and-lug machines",
       "keyType": "Pin patterns, lug settings, wheel selection and starting positions",
       "keyIdea": "Pin-and-lug mechanisms produce a changing numerical shift; configurations vary by model",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "The pin-and-lug family has published cryptanalytic attacks; Greenough’s 1999 C-52 attack uses known plaintext.",
       "modernLesson": "Public cryptanalysis and independent supplier review are separate requirements"
     },
     "hill": {
@@ -791,7 +1032,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Invertible key matrix (n×n)",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Known plaintext attack (matrix algebra)",
       "modernLesson": "Matrix operations in AES MixColumns"
     },
     "histiaeus-tattoo": {
@@ -803,6 +1049,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
       "securityFailure": "Steganography (concealment)",
       "modernLesson": "If a channel cannot be searched, the message does not need to be encrypted"
     },
@@ -815,7 +1066,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Symbol-to-letter mapping table",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Weak",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Statistical analysis · Structural pattern detection",
       "modernLesson": "Non-uniform output distributions"
     },
     "ira-ciphers": {
@@ -827,7 +1083,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken (key text identifiable)",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Jim Gillogly — hill climbing over column orders",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "jefferson-disk": {
@@ -839,7 +1100,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Physical disk arrangement (36 disks)",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Brute force · Probable word attack",
       "modernLesson": "Mechanical cipher → rotor machines"
     },
     "jn-25": {
@@ -851,7 +1117,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Broken in depth",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Station HYPO and allied Pacific units",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "joan-clarke": {
@@ -863,7 +1134,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Codebreaker Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "kahn": {
@@ -875,7 +1147,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Cryptohistory Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "kama-sutra": {
@@ -887,7 +1160,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Pairing seed (rearranges 13 letter pairs)",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Trivial",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Cryptography arose independently across world cultures"
     },
     "kerckhoffs": {
@@ -899,7 +1177,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Modern Cryptography transformation of plaintext into protected form",
-      "securityFailure": "Principle (not a cipher)",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Open design allows public scrutiny that defeats hidden flaws"
     },
     "kl-7": {
@@ -911,7 +1190,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Historical Only",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "Never publicly broken by cryptanalysis in operational service; stolen keys exposed traffic.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "kryha": {
@@ -923,6 +1207,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Broken (Friedman, 1933)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -935,7 +1224,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Promotional / collaborative cipher hunts",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "kryptos": {
@@ -947,6 +1237,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
       "securityFailure": "K1–K3 Broken · K4 Unsolved",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -959,7 +1254,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Living Legend",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "latin-american-codebooks": {
@@ -971,6 +1267,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Low (commercial, not military)",
       "modernLesson": "Efficiency and secrecy drove code adoption as much as military need"
     },
@@ -983,7 +1284,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Codebreaker Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "lorenz": {
@@ -995,7 +1297,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "12-wheel teleprinter cipher (Vernam-based)",
       "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Bill Tutte · Known plaintext · Colossus computer (1944)",
       "modernLesson": "Computational cryptanalysis → birth of modern computing"
     },
     "m-94": {
@@ -1007,6 +1314,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Tactical only",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -1019,6 +1331,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "6 pinwheels (lengths 26, 25, 23, 21, 19, 17) + 27 lug bars",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Strong (tactical)",
       "modernLesson": "Mechanical key streams need long periods"
     },
@@ -1031,6 +1348,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Solved 2022 — after 436 years",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -1043,7 +1365,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Codebreaker Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "mccormick": {
@@ -1055,6 +1378,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
       "securityFailure": "Unsolved homicide-evidence cipher",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -1067,7 +1395,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken (FBI discovers technique)",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "Physical discovery — the FBI photographically enlarged suspicious punctuation",
       "modernLesson": "Steganography hides the message; cryptography hides the content"
     },
     "mit-mystery-hunt": {
@@ -1079,7 +1412,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Annual collaborative puzzle hunt",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "monoalphabetic": {
@@ -1091,7 +1425,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Full alphabet permutation (26! keys)",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Al-Kindi · Frequency Analysis · 850 AD",
       "modernLesson": "S-boxes in AES"
     },
     "morse": {
@@ -1103,7 +1442,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Encoding, not encryption",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "myszkowski": {
@@ -1115,7 +1455,12 @@
       "usedBy": "Classical cipher practitioners and puzzle solvers",
       "keyType": "Keyword with repeated letters assigned identical ranks",
       "keyIdea": "Read single columns downwards and tied columns together across rows",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Repeated-keyword transposition preserves letter frequencies and is vulnerable to statistical and keyword-search attacks.",
       "modernLesson": "Specify tie handling and incomplete rows to make a permutation reversible"
     },
     "national-treasure": {
@@ -1127,7 +1472,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Pop Culture",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "navajo-code-talkers": {
@@ -1139,7 +1485,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Natural language (Navajo)",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Historical Only",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "Never publicly broken in wartime service; a historical military code.",
       "modernLesson": "Security through complexity · pre-shared keys"
     },
     "nema": {
@@ -1151,7 +1502,12 @@
       "usedBy": "Swiss Army; training and war-reserve configurations",
       "keyType": "Wheel selection and pairing; ten starting window letters",
       "keyIdea": "Four wired rotors and a moving reflector controlled by separate stepping wheels",
-      "securityFailure": "Historical Only",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "Obsolete Swiss military rotor machine. The demo fixes one historical wheel configuration; the 17,576-keypress state period is not its key space.",
       "modernLesson": "Count the state period separately from the initial key space"
     },
     "nihilist": {
@@ -1163,7 +1519,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Polybius square + numeric keyword",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Frequency analysis of digit pairs · Kasiski-equivalent",
       "modernLesson": "Layered cipher operations"
     },
     "nomenclator": {
@@ -1175,7 +1536,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Alphabet substitution + 1,000–2,000 entry codebook of words and names",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Statistical + intercept-volume",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Black Chambers (Vienna, Paris, London) c. 1700–1850 by sheer intercept volume",
       "modernLesson": "Hybrid systems with mixed-granularity tokens still need uniform statistical hardness"
     },
     "null-cipher": {
@@ -1187,6 +1553,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Position rule — first/last letter, Nth letter, Nth word, …",
       "keyIdea": "Transposition transformation of plaintext into protected form",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
       "securityFailure": "Weak (concealment, not encryption)",
       "modernLesson": "A hidden message that nobody looks for is, briefly, secure"
     },
@@ -1199,7 +1570,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Random key same length as message (used once)",
       "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
-      "securityFailure": "Provably Secure*",
+      "trust": {
+        "key": "secure",
+        "text": "Secure (Modern)",
+        "description": "Still considered secure when used correctly with modern key handling."
+      },
+      "securityFailure": "Requires a secret, truly random, message-length pad used once.",
       "modernLesson": "Information-theoretic security (Shannon, 1949)"
     },
     "patterson-jefferson-cipher": {
@@ -1211,6 +1587,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Substitution transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Solved 2007 — after 206 years",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -1223,7 +1604,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Undeciphered script",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "pigpen": {
@@ -1235,7 +1617,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Fixed symbol-to-letter grid",
       "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Symbol frequency analysis · Pattern recognition",
       "modernLesson": "Visual encoding as cryptography"
     },
     "playfair": {
@@ -1247,7 +1634,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "5×5 keyword square",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Digraph statistics · hill climbing",
       "modernLesson": "Block encryption and diffusion"
     },
     "polybius": {
@@ -1259,7 +1651,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "None (fixed grid)",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Frequency analysis",
       "modernLesson": "Coordinate encoding → Bit-slicing in AES"
     },
     "porta": {
@@ -1271,7 +1668,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Repeating keyword (pair-based)",
       "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Index of Coincidence · Statistical analysis",
       "modernLesson": "Lookup-table cipher design"
     },
     "purple": {
@@ -1283,7 +1685,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Stepping-switch banks (6-vowel + 20-consonant split) plus daily key sheet",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Broken (1940)",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Frank Rowlett, Genevieve Grotjan & the US SIS · 20 September 1940",
       "modernLesson": "Distinct sub-ciphers per character class create exploitable structure"
     },
     "rail-fence": {
@@ -1295,7 +1702,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Number of rails (2-10)",
       "keyIdea": "Transposition transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Brute force · Trivial keyspace",
       "modernLesson": "Permutation layers in block ciphers"
     },
     "red-army-faction": {
@@ -1307,7 +1719,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Unbroken (pads not recovered)",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "State sponsor infrastructure dramatically elevates non-state actor crypto capabilities"
     },
     "red-type-a": {
@@ -1319,6 +1736,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Broken by SIS",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -1331,7 +1753,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Codebreaker Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "rosetta-stone": {
@@ -1343,7 +1766,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Solved 1822 (Champollion)",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "A known plaintext is the most powerful cryptanalytic asset there is"
     },
     "rot13": {
@@ -1355,7 +1779,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "None (fixed shift of 13)",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Trivial",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Knowing the system",
       "modernLesson": "Obfuscation ≠ encryption"
     },
     "rsa": {
@@ -1367,7 +1796,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Modern Cryptography transformation of plaintext into protected form",
-      "securityFailure": "Secure (with 2048+ bit keys)",
+      "trust": {
+        "key": "secure",
+        "text": "Secure (Modern)",
+        "description": "Still considered secure when used correctly with modern key handling."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "running-key": {
@@ -1379,7 +1813,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Full-length key text (book or speech)",
       "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
-      "securityFailure": "Weak",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Source text identification · Statistical analysis",
       "modernLesson": "Key length = message length (OTP principle)"
     },
     "sator-square": {
@@ -1391,7 +1830,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
-      "securityFailure": "Palindromic word square / hidden acrostic",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "scytale": {
@@ -1403,7 +1843,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Rod diameter (physical key)",
       "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Brute force — try different rod diameters",
       "modernLesson": "Transposition & key space"
     },
     "sha256": {
@@ -1415,7 +1860,12 @@
       "usedBy": "Certificate chains, Bitcoin mining, file integrity, password storage (via KDFs)",
       "keyType": "Unkeyed",
       "keyIdea": "One-way compression of any input to a fixed 256-bit digest; not reversible by design",
-      "securityFailure": "Secure (no practical collision)",
+      "trust": {
+        "key": "secure",
+        "text": "Secure (Modern)",
+        "description": "Still considered secure when used correctly with modern key handling."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "shamir-secret-sharing": {
@@ -1427,7 +1877,12 @@
       "usedBy": "DNSSEC root key ceremonies, HSM master key custody, cryptocurrency custodians",
       "keyType": "No key — the secret is the object being split",
       "keyIdea": "Hides a secret as a polynomial constant term; any k of n points recover it, k−1 reveal nothing",
-      "securityFailure": "Information-theoretically secure",
+      "trust": {
+        "key": "secure",
+        "text": "Secure (Modern)",
+        "description": "Still considered secure when used correctly with modern key handling."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "shugborough": {
@@ -1439,6 +1894,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
       "securityFailure": "Unsolved monument inscription",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -1451,7 +1911,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "15 rotors arranged as 3 banks of 5 (cipher × 5, control × 5, index × 5)",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Historical Only",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "Never publicly broken by cryptanalysis in wartime service; obsolete today.",
       "modernLesson": "Pseudorandom rotor stepping defeats the regularities that broke Enigma"
     },
     "sigsaly": {
@@ -1463,7 +1928,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Unbroken",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "The first practical secure voice communication predates digital age by 50 years"
     },
     "slidex": {
@@ -1475,6 +1945,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "American and Civil War Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Tactical (intentionally weak)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -1487,7 +1962,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Initial ordering of a 54-card deck (52 + 2 jokers)",
       "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
-      "securityFailure": "Moderate",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Hand-deniable crypto for high-risk environments"
     },
     "somerton-man": {
@@ -1499,6 +1979,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
       "securityFailure": "Unsolved Cold-War-era inscription",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -1511,7 +1996,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Route transposition + code words",
       "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
-      "securityFailure": "Weak",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Never broken in wartime — superseded after the war",
       "modernLesson": "Route transposition as message obfuscation"
     },
     "station-hypo": {
@@ -1523,7 +2013,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Broken (JN-25)",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "straddling-checkerboard": {
@@ -1535,6 +2026,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "8 high-frequency letters in row 0",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Weak (alone) · Strong (in VIC)",
       "modernLesson": "Variable-length codes resist character-aligned attacks"
     },
@@ -1547,7 +2043,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "5×5 Polybius grid (no key)",
       "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Frequency analysis · Grid deduction",
       "modernLesson": "Non-electronic covert communication"
     },
     "trifid": {
@@ -1559,7 +2060,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "3×3×3 keyword cube",
       "keyIdea": "Transposition transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Statistical analysis",
       "modernLesson": "3D lookup tables in modern cipher design"
     },
     "trithemius": {
@@ -1571,6 +2077,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Optional starting offset only",
       "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Easy",
       "modernLesson": "A predictable keystream is barely a keystream"
     },
@@ -1583,7 +2094,12 @@
       "usedBy": "German Army in WWI; other military grille users",
       "keyType": "Hole pattern, starting orientation and rotation direction",
       "keyIdea": "Four quarter-turns visit each cell once, permuting a complete message block",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "A transposition cipher: quarter-turn holes permute a complete block, preserving letter frequencies.",
       "modernLesson": "A stencil can rearrange a message without concealing its existence"
     },
     "two-square": {
@@ -1595,7 +2111,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Two keywords (two keyed squares)",
       "keyIdea": "Substitution transformation of plaintext into protected form",
-      "securityFailure": "Weak",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Digram frequency · same-row leak",
       "modernLesson": "Beware of identity transformations as edge cases"
     },
     "typex": {
@@ -1607,7 +2128,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "5 rotors (3 stepping + 2 stator) chosen from a set of 10 or 14",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Historical Only",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "Never publicly broken by cryptanalysis in wartime service; obsolete today.",
       "modernLesson": "Removing a weakness (Enigma's plugboard quirks) by adding rotors trades operator burden for cryptanalytic strength"
     },
     "venona": {
@@ -1619,6 +2145,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Partial break (key reuse exploit)",
       "modernLesson": "Even perfect ciphers fail when key generation is flawed"
     },
@@ -1631,7 +2162,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Key tape (bitwise XOR)",
       "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
-      "securityFailure": "Weak (if key reused)",
+      "trust": {
+        "key": "secure",
+        "text": "Secure (Modern)",
+        "description": "Still considered secure when used correctly with modern key handling."
+      },
+      "securityFailure": "Secure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.",
       "modernLesson": "XOR as cipher operation · nonce uniqueness"
     },
     "vic": {
@@ -1643,7 +2179,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Straddling checkerboard + double transposition",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Weak",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Never broken by cryptanalysis — exposed by defector (1957)",
       "modernLesson": "Peak hand-cipher design principles"
     },
     "vietnamese-underground": {
@@ -1655,7 +2196,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Partially broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "SIGINT (NSA/ARVN), captured materials",
       "modernLesson": "Compartmentalization limits damage from key compromise"
     },
     "vigenere": {
@@ -1667,7 +2213,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Repeating keyword",
       "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
-      "securityFailure": "Broken 1863",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Babbage ~1854 · Kasiski 1863",
       "modernLesson": "Stream ciphers (ChaCha20)"
     },
     "voynich": {
@@ -1679,7 +2230,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Historical Only",
+      "trust": {
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "No longer in use, or never confirmed broken/deciphered."
+      },
+      "securityFailure": "No one. Every published \"solution\" has been refuted.",
       "modernLesson": "Statistical signatures alone cannot tell cipher from constructed language from hoax"
     },
     "wadsworth-cipher": {
@@ -1691,7 +2247,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
-      "securityFailure": "Broken",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Ciphertext-only stochastic hill climbing (2020)",
       "modernLesson": "Coprime periods buy length; they do not buy security"
     },
     "wallis-ciphers": {
@@ -1703,6 +2264,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Substitution transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Royalist nomenclators — broken by Wallis",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -1715,6 +2281,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Mixed-alphabet keyword (inner dial)",
       "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Weak (1867 standards)",
       "modernLesson": "Mechanisation does not, by itself, add security"
     },
@@ -1727,7 +2298,8 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
-      "securityFailure": "Codebreaker Biography",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "zero-knowledge-proofs": {
@@ -1739,7 +2311,12 @@
       "usedBy": "Zcash shielded transactions, Ethereum rollups, anonymous credential systems",
       "keyType": "Witness known only to the prover",
       "keyIdea": "Demonstrates knowledge of a secret without transmitting any part of it",
-      "securityFailure": "Secure (foundational result)",
+      "trust": {
+        "key": "secure",
+        "text": "Secure (Modern)",
+        "description": "Still considered secure when used correctly with modern key handling."
+      },
+      "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "zimmermann": {
@@ -1751,6 +2328,11 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Varies by system",
       "keyIdea": "American and Civil War Ciphers transformation of plaintext into protected form",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
       "securityFailure": "Broken (Room 40)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
@@ -1763,7 +2345,12 @@
       "usedBy": "Historical operators, states, or communities documented for this exhibit",
       "keyType": "Homophonic substitution + diagonal transposition",
       "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
-      "securityFailure": "Solved 2020",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Oranchak, Blake & Van Eycke (2020)",
       "modernLesson": "Layered ciphers · n-gram scoring"
     }
   }

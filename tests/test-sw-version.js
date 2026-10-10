@@ -18,6 +18,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const { swVersionFor, bundlesFor, EXTRA } = require('../scripts/sw-version.js');
 
 const ROOT = path.join(__dirname, '..');
@@ -51,4 +52,34 @@ const missing = [...hashed].filter(rel => !fs.existsSync(path.join(ROOT, rel)));
 ok('every hashed file exists on disk', missing.length === 0, missing.join(', '));
 
 console.log(`\n  ${fail ? '❌' : '✅'} Service-worker version ${fail ? 'stale or incomplete' : 'fresh'} (${hashed.size} files hashed)`);
+if (fail) process.exit(1);
+
+// A checkout's line endings cannot alter the generated version. Reproduce the
+// reviewed CRLF mistake in an isolated fixture, and also prove real text and
+// binary changes still invalidate the cache.
+const fixture = fs.mkdtempSync(path.join(os.tmpdir(), 'museum-sw-version-'));
+try {
+  for (const rel of ['sw.js', ...hashed]) {
+    const dest = path.join(fixture, rel);
+    fs.mkdirSync(path.dirname(dest), { recursive: true });
+    fs.copyFileSync(path.join(ROOT, rel), dest);
+  }
+  const original = swVersionFor(fixture);
+  for (const rel of hashed) {
+    if (!/\.(css|js|json|svg|webmanifest)$/i.test(rel)) continue;
+    const file = path.join(fixture, rel);
+    fs.writeFileSync(file, fs.readFileSync(file, 'utf8').replace(/\r?\n/g, '\r\n'));
+  }
+  ok('CRLF checkout produces the same version as LF', swVersionFor(fixture) === original);
+  const script = path.join(fixture, 'js/ui-delegates.js');
+  fs.appendFileSync(script, '\r\n// genuine changed content\r\n');
+  ok('real text changes still invalidate the version', swVersionFor(fixture) !== original);
+  const binary = path.join(fixture, 'images/icons/icon-192.png');
+  fs.writeFileSync(binary, Buffer.from([13, 10]));
+  const binaryVersion = swVersionFor(fixture);
+  fs.writeFileSync(binary, Buffer.from([10]));
+  ok('binary CRLF bytes are preserved in the hash', swVersionFor(fixture) !== binaryVersion);
+} finally {
+  fs.rmSync(fixture, { recursive: true, force: true });
+}
 if (fail) process.exit(1);

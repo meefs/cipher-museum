@@ -62,11 +62,11 @@
   <div class="page-meta">
     <span class="page-num">Exhibit 69 of 164</span>
     <span class="badge era-19c">1817 · USA</span>
-    <span class="badge sec-broken">Broken</span>
   </div>
   <h1 class="page-title">Wadsworth Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
   <p class="page-tagline">Thirty-three teeth against twenty-six. The mismatch was the whole idea — and it made this the better machine that history forgot.</p>
+  <p class="exhibit-status-note">Ciphertext-only stochastic hill climbing (2020)</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Colonel Decius Wadsworth, U.S. Army Ordnance Corps</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1817</span></div>
@@ -259,7 +259,7 @@ To encipher one letter:
             <tr><td>Inner disk</td><td>26 positions — letters only</td></tr>
             <tr><td>Gearing</td><td>26:33</td></tr>
             <tr><td>Period</td><td>858 teeth (lcm of 26 and 33)</td></tr>
-            <tr><td>Security</td><td>Broken</td></tr>
+            <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
             <tr><td>Broken By</td><td>Kaeding, ciphertext-only hill climbing (2020)</td></tr>
           </tbody>
         </table>
@@ -490,6 +490,7 @@ To encipher one letter:
 })();
 </script>
 
+<script src="../js/trust-labels.js"></script>
 <script src="../js/ciphers/all-engines.min.js"></script>
 <script src="../js/demo-loader.min.js"></script>
 <script src="../js/nav.js" defer></script>

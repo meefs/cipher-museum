@@ -139,7 +139,10 @@ for (const [slug, number, label, hall] of [
   assert.match(read('sitemap.xml'), new RegExp(`https://ciphermuseum.com/ciphers/${slug}\.html`));
   assert.match(read(`halls/${hall}.html`), new RegExp(`href="../ciphers/${slug}\.html" class="cipher-card"`));
   assert.equal(artifactData.cards[slug].hall, hall === 'machines' ? 'VII' : 'IV');
-  assert.equal(artifactData.cards[slug].securityFailure, label === 'historical' ? 'Historical Only' : 'Broken');
+  assert.deepEqual(artifactData.cards[slug].trust, { key: label, ...Object.fromEntries(
+    Object.entries(require('../data/trust-labels.json')[label]).filter(([key]) => key !== 'icon')) });
+  assert.equal(artifactData.cards[slug].securityFailure, entries.find(e => e.path === rel).note);
+  assert.match(read('sw.js'), new RegExp(`'/ciphers/${slug}\\.html'`), `${slug}: precached for offline use`);
 }
 for (const [page, target] of [['m209', 'hagelin-c36'], ['hagelin-c36', 'm209'],
   ['cardano-grille', 'turning-grille'], ['turning-grille', 'cardano-grille'], ['columnar', 'myszkowski'], ['myszkowski', 'columnar']]) {

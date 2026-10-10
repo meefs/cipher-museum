@@ -32,14 +32,15 @@
   var grid = document.createElement('dl');
   grid.className = 'artifact-card-grid';
 
-  function addField(label, value) {
+  function addField(label, value, trust) {
     var dt = document.createElement('dt');
     dt.className = 'artifact-card-label';
     dt.textContent = label;
 
     var dd = document.createElement('dd');
     dd.className = 'artifact-card-value';
-    dd.textContent = value || 'Not specified';
+    if (trust) dd.innerHTML = window.TrustLabels.badge(trust);
+    else dd.textContent = value || 'Not specified';
 
     grid.appendChild(dt);
     grid.appendChild(dd);
@@ -52,7 +53,10 @@
   addField('Used By', card.usedBy);
   addField('Key Type', card.keyType);
   addField('Key Idea', card.keyIdea);
-  addField('Security Failure', card.securityFailure);
+  if (card.trust) {
+    addField('Trust', card.trust.text, card.trust);
+    addField('Security History / Limits', card.securityFailure);
+  }
   addField('Modern Lesson', card.modernLesson);
 
   section.appendChild(title);
