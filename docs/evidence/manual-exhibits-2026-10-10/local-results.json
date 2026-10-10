@@ -1,0 +1,40 @@
+{
+  "codeHead": "102a2fb01ec71405f6be6518c62710471b4f24b7",
+  "fullLocalTestHead": "5217889b0d012fbdbc4b20303d8126520b141846",
+  "node": "v22.23.3",
+  "environment": "Darwin 25.6.0 arm64",
+  "fullSuites": {
+    "total": 32,
+    "passed": 32,
+    "failed": 0,
+    "excluded": 0
+  },
+  "engineSpecs": {
+    "registered": 88,
+    "specFiles": 88,
+    "tests": 698,
+    "passed": 698,
+    "failed": 0,
+    "scalingJudged": 88,
+    "scalingSkipped": 0,
+    "limit": 10
+  },
+  "legacyIntegrationSkips": 2,
+  "corpus": {
+    "records": 100026,
+    "passedRecords": 99500,
+    "knownDeviationRecords": 526,
+    "mismatchEvents": 1051,
+    "intentionalNoiseEvents": 959,
+    "historicalVariantEvents": 92,
+    "unexplained": 0,
+    "schemaValid": 100026,
+    "schemaInvalid": 0
+  },
+  "htmlLint": {
+    "files": 204,
+    "errors": 0
+  },
+  "initialFailure": "First uncommitted Phase2 full run:31/32 suites passed; doublePlayfair retained display traces in bulk path and scaled11.9x. Other suites ran. Optional trace capture repaired bulk allocation; guard unchanged. Subsequent full suites and scaling pass.",
+  "finalFollowup": "102a2fb changes only generated comparison heading/search preservation and its countguard relative to5217889; focused counts/UI tests, two generatorpasses,lint and freshbrowser/offline rerun pass. Hosted CI must validate the final evidence commit separately."
+}

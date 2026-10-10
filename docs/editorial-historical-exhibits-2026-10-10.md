@@ -25,7 +25,7 @@ this table refer to the inspected baseline; generated additions may move lines.
 | 7 | `learn.html:106` (baseline) | the tools that broke every classical cipher. | tools that break many classical ciphers given suitable ciphertext, rather than every historical system or a correctly used one-time pad. | Focused claim guard; surrounding prose reread. |
 | 7 | `halls/polyalphabetic.html:237` (baseline) | Modern cryptography uses 128–256 bit keys that never repeat within a session, and key derivation functions ensure no two sessions share key material. | Modern systems can reuse a suitably strong key for multiple messages, but must respect each scheme’s nonce, counter, and usage limits. Key derivation can separate session keys; it does not automatically guarantee unique key material. | Focused claim guard; surrounding prose reread. |
 | 7 | `halls/substitution.html:246` | Every monoalphabetic cipher is broken by counting symbol frequencies and matching them to known language distributions. | Frequency and word-pattern analysis require enough suitable ciphertext; short messages need not have a unique solution. | Focused claim guard. |
-| 6 | `scripts/build-counts.js:34`; `museum-map.html:465` | Disk-derived “ciphers: 144”; “The Roster · 140 Ciphers + 3 Protocol Exhibits”; README: 84 engines, 113 demos | Extend existing identity source with collection/demo fields. 144 cipher/history + 17 Foundations + 3 protocol/construction = 164 exhibits. Registry: 85 engines; 132 interactive exhibits, including 114 main-collection exhibits. Owned totals generated, stable IDs retained. | Registration, canonical search ID, static freshness/idempotence checks; deliberate stale-count mutation rejected. |
+| 6 | `scripts/build-counts.js:34`; `museum-map.html:465` | Disk-derived “ciphers: 144”; “The Roster · 140 Ciphers + 3 Protocol Exhibits”; README: 84 engines, 113 demos | Extend existing identity source with collection/demo fields. 144 cipher/history + 17 Foundations + 3 protocol/construction = 164 exhibits. Final editorial baseline: 85 registered engines; 143 interactive exhibits, including 123 main-collection exhibits. After the three additions: 167 total exhibits (147 cipher/history + 17 Foundations + 3 protocols/constructions), 88 engines and 146 interactive exhibits (126 cipher/history). Owned totals and all denominators generated; stable IDs retained. | Registration, canonical search ID, static freshness/idempotence checks; deliberate stale-count mutation rejected. |
 
 ## Sources checked
 
@@ -87,3 +87,72 @@ proved the controls work. Their registrations were corrected too: §109, 110,
 exhibits**, including **123 cipher/history exhibits**. The earlier 135/115
 intermediate figures above record the first correction, not the final totals.
 Tests now bind the real companion script before exercising those controls.
+
+
+## Completed historical expansion and final verification
+
+The implementation commits are `08fdf0a` (three sourced exhibits), `5217889`
+(comparison totals and required RS44 settings), and `102a2fb` (preserve search
+heading metadata). Editorial changes were committed first, in `4e5b0c3`,
+`2b60824` and `d5ade24`. No old audit report or corpus record was rewritten.
+
+See [exact procedures, sources and limits](HISTORICAL_PROCEDURES.md),
+[separate independent review](manual-cipher-independent-review-2026-10-10.md),
+and [local result accounting](evidence/manual-exhibits-2026-10-10/local-results.json).
+All 164 prior identities, classifications and descriptive notes are preserved.
+New IDs are 165 RS44, 166 German Double Playfair and 167 AMSCO; all three use
+the canonical Broken classification. The nine-entry secure allowlist is unchanged.
+
+The local full run on `5217889` passed **32/32 top-level suites** and all suites
+following the timing guard. `test:engines` also passed separately: **88/88 spec
+files, 698/698 tests, 88/88 measured engines, zero scaling skips, unchanged
+10× limit**. Two existing legacy integration cases remain documented skips,
+not missing top-level suites. HTML lint passed **204 files, zero errors**.
+Corpus schema validation: 100,026 valid, zero invalid. Replay: 99,500 passed
+records plus 526 narrowly documented deviation records; 1,051 deviation events
+(959 intentional-noise, 92 historical-variant), zero unexplained failures.
+None of the three new procedures has a matching existing corpus dataset;
+independent original-manual/ACA examples and separate reference checks cover them.
+
+The first uncommitted Phase2 full run failed the Double Playfair scaling check
+at 11.9×; all other 31 suites were inspected and passed. The engine retained
+animation objects for every pair even in bulk encode/decode. Bulk processing
+now uses the same substitution with optional display capture. The guard was
+not weakened, and later complete runs pass. An initial fixture transcription
+(extra L in RS44's `alege`) and test-wiring/hand-check mistakes were corrected
+against the scan/procedure, not by deriving expected answers from the engine.
+
+The final code head `102a2fb` additionally passed focused counts/UI checks,
+HTML lint, `git diff --check`, and two complete metadata/bundle generation passes
+with no tracked diff. Its only change from the locally full-tested head concerns
+comparison heading extraction and generated search/SW metadata; no cipher or
+renderer algorithm changed. The final PR's hosted workflow runs both full
+engine verification and the complete test runner again.
+
+[Browser evidence](evidence/manual-exhibits-2026-10-10/browser.json) records
+Chrome154 desktop1280×900 and mobile390×844 controls, independent source
+answers, encrypt/decrypt, valid→invalid→valid clearing, keyboard focus,
+reduced-motion and normal Play/Pause. Each page has exactly one artifact card,
+zero body overflow, zero page errors and zero failed requests. A separate fresh
+profile warms only the homepage, installs the current worker, goes offline,
+and first-visits all three pages: source answers, decryption, animations and
+artifact cards all work. This is local browser evidence, not production deployment.
+Screenshots and [reproduction script](evidence/manual-exhibits-2026-10-10/browser-check.cjs)
+are saved with [SHA-256 hashes](evidence/manual-exhibits-2026-10-10/sha256.json).
+
+[Eight deliberate regressions](evidence/manual-exhibits-2026-10-10/mutations.json)
+were rejected in a disposable worktree at `08fdf0a`: RS44 physical readout,
+missing Double Playfair second stage, wrong J expansion, flattened AMSCO cell
+alternation, stale UI caption, absent offline bundle, stale Quick Facts count,
+and a production guard weakened to20× (which accepts actual quadratic work
+and therefore fails the production canary). [Two follow-up mutations](evidence/manual-exhibits-2026-10-10/followup-mutations.json)
+reject stale comparison metadata and an omitted minute treated as zero. That
+worktree has the exact `5217889` code tree under a distinct cherry-pick SHA;
+the evidence records both identities. All mutations were restored.
+
+Remaining qualifications are explicit teaching limits: fixed RS44 example
+stencil on the page, omitted field-message preparation/headers, retained Double
+Playfair filler, normalized letters rather than raw-text recovery. The separate
+review does not claim a second independent transcription of every stencil cell.
+No source scans or third-party images were copied. There is no known blocking
+defect in the completed scope. No merge or deployment is authorized for this PR.
