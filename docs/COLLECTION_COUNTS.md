@@ -25,7 +25,9 @@ field and does not determine collection membership.
   demos. Static explanatory pages and navigation controls do not qualify.
   It is a count of exhibits with an interactive, not of buttons, widgets or
   reversible encryption algorithms. The cipher/history subset is reported
-  separately. The former 113 figure omitted the working Dorabella viewer.
+  separately. The previous main-collection demo count omitted working visualizations.
+  Review also identified the Bible Code ELS controls and the annex’s PNT and
+  entropy sliders; these count as interactives, not encryption engines.
 
 Run `npm run build:counts` to render current totals into owned static surfaces:
 count slots, meta descriptions, roster headings, search fallback, README current

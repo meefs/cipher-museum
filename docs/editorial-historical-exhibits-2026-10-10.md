@@ -67,3 +67,21 @@ observations retained for a future task: the Great Cipher's opening account of
 its “delete previous letter” breakthrough merits its own source audit; existing
 engine educational approximations and older README test-result examples are not
 re-certified by this editorial pass.
+
+## Independent editorial follow-up
+
+The separate reviewer found three functioning controls omitted by the initial
+interactive metadata: §144 PNT and §151 entropy sliders, and §140 Bible Code ELS
+search. The final editorial count is **135 interactive exhibits**, including
+**115 cipher/history exhibits**. This corrects the initial candidate reported
+above; it does not rewrite the earlier test results. Focused tests now exercise
+these three real controls and pin their registrations. The reviewer also found
+universal-substitution wording duplicated on timeline lines 308/312; both were
+qualified. Literal count markers inside README code fences were removed and
+current inventory prose now avoids an independent fixed engine total.
+
+Eight older narrative pages have apparent widget controls without working
+click delegation (SIGSALY, microdot, Cabinet Noir, Kerckhoffs, field hollers,
+Da Vinci Code, National Treasure, Gravity Falls). They are excluded from the
+**working** interactive count. Their repair is unrelated and deferred; no
+historical exhibit or canonical trust identity was removed.

@@ -91,6 +91,20 @@
       "line": 246,
       "before": "Every monoalphabetic cipher is broken by counting symbol frequencies and matching them to known language distributions.",
       "after": "Monoalphabetic substitution preserves language-frequency patterns. With enough suitable ciphertext, frequency counts and word patterns can reveal the substitution; short messages need not have a unique solution."
+    },
+    {
+      "item": 7,
+      "file": "timeline.html",
+      "line": 308,
+      "before": "Every simple substitution cipher is now breakable.",
+      "after": "Simple substitution exposes language patterns, although a short cryptogram may not determine a unique plaintext."
+    },
+    {
+      "item": 7,
+      "file": "timeline.html",
+      "line": 312,
+      "before": "every monoalphabetic cipher falls to a frequency table",
+      "after": "many monoalphabetic substitutions can be attacked with frequency tables and word patterns, given enough suitable ciphertext"
     }
   ]
 }

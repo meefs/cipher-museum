@@ -34,4 +34,23 @@ assert.deepEqual(search.filter(e=>e.exhibitNumber).map(e=>[e.exhibitNumber,e.u,e
 assert.match(read('search.html'), /Number\.isInteger\(e\.exhibitNumber\)/);
 assert.equal(es.find(e=>e.path==='ciphers/dorabella.html').interactive, true);
 assert.equal(es.find(e=>e.path==='ciphers/hagelin-c36.html').interactive, false);
+// A real controllable visualization counts even without a button/demo marker.
+const { JSDOM } = require('jsdom');
+for (const [id,file,input,value,output,expected] of [
+ [144,'hall-of-foundations/prime-number-theorem.html','xr','2000','pread',/π\(2000\) = 303/],
+ [151,'hall-of-foundations/entropy.html','pr','25','hread',/entropy = 0\.811/],
+ [140,'ciphers/bible-code.html','els-search',null,'els-word-display',/FIRE/]
+]) {
+ assert.equal(es.find(e=>e.number===id).interactive,true,file+' has a working interactive');
+ const html=read(file).replace(/<script\b[^>]*src="([^"]+)"[^>]*><\/script>/g,(_,src)=> {
+  const target=path.resolve(root,path.dirname(file),src);
+  return fs.existsSync(target)?'<script>'+fs.readFileSync(target,'utf8').replace(/<\/script/gi,'<\\/script')+'</script>':'';
+ });
+ const dom=new JSDOM(html,{runScripts:'dangerously',pretendToBeVisual:true,url:'http://localhost/'+file});
+ const el=dom.window.document.getElementById(input);
+ if(value!==null){el.value=value;el.dispatchEvent(new dom.window.Event('input',{bubbles:true}));}else el.click();
+ assert.match(dom.window.document.getElementById(output).textContent,expected,file+' real control');
+ dom.window.close();
+}
+for (const block of read('README.md').matchAll(/```[\s\S]*?```/g)) assert(!block[0].includes('<!-- count:'),'Count plumbing must not display inside fenced code');
 console.log('Count registrations, categories, canonical search identities, static totals and idempotence passed: '+JSON.stringify(c));
