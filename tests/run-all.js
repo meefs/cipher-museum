@@ -19,6 +19,7 @@ const suites = [
   'tests/test-nav-reciprocity.js',
   'tests/test-nav-active.js',
   'tests/test-counts.js',
+  'tests/test-editorial-claims.js',
   'tests/test-trust-labels.js',
   'tests/test-artifact-loading.js',
   'tests/test-exhibit-examples.js',

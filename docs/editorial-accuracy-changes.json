@@ -1,0 +1,96 @@
+{
+  "baseline": "5a519c8c11db9c7b0810455491d019b9f9883f7d",
+  "changes": [
+    {
+      "item": 1,
+      "file": "halls/modern-crypto.html",
+      "line": 61,
+      "before": "Every cipher in the previous ten halls eventually fell. The five classical primitives in this hall &mdash; DES, Diffie-Hellman, RSA, AES, SHA-256 &mdash; were designed in the public eye, scrutinised for decades, and now anchor essentially every secure system on Earth. They are not the <em>only</em> modern primitives &mdash; ChaCha20, ECDH (X25519), Ed25519, BLAKE2/3, and the post-quantum NIST finalists all sit alongside them &mdash; but they are the canonical foundation from which the rest of the field is built. Only one of them, AES, is technically a cipher in the classical sense. The other four solve problems that classical cryptography could not: distributing keys without meeting in person, signing documents at a distance, and verifying integrity without a shared secret.",
+      "after": "The earlier halls distinguish cryptanalytic breaks, operational misuse, obsolescence, and unresolved systems; a correctly used one-time pad remains unbreakable. The five primitives here serve different purposes. DES and AES are symmetric block ciphers; DES is now unsafe because its 56-bit key is too small. RSA supports distinct public-key encryption and signature schemes, with appropriate encoding and padding such as OAEP and PSS. Diffie–Hellman is key agreement, and SHA-256 is a hash function. These building blocks explain encryption, shared-secret establishment, signatures, and integrity; none alone provides a complete secure system."
+    },
+    {
+      "item": 2,
+      "file": "modern.html",
+      "line": 60,
+      "before": "Every exhibit in this museum is a <strong>cipher</strong> — a reversible method for turning plaintext into ciphertext and back. Modern cryptography includes ciphers (AES, ChaCha20), but also key exchange protocols, digital signatures, and hash functions that are <em>not ciphers at all</em>. This page maps the journey from classical failure to modern practice.",
+      "after": "This collection includes ciphers, people, historical and cultural context, mathematical foundations, hashes, signatures, and protocols. A cipher reversibly transforms plaintext into ciphertext with a key, but many exhibits explain other parts of cryptography. This page connects that broader history to modern practice."
+    },
+    {
+      "item": 3,
+      "file": "learn.html",
+      "line": 76,
+      "before": "Vigenère's repeating keyword became ChaCha20's continuous pseudorandom keystream — the same combine-with-keystream idea, with a key that never repeats.",
+      "after": "Vigenère's repeating keyword and ChaCha20's pseudorandom keystream illustrate combining a message with a keystream. A ChaCha20 key can protect multiple messages, but nonces must not repeat under that key, and the block counter must not wrap."
+    },
+    {
+      "item": 1,
+      "file": "modern.html",
+      "line": 167,
+      "before": "Only the first category below — symmetric ciphers — contains actual <em>ciphers</em> (reversible plaintext↔ciphertext transformations). Key exchange, public-key cryptography, and hash functions are <strong>cryptographic primitives</strong>, not ciphers. They solve different problems: establishing shared secrets, proving identity, and verifying integrity.",
+      "after": "Symmetric and public-key encryption schemes both reversibly transform plaintext into ciphertext. RSA encryption and RSA signatures are distinct schemes with different encoding and padding requirements. Diffie–Hellman establishes shared secrets; signatures authenticate messages; hash functions produce digests. These primitives solve different problems and must be combined with appropriate protocols."
+    },
+    {
+      "item": 4,
+      "file": "modern.html",
+      "line": 179,
+      "before": "Designed by Daniel Bernstein. 256-bit key, 64-bit nonce. XORs plaintext with a cryptographically random, never-repeating keystream.",
+      "after": "Designed by Daniel Bernstein. Original ChaCha uses a 64-bit nonce and 64-bit block counter. IETF ChaCha20 (RFC 8439) uses a 256-bit key, 96-bit nonce, and 32-bit block counter. Both XOR plaintext with a deterministic pseudorandom keystream: never reuse a nonce under the same key, and never let the block counter wrap. <a href=\"https://cr.yp.to/chacha/chacha-20080128.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Original specification</a>; <a href=\"https://www.rfc-editor.org/rfc/rfc8439.html#section-2.3\" target=\"_blank\" rel=\"noopener noreferrer\">RFC 8439 §§2.3, 4</a> and <a href=\"https://www.rfc-editor.org/errata/rfc8439\" target=\"_blank\" rel=\"noopener noreferrer\">errata</a>."
+    },
+    {
+      "item": 5,
+      "file": "timeline.html",
+      "line": 384,
+      "before": "— and finally identifies the prisoner known as the Man in the Iron Mask.",
+      "after": "— and proposes General Vivien de Bulonde as the Man in the Iron Mask. That identification remains disputed; deciphering a letter did not settle the prisoner’s identity."
+    },
+    {
+      "item": 5,
+      "file": "ciphers/great-cipher.html",
+      "line": 96,
+      "before": "Among the messages he read was finally an answer to one of history's great mysteries: a 1691 letter naming a prisoner who would later become legend as <strong>\"the Man in the Iron Mask.\"</strong>",
+      "after": "A 1691 letter about General Vivien de Bulonde led Bazeries to propose an identity for the Man in the Iron Mask. His identification remains disputed: the decipherment and the historical inference are separate claims."
+    },
+    {
+      "item": 5,
+      "file": "ciphers/great-cipher.html",
+      "line": 183,
+      "before": "Most modern historians disagree — Bulonde was alive and free again by 1708 — but the discovery showed the world that the Great Cipher had finally fallen, and that its protected secrets had been historically significant ones.",
+      "after": "The identification remains disputed, including the interpretation of the numbers supposedly denoting a mask. David Kahn revisited the evidence in <em>Cryptologia</em> 29(1), pp. 43–49 (2005), “The Man in the Iron Mask — Encore et Enfin, Cryptologically.” The letter is evidence of the cipher’s decipherment, not a confirmed solution to the prisoner’s identity."
+    },
+    {
+      "item": 7,
+      "file": "halls/unbreakable.html",
+      "line": 66,
+      "before": "Every cipher you've seen in this museum has been broken. Some in days. Some after centuries. One cipher exists that Claude Shannon proved mathematically unbreakable — yet we almost never use it, because its requirements are practically impossible to meet. This hall confronts that paradox and examines why classical cryptography collapsed entirely in WWII.",
+      "after": "Many historical ciphers succumbed to cryptanalysis; others were exposed by operational mistakes, became obsolete, or remain unresolved. Claude Shannon proved perfect secrecy for a correctly used one-time pad: a secret, truly random, message-length key used once. Its demanding key-distribution requirements limit its use. This hall examines that guarantee and how pad reuse undermined it."
+    },
+    {
+      "item": 7,
+      "file": "modern.html",
+      "line": 226,
+      "before": "Every classical cipher failed because it relied on obscurity or physical key distribution. Modern cryptography replaced both with mathematical hardness and public-key mathematics — and expanded far beyond ciphers into protocols, signatures, and proofs.",
+      "after": "Many historical systems failed through structural weaknesses, key reuse, or operational mistakes; others are obsolete or unresolved. A correctly used one-time pad retains perfect secrecy. Modern cryptography adds computational security and public-key methods, while still depending on sound key management, and extends into protocols, signatures, and proofs."
+    },
+    {
+      "item": 7,
+      "file": "learn.html",
+      "line": 106,
+      "before": "the tools that broke every classical cipher.",
+      "after": "tools that break many classical ciphers given suitable ciphertext, rather than every historical system or a correctly used one-time pad."
+    },
+    {
+      "item": 7,
+      "file": "halls/polyalphabetic.html",
+      "line": 237,
+      "before": "Modern cryptography uses 128–256 bit keys that never repeat within a session, and key derivation functions ensure no two sessions share key material.",
+      "after": "Modern systems can reuse a suitably strong key for multiple messages, but must respect each scheme’s nonce, counter, and usage limits. Key derivation can separate session keys; it does not automatically guarantee unique key material."
+    },
+    {
+      "item": 7,
+      "file": "halls/substitution.html",
+      "line": 246,
+      "before": "Every monoalphabetic cipher is broken by counting symbol frequencies and matching them to known language distributions.",
+      "after": "Monoalphabetic substitution preserves language-frequency patterns. With enough suitable ciphertext, frequency counts and word patterns can reveal the substitution; short messages need not have a unique solution."
+    }
+  ]
+}

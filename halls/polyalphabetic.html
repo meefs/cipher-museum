@@ -234,7 +234,7 @@ LXFOP<strong style="color:var(--gold);">VEF</strong>RNHRLXFOP<strong style="colo
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-key"/></svg></span><span class="panel-title">Key Length = Security</span></div>
-      <div class="panel-body"><p>The Vigenère lesson: short repeating keys are fatal. Modern cryptography uses 128–256 bit keys that never repeat within a session, and key derivation functions ensure no two sessions share key material.</p></div>
+      <div class="panel-body"><p>The Vigenère lesson: short repeating keys are fatal. Modern systems can reuse a suitably strong key for multiple messages, but must respect each scheme’s nonce, counter, and usage limits. Key derivation can separate session keys; it does not automatically guarantee unique key material.</p></div>
     </div>
   </div>
 

@@ -189,11 +189,8 @@
 
     function init(entries) {
       var list = Array.isArray(entries) ? entries : [];
-      // Index entries carry their type on `k`, not `kind`. Reading the wrong
-      // field silently counted zero and fell through to list.length, which
-      // includes halls and utility pages — the status line claimed 188.
-      var EXHIBIT_KINDS = { cipher: 1, exhibit: 1, person: 1, unsolved: 1 };
-      var exhibitCount = list.filter(function (e) { return EXHIBIT_KINDS[e.k]; }).length;
+      // Count canonical exhibit identities, not descriptive kinds or utility pages.
+      var exhibitCount = list.filter(function (e) { return Number.isInteger(e.exhibitNumber); }).length;
       window.CipherSearch._count = exhibitCount || '?';
       render();
     }

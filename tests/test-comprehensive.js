@@ -92,7 +92,7 @@ function configHasEngine(slug) {
 const allPages = fs.readdirSync(CIPHERS_DIR).filter(f => f.endsWith('.html')).sort();
 const exhibitCounts = require('../scripts/build-counts').computeCounts();
 ok('Cipher pages count agrees with the inventory',
-  allPages.length === exhibitCounts.ciphers + exhibitCounts.protocols, `actual=${allPages.length}`);
+  allPages.length === exhibitCounts.cipherHistory + exhibitCounts.protocols, `actual=${allPages.length}`);
 
 // Broad detection of interactive demo markup for hand-built pages
 const HAND_BUILT_MARKERS = /(?:onclick|data-fn)="(setMode|runCipher|runVigenere|encrypt|decrypt|zReveal|zAssignLetter|encode|decode|cipher|runHollerCode)/i;

@@ -57,7 +57,7 @@
   <span class="page-eyebrow">Beyond the Museum</span>
   <h1 class="page-title">Modern Cryptography</h1>
   <p class="page-tagline">Not just ciphers — an entirely different discipline</p>
-  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">Every exhibit in this museum is a <strong>cipher</strong> — a reversible method for turning plaintext into ciphertext and back. Modern cryptography includes ciphers (AES, ChaCha20), but also key exchange protocols, digital signatures, and hash functions that are <em>not ciphers at all</em>. This page maps the journey from classical failure to modern practice.</p>
+  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">This collection includes ciphers, people, historical and cultural context, mathematical foundations, hashes, signatures, and protocols. A cipher reversibly transforms plaintext into ciphertext with a key, but many exhibits explain other parts of cryptography. This page connects that broader history to modern practice.</p>
 </div>
 
 <div class="section">
@@ -164,7 +164,7 @@
 
   <div class="callout" style="margin-bottom:2.5rem;border-color:var(--gold-b);background:var(--gold-glow);">
     <span class="callout-icon">⚠️</span>
-    <div class="callout-body"><p><strong>Taxonomy note:</strong> Only the first category below — symmetric ciphers — contains actual <em>ciphers</em> (reversible plaintext↔ciphertext transformations). Key exchange, public-key cryptography, and hash functions are <strong>cryptographic primitives</strong>, not ciphers. They solve different problems: establishing shared secrets, proving identity, and verifying integrity.</p></div>
+    <div class="callout-body"><p><strong>Taxonomy note:</strong> Symmetric and public-key encryption schemes both reversibly transform plaintext into ciphertext. RSA encryption and RSA signatures are distinct schemes with different encoding and padding requirements. Diffie–Hellman establishes shared secrets; signatures authenticate messages; hash functions produce digests. These primitives solve different problems and must be combined with appropriate protocols.</p></div>
   </div>
   <div class="callout" style="margin-bottom:2.5rem;border-color:var(--gold-b);background:var(--gold-glow);">
     <span class="callout-icon">🏛️</span>
@@ -176,7 +176,7 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;">
       <a href="ciphers/aes.html" class="panel" style="text-decoration:none;color:inherit;display:block;"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-diamond"/></svg></span><span class="panel-title">AES-256 (Symmetric) <span style="color:var(--gold);font-size:.7rem;">→ exhibit</span></span></div><div class="panel-body"><p>128-bit blocks, 256-bit key, 14 rounds. 2²⁵⁶ possible keys with no known practical attack. Protects everything from HTTPS to full-disk encryption.</p>
       </div></a>
-      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-globe"/></svg></span><span class="panel-title">ChaCha20 (Stream Cipher)</span></div><div class="panel-body"><p>Designed by Daniel Bernstein. 256-bit key, 64-bit nonce. XORs plaintext with a cryptographically random, never-repeating keystream.</p></div></div>
+      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-globe"/></svg></span><span class="panel-title">ChaCha20 (Stream Cipher)</span></div><div class="panel-body"><p>Designed by Daniel Bernstein. Original ChaCha uses a 64-bit nonce and 64-bit block counter. IETF ChaCha20 (RFC 8439) uses a 256-bit key, 96-bit nonce, and 32-bit block counter. Both XOR plaintext with a deterministic pseudorandom keystream: never reuse a nonce under the same key, and never let the block counter wrap. <a href="https://cr.yp.to/chacha/chacha-20080128.pdf" target="_blank" rel="noopener noreferrer">Original specification</a>; <a href="https://www.rfc-editor.org/rfc/rfc8439.html#section-2.3" target="_blank" rel="noopener noreferrer">RFC 8439 §§2.3, 4</a> and <a href="https://www.rfc-editor.org/errata/rfc8439" target="_blank" rel="noopener noreferrer">errata</a>.</p></div></div>
     </div>
   </div>
 
@@ -223,7 +223,7 @@
 
   <div class="callout callout-mystery">
     <span class="callout-icon">🎓</span>
-    <div class="callout-body"><p><strong>The museum's final lesson:</strong> Every classical cipher failed because it relied on obscurity or physical key distribution. Modern cryptography replaced both with mathematical hardness and public-key mathematics — and expanded far beyond ciphers into protocols, signatures, and proofs.</p></div>
+    <div class="callout-body"><p><strong>The museum's final lesson:</strong> Many historical systems failed through structural weaknesses, key reuse, or operational mistakes; others are obsolete or unresolved. A correctly used one-time pad retains perfect secrecy. Modern cryptography adds computational security and public-key methods, while still depending on sound key management, and extends into protocols, signatures, and proofs.</p></div>
   </div>
 
   <div class="section-head" style="text-align:left;margin-top:3rem;">

@@ -1,95 +1,82 @@
 #!/usr/bin/env node
 'use strict';
-
-/**
- * Derive the museum's exhibit counts from the exhibits themselves.
- *
- * These numbers are quoted on roughly a dozen surfaces — the homepage, the
- * museum map, every exhibit's "N of 140" chip, the README, the search status
- * line, the footer, the sitemap comment. They have drifted four separate times,
- * because each surface carried its own hardcoded copy and nothing checked them
- * against each other, or against reality.
- *
- * This script computes them from ground truth (what is actually on disk) and
- * writes data/exhibit-counts.json. tests/test-counts.js then asserts that every
- * surface agrees with it, so a fifth drift fails the build instead of shipping.
- *
- * Usage: node scripts/build-counts.js [--check]
- *   --check  print the counts and exit without writing
- */
-
+// Existing exhibit identity/trust data owns collection membership and demos.
 const fs = require('fs');
 const path = require('path');
-
+const vm = require('vm');
 const ROOT = path.resolve(__dirname, '..');
-
-// §158-160. These live in ciphers/ for URL reasons but are protocol exhibits,
-// not cipher exhibits, and the site counts them separately.
-const PROTOCOL_EXHIBITS = ['ecdsa', 'shamir-secret-sharing', 'zero-knowledge-proofs'];
-
-function htmlFiles(dir) {
-  return fs.readdirSync(path.join(ROOT, dir))
-    .filter(f => f.endsWith('.html'))
-    .map(f => f.slice(0, -5));
-}
-
+const read = rel => fs.readFileSync(path.join(ROOT, rel), 'utf8');
 function computeCounts() {
-  const cipherPages = htmlFiles('ciphers');
-  const ciphers = cipherPages.filter(s => !PROTOCOL_EXHIBITS.includes(s)).length;
-
-  // index.html is the wing's landing page, not an exhibit.
-  const foundations = htmlFiles('hall-of-foundations').filter(s => s !== 'index').length;
-
-  const protocols = PROTOCOL_EXHIBITS.length;
-  const halls = htmlFiles('halls').length;
-
+  const { exhibits } = JSON.parse(read('data/exhibit-trust.json'));
+  const numbers = new Set(), paths = new Set();
+  for (const e of exhibits) {
+    if (numbers.has(e.number) || paths.has(e.path)) throw new Error('Duplicate exhibit identity');
+    numbers.add(e.number); paths.add(e.path);
+    if (!['cipher-history', 'foundations', 'protocols'].includes(e.collection) ||
+        typeof e.interactive !== 'boolean' || !fs.existsSync(path.join(ROOT, e.path))) {
+      throw new Error(`Incomplete collection registration: ${e.path}`);
+    }
+  }
+  for (const dir of ['ciphers', 'hall-of-foundations']) {
+    for (const file of fs.readdirSync(path.join(ROOT, dir)).filter(f => f.endsWith('.html') && f !== 'index.html')) {
+      if (!paths.has(`${dir}/${file}`)) throw new Error(`Unregistered exhibit: ${dir}/${file}`);
+    }
+  }
+  const group = name => exhibits.filter(e => e.collection === name);
+  const range = name => [Math.min(...group(name).map(e => e.number)), Math.max(...group(name).map(e => e.number))];
+  const context = { window: {} };
+  vm.runInNewContext(read('js/ciphers/all-engines.js'), context);
   return {
-    ciphers,
-    foundations,
-    protocols,
-    halls,
-    total: ciphers + foundations + protocols,
-    // Allocated exhibit numbers remain stable when new cipher pages are
-    // appended after §160. The shared manifest owns those identities.
-    ...numberRanges()
+    cipherHistory: group('cipher-history').length,
+    foundations: group('foundations').length, protocols: group('protocols').length,
+    halls: fs.readdirSync(path.join(ROOT, 'halls')).filter(f => f.endsWith('.html')).length,
+    total: exhibits.length, engines: Object.keys(context.window.CipherEngines).length,
+    interactiveExhibits: exhibits.filter(e => e.interactive).length,
+    interactiveCipherHistory: group('cipher-history').filter(e => e.interactive).length,
+    foundationsFirst: range('foundations')[0], foundationsLast: range('foundations')[1],
+    protocolsFirst: range('protocols')[0], protocolsLast: range('protocols')[1]
   };
 }
-
-function numberRanges() {
-  const { exhibits } = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/exhibit-trust.json'), 'utf8'));
-  const foundationNumbers = exhibits.filter(e => e.path.startsWith('hall-of-foundations/')).map(e => e.number);
-  const protocolNumbers = exhibits.filter(e => PROTOCOL_EXHIBITS.some(s => e.path === `ciphers/${s}.html`)).map(e => e.number);
-  if (!foundationNumbers.length || protocolNumbers.length !== PROTOCOL_EXHIBITS.length) {
-    throw new Error('Exhibit manifest is missing Foundations or protocol identities.');
+// Named slots own current totals, never historical dates/report results.
+function renderCounts(c = computeCounts()) {
+  const out = new Map();
+  const slot = text => text.replace(/(data-count="(\w+)"[^>]*>)\d+(<\/span>)/g,
+    (_, open, key, close) => {
+      if (!(key in c)) throw new Error(`Unknown count slot: ${key}`);
+      return open + c[key] + close;
+    });
+  const { exhibits } = JSON.parse(read('data/exhibit-trust.json'));
+  for (const rel of ['index.html', 'museum-map.html', 'search.html', 'js/footer.js', 'cipher-corpus.html']) {
+    let s = slot(read(rel));
+    s = s.replace(/\b\d+ exhibits\b/g, `${c.total} exhibits`)
+      .replace(/\b\d+ cipher and history exhibits\b/g, `${c.cipherHistory} cipher and history exhibits`)
+      .replace(/\b\d+ protocols and constructions\b/g, `${c.protocols} protocols and constructions`);
+    if (rel === 'search.html') s = s.replace(/(CipherSearch\._count \|\| ')\d+(')/, `$1${c.total}$2`);
+    out.set(rel, s);
   }
-  return {
-    foundationsFirst: Math.min(...foundationNumbers), foundationsLast: Math.max(...foundationNumbers),
-    protocolsFirst: Math.min(...protocolNumbers), protocolsLast: Math.max(...protocolNumbers)
-  };
-}
-
-// Importing this module must not write anything — tests/test-counts.js requires
-// it purely to recompute ground truth.
-if (require.main === module) {
-  const counts = computeCounts();
-
-  if (process.argv.includes('--check')) {
-    console.log(JSON.stringify(counts, null, 2));
-    process.exit(0);
+  for (const e of exhibits) {
+    out.set(e.path, slot(read(e.path)).replace(/Exhibit\s+(\d+)\s+of\s+\d+/g, (_, n) => {
+      if (Number(n) !== e.number) throw new Error(`Wrong exhibit ID on ${e.path}: ${n}`);
+      return `Exhibit ${n} of ${c.total}`;
+    }));
   }
-
-  const out = path.join(ROOT, 'data', 'exhibit-counts.json');
-  fs.writeFileSync(out, JSON.stringify({
-    _comment: 'GENERATED by scripts/build-counts.js — do not hand-edit. ' +
-              'Guarded by tests/test-counts.js.',
-    ...counts
+  out.set('README.md', read('README.md').replace(/<!-- count:(\w+) -->\d+<!-- \/count -->/g, (_, key) => {
+    if (!(key in c)) throw new Error(`Unknown README count: ${key}`);
+    return `<!-- count:${key} -->${c[key]}<!-- /count -->`;
+  }));
+  out.set('data/exhibit-counts.json', JSON.stringify({
+    _comment: 'GENERATED by scripts/build-counts.js from data/exhibit-trust.json and the engine registry. Definitions: docs/COLLECTION_COUNTS.md.', ...c
   }, null, 2) + '\n');
-
-  console.log('Exhibit counts →', path.relative(ROOT, out));
-  console.log(`  ${counts.ciphers} cipher exhibits`);
-  console.log(`  ${counts.foundations} Hall of Foundations (§${counts.foundationsFirst}–${counts.foundationsLast})`);
-  console.log(`  ${counts.protocols} modern-protocol (§${counts.protocolsFirst}–${counts.protocolsLast})`);
-  console.log(`  ${counts.total} total across ${counts.halls} halls`);
+  return out;
 }
-
-module.exports = { computeCounts, PROTOCOL_EXHIBITS };
+if (require.main === module) {
+  const check = process.argv.includes('--check'), stale = [];
+  for (const [rel, expected] of renderCounts()) {
+    if (read(rel).replace(/\r\n/g, '\n') === expected.replace(/\r\n/g, '\n')) continue;
+    stale.push(rel);
+    if (!check) fs.writeFileSync(path.join(ROOT, rel), expected);
+  }
+  console.log(JSON.stringify(computeCounts()));
+  if (check && stale.length) { console.error('Stale generated counts: ' + stale.join(', ')); process.exitCode = 1; }
+}
+module.exports = { computeCounts, renderCounts };
