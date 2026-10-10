@@ -26,3 +26,11 @@ The [precommit verification](pr-completion-2026-10-10/precommit-verification.jso
 Retargeting PR #2 to main exposes the combined trust audit and four-exhibit expansion. Preserve both authorized scopes and inspect its full diff against main. The workflow runs `npm ci`, `npm run test:engines`, `npm test` and `npm run lint:html` for main-based PRs. Its separate schema job is conditional on a push to main and is skipped on PR events; full corpus replay is nevertheless part of the engine verification job. No deployment or PR merge is authorized.
 
 The repair author’s recheck is not independent approval. A separate reviewer must identify the exact final heads reviewed and any limits of their assessment. Hosted CI and any independent review are separate evidence from the archived local macOS checks.
+
+Archive closure and retargeting follow-up:
+
+A-0 verification succeeded against fetched PR #1 head `80810c1c6209ffbeadffcceee93b2536d8d6b63d` and PR #2 documentation-integration head `25277cc3d21ab7e1344e5b505fd7cf5ae7374438`. All 308 original files and 629 historical manifest entries match; every relative report link resolves from both committed trees. The [PR #1 receipt](pr-completion-2026-10-10/pr1-remote-verification.json) and [PR #2 receipt](pr-completion-2026-10-10/pr2-remote-verification.json) identify those archive-verification SHAs. These are byte/link checks, not new full test runs. Subsequent documentation heads must be checked again before final reporting.
+
+PR #2 was retargeted to main. Its [full-diff inspection](pr-completion-2026-10-10/retarget-diff-inspection.json) confirms the same 197-file authorized runtime diff as the previously reviewed combined result, plus the intended archive/attribute files, with no new runtime change or missing exhibit. Both PRs remain open and unmerged.
+
+The base edit alone did not produce a PR #2 Actions run because the workflow's default pull-request events exclude edited. Pushing this scoped archival-closure follow-up after retargeting supplies the required synchronize event. Hosted CI must finish against the resulting head; its SHA, run URL and result are recorded separately in the PR. The archived local macOS logs retain their original tested revisions.
