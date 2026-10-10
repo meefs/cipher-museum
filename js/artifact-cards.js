@@ -9,62 +9,70 @@
   var slug = file.replace(/\.html$/, '');
   if (!slug) return;
 
-  var data = (window.__ARTIFACT_CARDS__ && window.__ARTIFACT_CARDS__.cards) || {};
-  var card = data[slug];
-  if (!card) return;
+  function render() {
+    var data = (window.__ARTIFACT_CARDS__ && window.__ARTIFACT_CARDS__.cards) || {};
+    var card = data[slug];
+    if (!card) return;
 
-  var main = document.getElementById('main-content') || document.querySelector('main');
-  if (!main) return;
-  if (main.querySelector('.artifact-card')) return;
+    var main = document.getElementById('main-content') || document.querySelector('main');
+    if (!main) return;
+    if (main.querySelector('.artifact-card')) return;
 
-  var anchor = main.querySelector('.page-hero') || main.firstElementChild;
-  if (!anchor) return;
+    var anchor = main.querySelector('.page-hero') || main.firstElementChild;
+    if (!anchor) return;
 
-  var section = document.createElement('section');
-  section.className = 'artifact-card';
-  section.setAttribute('aria-label', 'Artifact card metadata');
-  section.setAttribute('data-artifact-slug', slug);
+    var section = document.createElement('section');
+    section.className = 'artifact-card';
+    section.setAttribute('aria-label', 'Artifact card metadata');
+    section.setAttribute('data-artifact-slug', slug);
 
-  var title = document.createElement('h2');
-  title.className = 'artifact-card-title';
-  title.textContent = 'Artifact Card';
+    var title = document.createElement('h2');
+    title.className = 'artifact-card-title';
+    title.textContent = 'Artifact Card';
 
-  var grid = document.createElement('dl');
-  grid.className = 'artifact-card-grid';
+    var grid = document.createElement('dl');
+    grid.className = 'artifact-card-grid';
 
-  function addField(label, value, trust) {
-    var dt = document.createElement('dt');
-    dt.className = 'artifact-card-label';
-    dt.textContent = label;
+    function addField(label, value, trust) {
+      var dt = document.createElement('dt');
+      dt.className = 'artifact-card-label';
+      dt.textContent = label;
 
-    var dd = document.createElement('dd');
-    dd.className = 'artifact-card-value';
-    if (trust) dd.innerHTML = window.TrustLabels.badge(trust);
-    else dd.textContent = value || 'Not specified';
+      var dd = document.createElement('dd');
+      dd.className = 'artifact-card-value';
+      if (trust) dd.innerHTML = window.TrustLabels.badge(trust);
+      else dd.textContent = value || 'Not specified';
 
-    grid.appendChild(dt);
-    grid.appendChild(dd);
+      grid.appendChild(dt);
+      grid.appendChild(dd);
+    }
+
+    if (card.hall) addField('Hall', card.hall);
+    addField('Era', card.era);
+    addField('Family', card.family);
+    addField('Region', card.region);
+    addField('Used By', card.usedBy);
+    addField('Key Type', card.keyType);
+    addField('Key Idea', card.keyIdea);
+    if (card.trust) {
+      addField('Trust', card.trust.text, card.trust);
+      addField('Security History / Limits', card.securityFailure);
+    }
+    addField('Modern Lesson', card.modernLesson);
+
+    section.appendChild(title);
+    section.appendChild(grid);
+
+    if (anchor.nextSibling) {
+      main.insertBefore(section, anchor.nextSibling);
+    } else {
+      main.appendChild(section);
+    }
   }
 
-  if (card.hall) addField('Hall', card.hall);
-  addField('Era', card.era);
-  addField('Family', card.family);
-  addField('Region', card.region);
-  addField('Used By', card.usedBy);
-  addField('Key Type', card.keyType);
-  addField('Key Idea', card.keyIdea);
-  if (card.trust) {
-    addField('Trust', card.trust.text, card.trust);
-    addField('Security History / Limits', card.securityFailure);
-  }
-  addField('Modern Lesson', card.modernLesson);
-
-  section.appendChild(title);
-  section.appendChild(grid);
-
-  if (anchor.nextSibling) {
-    main.insertBefore(section, anchor.nextSibling);
-  } else {
-    main.appendChild(section);
-  }
+  // Companion scripts can execute in either order. The generated data bundle
+  // announces readiness; a delayed document can also retry the same renderer.
+  window.addEventListener('artifact-cards-ready', render);
+  document.addEventListener('DOMContentLoaded', render, { once: true });
+  render();
 })();

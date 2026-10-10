@@ -172,6 +172,7 @@ function main(check = false) {
     "'use strict';",
     '(function(global){',
     `  global.__ARTIFACT_CARDS__ = ${JSON.stringify({ cards }, null, 2)};`,
+    "  if (typeof global.dispatchEvent === 'function') global.dispatchEvent(new global.Event('artifact-cards-ready'));",
     '})(typeof window !== "undefined" ? window : globalThis);',
     ''
   ].join('\n');
