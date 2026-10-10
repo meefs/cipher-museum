@@ -9,6 +9,20 @@ const { computeCounts } = require('../scripts/build-counts');
 const ROOT = path.resolve(__dirname, '..');
 const read = rel => fs.readFileSync(path.join(ROOT, rel), 'utf8');
 
+// Trust names belong to generated badges, never independently maintained
+// explanatory prose. This catches the reviewed NEMA "Broken" mutation and
+// the corresponding Hagelin statement without discarding historical facts.
+for (const slug of ['nema', 'hagelin-c36']) {
+  const dom = new JSDOM(read(`ciphers/${slug}.html`));
+  const panels = [...dom.window.document.querySelectorAll('.panel-body')];
+  for (const panel of panels) panel.querySelectorAll('.trust-label').forEach(node => node.remove());
+  const prose = panels.map(panel => panel.textContent).join(' ');
+  for (const { text } of Object.values(require('../data/trust-labels.json'))) {
+    assert(!prose.includes(text), `${slug}: classification statements must use canonical badges, not independent prose (${text})`);
+  }
+  dom.window.close();
+}
+
 // Independent known-answer tests: round trips alone would accept the wrong
 // rotor wiring, a different transposition, or the wrong tie convention.
 const nemaVector = 'HRSBVOOTZUCRWLMGRMGVWYWOVNF';
