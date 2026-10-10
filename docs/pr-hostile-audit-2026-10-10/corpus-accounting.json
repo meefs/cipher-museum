@@ -1,0 +1,545 @@
+[
+  {
+    "log": "pr1-npm-test.log",
+    "sha": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+    "records": 100026,
+    "passed": 99500,
+    "deviationRecords": 526,
+    "events": 1051,
+    "unexplained": 0,
+    "categories": [
+      {
+        "category": "intentional-noise",
+        "events": 959,
+        "reason": "The record is an intentionally corrupted OCR/telegraph transcription, so it cannot reproduce clean encryption or decryption exactly."
+      },
+      {
+        "category": "historical-variant-navajo",
+        "events": 6,
+        "reason": "The historical phrase uses the full USMC Navajo vocabulary and tokenization; the demo contains a small vocabulary subset."
+      },
+      {
+        "category": "historical-variant-stager",
+        "events": 4,
+        "reason": "The historical Stager record uses a specific route layout not represented by the demo column-count API."
+      },
+      {
+        "category": "historical-variant-confederateVigenere",
+        "events": 4,
+        "reason": "The historical brass-disk record uses a period alphabet/tableau; the demo implements ordinary repeating-key Vigenere."
+      },
+      {
+        "category": "historical-variant-zimmermann",
+        "events": 4,
+        "reason": "The historical telegram uses German diplomatic codebooks 0075/13040; the demo uses an illustrative English word list."
+      },
+      {
+        "category": "historical-variant-vic",
+        "events": 4,
+        "reason": "The historical VIC records require exact personal number, date, phrase, and transposition-width settings; the demo derives all four stages from one keyword."
+      },
+      {
+        "category": "historical-variant-culperRing",
+        "events": 4,
+        "reason": "The historical record uses original Tallmadge codebook numbers; the demo ships a smaller reconstructed codebook."
+      },
+      {
+        "category": "historical-variant-vigenere",
+        "events": 4,
+        "reason": "The historical record uses a period tableau/key convention that differs from the demo A-Z Vigenere convention."
+      },
+      {
+        "category": "historical-variant-enigma",
+        "events": 4,
+        "reason": "The historical record requires rotor order, rings, reflector, and plugboard settings unsupported by the simplified registry API; the full exhibit engine supports them."
+      },
+      {
+        "category": "historical-variant-purple",
+        "events": 4,
+        "reason": "The historical Purple record requires sixes/twenties switch wirings and stepping settings; the demo uses seeded substitution alphabets."
+      },
+      {
+        "category": "historical-variant-babington",
+        "events": 4,
+        "reason": "The historical Babington symbols and nomenclator are not the seeded bracket-token representation used by the demo."
+      },
+      {
+        "category": "historical-variant-nullCipher",
+        "events": 4,
+        "reason": "The historical record supplies an existing carrier text; the demo API instead generates its own carrier words from plaintext."
+      },
+      {
+        "category": "historical-variant-kryptos",
+        "events": 4,
+        "reason": "The historical Kryptos record uses sculpture-specific tableau and section conventions beyond the demo keyword-only model."
+      },
+      {
+        "category": "historical-variant-alberti",
+        "events": 2,
+        "reason": "The historical De Cifris record specifies disk alphabets and indicators not accepted by the demo numeric-setting API."
+      },
+      {
+        "category": "historical-variant-adfgvx",
+        "events": 2,
+        "reason": "The historical ADFGVX record uses a specific keyed 6x6 square and transposition convention not encoded in the demo key."
+      },
+      {
+        "category": "historical-variant-lorenz",
+        "events": 2,
+        "reason": "The historical Tunny record requires the actual SZ40/42 wheel patterns and settings; the demo derives illustrative wheel bits from a seed."
+      },
+      {
+        "category": "historical-variant-sigaba",
+        "events": 2,
+        "reason": "The historical SIGABA record requires real cipher/control/index rotor settings; the registry engine is a seeded pedagogical model."
+      },
+      {
+        "category": "historical-variant-jefferson",
+        "events": 2,
+        "reason": "The historical wheel record uses a specific physical disk alphabet/order set not present in the demo disk table."
+      },
+      {
+        "category": "historical-variant-m94",
+        "events": 2,
+        "reason": "The historical M-94 record uses issued disk alphabets and order; the registry engine generates seeded illustrative disks."
+      },
+      {
+        "category": "historical-variant-bookCipher",
+        "events": 2,
+        "reason": "The historical record is the unsolved Beale Paper No. 1; its true plaintext and key text are unknown, so no engine can reproduce it."
+      },
+      {
+        "category": "historical-variant-greatCipher",
+        "events": 2,
+        "reason": "The historical Grand Chiffre record uses the Rossignol numerical codebook; the demo has an illustrative syllable table."
+      },
+      {
+        "category": "historical-variant-venonaPadReuse",
+        "events": 2,
+        "reason": "The historical VENONA record uses Soviet five-digit code groups and additive pads; the demo is a simplified A-Z 5-bit XOR model."
+      },
+      {
+        "category": "historical-variant-arnoldAndre",
+        "events": 2,
+        "reason": "The historical book references depend on the exact Blackstone edition and page layout; the demo uses a reconstructed 240-word source."
+      },
+      {
+        "category": "historical-variant-diana",
+        "events": 2,
+        "reason": "The historical Diana record uses published pad-group conventions not represented by the demo keyword-only API."
+      },
+      {
+        "category": "historical-variant-m209",
+        "events": 2,
+        "reason": "The historical M-209 record requires explicit wheel pins, lugs, and starting positions; the demo derives all state from one seed."
+      },
+      {
+        "category": "historical-variant-jn25",
+        "events": 2,
+        "reason": "The historical JN-25 record requires the operational codebook and additive tables; the demo maps individual letters to invented groups."
+      },
+      {
+        "category": "historical-variant-geheimschreiber",
+        "events": 2,
+        "reason": "The historical T52 record uses Baudot and actual wheel/permutation settings; the demo is an A-Z seeded structural model."
+      },
+      {
+        "category": "historical-variant-kl7",
+        "events": 2,
+        "reason": "The historical KL-7 record requires real rotor, ring, notch, and re-entry settings; the demo derives illustrative state from one seed."
+      },
+      {
+        "category": "historical-variant-fialka",
+        "events": 2,
+        "reason": "The historical Fialka record uses a 30-character alphabet and real rotor settings; the demo uses a seeded 26-letter model."
+      },
+      {
+        "category": "historical-variant-chaocipher",
+        "events": 2,
+        "reason": "The historical Chaocipher record specifies independent left and right alphabets; the demo derives both from one keyword."
+      },
+      {
+        "category": "historical-variant-wallisCiphers",
+        "events": 2,
+        "reason": "The historical Wallis record uses its original intercepted nomenclator; the demo uses a small reconstructed word list."
+      },
+      {
+        "category": "historical-variant-chineseTelegraph",
+        "events": 2,
+        "reason": "The historical Chinese Telegraph record maps Chinese characters through the standard codebook; the demo maps Latin A-Z to illustrative groups."
+      },
+      {
+        "category": "historical-variant-wheatstone",
+        "events": 2,
+        "reason": "The historical Wheatstone record requires explicit inner/outer disk alphabets and start positions; the demo accepts only a keyword."
+      },
+      {
+        "category": "historical-variant-copiale",
+        "events": 2,
+        "reason": "The historical Copiale record uses manuscript glyphs and the recovered homophonic mapping; the demo uses synthetic letter-digit symbols."
+      }
+    ]
+  },
+  {
+    "log": "pr2-npm-test.log",
+    "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+    "records": 100026,
+    "passed": 99500,
+    "deviationRecords": 526,
+    "events": 1051,
+    "unexplained": 0,
+    "categories": [
+      {
+        "category": "intentional-noise",
+        "events": 959,
+        "reason": "The record is an intentionally corrupted OCR/telegraph transcription, so it cannot reproduce clean encryption or decryption exactly."
+      },
+      {
+        "category": "historical-variant-navajo",
+        "events": 6,
+        "reason": "The historical phrase uses the full USMC Navajo vocabulary and tokenization; the demo contains a small vocabulary subset."
+      },
+      {
+        "category": "historical-variant-stager",
+        "events": 4,
+        "reason": "The historical Stager record uses a specific route layout not represented by the demo column-count API."
+      },
+      {
+        "category": "historical-variant-confederateVigenere",
+        "events": 4,
+        "reason": "The historical brass-disk record uses a period alphabet/tableau; the demo implements ordinary repeating-key Vigenere."
+      },
+      {
+        "category": "historical-variant-zimmermann",
+        "events": 4,
+        "reason": "The historical telegram uses German diplomatic codebooks 0075/13040; the demo uses an illustrative English word list."
+      },
+      {
+        "category": "historical-variant-vic",
+        "events": 4,
+        "reason": "The historical VIC records require exact personal number, date, phrase, and transposition-width settings; the demo derives all four stages from one keyword."
+      },
+      {
+        "category": "historical-variant-culperRing",
+        "events": 4,
+        "reason": "The historical record uses original Tallmadge codebook numbers; the demo ships a smaller reconstructed codebook."
+      },
+      {
+        "category": "historical-variant-vigenere",
+        "events": 4,
+        "reason": "The historical record uses a period tableau/key convention that differs from the demo A-Z Vigenere convention."
+      },
+      {
+        "category": "historical-variant-enigma",
+        "events": 4,
+        "reason": "The historical record requires rotor order, rings, reflector, and plugboard settings unsupported by the simplified registry API; the full exhibit engine supports them."
+      },
+      {
+        "category": "historical-variant-purple",
+        "events": 4,
+        "reason": "The historical Purple record requires sixes/twenties switch wirings and stepping settings; the demo uses seeded substitution alphabets."
+      },
+      {
+        "category": "historical-variant-babington",
+        "events": 4,
+        "reason": "The historical Babington symbols and nomenclator are not the seeded bracket-token representation used by the demo."
+      },
+      {
+        "category": "historical-variant-nullCipher",
+        "events": 4,
+        "reason": "The historical record supplies an existing carrier text; the demo API instead generates its own carrier words from plaintext."
+      },
+      {
+        "category": "historical-variant-kryptos",
+        "events": 4,
+        "reason": "The historical Kryptos record uses sculpture-specific tableau and section conventions beyond the demo keyword-only model."
+      },
+      {
+        "category": "historical-variant-alberti",
+        "events": 2,
+        "reason": "The historical De Cifris record specifies disk alphabets and indicators not accepted by the demo numeric-setting API."
+      },
+      {
+        "category": "historical-variant-adfgvx",
+        "events": 2,
+        "reason": "The historical ADFGVX record uses a specific keyed 6x6 square and transposition convention not encoded in the demo key."
+      },
+      {
+        "category": "historical-variant-lorenz",
+        "events": 2,
+        "reason": "The historical Tunny record requires the actual SZ40/42 wheel patterns and settings; the demo derives illustrative wheel bits from a seed."
+      },
+      {
+        "category": "historical-variant-sigaba",
+        "events": 2,
+        "reason": "The historical SIGABA record requires real cipher/control/index rotor settings; the registry engine is a seeded pedagogical model."
+      },
+      {
+        "category": "historical-variant-jefferson",
+        "events": 2,
+        "reason": "The historical wheel record uses a specific physical disk alphabet/order set not present in the demo disk table."
+      },
+      {
+        "category": "historical-variant-m94",
+        "events": 2,
+        "reason": "The historical M-94 record uses issued disk alphabets and order; the registry engine generates seeded illustrative disks."
+      },
+      {
+        "category": "historical-variant-bookCipher",
+        "events": 2,
+        "reason": "The historical record is the unsolved Beale Paper No. 1; its true plaintext and key text are unknown, so no engine can reproduce it."
+      },
+      {
+        "category": "historical-variant-greatCipher",
+        "events": 2,
+        "reason": "The historical Grand Chiffre record uses the Rossignol numerical codebook; the demo has an illustrative syllable table."
+      },
+      {
+        "category": "historical-variant-venonaPadReuse",
+        "events": 2,
+        "reason": "The historical VENONA record uses Soviet five-digit code groups and additive pads; the demo is a simplified A-Z 5-bit XOR model."
+      },
+      {
+        "category": "historical-variant-arnoldAndre",
+        "events": 2,
+        "reason": "The historical book references depend on the exact Blackstone edition and page layout; the demo uses a reconstructed 240-word source."
+      },
+      {
+        "category": "historical-variant-diana",
+        "events": 2,
+        "reason": "The historical Diana record uses published pad-group conventions not represented by the demo keyword-only API."
+      },
+      {
+        "category": "historical-variant-m209",
+        "events": 2,
+        "reason": "The historical M-209 record requires explicit wheel pins, lugs, and starting positions; the demo derives all state from one seed."
+      },
+      {
+        "category": "historical-variant-jn25",
+        "events": 2,
+        "reason": "The historical JN-25 record requires the operational codebook and additive tables; the demo maps individual letters to invented groups."
+      },
+      {
+        "category": "historical-variant-geheimschreiber",
+        "events": 2,
+        "reason": "The historical T52 record uses Baudot and actual wheel/permutation settings; the demo is an A-Z seeded structural model."
+      },
+      {
+        "category": "historical-variant-kl7",
+        "events": 2,
+        "reason": "The historical KL-7 record requires real rotor, ring, notch, and re-entry settings; the demo derives illustrative state from one seed."
+      },
+      {
+        "category": "historical-variant-fialka",
+        "events": 2,
+        "reason": "The historical Fialka record uses a 30-character alphabet and real rotor settings; the demo uses a seeded 26-letter model."
+      },
+      {
+        "category": "historical-variant-chaocipher",
+        "events": 2,
+        "reason": "The historical Chaocipher record specifies independent left and right alphabets; the demo derives both from one keyword."
+      },
+      {
+        "category": "historical-variant-wallisCiphers",
+        "events": 2,
+        "reason": "The historical Wallis record uses its original intercepted nomenclator; the demo uses a small reconstructed word list."
+      },
+      {
+        "category": "historical-variant-chineseTelegraph",
+        "events": 2,
+        "reason": "The historical Chinese Telegraph record maps Chinese characters through the standard codebook; the demo maps Latin A-Z to illustrative groups."
+      },
+      {
+        "category": "historical-variant-wheatstone",
+        "events": 2,
+        "reason": "The historical Wheatstone record requires explicit inner/outer disk alphabets and start positions; the demo accepts only a keyword."
+      },
+      {
+        "category": "historical-variant-copiale",
+        "events": 2,
+        "reason": "The historical Copiale record uses manuscript glyphs and the recovered homophonic mapping; the demo uses synthetic letter-digit symbols."
+      }
+    ]
+  },
+  {
+    "log": "pr2-test-engines.log",
+    "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+    "records": 100026,
+    "passed": 99500,
+    "deviationRecords": 526,
+    "events": 1051,
+    "unexplained": 0,
+    "categories": [
+      {
+        "category": "intentional-noise",
+        "events": 959,
+        "reason": "The record is an intentionally corrupted OCR/telegraph transcription, so it cannot reproduce clean encryption or decryption exactly."
+      },
+      {
+        "category": "historical-variant-navajo",
+        "events": 6,
+        "reason": "The historical phrase uses the full USMC Navajo vocabulary and tokenization; the demo contains a small vocabulary subset."
+      },
+      {
+        "category": "historical-variant-stager",
+        "events": 4,
+        "reason": "The historical Stager record uses a specific route layout not represented by the demo column-count API."
+      },
+      {
+        "category": "historical-variant-confederateVigenere",
+        "events": 4,
+        "reason": "The historical brass-disk record uses a period alphabet/tableau; the demo implements ordinary repeating-key Vigenere."
+      },
+      {
+        "category": "historical-variant-zimmermann",
+        "events": 4,
+        "reason": "The historical telegram uses German diplomatic codebooks 0075/13040; the demo uses an illustrative English word list."
+      },
+      {
+        "category": "historical-variant-vic",
+        "events": 4,
+        "reason": "The historical VIC records require exact personal number, date, phrase, and transposition-width settings; the demo derives all four stages from one keyword."
+      },
+      {
+        "category": "historical-variant-culperRing",
+        "events": 4,
+        "reason": "The historical record uses original Tallmadge codebook numbers; the demo ships a smaller reconstructed codebook."
+      },
+      {
+        "category": "historical-variant-vigenere",
+        "events": 4,
+        "reason": "The historical record uses a period tableau/key convention that differs from the demo A-Z Vigenere convention."
+      },
+      {
+        "category": "historical-variant-enigma",
+        "events": 4,
+        "reason": "The historical record requires rotor order, rings, reflector, and plugboard settings unsupported by the simplified registry API; the full exhibit engine supports them."
+      },
+      {
+        "category": "historical-variant-purple",
+        "events": 4,
+        "reason": "The historical Purple record requires sixes/twenties switch wirings and stepping settings; the demo uses seeded substitution alphabets."
+      },
+      {
+        "category": "historical-variant-babington",
+        "events": 4,
+        "reason": "The historical Babington symbols and nomenclator are not the seeded bracket-token representation used by the demo."
+      },
+      {
+        "category": "historical-variant-nullCipher",
+        "events": 4,
+        "reason": "The historical record supplies an existing carrier text; the demo API instead generates its own carrier words from plaintext."
+      },
+      {
+        "category": "historical-variant-kryptos",
+        "events": 4,
+        "reason": "The historical Kryptos record uses sculpture-specific tableau and section conventions beyond the demo keyword-only model."
+      },
+      {
+        "category": "historical-variant-alberti",
+        "events": 2,
+        "reason": "The historical De Cifris record specifies disk alphabets and indicators not accepted by the demo numeric-setting API."
+      },
+      {
+        "category": "historical-variant-adfgvx",
+        "events": 2,
+        "reason": "The historical ADFGVX record uses a specific keyed 6x6 square and transposition convention not encoded in the demo key."
+      },
+      {
+        "category": "historical-variant-lorenz",
+        "events": 2,
+        "reason": "The historical Tunny record requires the actual SZ40/42 wheel patterns and settings; the demo derives illustrative wheel bits from a seed."
+      },
+      {
+        "category": "historical-variant-sigaba",
+        "events": 2,
+        "reason": "The historical SIGABA record requires real cipher/control/index rotor settings; the registry engine is a seeded pedagogical model."
+      },
+      {
+        "category": "historical-variant-jefferson",
+        "events": 2,
+        "reason": "The historical wheel record uses a specific physical disk alphabet/order set not present in the demo disk table."
+      },
+      {
+        "category": "historical-variant-m94",
+        "events": 2,
+        "reason": "The historical M-94 record uses issued disk alphabets and order; the registry engine generates seeded illustrative disks."
+      },
+      {
+        "category": "historical-variant-bookCipher",
+        "events": 2,
+        "reason": "The historical record is the unsolved Beale Paper No. 1; its true plaintext and key text are unknown, so no engine can reproduce it."
+      },
+      {
+        "category": "historical-variant-greatCipher",
+        "events": 2,
+        "reason": "The historical Grand Chiffre record uses the Rossignol numerical codebook; the demo has an illustrative syllable table."
+      },
+      {
+        "category": "historical-variant-venonaPadReuse",
+        "events": 2,
+        "reason": "The historical VENONA record uses Soviet five-digit code groups and additive pads; the demo is a simplified A-Z 5-bit XOR model."
+      },
+      {
+        "category": "historical-variant-arnoldAndre",
+        "events": 2,
+        "reason": "The historical book references depend on the exact Blackstone edition and page layout; the demo uses a reconstructed 240-word source."
+      },
+      {
+        "category": "historical-variant-diana",
+        "events": 2,
+        "reason": "The historical Diana record uses published pad-group conventions not represented by the demo keyword-only API."
+      },
+      {
+        "category": "historical-variant-m209",
+        "events": 2,
+        "reason": "The historical M-209 record requires explicit wheel pins, lugs, and starting positions; the demo derives all state from one seed."
+      },
+      {
+        "category": "historical-variant-jn25",
+        "events": 2,
+        "reason": "The historical JN-25 record requires the operational codebook and additive tables; the demo maps individual letters to invented groups."
+      },
+      {
+        "category": "historical-variant-geheimschreiber",
+        "events": 2,
+        "reason": "The historical T52 record uses Baudot and actual wheel/permutation settings; the demo is an A-Z seeded structural model."
+      },
+      {
+        "category": "historical-variant-kl7",
+        "events": 2,
+        "reason": "The historical KL-7 record requires real rotor, ring, notch, and re-entry settings; the demo derives illustrative state from one seed."
+      },
+      {
+        "category": "historical-variant-fialka",
+        "events": 2,
+        "reason": "The historical Fialka record uses a 30-character alphabet and real rotor settings; the demo uses a seeded 26-letter model."
+      },
+      {
+        "category": "historical-variant-chaocipher",
+        "events": 2,
+        "reason": "The historical Chaocipher record specifies independent left and right alphabets; the demo derives both from one keyword."
+      },
+      {
+        "category": "historical-variant-wallisCiphers",
+        "events": 2,
+        "reason": "The historical Wallis record uses its original intercepted nomenclator; the demo uses a small reconstructed word list."
+      },
+      {
+        "category": "historical-variant-chineseTelegraph",
+        "events": 2,
+        "reason": "The historical Chinese Telegraph record maps Chinese characters through the standard codebook; the demo maps Latin A-Z to illustrative groups."
+      },
+      {
+        "category": "historical-variant-wheatstone",
+        "events": 2,
+        "reason": "The historical Wheatstone record requires explicit inner/outer disk alphabets and start positions; the demo accepts only a keyword."
+      },
+      {
+        "category": "historical-variant-copiale",
+        "events": 2,
+        "reason": "The historical Copiale record uses manuscript glyphs and the recovered homophonic mapping; the demo uses synthetic letter-digit symbols."
+      }
+    ]
+  }
+]

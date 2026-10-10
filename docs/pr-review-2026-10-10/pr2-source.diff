@@ -1,0 +1,563 @@
+diff --git a/README.md b/README.md
+index 920a14a..01b4a18 100644
+--- a/README.md
++++ b/README.md
+@@ -6,7 +6,7 @@
+ 
+ Exploring 3,900+ years of encryption, cryptanalysis, and hidden history.
+ 
+-The Cipher Museum is part digital exhibit, part cipher playground, and part codebreaking classroom exploring **3,900+ years** of encryption, cryptanalysis, and hidden history across **160 exhibits** — 140 cipher exhibits in **13 exhibit halls**, the 17-exhibit **Hall of Foundations** mathematics annex (§141–157), and 3 **modern-protocol exhibits** (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs). 110 of the 140 cipher exhibits ship a fully interactive encrypt/decrypt demo or hand-built widget — the remaining 30 are codebreaker biographies and historical context pages. Modern cryptography uses more than ciphers — secure systems combine key exchange, encryption, hashing, signatures, secret sharing, and proofs.
++The Cipher Museum is part digital exhibit, part cipher playground, and part codebreaking classroom exploring **3,900+ years** of encryption, cryptanalysis, and hidden history across **164 exhibits** — 144 cipher exhibits in **13 exhibit halls**, the 17-exhibit **Hall of Foundations** mathematics annex (§141–157), and 3 **modern-protocol exhibits** (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs). 113 of the 144 cipher exhibits ship a fully interactive encrypt/decrypt demo or hand-built widget — the remaining 31 are biographies, historical context, and narrative cipher pages. Modern cryptography uses more than ciphers — secure systems combine key exchange, encryption, hashing, signatures, secret sharing, and proofs.
+ 
+ **[Live Site →](https://ciphermuseum.com)**
+ 
+@@ -14,6 +14,7 @@ The Cipher Museum is part digital exhibit, part cipher playground, and part code
+ 
+ ## 📰 Latest Update
+ 
++- **Historical expansion — §161–164** — [NEMA](https://ciphermuseum.com/ciphers/nema.html), [Hagelin C-36 / C-52](https://ciphermuseum.com/ciphers/hagelin-c36.html), [Fleissner Turning Grille](https://ciphermuseum.com/ciphers/turning-grille.html), and [Myszkowski Transposition](https://ciphermuseum.com/ciphers/myszkowski.html). NEMA, turning grille, and Myszkowski have bespoke encrypt/decrypt demos; the Hagelin lineage links to the M-209 demo and separates public cryptanalysis from the Crypto AG supplier history. Existing exhibit numbers remain stable.
+ - **Modern-protocol exhibits — §158–160** — three new exhibits extend **Hall XI (Modern Cryptography)** beyond ciphers into the protocols that secure the modern internet: **[ECDSA](https://ciphermuseum.com/ciphers/ecdsa.html)** (elliptic-curve signatures), **[Shamir's Secret Sharing](https://ciphermuseum.com/ciphers/shamir-secret-sharing.html)** (information-theoretic threshold splitting), and **[Zero-Knowledge Proofs](https://ciphermuseum.com/ciphers/zero-knowledge-proofs.html)** (prove a statement while revealing nothing). Each ships a working interactive and cross-links to the mathematics beneath it in the Hall of Foundations. Alongside them, **§157 [Learning With Errors](https://ciphermuseum.com/hall-of-foundations/learning-with-errors.html)** joins the Hall of Foundations as its own exhibit — the lattice algebra ML-KEM and ML-DSA are actually keyed on.
+ - **Hall of Foundations** ([hall-of-foundations/](https://ciphermuseum.com/hall-of-foundations/index.html)) — a 17-exhibit mathematics annex (**§141–157**) on the number theory, hardness assumptions, and structures under modern cryptography: finite fields, Euler–Fermat, the Prime Number Theorem, one-way functions, lattices (SVP / CVP / Learning With Errors), polynomial rings, random oracles, Shamir interpolation, and bilinear pairings — each with a working interactive in the museum's dark/gold design system.
+   - **Integrated museum-wide** — floor-plan annex on the museum map, a "Mathematics Under Cryptography" guided tour, timeline entries (Fermat 1640, Euler 1763, Shor 1994), 11 new glossary terms, site-search coverage, and two-way cross-links with the RSA, Diffie–Hellman, One-Time Pad, SHA-256, and AES exhibits ("the mathematics beneath").
+@@ -31,7 +32,7 @@ The Cipher Museum is part digital exhibit, part cipher playground, and part code
+ 
+ ## ✨ Features
+ 
+-### 🗺️ Thirteen Exhibit Halls · 140 Cipher Exhibits · The Foundations Annex
++### 🗺️ Thirteen Exhibit Halls · 144 Cipher Exhibits · The Foundations Annex
+ 
+ Beyond the 13 cipher halls below, the **[Hall of Foundations](https://ciphermuseum.com/hall-of-foundations/index.html)** annex (§141–157) exhibits the mathematics under the cryptography — from modular arithmetic to lattices and pairings — and three **modern-protocol exhibits** (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs) extend Hall XI beyond ciphers.
+ 
+@@ -58,13 +59,13 @@ Beyond the 13 cipher halls below, the **[Hall of Foundations](https://ciphermuse
+ 3. **How It Was Broken** — The specific technique, with context
+ 4. **What It Teaches Modern Crypto** — The direct line from this cipher to AES/RSA
+ 
+-### 🎯 84 Cipher Engines · 110 Interactive Demos
++### 🎯 84 Cipher Engines · 113 Interactive Demos
+ 
+-The 140-exhibit collection includes **84 working cipher engines** plus **~27 hand-built widgets** — **110 of the 140 exhibits ship a fully interactive demo**, all built in vanilla JavaScript with no frameworks or build tools. The remaining 30 exhibits are codebreaker biographies, historical context pages (e.g. Cabinet Noir, Bletchley Park figures), and a small number of cipher pages not yet wired with a demo.
++The 144-exhibit collection includes **84 working cipher engines** plus **~30 hand-built widgets** — **113 of the 144 exhibits ship a fully interactive demo**, all built in vanilla JavaScript with no frameworks or build tools. The remaining 31 exhibits are codebreaker biographies, historical context pages (e.g. Cabinet Noir, Bletchley Park figures), and a small number of cipher pages without an inline demo.
+ 
+ Type a message, set a key, and watch the cipher work in real time. Demos are dynamically generated by [js/demo-loader.js](js/demo-loader.js) from the engine implementations in [js/ciphers/all-engines.js](js/ciphers/all-engines.js), and the same engines power the [Codebreaker's Workbench](https://ciphermuseum.com/lab/workbench.html).
+ 
+-For a sortable, filterable view of every cipher system in the museum (era, type, security, hall, solved status, key method) see the [Cipher Comparison Table](https://ciphermuseum.com/comparison.html). For the full 140-exhibit roster including biographies and context pages, see the [Museum Map](https://ciphermuseum.com/museum-map.html).
++For a sortable, filterable view of every cipher system in the museum (era, type, security, hall, solved status, key method) see the [Cipher Comparison Table](https://ciphermuseum.com/comparison.html). For the full 144-exhibit roster including biographies and context pages, see the [Museum Map](https://ciphermuseum.com/museum-map.html).
+ 
+ ### 📊 Additional Tools
+ - **[Cipher Corpus](https://ciphermuseum.com/cipher-corpus.html)** — The most comprehensive open library of known-answer ciphertext challenges for classical ciphers, with 100,026+ test cases across 82 algorithms. Includes:
+@@ -84,7 +85,7 @@ For a sortable, filterable view of every cipher system in the museum (era, type,
+     - **Side-by-side Encrypt/Decrypt panes** with copy-to-clipboard and a swap button so you can iterate on a key without retyping ciphertext.
+     - **Same engine source as the exhibits** — the workbench pulls from [js/ciphers/all-engines.js](js/ciphers/all-engines.js), so anything you reproduce here matches every demo on the site.
+ - **[Cipher Detective](https://ciphermuseum.com/cipher-detective.html)** — Identify likely cipher families from unknown ciphertext using IoC, chi-square, and Kasiski evidence, then pivot into ranked suspects and next-attack guidance.
+-- **[Site Search](https://ciphermuseum.com/search.html)** — Search across all 160 exhibits (140 ciphers, the Hall of Foundations annex, and the modern-protocol exhibits), 13 exhibit halls, codebreaker biographies, cryptanalysis techniques, and the timeline. Index-driven, no backend, deep-link via `?q=`.
++- **[Site Search](https://ciphermuseum.com/search.html)** — Search across all 164 exhibits (144 ciphers, the Hall of Foundations annex, and the modern-protocol exhibits), 13 exhibit halls, codebreaker biographies, cryptanalysis techniques, and the timeline. Index-driven, no backend, deep-link via `?q=`.
+ - **[Cryptanalysis Techniques](https://ciphermuseum.com/cryptanalysis.html)** — 10 interactive techniques: frequency analysis, Kasiski examination, index of coincidence, crib dragging, known-plaintext attack, hill climbing, simulated annealing, stepping-switch cryptanalysis (Purple), HMM/SMT decoding (Copiale), and Chaocipher reconstruction.
+ - **[Cipher Challenges](https://ciphermuseum.com/challenges.html)** — 10 progressive puzzles from Caesar to Enigma with hints and solutions.
+ - **[Timeline](https://ciphermuseum.com/timeline.html)** — Interactive 3,900+-year history with era filtering, scroll-spy, and 50+ clickable exhibit events.
+@@ -100,7 +101,7 @@ For a sortable, filterable view of every cipher system in the museum (era, type,
+ 
+ ## 📖 Complete Cipher Index
+ 
+-All 140 cipher exhibits, alphabetically. Biographies and context pages are noted; plain text entries are dedicated cipher exhibits. The 17 Hall of Foundations exhibits (§141–157) and the 3 modern-protocol exhibits (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs) are listed separately above.
++All 144 cipher exhibits, alphabetically. Biographies and context pages are noted; plain text entries are dedicated cipher exhibits. The 17 Hall of Foundations exhibits (§141–157) and the 3 modern-protocol exhibits (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs) are listed separately above.
+ 
+ 
+ | Cipher | Era | Brief Description | How It Was Broken / Status |
+@@ -161,6 +162,7 @@ All 140 cipher exhibits, alphabetically. Biographies and context pages are noted
+ | [Ethiopian Geʼez Monastic Ciphers](https://ciphermuseum.com/ciphers/amharic-ge-ez-ciphers.html) | East Africa · 14th–19th c. | Ethiopian Orthodox monasteries used syllabary-based substitution ciphers in Ge'ez script to protect sacred texts and inter-monastery communications from the 14th century onward. | Symbol frequency analysis on the limited syllabary |
+ | [Fialka M-125 Soviet 10-rotor machine · 1956](https://ciphermuseum.com/ciphers/fialka.html) | Cold War · 1956 | The Soviet Cold-War rotor machine. Ten rotors, half stepping forward and half backward, plus a punch-card key sheet — the answer to every weakness Soviet analysts saw in Enigma. | No publicly known break; retired by design |
+ | [Field Hollers and Coding Songs](https://ciphermuseum.com/ciphers/field-hollers.html) | Americas · 1619–1865 | American enslaved workers used field hollers, work songs, and coded idiom as covert communication — "Follow the Drinking Gourd" encoding an escape route along the Underground Railroad. | N/A — cultural/historical context page |
++| [Fleissner Turning Grille](https://ciphermuseum.com/ciphers/turning-grille.html) | 1881 · German WWI use | Four 90° rotations fill a message grid; transposition rather than Cardano steganography. | Probable-word reconstruction; van der Harst, Dutch Army exercise, 1913 |
+ | [Four-Square Cipher](https://ciphermuseum.com/ciphers/four-square.html) | Late 19th Century · ~1902 | Four-Square cipher (1902) — Delastelle's digram cipher using two keyed and two standard 5x5 squares. Disrupts Playfair frequencies but breaks to digrams. | Digraph frequency analysis; flat distribution betrays the 4-square grid |
+ | [Fractionated Morse Cipher](https://ciphermuseum.com/ciphers/fractionated-morse.html) | 19th Century | Fractionated Morse — converts text to Morse, regroups dots, dashes, and separators in trigrams, then substitutes via a keyed alphabet. Broken by trigram stats. | Bigram/trigram frequency on the fractionated triplets |
+ | [Freemason Pigpen Tradition](https://ciphermuseum.com/ciphers/freemason-pigpen.html) | Early modern Europe · 17th–19th c. | The geometric pigpen alphabet — fragments of grids and X-shapes — used by Freemasons, Rosicrucians, and the Hellfire Club from the 17th century onwards as a fraternal cipher and ritual marker. | Symbol substitution; grid lookup trivially reverses it |
+@@ -171,6 +173,7 @@ All 140 cipher exhibits, alphabetically. Biographies and context pages are noted
+ | [The Great Cipher](https://ciphermuseum.com/ciphers/great-cipher.html) | Baroque · ~1626 | Great Cipher of Louis XIV (1626) — the Rossignol father-and-son syllabic nomenclator with delete-previous-letter traps. Broken by Bazeries in 1893. | Frequency + syllabic hypothesis; broken by Étienne Bazeries c. 1893 |
+ | [Gronsfeld Cipher](https://ciphermuseum.com/ciphers/gronsfeld.html) | 17th Century | Gronsfeld cipher (1655) — a Vigenère variant restricted to numeric keys (0-9), making it field-portable but with a smaller key space that falls fast to Kasiski. | Kasiski examination; identical to Vigenère with digit key 0–9 |
+ | [Herbert Yardley](https://ciphermuseum.com/ciphers/yardley.html) | Interwar · USA | Herbert Osborne Yardley founded America's Black Chamber in 1919, broke Japanese diplomatic codes at the 1921 Washington Naval Conference, and then infamously published the secrets in his 1931 bestseller. | N/A — codebreaker biography |
++| [Hagelin C-36 / C-52 Lineage](https://ciphermuseum.com/ciphers/hagelin-c36.html) | 1930s–1950s | Pin-and-lug lineage, M-209 connection, and Crypto AG supplier history. | Public known-plaintext attacks on C-52-family configurations; Greenough, 1999 |
+ | [Hill Cipher](https://ciphermuseum.com/ciphers/hill.html) | 1929 | Hill cipher (1929) — Lester S. Hill's matrix-based polygraphic cipher, first to apply linear algebra to encryption. Broken by known-plaintext (mod-26 system). | Known-plaintext attack: P·K=C → K=P⁻¹·C (matrix inversion mod 26) |
+ | [Histiaeus's Tattooed Messenger](https://ciphermuseum.com/ciphers/histiaeus-tattoo.html) | Classical Greece · ~499 BCE | Histiaeus of Miletus (~499 BCE) — the Greek tyrant who tattooed a secret revolt order on a slave's shaved scalp, then waited for the hair to regrow before sending him. | Discovery of the messenger; physical search reveals message |
+ | [Homophonic Substitution](https://ciphermuseum.com/ciphers/homophonic.html) | Renaissance · ~1400 | Homophonic substitution (1400s) — replace each letter with one of several numeric codes to flatten frequencies. Defeated Mary in 1586; Great Cipher in 1893. | Frequency analysis with pooled homophones; traffic volume collapses it |
+@@ -196,8 +199,10 @@ All 140 cipher exhibits, alphabetically. Biographies and context pages are noted
+ | [MIT Mystery Hunt](https://ciphermuseum.com/ciphers/mit-mystery-hunt.html) | MIT · 1981–present | An annual three-day puzzle marathon at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus. | N/A — puzzle competition page |
+ | [Monoalphabetic Substitution](https://ciphermuseum.com/ciphers/monoalphabetic.html) | Medieval · ~800 AD | Monoalphabetic substitution — replace each letter with a fixed substitute. Foundation of all substitution ciphers; broken by Al-Kindi's frequency analysis ~850. | Frequency analysis; Caesar to complex substitution all fall the same way |
+ | [Morse Code Telegraphy's universal alphabet · 1840s](https://ciphermuseum.com/ciphers/morse.html) | Telegraph age · 1840s → | International Morse code — the dot-dash telegraph alphabet that made the wired world possible and provided the carrier signal for a century of military and amateur ciphers. | N/A — encoding system, not a cipher |
++| [Myszkowski Transposition](https://ciphermuseum.com/ciphers/myszkowski.html) | France · 1902 | Repeated keyword letters share ranks; tied columns are read together across rows. | Statistical transposition search and probable-word attacks |
+ | [National Treasure](https://ciphermuseum.com/ciphers/national-treasure.html) | Fiction · 2004 | The 2004 Disney film National Treasure sent audiences hunting for cipher clues on the US dollar bill, the Liberty Bell, and Independence Hall — all real historical sites. | N/A — fictional film; Bacon cipher used as plot device |
+ | [Navajo Code Talkers](https://ciphermuseum.com/ciphers/navajo-code-talkers.html) | WWII · 1942–1945 | Navajo Code (1942-1945) — a constructed military vocabulary spoken by 420 Marine Code Talkers. Never broken in wartime; declassified in 1968 after long use. | Never broken in WWII; Japanese could not isolate the language structure |
++| [NEMA — Swiss Rotor Machine](https://ciphermuseum.com/ciphers/nema.html) | Switzerland · 1947 | Four cipher wheels, independent stepping wheels, and a moving reflector; historical military demo. | Historical Only; no operational break asserted |
+ | [Nihilist Cipher](https://ciphermuseum.com/ciphers/nihilist.html) | 1880s · Russia | Nihilist cipher (1880s) — the Russian revolutionary classic adding Polybius numbers to a repeating keyword's Polybius numbers (mod 100). Broken early 1900s. | Double-Polybius structure; IC + frequency analysis on the digit pairs |
+ | [Nomenclator](https://ciphermuseum.com/ciphers/nomenclator.html) | Renaissance · 1400s–1800s | Nomenclator (1400s) — The 400-year diplomatic compromise: a small substitution alphabet plus a large code dictionary. Hall II of The Cipher Museum. | Frequency analysis on the codewords; Walsingham's team, 1580s |
+ | [Null Cipher Concealment by selective reading · ancient → modern](https://ciphermuseum.com/ciphers/null-cipher.html) | Antiquity → present | The null cipher — hide the secret in plain sight by spelling it out with the first letters of an innocuous message. Used by spies, prisoners, and Bacon, since at least the Roman empire. | Pattern recognition and positional analysis of the cover text |
+@@ -327,7 +332,7 @@ cipher-museum/
+ │   ├── puzzle.html           ← Hall VII: Puzzle & Novelty
+ │   ├── unbreakable.html      ← Hall IX: The Unbreakable
+ │   └── codebreakers.html     ← Special Exhibition: Hall of Codebreakers
+-├── ciphers/                  ← 143 exhibit pages (140 ciphers + ECDSA/Shamir/ZKP protocol exhibits)
++├── ciphers/                  ← 147 exhibit pages (144 ciphers + ECDSA/Shamir/ZKP protocol exhibits)
+ │   ├── caesar.html            ← with interactive demo + SVG wheel diagram
+ │   ├── enigma.html            ← with rotor wiring SVG diagram
+ │   ├── vigenere.html          ← with tabula recta SVG + Kasiski analysis
+@@ -338,7 +343,7 @@ cipher-museum/
+ │   ├── finite-fields.html     ← …and 16 more (lattices, LWE, pairings, interpolation…)
+ │   └── *-math.js              ← lattice-math / crypto-algebra / ec-math engines, unit-tested
+ ├── data/
+-│   └── artifact-cards.json  ← Metadata cards (era, family, region, key type…) for all 143 ciphers/protocol exhibits
++│   └── artifact-cards.json  ← Metadata cards (era, family, region, key type…) for all 147 ciphers/protocol exhibits
+ ├── scripts/                  ← Corpus tools and cryptanalysis solvers
+ │   ├── hill-climbing-solver.js  ← Monoalphabetic solver: hill climbing + quadgram scoring
+ │   ├── sa-solver.js             ← Simulated annealing solver (better on short ciphertexts)
+@@ -406,7 +411,7 @@ cipher-museum/
+ 
+ ## 🧪 Testing
+ 
+-Trust labels are classified in `data/exhibit-trust.json` for all 160 exhibits;
++Trust labels are classified in `data/exhibit-trust.json` for all 164 exhibits;
+ `null` omits all trust classifications for context exhibits. Shared definitions
+ live in `data/trust-labels.json`; historical evidence and usage qualifications
+ are separate notes. After editing either source, run `npm run build:metadata`
+@@ -414,6 +419,7 @@ and `npm run build:js`. The trust-label suite checks headers, quick facts, hall
+ cards, map rows and legends, search rendering, comparison filters, and live
+ artifact cards against an independent nine-entry Secure (Modern) allowlist.
+ 
++
+ Use Node 22, matching CI. The serial complexity guard batches 25 KB round trips
+ until they consume measurable CPU time, then measures the same batch at 100 KB.
+ All 85 registry engines must be measured; the 10× scaling bound is unchanged.
+diff --git a/index.html b/index.html
+index 172eef8..625443b 100644
+--- a/index.html
++++ b/index.html
+@@ -4,11 +4,11 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>The Cipher Museum — Interactive History of Encryption</title>
+-  <meta name="description" content="Walk through 13 exhibit halls spanning 3,900+ years of cryptography, codebreaking, and secure communication. Explore 160 exhibits — 140 ciphers, the Hall of Foundations mathematics annex, and the modern-protocol exhibits — interactive demos, and challenges.">
++  <meta name="description" content="Walk through 13 exhibit halls spanning 3,900+ years of cryptography, codebreaking, and secure communication. Explore 164 exhibits — 144 ciphers, the Hall of Foundations mathematics annex, and the modern-protocol exhibits — interactive demos, and challenges.">
+   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+   <link rel="manifest" href="manifest.webmanifest">
+     <meta property="og:title" content="The Cipher Museum — Interactive History of Encryption">
+-  <meta property="og:description" content="Walk through 13 exhibit halls spanning 3,900+ years of cryptography, codebreaking, and secure communication. Explore 160 exhibits — 140 ciphers, the Hall of Foundations mathematics annex, and the modern-protocol exhibits — interactive demos, and challenges.">
++  <meta property="og:description" content="Walk through 13 exhibit halls spanning 3,900+ years of cryptography, codebreaking, and secure communication. Explore 164 exhibits — 144 ciphers, the Hall of Foundations mathematics annex, and the modern-protocol exhibits — interactive demos, and challenges.">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://ciphermuseum.com/">
+   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
+@@ -17,7 +17,7 @@
+   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="The Cipher Museum — Interactive History of Encryption">
+-  <meta name="twitter:description" content="Walk through 13 exhibit halls spanning 3,900+ years of cryptography, codebreaking, and secure communication. Explore 160 exhibits — 140 ciphers, the Hall of Foundations mathematics annex, and the modern-protocol exhibits — interactive demos, and challenges.">
++  <meta name="twitter:description" content="Walk through 13 exhibit halls spanning 3,900+ years of cryptography, codebreaking, and secure communication. Explore 164 exhibits — 144 ciphers, the Hall of Foundations mathematics annex, and the modern-protocol exhibits — interactive demos, and challenges.">
+   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
+   <meta name="theme-color" content="#0a0a0f">
+   <link rel="canonical" href="https://ciphermuseum.com/">
+@@ -25,7 +25,7 @@
+   <link rel="preload" href="fonts/cormorant-garamond-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="stylesheet" href="css/museum.css">
+   <script type="application/ld+json">
+-  {"@context":"https://schema.org","@type":"WebSite","name":"The Cipher Museum","url":"https://ciphermuseum.com/","description":"Interactive history of encryption — 160 exhibits, 13 exhibit halls plus the Hall of Foundations mathematics annex, and 3,900+ years of cryptography, codebreaking, and secure communication.","publisher":{"@type":"Organization","name":"The Cipher Museum","url":"https://ciphermuseum.com/"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://ciphermuseum.com/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}
++  {"@context":"https://schema.org","@type":"WebSite","name":"The Cipher Museum","url":"https://ciphermuseum.com/","description":"Interactive history of encryption — 164 exhibits, 13 exhibit halls plus the Hall of Foundations mathematics annex, and 3,900+ years of cryptography, codebreaking, and secure communication.","publisher":{"@type":"Organization","name":"The Cipher Museum","url":"https://ciphermuseum.com/"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://ciphermuseum.com/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+   </script>
+ </head>
+ <body>
+@@ -109,9 +109,9 @@
+   <div class="hero-content fade-up">
+     <div class="hero-eyebrow">Est. c. 1900 BC — Present Day</div>
+     <h1 class="hero-wordmark">Explore the History of Encryption</h1>
+-    <p class="hero-sub">160 exhibits, 13 halls plus the Foundations Annex, and 3,900+ years of cryptography, codebreaking, and secure communication — all in one place.</p>
++    <p class="hero-sub">164 exhibits, 13 halls plus the Foundations Annex, and 3,900+ years of cryptography, codebreaking, and secure communication — all in one place.</p>
+     <div class="hero-stats">
+-      <div class="hero-stat"><span class="hero-stat-n">140</span><span class="hero-stat-l">Historic Ciphers</span></div>
++      <div class="hero-stat"><span class="hero-stat-n">144</span><span class="hero-stat-l">Historic Ciphers</span></div>
+       <div class="hero-stat"><span class="hero-stat-n">13</span><span class="hero-stat-l">Exhibit Halls</span></div>
+       <div class="hero-stat"><span class="hero-stat-n">3,900+</span><span class="hero-stat-l">Years of History</span></div>
+       <div class="hero-stat"><span class="hero-stat-n">1</span><span class="hero-stat-l">Perfect-Secrecy System</span></div>
+diff --git a/museum-map.html b/museum-map.html
+index 2402d07..1c5b834 100644
+--- a/museum-map.html
++++ b/museum-map.html
+@@ -5,9 +5,9 @@
+   <title>Museum Map — The Cipher Museum</title>
+   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+   <link rel="manifest" href="manifest.webmanifest">
+-    <meta name="description" content="Navigate all 13 exhibit halls, the Hall of Foundations mathematics annex, and 160 exhibits in The Cipher Museum. Find your next cryptographic adventure.">
++    <meta name="description" content="Navigate all 13 exhibit halls, the Hall of Foundations mathematics annex, and 164 exhibits in The Cipher Museum. Find your next cryptographic adventure.">
+   <meta property="og:title" content="Museum Map — The Cipher Museum">
+-  <meta property="og:description" content="Navigate all 13 exhibit halls, the Hall of Foundations mathematics annex, and 160 exhibits in The Cipher Museum. Find your next cryptographic adventure.">
++  <meta property="og:description" content="Navigate all 13 exhibit halls, the Hall of Foundations mathematics annex, and 164 exhibits in The Cipher Museum. Find your next cryptographic adventure.">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://ciphermuseum.com/museum-map.html">
+   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
+@@ -16,7 +16,7 @@
+   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="Museum Map — The Cipher Museum">
+-  <meta name="twitter:description" content="Navigate all 13 exhibit halls, the Hall of Foundations mathematics annex, and 160 exhibits in The Cipher Museum. Find your next cryptographic adventure.">
++  <meta name="twitter:description" content="Navigate all 13 exhibit halls, the Hall of Foundations mathematics annex, and 164 exhibits in The Cipher Museum. Find your next cryptographic adventure.">
+   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
+   <meta name="theme-color" content="#0a0a0f">
+   <link rel="canonical" href="https://ciphermuseum.com/museum-map.html">
+@@ -98,7 +98,7 @@
+   <div class="breadcrumb"><a href="index.html">Entrance</a><span>›</span>Museum Map</div>
+   <span class="page-eyebrow">Your Guide to the Collection</span>
+   <h1 class="page-title">Museum Map</h1>
+-<p class="page-tagline">13 halls, the Foundations Annex, 160 exhibits — one continuous story: how humanity learned to keep secrets</p>
++<p class="page-tagline">13 halls, the Foundations Annex, 164 exhibits — one continuous story: how humanity learned to keep secrets</p>
+ </div>
+ 
+ <!-- ───────── SUGGESTED ROUTE ───────── -->
+@@ -458,7 +458,7 @@
+   <div class="section-head">
+     <span class="section-eyebrow">Reference</span>
+     <h2 class="section-title">Complete Cipher Index</h2>
+-    <p class="section-sub">The 140 cipher exhibits, organized by hall — the annex continues at §141–157.</p>
++    <p class="section-sub">The 144 cipher exhibits, organized by hall — the annex remains at §141–157.</p>
+   </div>
+   <div style="max-width:700px;margin:0 auto;">
+     <div class="panel">
+@@ -610,6 +610,11 @@
+             <tr><td>158</td><td><a href="ciphers/ecdsa.html">ECDSA</a><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span></td><td>XI</td></tr>
+             <tr><td>159</td><td><a href="ciphers/shamir-secret-sharing.html">Shamir&#39;s Secret Sharing</a><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span></td><td>XI</td></tr>
+             <tr><td>160</td><td><a href="ciphers/zero-knowledge-proofs.html">Zero-Knowledge Proofs</a><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span></td><td>XI</td></tr>
++            <tr><td>161</td><td><a href="ciphers/nema.html">NEMA</a><span class="trust-label trust-label--historical trust-label--sm" title="No longer in use, or never confirmed broken/deciphered.">Historical Only</span></td><td>VII</td></tr>
++            <tr><td>162</td><td><a href="ciphers/hagelin-c36.html">Hagelin C-36 / C-52</a><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td><td>VII</td></tr>
++            <tr><td>163</td><td><a href="ciphers/turning-grille.html">Fleissner Turning Grille</a><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td><td>IV</td></tr>
++            <tr><td>164</td><td><a href="ciphers/myszkowski.html">Myszkowski Transposition</a><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td><td>IV</td></tr>
++
+           </tbody>
+         </table>
+       </div>
+diff --git a/scripts/build-artifact-cards.js b/scripts/build-artifact-cards.js
+index 8dc6943..1751d1b 100644
+--- a/scripts/build-artifact-cards.js
++++ b/scripts/build-artifact-cards.js
+@@ -74,6 +74,7 @@ function eraFromHtml(html) {
+   return 'Historical period varies';
+ }
+ 
++
+ function hallFromHtml(html) {
+   const hall = html.match(/<a href="\.\.\/halls\/[^"]+\.html">([^<]*Hall[^<]*)<\/a>/i);
+   return hall ? stripTags(hall[1]) : 'Museum exhibit';
+@@ -95,6 +96,30 @@ function main(check = false) {
+   // key agreement, a hash, a signature, a sharing scheme and a proof system
+   // all protect something without encrypting anything.
+   const OVERRIDES = {
++    'nema': {
++      region: 'Switzerland', usedBy: 'Swiss Army; training and war-reserve configurations',
++      keyType: 'Wheel selection and pairing; ten starting window letters',
++      keyIdea: 'Four wired rotors and a moving reflector controlled by separate stepping wheels',
++      modernLesson: 'Count the state period separately from the initial key space'
++    },
++    'hagelin-c36': {
++      region: 'Sweden and Switzerland', usedBy: 'Military and diplomatic operators of Hagelin pin-and-lug machines',
++      keyType: 'Pin patterns, lug settings, wheel selection and starting positions',
++      keyIdea: 'Pin-and-lug mechanisms produce a changing numerical shift; configurations vary by model',
++      modernLesson: 'Public cryptanalysis and independent supplier review are separate requirements'
++    },
++    'turning-grille': {
++      region: 'Austria and wartime Europe', usedBy: 'German Army in WWI; other military grille users',
++      keyType: 'Hole pattern, starting orientation and rotation direction',
++      keyIdea: 'Four quarter-turns visit each cell once, permuting a complete message block',
++      modernLesson: 'A stencil can rearrange a message without concealing its existence'
++    },
++    'myszkowski': {
++      region: 'France', usedBy: 'Classical cipher practitioners and puzzle solvers',
++      keyType: 'Keyword with repeated letters assigned identical ranks',
++      keyIdea: 'Read single columns downwards and tied columns together across rows',
++      modernLesson: 'Specify tie handling and incomplete rows to make a permutation reversible'
++    },
+     'diffie-hellman': {
+       keyIdea: 'Two parties derive a shared secret over a public channel; nothing is encrypted',
+       keyType: 'No key input — the protocol produces one',
+diff --git a/scripts/build-counts.js b/scripts/build-counts.js
+index d5323cb..db23819 100644
+--- a/scripts/build-counts.js
++++ b/scripts/build-counts.js
+@@ -49,12 +49,22 @@ function computeCounts() {
+     protocols,
+     halls,
+     total: ciphers + foundations + protocols,
+-    // §-ranges the prose quotes: Foundations runs from the first number after
+-    // the cipher exhibits, and the protocol exhibits follow it.
+-    foundationsFirst: ciphers + 1,
+-    foundationsLast: ciphers + foundations,
+-    protocolsFirst: ciphers + foundations + 1,
+-    protocolsLast: ciphers + foundations + protocols
++    // Allocated exhibit numbers remain stable when new cipher pages are
++    // appended after §160. The shared manifest owns those identities.
++    ...numberRanges()
++  };
++}
++
++function numberRanges() {
++  const { exhibits } = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/exhibit-trust.json'), 'utf8'));
++  const foundationNumbers = exhibits.filter(e => e.path.startsWith('hall-of-foundations/')).map(e => e.number);
++  const protocolNumbers = exhibits.filter(e => PROTOCOL_EXHIBITS.some(s => e.path === `ciphers/${s}.html`)).map(e => e.number);
++  if (!foundationNumbers.length || protocolNumbers.length !== PROTOCOL_EXHIBITS.length) {
++    throw new Error('Exhibit manifest is missing Foundations or protocol identities.');
++  }
++  return {
++    foundationsFirst: Math.min(...foundationNumbers), foundationsLast: Math.max(...foundationNumbers),
++    protocolsFirst: Math.min(...protocolNumbers), protocolsLast: Math.max(...protocolNumbers)
+   };
+ }
+ 
+diff --git a/search.html b/search.html
+index c0a5b57..1b8b381 100644
+--- a/search.html
++++ b/search.html
+@@ -4,7 +4,7 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Search — The Cipher Museum</title>
+-  <meta name="description" content="Search 160 exhibits across 13 halls and the Foundations annex, codebreaker biographies, and cryptanalysis techniques across The Cipher Museum.">
++  <meta name="description" content="Search 164 exhibits across 13 halls and the Foundations annex, codebreaker biographies, and cryptanalysis techniques across The Cipher Museum.">
+   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+   <link rel="manifest" href="manifest.webmanifest">
+   <link rel="canonical" href="https://ciphermuseum.com/search.html">
+@@ -44,7 +44,7 @@
+     <span class="section-eyebrow">Site Search</span>
+     <h1 class="section-title">Search the Museum</h1>
+     <p class="section-deck" style="margin:.5rem auto 0;max-width:640px;color:var(--tx2);">
+-      Across 160 exhibits, 13 halls, codebreaker biographies, cryptanalysis techniques, and the timeline.
++      Across 164 exhibits, 13 halls, codebreaker biographies, cryptanalysis techniques, and the timeline.
+     </p>
+   </div>
+ 
+@@ -133,7 +133,7 @@
+         resultsEl.innerHTML = '';
+         emptyEl.style.display = 'none';
+         suggestionsEl.style.display = '';
+-        statusEl.textContent = 'Type to search · ' + (window.CipherSearch._count || '160') + ' exhibits · 13 halls · indexed pages';
++        statusEl.textContent = 'Type to search · ' + (window.CipherSearch._count || '164') + ' exhibits · 13 halls · indexed pages';
+         return;
+       }
+       suggestionsEl.style.display = 'none';
+diff --git a/tests/run-all.js b/tests/run-all.js
+index 668df6f..50ab4f8 100644
+--- a/tests/run-all.js
++++ b/tests/run-all.js
+@@ -25,6 +25,7 @@ const suites = [
+   'tests/test-sw-version.js',
+   'tests/test-protocol-math.js',
+   'tests/test-protocol-pages.js',
++  'tests/test-historical-exhibits.js',
+   'hall-of-foundations/lattice-math.test.js',
+   'hall-of-foundations/lwe-math.test.js',
+   'hall-of-foundations/crypto-algebra.test.js',
+diff --git a/tests/test-comprehensive.js b/tests/test-comprehensive.js
+index b01465e..b898938 100644
+--- a/tests/test-comprehensive.js
++++ b/tests/test-comprehensive.js
+@@ -59,6 +59,8 @@ const HAND_BUILT = new Set(['caesar', 'playfair', 'vigenere', 'zodiac',
+ // Pages that are intentionally static (no engine, no interactive widget) -
+ // modern-crypto math walkthroughs, unsolved manuscripts, biography pages.
+ const STATIC_PAGES = new Set([
++  // Historical expansion: bespoke demos, plus a narrative lineage exhibit.
++  'nema', 'hagelin-c36', 'turning-grille', 'myszkowski',
+   // Modern protocol exhibits: bespoke interactives, no demo-loader CONFIG
+   'ecdsa', 'shamir-secret-sharing', 'zero-knowledge-proofs',
+   'aes', 'des', 'diffie-hellman', 'dorabella', 'rsa', 'sha256',
+@@ -88,7 +90,9 @@ function configHasEngine(slug) {
+ }
+ 
+ const allPages = fs.readdirSync(CIPHERS_DIR).filter(f => f.endsWith('.html')).sort();
+-ok('Cipher pages count is 143', allPages.length === 143, `actual=${allPages.length}`);
++const exhibitCounts = require('../scripts/build-counts').computeCounts();
++ok('Cipher pages count agrees with the inventory',
++  allPages.length === exhibitCounts.ciphers + exhibitCounts.protocols, `actual=${allPages.length}`);
+ 
+ // Broad detection of interactive demo markup for hand-built pages
+ const HAND_BUILT_MARKERS = /(?:onclick|data-fn)="(setMode|runCipher|runVigenere|encrypt|decrypt|zReveal|zAssignLetter|encode|decode|cipher|runHollerCode)/i;
+diff --git a/tests/test-counts.js b/tests/test-counts.js
+index 231cbc8..b4f25c5 100644
+--- a/tests/test-counts.js
++++ b/tests/test-counts.js
+@@ -109,11 +109,11 @@ for (const f of fs.readdirSync(cipherDir).filter(n => n.endsWith('.html'))) {
+   const text = fs.readFileSync(path.join(cipherDir, f), 'utf8');
+   const chip = /Exhibit\s+(\d+)\s+of\s+(\d+)/.exec(text);
+   if (!chip) continue;
+-  ok(`${f}: chip denominator`, Number(chip[2]) === counts.ciphers,
+-    `says "of ${chip[2]}", should be "of ${counts.ciphers}"`);
++  ok(`${f}: chip denominator`, Number(chip[2]) === counts.total,
++    `says "of ${chip[2]}", should be "of ${counts.total}" (the global exhibit sequence)`);
+   ok(`${f}: chip numerator in range`,
+-    Number(chip[1]) >= 1 && Number(chip[1]) <= counts.protocolsLast,
+-    `exhibit number ${chip[1]} is outside 1..${counts.protocolsLast}`);
++    Number(chip[1]) >= 1 && Number(chip[1]) <= counts.total,
++    `exhibit number ${chip[1]} is outside 1..${counts.total}`);
+ }
+ 
+ console.log(`\n━━━ Exhibit-count consistency ━━━\n`);
+diff --git a/tests/test-demo-pages.js b/tests/test-demo-pages.js
+index bf7fe34..26efa62 100644
+--- a/tests/test-demo-pages.js
++++ b/tests/test-demo-pages.js
+@@ -111,6 +111,8 @@ const HAND_BUILT = new Set(['caesar.html', 'playfair.html', 'vigenere.html', 'zo
+   'bible-code.html', 'enigma.html']);
+ // Pure-content modern-crypto, unsolved pages, and biography pages with no interactive demo:
+ const STATIC_PAGES = new Set(['aes.html', 'des.html', 'diffie-hellman.html',
++  // Bespoke historical demos are exercised in test-historical-exhibits.js.
++  'nema.html', 'hagelin-c36.html', 'turning-grille.html', 'myszkowski.html',
+   // Modern protocol exhibits (bespoke interactives, no demo-loader CONFIG):
+   'ecdsa.html', 'shamir-secret-sharing.html', 'zero-knowledge-proofs.html',
+   'dorabella.html', 'rsa.html', 'sha256.html', 'cipher-detective.html',
+diff --git a/tests/test-historical-exhibits.js b/tests/test-historical-exhibits.js
+new file mode 100644
+index 0000000..d3e2866
+--- /dev/null
++++ b/tests/test-historical-exhibits.js
+@@ -0,0 +1,151 @@
++#!/usr/bin/env node
++'use strict';
++const assert = require('node:assert/strict');
++const fs = require('node:fs');
++const path = require('node:path');
++const { JSDOM, VirtualConsole } = require('jsdom');
++const api = require('../js/historical-ciphers');
++const { computeCounts } = require('../scripts/build-counts');
++const ROOT = path.resolve(__dirname, '..');
++const read = rel => fs.readFileSync(path.join(ROOT, rel), 'utf8');
++
++// Independent known-answer tests: round trips alone would accept the wrong
++// rotor wiring, a different transposition, or the wrong tie convention.
++const nemaVector = 'HRSBVOOTZUCRWLMGRMGVWYWOVNF';
++assert.equal(api.nema('A'.repeat(27), 'MQQPZQSOEV').output, nemaVector,
++  'NEMA: Geoff Sullivan reference vector published in rmsk2/nema_test.cpp');
++assert.equal(api.nema(nemaVector, 'MQQPZQSOEV').output, 'A'.repeat(27));
++const holes = [0, 1, 2, 5];
++assert.equal(api.turningGrille('ABCDEFGHIJKLMNOP', 4, holes).output, 'ABCEMDFGNOIHPJKL');
++assert.equal(api.turningGrille('ABCEMDFGNOIHPJKL', 4, holes, true).output, 'ABCDEFGHIJKLMNOP');
++assert.equal(api.myszkowski('WEAREDISCOVEREDFLEEATONCE', 'TOMATO').output, 'ROFOACDTEDSEEEACWEIVRLENE');
++// ACA's published BANANA example, independent of the exhibit's own example.
++const acaPlain = 'Incomplete columnar with pattern word key and letters under same number taken off by row from top to bottom';
++const acaCipher = 'NOPEE OUNRI HATRW RKYNL TESNE SMNME TKNFB RWRMO TBTOI LLWTO ATDER OOTOC MTCMA TPEND EDERU RAUBA EFYFO POTM';
++assert.equal(api.myszkowski(acaPlain, 'BANANA').output, api.clean(acaCipher));
++assert.equal(api.myszkowski(acaCipher, 'BANANA', true).output, api.clean(acaPlain));
++assert.throws(() => api.nema('HELLO', 'ABC'), /ten/);
++assert.throws(() => api.grilleOrder(4, [0, 3, 12, 15]), /overlap/);
++assert.throws(() => api.turningGrille('ABC', 4, holes, true), /complete/);
++assert.throws(() => api.myszkowski('HELLO', ''), /keyword/);
++
++for (let length = 0; length <= 100; length++) {
++  const text = Array.from({ length }, (_, i) => 'AZQXENIGMA'[i % 10]).join('');
++  const key = length % 2 ? 'AAAAAAAAAA' : 'ZXCVBNMASD';
++  assert.equal(api.nema(api.nema(text, key).output, key).output, text);
++  for (const word of ['TOMATO', 'BANANA', 'ZEBRA', 'AAAAAAAA', 'ABRACADABRA']) {
++    assert.equal(api.myszkowski(api.myszkowski(text, word).output, word, true).output, text);
++  }
++  const result = api.turningGrille(text, 4, holes);
++  assert.equal(api.turningGrille(result.output, 4, holes, true).output, text + 'X'.repeat(result.padding),
++    'Grille padding is retained, including real trailing X letters');
++}
++const period = api.nema('A'.repeat(17577), 'AAAAAAAAAA').output;
++assert.equal(period[0], period[17576], 'Military NEMA repeats after the published 17,576-step cycle');
++
++function load(slug) {
++  const errors = [];
++  const console = new VirtualConsole();
++  console.on('jsdomError', error => errors.push(error.message));
++  const html = read(`ciphers/${slug}.html`).replace(/<script src="([^"]+)"[^>]*><\/script>/g, (_, src) =>
++    '<script>' + fs.readFileSync(path.resolve(ROOT, 'ciphers', src), 'utf8').replace(/<\/script>/gi, '<\\/script') + '</script>');
++  const dom = new JSDOM(html, { runScripts: 'dangerously', virtualConsole: console });
++  const d = dom.window.document;
++  return { dom, d, errors, $: id => d.getElementById(id),
++    input(id, value) { const el = d.getElementById(id); el.value = value;
++      el.dispatchEvent(new dom.window.Event('input', { bubbles: true })); } };
++}
++
++const p = load('nema');
++assert.deepEqual(p.errors, []);
++assert.equal(p.$('historical-output').textContent, nemaVector, 'NEMA UI announces the reference result');
++assert.match(read('ciphers/nema.html'), new RegExp(nemaVector), 'NEMA worked example agrees with the result');
++assert.equal(p.$('nema-trace').children.length, 12);
++p.$('historical-use-output').click();
++assert.equal(p.$('historical-output').textContent, 'A'.repeat(27), 'Opposite mode resets the machine before decrypting');
++p.input('nema-windows', 'ABC');
++assert.match(p.$('historical-status').textContent, /ten/);
++assert.equal(p.$('historical-output').textContent, '', 'Invalid keys clear stale output');
++assert.equal(p.$('nema-trace').children.length, 0);
++p.dom.window.close();
++
++const g = load('turning-grille');
++assert.deepEqual(g.errors, []);
++assert.equal(g.$('historical-output').textContent, 'ABCEMDFGNOIHPJKL');
++assert.match(read('ciphers/turning-grille.html'), /ABCEMDFGNOIHPJKL/, 'Grille worked example is pinned');
++const masks = [];
++for (let rotation = 0; rotation < 4; rotation++) {
++  masks.push([...g.$('grille-grid').children].flatMap((cell, i) => cell.getAttribute('aria-pressed') === 'true' ? [i] : []));
++  assert.match(g.$('grille-angle').textContent, new RegExp(`${rotation * 90}°`));
++  g.$('grille-rotate').click();
++}
++assert.equal(new Set(masks.flat()).size, 16, 'The visible mask covers each cell exactly once');
++assert.deepEqual(masks, api.grilleOrder(4, holes).orientations);
++g.$('grille-grid').children[15].click();
++assert.notEqual(g.$('historical-output').textContent, 'ABCEMDFGNOIHPJKL', 'Changing a hole changes the cipher');
++assert.equal(g.d.querySelectorAll('#grille-grid [aria-pressed="true"]').length, 4);
++g.$('grille-rotate').click();
++g.$('grille-grid').children[8].click();
++assert.equal(g.d.querySelectorAll('#grille-grid [aria-pressed="true"]').length, 4, 'Editing a rotated mask keeps a valid orbit');
++g.input('historical-message', 'HELLOX');
++g.$('historical-use-output').click();
++assert.equal(g.$('historical-output').textContent, 'HELLOX' + 'X'.repeat(10));
++g.$('grille-reset').click();
++g.$('grille-size').value = '6';
++g.$('grille-size').dispatchEvent(new g.dom.window.Event('change', { bubbles: true }));
++assert.equal(g.$('historical-output').textContent, '', 'Incomplete ciphertext is rejected after changing block size');
++g.d.querySelector('[data-mode="encrypt"]').click();
++assert.equal(g.$('grille-grid').children.length, 36);
++assert.equal(g.d.querySelectorAll('#grille-grid [aria-pressed="true"]').length, 9);
++g.$('historical-use-output').click();
++assert.equal(g.$('historical-output').textContent.length, 36);
++g.$('grille-size').value = '8';
++g.$('grille-size').dispatchEvent(new g.dom.window.Event('change', { bubbles: true }));
++g.d.querySelector('[data-mode="encrypt"]').click();
++assert.equal(g.$('grille-grid').children.length, 64);
++assert.equal(g.d.querySelectorAll('#grille-grid [aria-pressed="true"]').length, 16);
++g.dom.window.close();
++
++const m = load('myszkowski');
++assert.deepEqual(m.errors, []);
++assert.equal(m.$('historical-output').textContent, 'ROFOACDTEDSEEEACWEIVRLENE');
++assert.match(read('ciphers/myszkowski.html'), /ROFOACDTEDSEEEACWEIVRLENE/);
++assert.match(m.$('myszkowski-ranks').textContent, /4 3 2 1 4 3/);
++m.$('historical-use-output').click();
++assert.equal(m.$('historical-output').textContent, 'WEAREDISCOVEREDFLEEATONCE');
++m.input('myszkowski-key', 'BANANA');
++assert.match(m.$('myszkowski-ranks').textContent, /2 1 3 1 3 1/);
++m.input('myszkowski-key', '');
++assert.match(m.$('historical-status').textContent, /keyword/);
++assert.equal(m.$('historical-output').textContent, '');
++m.dom.window.close();
++
++const entries = JSON.parse(read('data/exhibit-trust.json')).exhibits;
++assert.deepEqual(entries.map(e => e.number).sort((a, b) => a - b), Array.from({ length: 164 }, (_, i) => i + 1));
++const counts = computeCounts();
++assert.deepEqual([counts.foundationsFirst, counts.foundationsLast, counts.protocolsFirst, counts.protocolsLast],
++  [141, 157, 158, 160], 'Appending new ciphers must not renumber existing wings');
++const search = JSON.parse(read('js/search-index.json')).entries;
++const artifactData = JSON.parse(read('data/artifact-cards.json'));
++assert.equal(artifactData.totalExhibits, counts.ciphers + counts.protocols);
++for (const [slug, number, label, hall] of [
++  ['nema', 161, 'historical', 'machines'], ['hagelin-c36', 162, 'broken', 'machines'],
++  ['turning-grille', 163, 'broken', 'transposition'], ['myszkowski', 164, 'broken', 'transposition']
++]) {
++  const rel = `ciphers/${slug}.html`;
++  assert(entries.some(e => e.path === rel && e.number === number && e.label === label));
++  assert.equal(search.filter(e => e.u === rel).length, 1, `${slug}: searchable exactly once`);
++  assert.equal(search.find(e => e.u === rel).b, label === 'historical' ? 'Historical Only' : 'Broken');
++  assert.match(read('sitemap.xml'), new RegExp(`https://ciphermuseum.com/ciphers/${slug}\.html`));
++  assert.match(read(`halls/${hall}.html`), new RegExp(`href="../ciphers/${slug}\.html" class="cipher-card"`));
++  assert.equal(artifactData.cards[slug].hall, hall === 'machines' ? 'VII' : 'IV');
++  assert.deepEqual(artifactData.cards[slug].trust, { key: label, ...Object.fromEntries(
++    Object.entries(require('../data/trust-labels.json')[label]).filter(([key]) => key !== 'icon')) });
++  assert.equal(artifactData.cards[slug].securityFailure, entries.find(e => e.path === rel).note);
++  assert.match(read('sw.js'), new RegExp(`'/ciphers/${slug}\\.html'`), `${slug}: precached for offline use`);
++}
++for (const [page, target] of [['m209', 'hagelin-c36'], ['hagelin-c36', 'm209'],
++  ['cardano-grille', 'turning-grille'], ['turning-grille', 'cardano-grille'], ['columnar', 'myszkowski'], ['myszkowski', 'columnar']]) {
++  assert.match(read(`ciphers/${page}.html`), new RegExp(`href="(?:../ciphers/)?${target}\.html"`), 'Reciprocal contextual link');
++}
++console.log('Historical exhibits passed: independent vectors, edge cases, live controls, catalog registration, and stable numbering.');

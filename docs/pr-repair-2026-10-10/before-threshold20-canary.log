@@ -1,0 +1,12 @@
+
+━━━ Engine complexity: 1 engines, ratio limit 10x ━━━
+
+
+  judged 0, skipped 1
+  skipped: invalidKey (key format not timeable here)
+
+══════════════════════════════════════════════════════════════════════
+  ✅ 0 within linear bound   ❌ 0 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+Complexity canary caught quadratic work (16.94x); invalid-key coverage failure caught; checksum 52502.

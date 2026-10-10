@@ -1,0 +1,6 @@
+
+> cipher-museum@1.0.0 validate:corpus
+> node scripts/validate-corpus-v0.2.js public/corpus/all.jsonl
+
+
+100026 valid, 0 invalid records.

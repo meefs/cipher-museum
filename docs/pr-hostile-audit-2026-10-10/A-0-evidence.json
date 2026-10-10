@@ -1,0 +1,27 @@
+{
+  "missingOnBothPRs": [
+    {
+      "sha": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+      "command": [
+        "git",
+        "cat-file",
+        "-e",
+        "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72:docs/pr-repair-2026-10-10.md"
+      ],
+      "exit": 128,
+      "stderr": "fatal: path 'docs/pr-repair-2026-10-10.md' exists on disk, but not in 'c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72'\n"
+    },
+    {
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "command": [
+        "git",
+        "cat-file",
+        "-e",
+        "abaaceec27f63ecb13770a7ec8fdf9852b0f6330:docs/pr-repair-2026-10-10.md"
+      ],
+      "exit": 128,
+      "stderr": "fatal: path 'docs/pr-repair-2026-10-10.md' exists on disk, but not in 'abaaceec27f63ecb13770a7ec8fdf9852b0f6330'\n"
+    }
+  ],
+  "localGitStatus": "?? docs/pr-repair-2026-10-10.md\n?? docs/pr-repair-2026-10-10/\n?? docs/pr-review-2026-10-10.md\n?? docs/pr-review-2026-10-10/\n"
+}

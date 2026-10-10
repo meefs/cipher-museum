@@ -1,0 +1,12 @@
+━━━ Service-worker cache version ━━━
+
+  ✅  sw.js VERSION is current (cipher-museum-9664d4d3)
+  ✅  CORE parsed out of sw.js
+  ✅  every precached cache-first asset is hashed
+  ✅  minified bundles are hashed
+  ✅  every hashed file exists on disk
+
+  ✅ Service-worker version fresh (18 files hashed)
+  ✅  real text changes still invalidate the version
+  ✅  binary CRLF bytes are preserved in the hash
+  ❌  CRLF checkout produces the same version as LF

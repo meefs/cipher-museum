@@ -1,0 +1,9 @@
+{
+  "threshold20CanaryExit": 0,
+  "initialSecureProseMutation": "Already rejected by existing secure allowlist; use the review\u2019s wrong Broken/Historical classification instead.",
+  "nema-test-trust-labels": 0,
+  "nema-test-historical-exhibits": 0,
+  "hagelin-c36-test-trust-labels": 0,
+  "hagelin-c36-test-historical-exhibits": 0,
+  "trackedStatus": ""
+}

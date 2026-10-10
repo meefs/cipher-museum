@@ -1,0 +1,42 @@
+
+━━━ Engine complexity: 2 engines, ratio limit 20x ━━━
+
+
+  judged 2, skipped 0
+
+══════════════════════════════════════════════════════════════════════
+  ✅ 2 within linear bound   ❌ 0 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+
+━━━ Engine complexity: 1 engines, ratio limit 20x ━━━
+
+
+  judged 1, skipped 0
+
+══════════════════════════════════════════════════════════════════════
+  ✅ 1 within linear bound   ❌ 0 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+node:assert:150
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Missing expected exception: The production guard must reject real quadratic work
+    at Object.<anonymous> (/private/tmp/cipher-repair-20261010-mutation/tests/engines/scaling-canary.js:27:8)
+    at Module._compile (node:internal/modules/cjs/loader:1781:14)
+    at Object..js (node:internal/modules/cjs/loader:1913:10)
+    at Module.load (node:internal/modules/cjs/loader:1505:32)
+    at Function._load (node:internal/modules/cjs/loader:1309:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: /Engine scaling bound exceeded/,
+  operator: 'throws',
+  diff: 'simple'
+}
+
+Node.js v22.23.3

@@ -1,0 +1,104 @@
+{
+  "results": [
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "visited-exhibit-offline",
+      "slug": "caesar",
+      "artifactCards": 1,
+      "errors": []
+    },
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "visited-exhibit-offline",
+      "slug": "sigaba",
+      "artifactCards": 1,
+      "errors": []
+    },
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "visited-exhibit-offline",
+      "slug": "vernam",
+      "artifactCards": 1,
+      "errors": []
+    },
+    {
+      "pr": 1,
+      "width": 1280,
+      "case": "visited-exhibit-offline",
+      "slug": "aeneas-tacticus",
+      "artifactCards": 1,
+      "errors": []
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "nema-invalid-key-reflector-roundtrip",
+      "pass": true
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "grille-rotations-sizes-padding-edge-cells",
+      "pass": true
+    },
+    {
+      "pr": 2,
+      "width": 1280,
+      "case": "myszkowski-ties-normalization-24-columns",
+      "pass": true
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "visited-exhibit-offline",
+      "slug": "caesar",
+      "artifactCards": 1,
+      "errors": []
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "visited-exhibit-offline",
+      "slug": "sigaba",
+      "artifactCards": 1,
+      "errors": []
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "visited-exhibit-offline",
+      "slug": "vernam",
+      "artifactCards": 1,
+      "errors": []
+    },
+    {
+      "pr": 1,
+      "width": 390,
+      "case": "visited-exhibit-offline",
+      "slug": "aeneas-tacticus",
+      "artifactCards": 1,
+      "errors": []
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "nema-invalid-key-reflector-roundtrip",
+      "pass": true
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "grille-rotations-sizes-padding-edge-cells",
+      "pass": true
+    },
+    {
+      "pr": 2,
+      "width": 390,
+      "case": "myszkowski-ties-normalization-24-columns",
+      "pass": true
+    }
+  ]
+}

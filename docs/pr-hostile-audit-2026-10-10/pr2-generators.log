@@ -1,0 +1,104 @@
+$ node scripts/build-trust-labels.js --check
+Trust labels are current.
+
+$ node scripts/build-search-index.js --check
+js/search-index.json — 192 entries
+  cipher: 113
+  exhibit: 24
+  person: 18
+  hall: 14
+  page: 14
+  unsolved: 9
+
+$ node scripts/build-artifact-cards.js --check
+Built artifact cards for 147 exhibits.
+- data/artifact-cards.json
+- js/artifact-cards-data.js
+
+$ node tests/test-min-fresh.js
+━━━ Minified bundle freshness ━━━
+
+  ✅  js/ciphers/all-engines.min.js is current
+  ✅  js/demo-loader.min.js is current
+  ✅  js/artifact-cards-data.min.js is current
+
+  ✅ All minified bundles current
+
+$ node tests/test-sw-version.js
+━━━ Service-worker cache version ━━━
+
+  ✅  sw.js VERSION is current (cipher-museum-437eacda)
+  ✅  CORE parsed out of sw.js
+  ✅  every precached cache-first asset is hashed
+  ✅  minified bundles are hashed
+  ✅  shared exhibit dependencies are precached
+  ✅  museum font dependencies are precached and hashed
+  ✅  every hashed file exists on disk
+
+  ✅ Service-worker version fresh (50 files hashed)
+  ✅  CRLF checkout produces the same version as LF
+  ✅  real text changes still invalidate the version
+  ✅  artifact metadata changes invalidate the version
+  ✅  binary CRLF bytes are preserved in the hash
+
+$ node scripts/build-trust-labels.js
+Trust labels regenerated (0 files changed).
+
+$ node scripts/build-search-index.js
+js/search-index.json — 192 entries
+  cipher: 113
+  exhibit: 24
+  person: 18
+  hall: 14
+  page: 14
+  unsolved: 9
+
+$ node scripts/build-artifact-cards.js
+Built artifact cards for 147 exhibits.
+- data/artifact-cards.json
+- js/artifact-cards-data.js
+
+$ node scripts/build-counts.js
+Exhibit counts → data/exhibit-counts.json
+  144 cipher exhibits
+  17 Hall of Foundations (§141–157)
+  3 modern-protocol (§158–160)
+  164 total across 13 halls
+
+$ node scripts/build-min.js
+✅ js/ciphers/all-engines.js → all-engines.min.js  (159 KB → 68 KB, −57%)
+✅ js/demo-loader.js → demo-loader.min.js  (62 KB → 51 KB, −18%)
+✅ js/artifact-cards-data.js → artifact-cards-data.min.js  (103 KB → 81 KB, −22%)
+✅ sw.js VERSION already cipher-museum-437eacda
+
+$ node scripts/build-trust-labels.js
+Trust labels regenerated (0 files changed).
+
+$ node scripts/build-search-index.js
+js/search-index.json — 192 entries
+  cipher: 113
+  exhibit: 24
+  person: 18
+  hall: 14
+  page: 14
+  unsolved: 9
+
+$ node scripts/build-artifact-cards.js
+Built artifact cards for 147 exhibits.
+- data/artifact-cards.json
+- js/artifact-cards-data.js
+
+$ node scripts/build-counts.js
+Exhibit counts → data/exhibit-counts.json
+  144 cipher exhibits
+  17 Hall of Foundations (§141–157)
+  3 modern-protocol (§158–160)
+  164 total across 13 halls
+
+$ node scripts/build-min.js
+✅ js/ciphers/all-engines.js → all-engines.min.js  (159 KB → 68 KB, −57%)
+✅ js/demo-loader.js → demo-loader.min.js  (62 KB → 51 KB, −18%)
+✅ js/artifact-cards-data.js → artifact-cards-data.min.js  (103 KB → 81 KB, −22%)
+✅ sw.js VERSION already cipher-museum-437eacda
+
+pr2: initial freshness and both generator passes preserve every tracked byte.

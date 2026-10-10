@@ -1,0 +1,11 @@
+
+━━━ Engine complexity: 1 engines, ratio limit 10x ━━━
+
+
+  judged 1, skipped 0
+
+══════════════════════════════════════════════════════════════════════
+  ✅ 1 within linear bound   ❌ 0 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+Known quadratic work accepted by weakened production guard; checksum 52502

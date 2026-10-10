@@ -1,0 +1,27 @@
+{
+  "originalFilesUnchanged": 209,
+  "trackedWorktrees": {
+    "pr1": {
+      "sha": "c29a8668e2c3dcb4e6e5b46bc61c0f95e0edca72",
+      "trackedStatus": ""
+    },
+    "pr2": {
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "trackedStatus": ""
+    },
+    "pre1": {
+      "sha": "663cbffe736b88353ac4d17ecff300c5d6ae665e",
+      "trackedStatus": ""
+    },
+    "pre2": {
+      "sha": "1e190e0e7d347e5684d36a40827e602ac821045d",
+      "trackedStatus": ""
+    },
+    "mutation": {
+      "sha": "abaaceec27f63ecb13770a7ec8fdf9852b0f6330",
+      "trackedStatus": ""
+    }
+  },
+  "rootTrackedStatus": "",
+  "sharedProductionAndTestCodeIdenticalAtBothHeads": true
+}

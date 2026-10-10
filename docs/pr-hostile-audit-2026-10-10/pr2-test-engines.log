@@ -1,0 +1,5094 @@
+
+> cipher-museum@1.0.0 test:engines
+> node tests/engines/run.js
+
+
+=== Property, edge, state, and performance specs ===
+TAP version 13
+# Subtest: adfgvx: KAT (ADFGVX square derivation)
+ok 1 - adfgvx: KAT (ADFGVX square derivation)
+  ---
+  duration_ms: 0.564916
+  type: 'test'
+  ...
+# Subtest: adfgvx: exposes encode and decode
+ok 2 - adfgvx: exposes encode and decode
+  ---
+  duration_ms: 0.043041
+  type: 'test'
+  ...
+# Subtest: adfgvx: roundtrips required boundary classes
+ok 3 - adfgvx: roundtrips required boundary classes
+  ---
+  duration_ms: 8.673416
+  type: 'test'
+  ...
+# Subtest: adfgvx: property roundtrip
+ok 4 - adfgvx: property roundtrip
+  ---
+  duration_ms: 24.674834
+  type: 'test'
+  ...
+# Subtest: adfgvx: documented text and Unicode policy
+ok 5 - adfgvx: documented text and Unicode policy
+  ---
+  duration_ms: 0.313458
+  type: 'test'
+  ...
+# Subtest: adfgvx: invalid keys do not throw uncaught exceptions
+ok 6 - adfgvx: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.84325
+  type: 'test'
+  ...
+# Subtest: adfgvx: output is isolated from other engine calls
+ok 7 - adfgvx: output is isolated from other engine calls
+  ---
+  duration_ms: 0.481667
+  type: 'test'
+  ...
+# Subtest: adfgvx: roundtrips 100 KB without excessive runtime
+ok 8 - adfgvx: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 75.201834
+  type: 'test'
+  ...
+# Subtest: adfgx: KAT (ADFGX square derivation)
+ok 9 - adfgx: KAT (ADFGX square derivation)
+  ---
+  duration_ms: 0.513834
+  type: 'test'
+  ...
+# Subtest: adfgx: exposes encode and decode
+ok 10 - adfgx: exposes encode and decode
+  ---
+  duration_ms: 0.039625
+  type: 'test'
+  ...
+# Subtest: adfgx: roundtrips required boundary classes
+ok 11 - adfgx: roundtrips required boundary classes
+  ---
+  duration_ms: 8.796125
+  type: 'test'
+  ...
+# Subtest: adfgx: property roundtrip
+ok 12 - adfgx: property roundtrip
+  ---
+  duration_ms: 21.733667
+  type: 'test'
+  ...
+# Subtest: adfgx: documented text and Unicode policy
+ok 13 - adfgx: documented text and Unicode policy
+  ---
+  duration_ms: 0.350833
+  type: 'test'
+  ...
+# Subtest: adfgx: invalid keys do not throw uncaught exceptions
+ok 14 - adfgx: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.826
+  type: 'test'
+  ...
+# Subtest: adfgx: output is isolated from other engine calls
+ok 15 - adfgx: output is isolated from other engine calls
+  ---
+  duration_ms: 0.462208
+  type: 'test'
+  ...
+# Subtest: adfgx: roundtrips 100 KB without excessive runtime
+ok 16 - adfgx: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 78.105791
+  type: 'test'
+  ...
+# Subtest: aeneasTacticus: KAT (one-based signal derivation)
+ok 17 - aeneasTacticus: KAT (one-based signal derivation)
+  ---
+  duration_ms: 0.661041
+  type: 'test'
+  ...
+# Subtest: aeneasTacticus: exposes encode and decode
+ok 18 - aeneasTacticus: exposes encode and decode
+  ---
+  duration_ms: 0.070666
+  type: 'test'
+  ...
+# Subtest: aeneasTacticus: roundtrips required boundary classes
+ok 19 - aeneasTacticus: roundtrips required boundary classes
+  ---
+  duration_ms: 0.615083
+  type: 'test'
+  ...
+# Subtest: aeneasTacticus: property roundtrip
+ok 20 - aeneasTacticus: property roundtrip
+  ---
+  duration_ms: 15.53475
+  type: 'test'
+  ...
+# Subtest: aeneasTacticus: documented text and Unicode policy
+ok 21 - aeneasTacticus: documented text and Unicode policy
+  ---
+  duration_ms: 0.274917
+  type: 'test'
+  ...
+# Subtest: aeneasTacticus: invalid keys do not throw uncaught exceptions
+ok 22 - aeneasTacticus: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.274708
+  type: 'test'
+  ...
+# Subtest: aeneasTacticus: output is isolated from other engine calls
+ok 23 - aeneasTacticus: output is isolated from other engine calls
+  ---
+  duration_ms: 0.104791
+  type: 'test'
+  ...
+# Subtest: aeneasTacticus: roundtrips 100 KB without excessive runtime
+ok 24 - aeneasTacticus: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 53.109583
+  type: 'test'
+  ...
+# Subtest: affine: KAT (published Affine vector)
+ok 25 - affine: KAT (published Affine vector)
+  ---
+  duration_ms: 0.428375
+  type: 'test'
+  ...
+# Subtest: affine: exposes encode and decode
+ok 26 - affine: exposes encode and decode
+  ---
+  duration_ms: 0.138167
+  type: 'test'
+  ...
+# Subtest: affine: roundtrips required boundary classes
+ok 27 - affine: roundtrips required boundary classes
+  ---
+  duration_ms: 0.820708
+  type: 'test'
+  ...
+# Subtest: affine: property roundtrip
+ok 28 - affine: property roundtrip
+  ---
+  duration_ms: 14.715625
+  type: 'test'
+  ...
+# Subtest: affine: documented text and Unicode policy
+ok 29 - affine: documented text and Unicode policy
+  ---
+  duration_ms: 0.513041
+  type: 'test'
+  ...
+# Subtest: affine: invalid keys do not throw uncaught exceptions
+ok 30 - affine: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.705958
+  type: 'test'
+  ...
+# Subtest: affine: output is isolated from other engine calls
+ok 31 - affine: output is isolated from other engine calls
+  ---
+  duration_ms: 0.231417
+  type: 'test'
+  ...
+# Subtest: affine: roundtrips 100 KB without excessive runtime
+ok 32 - affine: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 48.212375
+  type: 'test'
+  ...
+# Subtest: alberti: KAT (Alberti disk derivation)
+ok 33 - alberti: KAT (Alberti disk derivation)
+  ---
+  duration_ms: 0.43
+  type: 'test'
+  ...
+# Subtest: alberti: exposes encode and decode
+ok 34 - alberti: exposes encode and decode
+  ---
+  duration_ms: 0.121542
+  type: 'test'
+  ...
+# Subtest: alberti: roundtrips required boundary classes
+ok 35 - alberti: roundtrips required boundary classes
+  ---
+  duration_ms: 0.831916
+  type: 'test'
+  ...
+# Subtest: alberti: property roundtrip
+ok 36 - alberti: property roundtrip
+  ---
+  duration_ms: 11.379583
+  type: 'test'
+  ...
+# Subtest: alberti: documented text and Unicode policy
+ok 37 - alberti: documented text and Unicode policy
+  ---
+  duration_ms: 0.312709
+  type: 'test'
+  ...
+# Subtest: alberti: invalid keys do not throw uncaught exceptions
+ok 38 - alberti: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.363417
+  type: 'test'
+  ...
+# Subtest: alberti: output is isolated from other engine calls
+ok 39 - alberti: output is isolated from other engine calls
+  ---
+  duration_ms: 0.15075
+  type: 'test'
+  ...
+# Subtest: alberti: roundtrips 100 KB without excessive runtime
+ok 40 - alberti: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 30.455917
+  type: 'test'
+  ...
+# Subtest: argenti: KAT (pinned regression vector)
+ok 41 - argenti: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.543292
+  type: 'test'
+  ...
+# Subtest: argenti: exposes encode and decode
+ok 42 - argenti: exposes encode and decode
+  ---
+  duration_ms: 0.080583
+  type: 'test'
+  ...
+# Subtest: argenti: roundtrips required boundary classes
+ok 43 - argenti: roundtrips required boundary classes
+  ---
+  duration_ms: 1.368458
+  type: 'test'
+  ...
+# Subtest: argenti: property roundtrip
+ok 44 - argenti: property roundtrip
+  ---
+  duration_ms: 16.487709
+  type: 'test'
+  ...
+# Subtest: argenti: documented text and Unicode policy
+ok 45 - argenti: documented text and Unicode policy
+  ---
+  duration_ms: 0.29825
+  type: 'test'
+  ...
+# Subtest: argenti: invalid keys do not throw uncaught exceptions
+ok 46 - argenti: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.519459
+  type: 'test'
+  ...
+# Subtest: argenti: output is isolated from other engine calls
+ok 47 - argenti: output is isolated from other engine calls
+  ---
+  duration_ms: 0.122292
+  type: 'test'
+  ...
+# Subtest: argenti: roundtrips 100 KB without excessive runtime
+ok 48 - argenti: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 52.710416
+  type: 'test'
+  ...
+# Subtest: arnoldAndre: KAT (book-coordinate derivation)
+ok 49 - arnoldAndre: KAT (book-coordinate derivation)
+  ---
+  duration_ms: 0.455458
+  type: 'test'
+  ...
+# Subtest: arnoldAndre: exposes encode and decode
+ok 50 - arnoldAndre: exposes encode and decode
+  ---
+  duration_ms: 0.042708
+  type: 'test'
+  ...
+# Subtest: arnoldAndre: roundtrips required boundary classes
+ok 51 - arnoldAndre: roundtrips required boundary classes
+  ---
+  duration_ms: 1.649084
+  type: 'test'
+  ...
+# Subtest: arnoldAndre: property roundtrip
+ok 52 - arnoldAndre: property roundtrip
+  ---
+  duration_ms: 10.26175
+  type: 'test'
+  ...
+# Subtest: arnoldAndre: documented text and Unicode policy
+ok 53 - arnoldAndre: documented text and Unicode policy
+  ---
+  duration_ms: 0.39775
+  type: 'test'
+  ...
+# Subtest: arnoldAndre: invalid keys do not throw uncaught exceptions
+ok 54 - arnoldAndre: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.349958
+  type: 'test'
+  ...
+# Subtest: arnoldAndre: output is isolated from other engine calls
+ok 55 - arnoldAndre: output is isolated from other engine calls
+  ---
+  duration_ms: 0.118083
+  type: 'test'
+  ...
+# Subtest: arnoldAndre: roundtrips 100 KB without excessive runtime
+ok 56 - arnoldAndre: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 75.060709
+  type: 'test'
+  ...
+# Subtest: atbash: KAT (Atbash definition)
+ok 57 - atbash: KAT (Atbash definition)
+  ---
+  duration_ms: 0.389167
+  type: 'test'
+  ...
+# Subtest: atbash: exposes encode and decode
+ok 58 - atbash: exposes encode and decode
+  ---
+  duration_ms: 0.044583
+  type: 'test'
+  ...
+# Subtest: atbash: roundtrips required boundary classes
+ok 59 - atbash: roundtrips required boundary classes
+  ---
+  duration_ms: 0.378042
+  type: 'test'
+  ...
+# Subtest: atbash: property roundtrip
+ok 60 - atbash: property roundtrip
+  ---
+  duration_ms: 12.680167
+  type: 'test'
+  ...
+# Subtest: atbash: documented text and Unicode policy
+ok 61 - atbash: documented text and Unicode policy
+  ---
+  duration_ms: 0.157125
+  type: 'test'
+  ...
+# Subtest: atbash: invalid keys do not throw uncaught exceptions
+ok 62 - atbash: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.271084
+  type: 'test'
+  ...
+# Subtest: atbash: output is isolated from other engine calls
+ok 63 - atbash: output is isolated from other engine calls
+  ---
+  duration_ms: 0.105459
+  type: 'test'
+  ...
+# Subtest: atbash: roundtrips 100 KB without excessive runtime
+ok 64 - atbash: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 14.656834
+  type: 'test'
+  ...
+# Subtest: autokey: KAT (Autokey primer derivation)
+ok 65 - autokey: KAT (Autokey primer derivation)
+  ---
+  duration_ms: 0.484084
+  type: 'test'
+  ...
+# Subtest: autokey: exposes encode and decode
+ok 66 - autokey: exposes encode and decode
+  ---
+  duration_ms: 0.042625
+  type: 'test'
+  ...
+# Subtest: autokey: roundtrips required boundary classes
+ok 67 - autokey: roundtrips required boundary classes
+  ---
+  duration_ms: 1.076417
+  type: 'test'
+  ...
+# Subtest: autokey: property roundtrip
+ok 68 - autokey: property roundtrip
+  ---
+  duration_ms: 10.475166
+  type: 'test'
+  ...
+# Subtest: autokey: documented text and Unicode policy
+ok 69 - autokey: documented text and Unicode policy
+  ---
+  duration_ms: 0.231667
+  type: 'test'
+  ...
+# Subtest: autokey: invalid keys do not throw uncaught exceptions
+ok 70 - autokey: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.408209
+  type: 'test'
+  ...
+# Subtest: autokey: output is isolated from other engine calls
+ok 71 - autokey: output is isolated from other engine calls
+  ---
+  duration_ms: 0.105875
+  type: 'test'
+  ...
+# Subtest: autokey: roundtrips 100 KB without excessive runtime
+ok 72 - autokey: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 25.229375
+  type: 'test'
+  ...
+# Subtest: babington: KAT (pinned regression vector)
+ok 73 - babington: KAT (pinned regression vector)
+  ---
+  duration_ms: 1.031209
+  type: 'test'
+  ...
+# Subtest: babington: exposes encode and decode
+ok 74 - babington: exposes encode and decode
+  ---
+  duration_ms: 0.222625
+  type: 'test'
+  ...
+# Subtest: babington: roundtrips required boundary classes
+ok 75 - babington: roundtrips required boundary classes
+  ---
+  duration_ms: 7.421958
+  type: 'test'
+  ...
+# Subtest: babington: property roundtrip
+ok 76 - babington: property roundtrip
+  ---
+  duration_ms: 21.474167
+  type: 'test'
+  ...
+# Subtest: babington: documented text and Unicode policy
+ok 77 - babington: documented text and Unicode policy
+  ---
+  duration_ms: 0.467625
+  type: 'test'
+  ...
+# Subtest: babington: invalid keys do not throw uncaught exceptions
+ok 78 - babington: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.213084
+  type: 'test'
+  ...
+# Subtest: babington: output is isolated from other engine calls
+ok 79 - babington: output is isolated from other engine calls
+  ---
+  duration_ms: 0.186584
+  type: 'test'
+  ...
+# Subtest: babington: roundtrips 100 KB without excessive runtime
+ok 80 - babington: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 106.841417
+  type: 'test'
+  ...
+# Subtest: bacon: KAT (published Bacon alphabet)
+ok 81 - bacon: KAT (published Bacon alphabet)
+  ---
+  duration_ms: 0.453875
+  type: 'test'
+  ...
+# Subtest: bacon: exposes encode and decode
+ok 82 - bacon: exposes encode and decode
+  ---
+  duration_ms: 0.080333
+  type: 'test'
+  ...
+# Subtest: bacon: roundtrips required boundary classes
+ok 83 - bacon: roundtrips required boundary classes
+  ---
+  duration_ms: 3.562167
+  type: 'test'
+  ...
+# Subtest: bacon: property roundtrip
+ok 84 - bacon: property roundtrip
+  ---
+  duration_ms: 27.636209
+  type: 'test'
+  ...
+# Subtest: bacon: documented text and Unicode policy
+ok 85 - bacon: documented text and Unicode policy
+  ---
+  duration_ms: 0.375792
+  type: 'test'
+  ...
+# Subtest: bacon: invalid keys do not throw uncaught exceptions
+ok 86 - bacon: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.266083
+  type: 'test'
+  ...
+# Subtest: bacon: output is isolated from other engine calls
+ok 87 - bacon: output is isolated from other engine calls
+  ---
+  duration_ms: 0.119583
+  type: 'test'
+  ...
+# Subtest: bacon: roundtrips 100 KB without excessive runtime
+ok 88 - bacon: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 192.91
+  type: 'test'
+  ...
+# Subtest: bazeries: KAT (Bazeries number-word derivation)
+ok 89 - bazeries: KAT (Bazeries number-word derivation)
+  ---
+  duration_ms: 0.530125
+  type: 'test'
+  ...
+# Subtest: bazeries: exposes encode and decode
+ok 90 - bazeries: exposes encode and decode
+  ---
+  duration_ms: 0.041541
+  type: 'test'
+  ...
+# Subtest: bazeries: roundtrips required boundary classes
+ok 91 - bazeries: roundtrips required boundary classes
+  ---
+  duration_ms: 0.969834
+  type: 'test'
+  ...
+# Subtest: bazeries: property roundtrip
+ok 92 - bazeries: property roundtrip
+  ---
+  duration_ms: 14.352625
+  type: 'test'
+  ...
+# Subtest: bazeries: documented text and Unicode policy
+ok 93 - bazeries: documented text and Unicode policy
+  ---
+  duration_ms: 0.352333
+  type: 'test'
+  ...
+# Subtest: bazeries: invalid keys do not throw uncaught exceptions
+ok 94 - bazeries: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.333042
+  type: 'test'
+  ...
+# Subtest: bazeries: output is isolated from other engine calls
+ok 95 - bazeries: output is isolated from other engine calls
+  ---
+  duration_ms: 0.133
+  type: 'test'
+  ...
+# Subtest: bazeries: roundtrips 100 KB without excessive runtime
+ok 96 - bazeries: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 64.078875
+  type: 'test'
+  ...
+# Subtest: beale: KAT (book-index derivation)
+ok 97 - beale: KAT (book-index derivation)
+  ---
+  duration_ms: 0.488667
+  type: 'test'
+  ...
+# Subtest: beale: exposes encode and decode
+ok 98 - beale: exposes encode and decode
+  ---
+  duration_ms: 0.0475
+  type: 'test'
+  ...
+# Subtest: beale: roundtrips required boundary classes
+ok 99 - beale: roundtrips required boundary classes
+  ---
+  duration_ms: 0.928875
+  type: 'test'
+  ...
+# Subtest: beale: property roundtrip
+ok 100 - beale: property roundtrip
+  ---
+  duration_ms: 9.749917
+  type: 'test'
+  ...
+# Subtest: beale: documented text and Unicode policy
+ok 101 - beale: documented text and Unicode policy
+  ---
+  duration_ms: 0.320041
+  type: 'test'
+  ...
+# Subtest: beale: invalid keys do not throw uncaught exceptions
+ok 102 - beale: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.370083
+  type: 'test'
+  ...
+# Subtest: beale: output is isolated from other engine calls
+ok 103 - beale: output is isolated from other engine calls
+  ---
+  duration_ms: 0.143167
+  type: 'test'
+  ...
+# Subtest: beale: roundtrips 100 KB without excessive runtime
+ok 104 - beale: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 36.756959
+  type: 'test'
+  ...
+# Subtest: beaufort: KAT (Beaufort arithmetic derivation)
+ok 105 - beaufort: KAT (Beaufort arithmetic derivation)
+  ---
+  duration_ms: 0.525917
+  type: 'test'
+  ...
+# Subtest: beaufort: exposes encode and decode
+ok 106 - beaufort: exposes encode and decode
+  ---
+  duration_ms: 0.123917
+  type: 'test'
+  ...
+# Subtest: beaufort: roundtrips required boundary classes
+ok 107 - beaufort: roundtrips required boundary classes
+  ---
+  duration_ms: 0.852209
+  type: 'test'
+  ...
+# Subtest: beaufort: property roundtrip
+ok 108 - beaufort: property roundtrip
+  ---
+  duration_ms: 8.483542
+  type: 'test'
+  ...
+# Subtest: beaufort: documented text and Unicode policy
+ok 109 - beaufort: documented text and Unicode policy
+  ---
+  duration_ms: 0.282708
+  type: 'test'
+  ...
+# Subtest: beaufort: invalid keys do not throw uncaught exceptions
+ok 110 - beaufort: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.308375
+  type: 'test'
+  ...
+# Subtest: beaufort: output is isolated from other engine calls
+ok 111 - beaufort: output is isolated from other engine calls
+  ---
+  duration_ms: 0.105875
+  type: 'test'
+  ...
+# Subtest: beaufort: roundtrips 100 KB without excessive runtime
+ok 112 - beaufort: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 10.621333
+  type: 'test'
+  ...
+# Subtest: bifid: KAT (Delastelle square derivation)
+ok 113 - bifid: KAT (Delastelle square derivation)
+  ---
+  duration_ms: 0.548375
+  type: 'test'
+  ...
+# Subtest: bifid: exposes encode and decode
+ok 114 - bifid: exposes encode and decode
+  ---
+  duration_ms: 0.0815
+  type: 'test'
+  ...
+# Subtest: bifid: roundtrips required boundary classes
+ok 115 - bifid: roundtrips required boundary classes
+  ---
+  duration_ms: 1.936834
+  type: 'test'
+  ...
+# Subtest: bifid: property roundtrip
+ok 116 - bifid: property roundtrip
+  ---
+  duration_ms: 14.77675
+  type: 'test'
+  ...
+# Subtest: bifid: documented text and Unicode policy
+ok 117 - bifid: documented text and Unicode policy
+  ---
+  duration_ms: 0.244
+  type: 'test'
+  ...
+# Subtest: bifid: invalid keys do not throw uncaught exceptions
+ok 118 - bifid: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.362959
+  type: 'test'
+  ...
+# Subtest: bifid: output is isolated from other engine calls
+ok 119 - bifid: output is isolated from other engine calls
+  ---
+  duration_ms: 0.110542
+  type: 'test'
+  ...
+# Subtest: bifid: roundtrips 100 KB without excessive runtime
+ok 120 - bifid: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 33.47525
+  type: 'test'
+  ...
+# Subtest: bookCipher: KAT (embedded book lookup)
+ok 121 - bookCipher: KAT (embedded book lookup)
+  ---
+  duration_ms: 0.377042
+  type: 'test'
+  ...
+# Subtest: bookCipher: exposes encode and decode
+ok 122 - bookCipher: exposes encode and decode
+  ---
+  duration_ms: 0.043666
+  type: 'test'
+  ...
+# Subtest: bookCipher: roundtrips required boundary classes
+ok 123 - bookCipher: roundtrips required boundary classes
+  ---
+  duration_ms: 0.744208
+  type: 'test'
+  ...
+# Subtest: bookCipher: property roundtrip
+ok 124 - bookCipher: property roundtrip
+  ---
+  duration_ms: 12.336083
+  type: 'test'
+  ...
+# Subtest: bookCipher: documented text and Unicode policy
+ok 125 - bookCipher: documented text and Unicode policy
+  ---
+  duration_ms: 0.552
+  type: 'test'
+  ...
+# Subtest: bookCipher: invalid keys do not throw uncaught exceptions
+ok 126 - bookCipher: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.26325
+  type: 'test'
+  ...
+# Subtest: bookCipher: output is isolated from other engine calls
+ok 127 - bookCipher: output is isolated from other engine calls
+  ---
+  duration_ms: 0.241833
+  type: 'test'
+  ...
+# Subtest: bookCipher: roundtrips 100 KB without excessive runtime
+ok 128 - bookCipher: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 24.23925
+  type: 'test'
+  ...
+# Subtest: caesar: exposes encode and decode
+ok 129 - caesar: exposes encode and decode
+  ---
+  duration_ms: 0.702541
+  type: 'test'
+  ...
+# Subtest: caesar: roundtrips required boundary classes
+ok 130 - caesar: roundtrips required boundary classes
+  ---
+  duration_ms: 0.546459
+  type: 'test'
+  ...
+# Subtest: caesar: property roundtrip
+ok 131 - caesar: property roundtrip
+  ---
+  duration_ms: 20.028834
+  type: 'test'
+  ...
+# Subtest: caesar: published shift-3 example
+ok 132 - caesar: published shift-3 example
+  ---
+  duration_ms: 0.098666
+  type: 'test'
+  ...
+# Subtest: caesar: documented text and Unicode policy
+ok 133 - caesar: documented text and Unicode policy
+  ---
+  duration_ms: 0.076792
+  type: 'test'
+  ...
+# Subtest: caesar: invalid keys do not throw uncaught exceptions
+ok 134 - caesar: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.298792
+  type: 'test'
+  ...
+# Subtest: caesar: output is isolated from other engine calls
+ok 135 - caesar: output is isolated from other engine calls
+  ---
+  duration_ms: 0.155584
+  type: 'test'
+  ...
+# Subtest: caesar: roundtrips 100 KB without excessive runtime
+ok 136 - caesar: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 13.382834
+  type: 'test'
+  ...
+# Subtest: caesar: KAT (Caesar shift definition)
+ok 137 - caesar: KAT (Caesar shift definition)
+  ---
+  duration_ms: 0.231625
+  type: 'test'
+  ...
+# Subtest: cardanoAutokey: KAT (Cardano autokey derivation)
+ok 138 - cardanoAutokey: KAT (Cardano autokey derivation)
+  ---
+  duration_ms: 0.465667
+  type: 'test'
+  ...
+# Subtest: cardanoAutokey: exposes encode and decode
+ok 139 - cardanoAutokey: exposes encode and decode
+  ---
+  duration_ms: 0.04375
+  type: 'test'
+  ...
+# Subtest: cardanoAutokey: roundtrips required boundary classes
+ok 140 - cardanoAutokey: roundtrips required boundary classes
+  ---
+  duration_ms: 0.81075
+  type: 'test'
+  ...
+# Subtest: cardanoAutokey: property roundtrip
+ok 141 - cardanoAutokey: property roundtrip
+  ---
+  duration_ms: 10.486875
+  type: 'test'
+  ...
+# Subtest: cardanoAutokey: documented text and Unicode policy
+ok 142 - cardanoAutokey: documented text and Unicode policy
+  ---
+  duration_ms: 0.262875
+  type: 'test'
+  ...
+# Subtest: cardanoAutokey: invalid keys do not throw uncaught exceptions
+ok 143 - cardanoAutokey: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.2955
+  type: 'test'
+  ...
+# Subtest: cardanoAutokey: output is isolated from other engine calls
+ok 144 - cardanoAutokey: output is isolated from other engine calls
+  ---
+  duration_ms: 0.071708
+  type: 'test'
+  ...
+# Subtest: cardanoAutokey: roundtrips 100 KB without excessive runtime
+ok 145 - cardanoAutokey: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 19.71075
+  type: 'test'
+  ...
+# Subtest: cardanoGrille: KAT (Cardano grid derivation)
+ok 146 - cardanoGrille: KAT (Cardano grid derivation)
+  ---
+  duration_ms: 0.509583
+  type: 'test'
+  ...
+# Subtest: cardanoGrille: exposes encode and decode
+ok 147 - cardanoGrille: exposes encode and decode
+  ---
+  duration_ms: 0.043208
+  type: 'test'
+  ...
+# Subtest: cardanoGrille: roundtrips required boundary classes
+ok 148 - cardanoGrille: roundtrips required boundary classes
+  ---
+  duration_ms: 1.495292
+  type: 'test'
+  ...
+# Subtest: cardanoGrille: property roundtrip
+ok 149 - cardanoGrille: property roundtrip
+  ---
+  duration_ms: 26.627375
+  type: 'test'
+  ...
+# Subtest: cardanoGrille: documented text and Unicode policy
+ok 150 - cardanoGrille: documented text and Unicode policy
+  ---
+  duration_ms: 0.293042
+  type: 'test'
+  ...
+# Subtest: cardanoGrille: invalid keys do not throw uncaught exceptions
+ok 151 - cardanoGrille: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.362334
+  type: 'test'
+  ...
+# Subtest: cardanoGrille: output is isolated from other engine calls
+ok 152 - cardanoGrille: output is isolated from other engine calls
+  ---
+  duration_ms: 0.117958
+  type: 'test'
+  ...
+# Subtest: cardanoGrille: roundtrips 100 KB without excessive runtime
+ok 153 - cardanoGrille: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 74.399458
+  type: 'test'
+  ...
+# Subtest: chaocipher: KAT (Chaocipher initial-alphabet derivation)
+ok 154 - chaocipher: KAT (Chaocipher initial-alphabet derivation)
+  ---
+  duration_ms: 0.51525
+  type: 'test'
+  ...
+# Subtest: chaocipher: exposes encode and decode
+ok 155 - chaocipher: exposes encode and decode
+  ---
+  duration_ms: 0.043125
+  type: 'test'
+  ...
+# Subtest: chaocipher: roundtrips required boundary classes
+ok 156 - chaocipher: roundtrips required boundary classes
+  ---
+  duration_ms: 9.920541
+  type: 'test'
+  ...
+# Subtest: chaocipher: property roundtrip
+ok 157 - chaocipher: property roundtrip
+  ---
+  duration_ms: 27.7665
+  type: 'test'
+  ...
+# Subtest: chaocipher: documented text and Unicode policy
+ok 158 - chaocipher: documented text and Unicode policy
+  ---
+  duration_ms: 0.284166
+  type: 'test'
+  ...
+# Subtest: chaocipher: invalid keys do not throw uncaught exceptions
+ok 159 - chaocipher: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.40275
+  type: 'test'
+  ...
+# Subtest: chaocipher: output is isolated from other engine calls
+ok 160 - chaocipher: output is isolated from other engine calls
+  ---
+  duration_ms: 0.120084
+  type: 'test'
+  ...
+# Subtest: chaocipher: roundtrips 100 KB without excessive runtime
+ok 161 - chaocipher: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 306.523625
+  type: 'test'
+  ...
+# Subtest: chineseTelegraph: KAT (fixed telegraph-table derivation)
+ok 162 - chineseTelegraph: KAT (fixed telegraph-table derivation)
+  ---
+  duration_ms: 0.518958
+  type: 'test'
+  ...
+# Subtest: chineseTelegraph: exposes encode and decode
+ok 163 - chineseTelegraph: exposes encode and decode
+  ---
+  duration_ms: 0.043292
+  type: 'test'
+  ...
+# Subtest: chineseTelegraph: roundtrips required boundary classes
+ok 164 - chineseTelegraph: roundtrips required boundary classes
+  ---
+  duration_ms: 1.699625
+  type: 'test'
+  ...
+# Subtest: chineseTelegraph: property roundtrip
+ok 165 - chineseTelegraph: property roundtrip
+  ---
+  duration_ms: 12.328709
+  type: 'test'
+  ...
+# Subtest: chineseTelegraph: documented text and Unicode policy
+ok 166 - chineseTelegraph: documented text and Unicode policy
+  ---
+  duration_ms: 0.30175
+  type: 'test'
+  ...
+# Subtest: chineseTelegraph: invalid keys do not throw uncaught exceptions
+ok 167 - chineseTelegraph: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.586625
+  type: 'test'
+  ...
+# Subtest: chineseTelegraph: output is isolated from other engine calls
+ok 168 - chineseTelegraph: output is isolated from other engine calls
+  ---
+  duration_ms: 0.113792
+  type: 'test'
+  ...
+# Subtest: chineseTelegraph: roundtrips 100 KB without excessive runtime
+ok 169 - chineseTelegraph: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 68.666209
+  type: 'test'
+  ...
+# Subtest: columnar: KAT (ragged-column derivation)
+ok 170 - columnar: KAT (ragged-column derivation)
+  ---
+  duration_ms: 5.857666
+  type: 'test'
+  ...
+# Subtest: columnar: exposes encode and decode
+ok 171 - columnar: exposes encode and decode
+  ---
+  duration_ms: 0.055458
+  type: 'test'
+  ...
+# Subtest: columnar: roundtrips required boundary classes
+ok 172 - columnar: roundtrips required boundary classes
+  ---
+  duration_ms: 0.481417
+  type: 'test'
+  ...
+# Subtest: columnar: property roundtrip
+ok 173 - columnar: property roundtrip
+  ---
+  duration_ms: 13.885584
+  type: 'test'
+  ...
+# Subtest: columnar: documented text and Unicode policy
+ok 174 - columnar: documented text and Unicode policy
+  ---
+  duration_ms: 0.355916
+  type: 'test'
+  ...
+# Subtest: columnar: invalid keys do not throw uncaught exceptions
+ok 175 - columnar: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 2.449125
+  type: 'test'
+  ...
+# Subtest: columnar: output is isolated from other engine calls
+ok 176 - columnar: output is isolated from other engine calls
+  ---
+  duration_ms: 0.175625
+  type: 'test'
+  ...
+# Subtest: columnar: roundtrips 100 KB without excessive runtime
+ok 177 - columnar: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 26.851875
+  type: 'test'
+  ...
+# Subtest: commercialCode: KAT (commercial codeword derivation)
+ok 178 - commercialCode: KAT (commercial codeword derivation)
+  ---
+  duration_ms: 0.424792
+  type: 'test'
+  ...
+# Subtest: commercialCode: exposes encode and decode
+ok 179 - commercialCode: exposes encode and decode
+  ---
+  duration_ms: 0.043375
+  type: 'test'
+  ...
+# Subtest: commercialCode: roundtrips required boundary classes
+ok 180 - commercialCode: roundtrips required boundary classes
+  ---
+  duration_ms: 2.248416
+  type: 'test'
+  ...
+# Subtest: commercialCode: property roundtrip
+ok 181 - commercialCode: property roundtrip
+  ---
+  duration_ms: 9.822417
+  type: 'test'
+  ...
+# Subtest: commercialCode: documented text and Unicode policy
+ok 182 - commercialCode: documented text and Unicode policy
+  ---
+  duration_ms: 0.625916
+  type: 'test'
+  ...
+# Subtest: commercialCode: invalid keys do not throw uncaught exceptions
+ok 183 - commercialCode: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.256291
+  type: 'test'
+  ...
+# Subtest: commercialCode: output is isolated from other engine calls
+ok 184 - commercialCode: output is isolated from other engine calls
+  ---
+  duration_ms: 0.119917
+  type: 'test'
+  ...
+# Subtest: commercialCode: roundtrips 100 KB without excessive runtime
+ok 185 - commercialCode: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 59.696209
+  type: 'test'
+  ...
+# Subtest: confederateVigenere: KAT (Confederate disk derivation)
+ok 186 - confederateVigenere: KAT (Confederate disk derivation)
+  ---
+  duration_ms: 0.494584
+  type: 'test'
+  ...
+# Subtest: confederateVigenere: exposes encode and decode
+ok 187 - confederateVigenere: exposes encode and decode
+  ---
+  duration_ms: 0.042583
+  type: 'test'
+  ...
+# Subtest: confederateVigenere: roundtrips required boundary classes
+ok 188 - confederateVigenere: roundtrips required boundary classes
+  ---
+  duration_ms: 0.657666
+  type: 'test'
+  ...
+# Subtest: confederateVigenere: property roundtrip
+ok 189 - confederateVigenere: property roundtrip
+  ---
+  duration_ms: 8.841125
+  type: 'test'
+  ...
+# Subtest: confederateVigenere: documented text and Unicode policy
+ok 190 - confederateVigenere: documented text and Unicode policy
+  ---
+  duration_ms: 0.249291
+  type: 'test'
+  ...
+# Subtest: confederateVigenere: invalid keys do not throw uncaught exceptions
+ok 191 - confederateVigenere: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.300792
+  type: 'test'
+  ...
+# Subtest: confederateVigenere: output is isolated from other engine calls
+ok 192 - confederateVigenere: output is isolated from other engine calls
+  ---
+  duration_ms: 0.126
+  type: 'test'
+  ...
+# Subtest: confederateVigenere: roundtrips 100 KB without excessive runtime
+ok 193 - confederateVigenere: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 17.676
+  type: 'test'
+  ...
+# Subtest: copiale: KAT (pinned regression vector)
+ok 194 - copiale: KAT (pinned regression vector)
+  ---
+  duration_ms: 1.124667
+  type: 'test'
+  ...
+# Subtest: copiale: exposes encode and decode
+ok 195 - copiale: exposes encode and decode
+  ---
+  duration_ms: 0.086959
+  type: 'test'
+  ...
+# Subtest: copiale: roundtrips required boundary classes
+ok 196 - copiale: roundtrips required boundary classes
+  ---
+  duration_ms: 2.762708
+  type: 'test'
+  ...
+# Subtest: copiale: property roundtrip
+ok 197 - copiale: property roundtrip
+  ---
+  duration_ms: 39.149209
+  type: 'test'
+  ...
+# Subtest: copiale: documented text and Unicode policy
+ok 198 - copiale: documented text and Unicode policy
+  ---
+  duration_ms: 1.018333
+  type: 'test'
+  ...
+# Subtest: copiale: invalid keys do not throw uncaught exceptions
+ok 199 - copiale: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.745625
+  type: 'test'
+  ...
+# Subtest: copiale: output is isolated from other engine calls
+ok 200 - copiale: output is isolated from other engine calls
+  ---
+  duration_ms: 0.222209
+  type: 'test'
+  ...
+# Subtest: copiale: roundtrips 100 KB without excessive runtime
+ok 201 - copiale: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 34.406875
+  type: 'test'
+  ...
+# Subtest: culperRing: KAT (Tallmadge-table derivation)
+ok 202 - culperRing: KAT (Tallmadge-table derivation)
+  ---
+  duration_ms: 0.395167
+  type: 'test'
+  ...
+# Subtest: culperRing: exposes encode and decode
+ok 203 - culperRing: exposes encode and decode
+  ---
+  duration_ms: 0.043125
+  type: 'test'
+  ...
+# Subtest: culperRing: roundtrips required boundary classes
+ok 204 - culperRing: roundtrips required boundary classes
+  ---
+  duration_ms: 0.742834
+  type: 'test'
+  ...
+# Subtest: culperRing: property roundtrip
+ok 205 - culperRing: property roundtrip
+  ---
+  duration_ms: 7.251208
+  type: 'test'
+  ...
+# Subtest: culperRing: documented text and Unicode policy
+ok 206 - culperRing: documented text and Unicode policy
+  ---
+  duration_ms: 0.625375
+  type: 'test'
+  ...
+# Subtest: culperRing: invalid keys do not throw uncaught exceptions
+ok 207 - culperRing: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.52725
+  type: 'test'
+  ...
+# Subtest: culperRing: output is isolated from other engine calls
+ok 208 - culperRing: output is isolated from other engine calls
+  ---
+  duration_ms: 0.149584
+  type: 'test'
+  ...
+# Subtest: culperRing: roundtrips 100 KB without excessive runtime
+ok 209 - culperRing: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 37.99075
+  type: 'test'
+  ...
+# Subtest: diana: KAT (published DIANA vector)
+ok 210 - diana: KAT (published DIANA vector)
+  ---
+  duration_ms: 0.502834
+  type: 'test'
+  ...
+# Subtest: diana: exposes encode and decode
+ok 211 - diana: exposes encode and decode
+  ---
+  duration_ms: 0.04275
+  type: 'test'
+  ...
+# Subtest: diana: roundtrips required boundary classes
+ok 212 - diana: roundtrips required boundary classes
+  ---
+  duration_ms: 0.522041
+  type: 'test'
+  ...
+# Subtest: diana: property roundtrip
+ok 213 - diana: property roundtrip
+  ---
+  duration_ms: 10.613125
+  type: 'test'
+  ...
+# Subtest: diana: documented text and Unicode policy
+ok 214 - diana: documented text and Unicode policy
+  ---
+  duration_ms: 0.336083
+  type: 'test'
+  ...
+# Subtest: diana: invalid keys do not throw uncaught exceptions
+ok 215 - diana: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.302167
+  type: 'test'
+  ...
+# Subtest: diana: output is isolated from other engine calls
+ok 216 - diana: output is isolated from other engine calls
+  ---
+  duration_ms: 0.110708
+  type: 'test'
+  ...
+# Subtest: diana: roundtrips 100 KB without excessive runtime
+ok 217 - diana: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 21.969667
+  type: 'test'
+  ...
+# Subtest: dictionaryCode: KAT (dictionary-index derivation)
+ok 218 - dictionaryCode: KAT (dictionary-index derivation)
+  ---
+  duration_ms: 0.503209
+  type: 'test'
+  ...
+# Subtest: dictionaryCode: exposes encode and decode
+ok 219 - dictionaryCode: exposes encode and decode
+  ---
+  duration_ms: 0.077833
+  type: 'test'
+  ...
+# Subtest: dictionaryCode: roundtrips required boundary classes
+ok 220 - dictionaryCode: roundtrips required boundary classes
+  ---
+  duration_ms: 3.681167
+  type: 'test'
+  ...
+# Subtest: dictionaryCode: property roundtrip
+ok 221 - dictionaryCode: property roundtrip
+  ---
+  duration_ms: 16.171166
+  type: 'test'
+  ...
+# Subtest: dictionaryCode: documented text and Unicode policy
+ok 222 - dictionaryCode: documented text and Unicode policy
+  ---
+  duration_ms: 0.271291
+  type: 'test'
+  ...
+# Subtest: dictionaryCode: invalid keys do not throw uncaught exceptions
+ok 223 - dictionaryCode: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.327125
+  type: 'test'
+  ...
+# Subtest: dictionaryCode: output is isolated from other engine calls
+ok 224 - dictionaryCode: output is isolated from other engine calls
+  ---
+  duration_ms: 0.120291
+  type: 'test'
+  ...
+# Subtest: dictionaryCode: roundtrips 100 KB without excessive runtime
+ok 225 - dictionaryCode: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 96.671417
+  type: 'test'
+  ...
+# Subtest: dictionaryCode: unusable reference text falls back to the default reference
+ok 226 - dictionaryCode: unusable reference text falls back to the default reference
+  ---
+  duration_ms: 0.257916
+  type: 'test'
+  ...
+# Subtest: doubleTransposition: KAT (double-column derivation)
+ok 227 - doubleTransposition: KAT (double-column derivation)
+  ---
+  duration_ms: 6.106417
+  type: 'test'
+  ...
+# Subtest: doubleTransposition: exposes encode and decode
+ok 228 - doubleTransposition: exposes encode and decode
+  ---
+  duration_ms: 0.056167
+  type: 'test'
+  ...
+# Subtest: doubleTransposition: roundtrips required boundary classes
+ok 229 - doubleTransposition: roundtrips required boundary classes
+  ---
+  duration_ms: 0.656834
+  type: 'test'
+  ...
+# Subtest: doubleTransposition: property roundtrip
+ok 230 - doubleTransposition: property roundtrip
+  ---
+  duration_ms: 15.088208
+  type: 'test'
+  ...
+# Subtest: doubleTransposition: documented text and Unicode policy
+ok 231 - doubleTransposition: documented text and Unicode policy
+  ---
+  duration_ms: 0.360083
+  type: 'test'
+  ...
+# Subtest: doubleTransposition: invalid keys do not throw uncaught exceptions
+ok 232 - doubleTransposition: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 2.229833
+  type: 'test'
+  ...
+# Subtest: doubleTransposition: output is isolated from other engine calls
+ok 233 - doubleTransposition: output is isolated from other engine calls
+  ---
+  duration_ms: 0.135417
+  type: 'test'
+  ...
+# Subtest: doubleTransposition: roundtrips 100 KB without excessive runtime
+ok 234 - doubleTransposition: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 26.827334
+  type: 'test'
+  ...
+# Subtest: enigma: KAT (canonical Enigma vector)
+ok 235 - enigma: KAT (canonical Enigma vector)
+  ---
+  duration_ms: 0.523625
+  type: 'test'
+  ...
+# Subtest: enigma: exposes encode and decode
+ok 236 - enigma: exposes encode and decode
+  ---
+  duration_ms: 0.067333
+  type: 'test'
+  ...
+# Subtest: enigma: roundtrips required boundary classes
+ok 237 - enigma: roundtrips required boundary classes
+  ---
+  duration_ms: 3.781541
+  type: 'test'
+  ...
+# Subtest: enigma: property roundtrip
+ok 238 - enigma: property roundtrip
+  ---
+  duration_ms: 15.940167
+  type: 'test'
+  ...
+# Subtest: enigma: documented text and Unicode policy
+ok 239 - enigma: documented text and Unicode policy
+  ---
+  duration_ms: 0.259417
+  type: 'test'
+  ...
+# Subtest: enigma: invalid keys do not throw uncaught exceptions
+ok 240 - enigma: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.33825
+  type: 'test'
+  ...
+# Subtest: enigma: output is isolated from other engine calls
+ok 241 - enigma: output is isolated from other engine calls
+  ---
+  duration_ms: 0.108417
+  type: 'test'
+  ...
+# Subtest: enigma: roundtrips 100 KB without excessive runtime
+ok 242 - enigma: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 73.666792
+  type: 'test'
+  ...
+# Subtest: fialka: KAT (pinned regression vector)
+ok 243 - fialka: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.780292
+  type: 'test'
+  ...
+# Subtest: fialka: exposes encode and decode
+ok 244 - fialka: exposes encode and decode
+  ---
+  duration_ms: 0.048583
+  type: 'test'
+  ...
+# Subtest: fialka: roundtrips required boundary classes
+ok 245 - fialka: roundtrips required boundary classes
+  ---
+  duration_ms: 7.148167
+  type: 'test'
+  ...
+# Subtest: fialka: property roundtrip
+ok 246 - fialka: property roundtrip
+  ---
+  duration_ms: 20.687583
+  type: 'test'
+  ...
+# Subtest: fialka: documented text and Unicode policy
+ok 247 - fialka: documented text and Unicode policy
+  ---
+  duration_ms: 0.6575
+  type: 'test'
+  ...
+# Subtest: fialka: invalid keys do not throw uncaught exceptions
+ok 248 - fialka: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.959375
+  type: 'test'
+  ...
+# Subtest: fialka: output is isolated from other engine calls
+ok 249 - fialka: output is isolated from other engine calls
+  ---
+  duration_ms: 0.13675
+  type: 'test'
+  ...
+# Subtest: fialka: roundtrips 100 KB without excessive runtime
+ok 250 - fialka: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 318.890625
+  type: 'test'
+  ...
+# Subtest: foursquare: KAT (Four-Square cell derivation)
+ok 251 - foursquare: KAT (Four-Square cell derivation)
+  ---
+  duration_ms: 0.55925
+  type: 'test'
+  ...
+# Subtest: foursquare: exposes encode and decode
+ok 252 - foursquare: exposes encode and decode
+  ---
+  duration_ms: 0.080041
+  type: 'test'
+  ...
+# Subtest: foursquare: roundtrips required boundary classes
+ok 253 - foursquare: roundtrips required boundary classes
+  ---
+  duration_ms: 1.931625
+  type: 'test'
+  ...
+# Subtest: foursquare: property roundtrip
+ok 254 - foursquare: property roundtrip
+  ---
+  duration_ms: 14.300875
+  type: 'test'
+  ...
+# Subtest: foursquare: documented text and Unicode policy
+ok 255 - foursquare: documented text and Unicode policy
+  ---
+  duration_ms: 0.276917
+  type: 'test'
+  ...
+# Subtest: foursquare: invalid keys do not throw uncaught exceptions
+ok 256 - foursquare: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.5205
+  type: 'test'
+  ...
+# Subtest: foursquare: output is isolated from other engine calls
+ok 257 - foursquare: output is isolated from other engine calls
+  ---
+  duration_ms: 0.122
+  type: 'test'
+  ...
+# Subtest: foursquare: roundtrips 100 KB without excessive runtime
+ok 258 - foursquare: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 52.106375
+  type: 'test'
+  ...
+# Subtest: fractionatedMorse: KAT (Fractionated Morse trigraph derivation)
+ok 259 - fractionatedMorse: KAT (Fractionated Morse trigraph derivation)
+  ---
+  duration_ms: 0.513375
+  type: 'test'
+  ...
+# Subtest: fractionatedMorse: exposes encode and decode
+ok 260 - fractionatedMorse: exposes encode and decode
+  ---
+  duration_ms: 0.041834
+  type: 'test'
+  ...
+# Subtest: fractionatedMorse: roundtrips required boundary classes
+ok 261 - fractionatedMorse: roundtrips required boundary classes
+  ---
+  duration_ms: 1.382042
+  type: 'test'
+  ...
+# Subtest: fractionatedMorse: property roundtrip
+ok 262 - fractionatedMorse: property roundtrip
+  ---
+  duration_ms: 14.759625
+  type: 'test'
+  ...
+# Subtest: fractionatedMorse: documented text and Unicode policy
+ok 263 - fractionatedMorse: documented text and Unicode policy
+  ---
+  duration_ms: 0.308292
+  type: 'test'
+  ...
+# Subtest: fractionatedMorse: invalid keys do not throw uncaught exceptions
+ok 264 - fractionatedMorse: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.377416
+  type: 'test'
+  ...
+# Subtest: fractionatedMorse: output is isolated from other engine calls
+ok 265 - fractionatedMorse: output is isolated from other engine calls
+  ---
+  duration_ms: 0.109542
+  type: 'test'
+  ...
+# Subtest: fractionatedMorse: roundtrips 100 KB without excessive runtime
+ok 266 - fractionatedMorse: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 68.205042
+  type: 'test'
+  ...
+# Subtest: geezMonastic: KAT (pinned regression vector)
+ok 267 - geezMonastic: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.5455
+  type: 'test'
+  ...
+# Subtest: geezMonastic: exposes encode and decode
+ok 268 - geezMonastic: exposes encode and decode
+  ---
+  duration_ms: 0.081333
+  type: 'test'
+  ...
+# Subtest: geezMonastic: roundtrips required boundary classes
+ok 269 - geezMonastic: roundtrips required boundary classes
+  ---
+  duration_ms: 0.42925
+  type: 'test'
+  ...
+# Subtest: geezMonastic: property roundtrip
+ok 270 - geezMonastic: property roundtrip
+  ---
+  duration_ms: 15.848916
+  type: 'test'
+  ...
+# Subtest: geezMonastic: documented text and Unicode policy
+ok 271 - geezMonastic: documented text and Unicode policy
+  ---
+  duration_ms: 0.304
+  type: 'test'
+  ...
+# Subtest: geezMonastic: invalid keys do not throw uncaught exceptions
+ok 272 - geezMonastic: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.454333
+  type: 'test'
+  ...
+# Subtest: geezMonastic: output is isolated from other engine calls
+ok 273 - geezMonastic: output is isolated from other engine calls
+  ---
+  duration_ms: 0.118083
+  type: 'test'
+  ...
+# Subtest: geezMonastic: roundtrips 100 KB without excessive runtime
+ok 274 - geezMonastic: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 16.289958
+  type: 'test'
+  ...
+# Subtest: geheimschreiber: KAT (pinned regression vector)
+ok 275 - geheimschreiber: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.669042
+  type: 'test'
+  ...
+# Subtest: geheimschreiber: exposes encode and decode
+ok 276 - geheimschreiber: exposes encode and decode
+  ---
+  duration_ms: 0.078709
+  type: 'test'
+  ...
+# Subtest: geheimschreiber: roundtrips required boundary classes
+ok 277 - geheimschreiber: roundtrips required boundary classes
+  ---
+  duration_ms: 2.508875
+  type: 'test'
+  ...
+# Subtest: geheimschreiber: property roundtrip
+ok 278 - geheimschreiber: property roundtrip
+  ---
+  duration_ms: 11.16875
+  type: 'test'
+  ...
+# Subtest: geheimschreiber: documented text and Unicode policy
+ok 279 - geheimschreiber: documented text and Unicode policy
+  ---
+  duration_ms: 0.591209
+  type: 'test'
+  ...
+# Subtest: geheimschreiber: invalid keys do not throw uncaught exceptions
+ok 280 - geheimschreiber: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.343708
+  type: 'test'
+  ...
+# Subtest: geheimschreiber: output is isolated from other engine calls
+ok 281 - geheimschreiber: output is isolated from other engine calls
+  ---
+  duration_ms: 0.286667
+  type: 'test'
+  ...
+# Subtest: geheimschreiber: roundtrips 100 KB without excessive runtime
+ok 282 - geheimschreiber: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 32.8475
+  type: 'test'
+  ...
+# Subtest: greatCipher: KAT (pinned regression vector)
+ok 283 - greatCipher: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.871917
+  type: 'test'
+  ...
+# Subtest: greatCipher: exposes encode and decode
+ok 284 - greatCipher: exposes encode and decode
+  ---
+  duration_ms: 0.089375
+  type: 'test'
+  ...
+# Subtest: greatCipher: roundtrips required boundary classes
+ok 285 - greatCipher: roundtrips required boundary classes
+  ---
+  duration_ms: 4.841291
+  type: 'test'
+  ...
+# Subtest: greatCipher: property roundtrip
+ok 286 - greatCipher: property roundtrip
+  ---
+  duration_ms: 15.195625
+  type: 'test'
+  ...
+# Subtest: greatCipher: documented text and Unicode policy
+ok 287 - greatCipher: documented text and Unicode policy
+  ---
+  duration_ms: 0.444416
+  type: 'test'
+  ...
+# Subtest: greatCipher: invalid keys do not throw uncaught exceptions
+ok 288 - greatCipher: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.1365
+  type: 'test'
+  ...
+# Subtest: greatCipher: output is isolated from other engine calls
+ok 289 - greatCipher: output is isolated from other engine calls
+  ---
+  duration_ms: 0.155084
+  type: 'test'
+  ...
+# Subtest: greatCipher: roundtrips 100 KB without excessive runtime
+ok 290 - greatCipher: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 72.925708
+  type: 'test'
+  ...
+# Subtest: gronsfeld: KAT (Gronsfeld arithmetic derivation)
+ok 291 - gronsfeld: KAT (Gronsfeld arithmetic derivation)
+  ---
+  duration_ms: 0.463125
+  type: 'test'
+  ...
+# Subtest: gronsfeld: exposes encode and decode
+ok 292 - gronsfeld: exposes encode and decode
+  ---
+  duration_ms: 0.043834
+  type: 'test'
+  ...
+# Subtest: gronsfeld: roundtrips required boundary classes
+ok 293 - gronsfeld: roundtrips required boundary classes
+  ---
+  duration_ms: 0.676208
+  type: 'test'
+  ...
+# Subtest: gronsfeld: property roundtrip
+ok 294 - gronsfeld: property roundtrip
+  ---
+  duration_ms: 9.52225
+  type: 'test'
+  ...
+# Subtest: gronsfeld: documented text and Unicode policy
+ok 295 - gronsfeld: documented text and Unicode policy
+  ---
+  duration_ms: 0.288125
+  type: 'test'
+  ...
+# Subtest: gronsfeld: invalid keys do not throw uncaught exceptions
+ok 296 - gronsfeld: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.506333
+  type: 'test'
+  ...
+# Subtest: gronsfeld: output is isolated from other engine calls
+ok 297 - gronsfeld: output is isolated from other engine calls
+  ---
+  duration_ms: 0.106583
+  type: 'test'
+  ...
+# Subtest: gronsfeld: roundtrips 100 KB without excessive runtime
+ok 298 - gronsfeld: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 14.056042
+  type: 'test'
+  ...
+# Subtest: hill: KAT (published Hill matrix vector)
+ok 299 - hill: KAT (published Hill matrix vector)
+  ---
+  duration_ms: 0.485833
+  type: 'test'
+  ...
+# Subtest: hill: exposes encode and decode
+ok 300 - hill: exposes encode and decode
+  ---
+  duration_ms: 0.091958
+  type: 'test'
+  ...
+# Subtest: hill: roundtrips required boundary classes
+ok 301 - hill: roundtrips required boundary classes
+  ---
+  duration_ms: 1.072959
+  type: 'test'
+  ...
+# Subtest: hill: property roundtrip
+ok 302 - hill: property roundtrip
+  ---
+  duration_ms: 16.699542
+  type: 'test'
+  ...
+# Subtest: hill: documented text and Unicode policy
+ok 303 - hill: documented text and Unicode policy
+  ---
+  duration_ms: 0.300375
+  type: 'test'
+  ...
+# Subtest: hill: invalid keys do not throw uncaught exceptions
+ok 304 - hill: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.27025
+  type: 'test'
+  ...
+# Subtest: hill: output is isolated from other engine calls
+ok 305 - hill: output is isolated from other engine calls
+  ---
+  duration_ms: 0.110042
+  type: 'test'
+  ...
+# Subtest: hill: roundtrips 100 KB without excessive runtime
+ok 306 - hill: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 35.903583
+  type: 'test'
+  ...
+# Subtest: hill: singular matrices are rejected on encode and decode
+ok 307 - hill: singular matrices are rejected on encode and decode
+  ---
+  duration_ms: 0.238208
+  type: 'test'
+  ...
+# Subtest: hill: non-numeric matrix entries are rejected on encode
+ok 308 - hill: non-numeric matrix entries are rejected on encode
+  ---
+  duration_ms: 0.238583
+  type: 'test'
+  ...
+# Subtest: homophonic: KAT (frequency-table derivation)
+ok 309 - homophonic: KAT (frequency-table derivation)
+  ---
+  duration_ms: 0.564084
+  type: 'test'
+  ...
+# Subtest: homophonic: exposes encode and decode
+ok 310 - homophonic: exposes encode and decode
+  ---
+  duration_ms: 0.078459
+  type: 'test'
+  ...
+# Subtest: homophonic: roundtrips required boundary classes
+ok 311 - homophonic: roundtrips required boundary classes
+  ---
+  duration_ms: 0.685791
+  type: 'test'
+  ...
+# Subtest: homophonic: property roundtrip
+ok 312 - homophonic: property roundtrip
+  ---
+  duration_ms: 16.15225
+  type: 'test'
+  ...
+# Subtest: homophonic: documented text and Unicode policy
+ok 313 - homophonic: documented text and Unicode policy
+  ---
+  duration_ms: 0.338458
+  type: 'test'
+  ...
+# Subtest: homophonic: invalid keys do not throw uncaught exceptions
+ok 314 - homophonic: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.717
+  type: 'test'
+  ...
+# Subtest: homophonic: output is isolated from other engine calls
+ok 315 - homophonic: output is isolated from other engine calls
+  ---
+  duration_ms: 0.130667
+  type: 'test'
+  ...
+# Subtest: homophonic: roundtrips 100 KB without excessive runtime
+ok 316 - homophonic: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 31.21225
+  type: 'test'
+  ...
+# Subtest: jefferson: KAT (Jefferson disk-table derivation)
+ok 317 - jefferson: KAT (Jefferson disk-table derivation)
+  ---
+  duration_ms: 0.468375
+  type: 'test'
+  ...
+# Subtest: jefferson: exposes encode and decode
+ok 318 - jefferson: exposes encode and decode
+  ---
+  duration_ms: 0.043625
+  type: 'test'
+  ...
+# Subtest: jefferson: roundtrips required boundary classes
+ok 319 - jefferson: roundtrips required boundary classes
+  ---
+  duration_ms: 0.704916
+  type: 'test'
+  ...
+# Subtest: jefferson: property roundtrip
+ok 320 - jefferson: property roundtrip
+  ---
+  duration_ms: 11.206333
+  type: 'test'
+  ...
+# Subtest: jefferson: documented text and Unicode policy
+ok 321 - jefferson: documented text and Unicode policy
+  ---
+  duration_ms: 0.331
+  type: 'test'
+  ...
+# Subtest: jefferson: invalid keys do not throw uncaught exceptions
+ok 322 - jefferson: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.606125
+  type: 'test'
+  ...
+# Subtest: jefferson: output is isolated from other engine calls
+ok 323 - jefferson: output is isolated from other engine calls
+  ---
+  duration_ms: 0.102542
+  type: 'test'
+  ...
+# Subtest: jefferson: roundtrips 100 KB without excessive runtime
+ok 324 - jefferson: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 19.759208
+  type: 'test'
+  ...
+# Subtest: jn25: KAT (JN-25 group derivation)
+ok 325 - jn25: KAT (JN-25 group derivation)
+  ---
+  duration_ms: 0.498
+  type: 'test'
+  ...
+# Subtest: jn25: exposes encode and decode
+ok 326 - jn25: exposes encode and decode
+  ---
+  duration_ms: 0.044042
+  type: 'test'
+  ...
+# Subtest: jn25: roundtrips required boundary classes
+ok 327 - jn25: roundtrips required boundary classes
+  ---
+  duration_ms: 2.567875
+  type: 'test'
+  ...
+# Subtest: jn25: property roundtrip
+ok 328 - jn25: property roundtrip
+  ---
+  duration_ms: 14.366
+  type: 'test'
+  ...
+# Subtest: jn25: documented text and Unicode policy
+ok 329 - jn25: documented text and Unicode policy
+  ---
+  duration_ms: 0.31775
+  type: 'test'
+  ...
+# Subtest: jn25: invalid keys do not throw uncaught exceptions
+ok 330 - jn25: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.537167
+  type: 'test'
+  ...
+# Subtest: jn25: output is isolated from other engine calls
+ok 331 - jn25: output is isolated from other engine calls
+  ---
+  duration_ms: 0.109542
+  type: 'test'
+  ...
+# Subtest: jn25: roundtrips 100 KB without excessive runtime
+ok 332 - jn25: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 74.250584
+  type: 'test'
+  ...
+# Subtest: kamaSutra: KAT (paired-alphabet derivation)
+ok 333 - kamaSutra: KAT (paired-alphabet derivation)
+  ---
+  duration_ms: 0.697875
+  type: 'test'
+  ...
+# Subtest: kamaSutra: exposes encode and decode
+ok 334 - kamaSutra: exposes encode and decode
+  ---
+  duration_ms: 0.059459
+  type: 'test'
+  ...
+# Subtest: kamaSutra: roundtrips required boundary classes
+ok 335 - kamaSutra: roundtrips required boundary classes
+  ---
+  duration_ms: 0.57925
+  type: 'test'
+  ...
+# Subtest: kamaSutra: property roundtrip
+ok 336 - kamaSutra: property roundtrip
+  ---
+  duration_ms: 15.203417
+  type: 'test'
+  ...
+# Subtest: kamaSutra: documented text and Unicode policy
+ok 337 - kamaSutra: documented text and Unicode policy
+  ---
+  duration_ms: 0.208167
+  type: 'test'
+  ...
+# Subtest: kamaSutra: invalid keys do not throw uncaught exceptions
+ok 338 - kamaSutra: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.3875
+  type: 'test'
+  ...
+# Subtest: kamaSutra: output is isolated from other engine calls
+ok 339 - kamaSutra: output is isolated from other engine calls
+  ---
+  duration_ms: 0.285875
+  type: 'test'
+  ...
+# Subtest: kamaSutra: roundtrips 100 KB without excessive runtime
+ok 340 - kamaSutra: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 31.704459
+  type: 'test'
+  ...
+# Subtest: kl7: KAT (pinned regression vector)
+ok 341 - kl7: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.624917
+  type: 'test'
+  ...
+# Subtest: kl7: exposes encode and decode
+ok 342 - kl7: exposes encode and decode
+  ---
+  duration_ms: 0.082375
+  type: 'test'
+  ...
+# Subtest: kl7: roundtrips required boundary classes
+ok 343 - kl7: roundtrips required boundary classes
+  ---
+  duration_ms: 5.440416
+  type: 'test'
+  ...
+# Subtest: kl7: property roundtrip
+ok 344 - kl7: property roundtrip
+  ---
+  duration_ms: 16.912708
+  type: 'test'
+  ...
+# Subtest: kl7: documented text and Unicode policy
+ok 345 - kl7: documented text and Unicode policy
+  ---
+  duration_ms: 0.377792
+  type: 'test'
+  ...
+# Subtest: kl7: invalid keys do not throw uncaught exceptions
+ok 346 - kl7: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.170958
+  type: 'test'
+  ...
+# Subtest: kl7: output is isolated from other engine calls
+ok 347 - kl7: output is isolated from other engine calls
+  ---
+  duration_ms: 0.152167
+  type: 'test'
+  ...
+# Subtest: kl7: roundtrips 100 KB without excessive runtime
+ok 348 - kl7: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 259.664042
+  type: 'test'
+  ...
+# Subtest: kryha: KAT (pinned regression vector)
+ok 349 - kryha: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.538167
+  type: 'test'
+  ...
+# Subtest: kryha: exposes encode and decode
+ok 350 - kryha: exposes encode and decode
+  ---
+  duration_ms: 0.079042
+  type: 'test'
+  ...
+# Subtest: kryha: roundtrips required boundary classes
+ok 351 - kryha: roundtrips required boundary classes
+  ---
+  duration_ms: 0.7205
+  type: 'test'
+  ...
+# Subtest: kryha: property roundtrip
+ok 352 - kryha: property roundtrip
+  ---
+  duration_ms: 8.199833
+  type: 'test'
+  ...
+# Subtest: kryha: documented text and Unicode policy
+ok 353 - kryha: documented text and Unicode policy
+  ---
+  duration_ms: 0.325334
+  type: 'test'
+  ...
+# Subtest: kryha: invalid keys do not throw uncaught exceptions
+ok 354 - kryha: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.433792
+  type: 'test'
+  ...
+# Subtest: kryha: output is isolated from other engine calls
+ok 355 - kryha: output is isolated from other engine calls
+  ---
+  duration_ms: 0.082166
+  type: 'test'
+  ...
+# Subtest: kryha: roundtrips 100 KB without excessive runtime
+ok 356 - kryha: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 19.734791
+  type: 'test'
+  ...
+# Subtest: kryptos: KAT (Kryptos-tableau derivation)
+ok 357 - kryptos: KAT (Kryptos-tableau derivation)
+  ---
+  duration_ms: 0.519542
+  type: 'test'
+  ...
+# Subtest: kryptos: exposes encode and decode
+ok 358 - kryptos: exposes encode and decode
+  ---
+  duration_ms: 0.06225
+  type: 'test'
+  ...
+# Subtest: kryptos: roundtrips required boundary classes
+ok 359 - kryptos: roundtrips required boundary classes
+  ---
+  duration_ms: 0.839083
+  type: 'test'
+  ...
+# Subtest: kryptos: property roundtrip
+ok 360 - kryptos: property roundtrip
+  ---
+  duration_ms: 9.982042
+  type: 'test'
+  ...
+# Subtest: kryptos: documented text and Unicode policy
+ok 361 - kryptos: documented text and Unicode policy
+  ---
+  duration_ms: 0.242458
+  type: 'test'
+  ...
+# Subtest: kryptos: invalid keys do not throw uncaught exceptions
+ok 362 - kryptos: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.32
+  type: 'test'
+  ...
+# Subtest: kryptos: output is isolated from other engine calls
+ok 363 - kryptos: output is isolated from other engine calls
+  ---
+  duration_ms: 0.126667
+  type: 'test'
+  ...
+# Subtest: kryptos: roundtrips 100 KB without excessive runtime
+ok 364 - kryptos: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 34.234042
+  type: 'test'
+  ...
+# Subtest: lorenz: KAT (pinned regression vector)
+ok 365 - lorenz: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.831125
+  type: 'test'
+  ...
+# Subtest: lorenz: exposes encode and decode
+ok 366 - lorenz: exposes encode and decode
+  ---
+  duration_ms: 0.084916
+  type: 'test'
+  ...
+# Subtest: lorenz: roundtrips required boundary classes
+ok 367 - lorenz: roundtrips required boundary classes
+  ---
+  duration_ms: 2.265792
+  type: 'test'
+  ...
+# Subtest: lorenz: property roundtrip
+ok 368 - lorenz: property roundtrip
+  ---
+  duration_ms: 20.181917
+  type: 'test'
+  ...
+# Subtest: lorenz: documented text and Unicode policy
+ok 369 - lorenz: documented text and Unicode policy
+  ---
+  duration_ms: 0.540417
+  type: 'test'
+  ...
+# Subtest: lorenz: invalid keys do not throw uncaught exceptions
+ok 370 - lorenz: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.542458
+  type: 'test'
+  ...
+# Subtest: lorenz: output is isolated from other engine calls
+ok 371 - lorenz: output is isolated from other engine calls
+  ---
+  duration_ms: 0.125583
+  type: 'test'
+  ...
+# Subtest: lorenz: roundtrips 100 KB without excessive runtime
+ok 372 - lorenz: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 45.600833
+  type: 'test'
+  ...
+# Subtest: lorenz: matches independent 12-wheel ITA2 derivation
+ok 373 - lorenz: matches independent 12-wheel ITA2 derivation
+  ---
+  duration_ms: 0.429417
+  type: 'test'
+  ...
+# Subtest: m209: KAT (pinned regression vector)
+ok 374 - m209: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.542208
+  type: 'test'
+  ...
+# Subtest: m209: exposes encode and decode
+ok 375 - m209: exposes encode and decode
+  ---
+  duration_ms: 0.0435
+  type: 'test'
+  ...
+# Subtest: m209: roundtrips required boundary classes
+ok 376 - m209: roundtrips required boundary classes
+  ---
+  duration_ms: 1.097375
+  type: 'test'
+  ...
+# Subtest: m209: property roundtrip
+ok 377 - m209: property roundtrip
+  ---
+  duration_ms: 10.926417
+  type: 'test'
+  ...
+# Subtest: m209: documented text and Unicode policy
+ok 378 - m209: documented text and Unicode policy
+  ---
+  duration_ms: 0.347083
+  type: 'test'
+  ...
+# Subtest: m209: invalid keys do not throw uncaught exceptions
+ok 379 - m209: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.954666
+  type: 'test'
+  ...
+# Subtest: m209: output is isolated from other engine calls
+ok 380 - m209: output is isolated from other engine calls
+  ---
+  duration_ms: 0.085375
+  type: 'test'
+  ...
+# Subtest: m209: roundtrips 100 KB without excessive runtime
+ok 381 - m209: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 21.17025
+  type: 'test'
+  ...
+# Subtest: m94: KAT (pinned regression vector)
+ok 382 - m94: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.640625
+  type: 'test'
+  ...
+# Subtest: m94: exposes encode and decode
+ok 383 - m94: exposes encode and decode
+  ---
+  duration_ms: 0.09925
+  type: 'test'
+  ...
+# Subtest: m94: roundtrips required boundary classes
+ok 384 - m94: roundtrips required boundary classes
+  ---
+  duration_ms: 1.614542
+  type: 'test'
+  ...
+# Subtest: m94: property roundtrip
+ok 385 - m94: property roundtrip
+  ---
+  duration_ms: 8.0805
+  type: 'test'
+  ...
+# Subtest: m94: documented text and Unicode policy
+ok 386 - m94: documented text and Unicode policy
+  ---
+  duration_ms: 0.401833
+  type: 'test'
+  ...
+# Subtest: m94: invalid keys do not throw uncaught exceptions
+ok 387 - m94: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.107166
+  type: 'test'
+  ...
+# Subtest: m94: output is isolated from other engine calls
+ok 388 - m94: output is isolated from other engine calls
+  ---
+  duration_ms: 0.138042
+  type: 'test'
+  ...
+# Subtest: m94: roundtrips 100 KB without excessive runtime
+ok 389 - m94: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 22.224084
+  type: 'test'
+  ...
+# Subtest: monoalphabetic: KAT (keyword alphabet derivation)
+ok 390 - monoalphabetic: KAT (keyword alphabet derivation)
+  ---
+  duration_ms: 0.484208
+  type: 'test'
+  ...
+# Subtest: monoalphabetic: exposes encode and decode
+ok 391 - monoalphabetic: exposes encode and decode
+  ---
+  duration_ms: 0.042459
+  type: 'test'
+  ...
+# Subtest: monoalphabetic: roundtrips required boundary classes
+ok 392 - monoalphabetic: roundtrips required boundary classes
+  ---
+  duration_ms: 0.5285
+  type: 'test'
+  ...
+# Subtest: monoalphabetic: property roundtrip
+ok 393 - monoalphabetic: property roundtrip
+  ---
+  duration_ms: 10.812625
+  type: 'test'
+  ...
+# Subtest: monoalphabetic: documented text and Unicode policy
+ok 394 - monoalphabetic: documented text and Unicode policy
+  ---
+  duration_ms: 0.165458
+  type: 'test'
+  ...
+# Subtest: monoalphabetic: invalid keys do not throw uncaught exceptions
+ok 395 - monoalphabetic: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.364916
+  type: 'test'
+  ...
+# Subtest: monoalphabetic: output is isolated from other engine calls
+ok 396 - monoalphabetic: output is isolated from other engine calls
+  ---
+  duration_ms: 0.108833
+  type: 'test'
+  ...
+# Subtest: monoalphabetic: roundtrips 100 KB without excessive runtime
+ok 397 - monoalphabetic: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 25.640542
+  type: 'test'
+  ...
+# Subtest: morse: KAT (ITU Morse table)
+ok 398 - morse: KAT (ITU Morse table)
+  ---
+  duration_ms: 0.443917
+  type: 'test'
+  ...
+# Subtest: morse: exposes encode and decode
+ok 399 - morse: exposes encode and decode
+  ---
+  duration_ms: 0.043041
+  type: 'test'
+  ...
+# Subtest: morse: roundtrips required boundary classes
+ok 400 - morse: roundtrips required boundary classes
+  ---
+  duration_ms: 0.569375
+  type: 'test'
+  ...
+# Subtest: morse: property roundtrip
+ok 401 - morse: property roundtrip
+  ---
+  duration_ms: 14.120041
+  type: 'test'
+  ...
+# Subtest: morse: documented text and Unicode policy
+ok 402 - morse: documented text and Unicode policy
+  ---
+  duration_ms: 0.314875
+  type: 'test'
+  ...
+# Subtest: morse: invalid keys do not throw uncaught exceptions
+ok 403 - morse: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.244208
+  type: 'test'
+  ...
+# Subtest: morse: output is isolated from other engine calls
+ok 404 - morse: output is isolated from other engine calls
+  ---
+  duration_ms: 0.107667
+  type: 'test'
+  ...
+# Subtest: morse: roundtrips 100 KB without excessive runtime
+ok 405 - morse: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 41.781917
+  type: 'test'
+  ...
+# Subtest: navajo: KAT (USMC vocabulary lookup)
+ok 406 - navajo: KAT (USMC vocabulary lookup)
+  ---
+  duration_ms: 0.434959
+  type: 'test'
+  ...
+# Subtest: navajo: exposes encode and decode
+ok 407 - navajo: exposes encode and decode
+  ---
+  duration_ms: 0.044542
+  type: 'test'
+  ...
+# Subtest: navajo: roundtrips required boundary classes
+ok 408 - navajo: roundtrips required boundary classes
+  ---
+  duration_ms: 1.603083
+  type: 'test'
+  ...
+# Subtest: navajo: property roundtrip
+ok 409 - navajo: property roundtrip
+  ---
+  duration_ms: 9.333833
+  type: 'test'
+  ...
+# Subtest: navajo: documented text and Unicode policy
+ok 410 - navajo: documented text and Unicode policy
+  ---
+  duration_ms: 0.414083
+  type: 'test'
+  ...
+# Subtest: navajo: invalid keys do not throw uncaught exceptions
+ok 411 - navajo: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.288333
+  type: 'test'
+  ...
+# Subtest: navajo: output is isolated from other engine calls
+ok 412 - navajo: output is isolated from other engine calls
+  ---
+  duration_ms: 0.115541
+  type: 'test'
+  ...
+# Subtest: navajo: roundtrips 100 KB without excessive runtime
+ok 413 - navajo: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 68.257125
+  type: 'test'
+  ...
+# Subtest: nihilist: KAT (Nihilist coordinate addition)
+ok 414 - nihilist: KAT (Nihilist coordinate addition)
+  ---
+  duration_ms: 0.537583
+  type: 'test'
+  ...
+# Subtest: nihilist: exposes encode and decode
+ok 415 - nihilist: exposes encode and decode
+  ---
+  duration_ms: 0.043
+  type: 'test'
+  ...
+# Subtest: nihilist: roundtrips required boundary classes
+ok 416 - nihilist: roundtrips required boundary classes
+  ---
+  duration_ms: 1.86375
+  type: 'test'
+  ...
+# Subtest: nihilist: property roundtrip
+ok 417 - nihilist: property roundtrip
+  ---
+  duration_ms: 26.721916
+  type: 'test'
+  ...
+# Subtest: nihilist: documented text and Unicode policy
+ok 418 - nihilist: documented text and Unicode policy
+  ---
+  duration_ms: 0.3995
+  type: 'test'
+  ...
+# Subtest: nihilist: invalid keys do not throw uncaught exceptions
+ok 419 - nihilist: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.79175
+  type: 'test'
+  ...
+# Subtest: nihilist: output is isolated from other engine calls
+ok 420 - nihilist: output is isolated from other engine calls
+  ---
+  duration_ms: 0.299167
+  type: 'test'
+  ...
+# Subtest: nihilist: roundtrips 100 KB without excessive runtime
+ok 421 - nihilist: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 45.451333
+  type: 'test'
+  ...
+# Subtest: nomenclator: KAT (nomenclator table lookup)
+ok 422 - nomenclator: KAT (nomenclator table lookup)
+  ---
+  duration_ms: 1.107666
+  type: 'test'
+  ...
+# Subtest: nomenclator: exposes encode and decode
+ok 423 - nomenclator: exposes encode and decode
+  ---
+  duration_ms: 0.084
+  type: 'test'
+  ...
+# Subtest: nomenclator: roundtrips required boundary classes
+ok 424 - nomenclator: roundtrips required boundary classes
+  ---
+  duration_ms: 0.93225
+  type: 'test'
+  ...
+# Subtest: nomenclator: property roundtrip
+ok 425 - nomenclator: property roundtrip
+  ---
+  duration_ms: 14.350541
+  type: 'test'
+  ...
+# Subtest: nomenclator: documented text and Unicode policy
+ok 426 - nomenclator: documented text and Unicode policy
+  ---
+  duration_ms: 0.329041
+  type: 'test'
+  ...
+# Subtest: nomenclator: invalid keys do not throw uncaught exceptions
+ok 427 - nomenclator: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.292375
+  type: 'test'
+  ...
+# Subtest: nomenclator: output is isolated from other engine calls
+ok 428 - nomenclator: output is isolated from other engine calls
+  ---
+  duration_ms: 0.117833
+  type: 'test'
+  ...
+# Subtest: nomenclator: roundtrips 100 KB without excessive runtime
+ok 429 - nomenclator: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 40.875041
+  type: 'test'
+  ...
+# Subtest: nullCipher: KAT (carrier-list derivation)
+ok 430 - nullCipher: KAT (carrier-list derivation)
+  ---
+  duration_ms: 0.584125
+  type: 'test'
+  ...
+# Subtest: nullCipher: exposes encode and decode
+ok 431 - nullCipher: exposes encode and decode
+  ---
+  duration_ms: 0.047209
+  type: 'test'
+  ...
+# Subtest: nullCipher: roundtrips required boundary classes
+ok 432 - nullCipher: roundtrips required boundary classes
+  ---
+  duration_ms: 5.8135
+  type: 'test'
+  ...
+# Subtest: nullCipher: property roundtrip
+ok 433 - nullCipher: property roundtrip
+  ---
+  duration_ms: 20.102292
+  type: 'test'
+  ...
+# Subtest: nullCipher: documented text and Unicode policy
+ok 434 - nullCipher: documented text and Unicode policy
+  ---
+  duration_ms: 0.337333
+  type: 'test'
+  ...
+# Subtest: nullCipher: invalid keys do not throw uncaught exceptions
+ok 435 - nullCipher: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.351666
+  type: 'test'
+  ...
+# Subtest: nullCipher: output is isolated from other engine calls
+ok 436 - nullCipher: output is isolated from other engine calls
+  ---
+  duration_ms: 0.147209
+  type: 'test'
+  ...
+# Subtest: nullCipher: roundtrips 100 KB without excessive runtime
+ok 437 - nullCipher: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 509.672542
+  type: 'test'
+  ...
+# Subtest: otp: KAT (OTP letter arithmetic derivation)
+ok 438 - otp: KAT (OTP letter arithmetic derivation)
+  ---
+  duration_ms: 0.939667
+  type: 'test'
+  ...
+# Subtest: otp: exposes encode and decode
+ok 439 - otp: exposes encode and decode
+  ---
+  duration_ms: 0.200334
+  type: 'test'
+  ...
+# Subtest: otp: roundtrips required boundary classes
+ok 440 - otp: roundtrips required boundary classes
+  ---
+  duration_ms: 1.03125
+  type: 'test'
+  ...
+# Subtest: otp: property roundtrip
+ok 441 - otp: property roundtrip
+  ---
+  duration_ms: 13.374959
+  type: 'test'
+  ...
+# Subtest: otp: documented text and Unicode policy
+ok 442 - otp: documented text and Unicode policy
+  ---
+  duration_ms: 0.320458
+  type: 'test'
+  ...
+# Subtest: otp: invalid keys do not throw uncaught exceptions
+ok 443 - otp: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 2.074959
+  type: 'test'
+  ...
+# Subtest: otp: output is isolated from other engine calls
+ok 444 - otp: output is isolated from other engine calls
+  ---
+  duration_ms: 0.119
+  type: 'test'
+  ...
+# Subtest: otp: roundtrips 100 KB without excessive runtime
+ok 445 - otp: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 15.621583
+  type: 'test'
+  ...
+# Subtest: otp: automatic pad generation uses the platform CSPRNG
+ok 446 - otp: automatic pad generation uses the platform CSPRNG
+  ---
+  duration_ms: 0.517834
+  type: 'test'
+  ...
+# Subtest: patterson: KAT (Patterson single-line identity)
+ok 447 - patterson: KAT (Patterson single-line identity)
+  ---
+  duration_ms: 0.502792
+  type: 'test'
+  ...
+# Subtest: patterson: exposes encode and decode
+ok 448 - patterson: exposes encode and decode
+  ---
+  duration_ms: 0.044792
+  type: 'test'
+  ...
+# Subtest: patterson: roundtrips required boundary classes
+ok 449 - patterson: roundtrips required boundary classes
+  ---
+  duration_ms: 0.527208
+  type: 'test'
+  ...
+# Subtest: patterson: property roundtrip
+ok 450 - patterson: property roundtrip
+  ---
+  duration_ms: 13.217625
+  type: 'test'
+  ...
+# Subtest: patterson: documented text and Unicode policy
+ok 451 - patterson: documented text and Unicode policy
+  ---
+  duration_ms: 0.26625
+  type: 'test'
+  ...
+# Subtest: patterson: invalid keys do not throw uncaught exceptions
+ok 452 - patterson: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.599
+  type: 'test'
+  ...
+# Subtest: patterson: output is isolated from other engine calls
+ok 453 - patterson: output is isolated from other engine calls
+  ---
+  duration_ms: 0.116541
+  type: 'test'
+  ...
+# Subtest: patterson: roundtrips 100 KB without excessive runtime
+ok 454 - patterson: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 31.317416
+  type: 'test'
+  ...
+# Subtest: pigpen: KAT (displayed Pigpen table)
+ok 455 - pigpen: KAT (displayed Pigpen table)
+  ---
+  duration_ms: 0.866417
+  type: 'test'
+  ...
+# Subtest: pigpen: exposes encode and decode
+ok 456 - pigpen: exposes encode and decode
+  ---
+  duration_ms: 0.071208
+  type: 'test'
+  ...
+# Subtest: pigpen: roundtrips required boundary classes
+ok 457 - pigpen: roundtrips required boundary classes
+  ---
+  duration_ms: 0.809041
+  type: 'test'
+  ...
+# Subtest: pigpen: property roundtrip
+ok 458 - pigpen: property roundtrip
+  ---
+  duration_ms: 13.707625
+  type: 'test'
+  ...
+# Subtest: pigpen: documented text and Unicode policy
+ok 459 - pigpen: documented text and Unicode policy
+  ---
+  duration_ms: 0.333041
+  type: 'test'
+  ...
+# Subtest: pigpen: invalid keys do not throw uncaught exceptions
+ok 460 - pigpen: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.290542
+  type: 'test'
+  ...
+# Subtest: pigpen: output is isolated from other engine calls
+ok 461 - pigpen: output is isolated from other engine calls
+  ---
+  duration_ms: 0.11675
+  type: 'test'
+  ...
+# Subtest: pigpen: roundtrips 100 KB without excessive runtime
+ok 462 - pigpen: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 32.6795
+  type: 'test'
+  ...
+# Subtest: playfair: KAT (published Playfair vector)
+ok 463 - playfair: KAT (published Playfair vector)
+  ---
+  duration_ms: 0.623833
+  type: 'test'
+  ...
+# Subtest: playfair: exposes encode and decode
+ok 464 - playfair: exposes encode and decode
+  ---
+  duration_ms: 0.078916
+  type: 'test'
+  ...
+# Subtest: playfair: roundtrips required boundary classes
+ok 465 - playfair: roundtrips required boundary classes
+  ---
+  duration_ms: 4.263708
+  type: 'test'
+  ...
+# Subtest: playfair: property roundtrip
+ok 466 - playfair: property roundtrip
+  ---
+  duration_ms: 20.694417
+  type: 'test'
+  ...
+# Subtest: playfair: documented text and Unicode policy
+ok 467 - playfair: documented text and Unicode policy
+  ---
+  duration_ms: 0.547416
+  type: 'test'
+  ...
+# Subtest: playfair: invalid keys do not throw uncaught exceptions
+ok 468 - playfair: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.104542
+  type: 'test'
+  ...
+# Subtest: playfair: output is isolated from other engine calls
+ok 469 - playfair: output is isolated from other engine calls
+  ---
+  duration_ms: 0.27125
+  type: 'test'
+  ...
+# Subtest: playfair: roundtrips 100 KB without excessive runtime
+ok 470 - playfair: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 59.186083
+  type: 'test'
+  ...
+# Subtest: polybius: KAT (standard Polybius coordinates)
+ok 471 - polybius: KAT (standard Polybius coordinates)
+  ---
+  duration_ms: 0.468917
+  type: 'test'
+  ...
+# Subtest: polybius: exposes encode and decode
+ok 472 - polybius: exposes encode and decode
+  ---
+  duration_ms: 0.043916
+  type: 'test'
+  ...
+# Subtest: polybius: roundtrips required boundary classes
+ok 473 - polybius: roundtrips required boundary classes
+  ---
+  duration_ms: 0.701042
+  type: 'test'
+  ...
+# Subtest: polybius: property roundtrip
+ok 474 - polybius: property roundtrip
+  ---
+  duration_ms: 10.5925
+  type: 'test'
+  ...
+# Subtest: polybius: documented text and Unicode policy
+ok 475 - polybius: documented text and Unicode policy
+  ---
+  duration_ms: 0.320417
+  type: 'test'
+  ...
+# Subtest: polybius: invalid keys do not throw uncaught exceptions
+ok 476 - polybius: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.256625
+  type: 'test'
+  ...
+# Subtest: polybius: output is isolated from other engine calls
+ok 477 - polybius: output is isolated from other engine calls
+  ---
+  duration_ms: 0.117583
+  type: 'test'
+  ...
+# Subtest: polybius: roundtrips 100 KB without excessive runtime
+ok 478 - polybius: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 35.235292
+  type: 'test'
+  ...
+# Subtest: porta: KAT (Porta tableau derivation)
+ok 479 - porta: KAT (Porta tableau derivation)
+  ---
+  duration_ms: 0.684542
+  type: 'test'
+  ...
+# Subtest: porta: exposes encode and decode
+ok 480 - porta: exposes encode and decode
+  ---
+  duration_ms: 0.053167
+  type: 'test'
+  ...
+# Subtest: porta: roundtrips required boundary classes
+ok 481 - porta: roundtrips required boundary classes
+  ---
+  duration_ms: 0.67925
+  type: 'test'
+  ...
+# Subtest: porta: property roundtrip
+ok 482 - porta: property roundtrip
+  ---
+  duration_ms: 12.259375
+  type: 'test'
+  ...
+# Subtest: porta: documented text and Unicode policy
+ok 483 - porta: documented text and Unicode policy
+  ---
+  duration_ms: 0.3045
+  type: 'test'
+  ...
+# Subtest: porta: invalid keys do not throw uncaught exceptions
+ok 484 - porta: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.296208
+  type: 'test'
+  ...
+# Subtest: porta: output is isolated from other engine calls
+ok 485 - porta: output is isolated from other engine calls
+  ---
+  duration_ms: 0.121625
+  type: 'test'
+  ...
+# Subtest: porta: roundtrips 100 KB without excessive runtime
+ok 486 - porta: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 16.605333
+  type: 'test'
+  ...
+# Subtest: purple: KAT (pinned regression vector)
+ok 487 - purple: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.808833
+  type: 'test'
+  ...
+# Subtest: purple: exposes encode and decode
+ok 488 - purple: exposes encode and decode
+  ---
+  duration_ms: 0.080417
+  type: 'test'
+  ...
+# Subtest: purple: roundtrips required boundary classes
+ok 489 - purple: roundtrips required boundary classes
+  ---
+  duration_ms: 3.201167
+  type: 'test'
+  ...
+# Subtest: purple: property roundtrip
+ok 490 - purple: property roundtrip
+  ---
+  duration_ms: 32.892166
+  type: 'test'
+  ...
+# Subtest: purple: documented text and Unicode policy
+ok 491 - purple: documented text and Unicode policy
+  ---
+  duration_ms: 0.804584
+  type: 'test'
+  ...
+# Subtest: purple: invalid keys do not throw uncaught exceptions
+ok 492 - purple: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.442625
+  type: 'test'
+  ...
+# Subtest: purple: output is isolated from other engine calls
+ok 493 - purple: output is isolated from other engine calls
+  ---
+  duration_ms: 0.36275
+  type: 'test'
+  ...
+# Subtest: purple: roundtrips 100 KB without excessive runtime
+ok 494 - purple: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 37.02625
+  type: 'test'
+  ...
+# Subtest: purple: preserves the historical sixes/twenties partition
+ok 495 - purple: preserves the historical sixes/twenties partition
+  ---
+  duration_ms: 0.372084
+  type: 'test'
+  ...
+# Subtest: railFence: KAT (published Rail Fence vector)
+ok 496 - railFence: KAT (published Rail Fence vector)
+  ---
+  duration_ms: 0.54275
+  type: 'test'
+  ...
+# Subtest: railFence: exposes encode and decode
+ok 497 - railFence: exposes encode and decode
+  ---
+  duration_ms: 0.046833
+  type: 'test'
+  ...
+# Subtest: railFence: roundtrips required boundary classes
+ok 498 - railFence: roundtrips required boundary classes
+  ---
+  duration_ms: 1.313042
+  type: 'test'
+  ...
+# Subtest: railFence: property roundtrip
+ok 499 - railFence: property roundtrip
+  ---
+  duration_ms: 10.481458
+  type: 'test'
+  ...
+# Subtest: railFence: documented text and Unicode policy
+ok 500 - railFence: documented text and Unicode policy
+  ---
+  duration_ms: 0.481708
+  type: 'test'
+  ...
+# Subtest: railFence: invalid keys do not throw uncaught exceptions
+ok 501 - railFence: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.53275
+  type: 'test'
+  ...
+# Subtest: railFence: output is isolated from other engine calls
+ok 502 - railFence: output is isolated from other engine calls
+  ---
+  duration_ms: 0.222708
+  type: 'test'
+  ...
+# Subtest: railFence: roundtrips 100 KB without excessive runtime
+ok 503 - railFence: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 21.0175
+  type: 'test'
+  ...
+# Subtest: redTypeA: KAT (pinned regression vector)
+ok 504 - redTypeA: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.634333
+  type: 'test'
+  ...
+# Subtest: redTypeA: exposes encode and decode
+ok 505 - redTypeA: exposes encode and decode
+  ---
+  duration_ms: 0.084125
+  type: 'test'
+  ...
+# Subtest: redTypeA: roundtrips required boundary classes
+ok 506 - redTypeA: roundtrips required boundary classes
+  ---
+  duration_ms: 1.643042
+  type: 'test'
+  ...
+# Subtest: redTypeA: property roundtrip
+ok 507 - redTypeA: property roundtrip
+  ---
+  duration_ms: 16.208667
+  type: 'test'
+  ...
+# Subtest: redTypeA: documented text and Unicode policy
+ok 508 - redTypeA: documented text and Unicode policy
+  ---
+  duration_ms: 0.680334
+  type: 'test'
+  ...
+# Subtest: redTypeA: invalid keys do not throw uncaught exceptions
+ok 509 - redTypeA: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.646792
+  type: 'test'
+  ...
+# Subtest: redTypeA: output is isolated from other engine calls
+ok 510 - redTypeA: output is isolated from other engine calls
+  ---
+  duration_ms: 0.139334
+  type: 'test'
+  ...
+# Subtest: redTypeA: roundtrips 100 KB without excessive runtime
+ok 511 - redTypeA: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 24.45975
+  type: 'test'
+  ...
+# Subtest: rot13: KAT (ROT13 definition)
+ok 512 - rot13: KAT (ROT13 definition)
+  ---
+  duration_ms: 0.402917
+  type: 'test'
+  ...
+# Subtest: rot13: exposes encode and decode
+ok 513 - rot13: exposes encode and decode
+  ---
+  duration_ms: 0.044125
+  type: 'test'
+  ...
+# Subtest: rot13: roundtrips required boundary classes
+ok 514 - rot13: roundtrips required boundary classes
+  ---
+  duration_ms: 0.303459
+  type: 'test'
+  ...
+# Subtest: rot13: property roundtrip
+ok 515 - rot13: property roundtrip
+  ---
+  duration_ms: 10.319667
+  type: 'test'
+  ...
+# Subtest: rot13: documented text and Unicode policy
+ok 516 - rot13: documented text and Unicode policy
+  ---
+  duration_ms: 0.148334
+  type: 'test'
+  ...
+# Subtest: rot13: invalid keys do not throw uncaught exceptions
+ok 517 - rot13: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.270291
+  type: 'test'
+  ...
+# Subtest: rot13: output is isolated from other engine calls
+ok 518 - rot13: output is isolated from other engine calls
+  ---
+  duration_ms: 0.084333
+  type: 'test'
+  ...
+# Subtest: rot13: roundtrips 100 KB without excessive runtime
+ok 519 - rot13: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 14.811583
+  type: 'test'
+  ...
+# Subtest: runningKey: KAT (running-key arithmetic derivation)
+ok 520 - runningKey: KAT (running-key arithmetic derivation)
+  ---
+  duration_ms: 0.816625
+  type: 'test'
+  ...
+# Subtest: runningKey: exposes encode and decode
+ok 521 - runningKey: exposes encode and decode
+  ---
+  duration_ms: 0.055334
+  type: 'test'
+  ...
+# Subtest: runningKey: roundtrips required boundary classes
+ok 522 - runningKey: roundtrips required boundary classes
+  ---
+  duration_ms: 0.669875
+  type: 'test'
+  ...
+# Subtest: runningKey: property roundtrip
+ok 523 - runningKey: property roundtrip
+  ---
+  duration_ms: 8.808542
+  type: 'test'
+  ...
+# Subtest: runningKey: documented text and Unicode policy
+ok 524 - runningKey: documented text and Unicode policy
+  ---
+  duration_ms: 0.247542
+  type: 'test'
+  ...
+# Subtest: runningKey: invalid keys do not throw uncaught exceptions
+ok 525 - runningKey: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.301666
+  type: 'test'
+  ...
+# Subtest: runningKey: output is isolated from other engine calls
+ok 526 - runningKey: output is isolated from other engine calls
+  ---
+  duration_ms: 0.073375
+  type: 'test'
+  ...
+# Subtest: runningKey: roundtrips 100 KB without excessive runtime
+ok 527 - runningKey: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 14.424875
+  type: 'test'
+  ...
+# Subtest: scytale: KAT (Scytale grid derivation)
+ok 528 - scytale: KAT (Scytale grid derivation)
+  ---
+  duration_ms: 0.491333
+  type: 'test'
+  ...
+# Subtest: scytale: exposes encode and decode
+ok 529 - scytale: exposes encode and decode
+  ---
+  duration_ms: 0.047083
+  type: 'test'
+  ...
+# Subtest: scytale: roundtrips required boundary classes
+ok 530 - scytale: roundtrips required boundary classes
+  ---
+  duration_ms: 0.636583
+  type: 'test'
+  ...
+# Subtest: scytale: property roundtrip
+ok 531 - scytale: property roundtrip
+  ---
+  duration_ms: 8.765333
+  type: 'test'
+  ...
+# Subtest: scytale: documented text and Unicode policy
+ok 532 - scytale: documented text and Unicode policy
+  ---
+  duration_ms: 0.293333
+  type: 'test'
+  ...
+# Subtest: scytale: invalid keys do not throw uncaught exceptions
+ok 533 - scytale: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.551084
+  type: 'test'
+  ...
+# Subtest: scytale: output is isolated from other engine calls
+ok 534 - scytale: output is isolated from other engine calls
+  ---
+  duration_ms: 0.124209
+  type: 'test'
+  ...
+# Subtest: scytale: roundtrips 100 KB without excessive runtime
+ok 535 - scytale: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 24.669333
+  type: 'test'
+  ...
+# Subtest: sigaba: KAT (pinned regression vector)
+ok 536 - sigaba: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.971792
+  type: 'test'
+  ...
+# Subtest: sigaba: exposes encode and decode
+ok 537 - sigaba: exposes encode and decode
+  ---
+  duration_ms: 0.103625
+  type: 'test'
+  ...
+# Subtest: sigaba: roundtrips required boundary classes
+ok 538 - sigaba: roundtrips required boundary classes
+  ---
+  duration_ms: 5.049417
+  type: 'test'
+  ...
+# Subtest: sigaba: property roundtrip
+ok 539 - sigaba: property roundtrip
+  ---
+  duration_ms: 44.681541
+  type: 'test'
+  ...
+# Subtest: sigaba: documented text and Unicode policy
+ok 540 - sigaba: documented text and Unicode policy
+  ---
+  duration_ms: 1.335583
+  type: 'test'
+  ...
+# Subtest: sigaba: invalid keys do not throw uncaught exceptions
+ok 541 - sigaba: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.981541
+  type: 'test'
+  ...
+# Subtest: sigaba: output is isolated from other engine calls
+ok 542 - sigaba: output is isolated from other engine calls
+  ---
+  duration_ms: 0.246167
+  type: 'test'
+  ...
+# Subtest: sigaba: roundtrips 100 KB without excessive runtime
+ok 543 - sigaba: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 16.940167
+  type: 'test'
+  ...
+# Subtest: slidex: KAT (pinned regression vector)
+ok 544 - slidex: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.966833
+  type: 'test'
+  ...
+# Subtest: slidex: exposes encode and decode
+ok 545 - slidex: exposes encode and decode
+  ---
+  duration_ms: 0.046625
+  type: 'test'
+  ...
+# Subtest: slidex: roundtrips required boundary classes
+ok 546 - slidex: roundtrips required boundary classes
+  ---
+  duration_ms: 3.192084
+  type: 'test'
+  ...
+# Subtest: slidex: property roundtrip
+ok 547 - slidex: property roundtrip
+  ---
+  duration_ms: 66.963
+  type: 'test'
+  ...
+# Subtest: slidex: documented text and Unicode policy
+ok 548 - slidex: documented text and Unicode policy
+  ---
+  duration_ms: 1.443208
+  type: 'test'
+  ...
+# Subtest: slidex: invalid keys do not throw uncaught exceptions
+ok 549 - slidex: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 2.779125
+  type: 'test'
+  ...
+# Subtest: slidex: output is isolated from other engine calls
+ok 550 - slidex: output is isolated from other engine calls
+  ---
+  duration_ms: 0.320792
+  type: 'test'
+  ...
+# Subtest: slidex: roundtrips 100 KB without excessive runtime
+ok 551 - slidex: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 37.100125
+  type: 'test'
+  ...
+# Subtest: solitaire: KAT (Schneier Solitaire vector)
+ok 552 - solitaire: KAT (Schneier Solitaire vector)
+  ---
+  duration_ms: 0.712708
+  type: 'test'
+  ...
+# Subtest: solitaire: exposes encode and decode
+ok 553 - solitaire: exposes encode and decode
+  ---
+  duration_ms: 0.0825
+  type: 'test'
+  ...
+# Subtest: solitaire: roundtrips required boundary classes
+ok 554 - solitaire: roundtrips required boundary classes
+  ---
+  duration_ms: 10.79175
+  type: 'test'
+  ...
+# Subtest: solitaire: property roundtrip
+ok 555 - solitaire: property roundtrip
+  ---
+  duration_ms: 83.4285
+  type: 'test'
+  ...
+# Subtest: solitaire: documented text and Unicode policy
+ok 556 - solitaire: documented text and Unicode policy
+  ---
+  duration_ms: 0.441084
+  type: 'test'
+  ...
+# Subtest: solitaire: invalid keys do not throw uncaught exceptions
+ok 557 - solitaire: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 17.838209
+  type: 'test'
+  ...
+# Subtest: solitaire: output is isolated from other engine calls
+ok 558 - solitaire: output is isolated from other engine calls
+  ---
+  duration_ms: 0.399542
+  type: 'test'
+  ...
+# Subtest: solitaire: roundtrips 100 KB without excessive runtime
+ok 559 - solitaire: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 552.007458
+  type: 'test'
+  ...
+# Subtest: stager: KAT (Stager route derivation)
+ok 560 - stager: KAT (Stager route derivation)
+  ---
+  duration_ms: 0.527959
+  type: 'test'
+  ...
+# Subtest: stager: exposes encode and decode
+ok 561 - stager: exposes encode and decode
+  ---
+  duration_ms: 0.047459
+  type: 'test'
+  ...
+# Subtest: stager: roundtrips required boundary classes
+ok 562 - stager: roundtrips required boundary classes
+  ---
+  duration_ms: 0.932209
+  type: 'test'
+  ...
+# Subtest: stager: property roundtrip
+ok 563 - stager: property roundtrip
+  ---
+  duration_ms: 12.418584
+  type: 'test'
+  ...
+# Subtest: stager: documented text and Unicode policy
+ok 564 - stager: documented text and Unicode policy
+  ---
+  duration_ms: 0.380459
+  type: 'test'
+  ...
+# Subtest: stager: invalid keys do not throw uncaught exceptions
+ok 565 - stager: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.481875
+  type: 'test'
+  ...
+# Subtest: stager: output is isolated from other engine calls
+ok 566 - stager: output is isolated from other engine calls
+  ---
+  duration_ms: 0.129542
+  type: 'test'
+  ...
+# Subtest: stager: roundtrips 100 KB without excessive runtime
+ok 567 - stager: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 35.917583
+  type: 'test'
+  ...
+# Subtest: straddlingCheckerboard: KAT (checkerboard derivation)
+ok 568 - straddlingCheckerboard: KAT (checkerboard derivation)
+  ---
+  duration_ms: 0.611042
+  type: 'test'
+  ...
+# Subtest: straddlingCheckerboard: exposes encode and decode
+ok 569 - straddlingCheckerboard: exposes encode and decode
+  ---
+  duration_ms: 0.087583
+  type: 'test'
+  ...
+# Subtest: straddlingCheckerboard: roundtrips required boundary classes
+ok 570 - straddlingCheckerboard: roundtrips required boundary classes
+  ---
+  duration_ms: 0.548041
+  type: 'test'
+  ...
+# Subtest: straddlingCheckerboard: property roundtrip
+ok 571 - straddlingCheckerboard: property roundtrip
+  ---
+  duration_ms: 12.347917
+  type: 'test'
+  ...
+# Subtest: straddlingCheckerboard: documented text and Unicode policy
+ok 572 - straddlingCheckerboard: documented text and Unicode policy
+  ---
+  duration_ms: 0.334542
+  type: 'test'
+  ...
+# Subtest: straddlingCheckerboard: invalid keys do not throw uncaught exceptions
+ok 573 - straddlingCheckerboard: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.739459
+  type: 'test'
+  ...
+# Subtest: straddlingCheckerboard: output is isolated from other engine calls
+ok 574 - straddlingCheckerboard: output is isolated from other engine calls
+  ---
+  duration_ms: 0.127167
+  type: 'test'
+  ...
+# Subtest: straddlingCheckerboard: roundtrips 100 KB without excessive runtime
+ok 575 - straddlingCheckerboard: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 19.78625
+  type: 'test'
+  ...
+# Subtest: tapCode: KAT (Tap Code coordinate derivation)
+ok 576 - tapCode: KAT (Tap Code coordinate derivation)
+  ---
+  duration_ms: 0.471667
+  type: 'test'
+  ...
+# Subtest: tapCode: exposes encode and decode
+ok 577 - tapCode: exposes encode and decode
+  ---
+  duration_ms: 0.045708
+  type: 'test'
+  ...
+# Subtest: tapCode: roundtrips required boundary classes
+ok 578 - tapCode: roundtrips required boundary classes
+  ---
+  duration_ms: 2.914834
+  type: 'test'
+  ...
+# Subtest: tapCode: property roundtrip
+ok 579 - tapCode: property roundtrip
+  ---
+  duration_ms: 17.594125
+  type: 'test'
+  ...
+# Subtest: tapCode: documented text and Unicode policy
+ok 580 - tapCode: documented text and Unicode policy
+  ---
+  duration_ms: 0.361666
+  type: 'test'
+  ...
+# Subtest: tapCode: invalid keys do not throw uncaught exceptions
+ok 581 - tapCode: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.315208
+  type: 'test'
+  ...
+# Subtest: tapCode: output is isolated from other engine calls
+ok 582 - tapCode: output is isolated from other engine calls
+  ---
+  duration_ms: 0.278
+  type: 'test'
+  ...
+# Subtest: tapCode: roundtrips 100 KB without excessive runtime
+ok 583 - tapCode: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 123.109708
+  type: 'test'
+  ...
+# Subtest: trifid: KAT (pinned regression vector)
+ok 584 - trifid: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.610875
+  type: 'test'
+  ...
+# Subtest: trifid: exposes encode and decode
+ok 585 - trifid: exposes encode and decode
+  ---
+  duration_ms: 0.083667
+  type: 'test'
+  ...
+# Subtest: trifid: roundtrips required boundary classes
+ok 586 - trifid: roundtrips required boundary classes
+  ---
+  duration_ms: 2.495292
+  type: 'test'
+  ...
+# Subtest: trifid: property roundtrip
+ok 587 - trifid: property roundtrip
+  ---
+  duration_ms: 19.5125
+  type: 'test'
+  ...
+# Subtest: trifid: documented text and Unicode policy
+ok 588 - trifid: documented text and Unicode policy
+  ---
+  duration_ms: 0.520041
+  type: 'test'
+  ...
+# Subtest: trifid: invalid keys do not throw uncaught exceptions
+ok 589 - trifid: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.626708
+  type: 'test'
+  ...
+# Subtest: trifid: output is isolated from other engine calls
+ok 590 - trifid: output is isolated from other engine calls
+  ---
+  duration_ms: 0.132875
+  type: 'test'
+  ...
+# Subtest: trifid: roundtrips 100 KB without excessive runtime
+ok 591 - trifid: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 57.715083
+  type: 'test'
+  ...
+# Subtest: trithemius: KAT (Trithemius arithmetic derivation)
+ok 592 - trithemius: KAT (Trithemius arithmetic derivation)
+  ---
+  duration_ms: 0.453
+  type: 'test'
+  ...
+# Subtest: trithemius: exposes encode and decode
+ok 593 - trithemius: exposes encode and decode
+  ---
+  duration_ms: 0.056042
+  type: 'test'
+  ...
+# Subtest: trithemius: roundtrips required boundary classes
+ok 594 - trithemius: roundtrips required boundary classes
+  ---
+  duration_ms: 0.604542
+  type: 'test'
+  ...
+# Subtest: trithemius: property roundtrip
+ok 595 - trithemius: property roundtrip
+  ---
+  duration_ms: 12.519333
+  type: 'test'
+  ...
+# Subtest: trithemius: documented text and Unicode policy
+ok 596 - trithemius: documented text and Unicode policy
+  ---
+  duration_ms: 0.2195
+  type: 'test'
+  ...
+# Subtest: trithemius: invalid keys do not throw uncaught exceptions
+ok 597 - trithemius: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.62375
+  type: 'test'
+  ...
+# Subtest: trithemius: output is isolated from other engine calls
+ok 598 - trithemius: output is isolated from other engine calls
+  ---
+  duration_ms: 0.1155
+  type: 'test'
+  ...
+# Subtest: trithemius: roundtrips 100 KB without excessive runtime
+ok 599 - trithemius: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 38.261333
+  type: 'test'
+  ...
+# Subtest: twosquare: KAT (Two-Square row derivation)
+ok 600 - twosquare: KAT (Two-Square row derivation)
+  ---
+  duration_ms: 1.074583
+  type: 'test'
+  ...
+# Subtest: twosquare: exposes encode and decode
+ok 601 - twosquare: exposes encode and decode
+  ---
+  duration_ms: 0.187208
+  type: 'test'
+  ...
+# Subtest: twosquare: roundtrips required boundary classes
+ok 602 - twosquare: roundtrips required boundary classes
+  ---
+  duration_ms: 3.207083
+  type: 'test'
+  ...
+# Subtest: twosquare: property roundtrip
+ok 603 - twosquare: property roundtrip
+  ---
+  duration_ms: 24.373167
+  type: 'test'
+  ...
+# Subtest: twosquare: documented text and Unicode policy
+ok 604 - twosquare: documented text and Unicode policy
+  ---
+  duration_ms: 0.498458
+  type: 'test'
+  ...
+# Subtest: twosquare: invalid keys do not throw uncaught exceptions
+ok 605 - twosquare: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.78025
+  type: 'test'
+  ...
+# Subtest: twosquare: output is isolated from other engine calls
+ok 606 - twosquare: output is isolated from other engine calls
+  ---
+  duration_ms: 0.211834
+  type: 'test'
+  ...
+# Subtest: twosquare: roundtrips 100 KB without excessive runtime
+ok 607 - twosquare: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 71.842667
+  type: 'test'
+  ...
+# Subtest: typex: KAT (pinned regression vector)
+ok 608 - typex: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.752333
+  type: 'test'
+  ...
+# Subtest: typex: exposes encode and decode
+ok 609 - typex: exposes encode and decode
+  ---
+  duration_ms: 0.0885
+  type: 'test'
+  ...
+# Subtest: typex: roundtrips required boundary classes
+ok 610 - typex: roundtrips required boundary classes
+  ---
+  duration_ms: 5.131458
+  type: 'test'
+  ...
+# Subtest: typex: property roundtrip
+ok 611 - typex: property roundtrip
+  ---
+  duration_ms: 46.845625
+  type: 'test'
+  ...
+# Subtest: typex: documented text and Unicode policy
+ok 612 - typex: documented text and Unicode policy
+  ---
+  duration_ms: 0.646958
+  type: 'test'
+  ...
+# Subtest: typex: invalid keys do not throw uncaught exceptions
+ok 613 - typex: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.06125
+  type: 'test'
+  ...
+# Subtest: typex: output is isolated from other engine calls
+ok 614 - typex: output is isolated from other engine calls
+  ---
+  duration_ms: 0.189833
+  type: 'test'
+  ...
+# Subtest: typex: roundtrips 100 KB without excessive runtime
+ok 615 - typex: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 187.502458
+  type: 'test'
+  ...
+# Subtest: venonaPadReuse: KAT (5-bit XOR derivation)
+ok 616 - venonaPadReuse: KAT (5-bit XOR derivation)
+  ---
+  duration_ms: 1.021583
+  type: 'test'
+  ...
+# Subtest: venonaPadReuse: exposes encode and decode
+ok 617 - venonaPadReuse: exposes encode and decode
+  ---
+  duration_ms: 0.132917
+  type: 'test'
+  ...
+# Subtest: venonaPadReuse: roundtrips required boundary classes
+ok 618 - venonaPadReuse: roundtrips required boundary classes
+  ---
+  duration_ms: 2.896584
+  type: 'test'
+  ...
+# Subtest: venonaPadReuse: property roundtrip
+ok 619 - venonaPadReuse: property roundtrip
+  ---
+  duration_ms: 15.255208
+  type: 'test'
+  ...
+# Subtest: venonaPadReuse: documented text and Unicode policy
+ok 620 - venonaPadReuse: documented text and Unicode policy
+  ---
+  duration_ms: 0.340459
+  type: 'test'
+  ...
+# Subtest: venonaPadReuse: invalid keys do not throw uncaught exceptions
+ok 621 - venonaPadReuse: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.31475
+  type: 'test'
+  ...
+# Subtest: venonaPadReuse: output is isolated from other engine calls
+ok 622 - venonaPadReuse: output is isolated from other engine calls
+  ---
+  duration_ms: 0.109125
+  type: 'test'
+  ...
+# Subtest: venonaPadReuse: roundtrips 100 KB without excessive runtime
+ok 623 - venonaPadReuse: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 24.083041
+  type: 'test'
+  ...
+# Subtest: vernam: KAT (published Vernam XOR example)
+ok 624 - vernam: KAT (published Vernam XOR example)
+  ---
+  duration_ms: 0.572792
+  type: 'test'
+  ...
+# Subtest: vernam: exposes encode and decode
+ok 625 - vernam: exposes encode and decode
+  ---
+  duration_ms: 0.07925
+  type: 'test'
+  ...
+# Subtest: vernam: roundtrips required boundary classes
+ok 626 - vernam: roundtrips required boundary classes
+  ---
+  duration_ms: 1.867792
+  type: 'test'
+  ...
+# Subtest: vernam: property roundtrip
+ok 627 - vernam: property roundtrip
+  ---
+  duration_ms: 17.492625
+  type: 'test'
+  ...
+# Subtest: vernam: documented text and Unicode policy
+ok 628 - vernam: documented text and Unicode policy
+  ---
+  duration_ms: 0.298
+  type: 'test'
+  ...
+# Subtest: vernam: invalid keys do not throw uncaught exceptions
+ok 629 - vernam: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 1.462958
+  type: 'test'
+  ...
+# Subtest: vernam: output is isolated from other engine calls
+ok 630 - vernam: output is isolated from other engine calls
+  ---
+  duration_ms: 0.119291
+  type: 'test'
+  ...
+# Subtest: vernam: roundtrips 100 KB without excessive runtime
+ok 631 - vernam: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 70.577958
+  type: 'test'
+  ...
+# Subtest: vernam: published bitwise XOR example
+ok 632 - vernam: published bitwise XOR example
+  ---
+  duration_ms: 0.289375
+  type: 'test'
+  ...
+# Subtest: vic: KAT (pinned regression vector)
+ok 633 - vic: KAT (pinned regression vector)
+  ---
+  duration_ms: 0.731834
+  type: 'test'
+  ...
+# Subtest: vic: exposes encode and decode
+ok 634 - vic: exposes encode and decode
+  ---
+  duration_ms: 0.07625
+  type: 'test'
+  ...
+# Subtest: vic: roundtrips required boundary classes
+ok 635 - vic: roundtrips required boundary classes
+  ---
+  duration_ms: 3.693166
+  type: 'test'
+  ...
+# Subtest: vic: property roundtrip
+ok 636 - vic: property roundtrip
+  ---
+  duration_ms: 28.12475
+  type: 'test'
+  ...
+# Subtest: vic: documented text and Unicode policy
+ok 637 - vic: documented text and Unicode policy
+  ---
+  duration_ms: 0.785458
+  type: 'test'
+  ...
+# Subtest: vic: invalid keys do not throw uncaught exceptions
+ok 638 - vic: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.817125
+  type: 'test'
+  ...
+# Subtest: vic: output is isolated from other engine calls
+ok 639 - vic: output is isolated from other engine calls
+  ---
+  duration_ms: 0.441041
+  type: 'test'
+  ...
+# Subtest: vic: roundtrips 100 KB without excessive runtime
+ok 640 - vic: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 100.966958
+  type: 'test'
+  ...
+# Subtest: vic: checkerboard output receives chain addition
+ok 641 - vic: checkerboard output receives chain addition
+  ---
+  duration_ms: 0.533666
+  type: 'test'
+  ...
+# Subtest: vigenere: KAT (published Vigenere vector)
+ok 642 - vigenere: KAT (published Vigenere vector)
+  ---
+  duration_ms: 0.517625
+  type: 'test'
+  ...
+# Subtest: vigenere: exposes encode and decode
+ok 643 - vigenere: exposes encode and decode
+  ---
+  duration_ms: 0.044542
+  type: 'test'
+  ...
+# Subtest: vigenere: roundtrips required boundary classes
+ok 644 - vigenere: roundtrips required boundary classes
+  ---
+  duration_ms: 0.739541
+  type: 'test'
+  ...
+# Subtest: vigenere: property roundtrip
+ok 645 - vigenere: property roundtrip
+  ---
+  duration_ms: 9.22725
+  type: 'test'
+  ...
+# Subtest: vigenere: documented text and Unicode policy
+ok 646 - vigenere: documented text and Unicode policy
+  ---
+  duration_ms: 0.272666
+  type: 'test'
+  ...
+# Subtest: vigenere: invalid keys do not throw uncaught exceptions
+ok 647 - vigenere: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.345916
+  type: 'test'
+  ...
+# Subtest: vigenere: output is isolated from other engine calls
+ok 648 - vigenere: output is isolated from other engine calls
+  ---
+  duration_ms: 0.272667
+  type: 'test'
+  ...
+# Subtest: vigenere: roundtrips 100 KB without excessive runtime
+ok 649 - vigenere: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 13.848041
+  type: 'test'
+  ...
+# Subtest: voynich: KAT (EVA display-map derivation)
+ok 650 - voynich: KAT (EVA display-map derivation)
+  ---
+  duration_ms: 0.371417
+  type: 'test'
+  ...
+# Subtest: voynich: exposes encode and decode
+ok 651 - voynich: exposes encode and decode
+  ---
+  duration_ms: 0.045833
+  type: 'test'
+  ...
+# Subtest: voynich: roundtrips required boundary classes
+ok 652 - voynich: roundtrips required boundary classes
+  ---
+  duration_ms: 0.522125
+  type: 'test'
+  ...
+# Subtest: voynich: property roundtrip
+ok 653 - voynich: property roundtrip
+  ---
+  duration_ms: 10.417667
+  type: 'test'
+  ...
+# Subtest: voynich: documented text and Unicode policy
+ok 654 - voynich: documented text and Unicode policy
+  ---
+  duration_ms: 0.280667
+  type: 'test'
+  ...
+# Subtest: voynich: invalid keys do not throw uncaught exceptions
+ok 655 - voynich: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.400666
+  type: 'test'
+  ...
+# Subtest: voynich: output is isolated from other engine calls
+ok 656 - voynich: output is isolated from other engine calls
+  ---
+  duration_ms: 0.199333
+  type: 'test'
+  ...
+# Subtest: voynich: roundtrips 100 KB without excessive runtime
+ok 657 - voynich: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 18.699875
+  type: 'test'
+  ...
+# Subtest: wadsworth: KAT (Wadsworth 26:33 gearing derivation)
+ok 658 - wadsworth: KAT (Wadsworth 26:33 gearing derivation)
+  ---
+  duration_ms: 0.858458
+  type: 'test'
+  ...
+# Subtest: wadsworth: exposes encode and decode
+ok 659 - wadsworth: exposes encode and decode
+  ---
+  duration_ms: 0.092792
+  type: 'test'
+  ...
+# Subtest: wadsworth: roundtrips required boundary classes
+ok 660 - wadsworth: roundtrips required boundary classes
+  ---
+  duration_ms: 0.993625
+  type: 'test'
+  ...
+# Subtest: wadsworth: property roundtrip
+ok 661 - wadsworth: property roundtrip
+  ---
+  duration_ms: 13.217708
+  type: 'test'
+  ...
+# Subtest: wadsworth: documented text and Unicode policy
+ok 662 - wadsworth: documented text and Unicode policy
+  ---
+  duration_ms: 0.266542
+  type: 'test'
+  ...
+# Subtest: wadsworth: invalid keys do not throw uncaught exceptions
+ok 663 - wadsworth: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.379708
+  type: 'test'
+  ...
+# Subtest: wadsworth: output is isolated from other engine calls
+ok 664 - wadsworth: output is isolated from other engine calls
+  ---
+  duration_ms: 0.075291
+  type: 'test'
+  ...
+# Subtest: wadsworth: roundtrips 100 KB without excessive runtime
+ok 665 - wadsworth: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 22.4765
+  type: 'test'
+  ...
+# Subtest: wallisCiphers: KAT (Wallis codebook derivation)
+ok 666 - wallisCiphers: KAT (Wallis codebook derivation)
+  ---
+  duration_ms: 0.499
+  type: 'test'
+  ...
+# Subtest: wallisCiphers: exposes encode and decode
+ok 667 - wallisCiphers: exposes encode and decode
+  ---
+  duration_ms: 0.076417
+  type: 'test'
+  ...
+# Subtest: wallisCiphers: roundtrips required boundary classes
+ok 668 - wallisCiphers: roundtrips required boundary classes
+  ---
+  duration_ms: 1.359916
+  type: 'test'
+  ...
+# Subtest: wallisCiphers: property roundtrip
+ok 669 - wallisCiphers: property roundtrip
+  ---
+  duration_ms: 11.700833
+  type: 'test'
+  ...
+# Subtest: wallisCiphers: documented text and Unicode policy
+ok 670 - wallisCiphers: documented text and Unicode policy
+  ---
+  duration_ms: 0.812083
+  type: 'test'
+  ...
+# Subtest: wallisCiphers: invalid keys do not throw uncaught exceptions
+ok 671 - wallisCiphers: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.845666
+  type: 'test'
+  ...
+# Subtest: wallisCiphers: output is isolated from other engine calls
+ok 672 - wallisCiphers: output is isolated from other engine calls
+  ---
+  duration_ms: 0.247625
+  type: 'test'
+  ...
+# Subtest: wallisCiphers: roundtrips 100 KB without excessive runtime
+ok 673 - wallisCiphers: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 44.582667
+  type: 'test'
+  ...
+# Subtest: wheatstone: KAT (Wheatstone dial derivation)
+ok 674 - wheatstone: KAT (Wheatstone dial derivation)
+  ---
+  duration_ms: 0.567417
+  type: 'test'
+  ...
+# Subtest: wheatstone: exposes encode and decode
+ok 675 - wheatstone: exposes encode and decode
+  ---
+  duration_ms: 0.101708
+  type: 'test'
+  ...
+# Subtest: wheatstone: roundtrips required boundary classes
+ok 676 - wheatstone: roundtrips required boundary classes
+  ---
+  duration_ms: 0.879709
+  type: 'test'
+  ...
+# Subtest: wheatstone: property roundtrip
+ok 677 - wheatstone: property roundtrip
+  ---
+  duration_ms: 11.879541
+  type: 'test'
+  ...
+# Subtest: wheatstone: documented text and Unicode policy
+ok 678 - wheatstone: documented text and Unicode policy
+  ---
+  duration_ms: 0.269084
+  type: 'test'
+  ...
+# Subtest: wheatstone: invalid keys do not throw uncaught exceptions
+ok 679 - wheatstone: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.375625
+  type: 'test'
+  ...
+# Subtest: wheatstone: output is isolated from other engine calls
+ok 680 - wheatstone: output is isolated from other engine calls
+  ---
+  duration_ms: 0.11275
+  type: 'test'
+  ...
+# Subtest: wheatstone: roundtrips 100 KB without excessive runtime
+ok 681 - wheatstone: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 16.890666
+  type: 'test'
+  ...
+# Subtest: zimmermann: KAT (embedded codebook derivation)
+ok 682 - zimmermann: KAT (embedded codebook derivation)
+  ---
+  duration_ms: 0.413625
+  type: 'test'
+  ...
+# Subtest: zimmermann: exposes encode and decode
+ok 683 - zimmermann: exposes encode and decode
+  ---
+  duration_ms: 0.043084
+  type: 'test'
+  ...
+# Subtest: zimmermann: roundtrips required boundary classes
+ok 684 - zimmermann: roundtrips required boundary classes
+  ---
+  duration_ms: 0.892
+  type: 'test'
+  ...
+# Subtest: zimmermann: property roundtrip
+ok 685 - zimmermann: property roundtrip
+  ---
+  duration_ms: 6.834416
+  type: 'test'
+  ...
+# Subtest: zimmermann: documented text and Unicode policy
+ok 686 - zimmermann: documented text and Unicode policy
+  ---
+  duration_ms: 0.595791
+  type: 'test'
+  ...
+# Subtest: zimmermann: invalid keys do not throw uncaught exceptions
+ok 687 - zimmermann: invalid keys do not throw uncaught exceptions
+  ---
+  duration_ms: 0.565333
+  type: 'test'
+  ...
+# Subtest: zimmermann: output is isolated from other engine calls
+ok 688 - zimmermann: output is isolated from other engine calls
+  ---
+  duration_ms: 0.123083
+  type: 'test'
+  ...
+# Subtest: zimmermann: roundtrips 100 KB without excessive runtime
+ok 689 - zimmermann: roundtrips 100 KB without excessive runtime
+  ---
+  duration_ms: 41.140209
+  type: 'test'
+  ...
+1..689
+# tests 689
+# suites 0
+# pass 689
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2960.834959
+
+=== Engine complexity (serial — timing needs a quiet process) ===
+
+━━━ Engine complexity: 85 engines, ratio limit 10x ━━━
+
+
+  judged 85, skipped 0
+
+══════════════════════════════════════════════════════════════════════
+  ✅ 85 within linear bound   ❌ 0 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+
+=== Complexity canary (guard must catch quadratic work) ===
+
+━━━ Engine complexity: 2 engines, ratio limit 10x ━━━
+
+
+  judged 2, skipped 0
+
+══════════════════════════════════════════════════════════════════════
+  ✅ 2 within linear bound   ❌ 0 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+
+━━━ Engine complexity: 1 engines, ratio limit 10x ━━━
+
+
+  judged 1, skipped 0
+
+══════════════════════════════════════════════════════════════════════
+  ❌ 0 within linear bound   ❌ 1 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+
+━━━ Engine complexity: 1 engines, ratio limit 10x ━━━
+
+
+  judged 0, skipped 1
+  skipped: invalidKey (key format not timeable here)
+
+══════════════════════════════════════════════════════════════════════
+  ✅ 0 within linear bound   ❌ 0 worse than linear
+══════════════════════════════════════════════════════════════════════
+
+Production guard accepted Caesar/OTP controls and rejected quadratic work; invalid-key coverage failure caught; checksum 52502.
+
+=== Mutation canary (suite must catch a corrupted engine) ===
+canary ok: corrupted caesar engine was caught by its spec
+canary ok: corrupted playfair engine was caught by its spec
+
+=== Legacy engine integration checks ===
+╔══════════════════════════════════════════════════════╗
+║   THE CIPHER MUSEUM — Engine Test Suite             ║
+║   Testing all registered cipher engines             ║
+╚══════════════════════════════════════════════════════╝
+
+━━━ Engine Existence ━━━
+  ✅  caesar exists
+  ✅  caesar.encode is function
+  ✅  caesar.decode is function
+  ✅  monoalphabetic exists
+  ✅  monoalphabetic.encode is function
+  ✅  monoalphabetic.decode is function
+  ✅  polybius exists
+  ✅  polybius.encode is function
+  ✅  polybius.decode is function
+  ✅  homophonic exists
+  ✅  homophonic.encode is function
+  ✅  homophonic.decode is function
+  ✅  playfair exists
+  ✅  playfair.encode is function
+  ✅  playfair.decode is function
+  ✅  hill exists
+  ✅  hill.encode is function
+  ✅  hill.decode is function
+  ✅  vigenere exists
+  ✅  vigenere.encode is function
+  ✅  vigenere.decode is function
+  ✅  beaufort exists
+  ✅  beaufort.encode is function
+  ✅  beaufort.decode is function
+  ✅  gronsfeld exists
+  ✅  gronsfeld.encode is function
+  ✅  gronsfeld.decode is function
+  ✅  porta exists
+  ✅  porta.encode is function
+  ✅  porta.decode is function
+  ✅  runningKey exists
+  ✅  runningKey.encode is function
+  ✅  runningKey.decode is function
+  ✅  railFence exists
+  ✅  railFence.encode is function
+  ✅  railFence.decode is function
+  ✅  columnar exists
+  ✅  columnar.encode is function
+  ✅  columnar.decode is function
+  ✅  doubleTransposition exists
+  ✅  doubleTransposition.encode is function
+  ✅  doubleTransposition.decode is function
+  ✅  bacon exists
+  ✅  bacon.encode is function
+  ✅  bacon.decode is function
+  ✅  tapCode exists
+  ✅  tapCode.encode is function
+  ✅  tapCode.decode is function
+  ✅  pigpen exists
+  ✅  pigpen.encode is function
+  ✅  pigpen.decode is function
+  ✅  bifid exists
+  ✅  bifid.encode is function
+  ✅  bifid.decode is function
+  ✅  trifid exists
+  ✅  trifid.encode is function
+  ✅  trifid.decode is function
+  ✅  adfgx exists
+  ✅  adfgx.encode is function
+  ✅  adfgx.decode is function
+  ✅  adfgvx exists
+  ✅  adfgvx.encode is function
+  ✅  adfgvx.decode is function
+  ✅  nihilist exists
+  ✅  nihilist.encode is function
+  ✅  nihilist.decode is function
+  ✅  otp exists
+  ✅  otp.encode is function
+  ✅  otp.decode is function
+  ✅  fractionatedMorse exists
+  ✅  fractionatedMorse.encode is function
+  ✅  fractionatedMorse.decode is function
+  ✅  confederateVigenere exists
+  ✅  confederateVigenere.encode is function
+  ✅  confederateVigenere.decode is function
+  ✅  bazeries exists
+  ✅  bazeries.encode is function
+  ✅  bazeries.decode is function
+  ✅  alberti exists
+  ✅  alberti.encode is function
+  ✅  alberti.decode is function
+  ✅  jefferson exists
+  ✅  jefferson.encode is function
+  ✅  jefferson.decode is function
+  ✅  enigma exists
+  ✅  enigma.encode is function
+  ✅  enigma.decode is function
+  ✅  lorenz exists
+  ✅  lorenz.encode is function
+  ✅  lorenz.decode is function
+  ✅  dictionaryCode exists
+  ✅  dictionaryCode.encode is function
+  ✅  dictionaryCode.decode is function
+  ✅  stager exists
+  ✅  stager.encode is function
+  ✅  stager.decode is function
+  ✅  vic exists
+  ✅  vic.encode is function
+  ✅  vic.decode is function
+  ✅  scytale exists
+  ✅  scytale.encode is function
+  ✅  scytale.decode is function
+  ✅  vernam exists
+  ✅  vernam.encode is function
+  ✅  vernam.decode is function
+  ✅  autokey exists
+  ✅  autokey.encode is function
+  ✅  autokey.decode is function
+  ✅  nomenclator exists
+  ✅  nomenclator.encode is function
+  ✅  nomenclator.decode is function
+  ✅  bookCipher exists
+  ✅  bookCipher.encode is function
+  ✅  bookCipher.decode is function
+  ✅  sigaba exists
+  ✅  sigaba.encode is function
+  ✅  sigaba.decode is function
+  ✅  typex exists
+  ✅  typex.encode is function
+  ✅  typex.decode is function
+  ✅  jn25 exists
+  ✅  jn25.encode is function
+  ✅  jn25.decode is function
+  ✅  redTypeA exists
+  ✅  redTypeA.encode is function
+  ✅  redTypeA.decode is function
+
+━━━ Encode & Decode Tests ━━━
+  ✅  Caesar Cipher: encode produces output
+  ✅  Caesar Cipher: known-answer match
+  ✅  Caesar Cipher: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Monoalphabetic: encode produces output
+  ✅  Monoalphabetic: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Polybius Square: encode produces output
+  ✅  Polybius Square: known-answer match
+  ✅  Polybius Square: decode known input
+  ✅  Homophonic Substitution: encode produces output
+  ✅  Homophonic Substitution: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Playfair: encode produces output
+  ✅  Playfair: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Hill Cipher: encode produces output
+  ✅  Hill Cipher: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Vigenère: encode produces output
+  ✅  Vigenère: known-answer match
+  ✅  Vigenère: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Beaufort: encode produces output
+  ✅  Beaufort: self-reciprocal encode(encode(msg)) = msg
+  ✅  Gronsfeld: encode produces output
+  ✅  Gronsfeld: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Porta: encode produces output
+  ✅  Porta: self-reciprocal encode(encode(msg)) = msg
+  ✅  Running Key: encode produces output
+  ✅  Running Key: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Rail Fence: encode produces output
+  ✅  Rail Fence: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Columnar Transposition: encode produces output
+  ✅  Columnar Transposition: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Double Transposition: encode produces output
+  ✅  Double Transposition: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Bacon's Cipher: encode produces output
+  ✅  Bacon's Cipher: known-answer match
+  ✅  Bacon's Cipher: decode known input
+  ✅  Tap Code: encode produces output
+  ✅  Pigpen: encode produces output
+  ✅  Pigpen: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Bifid: encode produces output
+  ✅  Bifid: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Trifid: encode produces output
+  ✅  Trifid: roundtrip decode(encode(msg)) ≈ msg
+  ✅  ADFGX: encode produces output
+  ✅  ADFGX: roundtrip decode(encode(msg)) ≈ msg
+  ✅  ADFGVX: encode produces output
+  ✅  ADFGVX: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Nihilist: encode produces output
+  ✅  Nihilist: roundtrip decode(encode(msg)) ≈ msg
+  ✅  One-Time Pad: encode produces output
+  ✅  One-Time Pad: roundtrip with explicit key
+  ✅  VENONA Pad-Reuse: encode produces output
+  ✅  VENONA Pad-Reuse: roundtrip decode(encode(msg)) ≈ msg
+  ✅  VENONA Pad-Reuse: engine exposes combineCiphertexts
+  ✅  VENONA Pad-Reuse: engine exposes cribAtPosition
+  ✅  VENONA Pad-Reuse: engine exposes scanCribPositions
+  ✅  VENONA Pad-Reuse: known crib reveals expected other fragment
+  ✅  VENONA Pad-Reuse: wrong crib degrades output quality
+  ✅  Fractionated Morse: encode produces output
+  ⏭️  Fractionated Morse: decrypt skipped (encrypt-only)
+  ✅  Confederate Vigenère: encode produces output
+  ✅  Confederate Vigenère: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Bazeries: encode produces output
+  ✅  Bazeries: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Alberti Disk: encode produces output
+  ✅  Alberti Disk: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Jefferson Disk: encode produces output
+  ✅  Jefferson Disk: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Enigma Machine: encode produces output
+  ✅  Enigma Machine: self-reciprocal encode(encode(msg)) = msg
+  ✅  Lorenz: encode produces output
+  ✅  Lorenz: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Dictionary Code: encode produces output
+  ✅  Dictionary Code: encode produces indices
+  ✅  Dictionary Code: decode retrieves first letters
+  ✅  Stager (Route): encode produces output
+  ✅  Stager (Route): roundtrip decode(encode(msg)) ≈ msg
+  ✅  VIC Cipher: encode produces output
+  ✅  VIC Cipher: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Scytale: encode produces output
+  ✅  Scytale: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Vernam (XOR): encode produces output
+  ✅  Vernam (XOR): roundtrip with explicit key
+  ✅  JN-25: encode produces output
+  ✅  JN-25: roundtrip decode(encode(msg)) ≈ msg
+  ✅  Red (Type A): encode produces output
+  ✅  Red (Type A): roundtrip decode(encode(msg)) ≈ msg
+
+━━━ Tap Code Roundtrip ━━━
+  ✅  Tap Code: encode runs
+  ✅  Tap Code: decode(encode) ≈ msg
+
+━━━ CrypTool Cross-Verification ━━━
+  ✅  Vigenère (CrypTool): ATTACKATDAWN + LEMON = LXFOPVEFRNHR
+  ✅  Vigenère (CrypTool): decode LXFOPVEFRNHR + LEMON = ATTACKATDAWN
+  ✅  Caesar ROT13: HELLO → URYYB
+  ✅  Caesar ROT13: URYYB → HELLO
+  ✅  Polybius: A → 11
+  ✅  Polybius: Z → 55
+  ✅  Rail Fence (3): WEAREDISCOVEREDFLEEATONCE → WECRLTEERDSOEEFEAOCAIVDEN
+  ✅  Beaufort self-reciprocal: decode(encode(x)) = x
+
+━━━ Demo Config Coverage ━━━
+  ⏭️  caesar: has dedicated caesar.js (skipped config check)
+  ✅  demo-loader CONFIGS includes engine 'monoalphabetic'
+  ✅  demo-loader CONFIGS includes engine 'polybius'
+  ✅  demo-loader CONFIGS includes engine 'homophonic'
+  ✅  demo-loader CONFIGS includes engine 'playfair'
+  ✅  demo-loader CONFIGS includes engine 'hill'
+  ✅  demo-loader CONFIGS includes engine 'vigenere'
+  ✅  demo-loader CONFIGS includes engine 'beaufort'
+  ✅  demo-loader CONFIGS includes engine 'gronsfeld'
+  ✅  demo-loader CONFIGS includes engine 'porta'
+  ✅  demo-loader CONFIGS includes engine 'runningKey'
+  ✅  demo-loader CONFIGS includes engine 'railFence'
+  ✅  demo-loader CONFIGS includes engine 'columnar'
+  ✅  demo-loader CONFIGS includes engine 'doubleTransposition'
+  ✅  demo-loader CONFIGS includes engine 'bacon'
+  ✅  demo-loader CONFIGS includes engine 'tapCode'
+  ✅  demo-loader CONFIGS includes engine 'pigpen'
+  ✅  demo-loader CONFIGS includes engine 'bifid'
+  ✅  demo-loader CONFIGS includes engine 'trifid'
+  ✅  demo-loader CONFIGS includes engine 'adfgx'
+  ✅  demo-loader CONFIGS includes engine 'adfgvx'
+  ✅  demo-loader CONFIGS includes engine 'nihilist'
+  ✅  demo-loader CONFIGS includes engine 'otp'
+  ✅  demo-loader CONFIGS includes engine 'fractionatedMorse'
+  ✅  demo-loader CONFIGS includes engine 'confederateVigenere'
+  ✅  demo-loader CONFIGS includes engine 'bazeries'
+  ✅  demo-loader CONFIGS includes engine 'alberti'
+  ✅  demo-loader CONFIGS includes engine 'jefferson'
+  ✅  demo-loader CONFIGS includes engine 'enigma'
+  ✅  demo-loader CONFIGS includes engine 'lorenz'
+  ✅  demo-loader CONFIGS includes engine 'dictionaryCode'
+  ✅  demo-loader CONFIGS includes engine 'stager'
+  ✅  demo-loader CONFIGS includes engine 'vic'
+  ✅  demo-loader CONFIGS includes engine 'scytale'
+  ✅  demo-loader CONFIGS includes engine 'vernam'
+  ✅  demo-loader CONFIGS includes engine 'autokey'
+  ✅  demo-loader CONFIGS includes engine 'nomenclator'
+  ✅  demo-loader CONFIGS includes engine 'bookCipher'
+  ✅  demo-loader CONFIGS includes engine 'sigaba'
+  ✅  demo-loader CONFIGS includes engine 'typex'
+  ✅  demo-loader CONFIGS includes engine 'jn25'
+  ✅  demo-loader CONFIGS includes engine 'redTypeA'
+
+━━━ HTML Exhibit Integration ━━━
+  ✅  adfgvx.html: loads demo-loader.js
+  ✅  adfgx.html: loads demo-loader.js
+  ✅  aeneas-tacticus.html: loads demo-loader.js
+  ✅  aes.html: loads demo-loader.js
+  ✅  affine.html: loads demo-loader.js
+  ✅  agnes-driscoll.html: loads demo-loader.js
+  ✅  alberti-disk.html: loads demo-loader.js
+  ✅  amharic-ge-ez-ciphers.html: loads demo-loader.js
+  ✅  arabic-nomenclators.html: loads demo-loader.js
+  ✅  argenti.html: loads demo-loader.js
+  ✅  arnold-andre.html: loads demo-loader.js
+  ✅  atbash.html: loads demo-loader.js
+  ✅  autokey.html: loads demo-loader.js
+  ✅  babington.html: loads demo-loader.js
+  ✅  bach-motif.html: loads demo-loader.js
+  ✅  bacon.html: loads demo-loader.js
+  ✅  bazeries.html: loads demo-loader.js
+  ✅  beale.html: loads demo-loader.js
+  ✅  beaufort.html: loads demo-loader.js
+  ✅  beurling.html: loads demo-loader.js
+  ✅  bible-code.html: loads demo-loader.js
+  ✅  bifid.html: loads demo-loader.js
+  ✅  bill-tutte.html: loads demo-loader.js
+  ✅  bletchley-park.html: loads demo-loader.js
+  ✅  book-cipher.html: loads demo-loader.js
+  ✅  cabinet-noir.html: loads demo-loader.js
+  ✅  caesar.html: loads demo-loader.js
+  ✅  cardano-autokey.html: loads demo-loader.js
+  ✅  cardano-grille.html: loads demo-loader.js
+  ✅  chaocipher.html: loads demo-loader.js
+  ✅  che-guevara.html: loads demo-loader.js
+  ✅  chinese-telegraph.html: loads demo-loader.js
+  ✅  cicada-3301.html: loads demo-loader.js
+  ✅  columnar.html: loads demo-loader.js
+  ✅  commercial-codebooks.html: loads demo-loader.js
+  ✅  confederate-vigenere.html: loads demo-loader.js
+  ✅  copiale.html: loads demo-loader.js
+  ✅  culper-ring.html: loads demo-loader.js
+  ✅  da-vinci-code.html: loads demo-loader.js
+  ✅  dagapeyeff.html: loads demo-loader.js
+  ✅  dancing-men.html: loads demo-loader.js
+  ✅  des.html: loads demo-loader.js
+  ✅  diana-cryptosystem.html: loads demo-loader.js
+  ✅  dictionary-code.html: loads demo-loader.js
+  ✅  diffie-hellman.html: loads demo-loader.js
+  ✅  dilly-knox.html: loads demo-loader.js
+  ✅  dorabella.html: loads demo-loader.js
+  ✅  double-transposition.html: loads demo-loader.js
+  ✅  dunin.html: loads demo-loader.js
+  ✅  ecdsa.html: loads demo-loader.js
+  ✅  egyptian-substitution.html: loads demo-loader.js
+  ✅  elizebeth-friedman.html: loads demo-loader.js
+  ✅  enigma.html: loads demo-loader.js
+  ✅  fialka.html: loads demo-loader.js
+  ✅  field-hollers.html: loads demo-loader.js
+  ✅  four-square.html: loads demo-loader.js
+  ✅  fractionated-morse.html: loads demo-loader.js
+  ✅  freemason-pigpen.html: loads demo-loader.js
+  ✅  gchq-trio.html: loads demo-loader.js
+  ✅  geheimschreiber.html: loads demo-loader.js
+  ✅  gold-bug.html: loads demo-loader.js
+  ✅  gravity-falls.html: loads demo-loader.js
+  ✅  great-cipher.html: loads demo-loader.js
+  ✅  gronsfeld.html: loads demo-loader.js
+  ✅  hagelin-c36.html: loads demo-loader.js
+  ✅  hill.html: loads demo-loader.js
+  ✅  histiaeus-tattoo.html: loads demo-loader.js
+  ✅  homophonic.html: loads demo-loader.js
+  ✅  ira-ciphers.html: loads demo-loader.js
+  ✅  jefferson-disk.html: loads demo-loader.js
+  ✅  jn-25.html: loads demo-loader.js
+  ✅  joan-clarke.html: loads demo-loader.js
+  ✅  kahn.html: loads demo-loader.js
+  ✅  kama-sutra.html: loads demo-loader.js
+  ✅  kerckhoffs.html: loads demo-loader.js
+  ✅  kl-7.html: loads demo-loader.js
+  ✅  kryha.html: loads demo-loader.js
+  ✅  krypto-arg.html: loads demo-loader.js
+  ✅  kryptos.html: loads demo-loader.js
+  ✅  lasry.html: loads demo-loader.js
+  ✅  latin-american-codebooks.html: loads demo-loader.js
+  ✅  leo-marks.html: loads demo-loader.js
+  ✅  lorenz.html: loads demo-loader.js
+  ✅  m-94.html: loads demo-loader.js
+  ✅  m209.html: loads demo-loader.js
+  ✅  mary-stuart-castelnau-letters.html: loads demo-loader.js
+  ✅  mavis-batey.html: loads demo-loader.js
+  ✅  mccormick.html: loads demo-loader.js
+  ✅  microdot.html: loads demo-loader.js
+  ✅  mit-mystery-hunt.html: loads demo-loader.js
+  ✅  monoalphabetic.html: loads demo-loader.js
+  ✅  morse.html: loads demo-loader.js
+  ✅  myszkowski.html: loads demo-loader.js
+  ✅  national-treasure.html: loads demo-loader.js
+  ✅  navajo-code-talkers.html: loads demo-loader.js
+  ✅  nema.html: loads demo-loader.js
+  ✅  nihilist.html: loads demo-loader.js
+  ✅  nomenclator.html: loads demo-loader.js
+  ✅  null-cipher.html: loads demo-loader.js
+  ✅  one-time-pad.html: loads demo-loader.js
+  ✅  patterson-jefferson-cipher.html: loads demo-loader.js
+  ✅  phaistos-disc.html: loads demo-loader.js
+  ✅  pigpen.html: loads demo-loader.js
+  ✅  playfair.html: loads demo-loader.js
+  ✅  polybius.html: loads demo-loader.js
+  ✅  porta.html: loads demo-loader.js
+  ✅  purple.html: loads demo-loader.js
+  ✅  rail-fence.html: loads demo-loader.js
+  ✅  red-army-faction.html: loads demo-loader.js
+  ✅  red-type-a.html: loads demo-loader.js
+  ✅  rochefort.html: loads demo-loader.js
+  ✅  rosetta-stone.html: loads demo-loader.js
+  ✅  rot13.html: loads demo-loader.js
+  ✅  rsa.html: loads demo-loader.js
+  ✅  running-key.html: loads demo-loader.js
+  ✅  sator-square.html: loads demo-loader.js
+  ✅  scytale.html: loads demo-loader.js
+  ✅  sha256.html: loads demo-loader.js
+  ✅  shamir-secret-sharing.html: loads demo-loader.js
+  ✅  shugborough.html: loads demo-loader.js
+  ✅  sigaba.html: loads demo-loader.js
+  ✅  sigsaly.html: loads demo-loader.js
+  ✅  slidex.html: loads demo-loader.js
+  ✅  solitaire.html: loads demo-loader.js
+  ✅  somerton-man.html: loads demo-loader.js
+  ✅  stager.html: loads demo-loader.js
+  ✅  station-hypo.html: loads demo-loader.js
+  ✅  straddling-checkerboard.html: loads demo-loader.js
+  ✅  tap-code.html: loads demo-loader.js
+  ✅  trifid.html: loads demo-loader.js
+  ✅  trithemius.html: loads demo-loader.js
+  ✅  turning-grille.html: loads demo-loader.js
+  ✅  two-square.html: loads demo-loader.js
+  ✅  typex.html: loads demo-loader.js
+  ✅  venona.html: loads demo-loader.js
+  ✅  vernam.html: loads demo-loader.js
+  ✅  vic.html: loads demo-loader.js
+  ✅  vietnamese-underground.html: loads demo-loader.js
+  ✅  vigenere.html: loads demo-loader.js
+  ✅  voynich.html: loads demo-loader.js
+  ✅  wadsworth-cipher.html: loads demo-loader.js
+  ✅  wallis-ciphers.html: loads demo-loader.js
+  ✅  wheatstone.html: loads demo-loader.js
+  ✅  yardley.html: loads demo-loader.js
+  ✅  zero-knowledge-proofs.html: loads demo-loader.js
+  ✅  zimmermann.html: loads demo-loader.js
+  ✅  zodiac.html: loads demo-loader.js
+
+  📊 111/147 exhibits have demo-section
+  📊 147/147 exhibits load demo-loader.js
+
+━━━ Sources Coverage ━━━
+  ✅  SOURCES has entry for 'caesar'
+  ✅  SOURCES has entry for 'monoalphabetic'
+  ✅  SOURCES has entry for 'polybius'
+  ✅  SOURCES has entry for 'homophonic'
+  ✅  SOURCES has entry for 'playfair'
+  ✅  SOURCES has entry for 'hill'
+  ✅  SOURCES has entry for 'vigenere'
+  ✅  SOURCES has entry for 'beaufort'
+  ✅  SOURCES has entry for 'gronsfeld'
+  ✅  SOURCES has entry for 'porta'
+  ✅  SOURCES has entry for 'runningKey'
+  ✅  SOURCES has entry for 'railFence'
+  ✅  SOURCES has entry for 'columnar'
+  ✅  SOURCES has entry for 'doubleTransposition'
+  ✅  SOURCES has entry for 'bacon'
+  ✅  SOURCES has entry for 'tapCode'
+  ✅  SOURCES has entry for 'pigpen'
+  ✅  SOURCES has entry for 'bifid'
+  ✅  SOURCES has entry for 'trifid'
+  ✅  SOURCES has entry for 'adfgx'
+  ✅  SOURCES has entry for 'adfgvx'
+  ✅  SOURCES has entry for 'nihilist'
+  ✅  SOURCES has entry for 'otp'
+  ✅  SOURCES has entry for 'fractionatedMorse'
+  ✅  SOURCES has entry for 'confederateVigenere'
+  ✅  SOURCES has entry for 'bazeries'
+  ✅  SOURCES has entry for 'alberti'
+  ✅  SOURCES has entry for 'jefferson'
+  ✅  SOURCES has entry for 'enigma'
+  ✅  SOURCES has entry for 'lorenz'
+  ✅  SOURCES has entry for 'dictionaryCode'
+  ✅  SOURCES has entry for 'stager'
+  ✅  SOURCES has entry for 'vic'
+  ✅  SOURCES has entry for 'scytale'
+  ✅  SOURCES has entry for 'vernam'
+  ✅  SOURCES has entry for 'autokey'
+  ✅  SOURCES has entry for 'nomenclator'
+  ✅  SOURCES has entry for 'bookCipher'
+  ✅  SOURCES has entry for 'sigaba'
+  ✅  SOURCES has entry for 'typex'
+  ✅  SOURCES has entry for 'jn25'
+  ✅  SOURCES has entry for 'redTypeA'
+
+╔══════════════════════════════════════════════════════╗
+║   RESULTS:  ✅ 450 passed   ❌   0 failed   ⏭️   2 skipped  ║
+╚══════════════════════════════════════════════════════╝
+
+=== Known-answer and deep checks ===
+╔══════════════════════════════════════════════════════════╗
+║   THE CIPHER MUSEUM — Deep Cipher Test Suite            ║
+║   Edge cases · Boundaries · Known answers · Stress      ║
+╚══════════════════════════════════════════════════════════╝
+
+━━━ Caesar — Edge Cases & Known Answers ━━━
+  ✅  shift 1 encode A→B
+  ✅  shift 26 wraps to identity
+  ✅  shift 25 encode
+  ✅  shift 1 encode A→B
+  ✅  shift 1 encode Z→A (wrap)
+  ✅  ROT13: HELLO→URYYB
+  ✅  ROT13 is self-reciprocal
+  ✅  full alphabet shift 3
+  ✅  roundtrip shift 0
+  ✅  roundtrip shift 1
+  ✅  roundtrip shift 2
+  ✅  roundtrip shift 3
+  ✅  roundtrip shift 4
+  ✅  roundtrip shift 5
+  ✅  roundtrip shift 6
+  ✅  roundtrip shift 7
+  ✅  roundtrip shift 8
+  ✅  roundtrip shift 9
+  ✅  roundtrip shift 10
+  ✅  roundtrip shift 11
+  ✅  roundtrip shift 12
+  ✅  roundtrip shift 13
+  ✅  roundtrip shift 14
+  ✅  roundtrip shift 15
+  ✅  roundtrip shift 16
+  ✅  roundtrip shift 17
+  ✅  roundtrip shift 18
+  ✅  roundtrip shift 19
+  ✅  roundtrip shift 20
+  ✅  roundtrip shift 21
+  ✅  roundtrip shift 22
+  ✅  roundtrip shift 23
+  ✅  roundtrip shift 24
+  ✅  roundtrip shift 25
+  ✅  single char A shift 3
+  ✅  lowercase input accepted
+
+━━━ Monoalphabetic — Keyword Alphabets ━━━
+  ✅  A maps to Z with keyword ZEBRA
+  ✅  roundtrip full pangram
+  ✅  empty keyword no crash
+  ✅  full alphabet roundtrip
+  ✅  actually encrypts
+
+━━━ Polybius — Grid Mapping ━━━
+  ✅  A→11
+  ✅  E→15
+  ✅  F→21
+  ✅  Z→55
+  ✅  J→I mapping
+  ✅  decode 11→A
+  ✅  decode 55→Z
+  ✅  HELLO encode
+  ✅  HELLO decode
+  ✅  out of range no crash
+
+━━━ Homophonic — Deterministic Seed Roundtrip ━━━
+  ✅  roundtrip with key
+  ✅  different keys → different ciphertext
+  ✅  output is numeric
+
+━━━ Playfair — Digraph Rules ━━━
+  ✅  roundtrip HIDETHEGOLD
+  ✅  J treated as I (no crash)
+  ✅  double letters handled
+  ✅  two-letter message roundtrip
+  ✅  different keys differ
+  ✅  Wikipedia KAT encode
+  ✅  Wikipedia KAT decode
+  ✅  doubled X roundtrip
+  ✅  FOXX roundtrip
+  ✅  decode output never longer than ciphertext
+
+━━━ Hill — Matrix Operations ━━━
+  ✅  HI encrypted
+  ✅  HI roundtrip
+  ✅  SHORT roundtrip
+  ✅  non-invertible returns message
+
+━━━ Vigenère — Published Test Vectors ━━━
+  ✅  Wikipedia vector encode
+  ✅  Wikipedia vector decode
+  ✅  key A is identity
+  ✅  key AAAA is identity
+  ✅  single-letter key B = Caesar shift 1
+  ✅  full alphabet roundtrip
+  ✅  100-char roundtrip
+
+━━━ Beaufort — Self-Reciprocal Property ━━━
+  ✅  encode then encode = original
+  ✅  self-reciprocal: A
+  ✅  self-reciprocal: Z
+  ✅  self-reciprocal: ABCXYZ
+  ✅  self-reciprocal: ZZZZZ
+
+━━━ Gronsfeld — Numeric Key ━━━
+  ✅  key 00000 is identity
+  ✅  roundtrip 31415
+  ✅  single digit roundtrip
+
+━━━ Porta — Self-Reciprocal with Correct Tableaux ━━━
+  ✅  self-reciprocal: HELLO...
+  ✅  self-reciprocal: ABCDEFGHIJ...
+  ✅  self-reciprocal: NOPQRSTUVW...
+  ✅  self-reciprocal: ABCDEFGHIJ...
+  ✅  A maps to N-Z range (key A)
+  ✅  N maps to A-M range (key A)
+
+━━━ Running Key — Long Key Text ━━━
+  ✅  roundtrip
+  ✅  short key wraps roundtrip
+
+━━━ Rail Fence — Various Rail Counts ━━━
+  ✅  2 rails: HELLO
+  ✅  2 rails roundtrip
+  ✅  3 rails known vector
+  ✅  3 rails roundtrip
+  ✅  rails=len roundtrip
+  ✅  2 rails full alpha roundtrip
+  ✅  2 rails roundtrip
+  ✅  3 rails roundtrip
+  ✅  4 rails roundtrip
+  ✅  5 rails roundtrip
+  ✅  6 rails roundtrip
+  ✅  7 rails roundtrip
+  ✅  8 rails roundtrip
+
+━━━ Columnar Transposition — Key Ordering ━━━
+  ✅  roundtrip key="AB"
+  ✅  roundtrip key="CAB"
+  ✅  roundtrip key="ZEBRA"
+  ✅  roundtrip key="ABCDEFGH"
+  ✅  single col key
+
+━━━ Double Transposition — Two-Key Roundtrip ━━━
+  ✅  roundtrip keys="AB,CD"
+  ✅  roundtrip keys="CAT,DOG"
+  ✅  roundtrip keys="GO,RUN"
+  ✅  actually encrypts
+
+━━━ Bacon's Cipher — Binary Encoding ━━━
+  ✅  A→AAAAA
+  ✅  B→AAAAB
+  ✅  I→ABAAA
+  ✅  J→I (J maps to I)
+  ✅  roundtrip A
+  ✅  roundtrip B
+  ✅  roundtrip C
+  ✅  roundtrip D
+  ✅  roundtrip E
+  ✅  roundtrip F
+  ✅  roundtrip G
+  ✅  roundtrip H
+  ✅  roundtrip I
+  ✅  roundtrip K
+  ✅  roundtrip L
+  ✅  roundtrip M
+  ✅  roundtrip N
+  ✅  roundtrip O
+  ✅  roundtrip P
+  ✅  roundtrip Q
+  ✅  roundtrip R
+  ✅  roundtrip S
+  ✅  roundtrip T
+  ✅  roundtrip U
+  ✅  roundtrip V
+  ✅  roundtrip W
+  ✅  roundtrip X
+  ✅  roundtrip Y
+  ✅  roundtrip Z
+
+━━━ Tap Code — Grid Encoding ━━━
+  ✅  A encode produces dots
+  ✅  K maps to C
+  ✅  HELLO roundtrip
+  ✅  full grid roundtrip
+
+━━━ Pigpen — Symbol Mapping ━━━
+  ✅  all 26 letters produce symbols
+  ✅  full alphabet roundtrip
+  ✅  FREEMASON roundtrip
+
+━━━ Bifid — Fractionation ━━━
+  ✅  roundtrip key="SECRET"
+  ✅  roundtrip key="BGWKZQ"
+  ✅  roundtrip key="A"
+  ✅  J→I in bifid
+
+━━━ Trifid — 3D Fractionation ━━━
+  ✅  roundtrip DEFEND
+  ✅  roundtrip longer msg
+  ✅  actually encrypts
+
+━━━ ADFGX & ADFGVX — WWI Ciphers ━━━
+  ✅  ADFGX roundtrip
+  ✅  ADFGX no crash on single char
+  ✅  ADFGVX roundtrip
+  ✅  ADFGX ≠ ADFGVX for same input
+
+━━━ Nihilist — Polybius + Keyword Addition ━━━
+  ✅  output is numeric pairs
+  ✅  roundtrip
+  ✅  all values ≥ 22
+
+━━━ One-Time Pad — Perfect Secrecy ━━━
+  ✅  OTP roundtrip with key
+  ✅  short key returns error msg
+  ✅  random key generated
+  ✅  encode with empty key runs
+
+━━━ Fractionated Morse — Encrypt Only ━━━
+  ✅  produces output
+  ✅  output differs from input
+  ✅  different keys → different output
+  ✅  roundtrip recovers plaintext
+
+━━━ Confederate Vigenère — Civil War Cipher ━━━
+  ✅  roundtrip
+  ✅  matches standard Vigenere
+
+━━━ Bazeries — Number-to-Word Substitution + Reversal ━━━
+  ✅  roundtrip key 42
+  ✅  roundtrip key 7
+  ✅  roundtrip key 99
+  ✅  actually encrypts
+
+━━━ Alberti Disk — Polyalphabetic with Rotation ━━━
+  ✅  roundtrip setting 0
+  ✅  roundtrip setting 1
+  ✅  roundtrip setting 2
+  ✅  roundtrip setting 3
+  ✅  roundtrip setting 4
+  ✅  roundtrip setting 5
+  ✅  roundtrip setting 6
+  ✅  roundtrip setting 7
+  ✅  roundtrip setting 8
+  ✅  roundtrip setting 9
+  ✅  roundtrip setting 10
+  ✅  not identity
+
+━━━ Jefferson Disk — Multi-Disk Transposition ━━━
+  ✅  roundtrip
+  ✅  different order → different output
+
+━━━ Enigma — Self-Reciprocal Rotor Machine ━━━
+  ✅  self-reciprocal key=AAA
+  ✅  self-reciprocal key=ABC
+  ✅  self-reciprocal key=ZZZ
+  ✅  self-reciprocal key=MCM
+  ✅  no letter maps to itself
+  ✅  AAA ≠ BBB output
+
+━━━ Lorenz — ITA2 XOR Stream ━━━
+  ✅  roundtrip key=LORENZ
+  ✅  roundtrip key=SECRET
+  ✅  roundtrip key=BLETCHLEY
+
+━━━ Dictionary Code — Book Cipher ━━━
+  ✅  W maps to index 1
+  ✅  WE produces two indices
+  ✅  decode index 1 → W
+  ✅  decode index 2 → T
+
+━━━ Stager (Route) — Column Serpentine ━━━
+  ✅  roundtrip 2 cols
+  ✅  roundtrip 3 cols
+  ✅  roundtrip 4 cols
+  ✅  roundtrip 5 cols
+  ✅  roundtrip 6 cols
+  ✅  roundtrip 7 cols
+  ✅  actually encrypts
+
+━━━ VIC — Straddling Checkerboard ━━━
+  ✅  roundtrip SNOWFALL
+  ✅  output is numeric
+  ✅  different keys → different output
+
+━━━ Scytale — Transposition Wrap ━━━
+  ✅  roundtrip 2 rows
+  ✅  roundtrip 3 rows
+  ✅  roundtrip 4 rows
+  ✅  roundtrip 5 rows
+  ✅  roundtrip 6 rows
+  ✅  roundtrip 7 rows
+  ✅  roundtrip 8 rows
+  ✅  3 rows ABCDEF
+  ✅  encryption changes text
+
+━━━ Vernam — Modular Addition (XOR-like) ━━━
+  ✅  roundtrip with explicit key
+  ✅  short key returns error
+  ✅  random key in output
+
+━━━ Stress Tests — Long Messages ━━━
+  ✅  caesar: 260-char no crash
+  ✅  caesar: 260-char roundtrip
+  ✅  vigenere: 260-char no crash
+  ✅  vigenere: 260-char roundtrip
+  ✅  beaufort: 260-char no crash
+  ✅  beaufort: 260-char self-reciprocal
+  ✅  railFence: 260-char no crash
+  ✅  railFence: 260-char roundtrip
+  ✅  columnar: 260-char no crash
+  ✅  columnar: 260-char roundtrip
+  ✅  bifid: 260-char no crash
+  ✅  bifid: 260-char roundtrip
+  ✅  scytale: 260-char no crash
+  ✅  scytale: 260-char roundtrip
+
+━━━ Repeated Characters — Frequency Resistance ━━━
+  ✅  mono: repeated A → same char
+  ✅  vigenere: AAAA+ABCD → distinct chars
+  ✅  enigma: 6×A → all different
+
+━━━ Solitaire — Schneier Known Answers ━━━
+  ✅  unkeyed deck, 15×A
+  ✅  key FOO, 15×A
+  ✅  key A, 15×A
+  ✅  SOLITAIRE/CRYPTONOMICON
+  ✅  decode removes structural pad
+  ✅  exact roundtrip ×5
+
+╔══════════════════════════════════════════════════════════╗
+║   RESULTS:  ✅ 249 passed   ❌   0 failed                  ║
+╚══════════════════════════════════════════════════════════╝
+
+=== Full Enigma reference vectors ===
+
+━━━ Canonical test vector ━━━
+  ✅  I-II-III, AAA, AAA, no plug: "AAAAA" → "BDZGO"
+
+━━━ Extended right-rotor + double-step test ━━━
+  ✅  I-II-III, AAA, AAA: "A"×25 → "BDZGOWCXLTKSBTMCDLPBMUQOF"
+
+━━━ Reflector-C variant ━━━
+  ✅  Reflector C round-trip: HELLOENIGMA
+
+━━━ Ringstellung effect ━━━
+  ✅  Ring AAA vs BBB produce different ciphertexts
+
+━━━ Plugboard symmetry ━━━
+  ✅  Full 10-pair plugboard round-trip
+
+━━━ Rotors IV, V ━━━
+  ✅  Rotors IV-V-I round-trip
+
+━━━ Self-encryption check ━━━
+  ✅  No self-encryption over 260 letters
+
+━━━ Crib-position rejection (self-encryption rule) ━━━
+  ✅  Crib at exact-match position is rejected
+
+━━━ Brute-force search recovers known settings ━━━
+  ✅  Brute-force recovers ground-truth (rotors=I,II,III, pos=XYZ)
+
+━━━ Summary ━━━
+  passed: 9
+  failed: 0
+
+=== Cipher Corpus replay ===
+Corpus records: 100,026
+Passed records: 99,500
+Known-deviation records: 526
+Known-deviation mismatch events: 1,051
+     959 intentional-noise: The record is an intentionally corrupted OCR/telegraph transcription, so it cannot reproduce clean encryption or decryption exactly.
+       6 historical-variant-navajo: The historical phrase uses the full USMC Navajo vocabulary and tokenization; the demo contains a small vocabulary subset.
+       4 historical-variant-stager: The historical Stager record uses a specific route layout not represented by the demo column-count API.
+       4 historical-variant-confederateVigenere: The historical brass-disk record uses a period alphabet/tableau; the demo implements ordinary repeating-key Vigenere.
+       4 historical-variant-zimmermann: The historical telegram uses German diplomatic codebooks 0075/13040; the demo uses an illustrative English word list.
+       4 historical-variant-vic: The historical VIC records require exact personal number, date, phrase, and transposition-width settings; the demo derives all four stages from one keyword.
+       4 historical-variant-culperRing: The historical record uses original Tallmadge codebook numbers; the demo ships a smaller reconstructed codebook.
+       4 historical-variant-vigenere: The historical record uses a period tableau/key convention that differs from the demo A-Z Vigenere convention.
+       4 historical-variant-enigma: The historical record requires rotor order, rings, reflector, and plugboard settings unsupported by the simplified registry API; the full exhibit engine supports them.
+       4 historical-variant-purple: The historical Purple record requires sixes/twenties switch wirings and stepping settings; the demo uses seeded substitution alphabets.
+       4 historical-variant-babington: The historical Babington symbols and nomenclator are not the seeded bracket-token representation used by the demo.
+       4 historical-variant-nullCipher: The historical record supplies an existing carrier text; the demo API instead generates its own carrier words from plaintext.
+       4 historical-variant-kryptos: The historical Kryptos record uses sculpture-specific tableau and section conventions beyond the demo keyword-only model.
+       2 historical-variant-alberti: The historical De Cifris record specifies disk alphabets and indicators not accepted by the demo numeric-setting API.
+       2 historical-variant-adfgvx: The historical ADFGVX record uses a specific keyed 6x6 square and transposition convention not encoded in the demo key.
+       2 historical-variant-lorenz: The historical Tunny record requires the actual SZ40/42 wheel patterns and settings; the demo derives illustrative wheel bits from a seed.
+       2 historical-variant-sigaba: The historical SIGABA record requires real cipher/control/index rotor settings; the registry engine is a seeded pedagogical model.
+       2 historical-variant-jefferson: The historical wheel record uses a specific physical disk alphabet/order set not present in the demo disk table.
+       2 historical-variant-m94: The historical M-94 record uses issued disk alphabets and order; the registry engine generates seeded illustrative disks.
+       2 historical-variant-bookCipher: The historical record is the unsolved Beale Paper No. 1; its true plaintext and key text are unknown, so no engine can reproduce it.
+       2 historical-variant-greatCipher: The historical Grand Chiffre record uses the Rossignol numerical codebook; the demo has an illustrative syllable table.
+       2 historical-variant-venonaPadReuse: The historical VENONA record uses Soviet five-digit code groups and additive pads; the demo is a simplified A-Z 5-bit XOR model.
+       2 historical-variant-arnoldAndre: The historical book references depend on the exact Blackstone edition and page layout; the demo uses a reconstructed 240-word source.
+       2 historical-variant-diana: The historical Diana record uses published pad-group conventions not represented by the demo keyword-only API.
+       2 historical-variant-m209: The historical M-209 record requires explicit wheel pins, lugs, and starting positions; the demo derives all state from one seed.
+       2 historical-variant-jn25: The historical JN-25 record requires the operational codebook and additive tables; the demo maps individual letters to invented groups.
+       2 historical-variant-geheimschreiber: The historical T52 record uses Baudot and actual wheel/permutation settings; the demo is an A-Z seeded structural model.
+       2 historical-variant-kl7: The historical KL-7 record requires real rotor, ring, notch, and re-entry settings; the demo derives illustrative state from one seed.
+       2 historical-variant-fialka: The historical Fialka record uses a 30-character alphabet and real rotor settings; the demo uses a seeded 26-letter model.
+       2 historical-variant-chaocipher: The historical Chaocipher record specifies independent left and right alphabets; the demo derives both from one keyword.
+       2 historical-variant-wallisCiphers: The historical Wallis record uses its original intercepted nomenclator; the demo uses a small reconstructed word list.
+       2 historical-variant-chineseTelegraph: The historical Chinese Telegraph record maps Chinese characters through the standard codebook; the demo maps Latin A-Z to illustrative groups.
+       2 historical-variant-wheatstone: The historical Wheatstone record requires explicit inner/outer disk alphabets and start positions; the demo accepts only a keyword.
+       2 historical-variant-copiale: The historical Copiale record uses manuscript glyphs and the recovered homophonic mapping; the demo uses synthetic letter-digit symbols.
+Unexplained failures: 0
+
+All cipher engine verification suites passed.
+  ❌  quadraticCanary          15.6x  (128 × 25 KB 38.5 CPU-ms → 128 × 100 KB 599.3 CPU-ms)
+An engine scaling worse than linearly is usually one of:
+  - building a string with += and then indexing back into it (autokey)
+  - an O(n) lookup inside the per-character loop
+  - re-deriving per-message state on every character
+

@@ -1,0 +1,8 @@
+{
+  "reviewedSHA": "663cbffe736b88353ac4d17ecff300c5d6ae665e",
+  "oldWeakenedGuardAcceptsQuadratic": true,
+  "repairedSHA": "6055904cbc8f1b0066b7ac57054924359a8f8f63",
+  "newCanaryRejects20x": 1,
+  "diagnostic": "Missing expected exception: The production guard must reject real quadratic work",
+  "restored": true
+}

@@ -1,0 +1,7 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "node": "v22.23.3",
+  "chrome": "Google Chrome 154.0.8037.98",
+  "worktrees": "/Users/gmcas/repos/cipher-museum                abaacee [feat/four-historical-exhibits]\n/private/tmp/cipher-final-review-mutations      1e190e0 (detached HEAD)\n/private/tmp/cipher-final-review-mutations-pr1  663cbff (detached HEAD)\n/private/tmp/cipher-final-review-pr1            663cbff (detached HEAD)\n/private/tmp/cipher-final-review-pr2            1e190e0 (detached HEAD)\n/private/tmp/cipher-hostile-20261010-mutation   abaacee (detached HEAD)\n/private/tmp/cipher-hostile-20261010-pr1        c29a866 (detached HEAD)\n/private/tmp/cipher-hostile-20261010-pr2        abaacee (detached HEAD)\n/private/tmp/cipher-hostile-20261010-pre1       663cbff (detached HEAD)\n/private/tmp/cipher-hostile-20261010-pre2       1e190e0 (detached HEAD)\n/private/tmp/cipher-museum-pr1-repaired-663cbff 663cbff (detached HEAD)\n/private/tmp/cipher-museum-pr1-review-9441865   9441865 (detached HEAD)\n/private/tmp/cipher-museum-pr2-repaired-1e190e0 1e190e0 (detached HEAD)\n/private/tmp/cipher-repair-20261010-mutation    abaacee (detached HEAD)\n/private/tmp/cipher-repair-20261010-pr1         c29a866 (detached HEAD)\n/private/tmp/cipher-repair-20261010-pr2         abaacee (detached HEAD)\n",
+  "uname": "Darwin MacBook-Air.local 25.6.0 Darwin Kernel Version 25.6.0: Fri Jul 31 19:16:20 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8142 arm64 arm Darwin"
+}

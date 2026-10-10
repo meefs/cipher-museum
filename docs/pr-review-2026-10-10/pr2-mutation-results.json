@@ -1,0 +1,78 @@
+{
+  "results": [
+    {
+      "name": "nema-wiring",
+      "script": "tests/test-historical-exhibits.js",
+      "exit": 1,
+      "expected": "reject",
+      "pass": true,
+      "diagnostic": [
+        "  throw new AssertionError(obj);",
+        "AssertionError [ERR_ASSERTION]: NEMA: Geoff Sullivan reference vector published in rmsk2/nema_test.cpp",
+        "+ actual - expected",
+        "  actual: 'HRSBWSSTZUCRWLMGIMGVPYWOVNF',",
+        "  expected: 'HRSBVOOTZUCRWLMGRMGVWYWOVNF',"
+      ]
+    },
+    {
+      "name": "grille-direction",
+      "script": "tests/test-historical-exhibits.js",
+      "exit": 1,
+      "expected": "reject",
+      "pass": true,
+      "diagnostic": [
+        "  throw new AssertionError(obj);",
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:",
+        "+ actual - expected",
+        "  actual: 'ABCMEDNOFGIPHJKL',",
+        "  expected: 'ABCEMDFGNOIHPJKL',"
+      ]
+    },
+    {
+      "name": "myszkowski-ties",
+      "script": "tests/test-historical-exhibits.js",
+      "exit": 1,
+      "expected": "reject",
+      "pass": true,
+      "diagnostic": [
+        "  throw new AssertionError(obj);",
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:",
+        "+ actual - expected",
+        "  actual: 'ROFOACDTEDSEEEACEDSEEEACWEIVRLENEWEIVRLENE',",
+        "  expected: 'ROFOACDTEDSEEEACWEIVRLENE',"
+      ]
+    },
+    {
+      "name": "offline-page-coverage",
+      "script": "tests/test-historical-exhibits.js",
+      "exit": 1,
+      "expected": "reject",
+      "pass": true,
+      "diagnostic": [
+        "AssertionError [ERR_ASSERTION]: nema: precached for offline use",
+        "  actual: '/**\\n' +",
+        "  expected: /'\\/ciphers\\/nema\\.html'/,"
+      ]
+    },
+    {
+      "name": "wrong-prose-label",
+      "script": "tests/test-trust-labels.js",
+      "exit": 0,
+      "expected": "accept",
+      "pass": true,
+      "diagnostic": []
+    },
+    {
+      "name": "wrong-prose-label-historical",
+      "script": "tests/test-historical-exhibits.js",
+      "exit": 0,
+      "expected": "accept",
+      "pass": true,
+      "diagnostic": [
+        "Historical exhibits passed: independent vectors, edge cases, live controls, catalog registration, and stable numbering."
+      ]
+    }
+  ],
+  "trackedSourceRestored": true,
+  "harnessCleanupNote": "Final helper assertion included the untracked node_modules symlink; tracked files independently verified clean."
+}

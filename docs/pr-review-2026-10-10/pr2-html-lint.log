@@ -1,0 +1,20 @@
+
+> cipher-museum@1.0.0 lint:html
+> htmlhint "ciphers/*.html" "halls/*.html" "*.html" "lab/*.html" "tours/*.html" "community/*.html" "hall-of-foundations/*.html"
+
+
+   Config loaded: /private/tmp/cipher-final-review-pr2/.htmlhintrc
+
+   Config loaded: /private/tmp/cipher-final-review-pr2/.htmlhintrc
+
+   Config loaded: /private/tmp/cipher-final-review-pr2/.htmlhintrc
+
+   Config loaded: /private/tmp/cipher-final-review-pr2/.htmlhintrc
+
+   Config loaded: /private/tmp/cipher-final-review-pr2/.htmlhintrc
+
+   Config loaded: /private/tmp/cipher-final-review-pr2/.htmlhintrc
+
+   Config loaded: /private/tmp/cipher-final-review-pr2/.htmlhintrc
+
+Scanned 201 files, no errors found (123 ms).
