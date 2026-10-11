@@ -16,7 +16,8 @@ const specs = fs.readdirSync(path.join(__dirname, 'specs'))
 global.window = global;
 require(path.join(root, 'js/ciphers/all-engines.js'));
 const engineCount = Object.keys(global.CipherEngines).length;
-if (specs.length !== engineCount) {
+const specNames = specs.map(file => path.basename(file, '.spec.js')).sort();
+if (specs.length !== engineCount || JSON.stringify(specNames) !== JSON.stringify(Object.keys(global.CipherEngines).sort())) {
   console.error(`Spec coverage mismatch: ${specs.length} spec files for ${engineCount} registry engines.`);
   process.exit(1);
 }

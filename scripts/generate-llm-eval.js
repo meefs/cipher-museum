@@ -24,6 +24,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const readline = require('node:readline');
+const { expectedPlaintext } = require('../tests/engines/corpus-replay');
 
 const CORPUS = path.resolve(__dirname, '../public/corpus/all.jsonl');
 const OUT = path.resolve(__dirname, '../public/corpus/llm-3shot-eval.jsonl');
@@ -31,6 +32,7 @@ const TARGET_COUNT = 300;
 
 function describeKey(record) {
   const key = record.key;
+  if (key && key.type === 'settings') return JSON.stringify(key.settings);
   if (!key || typeof key !== 'object') return String(key ?? 'none');
   if (key.value !== undefined && key.value !== null) return String(key.value);
   const parts = Object.entries(key)
@@ -39,15 +41,21 @@ function describeKey(record) {
   return parts.length ? parts.join(', ') : String(key.type ?? 'none');
 }
 
+function answer(record) {
+  return record.cipher_type === 'double_playfair' ? expectedPlaintext(record) : record.plaintext;
+}
+
 function threeShotPrompt(examples, record) {
   const shots = examples.map((example, index) =>
-    `Example ${index + 1}:\nCiphertext: ${example.ciphertext}\nKey: ${describeKey(example)}\nPlaintext: ${example.plaintext}`
+    `Example ${index + 1}:\nCiphertext: ${example.ciphertext}\nKey: ${describeKey(example)}\nPlaintext: ${answer(example)}`
   ).join('\n\n');
-  return `You are a classical cryptanalysis assistant. The cipher is ${record.cipher_type}.\n\n${shots}\n\nNow decrypt this message.\nCiphertext: ${record.ciphertext}\nKey: ${describeKey(record)}\nPlaintext:`;
+  const convention = record.cipher_type === 'double_playfair' ? ' Return prepared plaintext: J expands to II and an odd-length message retains its final filler.' : '';
+  return `You are a classical cryptanalysis assistant. The cipher is ${record.cipher_type}.${convention}\n\n${shots}\n\nNow decrypt this message.\nCiphertext: ${record.ciphertext}\nKey: ${describeKey(record)}\nPlaintext:`;
 }
 
 function challengePrompt(record) {
-  return `The following message was encrypted with the classical cipher "${record.cipher_type}". No key is provided. Recover the plaintext.\nCiphertext: ${record.ciphertext}\nPlaintext:`;
+  const convention = record.cipher_type === 'double_playfair' ? ' Return prepared plaintext: J expands to II and retain the final filler if present.' : '';
+  return `The following message was encrypted with the classical cipher "${record.cipher_type}". No key is provided. Recover the plaintext.${convention}\nCiphertext: ${record.ciphertext}\nPlaintext:`;
 }
 
 function keyRecoveryPrompt(record) {
@@ -90,8 +98,8 @@ async function main() {
         difficulty: record.difficulty,
         source_record: record.id,
         prompts: {
-          three_shot: { prompt: threeShotPrompt(examples, record), evaluation: { target: record.plaintext } },
-          challenge: { prompt: challengePrompt(record), evaluation: { target: record.plaintext } },
+          three_shot: { prompt: threeShotPrompt(examples, record), evaluation: { target: answer(record) } },
+          challenge: { prompt: challengePrompt(record), evaluation: { target: answer(record) } },
           key_recovery: { prompt: keyRecoveryPrompt(record), evaluation: { target: describeKey(record) } }
         }
       }) + '\n');

@@ -10,7 +10,7 @@ properties, boundary/robustness/invalid-key cases, Unicode policy, 100 KB
 mixed-content roundtrips, state isolation, and one fixed known-answer each),
 a mutation canary that proves the harness catches a deliberately corrupted
 engine, the legacy suites (`test-all-engines.js`, `test-deep-ciphers.js`,
-`test-enigma.js`), and a pinned replay of all 100,026 published corpus records
+`test-enigma.js`), and a pinned replay of all 100,326 published corpus records
 (`tests/engines/corpus-replay.js` — exact per-rule accounting, 0 unexplained
 failures required). Governed by `docs/CIPHER_ENGINE_STANDARD.md`.
 

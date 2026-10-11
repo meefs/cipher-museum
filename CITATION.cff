@@ -6,9 +6,9 @@ authors:
     given-names: Paul
     website: "https://systemslibrarian.dev"
 url: "https://ciphermuseum.com/cipher-corpus.html"
-date-released: 2026-07-17
+date-released: 2026-10-11
 license: MIT
-version: "0.5"
+version: "0.6"
 keywords:
   - cryptanalysis
   - classical ciphers
@@ -24,7 +24,7 @@ preferred-citation:
       given-names: Paul
   url: "https://ciphermuseum.com/cipher-corpus.html"
   year: 2026
-  notes: "100,026 engine-verified test cases across 82 cipher algorithms, 10 languages, 101 historical records"
+  notes: "100,326 records across 85 cipher types and 9 canonical languages; 99,800 exact replay matches and 526 documented known-deviation records"
 references:
   - type: article
     title: "CipherBank: Exploring the Boundary of LLM Reasoning Capabilities through Cryptography Challenges"

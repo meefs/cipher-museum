@@ -126,6 +126,7 @@
           <b>Plaintext:</b> <span class="known-plaintext">${esc(rec.plaintext)}</span><br>
           <b>Key:</b> <code>${esc(JSON.stringify(rec.key))}</code><br>
           <b>Attacks:</b> ${esc((rec.expected_attacks || []).join(', '))}
+          ${rec.scoring_notes ? '<br><b>Scoring:</b> ' + esc(rec.scoring_notes) : ''}
         </div>
       </div>
       <div class="corpus-details" style="display:none;margin-top:0.7em;font-size:0.93em;color:var(--fg-muted,#bfa76a);"></div>

@@ -1,7 +1,7 @@
 # Cipher Engine Standard
 
 This is the contract for every engine registered in `window.CipherEngines`.
-Engine 85 must satisfy it before its exhibit is merged.
+Every newly registered engine must satisfy it before its exhibit is merged.
 
 ## 1. Public API
 
