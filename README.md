@@ -8,12 +8,18 @@ Exploring 3,900+ years of encryption, cryptanalysis, and hidden history.
 
 The Cipher Museum is part digital exhibit, part cipher playground, and part codebreaking classroom exploring **3,900+ years** of encryption, cryptanalysis, and hidden history across **<!-- count:total -->167<!-- /count --> exhibits** — <!-- count:cipherHistory -->147<!-- /count --> cipher and history exhibits in **13 exhibit halls**, the <!-- count:foundations -->17<!-- /count -->-exhibit **Hall of Foundations** mathematics annex (§141–157), and <!-- count:protocols -->3<!-- /count --> **protocol and construction exhibits** (§158–160: ECDSA, Shamir's Secret Sharing, Zero-Knowledge Proofs). Modern cryptography uses more than ciphers — secure systems combine key exchange, encryption, hashing, signatures, secret sharing, and proofs.
 
-**[Live Site →](https://ciphermuseum.com)**
+**[Live Museum →](https://ciphermuseum.com)**
 
-[![Cipher Corpus v0.6 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23297920.svg)](https://doi.org/10.5281/zenodo.23297920)
+[![Cipher Corpus dataset v0.6 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23297920.svg)](https://doi.org/10.5281/zenodo.23297920)
 
-Cipher Corpus v0.6 is archived on Zenodo under the
-[version DOI 10.5281/zenodo.23297920](https://doi.org/10.5281/zenodo.23297920).
+The live museum, software source archive, and research dataset are distinct:
+
+- **Live museum:** the continuously deployed website at [ciphermuseum.com](https://ciphermuseum.com).
+- **Software archive:** `v1.0.0` is the initial GitHub/Zenodo software release. Zenodo assigns its software DOI only after the GitHub Release is published; it does not reuse either dataset DOI.
+- **Dataset archive:** [Cipher Corpus v0.6](https://doi.org/10.5281/zenodo.23297920) is already published separately. Use its version DOI when citing the 100,326-record dataset.
+
+The root [`CITATION.cff`](CITATION.cff) describes Cipher Museum software. Corpus
+citation and rights information remains in [`public/corpus/README.md`](public/corpus/README.md).
 
 ---
 
@@ -282,6 +288,13 @@ Pure HTML + CSS + Vanilla JavaScript. GitHub Pages ready.
 The cipher corpus files are stored via [Git Large File Storage (LFS)](https://git-lfs.github.com/)
 due to their size. To access them after cloning:
 
+GitHub-generated source archives currently contain LFS pointer files rather
+than the 132 MB JSON and 104 MB JSONL payloads. This keeps the forthcoming
+software archive distinct from the published dataset. Download the canonical
+archived JSONL and its supporting files from
+[Cipher Corpus v0.6 on Zenodo](https://doi.org/10.5281/zenodo.23297920), or use
+Git LFS when cloning this repository.
+
 ### Prerequisites
 ```bash
 git lfs install
@@ -479,7 +492,15 @@ npm test                            # runs every site suite end-to-end (CI runs 
 
 ## 📜 License
 
-MIT License — free to use, fork, and build upon.
+Cipher Museum software is released under the [MIT License](LICENSE) — free to
+use, fork, and build upon.
+
+Dataset and source-material rights remain separate. Synthetic Cipher Corpus
+records are CC0 1.0; historical records retain their per-record public-domain
+assertions and provenance. The MIT software license does not relicense the
+corpus, third-party works, or underlying historical source material. See the
+[corpus license](public/corpus/LICENSE) and
+[rights documentation](public/corpus/RIGHTS_AND_PROVENANCE.md).
 
 ---
 

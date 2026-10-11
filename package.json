@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test": "node tests/run-all.js",
+    "validate:release": "node scripts/validate-release-metadata.js",
     "test:engines": "node tests/engines/run.js",
     "test:deep": "node tests/test-deep-ciphers.js",
     "test:comprehensive": "node tests/test-comprehensive.js",
