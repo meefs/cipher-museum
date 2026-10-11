@@ -8,6 +8,11 @@
   <meta property="og:title" content="Cipher Corpus — Known-Ciphertext Benchmark Library | Cipher Museum">
   <meta property="og:description" content="A curated library of ciphertext challenges, known plaintexts, keys, and metadata for learning, teaching, scoring, and benchmarking classical cryptanalysis.">
   <meta name="keywords" content="cipher corpus, cryptanalysis, classical ciphers, benchmark, ciphertext, plaintext, cryptography, teaching, education, reproducibility, LLM, solver, open data">
+  <meta name="citation_title" content="Cipher Corpus v0.6: A Classical Cryptography Dataset">
+  <meta name="citation_author" content="Paul A. Clark">
+  <meta name="citation_publication_date" content="2026/10/11">
+  <meta name="citation_doi" content="10.5281/zenodo.23297920">
+  <link rel="cite-as" href="https://doi.org/10.5281/zenodo.23297920">
 
   <link rel="stylesheet" href="/css/museum.css">
   <style>
@@ -227,6 +232,7 @@
       <p class="page-tagline">100,326 ciphertext records for learning, testing, and benchmarking classical cryptanalysis.</p>
       <p class="page-desc">Each record includes cipher type, key, plaintext, difficulty, language, and expected attacks — fully machine-readable and openly licensed. Browse in Challenge Mode to attempt a solve, or switch to Known Answers to study the metadata.</p>
       <p class="page-desc">Corpus v0.6 adds 300 synthetic RS44, German Double Playfair, and AMSCO exercises. Replay verifies 99,800 records exactly; 526 existing noisy or historical-variant records have documented exceptions. <a href="public/corpus/README.md">Dataset scope and conventions</a>.</p>
+      <p class="page-desc"><strong>Published archive:</strong> <a href="https://doi.org/10.5281/zenodo.23297920" target="_blank" rel="noopener">Zenodo v0.6 · DOI 10.5281/zenodo.23297920</a>. The archive preserves canonical JSONL plus 11 supporting files; the website also provides derived JSON, CSV, subsets, and browser samples.</p>
       <div class="badge-group">
         <span class="pill">85 corpus cipher types · <span data-count="engines">88</span> registered museum engines</span>
         <span class="pill">9 languages</span>
@@ -266,7 +272,7 @@
       <div class="section-head">
         <span class="section-eyebrow">Open Dataset</span>
         <h2 class="section-title">Download Corpus</h2>
-        <p class="section-sub">All records are openly licensed. Synthetic records are CC0.</p>
+        <p class="section-sub">Website downloads include JSONL, JSON, CSV, and subsets. Synthetic records are CC0; historical records retain their per-record public-domain assertions and provenance.</p>
       </div>
       <div class="download-grid">
         <div class="download-group">
@@ -336,15 +342,18 @@ with open("all.jsonl", "r", encoding="utf-8") as f:
         <h2 class="section-title">Attribution &amp; Citation</h2>
       </div>
       <p>Cipher Corpus builds on <strong>CipherBank</strong> by Li et al. (2025) — the first systematic benchmark for LLM cipher-breaking on classical ciphers. CipherBank demonstrated that even advanced models achieve only ~45% accuracy, establishing the need for comprehensive evaluation infrastructure.</p>
-      <p style="margin-top:1rem;">Cipher Corpus extends this with 100,326 test cases across 85 cipher types (vs. CipherBank's 2,358 across 9), 54 canonical historical records with verified provenance, 9 languages, noisy variants, and blind benchmark splits. <a href="https://arxiv.org/pdf/2504.19093" target="_blank" rel="noopener">CipherBank paper →</a></p>
+      <p style="margin-top:1rem;">Cipher Corpus extends this with 100,326 test cases across 85 cipher types (vs. CipherBank's 2,358 across 9), 54 canonical historical records with verified provenance, 9 languages, noisy variants, and publicly downloadable split labels. <a href="https://arxiv.org/pdf/2504.19093" target="_blank" rel="noopener">CipherBank paper →</a></p>
       <div style="margin-top:2rem;">
         <span class="section-eyebrow" style="display:block;margin-bottom:.75rem;">Cite Cipher Corpus</span>
-<pre>@misc{lester2026cipherCorpus,
-  title={Cipher Corpus: Comprehensive Classical Cryptanalysis Benchmark},
-  author={Lester, Paul},
+<pre>@dataset{clark_2026_23297920,
+  author={Clark, Paul A.},
+  title={Cipher Corpus v0.6: A Classical Cryptography Dataset},
+  month={oct},
   year={2026},
-  url={https://ciphermuseum.com/cipher-corpus.html},
-  note={100,326 test cases across 85 cipher types}
+  publisher={Zenodo},
+  version={0.6},
+  doi={10.5281/zenodo.23297920},
+  url={https://doi.org/10.5281/zenodo.23297920}
 }</pre>
       </div>
     </section>

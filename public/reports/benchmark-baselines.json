@@ -1,15 +1,20 @@
 {
-  "generated": "2026-04-27",
-  "version": "0.2",
+  "generated": "2026-10-11",
+  "version": "0.6",
   "description": "Cipher Corpus benchmark baseline statistics for solver evaluation",
   "corpus_url": "https://ciphermuseum.com/cipher-corpus.html",
   "citation": {
     "cipher_corpus": {
-      "title": "Cipher Corpus: Comprehensive Classical Cryptanalysis Benchmark",
-      "author": "Lester, Paul",
+      "title": "Cipher Corpus v0.6: A Classical Cryptography Dataset",
+      "author": "Clark, Paul A.",
+      "orcid": "0009-0004-2394-0991",
       "year": 2026,
-      "url": "https://ciphermuseum.com/cipher-corpus.html",
-      "note": "17,435+ test cases across 81+ cipher algorithms"
+      "version": "0.6",
+      "publisher": "Zenodo",
+      "doi": "10.5281/zenodo.23297920",
+      "concept_doi": "10.5281/zenodo.23297919",
+      "url": "https://doi.org/10.5281/zenodo.23297920",
+      "note": "100,326 canonical records across 85 cipher-type labels"
     },
     "related_work": {
       "title": "CipherBank: Exploring the Boundary of LLM Reasoning Capabilities through Cryptography Challenges",
@@ -20,9 +25,9 @@
     }
   },
   "summary": {
-    "total_records": 100026,
-    "verified_records": 99542,
-    "cipher_types": 82,
+    "total_records": 100326,
+    "verified_records": 99842,
+    "cipher_types": 85,
     "cipher_families": 13,
     "languages": [
       "en",
@@ -35,19 +40,19 @@
       "ru",
       "zh"
     ],
-    "public_split": 69922,
-    "blind_split": 30104,
-    "clean_records": 99540,
+    "public_split": 70132,
+    "blind_split": 30194,
+    "clean_records": 99840,
     "noisy_records": 486,
     "historical_records": 54,
     "difficulty_distribution": {
       "beginner": 15907,
-      "advanced": 27708,
-      "intermediate": 29410,
+      "advanced": 27908,
+      "intermediate": 29510,
       "expert": 27001
     },
     "language_distribution": {
-      "en": 96371,
+      "en": 96671,
       "fr": 779,
       "de": 800,
       "la": 804,
@@ -2191,6 +2196,78 @@
       "noisy_count": 0
     },
     {
+      "cipher_type": "rs44",
+      "cipher_family": "transposition",
+      "difficulty": "advanced",
+      "record_count": 100,
+      "public_count": 70,
+      "blind_count": 30,
+      "avg_normalized_length": 110,
+      "languages": [
+        "en"
+      ],
+      "expected_attacks": [
+        "known-stencil message fitting",
+        "crib analysis"
+      ],
+      "solver_baselines": {
+        "human": "20-60%",
+        "automated": "20-60%",
+        "llm_3shot": "10-40%",
+        "llm_0shot": "5-20%"
+      },
+      "verified_count": 100,
+      "noisy_count": 0
+    },
+    {
+      "cipher_type": "double_playfair",
+      "cipher_family": "polygraphic",
+      "difficulty": "advanced",
+      "record_count": 100,
+      "public_count": 70,
+      "blind_count": 30,
+      "avg_normalized_length": 69,
+      "languages": [
+        "en"
+      ],
+      "expected_attacks": [
+        "known-plaintext analysis",
+        "heuristic key search"
+      ],
+      "solver_baselines": {
+        "human": "20-60%",
+        "automated": "20-60%",
+        "llm_3shot": "10-40%",
+        "llm_0shot": "5-20%"
+      },
+      "verified_count": 100,
+      "noisy_count": 0
+    },
+    {
+      "cipher_type": "amsco",
+      "cipher_family": "transposition",
+      "difficulty": "intermediate",
+      "record_count": 100,
+      "public_count": 70,
+      "blind_count": 30,
+      "avg_normalized_length": 69,
+      "languages": [
+        "en"
+      ],
+      "expected_attacks": [
+        "column permutation search",
+        "language scoring"
+      ],
+      "solver_baselines": {
+        "human": "60-90%",
+        "automated": "60-90%",
+        "llm_3shot": "40-70%",
+        "llm_0shot": "20-50%"
+      },
+      "verified_count": 100,
+      "noisy_count": 0
+    },
+    {
       "cipher_type": "book_cipher",
       "cipher_family": "codebook",
       "difficulty": "expert",
@@ -2327,7 +2404,7 @@
     },
     {
       "family": "transposition",
-      "record_count": 12988,
+      "record_count": 13188,
       "cipher_types": [
         "rail_fence",
         "columnar_transposition",
@@ -2336,11 +2413,13 @@
         "bazeries",
         "stager_route",
         "slidex",
-        "kryptos"
+        "kryptos",
+        "rs44",
+        "amsco"
       ],
       "difficulty_distribution": {
-        "intermediate": 7476,
-        "advanced": 4231,
+        "intermediate": 7576,
+        "advanced": 4331,
         "expert": 1281
       }
     },
@@ -2361,17 +2440,18 @@
     },
     {
       "family": "polygraphic",
-      "record_count": 7336,
+      "record_count": 7436,
       "cipher_types": [
         "playfair",
         "four_square",
         "two_square",
         "hill",
-        "wheatstone"
+        "wheatstone",
+        "double_playfair"
       ],
       "difficulty_distribution": {
         "intermediate": 2660,
-        "advanced": 4676
+        "advanced": 4776
       }
     },
     {
@@ -2467,14 +2547,14 @@
   ],
   "benchmark_splits": {
     "public": {
-      "count": 69922,
+      "count": 70132,
       "description": "70% of records — available for training and development evaluation",
       "note": "Do not train and evaluate on the same split"
     },
     "blind": {
-      "count": 30104,
-      "description": "30% of records — held-out for honest evaluation of trained solvers",
-      "note": "Blind split should only be accessed during final evaluation"
+      "count": 30194,
+      "description": "Downloadable evaluation split label; not confidential held-out data",
+      "note": "Do not train and evaluate on the same records; use separately held-out data for genuinely unseen evaluation"
     }
   },
   "comparison_with_cipherbank": {
@@ -2486,8 +2566,8 @@
       "blind_splits": false
     },
     "cipher_corpus": {
-      "records": 100026,
-      "cipher_types": 82,
+      "records": 100326,
+      "cipher_types": 85,
       "historical": 54,
       "live_infrastructure": true,
       "blind_splits": true,

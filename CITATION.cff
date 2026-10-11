@@ -1,14 +1,25 @@
 cff-version: 1.2.0
-message: "If you use this dataset, please cite both Cipher Corpus and the foundational CipherBank work."
-title: "Cipher Corpus: Comprehensive Classical Cryptanalysis Benchmark"
+message: "If you use this dataset, cite the version-specific Zenodo record and the foundational CipherBank work."
+type: dataset
+title: "Cipher Corpus v0.6: A Classical Cryptography Dataset"
 authors:
-  - family-names: Lester
-    given-names: Paul
+  - family-names: Clark
+    given-names: "Paul A."
+    orcid: "https://orcid.org/0009-0004-2394-0991"
     website: "https://systemslibrarian.dev"
-url: "https://ciphermuseum.com/cipher-corpus.html"
-date-released: 2026-10-11
-license: MIT
+doi: "10.5281/zenodo.23297920"
+url: "https://doi.org/10.5281/zenodo.23297920"
+repository-code: "https://github.com/systemslibrarian/cipher-museum"
+commit: "43845a38ef35c94f1ac01cb403b3e982a3401e89"
+date-released: "2026-10-11"
+license-url: "https://github.com/systemslibrarian/cipher-museum/blob/43845a38ef35c94f1ac01cb403b3e982a3401e89/public/corpus/LICENSE"
 version: "0.6"
+abstract: >-
+  A 100,326-record classical-cryptography dataset spanning 85 cipher-type
+  labels and 9 languages. Version 0.6 adds 300 deterministic synthetic RS44,
+  German Double Playfair, and AMSCO records while preserving the original
+  100,026-record prefix byte for byte. Synthetic records are CC0; 54 historical
+  records retain per-record public-domain assertions and provenance.
 keywords:
   - cryptanalysis
   - classical ciphers
@@ -17,12 +28,18 @@ keywords:
   - llm evaluation
   - cryptography education
 preferred-citation:
-  type: misc
-  title: "Cipher Corpus: Comprehensive Classical Cryptanalysis Benchmark"
+  type: data
+  title: "Cipher Corpus v0.6: A Classical Cryptography Dataset"
   authors:
-    - family-names: Lester
-      given-names: Paul
-  url: "https://ciphermuseum.com/cipher-corpus.html"
+    - family-names: Clark
+      given-names: "Paul A."
+      orcid: "https://orcid.org/0009-0004-2394-0991"
+  doi: "10.5281/zenodo.23297920"
+  url: "https://doi.org/10.5281/zenodo.23297920"
+  publisher:
+    name: Zenodo
+  version: "0.6"
+  month: 10
   year: 2026
   notes: "100,326 records across 85 cipher types and 9 canonical languages; 99,800 exact replay matches and 526 documented known-deviation records"
 references:
