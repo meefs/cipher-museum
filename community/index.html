@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Community Codebreaks — The Cipher Museum</title>
-<meta name="description" content="Community cipher challenges, write-ups, and historical fact submissions for the Cipher Museum.">
+<meta name="description" content="Community cipher challenges, write-ups, and a local drafting tool for Cipher Museum contributions.">
 <link rel="stylesheet" href="../css/museum.css">
 <style>
 .comm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-top:2rem}
@@ -30,7 +30,6 @@
 .form-btn{font-family:var(--fd);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:.7rem 1.6rem;border-radius:var(--r);cursor:pointer;transition:all var(--trs)}
 .form-btn:hover{background:var(--gold-lt)}
 .form-note{font-family:var(--fm);font-size:.55rem;color:var(--tx3);margin-top:.75rem;letter-spacing:.05em}
-.hp-field{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}
 @media(max-width:600px){.comm-grid{grid-template-columns:1fr}.form-panel{padding:1.5rem}}
 </style>
 </head>
@@ -58,85 +57,74 @@
 <section class="page-hero">
   <p class="hero-sub">Community</p>
   <h1>Community Codebreaks</h1>
-  <p class="hero-intro">Solved a cipher? Discovered a historical footnote? This is the place to share break-throughs, challenge write-ups, and little-known cryptographic history.</p>
+  <p class="hero-intro">Explore practice prompts and historical research leads, then prepare a sourced contribution draft to share through the project issue tracker.</p>
 </section>
 
 <main id="main-content" tabindex="-1" style="max-width:1000px;margin:0 auto;padding:0 2rem 4rem">
 
-<!-- ─── Featured Write-ups ─── -->
+<!-- ─── Exploration prompts ─── -->
 <div class="comm-grid">
 
   <article class="comm-card">
-    <span class="comm-tag challenge">Challenge</span>
-    <h2 class="comm-title">The Lighthouse Cipher</h2>
-    <p class="comm-excerpt">A three-stage challenge combining a Polybius square with columnar transposition, wrapped in a nautical theme. Can you decode the keeper's final log entry?</p>
-    <div class="comm-meta">Difficulty: Intermediate · Est. 30 min</div>
-    <a href="../ciphers/polybius.html" class="comm-card-link">Visit Polybius exhibit →</a>
+    <span class="comm-tag challenge">Practice Idea</span>
+    <h2 class="comm-title">Design a Lighthouse Cipher</h2>
+    <p class="comm-excerpt">Create a nautical puzzle by combining Polybius coordinates with a second transformation, and give another learner enough clues to reverse it.</p>
+    <div class="comm-meta">Suggested difficulty: Intermediate</div>
+    <a href="../ciphers/polybius.html" class="comm-card-link">Start with the Polybius exhibit →</a>
   </article>
 
   <article class="comm-card">
-    <span class="comm-tag writeup">Write-up</span>
-    <h3 class="comm-title">Breaking the Confederate Vigenère — Step by Step</h3>
-    <p class="comm-excerpt">A detailed walkthrough of Kasiski examination applied to a real Confederate cipher message intercepted near Vicksburg in 1863.</p>
-    <div class="comm-meta">By a Museum Visitor · Techniques: Kasiski, IC Analysis</div>
-    <a href="../ciphers/confederate-vigenere.html" class="comm-card-link">Visit Confederate Vigenère exhibit →</a>
+    <span class="comm-tag writeup">Study Topic</span>
+    <h3 class="comm-title">Breaking Confederate Vigenère</h3>
+    <p class="comm-excerpt">Study the historical brass-disk convention, then compare its repeated-key weaknesses with ordinary Vigenère analysis.</p>
+    <div class="comm-meta">Techniques to try: Kasiski · Index of Coincidence</div>
+    <a href="../ciphers/confederate-vigenere.html" class="comm-card-link">Open the Confederate Vigenère exhibit →</a>
   </article>
 
   <article class="comm-card">
-    <span class="comm-tag history">Historical Fact</span>
-    <h3 class="comm-title">The Forgotten Women of Room 40</h3>
-    <p class="comm-excerpt">While Bletchley Park's women codebreakers gained recognition, the women who worked in the Admiralty's Room 40 during WWI remain largely unknown.</p>
-    <div class="comm-meta">Verified · Sources: National Archives</div>
-    <a href="../halls/machines.html" class="comm-card-link">Visit Machines Hall →</a>
+    <span class="comm-tag history">Research Lead</span>
+    <h3 class="comm-title">Room 40 and the Zimmermann Telegram</h3>
+    <p class="comm-excerpt">Trace how accumulated codebook recovery and an older-code retransmission helped Room 40 read and safely disclose the telegram.</p>
+    <div class="comm-meta">WWI · Diplomatic codebooks · Source links in exhibit</div>
+    <a href="../ciphers/zimmermann.html" class="comm-card-link">Open the Zimmermann exhibit →</a>
   </article>
 
   <article class="comm-card">
-    <span class="comm-tag challenge">Challenge</span>
-    <h3 class="comm-title">Enigma Daily Challenge</h3>
-    <p class="comm-excerpt">Every day, a new Enigma-encrypted message with authentic rotor and plugboard settings. Your mission: find the day key and decrypt the dispatch.</p>
-    <div class="comm-meta">Difficulty: Advanced · Daily Reset</div>
-    <a href="../ciphers/enigma.html" class="comm-card-link">Visit Enigma exhibit →</a>
+    <span class="comm-tag challenge">Practice Idea</span>
+    <h3 class="comm-title">Create an Enigma Challenge</h3>
+    <p class="comm-excerpt">Choose rotor, ring, plugboard, and starting settings in the exhibit, encrypt a short dispatch, and challenge a classmate with a crib.</p>
+    <div class="comm-meta">Suggested difficulty: Advanced</div>
+    <a href="../ciphers/enigma.html" class="comm-card-link">Open the Enigma exhibit →</a>
   </article>
 
   <article class="comm-card">
-    <span class="comm-tag writeup">Write-up</span>
+    <span class="comm-tag writeup">Study Topic</span>
     <h3 class="comm-title">Hill Cipher: When Linear Algebra Attacks</h3>
-    <p class="comm-excerpt">Matrix inversion mod 26, known-plaintext recovery of the key matrix, and why the Hill cipher's linearity is its fatal flaw.</p>
-    <div class="comm-meta">By a Museum Visitor · Techniques: Matrix Algebra</div>
-    <a href="../ciphers/hill.html" class="comm-card-link">Visit Hill cipher exhibit →</a>
+    <p class="comm-excerpt">Use matrix inversion modulo 26 to see how known plaintext can recover a Hill key and why linearity is the cipher's central weakness.</p>
+    <div class="comm-meta">Technique: Modular matrix algebra</div>
+    <a href="../ciphers/hill.html" class="comm-card-link">Open the Hill cipher exhibit →</a>
   </article>
 
   <article class="comm-card">
-    <span class="comm-tag history">Historical Fact</span>
+    <span class="comm-tag history">Historical Topic</span>
     <h3 class="comm-title">The Uncracked Dorabella Cipher</h3>
     <p class="comm-excerpt">Edward Elgar's 1897 cipher letter to Dora Penny remains unsolved after more than 125 years — an 87-character mystery in 24 unique symbols.</p>
-    <div class="comm-meta">Verified · Status: Unsolved</div>
-    <a href="../ciphers/monoalphabetic.html" class="comm-card-link">Visit Substitution exhibit →</a>
+    <div class="comm-meta">Status: Unsolved · Primary-source image linked in exhibit</div>
+    <a href="../ciphers/dorabella.html" class="comm-card-link">Open the Dorabella exhibit →</a>
   </article>
 
 </div>
 
-<!-- ─── Submission Form ─── -->
+<!-- ─── Contribution Draft Form ─── -->
 <section class="comm-section">
-  <h2>Submit a Fact or Write-up</h2>
-  <p>Have a verified historical fact, a challenge solution write-up, or a cipher puzzle to share? Send it to the museum curators for review.</p>
+  <h2>Draft a Fact or Write-up</h2>
+  <p>Have a sourced historical fact, a challenge solution, or a cipher puzzle to share? This static-site tool downloads a text draft to your device. It does not transmit or submit anything. When ready, attach or paste the draft into a <a href="https://github.com/systemslibrarian/cipher-museum/issues/new" target="_blank" rel="noopener">GitHub issue</a> for review.</p>
 
   <div class="form-panel">
-    <form id="commForm" action="#" method="POST" novalidate>
+    <form id="commForm" novalidate>
       <div class="form-row">
-        <label class="form-label" for="commName">Your Name or Alias</label>
-        <input class="form-input" type="text" id="commName" name="name" required autocomplete="name" maxlength="100">
-      </div>
-
-      <div class="form-row">
-        <label class="form-label" for="commEmail">Email (not displayed)</label>
-        <input class="form-input" type="email" id="commEmail" name="email" required autocomplete="email" maxlength="200">
-      </div>
-
-      <!-- Honeypot -->
-      <div class="hp-field" aria-hidden="true">
-        <label for="commWebsite">Website</label>
-        <input type="text" id="commWebsite" name="website" tabindex="-1" autocomplete="off">
+        <label class="form-label" for="commName">Author Name or Alias</label>
+        <input class="form-input" type="text" id="commName" name="name" required maxlength="100">
       </div>
 
       <div class="form-row">
@@ -164,14 +152,14 @@
         <input class="form-input" type="text" id="commSources" name="sources" placeholder="Book title, archive reference, URL…" maxlength="500">
       </div>
 
-      <button class="form-btn" type="submit">Submit for Review</button>
-      <p class="form-note">Submissions are reviewed by museum curators before publication. We'll notify you by email if accepted.</p>
+      <button class="form-btn" id="downloadDraft" type="button">Download Draft</button>
+      <p class="form-note">Nothing entered here is transmitted or retained by the museum. Avoid including confidential or personal information.</p>
     </form>
 
     <div id="commSuccess" style="display:none;text-align:center;padding:2rem 0">
       <div style="font-size:2.5rem;margin-bottom:1rem">📜</div>
-      <p style="font-family:var(--fd);font-size:1.1rem;color:var(--gold);margin-bottom:.5rem">Thank You!</p>
-      <p style="font-family:var(--fb);font-size:.9rem;color:var(--tx2)">Your submission has been recorded for review.</p>
+      <p style="font-family:var(--fd);font-size:1.1rem;color:var(--gold);margin-bottom:.5rem">Draft Downloaded</p>
+      <p style="font-family:var(--fb);font-size:.9rem;color:var(--tx2)">Your draft was saved to your device only. It has not been submitted. Open a <a href="https://github.com/systemslibrarian/cipher-museum/issues/new" target="_blank" rel="noopener">GitHub issue</a> when you are ready to share it.</p>
     </div>
   </div>
 </section>
@@ -187,17 +175,12 @@
   var form = document.getElementById('commForm');
   var success = document.getElementById('commSuccess');
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    /* Honeypot check */
-    if(document.getElementById('commWebsite').value){ return; }
+  function downloadDraft(){
     /* Basic validation */
     if(!form.checkValidity()){ form.reportValidity(); return; }
 
-    /* Store locally since this is a static site */
     var entry = {
       name: document.getElementById('commName').value.trim(),
-      email: document.getElementById('commEmail').value.trim(),
       type: document.getElementById('commType').value,
       title: document.getElementById('commTitle').value.trim(),
       body: document.getElementById('commBody').value.trim(),
@@ -205,15 +188,34 @@
       date: new Date().toISOString()
     };
 
-    try {
-      var submissions = JSON.parse(localStorage.getItem('ciphermuseum.community.submissions')) || [];
-      submissions.push(entry);
-      localStorage.setItem('ciphermuseum.community.submissions', JSON.stringify(submissions));
-    } catch(err) {}
+    var lines = [
+      'Cipher Museum contribution draft',
+      '',
+      'Title: ' + entry.title,
+      'Type: ' + entry.type,
+      'Author: ' + entry.name,
+      'Created: ' + entry.date,
+      '',
+      entry.body,
+      '',
+      'Sources:',
+      entry.sources || '(none supplied)'
+    ];
+    var blob = new Blob([lines.join('\n')], {type: 'text/plain;charset=utf-8'});
+    var url = URL.createObjectURL(blob);
+    var download = document.createElement('a');
+    var safeTitle = entry.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'contribution';
+    download.href = url;
+    download.download = 'cipher-museum-' + safeTitle + '-draft.txt';
+    download.click();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 0);
 
     form.style.display = 'none';
     success.style.display = 'block';
-  });
+  }
+
+  form.addEventListener('submit', function(e){ e.preventDefault(); downloadDraft(); });
+  document.getElementById('downloadDraft').addEventListener('click', downloadDraft);
 })();
 </script>
 <script src="../js/lightbox.js"></script>

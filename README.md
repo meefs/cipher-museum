@@ -40,7 +40,7 @@ citation and rights information remains in [`public/corpus/README.md`](public/co
 - **Engine verification suite** ([docs/CIPHER_ENGINE_STANDARD.md](docs/CIPHER_ENGINE_STANDARD.md)) — a dedicated `tests/engines/` layer with **one spec file per engine** (fast-check property roundtrips, robustness, invalid-key handling across 11 key shapes, Unicode policy, state isolation, and a fixed known-answer test each), the legacy KAT suites, full Enigma vectors, a mutation canary that proves the harness catches deliberately corrupted engines, and the strict corpus replay above.
 - **Exhibit accuracy sweep** — all 139 exhibit pages audited against the engines. **31 mismatched hardcoded examples corrected across 20+ pages** (ADFGX/ADFGVX squares, Bacon variant table, Enigma worked example recomputed from the real engine trace, Navajo challenge, pigpen figure, bible-code arithmetic, and more), plus the **Diana cryptosystem provenance closed** (rule corrected to the authentic Special Forces `C = (25 − P − K) mod 26` and pinned to a published pad vector). The new permanent suite `tests/test-exhibit-examples.js` pins every page-displayed vector against the engines so exhibit prose can no longer drift from engine behavior.
 - **DeckBook companion exhibit** — [Further Reading](https://ciphermuseum.com/further-reading.html) now opens an **Interactive Companion Exhibits** section linking [DeckBook](https://systemslibrarian.github.io/DeckBook/), a card-based one-time-keybook demo where the deck order is the key: watch a Vigenère-style stream cipher run card by card, break key reuse via crib dragging, and finish with a shareable intercept challenge.
-- **Test-suite & CI hardening** — the suite now runs the engine verification layer plus 12 site suites (including the exhibit-vector and service-worker-version guards); `sw.js` VERSION is stamped automatically from a hash of the minified bundles; CI runs `npm ci` on Node 22 with npm caching.
+- **Test-suite & CI hardening** — the suite runs the complete registered engine and site verification layers, including exhibit-vector, corpus-semantic, browser-workflow, and service-worker-version guards; `sw.js` VERSION is stamped automatically from a hash of the cache-first assets; CI runs `npm ci` on Node 22 with npm caching.
 - April 2026: Cipher Museum listed in Crypto Museum's (cryptomuseum.com) curated Virtual Museums directory, alongside Cipher History Museum, Jerry Proc's Crypto Pages, and other established crypto-history archives.
 
 ---
@@ -110,7 +110,7 @@ For a sortable, filterable view of every cipher system in the museum (era, type,
 - **[Guided Tours](https://ciphermuseum.com/tours/index.html)** — Structured learning paths through the collection.
 - **[Glossary](https://ciphermuseum.com/glossary.html)** — Comprehensive cryptography term reference.
 - **[Further Reading](https://ciphermuseum.com/further-reading.html)** — Canon references, journals, and scholar/source index.
-- **[Community](https://ciphermuseum.com/community/index.html)** — Discussion space for cipher enthusiasts.
+- **[Community](https://ciphermuseum.com/community/index.html)** — Curated community examples plus a privacy-preserving local draft download for proposing corrections, write-ups, or challenges through GitHub Issues.
 
 ---
 
@@ -380,7 +380,7 @@ cipher-museum/
 ├── lab/
 │   └── workbench.html       ← Codebreaker's Workbench (all registered engines in one lab)
 ├── tours/                    ← Guided learning paths
-├── community/                ← Community discussion and write-up space
+├── community/                ← Curated examples and local contribution-draft tool
 └── tests/
     ├── engines/               ← Engine verification suite (per-engine specs, KATs, corpus replay)
     │   ├── run.js             ← Master runner for `npm run test:engines`

@@ -31,6 +31,14 @@ versioned dataset release.
 | CM-014 | Mitigated; archived bytes immutable | The live validator now rejects duplicate IDs, empty required strings, empty/non-object keys, and negative/non-integer lengths. It rejects duplicate tags in newly generated v0.6 records while accepting the 484 immutable pre-v0.6 legacy duplicates. Negative mutation tests prove the added semantic layer runs. The errata documents the legacy duplicates. |
 | CM-015 | Fixed | Direct and transitive dependency patches were locked. `npm audit` and `npm audit --omit=dev` report zero vulnerabilities. |
 
+## Second-pass findings
+
+| ID | Disposition | Repair and regression evidence |
+|---|---|---|
+| CM-016 | Fixed | The dedicated full-corpus validation job now runs on pull requests as well as pushes to `main`, while Pages deployment remains restricted to validated `main` commits. The corpus release test rejects a future PR-only skip condition. |
+| CM-017 | Fixed | The Community page no longer claims its static form transmits a submission or collects an email address into persistent browser storage. It explicitly describes its local-only boundary, downloads a plain-text draft, and directs users to the repository issue tracker for actual review. An executable DOM test checks the disclosure, absence of email/local-storage collection, downloaded contents and temporary-URL cleanup. |
+| CM-018 | Fixed | Community cards formerly presented placeholder concepts as actual visitor write-ups or a recurring daily challenge and sent the Dorabella card to an unrelated exhibit. They are now accurately labelled as study topics, research leads, or practice ideas, with direct destinations. The Community regression rejects the prior unsupported labels and pins the corrected Dorabella link. |
+
 ## Additional performance repair
 
 The unchanged engine complexity gate detected an AMSCO garbage-collection spike

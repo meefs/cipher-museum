@@ -97,6 +97,13 @@ for(const name of ['llm-3shot-eval.jsonl','manual-ciphers-v0.6.jsonl','all.jsonl
 }
 downloadDom.window.close();
 const ciWorkflow = read('.github/workflows/ci.yml');
+const corpusJob = ciWorkflow.slice(
+  ciWorkflow.indexOf('\n  validate-corpus:'),
+  ciWorkflow.indexOf('\n  deploy-pages:')
+);
+assert.ok(corpusJob.length > 0, 'dedicated corpus-validation job exists');
+assert.doesNotMatch(corpusJob, /^\s+if:/m,
+  'dedicated corpus validation runs on pull requests as well as main');
 assert.match(ciWorkflow,/deploy-pages:[\s\S]*needs: \[test, validate-corpus\]/,
   'Pages deployment waits for tests and corpus validation on the same commit');
 assert.match(ciWorkflow,/deploy-pages:[\s\S]*ref: \$\{\{ github\.sha \}\}[\s\S]*lfs: true/,

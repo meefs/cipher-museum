@@ -9,15 +9,17 @@ npm run test:engines
 
 This runs [tests/engines/run.js](../tests/engines/run.js), which executes:
 
-- all 84 per-engine spec files in `tests/engines/specs/` (fast-check roundtrip
+- all 88 per-engine spec files in `tests/engines/specs/` (fast-check roundtrip
   properties, boundary and robustness cases, invalid-key handling, Unicode
   policy, 100 KB performance ceilings, state isolation, and one fixed
   known-answer test per engine);
 - the legacy suites `tests/test-all-engines.js`, `tests/test-deep-ciphers.js`,
   and `tests/test-enigma.js`;
-- a full replay of all 100,026 published corpus records in
-  `public/corpus/all.jsonl` with exact pinned accounting — the run fails if a
-  single record total or per-deviation-rule event count drifts.
+- a full replay of all 100,326 published corpus records in
+  `public/corpus/all.jsonl` with exact pinned accounting (99,800 exact matches,
+  526 known-deviation records, 1,051 known mismatch events, and zero
+  unexplained failures) — the run fails if a single record total or
+  per-deviation-rule event count drifts.
 
 All stages must pass; the run ends with
 `All cipher engine verification suites passed.`
@@ -51,7 +53,7 @@ engine behavior).
   `tests/engines/corpus-replay.js` alongside a reviewed explanation.
 - After any change to `js/ciphers/all-engines.js`, run `npm run build:js` —
   `tests/test-min-fresh.js` fails if the minified bundle is stale, and the
-  service-worker `VERSION` in `sw.js` should be bumped so offline visitors get
-  the new bundle.
+  service-worker `VERSION` in `sw.js` is re-stamped automatically so offline
+  visitors get the new bundle.
 - `scripts/qa-corpus.js` is deprecated and reports pre-sweep expectations; do
   not use it as an engine gate (see its header comment).

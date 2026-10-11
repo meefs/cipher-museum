@@ -40,7 +40,6 @@ jobs:
 
   validate-corpus:
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v7
         with:
