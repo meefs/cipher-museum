@@ -1,0 +1,30 @@
+{
+  "title": "Cipher Museum: An Interactive History of Cryptography and Codebreaking",
+  "description": "Cipher Museum is a static, browser-based digital museum, cipher playground, and codebreaking classroom covering more than 3,900 years of cryptography. Version 1.0.0 includes 167 exhibits across 13 museum halls and a mathematics annex, 88 registered cipher engines, 146 interactive exhibits, historical source notes, guided learning material, and automated correctness and accessibility checks. The separately published Cipher Corpus v0.6 dataset supplements the software and is linked as a related dataset; its contents and rights statements are not relicensed by this software record.",
+  "creators": [
+    {
+      "name": "Clark, Paul A.",
+      "orcid": "0009-0004-2394-0991"
+    }
+  ],
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "keywords": [
+    "cryptography",
+    "cryptanalysis",
+    "classical ciphers",
+    "digital museum",
+    "cryptography education",
+    "interactive exhibits"
+  ],
+  "related_identifiers": [
+    {
+      "scheme": "doi",
+      "identifier": "10.5281/zenodo.23297920",
+      "relation": "isSupplementedBy",
+      "resource_type": "dataset"
+    }
+  ],
+  "notes": "This record archives the Cipher Museum software under the MIT License. Cipher Corpus v0.6 is a separate dataset record at https://doi.org/10.5281/zenodo.23297920. Synthetic corpus records are CC0 1.0; historical records retain their per-record public-domain assertions and provenance. The software license does not relicense the dataset or underlying historical source material."
+}

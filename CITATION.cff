@@ -1,70 +1,45 @@
 cff-version: 1.2.0
-message: "If you use this dataset, cite the version-specific Zenodo record and the foundational CipherBank work."
-type: dataset
-title: "Cipher Corpus v0.6: A Classical Cryptography Dataset"
+message: "If you use Cipher Museum, cite this software. Cite the separately published Cipher Corpus dataset when using the corpus."
+type: software
+title: "Cipher Museum: An Interactive History of Cryptography and Codebreaking"
 authors:
   - family-names: Clark
     given-names: "Paul A."
     orcid: "https://orcid.org/0009-0004-2394-0991"
     website: "https://systemslibrarian.dev"
-doi: "10.5281/zenodo.23297920"
-url: "https://doi.org/10.5281/zenodo.23297920"
 repository-code: "https://github.com/systemslibrarian/cipher-museum"
-commit: "43845a38ef35c94f1ac01cb403b3e982a3401e89"
-date-released: "2026-10-11"
-license-url: "https://github.com/systemslibrarian/cipher-museum/blob/43845a38ef35c94f1ac01cb403b3e982a3401e89/public/corpus/LICENSE"
-version: "0.6"
+url: "https://ciphermuseum.com"
+license: MIT
+version: "1.0.0"
 abstract: >-
-  A 100,326-record classical-cryptography dataset spanning 85 cipher-type
-  labels and 9 languages. Version 0.6 adds 300 deterministic synthetic RS44,
-  German Double Playfair, and AMSCO records while preserving the original
-  100,026-record prefix byte for byte. Synthetic records are CC0; 54 historical
-  records retain per-record public-domain assertions and provenance.
+  Cipher Museum is a static, browser-based digital museum, cipher playground,
+  and codebreaking classroom spanning more than 3,900 years of cryptography.
+  Version 1.0.0 contains 167 exhibits, 88 registered cipher engines, 146
+  interactive exhibits, a mathematics foundations annex, historical source
+  notes, and automated correctness and accessibility checks. The separately
+  published Cipher Corpus v0.6 dataset supplements the software.
 keywords:
+  - cryptography
   - cryptanalysis
   - classical ciphers
-  - benchmark dataset
-  - cipher breaking
-  - llm evaluation
+  - digital museum
   - cryptography education
-preferred-citation:
-  type: data
-  title: "Cipher Corpus v0.6: A Classical Cryptography Dataset"
-  authors:
-    - family-names: Clark
-      given-names: "Paul A."
-      orcid: "https://orcid.org/0009-0004-2394-0991"
-  doi: "10.5281/zenodo.23297920"
-  url: "https://doi.org/10.5281/zenodo.23297920"
-  publisher:
-    name: Zenodo
-  version: "0.6"
-  month: 10
-  year: 2026
-  notes: "100,326 records across 85 cipher types and 9 canonical languages; 99,800 exact replay matches and 526 documented known-deviation records"
+  - interactive exhibits
 references:
-  - type: article
-    title: "CipherBank: Exploring the Boundary of LLM Reasoning Capabilities through Cryptography Challenges"
+  - type: data
+    title: "Cipher Corpus v0.6: A Classical Cryptography Dataset"
     authors:
-      - family-names: Li
-        given-names: Yu
-      - family-names: Pei
-        given-names: Qizhi
-      - family-names: Sun
-        given-names: Mengyuan
-      - family-names: Lin
-        given-names: Honglin
-      - family-names: Ming
-        given-names: Chenlin
-      - family-names: Gao
-        given-names: Xin
-      - family-names: Wu
-        given-names: Jiang
-      - family-names: He
-        given-names: Conghui
-      - family-names: Wu
-        given-names: Lijun
-    journal: "arXiv preprint arXiv:2504.19093"
-    year: 2025
-    url: "https://arxiv.org/pdf/2504.19093"
-    notes: "Foundational benchmark establishing LLM cryptanalysis evaluation methodology"
+      - family-names: Clark
+        given-names: "Paul A."
+        orcid: "https://orcid.org/0009-0004-2394-0991"
+    doi: "10.5281/zenodo.23297920"
+    url: "https://doi.org/10.5281/zenodo.23297920"
+    publisher:
+      name: Zenodo
+    version: "0.6"
+    month: 10
+    year: 2026
+    notes: >-
+      Related dataset with 100,326 canonical records across 85 cipher-type
+      labels. Synthetic records are CC0 1.0; historical records retain their
+      per-record public-domain assertions and provenance.

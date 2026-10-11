@@ -1,5 +1,10 @@
 # Documentation
 
+## Software release
+
+- [Software Publishing](SOFTWARE_PUBLISHING.md) — version choice, Zenodo/GitHub metadata, archive scope, and release procedure
+- [v1.0.0 Release Notes](releases/v1.0.0.md) — prepared GitHub Release notes for the initial software archive
+
 ## Corpus & Benchmarking
 
 - [Schema Changelog](schema-changelog.md) — v0.1 → v0.2 schema migration, field additions
@@ -8,6 +13,7 @@
 - [Benchmark Runner](benchmark-runner.md) — CLI usage for `scripts/benchmark-runner.js`
 - [Baseline Reports](baseline-reports.md) — Benchmark report format, HTML/JSON output spec
 - [Reproducibility Receipt](reproducibility-receipt.md) — Spec for recording benchmark run inputs and environment
+- [Corpus Publishing](CORPUS_PUBLISHING.md) — published dataset archive, rights, DOI usage, and future dataset releases
 
 ## Engine Testing
 
