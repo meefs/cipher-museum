@@ -10,12 +10,13 @@ The Cipher Museum is part digital exhibit, part cipher playground, and part code
 
 **[Live Museum →](https://ciphermuseum.com)**
 
+[![Cipher Museum software v1.0.0 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23298941.svg)](https://doi.org/10.5281/zenodo.23298941)
 [![Cipher Corpus dataset v0.6 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23297920.svg)](https://doi.org/10.5281/zenodo.23297920)
 
 The live museum, software source archive, and research dataset are distinct:
 
 - **Live museum:** the continuously deployed website at [ciphermuseum.com](https://ciphermuseum.com).
-- **Software archive:** `v1.0.0` is the initial GitHub/Zenodo software release. Zenodo assigns its software DOI only after the GitHub Release is published; it does not reuse either dataset DOI.
+- **Software archive:** [`v1.0.0`](https://doi.org/10.5281/zenodo.23298941) is the initial GitHub/Zenodo software release. Its version DOI is `10.5281/zenodo.23298941`; its concept DOI for the evolving software is `10.5281/zenodo.23298940`. Neither is a dataset DOI.
 - **Dataset archive:** [Cipher Corpus v0.6](https://doi.org/10.5281/zenodo.23297920) is already published separately. Use its version DOI when citing the 100,326-record dataset.
 
 The root [`CITATION.cff`](CITATION.cff) describes Cipher Museum software. Corpus
@@ -288,9 +289,9 @@ Pure HTML + CSS + Vanilla JavaScript. GitHub Pages ready.
 The cipher corpus files are stored via [Git Large File Storage (LFS)](https://git-lfs.github.com/)
 due to their size. To access them after cloning:
 
-GitHub-generated source archives currently contain LFS pointer files rather
-than the 132 MB JSON and 104 MB JSONL payloads. This keeps the forthcoming
-software archive distinct from the published dataset. Download the canonical
+The GitHub-generated and Zenodo v1.0.0 software source archives contain LFS
+pointer files rather than the 132 MB JSON and 104 MB JSONL payloads. This keeps
+the software archive distinct from the published dataset. Download the canonical
 archived JSONL and its supporting files from
 [Cipher Corpus v0.6 on Zenodo](https://doi.org/10.5281/zenodo.23297920), or use
 Git LFS when cloning this repository.

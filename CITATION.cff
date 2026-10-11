@@ -8,7 +8,11 @@ authors:
     orcid: "https://orcid.org/0009-0004-2394-0991"
     website: "https://systemslibrarian.dev"
 repository-code: "https://github.com/systemslibrarian/cipher-museum"
+repository-artifact: "https://github.com/systemslibrarian/cipher-museum/releases/tag/v1.0.0"
 url: "https://ciphermuseum.com"
+doi: "10.5281/zenodo.23298941"
+commit: "5ca041200b26dc2447dcae72cb63f051dca8064c"
+date-released: "2026-10-11"
 license: MIT
 version: "1.0.0"
 abstract: >-
