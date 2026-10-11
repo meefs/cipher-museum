@@ -27,6 +27,9 @@ const expected = {
   title: 'Cipher Museum: An Interactive History of Cryptography and Codebreaking',
   author: 'Clark, Paul A.',
   orcid: '0009-0004-2394-0991',
+  softwareDoi: '10.5281/zenodo.23298941',
+  releaseDate: '2026-10-11',
+  releaseCommit: '5ca041200b26dc2447dcae72cb63f051dca8064c',
   datasetVersion: '0.6',
   datasetDoi: '10.5281/zenodo.23297920',
   datasetRecords: 100326,
@@ -62,11 +65,14 @@ assert(citation.includes(`orcid: "https://orcid.org/${expected.orcid}"`),
   'CITATION.cff ORCID is incorrect');
 assert(citation.includes(`version: "${expected.version}"`),
   'CITATION.cff version must match package.json');
+assert(new RegExp(`^doi: "${expected.softwareDoi.replaceAll('.', '\\.')}"$`, 'm').test(citation),
+  'CITATION.cff must cite the published software version DOI');
+assert(citation.includes(`date-released: "${expected.releaseDate}"`),
+  'CITATION.cff must contain the published software release date');
+assert(citation.includes(`commit: "${expected.releaseCommit}"`),
+  'CITATION.cff must identify the archived release commit');
 assert(citation.includes(`doi: "${expected.datasetDoi}"`),
   'CITATION.cff must retain the related dataset citation');
-assert(!/^doi:/m.test(citation), 'CITATION.cff must not assign the dataset DOI to the software');
-assert(!/^date-released:/m.test(citation),
-  'CITATION.cff must not claim the forthcoming software release is already published');
 
 assert(license.startsWith('MIT License\n'), 'the repository software license must remain MIT');
 assert(attributes.includes('public/corpus/all.json filter=lfs'), 'all.json must remain tracked by Git LFS');
@@ -85,5 +91,5 @@ console.log(`  Creator: ${expected.author} (${expected.orcid})`);
 console.log('  Type/license: software / MIT');
 console.log(`  Related dataset: Cipher Corpus v${expected.datasetVersion}, ${expected.datasetRecords} records / ${expected.datasetLabels} labels`);
 console.log(`  Dataset DOI/relation: ${expected.datasetDoi} (isSupplementedBy)`);
-console.log(`  Software version source: package and planned Git tag v${expected.version}`);
-console.log('  Software DOI/date: intentionally unset until publication');
+console.log(`  Software release: v${expected.version}, ${expected.releaseDate}, commit ${expected.releaseCommit}`);
+console.log(`  Software DOI: ${expected.softwareDoi}`);
