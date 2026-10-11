@@ -6,7 +6,8 @@
  */
 'use strict';
 
-globalThis.CipherEngines = (() => {
+const cipherMuseumGlobal = typeof window !== 'undefined' ? window : globalThis;
+cipherMuseumGlobal.CipherEngines = (() => {
   const A = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const clean = text => String(text ?? '').normalize('NFD').replace(/\p{M}/gu, '')
     .toUpperCase().replace(/[^A-Z]/g, '');
@@ -4226,5 +4227,5 @@ globalThis.CipherEngines = (() => {
 // Node.js compatibility export for build/validation scripts. Export only
 // after the registry has been initialized so require() receives the engines.
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = globalThis.CipherEngines;
+  module.exports = cipherMuseumGlobal.CipherEngines;
 }
