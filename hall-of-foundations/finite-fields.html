@@ -231,7 +231,10 @@
   // ---------- walk ----------
   var walk=document.getElementById("walk");
   var kread=document.getElementById("kread");
-  var Wp=97, G=null, cur=null, k=0, history=[];
+  var Wp=97, G=null, cur=null, k=0, history=[], walkInterval=null;
+  function stopWalk(){
+    if(walkInterval!==null){ clearInterval(walkInterval); walkInterval=null; }
+  }
   function findG(p){ var pts=points(p); return pts.length?pts[Math.floor(pts.length*0.18)]:null; }
   function drawWalk(){
     walk.innerHTML="";
@@ -272,16 +275,19 @@
     kread.innerHTML="<b>k = "+k+"</b> &nbsp; kG = "+(cur?("("+cur[0]+", "+cur[1]+")"):"∞");
     drawWalk();
   }
-  function resetWalk(){ k=0; cur=null; history=[]; G=findG(Wp); kread.innerHTML="<b>k = 0</b>"; drawWalk(); }
+  function resetWalk(){ stopWalk(); k=0; cur=null; history=[]; G=findG(Wp); kread.innerHTML="<b>k = 0</b>"; drawWalk(); }
 
-  document.getElementById("step").addEventListener("click",stepWalk);
+  document.getElementById("step").addEventListener("click",function(){ stopWalk(); stepWalk(); });
   document.getElementById("run").addEventListener("click",function(){
     resetWalk();
     if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches){
       for(var n=0;n<12;n++) stepWalk();   // same end state, no animation
       return;
     }
-    var n=0; var iv=setInterval(function(){ stepWalk(); if(++n>=12)clearInterval(iv); },160);
+    var n=0; walkInterval=setInterval(function(){
+      stepWalk();
+      if(++n>=12){ clearInterval(walkInterval); walkInterval=null; }
+    },160);
   });
   document.getElementById("wreset").addEventListener("click",resetWalk);
   document.getElementById("psel").addEventListener("change",function(e){ drawScatter(+e.target.value); });

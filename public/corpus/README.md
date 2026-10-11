@@ -75,6 +75,15 @@ notes, the browser and the evaluation prompts. See
 | `SHA256SUMS.txt` | Checksums for downloads, browser sample, statistics and schema |
 | `cipher-corpus.schema.json` | Record schema |
 
+The 54 `source_type: historical` entries are catalogued historical-context
+exercises, not 54 independently authenticated known-answer pairs. The legacy
+`verified` boolean records generator/reviewer state and must not be interpreted
+as source authentication. Known pair defects and declared reconstructions are
+documented in the repository's [v0.6 errata](../../docs/CORPUS-V06-ERRATA.md)
+and [machine-readable review](../../data/corpus-historical-review.json). The
+published archive remains unchanged; record-field corrections require a later
+dataset version.
+
 The difficulty downloads preserve the existing English exercise subsets;
 they do not partition the full multilingual/historical corpus. The historical
 file's 55 overlapping IDs include one reconstructed record labeled synthetic;

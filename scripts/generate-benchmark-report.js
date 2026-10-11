@@ -40,13 +40,16 @@ const byFamily = groupBy(records, 'cipher_family');
 const byLanguage = groupBy(records, 'language');
 const bySplit = groupBy(records, 'split');
 const byQuality = groupBy(records, 'transcription_quality');
+const plaintextSymbolLength = value => Array.from(
+  String(value ?? '').normalize('NFD').replace(/\p{M}/gu, '')
+).filter(character => /[\p{L}\p{N}]/u.test(character)).length;
 
 // Per-cipher stats
 const cipherStats = Object.entries(byCipherType).map(([type, recs]) => {
   const difficulties = groupBy(recs, 'difficulty');
   const diff = Object.keys(difficulties)[0] || 'unknown';
   const baseline = SOLVER_BASELINES[diff] || {};
-  const avgLen = Math.round(recs.reduce((s, r) => s + r.normalized_text_length, 0) / recs.length);
+  const avgLen = Math.round(recs.reduce((sum, record) => sum + plaintextSymbolLength(record.plaintext), 0) / recs.length);
   const languages = [...new Set(recs.map(r => r.language))];
 
   return {
@@ -56,11 +59,11 @@ const cipherStats = Object.entries(byCipherType).map(([type, recs]) => {
     record_count: recs.length,
     public_count: (difficulties['public'] || recs.filter(r => r.split === 'public')).length,
     blind_count: recs.filter(r => r.split === 'blind').length,
-    avg_normalized_length: avgLen,
+    avg_plaintext_symbols: avgLen,
     languages,
     expected_attacks: [...new Set(recs.flatMap(r => r.expected_attacks))].slice(0, 4),
     solver_baselines: baseline,
-    verified_count: recs.filter(r => r.verified).length,
+    legacy_verified_flag_count: recs.filter(r => r.verified).length,
     noisy_count: recs.filter(r => r.transcription_quality === 'noisy').length,
   };
 }).sort((a, b) => b.record_count - a.record_count);
@@ -104,7 +107,7 @@ const report = {
   },
   summary: {
     total_records: records.length,
-    verified_records: records.filter(r => r.verified).length,
+    legacy_verified_flag_records: records.filter(r => r.verified).length,
     cipher_types: Object.keys(byCipherType).length,
     cipher_families: Object.keys(byFamily).length,
     languages: Object.keys(byLanguage),
@@ -165,7 +168,7 @@ const htmlRows = cipherStats.slice(0, 50).map(s =>
     <td>${s.cipher_family}</td>
     <td class="diff-${s.difficulty}">${s.difficulty}</td>
     <td>${s.record_count}</td>
-    <td>${s.avg_normalized_length}</td>
+    <td>${s.avg_plaintext_symbols}</td>
     <td>${s.solver_baselines.llm_3shot || '—'}</td>
     <td>${s.solver_baselines.llm_0shot || '—'}</td>
   </tr>`
@@ -225,7 +228,7 @@ const html = `<!DOCTYPE html>
 
   <h2>Per-Cipher Statistics (Top 50 by Record Count)</h2>
   <table>
-    <thead><tr><th>Cipher Type</th><th>Family</th><th>Difficulty</th><th>Records</th><th>Avg Length</th><th>LLM 3-Shot</th><th>LLM 0-Shot</th></tr></thead>
+    <thead><tr><th>Cipher Type</th><th>Family</th><th>Difficulty</th><th>Records</th><th>Avg plaintext symbols</th><th>LLM 3-Shot</th><th>LLM 0-Shot</th></tr></thead>
     <tbody>${htmlRows}</tbody>
   </table>
 

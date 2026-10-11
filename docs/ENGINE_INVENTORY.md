@@ -6,12 +6,12 @@ historical accuracy, and fixes belong to later phases.
 
 ## Scope and counting rule
 
-The canonical count is the 84 properties returned by `window.CipherEngines` in
+The canonical count is the 88 properties returned by `window.CipherEngines` in
 [js/ciphers/all-engines.js](../js/ciphers/all-engines.js). The generated
 `all-engines.min.js` browser asset is not counted as another implementation.
 
 Two exhibits also load dedicated implementations of algorithms that are already in
-the 84-engine registry:
+the 88-engine registry:
 
 - Caesar loads [js/ciphers/caesar.js:6](../js/ciphers/caesar.js#L6) from
   [ciphers/caesar.html:383](../ciphers/caesar.html#L383). Its default shift is `0`,
@@ -36,12 +36,12 @@ and the `solvers/` programs are outside this count because they are not exhibit
 - **No fixed vector** means current coverage is roundtrip, involution, boundary, or
   smoke testing only.
 - **Profile** links point to the per-engine entry used by the current comprehensive
-  sample suite. All 84 engines have one between
+  sample suite. All 88 engines have one in
   [tests/test-comprehensive.js:152](../tests/test-comprehensive.js#L152) and
   [tests/test-comprehensive.js:236](../tests/test-comprehensive.js#L236).
 - Corpus counts are the `record_count` values in
   [corpus/engine-manifest.json](../corpus/engine-manifest.json), reconciled to the
-  canonical [public/corpus/all.jsonl](../public/corpus/all.jsonl) in corpus v0.5.
+  canonical [public/corpus/all.jsonl](../public/corpus/all.jsonl) in corpus v0.6.
   Every record is replayed against the live engines by `npm run test:engines`.
 
 ## Inventory
@@ -94,7 +94,7 @@ and the `solvers/` programs are outside this count because they are not exhibit
 | 44 | **twosquare** [source](../js/ciphers/all-engines.js#L1719) | [Two-Square](../ciphers/two-square.html#L73), [Substitution](../halls/substitution.html) | `encode(text, keyPair)`, `decode(text, keyPair)`. Default `EXAMPLE,KEYWORD`; horizontal two-square variant, J/I merge, uppercase A-Z, and X padding. | **No fixed vector**; padded J/I-aware roundtrip [profile](../tests/test-comprehensive.js#L195). | Yes, 1,072 ([manifest](../corpus/engine-manifest.json#L262)) |
 | 45 | **straddlingCheckerboard** [source](../js/ciphers/all-engines.js#L1751) | [Straddling Checkerboard](../ciphers/straddling-checkerboard.html#L73), [Military](../halls/military.html) | `encode(text, topRowLetters)`, `decode(text, topRowLetters)`. Default `ATONESIRE`; cleans key/text to A-Z and emits variable-length digits. | **No fixed vector**; roundtrip [profile](../tests/test-comprehensive.js#L196). | Yes, 870 ([manifest](../corpus/engine-manifest.json#L246)) |
 | 46 | **chaocipher** [source](../js/ciphers/all-engines.js#L1801) | [Chaocipher](../ciphers/chaocipher.html#L73), [Machines](../halls/machines.html) | `encode(text, seed)`, `decode(text, seed)`. Default `CHAOCIPHER`; cleans to A-Z and mutates two keyed alphabets after each character. | **No fixed vector**; roundtrip [profile](../tests/test-comprehensive.js#L197). | Yes, 1,391 ([manifest](../corpus/engine-manifest.json#L294)) |
-| 47 | **m209** [source](../js/ciphers/all-engines.js#L1867) | [M-209](../ciphers/m209.html#L74), [Machines](../halls/machines.html) | `encode(text, seed)`, `decode(text, seed)`. Same reciprocal simplified pin-and-lug transform; default `HAGELIN`; uppercase A-Z only. | **No fixed vector**; involution [profile](../tests/test-comprehensive.js#L198). | Yes, 1,221 ([manifest](../corpus/engine-manifest.json#L406)) |
+| 47 | **m209** [source](../js/ciphers/all-engines.js#L1882) | [M-209](../ciphers/m209.html#L74), [Machines](../halls/machines.html) | `encode(text, settingsOrSeed)`, `decode(text, settingsOrSeed)`. Reciprocal six-wheel, 27-lug-bar teaching model using `C = 25 - P + D (mod 26)`; deterministic seed default `HAGELIN`; explicit settings accept six binary pin arrays, 27 lug pairs, and six starting positions. Uppercase A-Z only. | **External KAT**: the TM 11-380 worked arithmetic maps A with 20 displaced bars to T; tested in [m209.spec.js](../tests/engines/specs/m209.spec.js) and [known-answers.js](../tests/engines/helpers/known-answers.js). | Yes, 1,221 immutable v0.6 records replay through the documented legacy compatibility path ([manifest](../corpus/engine-manifest.json#L406)) |
 | 48 | **solitaire** [source](../js/ciphers/all-engines.js#L1898) | [Solitaire / Pontifex](../ciphers/solitaire.html#L74), [Unbreakable](../halls/unbreakable.html) | `encode(text, deckKey)`, `decode(text, deckKey)`. Default `CRYPTONOMICON`; cleans to A-Z, keys a 54-card deck, and X-pads encryption to a multiple of five. | **External KAT**: Schneier vectors at [tests/test-deep-ciphers.js:700](../tests/test-deep-ciphers.js#L700); [profile](../tests/test-comprehensive.js#L199). | Yes, 811 ([manifest](../corpus/engine-manifest.json#L462)) |
 | 49 | **beale** [source](../js/ciphers/all-engines.js#L1985) | [Beale Cipher](../ciphers/beale.html#L74), [Unsolved](../halls/unsolved.html) | `encode(text, bookText)`, `decode(text, bookText)`. Caller supplies the book; cleans plaintext to A-Z, randomly selects matching word indices, and decodes indices to initials. | **No fixed vector**; custom book roundtrip [profile](../tests/test-comprehensive.js#L200). | **No manifest entry** ([manifest](../corpus/engine-manifest.json#L1)) |
 | 50 | **copiale** [source](../js/ciphers/all-engines.js#L2018) | [Copiale](../ciphers/copiale.html#L75), [Puzzle](../halls/puzzle.html) | `encode(text, seed)`, `decode(text, seed)`. Default `COPIALE`; cleans to A-Z and emits seeded alphanumeric homophones. | **No fixed vector**; nonempty-encode smoke [profile](../tests/test-comprehensive.js#L202). | Yes, 871 ([manifest](../corpus/engine-manifest.json#L318)) |
@@ -132,28 +132,32 @@ and the `solvers/` programs are outside this count because they are not exhibit
 | 82 | **wadsworth** [source](../js/ciphers/all-engines.js#L3728) | [Wadsworth Cipher](../ciphers/wadsworth-cipher.html#L72), [Machines](../halls/machines.html) | `encode(text, keyword)`, `decode(text, keyword)`. Default `WADSWORTH`; keyed 26-letter inner disk geared 26:33 against a 33-symbol outer disk (A-Z plus 2-8); the turn count is the ciphertext. Encode takes A-Z, decode takes A-Z and 2-8. | **Derived KAT**: `encode("A","WADSWORTH") == "B"` in [known-answers.js](../tests/engines/helpers/known-answers.js); 5 page vectors pinned in [test-exhibit-examples.js](../tests/test-exhibit-examples.js). | Yes, 1,100 ([manifest](../corpus/engine-manifest.json#L86)) |
 | 83 | **geezMonastic** [source](../js/ciphers/all-engines.js#L3759) | [Amharic / Ge'ez Ciphers](../ciphers/amharic-ge-ez-ciphers.html#L72), [Ancient](../halls/ancient.html) | `encode(text, seed)`, `decode(text, seed)`. Default `GEEZ`; seeded monoalphabetic substitution over cleaned Latin A-Z. | **No fixed vector**; roundtrip [profile](../tests/test-comprehensive.js#L235). | Yes, 930 ([manifest](../corpus/engine-manifest.json#L350)) |
 | 84 | **diana** [source](../js/ciphers/all-engines.js#L3790) | [Diana Cryptosystem](../ciphers/diana-cryptosystem.html#L72), [Military](../halls/military.html) | `encode(text, pad)`, `decode(text, pad)`. Authentic DIANA trigraph rule `C = (25 - P - K) mod 26` — reciprocal and symmetric in all three letters; default `DIANA`; cleans text and key to A-Z. | **External KAT**: published Special Forces pad vector in [known-answers.js](../tests/engines/helpers/known-answers.js); involution [profile](../tests/test-comprehensive.js#L236). | Yes, 1,681 ([manifest](../corpus/engine-manifest.json#L198)) |
+| 85 | **patterson** [source](../js/ciphers/all-engines.js) | Workbench | `encode(text, lineSpec)`, `decode(text, lineSpec)`. Parses Patterson line order and prefix counts. | **Derived KAT** and shared contract coverage. | No manifest entry |
+| 86 | **rasterschluessel44** [source](../js/ciphers/all-engines.js) | [RS44](../ciphers/rs44.html) | Explicit 24×25 stencil, column ranks, start position, minute and strict bounds; returns trace data for the exhibit. | Historical-procedure tests and deterministic v0.6 corpus replay. | Yes, 100 |
+| 87 | **doublePlayfair** [source](../js/ciphers/all-engines.js) | [German Double Playfair](../ciphers/double-playfair.html) | Explicit two-square settings; J→II preparation and retained odd-length filler. | Historical-procedure tests and deterministic v0.6 corpus replay. | Yes, 100 |
+| 88 | **amsco** [source](../js/ciphers/all-engines.js) | [AMSCO](../ciphers/amsco.html) | Explicit rank permutation and first-cell length; supports ragged endings. | Historical-procedure tests and deterministic v0.6 corpus replay. | Yes, 100 |
 
 ## Phase 0 counts
 
 | Measure | Count | Evidence |
 |---|---:|---|
-| Runtime registry engines | 84 | Export object at [js/ciphers/all-engines.js:3810](../js/ciphers/all-engines.js#L3810) |
-| Engines with `encode` and `decode` | 84 / 84 | Shape loop at [tests/test-comprehensive.js:136](../tests/test-comprehensive.js#L136) and runtime API inspection |
-| Engines with a comprehensive-suite profile | 84 / 84 | Profile block at [tests/test-comprehensive.js:151](../tests/test-comprehensive.js#L151) |
-| Registry engines with an externally attributed KAT in a test targeting that registry implementation | 4 / 84 | Caesar, Playfair, Vigenere, and Solitaire links in the table |
-| Additional registry engines with local fixed-output or fixed-mapping assertions | 11 / 84 | Monoalphabetic, Polybius, Gronsfeld, Rail Fence, Bacon, Tap Code, VENONA Pad-Reuse, Dictionary Code, Scytale, Atbash, and ROT13 links in the table |
-| Registry engines with no fixed expected ciphertext/mapping in their current engine tests | 69 / 84 | Per-row test classification above |
-| Post-sweep per-engine fixed KAT coverage | 84 / 84 | Registry at [tests/engines/helpers/known-answers.js](../tests/engines/helpers/known-answers.js) |
-| Registry engines represented in the corpus manifest | 81 / 84 | 81 manifest names from [corpus/engine-manifest.json:6](../corpus/engine-manifest.json#L6) through [corpus/engine-manifest.json:646](../corpus/engine-manifest.json#L646) |
-| Registry engines absent from the corpus manifest | 3 / 84 | `dictionaryCode`, `beale`, and `cardanoGrille` |
-| Sum of the 81 manifest `record_count` values | 100,026 | Per-row manifest entries linked above |
+| Runtime registry engines | 88 | Export object in [js/ciphers/all-engines.js](../js/ciphers/all-engines.js) |
+| Engines with `encode` and `decode` | 88 / 88 | Registry/spec-name equality and runtime API inspection |
+| Per-engine spec files | 88 / 88 | [tests/engines/specs](../tests/engines/specs/) |
+| Derived, published, or historical-procedure fixed coverage | 70 / 88 | Known-answer registry plus RS44, Double Playfair, and AMSCO procedure suites |
+| Explicitly labelled pinned regression vectors for pedagogical models | 18 / 88 | [known-answers.js](../tests/engines/helpers/known-answers.js) and [ENGINE_AUDIT.md](./ENGINE_AUDIT.md) |
+| Registry engines with no fixed expected ciphertext/mapping or procedure assertion | 0 / 88 | Per-engine specs and procedure suites |
+| Post-sweep fixed KAT/procedure coverage | 88 / 88 | Registry KATs plus the three manual-procedure suites |
+| Registry engines represented in the corpus manifest | 84 / 88 | [corpus/engine-manifest.json](../corpus/engine-manifest.json) |
+| Registry engines absent from the corpus manifest | 4 / 88 | `dictionaryCode`, `beale`, `cardanoGrille`, and `patterson` |
+| Sum of the 84 manifest `record_count` values | 100,326 | Generated manifest totals |
 
-As of corpus v0.5 (2026-07-17) the manifest header total, the summed manifest
+As of corpus v0.6 (2026-10-11) the manifest header total, the summed manifest
 rows, and the canonical [public/corpus/all.jsonl](../public/corpus/all.jsonl)
-dataset all agree at 100,026 records. The three registry engines without a
-corpus family remain `dictionaryCode`, `beale`, and `cardanoGrille`.
+dataset all agree at 100,326 records. The four registry engines without a
+corpus family are `dictionaryCode`, `beale`, `cardanoGrille`, and `patterson`.
 
 `npm run test:engines` now invokes the full runner at
 [tests/engines/run.js](../tests/engines/run.js) via [package.json](../package.json).
-The runner executes all 84 per-engine specs, legacy KAT suites, full Enigma vectors,
-and the 100,026-record corpus replay.
+The runner executes all 88 per-engine specs, legacy KAT suites, full Enigma vectors,
+the three historical-procedure suites, and the 100,326-record corpus replay.

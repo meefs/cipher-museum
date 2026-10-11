@@ -6,7 +6,7 @@
   },
   "historical": {
     "text": "Historical Only",
-    "description": "No longer in use, or never confirmed broken/deciphered.",
+    "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise.",
     "icon": "<path d=\"M3 7a2 2 0 0 1 2-2h11v12a2 2 0 0 0 2 2H6a3 3 0 0 1-3-3V7z\"/><path d=\"M16 5a2 2 0 0 1 2 2v8h3a0 0 0 0 1 0 0v2a2 2 0 0 1-2 2\"/>"
   },
   "educational": {

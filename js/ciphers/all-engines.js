@@ -1,16 +1,12 @@
-// Node.js compatibility export for build/validation scripts
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = window.CipherEngines;
-}
 /**
  * THE CIPHER MUSEUM — All Cipher Engines
- * Complete implementations for every cipher exhibit (84 engines across the 140-exhibit
+ * Complete implementations for every cipher exhibit (88 engines across the 167-exhibit
  * collection; the remaining exhibits are biographies, context
  * pages, and unsolved/visualization-only widgets).
  */
 'use strict';
 
-window.CipherEngines = (() => {
+globalThis.CipherEngines = (() => {
   const A = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const clean = text => String(text ?? '').normalize('NFD').replace(/\p{M}/gu, '')
     .toUpperCase().replace(/[^A-Z]/g, '');
@@ -58,6 +54,12 @@ window.CipherEngines = (() => {
 
   /* ─── 1. Caesar ─── */
   const caesar = (() => {
+    function parseShift(key) {
+      if (key === undefined || key === null || String(key).trim() === '') return 3;
+      const value = Number(String(key).trim());
+      if (!Number.isInteger(value) || value < 0 || value > 25) throw new Error('Caesar shift must be an integer from 0 to 25.');
+      return value;
+    }
     function run(text, n, enc) {
       const s = enc ? mod(n, 26) : mod(26 - n, 26);
       return text.split('').map(ch => {
@@ -68,8 +70,8 @@ window.CipherEngines = (() => {
       }).join('');
     }
     return {
-      encode: (t, k) => run(t, parseInt(k) || 3, true),
-      decode: (t, k) => run(t, parseInt(k) || 3, false)
+      encode: (t, k) => run(t, parseShift(k), true),
+      decode: (t, k) => run(t, parseShift(k), false)
     };
   })();
 
@@ -886,7 +888,11 @@ window.CipherEngines = (() => {
     const outer = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const inner = 'AZBYCXDWEVFUGTHSIRJQKPLOMN';
     function run(text, key, enc) {
-      const shift = parseInt(key) || 3;
+      const raw = key === undefined || key === null || String(key).trim() === '' ? '3' : String(key).trim();
+      const shift = Number(raw);
+      if (!Number.isInteger(shift) || shift < 0 || shift > 25) {
+        throw new Error('Alberti initial setting must be an integer from 0 to 25.');
+      }
       const t = clean(text); let r = '', curShift = shift;
       for (let i = 0; i < t.length; i++) {
         if (enc) {
@@ -966,8 +972,11 @@ window.CipherEngines = (() => {
     }
     function run(text, key) {
       const t = clean(text);
-      const k = clean(key || 'AAA');
-      const positions = [k.charCodeAt(0) - 65 || 0, k.charCodeAt(1) - 65 || 0, k.charCodeAt(2) - 65 || 0];
+      const raw = key === undefined || key === null || String(key).trim() === '' ? 'AAA' : String(key).trim().toUpperCase();
+      if (!/^[A-Z]{3}$/.test(raw)) {
+        throw new Error('This Enigma model accepts exactly three rotor-position letters (for example AAA).');
+      }
+      const positions = [...raw].map(ch => ch.charCodeAt(0) - 65);
       let result = '';
       for (let i = 0; i < t.length; i++) {
         step(positions);
@@ -1869,37 +1878,93 @@ window.CipherEngines = (() => {
     };
   })();
 
-  /* ─── 45. M-209 (Hagelin C-38 — simplified pin-and-lug) ─── */
-  // Six pinwheels with co-prime lengths 26,25,23,21,19,17 = period 101,405,850
-  // Each wheel has active pins (1) or not (0); active pins sum to a "lug count"
-  // that gives a Beaufort-style key shift each character.
+  /* ─── 45. M-209 (Hagelin C-38 — pedagogical pin-and-lug model) ─── */
+  // Six pinwheels with co-prime lengths 26,25,23,21,19,17 = period 101,405,850.
+  // A 27-bar cage has zero, one, or two wheel lugs on every bar. A bar contributes
+  // once when either contacted wheel is active, so the displacement is 0..27.
   const m209 = (() => {
     const lengths = [26, 25, 23, 21, 19, 17];
-    function buildPins(key) {
+    function seededSettings(key) {
       const k = (clean(key || 'HAGELIN') + 'M209').split('').map(c => c.charCodeAt(0));
       let s = 0; for (const x of k) s = (s * 131 + x) & 0x7fffffff;
       if (s === 0) s = 1;
-      const rng = () => { s = (s * 1103515245 + 12345) & 0x7fffffff; return s / 0x7fffffff; };
-      // Each wheel: random pin pattern (~50% active)
-      return lengths.map(L => Array.from({ length: L }, () => rng() < 0.5 ? 1 : 0));
+      const rng = () => { s = (Math.imul(s, 1103515245) + 12345) & 0x7fffffff; return s / 0x80000000; };
+      const pins = lengths.map(length => Array.from({ length }, () => rng() < 0.5 ? 1 : 0));
+      const lugs = Array.from({ length: 27 }, () => {
+        const first = 1 + Math.floor(rng() * 6);
+        const second = rng() < 0.45 ? 1 + Math.floor(rng() * 6) : 0;
+        return [first, second === first ? 0 : second];
+      });
+      return { pins, lugs, positions: [0, 0, 0, 0, 0, 0] };
     }
-    function shiftFor(pos, pins) {
-      // Sum of active pins across all 6 wheels at this position = key shift
-      let s = 0;
-      for (let w = 0; w < 6; w++) s += pins[w][pos % lengths[w]];
-      return s; // 0..6
+    function normalizeSettings(value) {
+      const source = typeof value === 'string' || value === undefined || value === null
+        ? seededSettings(value)
+        : value;
+      if (!source || !Array.isArray(source.pins) || source.pins.length !== 6 ||
+          !Array.isArray(source.lugs) || source.lugs.length !== 27) {
+        throw new Error('M-209 settings require six pin wheels and exactly 27 lug bars.');
+      }
+      const pins = source.pins.map((wheel, index) => {
+        const values = typeof wheel === 'string' ? [...wheel].map(Number) : wheel;
+        if (!Array.isArray(values) || values.length !== lengths[index] || values.some(pin => pin !== 0 && pin !== 1)) {
+          throw new Error(`M-209 wheel ${index + 1} requires ${lengths[index]} binary pins.`);
+        }
+        return [...values];
+      });
+      const lugs = source.lugs.map((bar, index) => {
+        if (!Array.isArray(bar) || bar.length !== 2 || bar.some(wheel => !Number.isInteger(wheel) || wheel < 0 || wheel > 6) ||
+            (bar[0] === 0 && bar[1] === 0) || (bar[0] !== 0 && bar[0] === bar[1])) {
+          throw new Error(`M-209 lug bar ${index + 1} must name one or two distinct wheels (1–6; use 0 for an empty lug).`);
+        }
+        return [...bar];
+      });
+      const positions = source.positions === undefined ? [0, 0, 0, 0, 0, 0] : source.positions;
+      if (!Array.isArray(positions) || positions.length !== 6 ||
+          positions.some((position, index) => !Number.isInteger(position) || position < 0 || position >= lengths[index])) {
+        throw new Error('M-209 starting positions must be six valid zero-based wheel indexes.');
+      }
+      return { pins, lugs, positions: [...positions] };
     }
-    function run(text, key) {
-      const pins = buildPins(key);
-      const t = clean(text); let out = '';
-      for (let i = 0; i < t.length; i++) {
-        const k = shiftFor(i, pins);
-        // Beaufort: c = (K - p) mod 26  → involutive (encode = decode)
-        out += A[mod(k - (t.charCodeAt(i) - 65), 26)];
+    function legacyRun(text, key) {
+      const seed = String(key).slice('legacy:'.length);
+      const pins = (() => {
+        const k = (clean(seed || 'HAGELIN') + 'M209').split('').map(c => c.charCodeAt(0));
+        let s = 0; for (const x of k) s = (s * 131 + x) & 0x7fffffff;
+        if (s === 0) s = 1;
+        const rng = () => { s = (s * 1103515245 + 12345) & 0x7fffffff; return s / 0x7fffffff; };
+        return lengths.map(length => Array.from({ length }, () => rng() < 0.5 ? 1 : 0));
+      })();
+      const input = clean(text); let out = '';
+      for (let i = 0; i < input.length; i++) {
+        let shift = 0;
+        for (let wheel = 0; wheel < 6; wheel++) shift += pins[wheel][i % lengths[wheel]];
+        out += A[mod(shift - (input.charCodeAt(i) - 65), 26)];
       }
       return out;
     }
-    return { encode: run, decode: run };
+    function trace(text, key) {
+      if (typeof key === 'string' && key.startsWith('legacy:')) {
+        return { output: legacyRun(text, key), shifts: [], legacy: true };
+      }
+      const { pins, lugs, positions } = normalizeSettings(key);
+      const input = clean(text); const shifts = []; let output = '';
+      for (const character of input) {
+        const active = pins.map((wheel, index) => wheel[positions[index]] === 1);
+        const shift = lugs.reduce((count, bar) => count + Number(
+          (bar[0] > 0 && active[bar[0] - 1]) || (bar[1] > 0 && active[bar[1] - 1])
+        ), 0);
+        shifts.push(shift);
+        // The indicator alphabet is reciprocal and reversed: with zero
+        // displacement A enciphers as Z. TM 11-380's worked check has A with
+        // displacement 20 encipher as T, hence C = 25 - P + D (mod 26).
+        output += A[mod(25 - (character.charCodeAt(0) - 65) + shift, 26)];
+        for (let wheel = 0; wheel < 6; wheel++) positions[wheel] = mod(positions[wheel] + 1, lengths[wheel]);
+      }
+      return { output, shifts, legacy: false };
+    }
+    const run = (text, key) => trace(text, key).output;
+    return { encode: run, decode: run, trace, seededSettings };
   })();
 
   /* ─── 46. Solitaire / Pontifex (Schneier, 1999) ─── */
@@ -2825,15 +2890,16 @@ window.CipherEngines = (() => {
       return 1;
     }
     function parseKey(key) {
-      const parts = String(key == null ? '5,8' : key).split(',').map(s => parseInt(s.trim(), 10));
-      let a = isNaN(parts[0]) ? 5 : parts[0];
-      let b = isNaN(parts[1]) ? 8 : parts[1];
-      // Snap a to nearest valid coprime value if user supplied an even or 13 multiple.
-      if (!VALID_A.includes(mod(a, 26))) {
-        a = VALID_A.reduce((best, v) => Math.abs(v - mod(a, 26)) < Math.abs(best - mod(a, 26)) ? v : best, 5);
+      const raw = key == null || String(key).trim() === '' ? '5,8' : String(key).trim();
+      if (!/^[+-]?\d+\s*,\s*[+-]?\d+$/.test(raw)) {
+        throw new Error('Affine key must contain two integers: a,b.');
       }
+      const parts = raw.split(',').map(s => Number(s.trim()));
+      let a = parts[0];
+      let b = parts[1];
       a = mod(a, 26);
       b = mod(b, 26);
+      if (!VALID_A.includes(a)) throw new Error('Affine multiplier a must be coprime with 26.');
       return { a, b };
     }
     function transform(text, fn) {
@@ -4079,7 +4145,7 @@ window.CipherEngines = (() => {
     return { input,output:output.join(''),blocks,pairs,squareA:k.squareA,squareB:k.squareB,padding,decrypt };
   });
 
-  const amsco = historicalEngine((text, key, decrypt) => {
+  const amsco = historicalEngine((text, key, decrypt, capture = true) => {
     let k;
     if(typeof key==='string' && /^\d+(?:[ ,]+\d+)*$/.test(key.trim())) {
       const values=/[ ,]/.test(key.trim())?key.trim().split(/[ ,]+/).map(Number):[...key.trim()].map(Number);
@@ -4088,18 +4154,42 @@ window.CipherEngines = (() => {
     if(!Array.isArray(k.order)||k.order.length<2||k.order.length>25||new Set(k.order).size!==k.order.length||
       k.order.some(n=>!Number.isInteger(n)||n<1||n>k.order.length)) throw new Error('AMSCO key must be a permutation of 1–N, with 2–25 columns. Separate ranks above 9 with spaces.');
     if(k.first!==1&&k.first!==2) throw new Error('The first cell must hold one or two letters.');
-    const input=clean(text),cells=[],width=k.order.length;
-    let remaining=input.length,position=0;
+    const input=clean(text),width=k.order.length;
+    // The bulk encode/decode path avoids allocating a full object for every
+    // one- or two-letter cell. At corpus/benchmark sizes those objects caused
+    // GC pauses large enough to make an otherwise-linear transform appear
+    // super-linear. Typed layout arrays retain the exact row/column pattern.
+    const lengths=new Uint8Array(input.length),offsets=new Uint32Array(input.length);
+    let remaining=input.length,position=0,sourceOffset=0;
     while(remaining>0) {
       const row=Math.floor(position/width),col=position%width;
       const requested=(row+col)%2===0?k.first:3-k.first;
       const length=Math.min(requested,remaining);
-      cells.push({row,col,length,value:''});remaining-=length;position++;
+      lengths[position]=length;offsets[position]=sourceOffset;
+      remaining-=length;sourceOffset+=length;position++;
     }
     // Both the first row AND first column alternate, even at even widths.
+    const order=Array.from({length:width},(_,rank)=>k.order.indexOf(rank+1));
+    if(!capture) {
+      const parts=new Array(position);
+      let cursor=0,part=0;
+      if(!decrypt) {
+        for(const col of order) for(let i=col;i<position;i+=width) {
+          parts[part++]=input.slice(offsets[i],offsets[i]+lengths[i]);
+        }
+      } else {
+        for(const col of order) for(let i=col;i<position;i+=width) {
+          parts[i]=input.slice(cursor,cursor+lengths[i]);
+          cursor+=lengths[i];
+        }
+      }
+      return {input,output:parts.join(''),padding:0};
+    }
+    const cells=Array.from({length:position},(_,i)=>({
+      row:Math.floor(i/width),col:i%width,length:lengths[i],value:''
+    }));
     const byColumn=Array.from({length:width},()=>[]);
     cells.forEach((cell,i)=>byColumn[cell.col].push(i));
-    const order=Array.from({length:width},(_,rank)=>k.order.indexOf(rank+1));
     const extraction=order.flatMap(col=>byColumn[col]);
     const placement=cells.map((_,i)=>i);
     let cursor=0;
@@ -4132,3 +4222,9 @@ window.CipherEngines = (() => {
     diana, rasterschluessel44, doublePlayfair, amsco
   };
 })();
+
+// Node.js compatibility export for build/validation scripts. Export only
+// after the registry has been initialized so require() receives the engines.
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = globalThis.CipherEngines;
+}

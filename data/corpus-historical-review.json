@@ -1,0 +1,113 @@
+{
+  "review_version": "2026-10-11",
+  "corpus_version": "0.6",
+  "corpus_doi": "10.5281/zenodo.23297920",
+  "policy": "The legacy verified boolean records generator/reviewer state; it is not a claim that a pair is an authentic historical cryptogram or independently source-verified.",
+  "scope": {
+    "selector": "source_type == historical in public/corpus/all.jsonl",
+    "count": 54,
+    "record_ids": [
+      "hist-stager-001",
+      "hist-confed-001",
+      "hist-zimmermann-001",
+      "hist-vic-001",
+      "hist-beale-001",
+      "hist-culper-001",
+      "hist-babington-001",
+      "hist-polybius-001",
+      "hist-navajo-001",
+      "hist-caesar-suetonius-001",
+      "hist-caesar-augustus-001",
+      "hist-polybius-fire-signals-001",
+      "hist-alberti-de-cifris-001",
+      "hist-vigenere-traicte-001",
+      "hist-playfair-wheatstone-001",
+      "hist-adfgvx-1918-001",
+      "hist-enigma-barbarossa-001",
+      "hist-enigma-weather-001",
+      "hist-lorenz-fish-001",
+      "hist-sigaba-wwii-001",
+      "hist-jefferson-wheel-001",
+      "hist-m94-wwii-001",
+      "hist-purple-magic-001",
+      "hist-vic-abel-1957-001",
+      "hist-beale-paper1-001",
+      "hist-great-cipher-1626-001",
+      "hist-babington-mary-1586-001",
+      "hist-zimmermann-full-001",
+      "hist-navajo-guadalcanal-001",
+      "hist-culper-hercules-001",
+      "hist-charles-ii-cipher-001",
+      "hist-washington-invisible-ink-001",
+      "hist-venona-rosenberg-001",
+      "hist-arnold-andre-001",
+      "hist-diana-cia-001",
+      "hist-m209-wwii-001",
+      "hist-navajo-iwo-jima-001",
+      "hist-jn25-midway-001",
+      "hist-geheimschreiber-001",
+      "hist-kl7-nato-001",
+      "hist-fialka-001",
+      "hist-chaocipher-byrne-001",
+      "hist-wallis-001",
+      "hist-chinese-telegraph-001",
+      "hist-wheatstone-1867-001",
+      "hist-confed-vicksburg-001",
+      "hist-union-route-cipher-001",
+      "hist-kryptos-k1-001",
+      "hist-kryptos-k3-001",
+      "hist-solitaire-cryptonomicon-001",
+      "hist-copiale-2011-001",
+      "hist-mary-scots-1586-001",
+      "hist-josephine-baker-001",
+      "hist-nsa-training-001"
+    ]
+  },
+  "known_pair_defects": [
+    {
+      "id": "hist-enigma-barbarossa-001",
+      "plaintext_letter_count": 26,
+      "ciphertext_letter_count": 15,
+      "issue": "The stored plaintext and ciphertext are a truncated illustrative pair, not a reproducible Enigma message."
+    },
+    {
+      "id": "hist-enigma-weather-001",
+      "plaintext_letter_count": 29,
+      "ciphertext_letter_count": 21,
+      "issue": "The ciphertext contains a literal alphabet fragment and is not a reproducible encryption of the plaintext."
+    },
+    {
+      "id": "hist-lorenz-fish-001",
+      "plaintext_letter_count": 25,
+      "ciphertext_letter_count": 26,
+      "issue": "The stored plaintext and ciphertext cannot be a complete length-preserving Lorenz pair."
+    },
+    {
+      "id": "hist-kryptos-k1-001",
+      "plaintext_letter_count": 63,
+      "ciphertext_letter_count": 32,
+      "issue": "The record pairs a plaintext excerpt with only the first 32 K1 ciphertext letters; it is not a matched pair."
+    },
+    {
+      "id": "hist-kryptos-k3-001",
+      "plaintext_letter_count": 96,
+      "ciphertext_letter_count": 237,
+      "issue": "The record pairs a plaintext excerpt with the full K3 ciphertext and is not a matched known-answer pair."
+    }
+  ],
+  "declared_reconstructions": [
+    "hist-stager-001",
+    "hist-vic-001",
+    "hist-caesar-augustus-001",
+    "hist-alberti-de-cifris-001",
+    "hist-vigenere-traicte-001",
+    "hist-playfair-wheatstone-001",
+    "hist-enigma-barbarossa-001",
+    "hist-sigaba-wwii-001",
+    "hist-purple-magic-001",
+    "hist-solitaire-cryptonomicon-001",
+    "hist-nsa-training-001"
+  ],
+  "default_status_for_other_scoped_records": "catalogued historical-context exercise; not independently certified as an authentic source transcription by this review",
+  "release_handling": "The published v0.6 archive is immutable. These corrections apply as errata; corrected record fields require a later dataset version."
+}

@@ -25,7 +25,7 @@ const plaintextArbitrary = fc.oneof(
   { weight: 1, arbitrary: fc.constant('AZaz') },
   { weight: 1, arbitrary: fc.constant('') }
 );
-const keyArbitrary = fc.integer({ min: -10000, max: 10000 }).map(String);
+const keyArbitrary = fc.integer({ min: 0, max: 25 }).map(String);
 
 defineRoundtripSpec({
   name: 'caesar',
@@ -36,8 +36,8 @@ defineRoundtripSpec({
     { plaintext: 'A', key: '1' },
     { plaintext: 'Zz', key: '25' },
     { plaintext: 'A'.repeat(4096), key: '1' },
-    { plaintext: 'THE QUICK BROWN FOX', key: '333333' },
-    { plaintext: 'Key longer than plaintext!', key: '123456789' }
+    { plaintext: 'THE QUICK BROWN FOX', key: '0' },
+    { plaintext: 'Key longer than plaintext!', key: '13' }
   ]
 });
 
@@ -53,7 +53,13 @@ test('caesar: published shift-3 example', () => {
 defineRobustnessSpec({
   name: 'caesar',
   canonicalize: input => input,
-  edgeKey: '3'
+  edgeKey: '3',
+  rejectsInvalidKeys: true,
+  invalidKeyPredicate: key => {
+    if (key == null || String(key).trim() === '') return false;
+    const value = Number(String(key).trim());
+    return !Number.isInteger(value) || value < 0 || value > 25;
+  }
 });
 
 defineKnownAnswerSpec('caesar', engines.caesar);

@@ -182,7 +182,7 @@ Records are assigned to splits at generation time:
 split: Math.random() < 0.7 ? 'public' : 'blind'
 ```
 
-This is probabilistic — the actual ratio is approximately 70/30 but not exact. For rigorous benchmarking, use only the `split: "public"` records for training/development and hold out `split: "blind"` records for final evaluation.
+This is probabilistic — the actual ratio is approximately 70/30 but not exact. Both labels are downloadable. Use `split: "public"` for training/development and `split: "blind"` as a reproducible evaluation partition, but use a separate unseen dataset when genuine holdout secrecy is required.
 
 See `docs/blind-split-policy.md` for governance details.
 

@@ -8,12 +8,12 @@ Final report for the registry-engine verification sweep requested in
 
 | Measure | Result | Evidence |
 |---|---:|---|
-| Registry engines audited | 84 / 84 | [inventory](./ENGINE_INVENTORY.md) |
-| Per-engine spec files | 84 / 84 | [tests/engines/specs](../tests/engines/specs/) |
-| Fixed known-answer tests | 84 / 84 (66 derived or published, 18 pinned regression vectors) | [known-answers registry](../tests/engines/helpers/known-answers.js) |
-| Exact roundtrip contract on declared domains | 84 / 84 | [engine spec helpers](../tests/engines/helpers/engine-spec.js) |
-| Robustness coverage | 84 / 84 | empty input, invalid keys, normalization, Unicode policy, 100 KB, and state isolation in [engine spec helpers](../tests/engines/helpers/engine-spec.js) |
-| Corpus accounting | 100,026 / 100,026 records explained | [tests/engines/corpus-replay.js](../tests/engines/corpus-replay.js) |
+| Registry engines audited | 88 / 88 | [inventory](./ENGINE_INVENTORY.md) |
+| Per-engine spec files | 88 / 88 | [tests/engines/specs](../tests/engines/specs/) |
+| Fixed known-answer/procedure tests | 88 / 88 (70 derived, published, or procedure-based; 18 pinned regression vectors) | [known-answers registry](../tests/engines/helpers/known-answers.js) |
+| Exact roundtrip contract on declared domains | 88 / 88 | [engine spec helpers](../tests/engines/helpers/engine-spec.js) |
+| Robustness coverage | 88 / 88 | empty input, invalid keys, normalization, Unicode policy, 100 KB, and state isolation in [engine spec helpers](../tests/engines/helpers/engine-spec.js) |
+| Corpus accounting | 100,326 / 100,326 records explained | [tests/engines/corpus-replay.js](../tests/engines/corpus-replay.js) |
 | Corpus unexplained failures | 0 | [tests/engines/corpus-replay.js](../tests/engines/corpus-replay.js) |
 | Open P0 findings | 0 | this report |
 | Open P1 findings | 0 | this report |
@@ -41,7 +41,7 @@ new per-engine spec suite.
 
 | Severity | Scope | Finding | Disposition |
 |---|---|---|---|
-| P3 | Seeded-model KATs | 18 seeded pedagogical machine models (`lorenz`, `purple`, `vic`, `sigaba`, `typex`, `fialka`, `kl7`, `geheimschreiber`, `kryha`, `m94`, `m209`, `redTypeA`, `slidex`, `copiale`, `argenti`, `greatCipher`, `babington`, `geezMonastic`, `trifid`) have pinned regression vectors rather than independently derived KATs, because their seeded shuffle pipelines have no external reference. They are labeled `pinned regression vector` in [known-answers.js](../tests/engines/helpers/known-answers.js). | Acceptable for pedagogical models: roundtrip properties, robustness checks, and exact-count corpus pinning still cover them. Upgrade any of them by authoring a genuinely independent reference derivation. |
+| P3 | Seeded-model KATs | 18 seeded pedagogical models (`lorenz`, `purple`, `vic`, `sigaba`, `typex`, `fialka`, `kl7`, `geheimschreiber`, `kryha`, `m94`, `redTypeA`, `slidex`, `copiale`, `argenti`, `greatCipher`, `babington`, `geezMonastic`, `trifid`) have pinned regression vectors rather than independently derived KATs, because their seeded pipelines have no external reference. They are labeled `pinned regression vector` in [known-answers.js](../tests/engines/helpers/known-answers.js). | Acceptable only as explicitly disclosed pedagogical models; upgrade them with independent references before claiming historical simulation. |
 
 No open P0 or P1 engine defects remain after the sweep.
 
@@ -141,6 +141,22 @@ An adversarial review of the completed sweep found and fixed the following:
   [public/corpus/CHANGELOG.md](../public/corpus/CHANGELOG.md) and
   [scripts/regenerate-corpus-v05.js](../scripts/regenerate-corpus-v05.js).
 
+## 2026-10-11 follow-up
+
+- The M-209 teaching engine now models six pin wheels and all 27 lug bars; its
+  fixed vector checks the reciprocal alphabet arithmetic in War Department
+  TM 11-380 (A with a displacement of 20 enciphers as T) rather than pinning a
+  seeded output.
+- Caesar zero, Alberti zero, Enigma workbench configuration, and invalid Affine
+  keys now retain or reject exactly what the visitor supplied instead of silently
+  substituting a different key.
+- Fialka and KL-7 interactions now state prominently that they are seeded
+  26-letter structural models, not authentic machine simulations.
+- Corpus v0.6 adds RS44, German Double Playfair, and AMSCO procedure coverage.
+  Historical-pair limitations are tracked separately in
+  [CORPUS-V06-ERRATA.md](./CORPUS-V06-ERRATA.md); engine replay is not historical
+  authentication.
+
 ## Release Recommendation
 
 Accept the sweep results.
@@ -148,6 +164,6 @@ Accept the sweep results.
 - Engine correctness: cleared.
 - Robustness and state isolation: cleared.
 - Corpus replay: cleared with documented deviation rules and 0 unexplained failures.
-- Historical accuracy: cleared — the final provenance caveat (Diana) was closed
-  on 2026-07-17 with primary-source citations and an engine correction.
-- Follow-up work: none open at P0-P2; see the P3 seeded-model KAT note above.
+- Historical accuracy: not globally certified. Diana's rule is sourced, while
+  model-only engines and corpus historical-pair errata remain explicitly scoped.
+- Follow-up work: see the P3 seeded-model KAT note and corpus errata above.

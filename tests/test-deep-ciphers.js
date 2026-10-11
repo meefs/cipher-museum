@@ -55,8 +55,11 @@ section('Caesar — Edge Cases & Known Answers');
   const c = E.caesar;
   // Shift 1 = basic rotation
   eq('shift 1 encode A→B', clean(c.encode('A', '1')), 'B');
-  // Shift 26 = identity (full wrap)
-  eq('shift 26 wraps to identity', clean(c.encode('HELLO', '26')), 'HELLO');
+  // Shift 0 = identity; the public API documents only 0–25.
+  eq('shift 0 is identity', clean(c.encode('HELLO', '0')), 'HELLO');
+  ok('shift 26 is rejected rather than silently rewritten', (() => {
+    try { c.encode('HELLO', '26'); return false; } catch (error) { return /0 to 25/.test(error.message); }
+  })());
   // Shift 25 = reverse of shift 1
   eq('shift 25 encode', clean(c.encode('A', '25')), 'Z');
   eq('shift 1 encode A→B', clean(c.encode('A', '1')), 'B');

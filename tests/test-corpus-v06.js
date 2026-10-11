@@ -96,6 +96,10 @@ for(const name of ['llm-3shot-eval.jsonl','manual-ciphers-v0.6.jsonl','all.jsonl
  assert.equal(opened,'/public/corpus/'+name);
 }
 downloadDom.window.close();
-assert.match(read('.github/workflows/deploy-pages.yml'),/lfs: true/,'Pages deploys corpus data, not LFS pointer text');
-assert.match(read('.github/workflows/deploy-pages.yml'),/sha256sum -c SHA256SUMS.txt/);
+const ciWorkflow = read('.github/workflows/ci.yml');
+assert.match(ciWorkflow,/deploy-pages:[\s\S]*needs: \[test, validate-corpus\]/,
+  'Pages deployment waits for tests and corpus validation on the same commit');
+assert.match(ciWorkflow,/deploy-pages:[\s\S]*ref: \$\{\{ github\.sha \}\}[\s\S]*lfs: true/,
+  'Pages deploys exact validated Git/LFS bytes');
+assert.match(ciWorkflow,/sha256sum -c SHA256SUMS.txt/);
 console.log('Corpus v0.6: append-only baseline, 300 new records, keys, independent answers, metadata, split/export coverage and all 88 workbench options verified.');

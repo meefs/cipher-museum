@@ -191,9 +191,9 @@
       "keyType": "Varies by system",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
       "trust": {
-        "key": "broken",
-        "text": "Broken",
-        "description": "Cryptographically broken — historically important but unsafe to use today."
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Compromised by capture (1780)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -308,7 +308,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Unsolved (Beale 1 & 3)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -475,7 +475,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Weak (steganography, not encryption)",
       "modernLesson": "Hiding a message ≠ encrypting a message"
@@ -507,11 +507,11 @@
       "keyType": "Personal key phrase + numeric ladder",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
       "trust": {
-        "key": "broken",
-        "text": "Broken",
-        "description": "Cryptographically broken — historically important but unsafe to use today."
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Bolivian Army capture (1967)",
+      "securityFailure": "Bolivian Army capture (1967); no cryptanalytic break claimed",
       "modernLesson": "Physical security of key material is the hardest problem"
     },
     "chinese-telegraph": {
@@ -618,9 +618,9 @@
       "keyType": "Varies by system",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
       "trust": {
-        "key": "broken",
-        "text": "Broken",
-        "description": "Cryptographically broken — historically important but unsafe to use today."
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Codebook (never captured, never broken)",
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -650,7 +650,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Unsolved challenge cipher",
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -697,7 +697,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Correct OTP use is unbreakable; logistics often fail before the math"
@@ -761,7 +761,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Nobody — over 125 years of attempts, no consensus solution",
       "modernLesson": "Tiny ciphertexts (87 chars) don't give cryptanalysis enough statistical signal"
@@ -885,7 +885,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Never publicly broken by cryptanalysis in operational service; obsolete today.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1086,7 +1086,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Steganography (concealment)",
       "modernLesson": "If a channel cannot be searched, the message does not need to be encrypted"
@@ -1227,7 +1227,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Never publicly broken by cryptanalysis in operational service; stolen keys exposed traffic.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1274,7 +1274,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "K1–K3 Broken · K4 Unsolved",
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1415,7 +1415,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Unsolved homicide-evidence cipher",
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1432,7 +1432,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Physical discovery — the FBI photographically enlarged suspicious punctuation",
       "modernLesson": "Steganography hides the message; cryptography hides the content"
@@ -1522,7 +1522,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Never publicly broken in wartime service; a historical military code.",
       "modernLesson": "Security through complexity · pre-shared keys"
@@ -1539,7 +1539,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Obsolete Swiss military rotor machine. The demo fixes one historical wheel configuration; the 17,576-keypress state period is not its key space.",
       "modernLesson": "Count the state period separately from the initial key space"
@@ -1590,7 +1590,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Weak (concealment, not encryption)",
       "modernLesson": "A hidden message that nobody looks for is, briefly, secure"
@@ -1756,7 +1756,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "State sponsor infrastructure dramatically elevates non-state actor crypto capabilities"
@@ -1948,7 +1948,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Unsolved monument inscription",
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1965,7 +1965,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Never publicly broken by cryptanalysis in wartime service; obsolete today.",
       "modernLesson": "Pseudorandom rotor stepping defeats the regularities that broke Enigma"
@@ -1982,7 +1982,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "The first practical secure voice communication predates digital age by 50 years"
@@ -2016,7 +2016,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "See the exhibit’s documented attacks and limitations.",
       "modernLesson": "Hand-deniable crypto for high-risk environments"
@@ -2033,7 +2033,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Unsolved Cold-War-era inscription",
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -2048,9 +2048,9 @@
       "keyType": "Route transposition + code words",
       "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
       "trust": {
-        "key": "broken",
-        "text": "Broken",
-        "description": "Cryptographically broken — historically important but unsafe to use today."
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Never broken in wartime — superseded after the war",
       "modernLesson": "Route transposition as message obfuscation"
@@ -2182,7 +2182,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Never publicly broken by cryptanalysis in wartime service; obsolete today.",
       "modernLesson": "Removing a weakness (Enigma's plugboard quirks) by adding rotors trades operator burden for cryptanalytic strength"
@@ -2231,9 +2231,9 @@
       "keyType": "Straddling checkerboard + double transposition",
       "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
       "trust": {
-        "key": "broken",
-        "text": "Broken",
-        "description": "Cryptographically broken — historically important but unsafe to use today."
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Never broken by cryptanalysis — exposed by defector (1957)",
       "modernLesson": "Peak hand-cipher design principles"
@@ -2284,7 +2284,7 @@
       "trust": {
         "key": "historical",
         "text": "Historical Only",
-        "description": "No longer in use, or never confirmed broken/deciphered."
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "No one. Every published \"solution\" has been refuted.",
       "modernLesson": "Statistical signatures alone cannot tell cipher from constructed language from hoax"

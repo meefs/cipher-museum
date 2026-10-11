@@ -202,9 +202,9 @@ const VECTORS = [
   ['lorenz.html', 'lorenz', 'decode', 'YKQFIIR7AMQF3', 'LORENZ', 'URGENTMESSAGE', 'letters', DERIVED], // roundtrip of the demo default
   ['m-94.html', 'm94', 'encode', 'ARMY SIGNAL READY', '5', 'OLQVZXCKRVWGUZH', 'letters', DEMO],
   ['m-94.html', 'm94', 'decode', 'OLQVZXCKRVWGUZH', '5', 'ARMYSIGNALREADY', 'letters', DERIVED], // roundtrip of the demo default
-  ['m209.html', 'm209', 'encode', 'ENEMY ADVANCING ON FLANK', 'HAGELIN', 'ARYSIDAIDRBXRYPOXTDQU', 'letters', DEMO],
+  ['m209.html', 'm209', 'encode', 'ENEMY ADVANCING ON FLANK', 'HAGELIN', 'FISFUVSUPEQDZJLWHJUKF', 'letters', DEMO],
   // The decode row pins the page's "Beaufort involution" claim, C = (K - P) mod 26.
-  ['m209.html', 'm209', 'decode', 'ARYSIDAIDRBXRYPOXTDQU', 'HAGELIN', 'ENEMYADVANCINGONFLANK', 'letters', 'K - plaintext'],
+  ['m209.html', 'm209', 'decode', 'FISFUVSUPEQDZJLWHJUKF', 'HAGELIN', 'ENEMYADVANCINGONFLANK', 'letters', '25 - plaintext + K'],
   ['monoalphabetic.html', 'monoalphabetic', 'encode', 'HELLO', 'QWERTYUIOPASDFGHJKLZXCVBNM', 'ITSSG', 'letters'],
   ['morse.html', 'morse', 'encode', 'SOS', undefined, '... --- ...', 'symbols'],
   ['morse.html', 'morse', 'encode', 'HELLO', undefined, '.... . .-.. .-.. ---', 'symbols'],

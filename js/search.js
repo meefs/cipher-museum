@@ -1,7 +1,7 @@
 /**
  * THE CIPHER MUSEUM — Site Search
  * Loads /js/search-index.json and provides ranked substring + token matching
- * across the 139-exhibit collection (cipher pages, exhibit halls, biographies,
+ * across the 167-exhibit collection (cipher pages, exhibit halls, biographies,
  * cryptanalysis techniques, the timeline, and key tool pages).
  *
  * Public API on window.CipherSearch:
@@ -23,6 +23,18 @@
 
   var _entries = null;
   var _loadPromise = null;
+
+  function normalizeSearchText(value) {
+    return String(value || '')
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[\u2018\u2019ʼ]/g, "'")
+      .toLowerCase();
+  }
+
+  function words(value) {
+    return normalizeSearchText(value).match(/[\p{L}\p{N}]+/gu) || [];
+  }
 
   function load() {
     if (_entries) return Promise.resolve(_entries);
@@ -46,12 +58,14 @@
             created: e.c,
             broken: e.b,
             trust: e.trust || null,
+            exhibitNumber: e.exhibitNumber,
             note: e.n || '',
             summary: e.s,
             tags: e.g || [],
-            _hay: (
+            _hay: normalizeSearchText(
               e.t + ' ' + (e.h || '') + ' ' + (e.s || '') + ' ' + (e.g || []).join(' ')
-            ).toLowerCase()
+            ),
+            _words: words(e.t + ' ' + (e.h || '') + ' ' + (e.s || '') + ' ' + (e.g || []).join(' '))
           };
         });
         return _entries;
@@ -65,7 +79,7 @@
   }
 
   function tokenize(q) {
-    return (q || '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+    return words(q);
   }
 
   /**
@@ -80,8 +94,8 @@
    * AND-mode: every token must hit something.
    */
   function score(entry, tokens, raw) {
-    var rawLower = raw.toLowerCase();
-    var titleLower = entry.title.toLowerCase();
+    var rawLower = normalizeSearchText(raw);
+    var titleLower = normalizeSearchText(entry.title);
     var s = 0;
     var matchedField = null;
 
@@ -92,16 +106,21 @@
     for (var i = 0; i < tokens.length; i++) {
       var tok = tokens[i];
       var hit = false;
+      var eraToken = tok === 'wwi' || tok === 'wwii';
+      var includesToken = function (value) {
+        var normalized = normalizeSearchText(value);
+        return eraToken ? words(normalized).indexOf(tok) >= 0 : normalized.indexOf(tok) >= 0;
+      };
 
-      if (titleLower.indexOf(tok) >= 0) { s += 8; hit = true; matchedField = matchedField || 'title'; }
+      if (includesToken(titleLower)) { s += 8; hit = true; matchedField = matchedField || 'title'; }
       for (var j = 0; j < entry.tags.length; j++) {
-        var tag = entry.tags[j].toLowerCase();
+        var tag = normalizeSearchText(entry.tags[j]);
         if (tag === tok) { s += 10; hit = true; matchedField = matchedField || 'tag'; break; }
-        if (tag.indexOf(tok) >= 0) { s += 4; hit = true; matchedField = matchedField || 'tag'; }
+        if (!eraToken && tag.indexOf(tok) >= 0) { s += 4; hit = true; matchedField = matchedField || 'tag'; }
       }
-      if ((entry.hall || '').toLowerCase().indexOf(tok) >= 0) { s += 6; hit = true; matchedField = matchedField || 'hall'; }
-      if ((entry.summary || '').toLowerCase().indexOf(tok) >= 0) { s += 4; hit = true; matchedField = matchedField || 'summary'; }
-      if (!hit && entry._hay.indexOf(tok) >= 0) { s += 2; hit = true; matchedField = matchedField || 'any'; }
+      if (includesToken(entry.hall || '')) { s += 6; hit = true; matchedField = matchedField || 'hall'; }
+      if (includesToken(entry.summary || '')) { s += 4; hit = true; matchedField = matchedField || 'summary'; }
+      if (!hit && (eraToken ? entry._words.indexOf(tok) >= 0 : entry._hay.indexOf(tok) >= 0)) { s += 2; hit = true; matchedField = matchedField || 'any'; }
       if (!hit) return 0; // AND-mode: must hit every token
     }
 
@@ -148,6 +167,7 @@
     load: load,
     query: query,
     highlight: highlight,
+    normalize: normalizeSearchText,
     base: BASE
   };
 })();

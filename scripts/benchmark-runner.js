@@ -7,13 +7,17 @@ const path = require('path');
 const corpusPath = process.argv.includes('--corpus') ? process.argv[process.argv.indexOf('--corpus') + 1] : null;
 const solversDir = process.argv.includes('--solvers') ? process.argv[process.argv.indexOf('--solvers') + 1] : null;
 const outDir = process.argv.includes('--out') ? process.argv[process.argv.indexOf('--out') + 1] : null;
+const split = process.argv.includes('--split') ? process.argv[process.argv.indexOf('--split') + 1] : 'public';
 
-if (!corpusPath || !solversDir || !outDir) {
-  console.error('Usage: node benchmark-runner.js --corpus <file> --solvers <dir> --out <dir>');
+if (!corpusPath || !solversDir || !outDir || !['public', 'blind', 'all'].includes(split)) {
+  console.error('Usage: node benchmark-runner.js --corpus <file> --solvers <dir> --out <dir> [--split public|blind|all]');
   process.exit(1);
 }
 
-const records = fs.readFileSync(corpusPath, 'utf8').split('\n').filter(Boolean).map(JSON.parse);
+const allRecords = fs.readFileSync(corpusPath, 'utf8').split('\n').filter(Boolean).map(JSON.parse);
+// Records predating the split field are treated as public for compatibility.
+// "blind" is a downloadable evaluation label, not confidential held-out data.
+const records = allRecords.filter(record => split === 'all' || (record.split || 'public') === split);
 const solverFiles = fs.readdirSync(solversDir).filter(f => f.endsWith('.js'));
 const solvers = solverFiles.map(f => ({
   name: f.replace(/\.js$/, ''),
@@ -51,7 +55,6 @@ for (const solver of solvers) summary[solver.name] = { scored: 0, correct: 0, ac
 
 for (const solver of solvers) {
   for (const record of records) {
-    if (record.blind) continue; // skip blind for training
     const res = solver.solve(record);
     // The corpus uses `plaintext`; tolerate `cipher_name`/`id` for the label.
     const expected = record.plaintext;
@@ -67,6 +70,7 @@ for (const solver of solvers) {
     }
     results.push({
       record_id: record.cipher_name ?? record.id ?? record.cipher_type,
+      split: record.split || 'public',
       solver_name: solver.name,
       run_id,
       timestamp: now,
@@ -102,7 +106,7 @@ const htmlRows = results.map(r =>
   `<tr><td>${esc(r.record_id)}</td><td>${esc(r.solver_name)}</td><td>${r.correct == null ? '—' : (r.correct ? '✅' : '❌')}</td><td>${pct(r.char_accuracy)}</td><td>${esc(r.result && r.result.score)}</td><td>${esc(r.result && r.result.details)}</td></tr>`).join('');
 const html = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Benchmark Report</title></head><body>` +
   `<main>` +
-  `<h1>Benchmark Report</h1>` +
+  `<h1>Benchmark Report</h1><p>Selected split: <strong>${esc(split)}</strong>. All corpus splits are publicly downloadable.</p>` +
   `<h2>Accuracy summary</h2>` +
   `<table border="1"><tr><th>Solver</th><th>Solved</th><th>Exact accuracy</th><th>Mean char accuracy</th></tr>${summaryRowsHtml}</table>` +
   `<h2>Per-record results</h2>` +
@@ -134,7 +138,7 @@ const receipt = {
     node: process.version,
     os: process.platform + ' ' + (process.arch || '')
   },
-  parameters: { corpus: corpusPath, solvers: solversDir, out: outDir },
+  parameters: { corpus: corpusPath, solvers: solversDir, out: outDir, split },
   results_file: jsonPath,
   summary: summaryRows
 };

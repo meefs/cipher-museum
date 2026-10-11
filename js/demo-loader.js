@@ -196,8 +196,9 @@
       inputs: [{ type: 'text', id: 'keyword', label: 'Initial Alphabet Key', value: 'CHAOCIPHER', placeholder: 'Seed word…' }]
     },
     m209: {
-      label: 'M-209 (Hagelin C-38)', engine: 'm209', defaultMsg: 'ENEMY ADVANCING ON FLANK',
-      inputs: [{ type: 'text', id: 'keyword', label: 'Wheel Pin Seed', value: 'HAGELIN', placeholder: 'Seed word…' }]
+      label: 'M-209 pin-and-lug teaching model', engine: 'm209', defaultMsg: 'ENEMY ADVANCING ON FLANK',
+      note: 'This deterministic teaching model derives six pin wheels and all 27 lug bars from the seed. It is not an operational M-209 key sheet.',
+      inputs: [{ type: 'text', id: 'keyword', label: 'Deterministic Pin/Lug Seed', value: 'HAGELIN', placeholder: 'Seed word…' }]
     },
     solitaire: {
       label: 'Solitaire / Pontifex', engine: 'solitaire', defaultMsg: 'DO NOT USE PC',
@@ -305,11 +306,13 @@
     },
     'fialka': {
       label: 'Fialka M-125 (Soviet 10-rotor model)', engine: 'fialka',
+      note: 'Illustrative seeded 26-letter rotor model only. It does not reproduce the M-125 30-contact alphabet, real rotor wiring, stepping, or key-card settings.',
       defaultMsg: 'WARSAW PACT TRAFFIC',
       inputs: [{ type: 'text', id: 'keyword', label: 'Rotor Seed', value: 'M125', placeholder: 'Seed word…' }]
     },
     'kl-7': {
       label: 'KL-7 (US 1952 8-rotor model)', engine: 'kl7',
+      note: 'Illustrative seeded 26-letter rotor model only. It does not reproduce ADONIS rotor wiring, notch rings, stepping, or re-entry wiring.',
       defaultMsg: 'NATO READY MESSAGE',
       inputs: [{ type: 'text', id: 'keyword', label: 'Rotor Seed', value: 'TSEC', placeholder: 'Seed word…' }]
     },
@@ -474,6 +477,7 @@
           <span class="demo-title">Try It Yourself</span>
         </div>
         <div class="demo-body">
+          ${config.note ? `<p class="demo-model-note" style="grid-column:1/-1;margin:0;padding:.75rem 1rem;border:1px solid var(--gold-b);border-radius:var(--rs);color:var(--tx2);font-size:.9rem;line-height:1.55;"><strong>Model scope:</strong> ${config.note}</p>` : ''}
           <div class="demo-col">
             ${modeToggle}
             <div class="input-group">
@@ -634,6 +638,9 @@
     playfair: [
       { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 6', url: 'https://en.wikipedia.org/wiki/Playfair_cipher' },
       { text: 'Practical Cryptography — Playfair Cipher', url: 'https://practicalcryptography.com/ciphers/playfair-cipher/' }
+    ],
+    m209: [
+      { text: 'War Department, <em>TM 11-380: Converter M-209, M-209-A, M-209-B</em> (17 March 1944)', url: 'https://www.nsa.gov/news-features/declassified-documents/friedman-documents/assets/files/publications/FOLDER_075/41709299074861.pdf' }
     ],
     hill: [
       { text: 'Hill, Lester S., "Cryptography in an Algebraic Alphabet," <em>American Math Monthly</em> 36 (1929)', url: 'https://en.wikipedia.org/wiki/Hill_cipher' },

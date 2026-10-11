@@ -17,8 +17,8 @@
  * Selection is deterministic: for each cipher type (sorted), clean PUBLIC-split
  * records are taken in id order; the first three become the few-shot examples
  * and subsequent records become evaluation targets, round-robin across types
- * until 300 records are emitted. Blind-split records are never used, so the
- * file cannot leak the held-out split.
+ * until 300 records are emitted. Blind-labelled records are not selected;
+ * both splits remain public downloads and neither is confidential held-out data.
  */
 
 const fs = require('node:fs');

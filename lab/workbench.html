@@ -183,7 +183,7 @@
     {id:'fractionatedMorse',name:'Fractionated Morse',hasKey:true,keyLabel:'Key',keyDefault:'ROUNDTABLE'},
     {id:'confederateVigenere',name:'Confederate Vigenère',hasKey:true,keyLabel:'Key',keyDefault:'RICHMOND'},
     {id:'bazeries',name:'Bazeries',hasKey:true,keyLabel:'Number',keyDefault:'1234'},
-    {id:'alberti',name:'Alberti',hasKey:true,keyLabel:'Key',keyDefault:'K'},
+    {id:'alberti',name:'Alberti',hasKey:true,keyLabel:'Initial setting (0-25)',keyDefault:'3'},
     {id:'stager',name:'Stager',hasKey:true,keyLabel:'Route Key',keyDefault:'3'},
     {id:'dictionaryCode',name:'Dictionary Code',hasKey:true,keyLabel:'Key',keyDefault:'KEY'},
     {id:'vic',name:'VIC',hasKey:true,keyLabel:'Key',keyDefault:'SECRET'},
@@ -196,9 +196,9 @@
     {id:'straddlingCheckerboard',name:'Straddling Checkerboard',hasKey:true,keyLabel:'Key Letters',keyDefault:'ESTONIAR'},
     {id:'chaocipher',name:'Chaocipher',hasKey:true,keyLabel:'Key Alphabet',keyDefault:'HXUCZVAMDSLKPEFJRIGTWOBNYQ'},
     {id:'jefferson',name:'Jefferson Disk',hasKey:true,keyLabel:'Disk Order',keyDefault:'1,2,3,4,5,6,7,8,9,10'},
-    {id:'enigma',name:'Enigma',hasKey:true,keyLabel:'Rotors / Plugboard',keyDefault:'I,II,III/AAA'},
+    {id:'enigma',name:'Enigma (fixed I-II-III, reflector B, no plugboard)',hasKey:true,keyLabel:'Rotor positions (3 letters)',keyDefault:'AAA'},
     {id:'lorenz',name:'Lorenz',hasKey:true,keyLabel:'Wheel Settings',keyDefault:'AAAAAAAAAAAA'},
-    {id:'m209',name:'M-209 (Hagelin C-38)',hasKey:true,keyLabel:'Wheel Settings',keyDefault:'AAAAAA'},
+    {id:'m209',name:'M-209 pin-and-lug teaching model',hasKey:true,keyLabel:'Deterministic pin/lug seed',keyDefault:'HAGELIN'},
     {id:'purple',name:'Purple (Type 97)',hasKey:true,keyLabel:'Initial Setting',keyDefault:'1-2-3'},
     {id:'navajo',name:'Navajo Code Talkers',hasKey:false},
     {id:'vernam',name:'Vernam',hasKey:true,keyLabel:'Key (same length)',keyDefault:''},
@@ -225,8 +225,8 @@
     {id:'morse',name:'International Morse Code',hasKey:false},
     {id:'cardanoGrille',name:'Cardano Grille (1550)',hasKey:true,keyLabel:'Pattern (size:idx,idx,…)',keyDefault:'5:0,3,7,12,19,21,24'},
     {id:'nullCipher',name:'Null Cipher (Hidden-Letter Concealment)',hasKey:true,keyLabel:'Position (first | last | N)',keyDefault:'first'},
-    {id:'fialka',name:'Fialka M-125 (Soviet 10-rotor model)',hasKey:true,keyLabel:'Rotor Seed',keyDefault:'M125'},
-    {id:'kl7',name:'KL-7 (US 1952 8-rotor model)',hasKey:true,keyLabel:'Rotor Seed',keyDefault:'TSEC'},
+    {id:'fialka',name:'Fialka-inspired seeded model (not M-125 simulation)',hasKey:true,keyLabel:'Model seed',keyDefault:'M125'},
+    {id:'kl7',name:'KL-7-inspired seeded model (not ADONIS simulation)',hasKey:true,keyLabel:'Model seed',keyDefault:'TSEC'},
     {id:'geheimschreiber',name:'Geheimschreiber T52 (Sturgeon family)',hasKey:true,keyLabel:'Wheel Seed',keyDefault:'STURGEON'},
     {id:'kryha',name:'Kryha Pocket Cipher (1924)',hasKey:true,keyLabel:'Wheel Seed',keyDefault:'POCKET'},
     {id:'m94',name:'M-94 / M-138-A Strip Cipher (1922)',hasKey:true,keyLabel:'Offset Row[, disk-order]',keyDefault:'5'},
@@ -268,6 +268,7 @@
     if(c.hasKey){
       keyEl.parentElement.style.display='';
       keyEl.placeholder = c.keyDefault || '';
+      keyEl.value = c.keyDefault || '';
       document.querySelector('label[for="wbKey"]').textContent = c.keyLabel || 'Key';
     } else {
       keyEl.parentElement.style.display='none';

@@ -26,6 +26,14 @@ const WORD_TEXT = new Set(['navajo', 'bookCipher', 'zimmermann', 'commercialCode
 const IJ_TEXT = new Set(['polybius', 'playfair', 'bacon', 'bifid', 'adfgx', 'nihilist', 'vic', 'foursquare', 'twosquare']);
 
 const contracts = {
+  caesar: {
+    alphabet: VISIBLE_ASCII,
+    keyArbitrary: numericKeyArbitrary({ min: 0, max: 25 }),
+    exampleKeys: ['3', '0', '1', '25', '13'],
+    boundaryText: 'AZaz 09!~',
+    rejectsInvalidKeys: true,
+    invalidKeyPredicate: numericRangeInvalid(0, 25)
+  },
   monoalphabetic: {
     alphabet: VISIBLE_ASCII,
     keyArbitrary: keywordArbitrary(),
@@ -138,7 +146,9 @@ const contracts = {
   },
   alberti: {
     keyArbitrary: numericKeyArbitrary({ min: 0, max: 25 }),
-    exampleKeys: ['3', '0', '11', '25', '7']
+    exampleKeys: ['3', '0', '11', '25', '7'],
+    rejectsInvalidKeys: true,
+    invalidKeyPredicate: numericRangeInvalid(0, 25)
   },
   jefferson: {
     // Random disk orders: any shuffled subset of the 26 disks, length >= 2.
@@ -156,7 +166,9 @@ const contracts = {
   },
   enigma: {
     keyArbitrary: stringFrom(fc.constantFrom(...UPPER), { minLength: 3, maxLength: 3 }),
-    exampleKeys: ['AAA', 'AAB', 'MMM', 'ZZZ', 'QEV']
+    exampleKeys: ['AAA', 'AAB', 'MMM', 'ZZZ', 'QEV'],
+    rejectsInvalidKeys: true,
+    invalidKeyPredicate: key => key != null && String(key).trim() !== '' && !/^[A-Za-z]{3}$/.test(String(key).trim())
   },
   lorenz: {
     keyArbitrary: keywordArbitrary(),
@@ -273,7 +285,15 @@ const contracts = {
     alphabet: VISIBLE_ASCII,
     keyArbitrary: affineKeyArbitrary(),
     exampleKeys: ['5,8', '1,0', '3,3', '25,25', '11,-99'],
-    boundaryText: 'AZaz 09!~'
+    boundaryText: 'AZaz 09!~',
+    rejectsInvalidKeys: true,
+    invalidKeyPredicate: key => {
+      if (key == null || String(key).trim() === '') return false;
+      const raw = String(key).trim();
+      if (!/^[+-]?\d+\s*,\s*[+-]?\d+$/.test(raw)) return true;
+      const a = ((Number(raw.split(',')[0]) % 26) + 26) % 26;
+      return ![1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25].includes(a);
+    }
   },
   trithemius: {
     alphabet: VISIBLE_ASCII,
@@ -378,6 +398,14 @@ function stringDigits() {
     .map(digits => digits.join(''));
 }
 
+function numericRangeInvalid(min, max) {
+  return key => {
+    if (key == null || String(key).trim() === '') return false;
+    const value = Number(String(key).trim());
+    return !Number.isInteger(value) || value < min || value > max;
+  };
+}
+
 function sufficientKeyContract() {
   const plaintextArbitrary = textArbitrary(UPPER);
   const keyCharacter = fc.constantFrom(...UPPER);
@@ -460,7 +488,9 @@ function defineContractSpec(name) {
     // The 100 KB mixed-content roundtrip cycles the engine's declared
     // alphabet, so it must match the property-test domain exactly.
     longAlphabet: contract.longAlphabet ?? contract.alphabet,
-    allowsMissMarkers: contract.allowsMissMarkers
+    allowsMissMarkers: contract.allowsMissMarkers,
+    rejectsInvalidKeys: contract.rejectsInvalidKeys,
+    invalidKeyPredicate: contract.invalidKeyPredicate
   });
 }
 

@@ -163,7 +163,9 @@ function defineRobustnessSpec({
   run = roundtrip,
   maxLongRunMs = 5000,
   longAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-  allowsMissMarkers = false
+  allowsMissMarkers = false,
+  rejectsInvalidKeys = false,
+  invalidKeyPredicate
 }) {
   const engine = engines[name];
   const edgeInputs = [
@@ -185,13 +187,18 @@ function defineRobustnessSpec({
     }
   });
 
-  test(`${name}: invalid keys do not throw uncaught exceptions`, () => {
+  test(`${name}: invalid keys fail cleanly or use a documented fallback`, () => {
     const invalidKeys = [
       undefined, null, '', '   ', '!!!', '0', '-5', '3.7', 'a,b,c,d',
       '999999999999999999999', 'A'.repeat(10000)
     ];
     const garbage = allowsMissMarkers ? /undefined|NaN|�/ : /undefined|NaN|\?{2,}|�/;
     for (const key of invalidKeys) {
+      if (rejectsInvalidKeys && (invalidKeyPredicate ? invalidKeyPredicate(key) :
+        key !== undefined && key !== null && String(key).trim() !== '')) {
+        assert.throws(() => engine.encode('TEST', key), Error, `key=${String(JSON.stringify(key)).slice(0, 40)}`);
+        continue;
+      }
       assert.doesNotThrow(() => {
         const encoded = engine.encode('TEST', key);
         assert.equal(typeof encoded, 'string');

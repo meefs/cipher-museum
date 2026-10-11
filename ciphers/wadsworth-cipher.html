@@ -442,7 +442,13 @@ To encipher one letter:
       (extra ? " " + extra : "");
   }
 
+  var runInterval = null;
+  function stop() {
+    if (runInterval !== null) { clearInterval(runInterval); runInterval = null; }
+  }
+
   function reset() {
+    stop();
     inner = makeInner(keyEl.value);
     plain = String(msgEl.value || "").toUpperCase().replace(/[^A-Z]/g, "");
     cursor = 0; innerPos = 0; outerPos = 0; cipher = "";
@@ -472,15 +478,18 @@ To encipher one letter:
   }
 
   function all() {
+    stop();
     if (cursor >= plain.length) reset();
     if (reduceMotion()) {
       while (step()) { /* straight to the end, no animation */ }
       return;
     }
-    var iv = setInterval(function () { if (!step()) clearInterval(iv); }, 480);
+    runInterval = setInterval(function () {
+      if (!step()) { clearInterval(runInterval); runInterval = null; }
+    }, 480);
   }
 
-  document.getElementById("wd-step").addEventListener("click", step);
+  document.getElementById("wd-step").addEventListener("click", function () { stop(); step(); });
   document.getElementById("wd-all").addEventListener("click", all);
   document.getElementById("wd-reset").addEventListener("click", reset);
   msgEl.addEventListener("change", reset);

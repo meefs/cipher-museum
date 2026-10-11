@@ -23,7 +23,9 @@ const SECURE_ALLOWLIST = new Set([
   'ciphers/shamir-secret-sharing.html',
   'ciphers/zero-knowledge-proofs.html'
 ]);
-const HISTORICAL_SYSTEMS = ['sigaba', 'typex', 'kl-7', 'fialka', 'navajo-code-talkers'];
+const WARTIME_UNBROKEN_SYSTEMS = ['sigaba', 'typex', 'kl-7', 'fialka', 'navajo-code-talkers'];
+const HISTORICAL_COMPROMISES = ['vic', 'stager', 'culper-ring', 'arnold-andre', 'che-guevara'];
+const HISTORICAL_SYSTEMS = [...WARTIME_UNBROKEN_SYSTEMS, ...HISTORICAL_COMPROMISES];
 const CONTEXT_EXHIBITS = [
   'egyptian-substitution', 'aeneas-tacticus', 'rosetta-stone', 'chinese-telegraph', 'morse',
   'phaistos-disc', 'bletchley-park', 'cabinet-noir', 'kerckhoffs', 'station-hypo', 'bible-code',
@@ -47,7 +49,7 @@ function htmlFiles(dir) {
 
 const { exhibits } = JSON.parse(read('data/exhibit-trust.json'));
 assert.equal(SECURE_ALLOWLIST.size, 9, 'Exactly nine modern systems');
-assert.equal(LABELS.historical.description, 'No longer in use, or never confirmed broken/deciphered.', 'Agreed historical definition');
+assert.equal(LABELS.historical.description, 'Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise.', 'Agreed historical definition');
 assert.deepEqual(Object.keys(LABELS).sort(), ['broken', 'educational', 'historical', 'secure']);
 const { trustFor } = loadTrust(ROOT);
 const cards = JSON.parse(read('data/artifact-cards.json')).cards;
@@ -73,11 +75,18 @@ for (const slug of CONTEXT_EXHIBITS) {
 for (const slug of HISTORICAL_SYSTEMS) {
   const rel = `ciphers/${slug}.html`;
   assert.equal(byPath.get(rel)?.label, 'historical', `${slug}: obsolete service success is Historical Only`);
+  assert.match(byPath.get(rel)?.note || '', /never|capture|defector|superseded|cryptanalytic/i,
+    `${slug}: manifest note distinguishes cryptanalysis from operational history`);
+  const dom = parse(rel);
+  assert.equal(dom.window.document.querySelector('.page-meta .sec-secure'), null,
+    `${slug}: service history must not use a green security badge`);
+  dom.window.close();
+}
+for (const slug of WARTIME_UNBROKEN_SYSTEMS) {
+  const rel = `ciphers/${slug}.html`;
   const dom = parse(rel);
   assert.match(dom.window.document.querySelector('.cipher-significance').textContent,
     /never publicly broken/i, `${slug}: qualify the historical claim in exhibit prose`);
-  assert.equal(dom.window.document.querySelector('.page-meta .sec-secure'), null,
-    `${slug}: service history must not use a green security badge`);
   dom.window.close();
 }
 for (const slug of ['scytale', 'caesar', 'polybius', 'pigpen', 'bacon', 'tap-code', 'atbash', 'rot13',

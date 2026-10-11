@@ -120,6 +120,11 @@ function engineNameFor(cipherType) {
 
 function extractKey(record) {
   const key = record.key;
+  // These historical records carry settings outside the intentionally narrow
+  // teaching APIs. Feed a valid neutral setting so replay records the expected
+  // historical-variant mismatch; unsupported metadata must not become a throw.
+  if (record.source_type === 'historical' && record.cipher_type === 'enigma') return 'AAA';
+  if (record.source_type === 'historical' && record.cipher_type === 'alberti_disk') return '3';
   if (['rs44', 'double_playfair', 'amsco'].includes(record.cipher_type)) {
     if (!key || key.type !== 'settings' || !key.settings || typeof key.settings !== 'object' || Array.isArray(key.settings)) {
       throw new Error('Manual-cipher corpus records require explicit key.settings');
@@ -136,7 +141,7 @@ function extractKey(record) {
       const length = String(record.plaintext || '').toUpperCase().replace(/[^A-Z]/g, '').length;
       return base.repeat(Math.ceil(length / base.length)).slice(0, length);
     }
-    return value;
+    return record.cipher_type === 'm209' ? `legacy:${value}` : value;
   }
   if (key.shift !== undefined) return String(key.shift);
   if (key.a !== undefined && key.c === undefined) return `${key.a},${key.b ?? 0}`;

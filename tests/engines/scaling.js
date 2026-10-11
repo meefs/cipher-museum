@@ -44,6 +44,7 @@ const MAX_REPEATS = 128;
 // is not represented here is reported as skipped and fails the coverage check.
 const KEYS = {
   rasterschluessel44: 'manual', doublePlayfair: 'manual', amsco: '41325',
+  caesar: '3', affine: '5,8',
   hill: '3,3,2,5', trifid: 'FELIX', railFence: '3', scytale: '3', stager: '2',
   alberti: '3', bazeries: '42', jefferson: '3,1,5,2,4,6', enigma: 'AAA',
   gronsfeld: '31415', patterson: '13,34,57,65,22,78,49',

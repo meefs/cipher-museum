@@ -126,6 +126,14 @@
 
     function escapeHTML(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 
+    function syncUrl(method) {
+      var url = new URL(location.href);
+      var text = q.value.trim();
+      if (text) url.searchParams.set('q', text); else url.searchParams.delete('q');
+      if (kindFilter.value) url.searchParams.set('kind', kindFilter.value); else url.searchParams.delete('kind');
+      history[method || 'replaceState']({}, '', url.pathname + url.search + url.hash);
+    }
+
     function render() {
       var raw = q.value.trim();
       var kind = kindFilter.value;
@@ -175,17 +183,27 @@
     }
 
     var t;
-    function debounce() { clearTimeout(t); t = setTimeout(render, 80); }
+    function debounce() { clearTimeout(t); t = setTimeout(function () { render(); syncUrl('replaceState'); }, 80); }
     q.addEventListener('input', debounce);
-    kindFilter.addEventListener('change', render);
+    kindFilter.addEventListener('change', function () { render(); syncUrl('pushState'); });
 
     document.querySelectorAll('.suggest').forEach(function (b) {
-      b.addEventListener('click', function () { q.value = b.dataset.q; render(); q.focus(); });
+      b.addEventListener('click', function () { q.value = b.dataset.q; render(); syncUrl('pushState'); q.focus(); });
     });
 
     // URL ?q= prefill
     var params = new URLSearchParams(location.search);
     var preset = params.get('q');
+    var presetKind = params.get('kind');
+    if (['cipher', 'hall', 'page'].indexOf(presetKind) >= 0) kindFilter.value = presetKind;
+
+    window.addEventListener('popstate', function () {
+      var state = new URLSearchParams(location.search);
+      q.value = state.get('q') || '';
+      var stateKind = state.get('kind') || '';
+      kindFilter.value = ['cipher', 'hall', 'page'].indexOf(stateKind) >= 0 ? stateKind : '';
+      render();
+    });
 
     function init(entries) {
       var list = Array.isArray(entries) ? entries : [];

@@ -111,8 +111,12 @@ const KATS = {
   straddlingCheckerboard: kat('0', engine => engine.encode('A', 'ATONESIRE'), 'checkerboard derivation'),
   // Key A yields natural left alphabet and right rotated by 13; right-A index 13 -> left-N.
   chaocipher: kat('N', engine => engine.encode('A', 'A'), 'Chaocipher initial-alphabet derivation'),
-  // Pinned from the audited implementation (seeded pin-and-lug model).
-  m209: kat('E', engine => engine.encode('A', 'HAGELIN'), 'pinned regression vector'),
+  // TM 11-380 arithmetic: 20 displaced bars with reversed alphabet map A to T.
+  m209: kat('T', engine => engine.encode('A', {
+    pins: [Array(26).fill(1), Array(25).fill(0), Array(23).fill(0), Array(21).fill(0), Array(19).fill(0), Array(17).fill(0)],
+    lugs: [...Array.from({ length: 20 }, () => [1, 0]), ...Array.from({ length: 7 }, () => [2, 0])],
+    positions: [0, 0, 0, 0, 0, 0]
+  }), 'TM 11-380 reciprocal-alphabet arithmetic'),
   // Official Schneier vector: https://www.schneier.com/academic/solitaire/
   solitaire: kat('ITHZUJIWGRFARMW', engine => engine.encode('AAAAAAAAAAAAAAA', 'FOO'), 'Schneier Solitaire vector'),
   // A book containing ALPHA at position 1 encodes A as index 1.
