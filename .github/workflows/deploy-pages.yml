@@ -24,6 +24,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Verify corpus download bytes
+        working-directory: public/corpus
+        run: sha256sum -c SHA256SUMS.txt
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

@@ -86,4 +86,16 @@ for(const name of ['patterson','wadsworth','venonaPadReuse']) {
  d.getElementById('wbInput').value=ct;d.getElementById('wbDecode').click();assert.equal(d.getElementById('wbOutput').textContent,'THEQUICKBROWNFOX');
 }
 dom.window.close();
+// Download buttons must resolve to the regenerated files, not old eval mirrors.
+const downloadDom=new JSDOM(read('cipher-corpus.html'),{runScripts:'outside-only'});
+let opened;
+downloadDom.window.open=url=>{opened=url;};
+downloadDom.window.eval(read('js/ui-delegates.js'));
+for(const name of ['llm-3shot-eval.jsonl','manual-ciphers-v0.6.jsonl','all.jsonl']) {
+ downloadDom.window.document.querySelector(`[data-file="${name}"]`).click();
+ assert.equal(opened,'/public/corpus/'+name);
+}
+downloadDom.window.close();
+assert.match(read('.github/workflows/deploy-pages.yml'),/lfs: true/,'Pages deploys corpus data, not LFS pointer text');
+assert.match(read('.github/workflows/deploy-pages.yml'),/sha256sum -c SHA256SUMS.txt/);
 console.log('Corpus v0.6: append-only baseline, 300 new records, keys, independent answers, metadata, split/export coverage and all 88 workbench options verified.');
