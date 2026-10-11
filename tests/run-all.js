@@ -6,6 +6,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const suites = [
+  'tests/test-corpus-v06.js',
   'tests/test-all-engines.js',
   'tests/engines/run.js',
   'tests/test-deep-ciphers.js',

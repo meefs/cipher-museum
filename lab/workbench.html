@@ -152,6 +152,9 @@
   var CE = window.CipherEngines;
   var engineCountCopy = document.getElementById('engine-count-copy');
   var CIPHERS = [
+    {id:'patterson',name:'Patterson',hasKey:true,keyLabel:'Line order and prefix counts',keyDefault:'13,34,57,65,22,78,49'},
+    {id:'wadsworth',name:'Wadsworth Disk',hasKey:true,keyLabel:'Inner-disk keyword (model setting)',keyDefault:'WADSWORTH'},
+    {id:'venonaPadReuse',name:'VENONA pad-reuse teaching model',hasKey:true,keyLabel:'Pad key (illustrative model)',keyDefault:'SECRET'},
     {id:'rasterschluessel44',name:'RS44 (27 March 1944; prepared letters, max 200)',hasKey:true,keyLabel:'Key: manual, or JSON settings (short teaching mode by default)',keyDefault:'manual'},
     {id:'doublePlayfair',name:'German Double Playfair (December 1941; J→II, odd filler Z)',hasKey:true,keyLabel:'Key: manual, or JSON squares/filler/strict (no operational limit by default)',keyDefault:'manual'},
     {id:'amsco',name:'AMSCO (ACA digraph-first)',hasKey:true,keyLabel:'Column rank permutation, or JSON order/first',keyDefault:'41325'},

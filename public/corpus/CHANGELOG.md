@@ -1,5 +1,14 @@
 # Cipher Corpus Changelog
 
+## v0.6 (2026-10-11)
+- Append 300 synthetic exercises: 100 each for RS44, German Double Playfair, and AMSCO. Total: 100,326 records, 85 cipher types mapping to 84 museum engines.
+- Preserve the complete 100,026-record v0.5 prefix byte for byte, including IDs, answers, and public/blind assignments; its hash and source commit are recorded in `stats.json`.
+- Store explicit structured keys and conventions: RS44 synthetic stencils with 60–200-letter strict bodies, Double Playfair J→II and retained odd filler, AMSCO alternating cells with explicit first-cell size.
+- Replay: 99,800 exact matches; the same 526 known-deviation records and 1,051 mismatch events; no widened exceptions.
+- Regenerate JSON/JSONL/CSV downloads, difficulty subsets, browser samples, engine manifest, checksums and 300 public-split evaluation prompts. CSV now includes JSON keys, notes and scoring conventions.
+- Canonical set: 9 languages and 54 records labeled historical. Separate historical file: 100 records, with 45 IDs outside canonical; Arabic supplement: 1,710 records outside canonical. Their merge is deferred, superseding the earlier v0.6 plan.
+- Existing public and blind labels are preserved. Both labels remain downloadable; “blind” is a split designation, not secret held-out data.
+
 ## v0.5 (2026-07-17)
 - **Engine-verified regeneration.** The 2026 engine verification sweep corrected real defects in the museum's cipher engines (Vernam is now true bytewise XOR with hex ciphertext, Lorenz is a 12-wheel ITA2 XOR model, VIC applies checkerboard + chain addition + double transposition, Purple preserves the sixes/twenties partition, and nine engines use reversible X/Q/Z filler escaping). 7,708 records whose ciphertexts were produced by the old engines were regenerated with the corrected engines (`scripts/regenerate-corpus-v05.js`); touched records carry a regeneration note and `dataset_version: 0.5`.
 - **Key metadata repaired on 1,292 records** so every record is reproducible from its own metadata: running-key records now store the actual key text instead of the label "Declaration of Independence (opening)"; solitaire records store the explicit CRYPTONOMICON passphrase; one-time-pad/Vernam "(repeating)" stubs are materialized to full-length explicit pads.

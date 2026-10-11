@@ -1,6 +1,6 @@
 {
-  "generated": "2026-04-27",
-  "total_records": 100026,
+  "generated": "2026-10-11",
+  "total_records": 100326,
   "engines": [
     {
       "name": "caesar",
@@ -649,6 +649,31 @@
       "difficulty": "advanced",
       "variants": 3,
       "record_count": 870
+    },
+    {
+      "name": "rasterschluessel44",
+      "label": "RS44",
+      "category": "transposition",
+      "difficulty": "advanced",
+      "variants": 100,
+      "record_count": 100
+    },
+    {
+      "name": "doublePlayfair",
+      "label": "German Double Playfair",
+      "category": "polygraphic",
+      "difficulty": "advanced",
+      "variants": 100,
+      "record_count": 100
+    },
+    {
+      "name": "amsco",
+      "label": "AMSCO",
+      "category": "transposition",
+      "difficulty": "intermediate",
+      "variants": 100,
+      "record_count": 100
     }
-  ]
+  ],
+  "dataset_version": "0.6"
 }

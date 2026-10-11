@@ -22,7 +22,7 @@
 
     if ('file' in el.dataset) {
       var name = el.dataset.file;
-      var base = name === 'llm-3shot-eval.jsonl' ? '/public/eval/' : '/public/corpus/';
+      var base = '/public/corpus/';
       window.open(base + name, '_blank');
       return;
     }

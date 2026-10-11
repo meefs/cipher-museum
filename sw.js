@@ -16,7 +16,7 @@
  */
 'use strict';
 
-const VERSION = 'cipher-museum-f5453758';
+const VERSION = 'cipher-museum-374ac959';
 
 const CORE = [
   '/',

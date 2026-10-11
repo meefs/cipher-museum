@@ -1,54 +1,31 @@
-# Publishing the Cipher Corpus (DOI + mirrors)
+# Publishing Cipher Corpus v0.6
 
-Steps that require account access and are therefore yours to run, Paul. Every
-prerequisite in the repo is already done: `CITATION.cff` is current (v0.5),
-`public/corpus/SHA256SUMS.txt` covers every distributed file, the CHANGELOG has
-a v0.5 entry, and the `corpus-v0.5` git tag marks the exact commit.
+The repository contains the v0.6 dataset and reproducible generator. External
+Zenodo/Hugging Face publication is a separate step; do not claim a DOI or mirror
+has been updated merely because repository tests pass.
 
-## 1. Zenodo DOI (makes the BibTeX citation real)
+## Repository release checklist
 
-1. Sign in at https://zenodo.org (GitHub login works) and, under
-   *GitHub* in account settings, flip the toggle for
-   `systemslibrarian/cipher-museum`.
-2. Create a GitHub **Release** from the `corpus-v0.5` tag (Releases → Draft new
-   release → choose tag `corpus-v0.5`). Paste the v0.5 CHANGELOG entry as the
-   release notes. Zenodo archives the release automatically and mints a DOI
-   (plus a version-independent "concept DOI").
-3. Add the concept DOI to: `CITATION.cff` (`doi:` field),
-   `public/corpus/README.md` citation section, and the cipher-corpus.html page.
+1. Run `npm run validate:corpus`, `node tests/test-corpus-v06.js`,
+   `npm run test:engines`, and the full `npm test` suite.
+2. Run `sha256sum -c SHA256SUMS.txt` from `public/corpus`.
+3. Verify the Git LFS objects for `all.json` and `all.jsonl` are uploaded.
+4. Create a new `corpus-v0.6` tag/release only on the verified commit; never
+   move `corpus-v0.5`. Use the v0.6 changelog entry and disclose the unchanged
+   526 known-deviation records and deferred supplemental merge.
 
-Notes: Zenodo archives the repository tarball — the LFS files (`all.jsonl`,
-`all.json`) are pointers inside that tarball, so ALSO attach the real
-`all.jsonl` (and `SHA256SUMS.txt`) as release assets so the archived record is
-self-contained. GitHub release assets allow files up to 2 GB.
+## Zenodo and Hugging Face
 
-## 2. Hugging Face mirror (discoverability alongside CipherBank)
+Zenodo repository archives may contain LFS pointers. Attach the actual dataset
+files and checksums as release assets before calling an archive self-contained.
+For Hugging Face, upload the canonical exports, evaluation prompts, checksums,
+statistics and dataset README; retain per-record licensing and document split
+labels accurately. Update DOI and mirror links only after publication succeeds.
 
-1. `pip install huggingface_hub` and `huggingface-cli login`.
-2. Create dataset repo, e.g. `systemslibrarian/cipher-corpus`.
-3. Upload `all.jsonl`, `llm-3shot-eval.jsonl`, `SHA256SUMS.txt`, and a dataset
-   card (the corpus README is 90% of the card; add the `license: cc0-1.0`
-   YAML header for synthetic records and note the per-record license field).
-4. Link the HF dataset from cipher-corpus.html and the README, next to the
-   CipherBank links.
+## Scope
 
-## 3. External review (the one thing no test suite provides)
-
-Suggested reviewers to approach with the ENGINE_AUDIT + one exhibit each:
-- the American Cryptogram Association (the engines already follow ACA
-  conventions, e.g. omit-J Playfair) — the *Cryptogram* editors review
-  educational material;
-- Crypto Museum (cryptomuseum.com) for the machine-cipher exhibits;
-- any university history-of-cryptography course staff for the historical
-  prose.
-
-A single "reviewed by" acknowledgment on the About page is award-material.
-
-## Already done in-repo (no action needed)
-
-- `CITATION.cff` v0.5 with CipherBank reference intact
-- `SHA256SUMS.txt` (verify with `sha256sum -c SHA256SUMS.txt`)
-- `llm-3shot-eval.jsonl` ships again (300 deterministic public-split prompts)
-- v0.2 leftover expansion files archived under `public/corpus/archive/`
-- Canonical-vs-subset relationships documented in the corpus README
-- Pending v0.6 merge documented (1,710 Arabic + 46 historical records)
+v0.6 adds 300 synthetic RS44, German Double Playfair and AMSCO exercises to the
+100,026-record baseline: 100,326 records across 85 cipher-type labels. The older
+1,710 Arabic and 45 historical supplemental records remain outside canonical
+replay; merging them is deferred. The baseline prefix hash in `stats.json`
+proves previous records and split assignments remain unchanged.

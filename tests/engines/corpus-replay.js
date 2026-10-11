@@ -16,6 +16,8 @@ const engineAt = process.argv.indexOf('--engine');
 const engineFilter = engineAt >= 0 ? process.argv[engineAt + 1] : null;
 
 const TYPE_MAP = {
+  rs44: 'rasterschluessel44',
+  double_playfair: 'doublePlayfair',
   rail_fence: 'railFence',
   columnar_transposition: 'columnar',
   double_transposition: 'doubleTransposition',
@@ -118,6 +120,12 @@ function engineNameFor(cipherType) {
 
 function extractKey(record) {
   const key = record.key;
+  if (['rs44', 'double_playfair', 'amsco'].includes(record.cipher_type)) {
+    if (!key || key.type !== 'settings' || !key.settings || typeof key.settings !== 'object' || Array.isArray(key.settings)) {
+      throw new Error('Manual-cipher corpus records require explicit key.settings');
+    }
+    return key.settings;
+  }
   if (!key || typeof key !== 'object') return String(key ?? '');
   if (record.cipher_type === 'solitaire' && key.type === 'none') return '1';
   if (key.value !== undefined && key.value !== null) {
@@ -179,6 +187,15 @@ function compactCiphertext(value) {
   return String(value ?? '').toUpperCase().replace(/\s+/g, '');
 }
 
+function expectedPlaintext(record) {
+  let plain = applyPlaintextPolicy(record.plaintext, record);
+  if (record.cipher_type === 'double_playfair') {
+    plain = plain.replace(/J/g, 'II');
+    if (plain.length % 2) plain += extractKey(record).filler;
+  }
+  return plain;
+}
+
 function deviationFor(record, kind, engineName) {
   // Deviation rules may only explain encode/decode mismatches. A thrown
   // exception or a missing engine is always an unexplained failure.
@@ -192,8 +209,8 @@ function deviationFor(record, kind, engineName) {
 // vanished one) changes the count and fails the run. Update these numbers only
 // alongside a reviewed engine or corpus change that explains the delta.
 const EXPECTED_FULL_RUN = {
-  records: 100026,
-  passed: 99500,
+  records: 100326,
+  passed: 99800,
   knownRecords: 526,
   knownEvents: 1051,
   events: {
@@ -274,10 +291,10 @@ async function main() {
       continue;
     }
 
-    const key = extractKey(record);
     let recordPassed = true;
     let recordKnown = false;
     try {
+      const key = extractKey(record);
       const encoded = engine.encode(record.plaintext, key);
       const expectedCiphertext = compactCiphertext(record.ciphertext);
       const actualCiphertext = compactCiphertext(encoded);
@@ -287,11 +304,11 @@ async function main() {
       }
 
       const decoded = engine.decode(record.ciphertext, key);
-      const expectedPlaintext = applyPlaintextPolicy(record.plaintext, record);
+      const expectedPlain = expectedPlaintext(record);
       const actualPlaintext = applyPlaintextPolicy(decoded, record);
-      if (actualPlaintext !== expectedPlaintext) {
+      if (actualPlaintext !== expectedPlain) {
         recordPassed = false;
-        recordKnown = recordFailure(record, engineName, 'decode', expectedPlaintext, actualPlaintext) || recordKnown;
+        recordKnown = recordFailure(record, engineName, 'decode', expectedPlain, actualPlaintext) || recordKnown;
       }
     } catch (error) {
       recordPassed = false;
@@ -356,5 +373,6 @@ module.exports = {
   engineNameFor,
   extractKey,
   applyPlaintextPolicy,
-  compactCiphertext
+  compactCiphertext,
+  expectedPlaintext
 };
