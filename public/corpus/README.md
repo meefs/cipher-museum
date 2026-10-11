@@ -82,6 +82,22 @@ that is why canonical historical source-type count is 54. The older supplement
 merge is **deferred to a future release**, superseding the earlier v0.6 plan.
 Those outside-canonical records are not covered by canonical replay.
 
+### Published archive
+
+The immutable v0.6 archive is published on Zenodo under the
+[version DOI 10.5281/zenodo.23297920](https://doi.org/10.5281/zenodo.23297920).
+Use that DOI when citing or reproducing this release. The
+[concept DOI 10.5281/zenodo.23297919](https://doi.org/10.5281/zenodo.23297919)
+resolves to the evolving collection across versions.
+
+The Zenodo record contains 12 files. Its canonical dataset format is
+`all.jsonl`; the other 11 files provide the schema, v0.6 subset, evaluation
+prompts, statistics, citation and rights metadata, documentation, changelog,
+and checksums. The website download area additionally provides the derived
+`all.json` and `all.csv` representations, difficulty subsets, browser sample,
+and separate supplements. Those additional website downloads are not part of
+the 12-file Zenodo v0.6 archive.
+
 Both public and blind split records are downloadable. “Blind” denotes a split
 label, not confidentiality or protection against benchmark contamination. Do
 not train and evaluate on the same split; use a separately held-out dataset
@@ -153,12 +169,15 @@ Cipher Corpus builds on the pioneering work of **CipherBank** by Li et al. (2025
 ### Cite Cipher Corpus
 
 ```bibtex
-@misc{lester2026cipherCorpus,
-  title={Cipher Corpus: Comprehensive Classical Cryptanalysis Benchmark},
-  author={Lester, Paul},
+@dataset{clark_2026_23297920,
+  author={Clark, Paul A.},
+  title={Cipher Corpus v0.6: A Classical Cryptography Dataset},
+  month={oct},
   year={2026},
-  url={https://ciphermuseum.com/cipher-corpus.html},
-  note={100,326 records across 85 cipher types, 9 canonical languages, 54 canonical historical records}
+  publisher={Zenodo},
+  version={0.6},
+  doi={10.5281/zenodo.23297920},
+  url={https://doi.org/10.5281/zenodo.23297920}
 }
 ```
 

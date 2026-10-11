@@ -10,6 +10,11 @@ The Cipher Museum is part digital exhibit, part cipher playground, and part code
 
 **[Live Site →](https://ciphermuseum.com)**
 
+[![Cipher Corpus v0.6 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23297920.svg)](https://doi.org/10.5281/zenodo.23297920)
+
+Cipher Corpus v0.6 is archived on Zenodo under the
+[version DOI 10.5281/zenodo.23297920](https://doi.org/10.5281/zenodo.23297920).
+
 ---
 
 ## 📰 Latest Update
@@ -23,6 +28,7 @@ The Cipher Museum is part digital exhibit, part cipher playground, and part code
 - **Cipher Corpus v0.6** ([cipher-corpus.html](cipher-corpus.html)) — **100,326 records across 85 cipher types**, including 100 synthetic exercises each for RS44, German Double Playfair, and AMSCO. All 100,026 v0.5 records and split assignments remain byte-identical; the new records include explicit reproducible settings and documented text conventions.
   - **Pinned replay:** 99,800 exact matches and 526 existing known-deviation records; no new exceptions. The original independent manual/ACA known-answer tests remain separate from generated exercises.
   - **Downloads and evaluation:** JSONL, JSON, CSV (including keys), browser samples, 300 public-split evaluation prompts, engine manifest and SHA-256 checksums are regenerated. See [corpus documentation](public/corpus/README.md).
+  - **Published archive:** [Zenodo v0.6](https://doi.org/10.5281/zenodo.23297920) preserves the canonical JSONL dataset and 11 supporting files. The website additionally provides JSON, CSV, difficulty subsets, and browser samples.
   - The older Arabic and historical supplements remain outside the canonical benchmark; their merge is deferred to a future release.
 - **Engine verification suite** ([docs/CIPHER_ENGINE_STANDARD.md](docs/CIPHER_ENGINE_STANDARD.md)) — a dedicated `tests/engines/` layer with **one spec file per engine** (fast-check property roundtrips, robustness, invalid-key handling across 11 key shapes, Unicode policy, state isolation, and a fixed known-answer test each), the legacy KAT suites, full Enigma vectors, a mutation canary that proves the harness catches deliberately corrupted engines, and the strict corpus replay above.
 - **Exhibit accuracy sweep** — all 139 exhibit pages audited against the engines. **31 mismatched hardcoded examples corrected across 20+ pages** (ADFGX/ADFGVX squares, Bacon variant table, Enigma worked example recomputed from the real engine trace, Navajo challenge, pigpen figure, bible-code arithmetic, and more), plus the **Diana cryptosystem provenance closed** (rule corrected to the authentic Special Forces `C = (25 − P − K) mod 26` and pinned to a published pad vector). The new permanent suite `tests/test-exhibit-examples.js` pins every page-displayed vector against the engines so exhibit prose can no longer drift from engine behavior.

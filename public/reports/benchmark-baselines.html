@@ -30,13 +30,13 @@
 </header>
 <main>
   <h1>Cipher Corpus Benchmark Baselines</h1>
-  <p style="color:var(--fg-muted,#bfa76a)">Generated 2026-04-27 · v0.2 · <a href="/public/reports/benchmark-baselines.json">Download JSON</a></p>
+  <p style="color:var(--fg-muted,#bfa76a)">Generated 2026-10-11 · v0.6 · <a href="/public/reports/benchmark-baselines.json">Download JSON</a></p>
 
   <div>
-    <div class="stat-box"><div class="stat-num">100,026</div><div class="stat-label">Total Records</div></div>
-    <div class="stat-box"><div class="stat-num">82</div><div class="stat-label">Cipher Types</div></div>
+    <div class="stat-box"><div class="stat-num">100,326</div><div class="stat-label">Total Records</div></div>
+    <div class="stat-box"><div class="stat-num">85</div><div class="stat-label">Cipher Types</div></div>
     <div class="stat-box"><div class="stat-num">9</div><div class="stat-label">Languages</div></div>
-    <div class="stat-box"><div class="stat-num">30104</div><div class="stat-label">Blind Split Records</div></div>
+    <div class="stat-box"><div class="stat-num">30194</div><div class="stat-label">Blind Split Records</div></div>
     <div class="stat-box"><div class="stat-num">54</div><div class="stat-label">Historical Records</div></div>
   </div>
 
@@ -45,8 +45,8 @@
     <thead><tr><th>Difficulty</th><th>Records</th><th>Human Expert</th><th>Automated Solver</th><th>LLM 3-Shot</th><th>LLM 0-Shot Challenge</th></tr></thead>
     <tbody>
       <tr><td class="diff-beginner">beginner</td><td>15907</td><td>95-100%</td><td>95-100%</td><td>80-95%</td><td>60-80%</td></tr>
-<tr><td class="diff-intermediate">intermediate</td><td>29410</td><td>60-90%</td><td>60-90%</td><td>40-70%</td><td>20-50%</td></tr>
-<tr><td class="diff-advanced">advanced</td><td>27708</td><td>20-60%</td><td>20-60%</td><td>10-40%</td><td>5-20%</td></tr>
+<tr><td class="diff-intermediate">intermediate</td><td>29510</td><td>60-90%</td><td>60-90%</td><td>40-70%</td><td>20-50%</td></tr>
+<tr><td class="diff-advanced">advanced</td><td>27908</td><td>20-60%</td><td>20-60%</td><td>10-40%</td><td>5-20%</td></tr>
 <tr><td class="diff-expert">expert</td><td>27001</td><td>5-30%</td><td>5-30%</td><td>2-15%</td><td>1-5%</td></tr>
     </tbody>
   </table>
@@ -511,17 +511,20 @@
     <thead><tr><th>Benchmark</th><th>Records</th><th>Algorithms</th><th>Historical</th><th>Blind Splits</th><th>Multilingual</th></tr></thead>
     <tbody>
       <tr><td><a href="https://arxiv.org/pdf/2504.19093" target="_blank" rel="noopener noreferrer">CipherBank (Li et al., 2025)</a></td><td>2,358</td><td>9</td><td>No</td><td>No</td><td>No</td></tr>
-      <tr><td><strong><a href="../../cipher-corpus.html">Cipher Corpus v0.2</a></strong></td><td><strong>100,026</strong></td><td><strong>82</strong></td><td><strong>Yes (54)</strong></td><td><strong>Yes (30104)</strong></td><td><strong>Yes (9 langs)</strong></td></tr>
+      <tr><td><strong><a href="../../cipher-corpus.html">Cipher Corpus v0.6</a></strong></td><td><strong>100,326</strong></td><td><strong>85</strong></td><td><strong>Yes (54)</strong></td><td><strong>Public labels (30194)</strong></td><td><strong>Yes (9 langs)</strong></td></tr>
     </tbody>
   </table>
 
   <h2>Citation</h2>
-  <pre style="background:#222;color:#ffd700;padding:1em;border-radius:6px;overflow-x:auto">@misc{lester2026cipherCorpus,
-  title={Cipher Corpus: Comprehensive Classical Cryptanalysis Benchmark},
-  author={Lester, Paul},
+  <pre style="background:#222;color:#ffd700;padding:1em;border-radius:6px;overflow-x:auto">@dataset{clark_2026_23297920,
+  author={Clark, Paul A.},
+  title={Cipher Corpus v0.6: A Classical Cryptography Dataset},
+  month={oct},
   year={2026},
-  url={https://ciphermuseum.com/cipher-corpus.html},
-  note={100026+ test cases across 82+ cipher algorithms}
+  publisher={Zenodo},
+  version={0.6},
+  doi={10.5281/zenodo.23297920},
+  url={https://doi.org/10.5281/zenodo.23297920}
 }
 
 @article{li2025cipherbank,
@@ -534,7 +537,7 @@
 </main>
 <footer style="margin-top:3em;padding:2em 0 1em 0;text-align:center;color:var(--fg-muted,#bfa76a)">
   <div>Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God. — 1 Corinthians 10:31</div>
-  <div style="margin-top:0.5em">&copy; Cipher Museum. Synthetic records CC0.</div>
+  <div style="margin-top:0.5em">&copy; Cipher Museum. Synthetic records CC0; historical records retain per-record rights and provenance.</div>
 </footer>
 </body>
 </html>

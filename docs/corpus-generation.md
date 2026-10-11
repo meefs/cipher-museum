@@ -231,11 +231,14 @@ After any generation run that changes record counts, update:
 If you use or extend this corpus in research:
 
 ```bibtex
-@misc{ciphermuseum2026,
-  title        = {Cipher Museum Corpus: 100,000+ Classical Cryptanalysis Test Cases},
-  author       = {Lester, Paul},
+@dataset{clark_2026_23297920,
+  author       = {Clark, Paul A.},
+  title        = {Cipher Corpus v0.6: A Classical Cryptography Dataset},
+  month        = oct,
   year         = {2026},
-  howpublished = {\url{https://ciphermuseum.com/cipher-corpus.html}},
-  note         = {CC0 1.0 Universal}
+  publisher    = {Zenodo},
+  version      = {0.6},
+  doi          = {10.5281/zenodo.23297920},
+  url          = {https://doi.org/10.5281/zenodo.23297920}
 }
 ```

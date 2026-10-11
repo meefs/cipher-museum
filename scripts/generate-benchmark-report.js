@@ -15,7 +15,7 @@ const CORPUS_DIR = path.join(__dirname, '../public/corpus');
 const REPORTS_DIR = path.join(__dirname, '../public/reports');
 if (!fs.existsSync(REPORTS_DIR)) fs.mkdirSync(REPORTS_DIR, { recursive: true });
 
-const TODAY = '2026-04-27';
+const TODAY = '2026-10-11';
 
 // Load corpus
 const lines = fs.readFileSync(path.join(CORPUS_DIR, 'all.jsonl'), 'utf8').split('\n').filter(Boolean);
@@ -78,16 +78,21 @@ const familyStats = Object.entries(byFamily).map(([family, recs]) => ({
 // Overall report
 const report = {
   generated: TODAY,
-  version: '0.2',
+  version: '0.6',
   description: 'Cipher Corpus benchmark baseline statistics for solver evaluation',
   corpus_url: 'https://ciphermuseum.com/cipher-corpus.html',
   citation: {
     cipher_corpus: {
-      title: 'Cipher Corpus: Comprehensive Classical Cryptanalysis Benchmark',
-      author: 'Lester, Paul',
+      title: 'Cipher Corpus v0.6: A Classical Cryptography Dataset',
+      author: 'Clark, Paul A.',
+      orcid: '0009-0004-2394-0991',
       year: 2026,
-      url: 'https://ciphermuseum.com/cipher-corpus.html',
-      note: '17,435+ test cases across 81+ cipher algorithms'
+      version: '0.6',
+      publisher: 'Zenodo',
+      doi: '10.5281/zenodo.23297920',
+      concept_doi: '10.5281/zenodo.23297919',
+      url: 'https://doi.org/10.5281/zenodo.23297920',
+      note: '100,326 canonical records across 85 cipher-type labels'
     },
     related_work: {
       title: 'CipherBank: Exploring the Boundary of LLM Reasoning Capabilities through Cryptography Challenges',
@@ -130,8 +135,8 @@ const report = {
     },
     blind: {
       count: (bySplit.blind || []).length,
-      description: '30% of records — held-out for honest evaluation of trained solvers',
-      note: 'Blind split should only be accessed during final evaluation'
+      description: 'Downloadable evaluation split label; not confidential held-out data',
+      note: 'Do not train and evaluate on the same records; use separately held-out data for genuinely unseen evaluation'
     }
   },
   comparison_with_cipherbank: {
@@ -198,7 +203,7 @@ const html = `<!DOCTYPE html>
 </header>
 <main>
   <h1>Cipher Corpus Benchmark Baselines</h1>
-  <p style="color:var(--fg-muted,#bfa76a)">Generated ${TODAY} · v0.2 · <a href="/public/reports/benchmark-baselines.json">Download JSON</a></p>
+  <p style="color:var(--fg-muted,#bfa76a)">Generated ${TODAY} · v0.6 · <a href="/public/reports/benchmark-baselines.json">Download JSON</a></p>
 
   <div>
     <div class="stat-box"><div class="stat-num">${report.summary.total_records.toLocaleString()}</div><div class="stat-label">Total Records</div></div>
@@ -229,17 +234,20 @@ const html = `<!DOCTYPE html>
     <thead><tr><th>Benchmark</th><th>Records</th><th>Algorithms</th><th>Historical</th><th>Blind Splits</th><th>Multilingual</th></tr></thead>
     <tbody>
       <tr><td><a href="https://arxiv.org/pdf/2504.19093" target="_blank" rel="noopener noreferrer">CipherBank (Li et al., 2025)</a></td><td>2,358</td><td>9</td><td>No</td><td>No</td><td>No</td></tr>
-      <tr><td><strong><a href="../../cipher-corpus.html">Cipher Corpus v0.2</a></strong></td><td><strong>${report.summary.total_records.toLocaleString()}</strong></td><td><strong>${report.summary.cipher_types}</strong></td><td><strong>Yes (${report.summary.historical_records})</strong></td><td><strong>Yes (${report.summary.blind_split})</strong></td><td><strong>Yes (${report.summary.languages.length} langs)</strong></td></tr>
+      <tr><td><strong><a href="../../cipher-corpus.html">Cipher Corpus v0.6</a></strong></td><td><strong>${report.summary.total_records.toLocaleString()}</strong></td><td><strong>${report.summary.cipher_types}</strong></td><td><strong>Yes (${report.summary.historical_records})</strong></td><td><strong>Public labels (${report.summary.blind_split})</strong></td><td><strong>Yes (${report.summary.languages.length} langs)</strong></td></tr>
     </tbody>
   </table>
 
   <h2>Citation</h2>
-  <pre style="background:#222;color:#ffd700;padding:1em;border-radius:6px;overflow-x:auto">@misc{lester2026cipherCorpus,
-  title={Cipher Corpus: Comprehensive Classical Cryptanalysis Benchmark},
-  author={Lester, Paul},
+  <pre style="background:#222;color:#ffd700;padding:1em;border-radius:6px;overflow-x:auto">@dataset{clark_2026_23297920,
+  author={Clark, Paul A.},
+  title={Cipher Corpus v0.6: A Classical Cryptography Dataset},
+  month={oct},
   year={2026},
-  url={https://ciphermuseum.com/cipher-corpus.html},
-  note={${report.summary.total_records}+ test cases across ${report.summary.cipher_types}+ cipher algorithms}
+  publisher={Zenodo},
+  version={0.6},
+  doi={10.5281/zenodo.23297920},
+  url={https://doi.org/10.5281/zenodo.23297920}
 }
 
 @article{li2025cipherbank,
@@ -252,7 +260,7 @@ const html = `<!DOCTYPE html>
 </main>
 <footer style="margin-top:3em;padding:2em 0 1em 0;text-align:center;color:var(--fg-muted,#bfa76a)">
   <div>Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God. — 1 Corinthians 10:31</div>
-  <div style="margin-top:0.5em">&copy; Cipher Museum. Synthetic records CC0.</div>
+  <div style="margin-top:0.5em">&copy; Cipher Museum. Synthetic records CC0; historical records retain per-record rights and provenance.</div>
 </footer>
 </body>
 </html>`;
