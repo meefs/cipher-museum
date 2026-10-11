@@ -10,7 +10,7 @@ The Cipher Museum is part digital exhibit, part cipher playground, and part code
 
 **[Live Museum →](https://ciphermuseum.com)**
 
-[![Cipher Museum software v1.0.0 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23298941.svg)](https://doi.org/10.5281/zenodo.23298941)
+[![DOI](https://zenodo.org/badge/1182903273.svg)](https://doi.org/10.5281/zenodo.23298940)
 [![Cipher Corpus dataset v0.6 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23297920.svg)](https://doi.org/10.5281/zenodo.23297920)
 
 The live museum, software source archive, and research dataset are distinct:
