@@ -69,3 +69,28 @@ Validation is performed with the repository's Node.js 22 runtime and includes:
   LFS object verification;
 - generated metadata/minified-bundle/service-worker freshness and a clean
   regeneration-diff check for the immutable corpus.
+
+## Known drift in dated evidence scripts
+
+`docs/manual-cipher-independent-reference-check.js` is dated review evidence and
+is deliberately left byte-identical, so it is not in `npm test` or CI. It pins
+`data/exhibit-trust.json` against baseline `5a519c8` and therefore asserts
+`ciphers/vic.html` carries the label `broken`. This remediation pass changed that
+label to `historical`, together with `stager`, `culper-ring`, `arnold-andre` and
+`che-guevara`: each was compromised by defection, capture or other operational
+means rather than by cryptanalysis, and the VIC entry's own note already read
+"Never broken by cryptanalysis — exposed by defector (1957)". The label now
+agrees with the note and with the `historical` category description.
+
+Consequently the script stops at its baseline comparison when run at a later
+head. Its primary purpose is unaffected — the RS44, Double Playfair and AMSCO
+source-vector assertions precede that point and still reproduce the printed
+ciphertexts — but the checks that follow it (the JSDOM animation-control
+workflow, the comparison-table row accounting, the search-index agreement and
+the file digests) do not execute. Those behaviours are covered by the permanent
+suites `tests/test-manual-cipher-exhibits.js`, `tests/test-historical-exhibits.js`,
+`tests/test-counts.js` and `tests/test-search.js`.
+
+The script is not updated to pass at the new head: rewriting a dated artifact
+would imply its evidence was gathered at a commit it never ran against. Read it
+as a record of `5a519c8`, and treat this note as its erratum.

@@ -28,12 +28,22 @@
     return String(value || '')
       .normalize('NFKD')
       .replace(/[\u0300-\u036f]/g, '')
-      .replace(/[\u2018\u2019ʼ]/g, "'")
+      // Elide every apostrophe form rather than folding them to one, so an
+      // apostrophe-free query ("geez") reaches an apostrophised title ("Geʼez").
+      .replace(/[\u2018\u2019\u02bbʼ']/g, '')
       .toLowerCase();
   }
 
   function words(value) {
     return normalizeSearchText(value).match(/[\p{L}\p{N}]+/gu) || [];
+  }
+
+  // Separator-insensitive form. Titles hyphenate designations that visitors type
+  // closed up — "M-209", "SHA-256", "KL-7" are searched as "m209", "sha256",
+  // "kl7" — so matching also consults a form with every separator removed.
+  // Used only as an extra alternative, never to replace a normal match.
+  function flatten(value) {
+    return normalizeSearchText(value).replace(/[^\p{L}\p{N}]+/gu, '');
   }
 
   function load() {
@@ -50,6 +60,7 @@
       })
       .then(function (data) {
         _entries = (data.entries || []).map(function (e) {
+          var haystack = e.t + ' ' + (e.h || '') + ' ' + (e.s || '') + ' ' + (e.g || []).join(' ');
           return {
             title: e.t,
             url: BASE + e.u,
@@ -62,10 +73,9 @@
             note: e.n || '',
             summary: e.s,
             tags: e.g || [],
-            _hay: normalizeSearchText(
-              e.t + ' ' + (e.h || '') + ' ' + (e.s || '') + ' ' + (e.g || []).join(' ')
-            ),
-            _words: words(e.t + ' ' + (e.h || '') + ' ' + (e.s || '') + ' ' + (e.g || []).join(' '))
+            _hay: normalizeSearchText(haystack),
+            _words: words(haystack),
+            _flat: flatten(haystack)
           };
         });
         return _entries;
@@ -99,17 +109,19 @@
     var s = 0;
     var matchedField = null;
 
-    if (titleLower === rawLower) { s += 50; matchedField = 'title'; }
-    else if (titleLower.indexOf(rawLower) === 0) { s += 25; matchedField = 'title'; }
-    else if (titleLower.indexOf(rawLower) >= 0) { s += 12; matchedField = 'title'; }
+    var rawFlat = flatten(raw);
+    var titleFlat = flatten(entry.title);
+    if (titleLower === rawLower || titleFlat === rawFlat) { s += 50; matchedField = 'title'; }
+    else if (titleLower.indexOf(rawLower) === 0 || titleFlat.indexOf(rawFlat) === 0) { s += 25; matchedField = 'title'; }
+    else if (titleLower.indexOf(rawLower) >= 0 || titleFlat.indexOf(rawFlat) >= 0) { s += 12; matchedField = 'title'; }
 
     for (var i = 0; i < tokens.length; i++) {
       var tok = tokens[i];
       var hit = false;
       var eraToken = tok === 'wwi' || tok === 'wwii';
       var includesToken = function (value) {
-        var normalized = normalizeSearchText(value);
-        return eraToken ? words(normalized).indexOf(tok) >= 0 : normalized.indexOf(tok) >= 0;
+        if (eraToken) return words(value).indexOf(tok) >= 0;
+        return normalizeSearchText(value).indexOf(tok) >= 0 || flatten(value).indexOf(tok) >= 0;
       };
 
       if (includesToken(titleLower)) { s += 8; hit = true; matchedField = matchedField || 'title'; }
@@ -120,7 +132,8 @@
       }
       if (includesToken(entry.hall || '')) { s += 6; hit = true; matchedField = matchedField || 'hall'; }
       if (includesToken(entry.summary || '')) { s += 4; hit = true; matchedField = matchedField || 'summary'; }
-      if (!hit && (eraToken ? entry._words.indexOf(tok) >= 0 : entry._hay.indexOf(tok) >= 0)) { s += 2; hit = true; matchedField = matchedField || 'any'; }
+      if (!hit && (eraToken ? entry._words.indexOf(tok) >= 0
+          : (entry._hay.indexOf(tok) >= 0 || entry._flat.indexOf(tok) >= 0))) { s += 2; hit = true; matchedField = matchedField || 'any'; }
       if (!hit) return 0; // AND-mode: must hit every token
     }
 

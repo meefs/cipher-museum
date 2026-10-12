@@ -173,6 +173,20 @@ function buildTags(...items) {
 
 // ── process ciphers/*.html ────────────────────────────────────────────────────
 
+// Curated search keywords, for the few exhibits whose obvious search term is
+// in neither the page title nor its meta description, so tags derived from era,
+// hall and trust badge cannot reach it. Keep this list to demonstrated gaps:
+// a hyphenated designation does not belong here, because search already matches
+// a separator-insensitive form ("m209" reaches "M-209").
+const CIPHER_KEYWORDS = {
+  // Named for the modern language that inherited the script; the exhibit and
+  // its description speak only of Geʼez, so "amharic" has nowhere else to match.
+  'amharic-ge-ez-ciphers.html': ['amharic', 'ethiopic', 'geez'],
+  // "Mary Stuart" is her name and is used on the page, but only in body text,
+  // which is not indexed. The title says "Mary Queen of Scots".
+  'mary-stuart-castelnau-letters.html': ['mary stuart', 'stuart'],
+};
+
 function processCipherPage(file) {
   const html  = fs.readFileSync(file, 'utf8');
   const slug  = path.basename(file);
@@ -194,7 +208,7 @@ function processCipherPage(file) {
   const note = byPath.get(rel).note || '';
   const badgeText = trust?.text || '';
   const kind    = classifyKind(hall.href, note || badgeText);
-  const tags    = buildTags(eraKw, hallDisp, badgeText);
+  const tags    = buildTags(eraKw, hallDisp, badgeText, ...(CIPHER_KEYWORDS[slug] || []));
 
   return {
     t: title,

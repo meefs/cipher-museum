@@ -23,6 +23,38 @@ dom.window.eval(fs.readFileSync(path.join(root, 'js/search.js'), 'utf8'));
     dom.window.CipherSearch.normalize([hit.entry.title, hit.entry.created, hit.entry.summary, ...hit.entry.tags].join(' '))
   )), 'WWI query must not match an entry solely because it contains WWII');
 
+  // Apostrophes are elided, not folded to one form: the exhibit is titled
+  // "Ethiopian Geʼez Monastic Ciphers" with U+02BC, and a visitor types "geez".
+  assert.equal(dom.window.CipherSearch.normalize('Geʼez'), 'geez');
+  for (const spelling of ['geez', "ge'ez", 'geʼez', 'ge’ez']) {
+    assert.ok(dom.window.CipherSearch.query(spelling).some(hit => /Geʼez/.test(hit.entry.title)),
+      `apostrophe-insensitive query ${JSON.stringify(spelling)} should reach the Geʼez exhibit`);
+  }
+  assert.ok(dom.window.CipherSearch.query("shamir's").some(hit => /Shamir/.test(hit.entry.title)),
+    'eliding apostrophes must not break a possessive title');
+
+  // Titles hyphenate designations that visitors type closed up. Each of these
+  // returned nothing at all before matching consulted a separator-insensitive
+  // form, and the closed-up spelling must also rank its own exhibit first.
+  for (const [typed, expected] of [['m209', /M-209/], ['sha256', /SHA-256/], ['kl7', /KL-7/], ['c38', /C-38/]]) {
+    const hits = dom.window.CipherSearch.query(typed);
+    assert.ok(hits.length, `${typed} must reach its exhibit`);
+    assert.match(hits[0].entry.title, expected, `${typed} should rank its own exhibit first`);
+  }
+
+  // Era tokens keep the strict word test on every path, flattened included:
+  // a separator-insensitive haystack must not let "wwi" reach "WWII".
+  assert.ok(dom.window.CipherSearch.query('wwi').every(hit => /(^|\W)wwi(\W|$)/i.test(
+    dom.window.CipherSearch.normalize([hit.entry.title, hit.entry.created, hit.entry.summary, ...hit.entry.tags].join(' '))
+  )), 'flattened matching must not reopen the WWI/WWII boundary');
+
+  // Curated keywords in scripts/build-search-index.js, for exhibits whose
+  // obvious search term is in neither the title nor the meta description.
+  for (const [typed, expected] of [['amharic', /Geʼez/], ['stuart', /Mary Queen of Scots/]]) {
+    assert.ok(dom.window.CipherSearch.query(typed).some(hit => expected.test(hit.entry.title)),
+      `curated keyword ${JSON.stringify(typed)} should reach its exhibit`);
+  }
+
   const searchHtml = fs.readFileSync(path.join(root, 'search.html'), 'utf8');
   const page = new JSDOM(searchHtml, {
     url: 'https://ciphermuseum.com/search.html?q=enigma&kind=cipher',
