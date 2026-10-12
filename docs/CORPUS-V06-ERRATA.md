@@ -26,7 +26,7 @@ scope, defect list, and reconstruction IDs are in
 Kryptos section boundaries can be checked against the
 [CIA's official Kryptos page](https://www.cia.gov/legacy/headquarters/kryptos-sculpture/).
 
-Two legacy field conventions also need care when analysing the archive:
+Three legacy conventions also need care when analysing the archive:
 
 - `text_length` and `normalized_text_length` were populated by more than one
   generation path and are not a single comparable unit across every historical
@@ -35,6 +35,16 @@ Two legacy field conventions also need care when analysing the archive:
 - 484 pre-v0.6 records contain a repeated tag. The duplicate value has no
   semantic meaning. The 300 v0.6 additions do not contain repeated tags, and
   the current validator rejects them for newly generated v0.6 records.
+- `cipher-corpus.schema.json` describes `blind` as “held-out for
+  evaluation”. That wording predates the split policy and overstates what the
+  label means: both splits ship in the public download, and neither is
+  confidential nor genuinely unseen. `blind` is a downloadable evaluation
+  split label only — see [`blind-split-policy.md`](blind-split-policy.md).
+  The repository's runner, generators and documentation use the downloadable
+  wording; the archived schema description is covered by `SHA256SUMS.txt` and
+  so cannot be corrected without invalidating published v0.6 checksums. The
+  same wording stands in `archive/cipher-corpus.schema.v0.2.json`. Genuinely
+  unseen evaluation must use a dataset that has not been downloaded.
 
 Corrections to canonical record fields belong in a future corpus release so
 that v0.6 citations and checksums remain reproducible.

@@ -215,6 +215,45 @@ for (const entry of exhibits) {
   assert.deepEqual(search.trust || null, trustFor(entry.path), `${entry.path}: search classification and definition match source`);
   assert.equal(search.b, entry.label === null ? '—' : LABELS[entry.label].text, `${entry.path}: canonical search status`);
 }
+// README is a claim surface too, and nothing read it. Three of these rows kept
+// the pre-reclassification story for two remediation passes while the exhibit,
+// trust note, comparison row, map row and search entry all already agreed.
+// The retired claims, verbatim as they shipped.
+const RETIRED_README_CLAIMS = [
+  ['vic', /\bBroken in 1957\b/i, 'VIC was exposed by a defector, not broken in 1957'],
+  ['vic', /probable-word|depth attack/i, 'no cryptanalytic attack broke VIC'],
+  ['culper-ring', /captured by British/i, 'the Culper codebook was never captured'],
+  ['culper-ring', /decoded from dictionary/i, 'the Tallmadge numbers were never decoded by the British'],
+  ['che-guevara', /probable-word attack/i, 'no cryptanalytic break is claimed for the Che Guevara variant'],
+  ['stager', /knew the word lists from captures/i,
+    'Confederate wiretappers never read a Stager message; the system became public in post-war memoirs']
+];
+const readme = read('README.md');
+function readmeRow(slug) {
+  const row = readme.split('\n').find(line =>
+    new RegExp(`^\\| \\[[^\\]]+\\]\\(https://ciphermuseum\\.com/ciphers/${slug.replace(/-/g, '\\-')}\\.html\\)`).test(line));
+  assert(row, `README.md: exhibit row for ${slug}`);
+  return row;
+}
+for (const slug of HISTORICAL_COMPROMISES) {
+  const row = readmeRow(slug);
+  const note = exhibits.find(entry => entry.path === `ciphers/${slug}.html`).note || '';
+  assert(/Never broken|never captured|no cryptanalytic break|capture|superseded/i.test(note),
+    `${slug}: trust note records the operational compromise`);
+  for (const [target, pattern, reason] of RETIRED_README_CLAIMS) {
+    if (target !== slug) continue;
+    assert.doesNotMatch(row, pattern, `README.md row for ${slug} contradicts its exhibit: ${reason}`);
+  }
+}
+// The VIC row is the one that drifted furthest, so pin it to the page itself.
+const vicDescription = /<meta name="description" content="([^"]*)"/.exec(read('ciphers/vic.html'))[1];
+assert(readmeRow('vic').includes(vicDescription),
+  'README.md: the VIC row description must be the exhibit\'s own meta description');
+// Corrected in 54c7d6e on the page and missed in README for four releases.
+const culperEntries = /Codebook of ~(\d+) numbered entries/.exec(read('ciphers/culper-ring.html'))[1];
+assert(readmeRow('culper-ring').includes(`Roughly ${culperEntries} numbered entries`),
+  `README.md: the Culper Ring entry count must match the exhibit (~${culperEntries})`);
+
 assert.deepEqual(buildTrustLabels({ check: true }), [], 'All rendered badges are current; run npm run build:trust-labels');
 for (const generator of ['build-search-index', 'build-artifact-cards']) {
   const result = spawnSync(process.execPath, [`scripts/${generator}.js`, '--check'], { cwd: ROOT, encoding: 'utf8' });

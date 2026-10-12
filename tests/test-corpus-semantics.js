@@ -54,4 +54,34 @@ const corpusPage = fs.readFileSync(path.join(root, 'cipher-corpus.html'), 'utf8'
 assert.doesNotMatch(corpusPage, /historical records with verified provenance/i);
 assert.match(corpusPage, /legacy <code>verified<\/code> field is not a claim/i);
 
-console.log('Corpus semantic checks passed: IDs, historical review scope, errata, and v0.6 tag uniqueness.');
+// The published schema still describes `blind` as held-out for evaluation, the
+// wording every executable surface retired. Its bytes are checksummed in
+// SHA256SUMS.txt and verified by the deploy job, so the repair is an erratum,
+// and the erratum must stand as long as the wording ships. Guarded as a
+// conditional so a corrected schema in a future release retires this check
+// instead of stranding a stale note.
+const errata = fs.readFileSync(path.join(root, 'docs/CORPUS-V06-ERRATA.md'), 'utf8');
+for (const relative of ['public/corpus/cipher-corpus.schema.json',
+  'public/corpus/archive/cipher-corpus.schema.v0.2.json']) {
+  const schema = JSON.parse(fs.readFileSync(path.join(root, relative), 'utf8'));
+  const description = schema.properties.split ? schema.properties.split.description || '' : '';
+  if (!/held[- ]out/i.test(description)) continue;
+  assert.match(errata, /`cipher-corpus\.schema\.json` describes `blind`/,
+    `${relative} still calls blind held-out; the errata must record it`);
+  assert.match(errata, /downloadable evaluation\s+split label only/,
+    `${relative}: the errata must state what the label actually means`);
+  assert.match(errata, /cannot be corrected without invalidating published v0\.6 checksums/,
+    `${relative}: the errata must explain why the bytes are not edited`);
+}
+// Nothing executable may carry the retired wording as its own description.
+for (const relative of ['scripts/benchmark-runner.js', 'scripts/generate-benchmark-report.js',
+  'docs/blind-split-policy.md', 'docs/CORPUS_PUBLISHING.md']) {
+  const text = fs.readFileSync(path.join(root, relative), 'utf8');
+  for (const line of text.split('\n')) {
+    if (!/held[- ]out/i.test(line)) continue;
+    assert.match(line, /not confidential|separately held[- ]out|has not been downloaded|never confidential/i,
+      `${relative}: "held-out" may appear only to deny it describes this corpus — ${line.trim()}`);
+  }
+}
+
+console.log('Corpus semantic checks passed: IDs, historical review scope, errata, v0.6 tag uniqueness, and blind-split wording.');
