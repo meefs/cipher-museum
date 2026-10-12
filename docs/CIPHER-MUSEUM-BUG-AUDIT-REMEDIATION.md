@@ -71,9 +71,11 @@ per-mutation assertions are recorded in
 [`third-pass-mutation-evidence.json`](third-pass-mutation-evidence.json).
 
 Integrated into `main` by fast-forward from
-`fix/third-pass-audit-readme-claims`; no canonical corpus bytes, published
-checksums, release metadata or DOI were touched, so no new release or Zenodo
-deposit accompanies this step.
+`fix/third-pass-audit-readme-claims` at `c43fdcc`, with CI green on `test`,
+`validate-corpus` and `deploy-pages`. The change set touches no `.html`, `js/`,
+`data/` or canonical corpus file, so the Pages deployment republished
+byte-identical site content. No published checksums, release metadata or DOI
+were touched, so no new release or Zenodo deposit accompanies this step.
 
 ## Additional performance repair
 
