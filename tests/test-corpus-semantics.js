@@ -50,6 +50,40 @@ fs.rmSync(temp, { recursive: true, force: true });
 assert.notEqual(result.status, 0, 'validator must reject duplicate tags in new-version records');
 assert.match(result.stderr, /tags must be unique/);
 
+// The rule must not be pinned to one release label. `dataset_version` is a
+// per-batch generator label and not a release ordering, so the guard
+// grandfathers the immutable batches by name and everything else fails closed.
+// "2.0" is the case that matters: 70,656 published records carry it, it sorts
+// after "0.6", and it is older data.
+function validateRecord(record) {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'cipher-corpus-batch-'));
+  const file = path.join(dir, 'record.jsonl');
+  fs.writeFileSync(file, JSON.stringify(record) + '\n');
+  const run = spawnSync(process.execPath, ['scripts/validate-corpus-v0.2.js', file], {
+    cwd: root,
+    encoding: 'utf8'
+  });
+  fs.rmSync(dir, { recursive: true, force: true });
+  return run;
+}
+const newBatch = records.find(record => record.dataset_version === '0.6');
+for (const version of ['0.7', '1.0', '2.0', '0.5', 'unreleased']) {
+  const candidate = structuredClone(newBatch);
+  candidate.id = `${newBatch.id}-${version}`;
+  candidate.dataset_version = version;
+  candidate.tags = [...candidate.tags, candidate.tags[0]];
+  const run = validateRecord(candidate);
+  assert.notEqual(run.status, 0,
+    `validator must reject duplicate tags under batch label ${version}, not only "0.6"`);
+  assert.match(run.stderr, /tags must be unique/);
+}
+// The 484 published duplicates stay valid: their bytes cannot be rewritten.
+const legacyDuplicate = records.find(record =>
+  record.dataset_version === '0.2' && new Set(record.tags).size !== record.tags.length);
+assert(legacyDuplicate, 'the immutable archive still carries its grandfathered duplicates');
+assert.equal(validateRecord(legacyDuplicate).status, 0,
+  'validator must keep accepting the immutable pre-v0.6 duplicate tags');
+
 const corpusPage = fs.readFileSync(path.join(root, 'cipher-corpus.html'), 'utf8');
 assert.doesNotMatch(corpusPage, /historical records with verified provenance/i);
 assert.match(corpusPage, /legacy <code>verified<\/code> field is not a claim/i);

@@ -174,6 +174,12 @@ Batch 1 records use `dataset_version: "0.2"`.
 Batches 2 and 3 use `dataset_version: "2.0"`.
 Future batches should use `"2.0"` or a new version if the schema changes.
 
+The label identifies a generator batch and does not order releases: `"2.0"` is
+older data than `"0.6"`. `scripts/validate-corpus-v0.2.js` therefore requires
+unique `tags` under every label except the immutable batches listed in
+`LEGACY_DUPLICATE_TAG_BATCHES`, so a new batch must ship unique tags whatever
+label it carries.
+
 ## 70/30 Public/Blind Split
 
 Records are assigned to splits at generation time:

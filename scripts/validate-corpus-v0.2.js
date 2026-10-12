@@ -17,6 +17,15 @@ const ajv = new Ajv({allErrors: true, strict: false});
 addFormats(ajv);
 const validate = ajv.compile(schema);
 
+// Duplicate tags carry no meaning and are rejected. Only the immutable
+// published batches that already contain them are grandfathered, and they are
+// named explicitly rather than compared: `dataset_version` is a per-batch
+// generator label, not a release ordering — "0.2" is batch 1, "2.0" is batches
+// 2 and 3, "0.5" the v0.5 regeneration and "0.6" the v0.6 additions, so "2.0"
+// is older data than "0.6" despite sorting after it. Any unrecognised or
+// future label therefore fails closed and must ship unique tags.
+const LEGACY_DUPLICATE_TAG_BATCHES = new Set(['0.2']);
+
 let fail = 0, pass = 0;
 const seenIds = new Set();
 const requiredNonEmptyStrings = [
@@ -44,8 +53,10 @@ for (const [i, line] of fs.readFileSync(corpusPath, 'utf8').split(/\r?\n/).entri
       !Number.isInteger(rec.normalized_text_length) || rec.normalized_text_length < 0) {
     semanticErrors.push('length fields must be non-negative integers');
   }
-  if (rec.dataset_version === '0.6' && Array.isArray(rec.tags) && new Set(rec.tags).size !== rec.tags.length) {
-    semanticErrors.push('v0.6 tags must be unique (older duplicate tags remain immutable legacy data)');
+  if (Array.isArray(rec.tags) && new Set(rec.tags).size !== rec.tags.length &&
+      !LEGACY_DUPLICATE_TAG_BATCHES.has(String(rec.dataset_version))) {
+    semanticErrors.push('tags must be unique (duplicates are grandfathered only for immutable batch '
+      + [...LEGACY_DUPLICATE_TAG_BATCHES].join(', ') + ')');
   }
   const valid = validate(rec);
   if (!valid || semanticErrors.length) {
