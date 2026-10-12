@@ -175,10 +175,28 @@ Batches 2 and 3 use `dataset_version: "2.0"`.
 Future batches should use `"2.0"` or a new version if the schema changes.
 
 The label identifies a generator batch and does not order releases: `"2.0"` is
-older data than `"0.6"`. `scripts/validate-corpus-v0.2.js` therefore requires
-unique `tags` under every label except the immutable batches listed in
-`LEGACY_DUPLICATE_TAG_BATCHES`, so a new batch must ship unique tags whatever
-label it carries.
+older data than `"0.6"`. From corpus v0.7 the release is carried by
+`corpus_version` and the batch label survives as `source_batch`.
+
+Validation is by dataset contract, not by record label:
+`scripts/validate-corpus.js <file> --contract 0.6|0.7`. The 0.6 contract
+tolerates the 484 repeated tags in the frozen archive because those bytes cannot
+change; the 0.7 contract requires unique tags of every record whatever batch it
+came from, and also enforces the length contract and the classification fields.
+`scripts/validate-corpus-v0.2.js` remains as a compatibility entry point and
+infers the contract from the file.
+
+## Generating corpus v0.7
+
+```sh
+npm run build:corpus:replay-status   # which pairs reproduce (evidence for pair_status)
+npm run build:corpus:v07             # writes public/corpus/v0.7/
+npm run validate:corpus:v07
+```
+
+The generator is deterministic and reads only the immutable v0.6 archive plus
+`data/corpus-v0.7-decisions.json`. `--check` verifies the committed artifacts are
+current without writing.
 
 ## 70/30 Public/Blind Split
 

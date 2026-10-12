@@ -37,52 +37,45 @@ assert.ok(records.filter(record => record.dataset_version !== '0.6')
 assert.ok(records.filter(record => record.dataset_version === '0.6')
   .every(record => new Set(record.tags).size === record.tags.length), 'new v0.6 records must not contain duplicate tags');
 
-const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'cipher-corpus-semantics-'));
-const invalidPath = path.join(temp, 'invalid.jsonl');
-const invalid = structuredClone(records.find(record => record.dataset_version === '0.6'));
-invalid.tags.push(invalid.tags[0]);
-fs.writeFileSync(invalidPath, JSON.stringify(invalid) + '\n');
-const result = spawnSync(process.execPath, ['scripts/validate-corpus-v0.2.js', invalidPath], {
-  cwd: root,
-  encoding: 'utf8'
-});
-fs.rmSync(temp, { recursive: true, force: true });
-assert.notEqual(result.status, 0, 'validator must reject duplicate tags in new-version records');
-assert.match(result.stderr, /tags must be unique/);
-
-// The rule must not be pinned to one release label. `dataset_version` is a
-// per-batch generator label and not a release ordering, so the guard
-// grandfathers the immutable batches by name and everything else fails closed.
-// "2.0" is the case that matters: 70,656 published records carry it, it sorts
-// after "0.6", and it is older data.
-function validateRecord(record) {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'cipher-corpus-batch-'));
+// Duplicate tags: the compatibility exception belongs to the frozen dataset,
+// not to a batch label a new record could inherit. Validating the immutable
+// v0.6 archive tolerates its 484 repeated tags; the v0.7 contract rejects a
+// duplicate in any record, whatever batch it came from. The full matrix of
+// batch labels lives in tests/test-corpus-v07.js; what matters here is that the
+// legacy archive still validates and that its labels grant no bypass.
+function validateWith(record, args) {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'cipher-corpus-semantics-'));
   const file = path.join(dir, 'record.jsonl');
   fs.writeFileSync(file, JSON.stringify(record) + '\n');
-  const run = spawnSync(process.execPath, ['scripts/validate-corpus-v0.2.js', file], {
+  const run = spawnSync(process.execPath, ['scripts/validate-corpus.js', file, ...args], {
     cwd: root,
     encoding: 'utf8'
   });
   fs.rmSync(dir, { recursive: true, force: true });
   return run;
 }
-const newBatch = records.find(record => record.dataset_version === '0.6');
-for (const version of ['0.7', '1.0', '2.0', '0.5', 'unreleased']) {
-  const candidate = structuredClone(newBatch);
-  candidate.id = `${newBatch.id}-${version}`;
-  candidate.dataset_version = version;
-  candidate.tags = [...candidate.tags, candidate.tags[0]];
-  const run = validateRecord(candidate);
-  assert.notEqual(run.status, 0,
-    `validator must reject duplicate tags under batch label ${version}, not only "0.6"`);
-  assert.match(run.stderr, /tags must be unique/);
-}
-// The 484 published duplicates stay valid: their bytes cannot be rewritten.
+
+// The 484 published duplicates stay valid under the contract written for them.
 const legacyDuplicate = records.find(record =>
   record.dataset_version === '0.2' && new Set(record.tags).size !== record.tags.length);
 assert(legacyDuplicate, 'the immutable archive still carries its grandfathered duplicates');
-assert.equal(validateRecord(legacyDuplicate).status, 0,
+assert.equal(validateWith(legacyDuplicate, ['--contract', '0.6']).status, 0,
   'validator must keep accepting the immutable pre-v0.6 duplicate tags');
+
+// The same record is rejected by the v0.7 contract: being batch "0.2" is not a
+// pass. (It fails on corpus_version before tag uniqueness is even reached,
+// which is the point — a legacy record cannot satisfy the new contract at all.)
+assert.notEqual(validateWith(legacyDuplicate, ['--contract', '0.7']).status, 0,
+  'a legacy batch label must not carry a record past the v0.7 contract');
+
+// The compatibility entry point still validates the archive rather than
+// silently passing: requiring the module without invoking it would exit 0
+// having checked nothing.
+const wrapper = spawnSync(process.execPath,
+  ['scripts/validate-corpus-v0.2.js', path.join(root, 'public/corpus/historical.jsonl')],
+  { cwd: root, encoding: 'utf8' });
+assert.match(wrapper.stdout, /\d+ valid, \d+ invalid records/,
+  'the compatibility wrapper must actually run the validator');
 
 const corpusPage = fs.readFileSync(path.join(root, 'cipher-corpus.html'), 'utf8');
 assert.doesNotMatch(corpusPage, /historical records with verified provenance/i);
@@ -118,4 +111,4 @@ for (const relative of ['scripts/benchmark-runner.js', 'scripts/generate-benchma
   }
 }
 
-console.log('Corpus semantic checks passed: IDs, historical review scope, errata, v0.6 tag uniqueness, and blind-split wording.');
+console.log('Corpus semantic checks passed: IDs, historical review scope, errata, legacy tag tolerance, contract scoping, and blind-split wording.');

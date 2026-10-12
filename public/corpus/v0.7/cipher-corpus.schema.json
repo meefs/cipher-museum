@@ -1,0 +1,276 @@
+{
+  "$version": "0.7",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cipher Corpus Record (v0.7)",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "cipher_family",
+    "cipher_type",
+    "plaintext",
+    "ciphertext",
+    "key",
+    "language",
+    "alphabet",
+    "text_length",
+    "normalized_text_length",
+    "spacing",
+    "punctuation",
+    "casing",
+    "difficulty",
+    "source_type",
+    "source",
+    "license",
+    "expected_attacks",
+    "tags",
+    "created_by",
+    "verified",
+    "dataset_version",
+    "split",
+    "transcription_quality",
+    "source_provenance",
+    "authenticity",
+    "pair_status",
+    "verification_method",
+    "benchmark_eligible",
+    "corpus_version",
+    "source_batch"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "cipher_family": {
+      "type": "string"
+    },
+    "cipher_type": {
+      "type": "string"
+    },
+    "plaintext": {
+      "type": "string"
+    },
+    "ciphertext": {
+      "type": "string"
+    },
+    "key": {
+      "type": "object"
+    },
+    "language": {
+      "type": "string",
+      "description": "ISO 639-1/2 code or BCP-47 language tag (e.g., 'en', 'fr', 'de', 'la', 'es')"
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "public",
+        "blind"
+      ],
+      "description": "Benchmark split label. Both splits are published and downloadable: \"public\" is the default evaluation split and \"blind\" is a held-aside subset used to report a second score on records a tool was not tuned against. Neither label is secret, confidential, or withheld from the download. For a genuinely unseen evaluation, use data that has not been distributed. The immutable v0.6 schema described this label less accurately; its exact archived wording and the correction are recorded in docs/CORPUS-V06-ERRATA.md."
+    },
+    "transcription_quality": {
+      "type": "string",
+      "enum": [
+        "clean",
+        "noisy"
+      ],
+      "description": "Indicates whether the transcription is clean or contains realistic noise/errors"
+    },
+    "source_provenance": {
+      "type": "object",
+      "description": "Provenance and rights info for historical or synthetic records",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "archive": {
+          "type": "string"
+        },
+        "publication_date": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "archive",
+        "publication_date",
+        "license"
+      ]
+    },
+    "alphabet": {
+      "type": "string"
+    },
+    "text_length": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Unicode code points in the plaintext after NFC normalization, counting every character as written. Derived from plaintext only; see scripts/corpus-text-metrics.js."
+    },
+    "normalized_text_length": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Cipher-relevant symbols in the plaintext: NFD normalize, drop combining marks, then count code points in Unicode categories L and N. Never exceeds text_length. Derived from plaintext only."
+    },
+    "spacing": {
+      "type": "string",
+      "enum": [
+        "preserved",
+        "removed",
+        "grouped",
+        "mixed"
+      ]
+    },
+    "punctuation": {
+      "type": "string",
+      "enum": [
+        "preserved",
+        "removed",
+        "mixed"
+      ]
+    },
+    "casing": {
+      "type": "string",
+      "enum": [
+        "uppercase",
+        "lowercase",
+        "mixed"
+      ]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        "expert"
+      ]
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "synthetic",
+        "historical",
+        "public_domain",
+        "user_contributed"
+      ]
+    },
+    "source": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "expected_attacks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Topic tags, unique within a record and ordered by first use."
+    },
+    "created_by": {
+      "type": "string"
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "v0.7 meaning: the pair reproduces and is benchmark-eligible, equal to benchmark_eligible. In v0.6 and earlier this was a generator/reviewer flag with no such guarantee."
+    },
+    "dataset_version": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "historical_context": {
+      "type": "string"
+    },
+    "known_solution_method": {
+      "type": "string"
+    },
+    "hints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tool_notes": {
+      "type": "string"
+    },
+    "related_exhibit_url": {
+      "type": "string"
+    },
+    "try_in_cipher_detective_url": {
+      "type": "string"
+    },
+    "benchmark_split": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        "expert",
+        "historical",
+        "blind"
+      ]
+    },
+    "scoring_notes": {
+      "type": "string"
+    },
+    "authenticity": {
+      "type": "string",
+      "enum": [
+        "authentic_artifact",
+        "authentic_excerpt",
+        "reconstruction",
+        "catalogued_unreviewed",
+        "synthetic"
+      ],
+      "description": "What the material is. See data/corpus-v0.7-decisions.json for the definition of each value."
+    },
+    "pair_status": {
+      "type": "string",
+      "enum": [
+        "verified_pair",
+        "unverified_pair",
+        "not_a_pair"
+      ],
+      "description": "Whether plaintext and ciphertext form a reproducible known-answer pair. Independent of authenticity: a teaching reconstruction can be a verified pair, and an authentic artifact may not be."
+    },
+    "verification_method": {
+      "type": "string",
+      "enum": [
+        "engine_replay",
+        "documented_computation",
+        "none"
+      ],
+      "description": "How pair_status was established. engine_replay: the record round-trips through this repository's engines. documented_computation: verified against a primary source by a procedure recorded in data/corpus-v0.7-decisions.json, which the engines do not implement. none: not a verified pair. Tooling that drives the museum engines should filter on engine_replay."
+    },
+    "benchmark_eligible": {
+      "type": "boolean",
+      "description": "True only when pair_status is verified_pair. Benchmarks and any claim requiring a complete verified pair must filter on this field."
+    },
+    "source_batch": {
+      "type": "string",
+      "description": "The generator batch label this record came from (\"0.2\", \"0.5\", \"2.0\", \"0.6\"). Provenance only; it does not order releases."
+    },
+    "corpus_version": {
+      "type": "string",
+      "description": "The dataset release this record belongs to."
+    }
+  }
+}

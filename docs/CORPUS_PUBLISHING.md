@@ -44,6 +44,26 @@ Zenodo publication.
 The Hugging Face mirror has not been updated for v0.6. Do not claim that it has
 been updated until its files and metadata have been independently verified.
 
+## Corpus v0.7 (tagged, not yet archived)
+
+v0.7 is built in `public/corpus/v0.7/` and resolves the four findings v0.6 could
+only record as errata. Its source commit is tagged **`corpus-v0.7`**; it has
+**no Zenodo deposit and no DOI**, so it is not yet citable. v0.6 remains the
+published, citable dataset and the one the website serves; its files and
+checksums are untouched.
+
+Dataset versions are tagged but **never released on GitHub**. The Zenodo webhook
+on this repository is active on `release` events and would mint a *software* DOI
+from `.zenodo.json`; a dataset deposit is made directly on Zenodo instead. That
+is how v0.5 and v0.6 were handled and how v0.7 must be.
+
+Release notes and the full before/after accounting:
+[`releases/corpus-v0.7.md`](releases/corpus-v0.7.md).
+
+Website download links, the corpus page's counts and the citation surfaces still
+describe v0.6 deliberately. They change only when v0.7 is actually published, so
+the site never advertises a dataset that has no DOI behind it.
+
 ## Future release checklist
 
 1. Run `npm run validate:corpus`, the version-specific corpus regression test,

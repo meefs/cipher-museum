@@ -110,9 +110,47 @@ const KNOWN_DEVIATIONS = [
   ...Object.entries(HISTORICAL_VARIANT_RATIONALES).map(([engineName, rationale]) => ({
     id: `historical-variant-${engineName}`,
     rationale,
-    matches: (record, kind, candidateEngine) => record.source_type === 'historical' && candidateEngine === engineName
-  }))
+    matches: (record, kind, candidateEngine) => record.source_type === 'historical'
+      && candidateEngine === engineName
+      // A historical-variant rule explains why a pedagogical engine differs
+      // from a real machine. It must not also excuse a ciphertext that no
+      // machine produced: these rules matched every historical mismatch for
+      // their engine, which is how thirteen fabricated ciphertexts sat in the
+      // corpus unnoticed. Fabricated content is excused only by the explicit,
+      // enumerated rule below, so a new one fails the run.
+      && !isFabricatedCiphertext(record.ciphertext)
+  })),
+  {
+    id: 'fabricated-ciphertext-v06-withdrawn',
+    rationale: 'The v0.6 record stores a placeholder ciphertext whose letters are all distinct, which no cipher produces; these bytes are immutable and the records are withdrawn in corpus v0.7 (see public/corpus/v0.7/excluded-records.json).',
+    matches: record => FABRICATED_V06_IDS.has(record.id)
+  }
 ];
+
+// Exactly the records whose ciphertext fails the fabrication test in the frozen
+// v0.6 archive. Enumerated rather than computed so that a fourteenth such record
+// appearing anywhere is an unexplained failure rather than a silent pass.
+const FABRICATED_V06_IDS = new Set([
+  'hist-enigma-weather-001', 'hist-lorenz-fish-001', 'hist-sigaba-wwii-001',
+  'hist-jefferson-wheel-001', 'hist-m94-wwii-001', 'hist-purple-magic-001',
+  'hist-diana-cia-001', 'hist-geheimschreiber-001', 'hist-kl7-nato-001',
+  'hist-fialka-001', 'hist-wheatstone-1867-001', 'hist-copiale-2011-001',
+  'hist-nsa-training-001'
+]);
+
+/**
+ * A ciphertext of 20+ A-Z letters that are all distinct, or that runs
+ * contiguously through the alphabet, is a placeholder rather than output of a
+ * cipher: P(26 distinct) is about 6.6e-11 and no synthetic corpus record shows
+ * the signature. Kept in step with scripts/build-corpus-v07.js, which applies
+ * the same test when deciding what v0.7 may ship.
+ */
+function isFabricatedCiphertext(ciphertext) {
+  const text = String(ciphertext ?? '').toUpperCase().replace(/[^A-Z]/g, '');
+  if (text.length < 20) return false;
+  if ('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.includes(text)) return true;
+  return new Set(text).size === text.length;
+}
 
 function engineNameFor(cipherType) {
   return TYPE_MAP[cipherType] || cipherType;
@@ -213,6 +251,12 @@ function deviationFor(record, kind, engineName) {
 // regression cannot hide inside an engine-wide rule: any new mismatch (or a
 // vanished one) changes the count and fails the run. Update these numbers only
 // alongside a reviewed engine or corpus change that explains the delta.
+//
+// 2026-10-12: totals are unchanged (99,800 passed, 526 known records, 1,051
+// events). 26 events — thirteen records, encode and decode each — moved out of
+// the per-engine historical-variant rules into the enumerated
+// fabricated-ciphertext-v06-withdrawn rule, because those rules no longer
+// excuse a placeholder ciphertext.
 const EXPECTED_FULL_RUN = {
   records: 100326,
   passed: 99800,
@@ -220,6 +264,7 @@ const EXPECTED_FULL_RUN = {
   knownEvents: 1051,
   events: {
     'intentional-noise': 959,
+    'fabricated-ciphertext-v06-withdrawn': 26,
     'historical-variant-navajo': 6,
     'historical-variant-stager': 4,
     'historical-variant-confederateVigenere': 4,
@@ -227,32 +272,21 @@ const EXPECTED_FULL_RUN = {
     'historical-variant-vic': 4,
     'historical-variant-culperRing': 4,
     'historical-variant-vigenere': 4,
-    'historical-variant-enigma': 4,
-    'historical-variant-purple': 4,
     'historical-variant-babington': 4,
     'historical-variant-nullCipher': 4,
     'historical-variant-kryptos': 4,
-    'historical-variant-lorenz': 2,
-    'historical-variant-bookCipher': 2,
     'historical-variant-alberti': 2,
     'historical-variant-adfgvx': 2,
-    'historical-variant-sigaba': 2,
-    'historical-variant-jefferson': 2,
-    'historical-variant-m94': 2,
+    'historical-variant-enigma': 2,
+    'historical-variant-bookCipher': 2,
     'historical-variant-greatCipher': 2,
     'historical-variant-venonaPadReuse': 2,
     'historical-variant-arnoldAndre': 2,
-    'historical-variant-diana': 2,
     'historical-variant-m209': 2,
     'historical-variant-jn25': 2,
-    'historical-variant-geheimschreiber': 2,
-    'historical-variant-kl7': 2,
-    'historical-variant-fialka': 2,
     'historical-variant-chaocipher': 2,
     'historical-variant-wallisCiphers': 2,
-    'historical-variant-chineseTelegraph': 2,
-    'historical-variant-wheatstone': 2,
-    'historical-variant-copiale': 2
+    'historical-variant-chineseTelegraph': 2
   }
 };
 
@@ -372,6 +406,8 @@ if (require.main === module) {
 }
 
 module.exports = {
+  isFabricatedCiphertext,
+  FABRICATED_V06_IDS,
   TYPE_MAP,
   IJ_MERGED,
   FILLER_ESCAPE_ENGINES,
