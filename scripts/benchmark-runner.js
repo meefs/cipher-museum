@@ -17,7 +17,22 @@ if (!corpusPath || !solversDir || !outDir || !['public', 'blind', 'all'].include
 const allRecords = fs.readFileSync(corpusPath, 'utf8').split('\n').filter(Boolean).map(JSON.parse);
 // Records predating the split field are treated as public for compatibility.
 // "blind" is a downloadable evaluation label, not confidential held-out data.
-const records = allRecords.filter(record => split === 'all' || (record.split || 'public') === split);
+const splitRecords = allRecords.filter(record => split === 'all' || (record.split || 'public') === split);
+
+// Corpus v0.7 states, per record, whether plaintext and ciphertext are a
+// verified pair. Scoring a solver against a record that is not a known-answer
+// pair measures nothing: an authentic ciphertext whose stored plaintext covers
+// a different extent can never be "solved" correctly. Datasets that carry the
+// field are filtered on it; v0.6 and earlier have no such field and are scored
+// whole, as before.
+const declaresEligibility = allRecords.some(record => record.benchmark_eligible !== undefined);
+const records = declaresEligibility
+  ? splitRecords.filter(record => record.benchmark_eligible === true)
+  : splitRecords;
+const skippedIneligible = splitRecords.length - records.length;
+if (skippedIneligible > 0) {
+  console.log(`Skipping ${skippedIneligible} record(s) that are not verified known-answer pairs.`);
+}
 const solverFiles = fs.readdirSync(solversDir).filter(f => f.endsWith('.js'));
 const solvers = solverFiles.map(f => ({
   name: f.replace(/\.js$/, ''),
@@ -138,7 +153,14 @@ const receipt = {
     node: process.version,
     os: process.platform + ' ' + (process.arch || '')
   },
-  parameters: { corpus: corpusPath, solvers: solversDir, out: outDir, split },
+  parameters: {
+    corpus: corpusPath,
+    solvers: solversDir,
+    out: outDir,
+    split,
+    benchmark_eligible_only: declaresEligibility,
+    records_skipped_not_verified_pairs: skippedIneligible
+  },
   results_file: jsonPath,
   summary: summaryRows
 };

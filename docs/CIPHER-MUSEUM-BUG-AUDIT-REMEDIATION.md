@@ -15,10 +15,16 @@ versioned dataset release.
 
 ## Audit status
 
-**Closed.** All 22 findings across the three passes are dispositioned and
-integrated on `main`. CM-019 through CM-022 were marked complete by the
-owner after the integration report; nothing in this tracker is awaiting a
-repair.
+**Closed for software; dataset corrections prepared in corpus v0.7.** All 22
+findings across the three passes are dispositioned and integrated on `main`.
+CM-019 through CM-022 were marked complete by the owner after the integration
+report.
+
+The four findings below were *mitigated* in v0.6 because its bytes are
+immutable. They are now *fixed* in the prepared corpus v0.7
+([release notes](releases/corpus-v0.7.md)), which is not yet published — so
+both states are true at once and the table records which applies to which
+dataset.
 
 Four findings are mitigated rather than fixed outright, and all four share one
 constraint: the published v0.6 corpus is immutable and its bytes are verified
@@ -26,12 +32,14 @@ by `sha256sum -c` before deployment. Each is recorded as an erratum and carries
 its correction forward to a future versioned dataset release rather than an
 edit:
 
-| Finding | Deferred to a future corpus release |
-|---|---|
-| CM-002 | Five historical records are not complete matched pairs and eleven declare themselves reconstructions. Scope, defects and IDs are inventoried in `data/corpus-historical-review.json`. |
-| CM-008 | `text_length` and `normalized_text_length` were populated under mixed conventions. The live report recomputes counts from `plaintext`; the archived fields stand. |
-| CM-014 | 484 pre-v0.6 records carry a repeated tag. Newly generated records are rejected for this under every batch label except the grandfathered `0.2`. |
-| CM-020 | The published and archived schema copies describe `blind` as “held-out for evaluation”. Every executable surface uses the downloadable-label wording. |
+| Finding | Status in v0.6 (published) | Status in v0.7 (prepared) |
+|---|---|---|
+| CM-002 | Mitigated. Five incomplete pairs and eleven declared reconstructions inventoried in `data/corpus-historical-review.json`; archived bytes unchanged. | **Fixed.** The two lists overlap in one record, so they cover 15 distinct records. A corpus-wide audit found 13 records with fabricated ciphertext — 8 of them previously uncatalogued — all withdrawn with evidence. Kryptos K1 corrected and verified against a primary source. Every record carries `authenticity`, `pair_status` and `benchmark_eligible`. |
+| CM-008 | Mitigated. The live report recomputes from `plaintext`; the archived fields stand under mixed conventions. | **Fixed.** One definition in `scripts/corpus-text-metrics.js`, applied to every record; 83,918 records corrected; the schema states the contract and the validator enforces it. |
+| CM-014 | Mitigated. 484 records carry a repeated tag; those bytes cannot change. | **Fixed.** Zero duplicate tags. Uniqueness is required of every record whatever its batch; the compatibility exception now belongs to the 0.6 dataset contract, not to a batch label. |
+| CM-020 | Mitigated by erratum. The published and archived schema copies describe `blind` as “held-out for evaluation”. | **Fixed.** The v0.7 schema describes the label accurately and does not repeat the retired phrasing; the v0.6 erratum still records the archived wording. |
+
+Until v0.7 is published, the v0.6 column is the state of the public dataset.
 
 One further item is deferred by intent, not by constraint:
 `docs/manual-cipher-independent-reference-check.js` is dated evidence pinned to

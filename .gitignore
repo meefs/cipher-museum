@@ -7,3 +7,9 @@ tests/benchmark-report.json
 tests/benchmark-report.html
 tests/benchmark-summary.json
 tests/receipt-runner-*.json
+
+# Corpus v0.7 canonical dataset: 120MB derived from the immutable v0.6 archive
+# by scripts/build-corpus-v07.js. The checksum manifest, schema, stats,
+# exclusions and record-level change inventory are committed; the bytes are
+# rebuilt on demand and verified against public/corpus/v0.7/SHA256SUMS.txt.
+public/corpus/v0.7/all.jsonl

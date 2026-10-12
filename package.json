@@ -24,7 +24,10 @@
     "build:counts": "node scripts/build-counts.js",
     "build:trust-labels": "node scripts/build-trust-labels.js",
     "build:artifact-cards": "node scripts/build-artifact-cards.js",
-    "build:metadata": "npm run build:counts && npm run build:trust-labels && npm run build:search-index && npm run build:artifact-cards"
+    "build:metadata": "npm run build:counts && npm run build:trust-labels && npm run build:search-index && npm run build:artifact-cards",
+    "validate:corpus:v07": "node scripts/validate-corpus.js public/corpus/v0.7/all.jsonl --contract 0.7",
+    "build:corpus:v07": "node scripts/build-corpus-v07.js",
+    "build:corpus:replay-status": "node scripts/build-corpus-replay-status.js"
   },
   "repository": {
     "type": "git",

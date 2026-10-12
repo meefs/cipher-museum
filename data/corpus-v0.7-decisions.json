@@ -1,0 +1,89 @@
+{
+  "decisions_version": "2026-10-12",
+  "corpus_version": "0.7",
+  "basis": "data/corpus-historical-review.json (v0.6 review) plus computed evidence reproduced by scripts/build-corpus-v07.js",
+  "note": "Judgment calls only. The fabricated-ciphertext test is objective and lives in the generator, not here, so it reproduces rather than being asserted. Every entry below records why a human decision was made and what evidence supports it.",
+
+  "pair_status_values": {
+    "verified_pair": "The stored plaintext and ciphertext are a complete pair that reproduces by a documented procedure: either the museum engine replays it exactly, or the record carries a verification entry below. Only these are benchmark-eligible.",
+    "unverified_pair": "Plaintext and ciphertext plausibly correspond, but the museum cannot reproduce the pair because the original procedure needs codebooks, machine wirings or key material the engines do not model. Not benchmark-eligible.",
+    "not_a_pair": "The stored plaintext and ciphertext demonstrably do not correspond — an excerpt against a full text, or two different message segments. Not benchmark-eligible."
+  },
+  "authenticity_values": {
+    "authentic_artifact": "Ciphertext is attested historical material from the cited source.",
+    "authentic_excerpt": "Ciphertext is attested historical material, but only part of the message, and the stored plaintext covers a different extent.",
+    "reconstruction": "A modern teaching reconstruction. The cipher and often the plaintext are historically attested; this particular pair was prepared for instruction and is not an intercept.",
+    "catalogued_unreviewed": "Carried forward verbatim from the v0.6 review's default: a catalogued historical-context exercise, not independently certified as an authentic source transcription by that review. This value makes the absence of certification explicit rather than implying authenticity."
+  },
+
+  "corrections": [
+    {
+      "id": "hist-kryptos-k1-001",
+      "fields": {
+        "ciphertext": {
+          "from": "EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJ",
+          "to": "EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJYQTQUXQBQVYUVLLTREVJYQTMKYRDMFD",
+          "reason": "The v0.6 record stored only the first 32 characters of K1 against a 63-character plaintext, so it was not a matched pair. The full 63-character K1 ciphertext restores the pair."
+        },
+        "key": {
+          "from": { "keyword": "KRYPTOS", "alphabet_key": "KRYPTOSABCDEFGHIJLMNQUVWXZ" },
+          "to": { "keyword": "PALIMPSEST", "alphabet_key": "KRYPTOSABCDEFGHIJLMNQUVWXZ" },
+          "reason": "K1 is a Vigenere encryption on the KRYPTOS-keyed alphabet with the keyword PALIMPSEST. The v0.6 record named the alphabet keyword as the Vigenere key, which cannot decrypt the record's own ciphertext."
+        }
+      },
+      "verification": {
+        "method": "Decrypting the corrected 63-character ciphertext with keyword PALIMPSEST on the alphabet KRYPTOSABCDEFGHIJLMNQUVWXZ yields the record's stored plaintext exactly, including the sculpture's IQLUSION misspelling. Reproduced by tests/test-corpus-v07.js.",
+        "primary_source": "https://www.cia.gov/legacy/headquarters/kryptos-sculpture/ — the Panel 1 encoded text begins with exactly these 63 characters, followed by VFPJUDEEH... which starts K2.",
+        "retrieved": "2026-10-12"
+      },
+      "resulting_pair_status": "verified_pair",
+      "resulting_authenticity": "authentic_artifact"
+    }
+  ],
+
+  "excerpts": [
+    {
+      "id": "hist-kryptos-k3-001",
+      "pair_status": "not_a_pair",
+      "authenticity": "authentic_excerpt",
+      "reason": "The record pairs a 96-letter plaintext excerpt with a 237-character prefix of the 336-character K3 ciphertext. The two cover different extents of the message.",
+      "why_not_corrected": "A matched pair needs the full K3 ciphertext and the full corresponding plaintext. The cited CIA page publishes panel ciphertext without section labels or any plaintext, and K3's transposition scheme is not implemented by the museum engines, so neither the pair nor a trimmed alignment could be verified from an available primary source. Reconstructing either string from memory is not acceptable evidence, so the record is classified and excluded from benchmarks instead of being altered.",
+      "primary_source_checked": "https://www.cia.gov/legacy/headquarters/kryptos-sculpture/ (2026-10-12): ciphertext panels only, unlabelled, no plaintext."
+    },
+    {
+      "id": "hist-enigma-barbarossa-001",
+      "pair_status": "not_a_pair",
+      "authenticity": "authentic_excerpt",
+      "reason": "The ciphertext NCZWVYSXNSVCXFP is the attested opening fragment of the 1941 message; the stored plaintext WETTER KLARER HIMMEL SICHT GUT is a 26-letter decrypt of a different extent. 15 ciphertext letters cannot be a length-preserving Enigma encryption of 26 plaintext letters.",
+      "why_not_corrected": "Restoring the pair needs the full message text with its rotor, ring, reflector and plugboard settings. The record's own key block is not sufficient to reproduce the fragment, and the museum's three-rotor model does not implement the naval settings, so no verification is available.",
+      "note": "The v0.6 review listed this record both as a pair defect and as a declared reconstruction. The ciphertext fragment is attested material, so it is classified as an authentic excerpt, not a reconstruction."
+    }
+  ],
+
+  "reconstructions": {
+    "source": "data/corpus-historical-review.json#declared_reconstructions",
+    "note": "Carried forward as authenticity=reconstruction. Records in this list that the generator also detects as fabricated are excluded instead; records that replay exactly keep pair_status=verified_pair, since being a teaching reconstruction and being a reproducible pair are independent properties.",
+    "ids": [
+      "hist-stager-001",
+      "hist-vic-001",
+      "hist-caesar-augustus-001",
+      "hist-alberti-de-cifris-001",
+      "hist-vigenere-traicte-001",
+      "hist-playfair-wheatstone-001",
+      "hist-enigma-barbarossa-001",
+      "hist-sigaba-wwii-001",
+      "hist-purple-magic-001",
+      "hist-solitaire-cryptonomicon-001",
+      "hist-nsa-training-001"
+    ]
+  },
+
+  "exclusion_policy": {
+    "rule": "A historical record whose ciphertext fails the fabricated-ciphertext test is removed from the canonical v0.7 dataset.",
+    "test": "A ciphertext of at least 20 A-Z letters in which every letter is distinct, or whose letters form a contiguous run of the alphabet. Real ciphertext of that length is a near-impossibility under any cipher: P(all 26 distinct) is about 6.6e-11 and P(all 25 distinct) about 1.7e-9, and none of the 100,272 synthetic records in v0.6 exhibits it.",
+    "why_not_regenerated": "Re-encrypting the plaintext with a museum engine would produce a pair whose ciphertext came from a seeded pedagogical model rather than the machine named in the record. That is a synthetic exercise wearing a historical title, so the records are withdrawn from the canonical set rather than back-filled.",
+    "preservation": "Every excluded record remains in the immutable v0.6 archive and is listed with its evidence in public/corpus/v0.7/excluded-records.json. The IDs are retired, not reused."
+  },
+
+  "default_provenance_status": "catalogued historical-context exercise; not independently certified as an authentic source transcription by this review"
+}

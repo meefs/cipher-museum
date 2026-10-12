@@ -1,0 +1,207 @@
+{
+  "corpus_version": "0.7",
+  "policy": {
+    "rule": "A historical record whose ciphertext fails the fabricated-ciphertext test is removed from the canonical v0.7 dataset.",
+    "test": "A ciphertext of at least 20 A-Z letters in which every letter is distinct, or whose letters form a contiguous run of the alphabet. Real ciphertext of that length is a near-impossibility under any cipher: P(all 26 distinct) is about 6.6e-11 and P(all 25 distinct) about 1.7e-9, and none of the 100,272 synthetic records in v0.6 exhibits it.",
+    "why_not_regenerated": "Re-encrypting the plaintext with a museum engine would produce a pair whose ciphertext came from a seeded pedagogical model rather than the machine named in the record. That is a synthetic exercise wearing a historical title, so the records are withdrawn from the canonical set rather than back-filled.",
+    "preservation": "Every excluded record remains in the immutable v0.6 archive and is listed with its evidence in public/corpus/v0.7/excluded-records.json. The IDs are retired, not reused."
+  },
+  "count": 13,
+  "records": [
+    {
+      "id": "hist-enigma-weather-001",
+      "title": "Enigma Weather Report Format — Known Crib",
+      "cipher_type": "enigma",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "contiguous-alphabet-run",
+        "ciphertext_letters": 21,
+        "distinct_letters": 21,
+        "uniform_probability_all_distinct": 0.00000649,
+        "ciphertext": "ABCDEFGHIJKLMNOPQRSTU"
+      },
+      "source": "Bletchley Park WWII crib analysis — Weather report format",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-lorenz-fish-001",
+      "title": "Lorenz Cipher — FISH Traffic Training Vector",
+      "cipher_type": "lorenz",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 26,
+        "distinct_letters": 26,
+        "uniform_probability_all_distinct": 6.55e-11,
+        "ciphertext": "YZRWBQKXHMATVUFGCPLSDIENOJ"
+      },
+      "source": "Bletchley Park — Colossus Computer Target Traffic (FISH), 1943-1945",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-sigaba-wwii-001",
+      "title": "SIGABA / ECM Mark II — WWII US Army Training Example",
+      "cipher_type": "sigaba",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 26,
+        "distinct_letters": 26,
+        "uniform_probability_all_distinct": 6.55e-11,
+        "ciphertext": "XQZWVMKPJNBHFRDCLSTYAOUIGE"
+      },
+      "source": "US Army Signal Corps — SIGABA Training Manual, 1943",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-jefferson-wheel-001",
+      "title": "Jefferson Wheel Cipher — Original Design, c. 1795",
+      "cipher_type": "jefferson_disk",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 26,
+        "distinct_letters": 26,
+        "uniform_probability_all_distinct": 6.55e-11,
+        "ciphertext": "WXPBVKQZLNMDSHJFYEUOCGRAIT"
+      },
+      "source": "Thomas Jefferson papers, Library of Congress, c. 1795",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-m94-wwii-001",
+      "title": "M-94 Cipher Device — US Army Training Message",
+      "cipher_type": "m94",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 26,
+        "distinct_letters": 26,
+        "uniform_probability_all_distinct": 6.55e-11,
+        "ciphertext": "QKZWPVMNXBJYLDHURAFOTSGICE"
+      },
+      "source": "US Army Signal Corps — M-94 Field Manual, 1922",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-purple-magic-001",
+      "title": "Purple Cipher — MAGIC Intercept Training Vector",
+      "cipher_type": "purple",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 26,
+        "distinct_letters": 26,
+        "uniform_probability_all_distinct": 6.55e-11,
+        "ciphertext": "BFGHJKPQRTVWXZ YLNMDSAOUICE"
+      },
+      "source": "NSA MAGIC Program — Declassified Training Material",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-diana-cia-001",
+      "title": "DIANA Cipher — CIA Field Operations Cipher, Cold War",
+      "cipher_type": "diana",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 20,
+        "distinct_letters": 20,
+        "uniform_probability_all_distinct": 0.0000281,
+        "ciphertext": "XKQZP WVNMB JHFDA LTSOU"
+      },
+      "source": "CIA Cold War cryptographic practices — declassified reference",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-geheimschreiber-001",
+      "title": "Geheimschreiber T52 — Luftwaffe Cipher Machine, WWII",
+      "cipher_type": "geheimschreiber",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 20,
+        "distinct_letters": 20,
+        "uniform_probability_all_distinct": 0.0000281,
+        "ciphertext": "UKXQP VWMNJ BHDAF LTSRO"
+      },
+      "source": "Bletchley Park — STURGEON program, 1942-1945",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-kl7-nato-001",
+      "title": "KL-7 ADONIS — NATO Cipher Machine Training Vector",
+      "cipher_type": "kl7",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 25,
+        "distinct_letters": 25,
+        "uniform_probability_all_distinct": 1.7e-9,
+        "ciphertext": "WQKZX PVNMB JHDFA LTSOR UYCEI"
+      },
+      "source": "NSA / NATO — KL-7 Technical Manual, declassified",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-fialka-001",
+      "title": "Fialka M-125 — Soviet Warsaw Pact Cipher Machine",
+      "cipher_type": "fialka",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 25,
+        "distinct_letters": 25,
+        "uniform_probability_all_distinct": 1.7e-9,
+        "ciphertext": "WQKZX PVNMB JHDFA LTSRO UYCEI"
+      },
+      "source": "Soviet/Warsaw Pact cryptographic service — Fialka M-125 Manual",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-wheatstone-1867-001",
+      "title": "Wheatstone Cryptograph — Prince Albert Gift, 1867",
+      "cipher_type": "wheatstone",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 20,
+        "distinct_letters": 20,
+        "uniform_probability_all_distinct": 0.0000281,
+        "ciphertext": "XKQPW VMNJB HGFDA LTSOU"
+      },
+      "source": "Patent Office Records London — Wheatstone Cryptograph, 1867",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-copiale-2011-001",
+      "title": "Copiale Cipher — 18th Century Secret Society Document, Solved 2011",
+      "cipher_type": "copiale",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 25,
+        "distinct_letters": 25,
+        "uniform_probability_all_distinct": 1.7e-9,
+        "ciphertext": "VXQZPWMNKBHGFD ALTSROU YCEI"
+      },
+      "source": "Uppsala University Library — Copiale Cipher MS, c. 1730-1760; solved by Knight, Kim, Yang 2011",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    },
+    {
+      "id": "hist-nsa-training-001",
+      "title": "NSA Cryptanalysis Training Problem — Purple Cipher, WWII",
+      "cipher_type": "purple",
+      "reason": "fabricated ciphertext",
+      "evidence": {
+        "signature": "all-distinct-letters",
+        "ciphertext_letters": 25,
+        "distinct_letters": 25,
+        "uniform_probability_all_distinct": 1.7e-9,
+        "ciphertext": "MJKBV XYZNR QPWTS AODEH LFICU"
+      },
+      "source": "NSA Historical Collection — MAGIC/PURPLE training materials, declassified",
+      "retained_in": "public/corpus/all.jsonl (immutable v0.6)"
+    }
+  ]
+}

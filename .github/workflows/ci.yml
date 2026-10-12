@@ -54,8 +54,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate corpus schema
+      - name: Validate corpus schema (immutable v0.6 archive)
         run: npm run validate:corpus
+
+      - name: Build corpus v0.7 from the v0.6 archive
+        run: npm run build:corpus:v07
+
+      - name: Verify the rebuilt v0.7 matches its committed checksum manifest
+        working-directory: public/corpus/v0.7
+        run: sha256sum -c SHA256SUMS.txt
+
+      - name: Validate corpus v0.7 against its own contract
+        run: npm run validate:corpus:v07
 
   deploy-pages:
     needs: [test, validate-corpus]

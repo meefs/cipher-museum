@@ -53,3 +53,8 @@ Three legacy conventions also need care when analysing the archive:
 
 Corrections to canonical record fields belong in a future corpus release so
 that v0.6 citations and checksums remain reproducible.
+
+Every limitation on this page is corrected in the prepared **corpus v0.7**; see
+[`releases/corpus-v0.7.md`](releases/corpus-v0.7.md). v0.7 is not published and
+has no DOI, so this errata continues to govern the published v0.6 archive and
+the statements above remain true of it.
