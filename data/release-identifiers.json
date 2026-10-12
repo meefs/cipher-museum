@@ -1,0 +1,48 @@
+{
+  "_comment": "Published identifiers for the Cipher Museum software and the Cipher Corpus datasets. This is the single source of truth: scripts/validate-release-metadata.js reads it instead of hard-coding DOIs, and scripts/record-dataset-doi.js adds a dataset entry once Zenodo issues its DOI. A dataset may only appear here with a real, issued DOI.",
+  "_rule": "Never add an entry for a version that has not been deposited. An unpublished dataset belongs in `pending`, with no DOI, until Zenodo issues one.",
+
+  "software": {
+    "title": "Cipher Museum: An Interactive History of Cryptography and Codebreaking",
+    "author": "Clark, Paul A.",
+    "orcid": "0009-0004-2394-0991",
+    "version": "1.0.0",
+    "doi": "10.5281/zenodo.23298941",
+    "concept_doi": "10.5281/zenodo.23298940",
+    "release_date": "2026-10-11",
+    "release_commit": "5ca041200b26dc2447dcae72cb63f051dca8064c",
+    "tag": "v1.0.0"
+  },
+
+  "dataset_concept_doi": "10.5281/zenodo.23297919",
+
+  "datasets": [
+    {
+      "version": "0.6",
+      "doi": "10.5281/zenodo.23297920",
+      "records": 100326,
+      "cipher_type_labels": 85,
+      "tag": "corpus-v0.6",
+      "source_commit": "43845a38ef35c94f1ac01cb403b3e982a3401e89",
+      "published": "2026-10-11",
+      "local_archive": "public/corpus/",
+      "immutable": true,
+      "notes": "The archive the repository serves and the software v1.0.0 record supplements. Its bytes, checksums and schema are frozen; corrections are carried as errata in docs/CORPUS-V06-ERRATA.md."
+    }
+  ],
+
+  "pending": [
+    {
+      "version": "0.7",
+      "doi": null,
+      "records": 100313,
+      "cipher_type_labels": 85,
+      "tag": "corpus-v0.7",
+      "source_commit": "396924f247ea1856501b37512400edcf49a48a91",
+      "local_archive": "public/corpus/v0.7/",
+      "status": "tagged; no Zenodo deposit and no DOI issued",
+      "blocked_on": "A Zenodo deposit must be created under dataset_concept_doi by someone holding credentials for that Zenodo account. Build the canonical bytes with `npm run build:corpus:v07` and verify them against public/corpus/v0.7/SHA256SUMS.txt before uploading.",
+      "on_issue": "Run `node scripts/record-dataset-doi.js 0.7 <issued-doi>` to move this entry into `datasets` and update every citation surface at once."
+    }
+  ]
+}

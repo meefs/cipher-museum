@@ -4,7 +4,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const root = path.resolve(__dirname, '..');
+// --root lets the release tests validate a scratch copy of the metadata, so the
+// DOI-recording path is exercised end to end without touching the repository.
+const rootFlag = process.argv.indexOf('--root');
+const root = rootFlag >= 0
+  ? path.resolve(process.argv[rootFlag + 1])
+  : path.resolve(__dirname, '..');
 const read = (relativePath) => fs.readFileSync(path.join(root, relativePath), 'utf8');
 const fail = (message) => {
   console.error(`Release metadata validation failed: ${message}`);
@@ -22,19 +27,50 @@ const attributes = read('.gitattributes');
 const corpusStats = JSON.parse(read('public/corpus/stats.json'));
 const allMetadata = `${JSON.stringify(zenodo)}\n${citation}`;
 
+// Identifiers come from data/release-identifiers.json so that a DOI is written
+// in exactly one place and every citation surface is checked against it. The
+// local v0.6 assertions below still pin the archive that this repository serves,
+// which is the immutable v0.6 deposit.
+const identifiers = JSON.parse(read('data/release-identifiers.json'));
+const publishedDatasets = identifiers.datasets;
+const servedDataset = publishedDatasets.find((entry) => entry.local_archive === 'public/corpus/');
+assert(servedDataset, 'release identifiers must describe the dataset served from public/corpus/');
+
 const expected = {
   version: packageJson.version,
-  title: 'Cipher Museum: An Interactive History of Cryptography and Codebreaking',
-  author: 'Clark, Paul A.',
-  orcid: '0009-0004-2394-0991',
-  softwareDoi: '10.5281/zenodo.23298941',
-  releaseDate: '2026-10-11',
-  releaseCommit: '5ca041200b26dc2447dcae72cb63f051dca8064c',
-  datasetVersion: '0.6',
-  datasetDoi: '10.5281/zenodo.23297920',
-  datasetRecords: 100326,
-  datasetLabels: 85,
+  title: identifiers.software.title,
+  author: identifiers.software.author,
+  orcid: identifiers.software.orcid,
+  softwareDoi: identifiers.software.doi,
+  releaseDate: identifiers.software.release_date,
+  releaseCommit: identifiers.software.release_commit,
+  datasetVersion: servedDataset.version,
+  datasetDoi: servedDataset.doi,
+  datasetRecords: servedDataset.records,
+  datasetLabels: servedDataset.cipher_type_labels,
 };
+
+assert(identifiers.software.version === packageJson.version,
+  'release identifiers must record the same software version as package.json');
+
+// A DOI may never be recorded for a dataset that has not been deposited, and a
+// pending version may never be cited as though it had one. This is the guard
+// against the one unrecoverable mistake in a release: publishing a reference to
+// an identifier that does not resolve.
+for (const entry of publishedDatasets) {
+  assert(/^10\.\d{4,9}\/[-._;()/:A-Za-z0-9]+$/.test(entry.doi || ''),
+    `dataset v${entry.version} is listed as published but carries no valid DOI`);
+}
+for (const entry of identifiers.pending || []) {
+  assert(entry.doi === null,
+    `dataset v${entry.version} is pending, so its DOI must be null until Zenodo issues one`);
+  assert(!publishedDatasets.some((published) => published.version === entry.version),
+    `dataset v${entry.version} cannot be both published and pending`);
+  const claim = new RegExp(`Cipher Corpus v${entry.version.replaceAll('.', '\\.')}[^\n]*10\\.5281`);
+  assert(!claim.test(citation), `CITATION.cff cites a DOI for unpublished dataset v${entry.version}`);
+  assert(!claim.test(JSON.stringify(zenodo)),
+    `.zenodo.json cites a DOI for unpublished dataset v${entry.version}`);
+}
 
 assert(zenodo.upload_type === 'software', '.zenodo.json must use upload_type "software"');
 assert(zenodo.title === expected.title, '.zenodo.json has an unexpected software title');
@@ -71,8 +107,14 @@ assert(citation.includes(`date-released: "${expected.releaseDate}"`),
   'CITATION.cff must contain the published software release date');
 assert(citation.includes(`commit: "${expected.releaseCommit}"`),
   'CITATION.cff must identify the archived release commit');
-assert(citation.includes(`doi: "${expected.datasetDoi}"`),
-  'CITATION.cff must retain the related dataset citation');
+for (const entry of publishedDatasets) {
+  assert(citation.includes(`doi: "${entry.doi}"`),
+    `CITATION.cff must cite published dataset v${entry.version} (${entry.doi})`);
+  const linked = zenodo.related_identifiers?.find((item) => item.identifier === entry.doi);
+  assert(linked, `.zenodo.json must link published dataset v${entry.version} (${entry.doi})`);
+  assert(linked.scheme === 'doi' && linked.resource_type === 'dataset',
+    `the v${entry.version} related identifier must be a DOI typed as a dataset`);
+}
 
 assert(license.startsWith('MIT License\n'), 'the repository software license must remain MIT');
 assert(attributes.includes('public/corpus/all.json filter=lfs'), 'all.json must remain tracked by Git LFS');
@@ -91,5 +133,11 @@ console.log(`  Creator: ${expected.author} (${expected.orcid})`);
 console.log('  Type/license: software / MIT');
 console.log(`  Related dataset: Cipher Corpus v${expected.datasetVersion}, ${expected.datasetRecords} records / ${expected.datasetLabels} labels`);
 console.log(`  Dataset DOI/relation: ${expected.datasetDoi} (isSupplementedBy)`);
+for (const entry of publishedDatasets) {
+  console.log(`  Published dataset: Cipher Corpus v${entry.version} -> ${entry.doi}`);
+}
+for (const entry of identifiers.pending || []) {
+  console.log(`  Pending dataset: Cipher Corpus v${entry.version} -> no DOI (${entry.status})`);
+}
 console.log(`  Software release: v${expected.version}, ${expected.releaseDate}, commit ${expected.releaseCommit}`);
 console.log(`  Software DOI: ${expected.softwareDoi}`);

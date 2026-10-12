@@ -9,6 +9,7 @@ const suites = [
   'tests/test-corpus-v06.js',
   'tests/test-corpus-semantics.js',
   'tests/test-corpus-v07.js',
+  'tests/test-release-identifiers.js',
   'tests/test-search.js',
   'tests/test-community.js',
   'tests/test-animation-cancellation.js',
