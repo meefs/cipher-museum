@@ -4,12 +4,44 @@
 **Remediation date:** 2026-10-11  
 **Source audit:** [CIPHER-MUSEUM-BUG-AUDIT.md](CIPHER-MUSEUM-BUG-AUDIT.md)
 
-This change set addresses all 15 findings from the evidence-based audit. It
+This change set addresses all 15 findings from the evidence-based audit, plus
+the three second-pass and four third-pass findings raised by auditing the
+repairs themselves — 22 in total. It
 does not rewrite the already-published, immutable Cipher Corpus v0.6 archive.
 Where a finding concerns archived record bytes, the repair is an explicit
 erratum, machine-readable review data, safer live-site wording, and stricter
 validation for new records. Canonical record corrections require a later
 versioned dataset release.
+
+## Audit status
+
+**Closed.** All 22 findings across the three passes are dispositioned and
+integrated on `main`. CM-019 through CM-022 were marked complete by the
+owner after the integration report; nothing in this tracker is awaiting a
+repair.
+
+Four findings are mitigated rather than fixed outright, and all four share one
+constraint: the published v0.6 corpus is immutable and its bytes are verified
+by `sha256sum -c` before deployment. Each is recorded as an erratum and carries
+its correction forward to a future versioned dataset release rather than an
+edit:
+
+| Finding | Deferred to a future corpus release |
+|---|---|
+| CM-002 | Five historical records are not complete matched pairs and eleven declare themselves reconstructions. Scope, defects and IDs are inventoried in `data/corpus-historical-review.json`. |
+| CM-008 | `text_length` and `normalized_text_length` were populated under mixed conventions. The live report recomputes counts from `plaintext`; the archived fields stand. |
+| CM-014 | 484 pre-v0.6 records carry a repeated tag. Newly generated records are rejected for this under every batch label except the grandfathered `0.2`. |
+| CM-020 | The published and archived schema copies describe `blind` as “held-out for evaluation”. Every executable surface uses the downloadable-label wording. |
+
+One further item is deferred by intent, not by constraint:
+`docs/manual-cipher-independent-reference-check.js` is dated evidence pinned to
+baseline `5a519c8` and stops early at a later head. It is deliberately left
+byte-identical, is outside `npm test` and CI, and the behaviours after its stop
+point are covered by permanent suites. See
+[Known drift in dated evidence scripts](#known-drift-in-dated-evidence-scripts).
+
+Closing this tracker does not create a release or change either DOI; the
+dataset and software DOIs are unchanged.
 
 ## Finding disposition
 
@@ -76,6 +108,10 @@ Integrated into `main` by fast-forward from
 `data/` or canonical corpus file, so the Pages deployment republished
 byte-identical site content. No published checksums, release metadata or DOI
 were touched, so no new release or Zenodo deposit accompanies this step.
+
+CM-019 through CM-022 are **complete**: repaired, guarded by mutation-verified
+tests, integrated by fast-forward, green in CI, and signed off by the owner on
+the integration report. The tracker's integration record ends at `b9a2c10`.
 
 ## Additional performance repair
 
