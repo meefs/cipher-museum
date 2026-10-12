@@ -34,12 +34,12 @@ Three legacy conventions also need care when analysing the archive:
   counts from `plaintext` instead of aggregating either field.
 - 484 pre-v0.6 records contain a repeated tag. The duplicate value has no
   semantic meaning. The 300 v0.6 additions do not contain repeated tags. The
-  current validator rejects repeated tags in every record except the immutable
-  batches named in `LEGACY_DUPLICATE_TAG_BATCHES`, which is batch `0.2` alone.
-  `dataset_version` is a per-batch generator label rather than a release
-  ordering — `2.0` is batches 2 and 3, older data than `0.6` — so the rule
-  grandfathers those batches by name and fails closed for any other label,
-  including future ones.
+  The tolerance belongs to this dataset, not to a record label: validating with
+  `--contract 0.6` accepts them because these bytes cannot change, while
+  `--contract 0.7` requires unique tags of every record whatever generator batch
+  it came from. `dataset_version` was a per-batch label rather than a release
+  ordering — `2.0` is batches 2 and 3, older data than `0.6` — which is why a
+  label can no longer carry a record past validation.
 - `cipher-corpus.schema.json` describes `blind` as “held-out for
   evaluation”. That wording predates the split policy and overstates what the
   label means: both splits ship in the public download, and neither is
