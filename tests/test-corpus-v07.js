@@ -304,6 +304,80 @@ check('the legacy contract still accepts the immutable archive, duplicates inclu
   assert.equal(result.status, 0, 'immutable v0.6 bytes must keep validating');
 });
 
+/* ---------------------------------- the replay guard that missed all of this */
+
+check('the replay no longer lets a historical-variant rule excuse a fabricated ciphertext', () => {
+  const replay = require(path.join(root, 'tests/engines/corpus-replay.js'));
+  // The two detectors must agree, or the corpus generator and the replay guard
+  // could disagree about what counts as fabricated.
+  for (const sample of ['QWERTYUIOPASDFGHJKLZXCVBNM', 'ABCDEFGHIJKLMNOPQRSTU', 'NCZWVYSXNSVCXFP', '']) {
+    assert.equal(replay.isFabricatedCiphertext(sample),
+      builder.fabricationSignature(sample) !== null,
+      `fabrication detectors disagree about ${JSON.stringify(sample.slice(0, 20))}`);
+  }
+  // The enumerated tolerance list must be exactly the fabricated records in the
+  // frozen archive: not fewer (a real one slips through) and not more (a licence
+  // to add new ones).
+  const legacyFabricated = read('public/corpus/all.jsonl').split('\n').filter(Boolean)
+    .map(JSON.parse)
+    .filter(record => record.source_type === 'historical'
+      && replay.isFabricatedCiphertext(record.ciphertext))
+    .map(record => record.id);
+  assert.deepEqual([...replay.FABRICATED_V06_IDS].sort(), legacyFabricated.sort(),
+    'the enumerated v0.6 fabrication tolerances must match the archive exactly');
+  assert.equal(legacyFabricated.length, 13);
+  // And every one of them is withdrawn from v0.7.
+  const shipped = new Set(records.map(record => record.id));
+  for (const id of legacyFabricated) {
+    assert.ok(!shipped.has(id), `${id}: tolerated in v0.6, must be withdrawn from v0.7`);
+  }
+});
+
+/* ------------------------------------------------------- dataset consumers */
+
+check('the evaluation export is reproducible and skips records that are not pairs', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'llm-eval-'));
+  const run = (file, extra = []) => spawnSync(process.execPath, [
+    'scripts/export-llm-3shot.js',
+    '--input', 'public/corpus/v0.7/all.jsonl',
+    '--count', '25',
+    '--output', path.join(dir, file),
+    ...extra
+  ], { cwd: root, encoding: 'utf8' });
+
+  const first = run('a.jsonl');
+  assert.equal(first.status, 0, `export failed:\n${first.stdout}${first.stderr}`);
+  const second = run('b.jsonl');
+  assert.equal(fs.readFileSync(path.join(dir, 'a.jsonl'), 'utf8'),
+    fs.readFileSync(path.join(dir, 'b.jsonl'), 'utf8'),
+    'two runs over the same corpus must produce the same evaluation set');
+
+  const reseeded = run('c.jsonl', ['--seed', 'a-different-seed']);
+  assert.equal(reseeded.status, 0);
+  assert.notEqual(fs.readFileSync(path.join(dir, 'a.jsonl'), 'utf8'),
+    fs.readFileSync(path.join(dir, 'c.jsonl'), 'utf8'),
+    'a different seed must select a different evaluation set');
+
+  // Nothing that is not a verified pair may reach an evaluation export.
+  const ineligible = new Set(records.filter(r => !r.benchmark_eligible).map(r => r.id));
+  assert.ok(ineligible.size > 0, 'the corpus does contain records that are not pairs');
+  for (const line of fs.readFileSync(path.join(dir, 'a.jsonl'), 'utf8').split('\n').filter(Boolean)) {
+    const exported = JSON.parse(line);
+    const id = exported.id || (exported.metadata && exported.metadata.id);
+    if (id) assert.ok(!ineligible.has(id), `${id}: exported despite not being a verified pair`);
+  }
+  assert.match(first.stdout, /Excluded \d+ record\(s\) that are not verified pairs/);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+check('the benchmark runner filters on benchmark_eligible', () => {
+  const runner = read('scripts/benchmark-runner.js');
+  assert.match(runner, /benchmark_eligible === true/,
+    'the runner must filter the dataset on verified pairs');
+  assert.match(runner, /records_skipped_not_verified_pairs/,
+    'and must report how many records it skipped');
+});
+
 /* ------------------------------------------------- inventory and accounting */
 
 check('the change inventory accounts for every difference from v0.6', () => {

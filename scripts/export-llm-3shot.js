@@ -27,14 +27,27 @@ const count = parseInt(getArg('--count', '200'));
 const outFile = getArg('--output', path.join(OUT_DIR, 'llm-3shot-eval.jsonl'));
 const _ = null; // suppress lint
 
-// Load corpus
-const allPath = path.join(CORPUS_DIR, 'all.jsonl');
+// Load corpus. --input targets a specific dataset version; the default stays
+// the v0.6 archive so existing invocations are unchanged.
+const allPath = path.resolve(getArg('--input', path.join(CORPUS_DIR, 'all.jsonl')));
 const lines = fs.readFileSync(allPath, 'utf8').split('\n').filter(Boolean);
 let records = lines.map(l => JSON.parse(l));
 
 // Filter
 if (difficulty) records = records.filter(r => r.difficulty === difficulty);
 if (cipherType) records = records.filter(r => r.cipher_type === cipherType);
+
+// Never export a record that is not a verified known-answer pair: a model
+// cannot be scored against a ciphertext whose stored plaintext covers a
+// different extent. Datasets that declare benchmark_eligible (v0.7 and later)
+// are filtered on it; earlier ones have no such field and are left as they were.
+if (records.some(r => r.benchmark_eligible !== undefined)) {
+  const before = records.length;
+  records = records.filter(r => r.benchmark_eligible === true);
+  if (before !== records.length) {
+    console.log(`Excluded ${before - records.length} record(s) that are not verified pairs.`);
+  }
+}
 
 // Only use public split, verified, clean records as shots
 const clean = records.filter(r => r.split === 'public' && r.verified && r.transcription_quality === 'clean');
@@ -47,10 +60,24 @@ function groupBy(arr, key) {
 }
 const cleanByCipher = groupBy(clean, 'cipher_type');
 
+// Seeded PRNG (mulberry32). The export used Math.random(), so two runs over the
+// same corpus produced different evaluation sets and different few-shot
+// examples — scores from separate runs were not comparable and the artifact
+// could not be checksummed. Selection is now reproducible from --seed.
+const seed = getArg('--seed', 'cipher-corpus');
+let seedState = [...String(seed)].reduce((hash, ch) => (hash * 31 + ch.codePointAt(0)) >>> 0, 2166136261);
+function nextRandom() {
+  seedState = (seedState + 0x6D2B79F5) >>> 0;
+  let t = seedState;
+  t = Math.imul(t ^ (t >>> 15), t | 1);
+  t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+}
+
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(nextRandom() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
@@ -169,7 +196,11 @@ for (const record of evalRecords) {
   output.push(entry);
 }
 
-const outPath = path.join(OUT_DIR, outFile);
+// outFile already defaults to a path inside OUT_DIR. Joining it to OUT_DIR
+// again silently nested relative paths and made an absolute --output
+// unwritable; resolve it instead, relative to OUT_DIR when it is relative.
+const outPath = path.isAbsolute(outFile) ? outFile : path.resolve(OUT_DIR, outFile);
+fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, output.map(r => JSON.stringify(r)).join('\n') + '\n');
 console.log(`Exported ${output.length} LLM evaluation records → ${outPath}`);
 console.log(`Difficulty breakdown: ${Object.entries(groupBy(output, 'difficulty')).map(([k,v])=>`${k}:${v.length}`).join(', ')}`);
