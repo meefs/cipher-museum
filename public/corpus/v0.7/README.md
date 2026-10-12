@@ -1,7 +1,8 @@
-# Cipher Corpus v0.7 (prepared — not published)
+# Cipher Corpus v0.7 (tagged — not yet archived)
 
-**This dataset has not been published.** There is no Zenodo deposit, no DOI and
-no `corpus-v0.7` tag for v0.7. For a citable dataset use **v0.6**:
+**This dataset has no DOI.** The source commit is tagged `corpus-v0.7`, but no
+Zenodo deposit has been created, so v0.7 is not yet citable. For a citable
+dataset use **v0.6**:
 [10.5281/zenodo.23297920](https://doi.org/10.5281/zenodo.23297920), whose files
 are the ones in the parent directory.
 
@@ -13,7 +14,7 @@ record as errata, because fixing them means changing record bytes.
 
 | File | What it is |
 |---|---|
-| `all.jsonl` | The canonical dataset, 100,313 records. **Not committed** (120MB) — rebuild with `npm run build:corpus:v07`. |
+| `all.jsonl` | The canonical dataset, 100,313 records. **Not committed and not served from this site** (120MB) — rebuild it with `npm run build:corpus:v07`, or download it from the Zenodo deposit once one exists. `SHA256SUMS.txt` pins its digest either way. |
 | `cipher-corpus.schema.json` | The v0.7 record schema. |
 | `stats.json` | Record counts by source type, split, authenticity, pair status and batch. |
 | `excluded-records.json` | The 13 records withdrawn from v0.6, each with the evidence for withdrawal. |

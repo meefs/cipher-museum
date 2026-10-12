@@ -1,9 +1,12 @@
-# Cipher Corpus v0.7 — release notes (prepared, not published)
+# Cipher Corpus v0.7 — release notes (tagged, awaiting archive)
 
-**Status: prepared for review. Not published.** No Zenodo deposit exists for
-v0.7, no DOI has been reserved or assigned, and no `corpus-v0.7` tag has been
-pushed. Cite v0.6 ([10.5281/zenodo.23297920](https://doi.org/10.5281/zenodo.23297920))
-until this release is actually published.
+**Status: tagged in the repository; not yet archived.** The source commit is
+tagged `corpus-v0.7`, so the dataset is reproducible from a fixed point. **No
+Zenodo deposit exists for v0.7 and no DOI has been reserved or assigned.**
+
+Cite v0.6 ([10.5281/zenodo.23297920](https://doi.org/10.5281/zenodo.23297920))
+until a v0.7 DOI is issued. v0.6 remains published, unchanged, and served from
+`public/corpus/`; nothing about it was replaced.
 
 v0.7 resolves the four dataset findings that v0.6 could only mitigate, because
 correcting them requires changing record bytes and the v0.6 archive is
@@ -159,12 +162,26 @@ immutable v0.6 archive and verified against the committed manifest. CI performs
 exactly these steps on a clean checkout, so a non-deterministic generator fails
 the build rather than shipping.
 
-## Publication steps (not yet performed)
+## Publication status
 
-1. Tag `corpus-v0.7` once the dataset is approved.
-2. Reserve a Zenodo version DOI under the existing concept DOI
-   [10.5281/zenodo.23297919](https://doi.org/10.5281/zenodo.23297919).
-3. Upload the manifest files plus `all.jsonl`, matching `SHA256SUMS.txt`.
-4. Update citation surfaces with the issued version DOI only after publication.
+Done:
 
-Until those happen, v0.7 is a prepared dataset in a branch, nothing more.
+1. **Tagged `corpus-v0.7`** on `main`, so the Zenodo deposit has a fixed source
+   commit to cite — the same thing `corpus-v0.6` records.
+
+Outstanding, and requiring Zenodo credentials this repository does not hold:
+
+2. Reserve a Zenodo **dataset** version DOI under the existing dataset concept
+   DOI [10.5281/zenodo.23297919](https://doi.org/10.5281/zenodo.23297919).
+3. Upload `all.jsonl` plus the manifest files, and confirm every digest against
+   `public/corpus/v0.7/SHA256SUMS.txt`. Build the bytes with
+   `npm run build:corpus:v07`; they are not committed.
+4. Record the issued DOI in `CITATION.cff`, `docs/CORPUS_PUBLISHING.md`, this
+   file, and the website citation surfaces — **after** it is issued, never before.
+
+**Do not create a GitHub release for a dataset version.** An active Zenodo
+webhook on this repository fires on `release` events and would mint a new
+*software* DOI from `.zenodo.json`, which describes the software, not the
+corpus. Both existing dataset versions are annotated tags with no GitHub
+release; the dataset deposits were made directly on Zenodo. This release
+follows that convention.
