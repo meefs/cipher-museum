@@ -54,6 +54,27 @@ finding claimed, so neither would have failed if the defect returned.
 | CM-021 | Fixed | CM-014's duplicate-tag rule was pinned to `dataset_version === '0.6'`, so it would have lapsed silently at the next release and never applied to the 70,656 published records labelled `2.0`. Because `dataset_version` is a per-batch generator label and not a release ordering, the rule now grandfathers the immutable batches by name (`0.2`) and fails closed for every other label. Tests assert rejection under `0.7`, `1.0`, `2.0`, `0.5` and an unknown label, and continued acceptance of the legacy duplicates; restoring the old pinned condition fails them. |
 | CM-022 | Fixed | CM-006's guard asserted source text, so a `var`-to-`let` refactor would have failed it for no reason and a leak that preserved the declaration's shape would have passed. It now opens both pages in JSDOM, instruments `setInterval`/`clearInterval` before the inline scripts run, and drives Run, repeated Run, Step and Reset while counting live timers. All eight cancellation defects were reintroduced one at a time and each fails; the test also fails if a dependency path goes stale or if the reduced-motion stub flips, either of which would make it vacuous. Teardown runs in a `finally`, because a leaked timer otherwise keeps the event loop alive and hangs the suite instead of failing it. |
 
+### Third-pass verification
+
+| Finding | Repair commit | Guard | Mutations caught |
+|---|---|---|---|
+| CM-019 | `91a0019` | `tests/test-trust-labels.js` | 8 / 8 |
+| CM-020 | `91a0019` | `tests/test-corpus-semantics.js` | 5 / 5 |
+| CM-021 | `1f51bbd` | `tests/test-corpus-semantics.js` | 3 / 3 |
+| CM-022 | `1f51bbd` | `tests/test-animation-cancellation.js` | 10 / 10 |
+
+Each mutation reintroduced one defect, confirmed the registered guard rejected
+it, and was reverted; the three suites were then confirmed to pass unmutated.
+Two of the CM-022 mutations target the test itself, because a behavioural test
+that silently stops exercising the animated path would pass for no reason. The
+per-mutation assertions are recorded in
+[`third-pass-mutation-evidence.json`](third-pass-mutation-evidence.json).
+
+Integrated into `main` by fast-forward from
+`fix/third-pass-audit-readme-claims`; no canonical corpus bytes, published
+checksums, release metadata or DOI were touched, so no new release or Zenodo
+deposit accompanies this step.
+
 ## Additional performance repair
 
 The unchanged engine complexity gate detected an AMSCO garbage-collection spike

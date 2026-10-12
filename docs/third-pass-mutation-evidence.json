@@ -1,0 +1,253 @@
+{
+ "note": "Mutation evidence for third-pass findings CM-019 through CM-022. Each entry names a defect reintroduced into the working tree, the registered test run against it, and the assertion that rejected it. Every mutation was reverted immediately and the three suites were confirmed to pass unmutated afterwards. A guard that has never failed is a guess; these are the failures.",
+ "repairCommits": {
+  "CM-019, CM-020": "91a0019d7dd1ff74b6849abc62b57d5fc442da1b",
+  "CM-021, CM-022": "1f51bbda980705b1eb75f89af2b5714866a51b20"
+ },
+ "auditBaseline": "652ca8188e47ce09115db17f2e9c01621bb3610b",
+ "verified": "2026-10-12",
+ "node": "v26.9.0",
+ "mutations": 26,
+ "caught": 26,
+ "suitesPassUnmutated": [
+  "tests/test-trust-labels.js",
+  "tests/test-corpus-semantics.js",
+  "tests/test-animation-cancellation.js"
+ ],
+ "results": [
+  {
+   "finding": "CM-019",
+   "mutation": "vic: 'Broken in 1957' returns",
+   "file": "README.md",
+   "test": "tests/test-trust-labels.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: README.md row for vic contradicts its exhibit: VIC was exposed by a defector, not broken in 1957"
+  },
+  {
+   "finding": "CM-019",
+   "mutation": "vic: NSA probable-word attack returns",
+   "file": "README.md",
+   "test": "tests/test-trust-labels.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: README.md row for vic contradicts its exhibit: no cryptanalytic attack broke VIC"
+  },
+  {
+   "finding": "CM-019",
+   "mutation": "culper: 'captured by British' returns",
+   "file": "README.md",
+   "test": "tests/test-trust-labels.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: README.md row for culper-ring contradicts its exhibit: the Culper codebook was never captured"
+  },
+  {
+   "finding": "CM-019",
+   "mutation": "culper: 'decoded from dictionary' returns",
+   "file": "README.md",
+   "test": "tests/test-trust-labels.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: README.md row for culper-ring contradicts its exhibit: the Tallmadge numbers were never decoded by the British"
+  },
+  {
+   "finding": "CM-019",
+   "mutation": "che-guevara: CIA/FBI attack returns",
+   "file": "README.md",
+   "test": "tests/test-trust-labels.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: README.md row for che-guevara contradicts its exhibit: no cryptanalytic break is claimed for the Che Guevara variant"
+  },
+  {
+   "finding": "CM-019",
+   "mutation": "stager: 'word lists from captures' returns",
+   "file": "README.md",
+   "test": "tests/test-trust-labels.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: README.md row for stager contradicts its exhibit: Confederate wiretappers never read a Stager message; the system became public in post-war memoirs"
+  },
+  {
+   "finding": "CM-019",
+   "mutation": "vic: description drifts from exhibit meta",
+   "file": "README.md",
+   "test": "tests/test-trust-labels.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: README.md: the VIC row description must be the exhibit's own meta description"
+  },
+  {
+   "finding": "CM-019",
+   "mutation": "culper: entry count drifts from page",
+   "file": "README.md",
+   "test": "tests/test-trust-labels.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: README.md: the Culper Ring entry count must match the exhibit (~760)"
+  },
+  {
+   "finding": "CM-020",
+   "mutation": "errata: schema erratum removed",
+   "file": "docs/CORPUS-V06-ERRATA.md",
+   "test": "tests/test-corpus-semantics.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: public/corpus/cipher-corpus.schema.json still calls blind held-out; the errata must record it"
+  },
+  {
+   "finding": "CM-020",
+   "mutation": "errata: what the label means removed",
+   "file": "docs/CORPUS-V06-ERRATA.md",
+   "test": "tests/test-corpus-semantics.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: public/corpus/cipher-corpus.schema.json: the errata must state what the label actually means"
+  },
+  {
+   "finding": "CM-020",
+   "mutation": "errata: immutability rationale removed",
+   "file": "docs/CORPUS-V06-ERRATA.md",
+   "test": "tests/test-corpus-semantics.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: public/corpus/cipher-corpus.schema.json: the errata must explain why the bytes are not edited"
+  },
+  {
+   "finding": "CM-020",
+   "mutation": "runner: retired wording returns",
+   "file": "scripts/benchmark-runner.js",
+   "test": "tests/test-corpus-semantics.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: scripts/benchmark-runner.js: \"held-out\" may appear only to deny it describes this corpus — // \"blind\" is held-out data reserved for evaluation."
+  },
+  {
+   "finding": "CM-020",
+   "mutation": "split policy: retired wording returns",
+   "file": "docs/blind-split-policy.md",
+   "test": "tests/test-corpus-semantics.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: docs/blind-split-policy.md: \"held-out\" may appear only to deny it describes this corpus — designation for held-out evaluation data."
+  },
+  {
+   "finding": "CM-021",
+   "mutation": "validator: old rule pinned to '0.6' restored",
+   "file": "scripts/validate-corpus-v0.2.js",
+   "test": "tests/test-corpus-semantics.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: validator must reject duplicate tags under batch label 0.7, not only \"0.6\""
+  },
+  {
+   "finding": "CM-021",
+   "mutation": "validator: grandfather list widened to 2.0",
+   "file": "scripts/validate-corpus-v0.2.js",
+   "test": "tests/test-corpus-semantics.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: validator must reject duplicate tags under batch label 2.0, not only \"0.6\""
+  },
+  {
+   "finding": "CM-021",
+   "mutation": "validator: grandfather list emptied",
+   "file": "scripts/validate-corpus-v0.2.js",
+   "test": "tests/test-corpus-semantics.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: validator must keep accepting the immutable pre-v0.6 duplicate tags"
+  },
+  {
+   "finding": "CM-022",
+   "mutation": "finite-fields: Run stops cancelling in-flight run",
+   "file": "hall-of-foundations/finite-fields.html",
+   "test": "tests/test-animation-cancellation.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: hall-of-foundations/finite-fields.html: a replacement Run cancels the animation already in flight"
+  },
+  {
+   "finding": "CM-022",
+   "mutation": "finite-fields: Step stops cancelling",
+   "file": "hall-of-foundations/finite-fields.html",
+   "test": "tests/test-animation-cancellation.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: hall-of-foundations/finite-fields.html: Step cancels the animation rather than racing it"
+  },
+  {
+   "finding": "CM-022",
+   "mutation": "finite-fields: Reset stops cancelling",
+   "file": "hall-of-foundations/finite-fields.html",
+   "test": "tests/test-animation-cancellation.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: hall-of-foundations/finite-fields.html: a replacement Run cancels the animation already in flight"
+  },
+  {
+   "finding": "CM-022",
+   "mutation": "finite-fields: stopWalk clears nothing",
+   "file": "hall-of-foundations/finite-fields.html",
+   "test": "tests/test-animation-cancellation.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: hall-of-foundations/finite-fields.html: a replacement Run cancels the animation already in flight"
+  },
+  {
+   "finding": "CM-022",
+   "mutation": "wadsworth: Encipher-all stops cancelling",
+   "file": "ciphers/wadsworth-cipher.html",
+   "test": "tests/test-animation-cancellation.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: ciphers/wadsworth-cipher.html: a replacement Run cancels the animation already in flight"
+  },
+  {
+   "finding": "CM-022",
+   "mutation": "wadsworth: Step stops cancelling",
+   "file": "ciphers/wadsworth-cipher.html",
+   "test": "tests/test-animation-cancellation.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: ciphers/wadsworth-cipher.html: Step cancels the animation rather than racing it"
+  },
+  {
+   "finding": "CM-022",
+   "mutation": "wadsworth: Reset stops cancelling",
+   "file": "ciphers/wadsworth-cipher.html",
+   "test": "tests/test-animation-cancellation.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: ciphers/wadsworth-cipher.html: Reset cancels the animation before resetting state"
+  },
+  {
+   "finding": "CM-022",
+   "mutation": "wadsworth: stop clears nothing",
+   "file": "ciphers/wadsworth-cipher.html",
+   "test": "tests/test-animation-cancellation.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: ciphers/wadsworth-cipher.html: a replacement Run cancels the animation already in flight"
+  },
+  {
+   "finding": "CM-022",
+   "mutation": "test self-check: dependency path goes stale",
+   "file": "tests/test-animation-cancellation.js",
+   "test": "tests/test-animation-cancellation.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: hall-of-foundations/finite-fields.html: Run starts exactly one timer"
+  },
+  {
+   "finding": "CM-022",
+   "mutation": "test self-check: reduced-motion stub flips",
+   "file": "tests/test-animation-cancellation.js",
+   "test": "tests/test-animation-cancellation.js",
+   "exit": 1,
+   "caught": true,
+   "assertion": "AssertionError [ERR_ASSERTION]: hall-of-foundations/finite-fields.html: the animated path is the one under test"
+  }
+ ]
+}
