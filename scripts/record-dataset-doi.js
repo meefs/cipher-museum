@@ -203,6 +203,13 @@ const prose = [
       + `Zenodo as [${doi}](https://doi.org/${doi}).`
   },
   {
+    // The changelog's unreleased marker. Left alone it would keep saying the
+    // version has no DOI while every other surface cites one.
+    file: 'public/corpus/CHANGELOG.md',
+    from: `## v${version} (unreleased — tagged \`corpus-v${version}\`, no DOI issued)`,
+    to: `## v${version} (${today} — [${doi}](https://doi.org/${doi}))`
+  },
+  {
     // This paragraph describes a pre-publication posture and goes stale the
     // moment the DOI exists, so it is rewritten rather than left to contradict
     // the section above it.
@@ -244,6 +251,17 @@ for (const edit of edits) fs.writeFileSync(file(edit.file), edit.contents);
 
 console.log(`Recorded Cipher Corpus v${version} = ${doi}`);
 for (const edit of edits) console.log(`  updated ${edit.file}`);
+
+// Deliberately not touched: the website's citation DOI. cipher-corpus.html and
+// the generated benchmark report cite the dataset whose files that page serves,
+// which is the archive in public/corpus/. Repointing them at a version whose
+// bytes the site does not serve would tell a citer to cite v${version} while handing
+// them different files. Those surfaces move only when the served archive does.
+console.log('\nNot changed, by design: the website citation DOI in cipher-corpus.html');
+console.log('and public/reports/benchmark-baselines.html. Those cite the dataset the');
+console.log('site actually serves from public/corpus/. Change them only when the');
+console.log('served archive changes; tests/test-release-identifiers.js enforces that.');
+
 console.log('\nNow run:');
 console.log('  npm run validate:release');
 console.log('  npm test');

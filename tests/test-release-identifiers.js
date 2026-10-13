@@ -78,13 +78,50 @@ check('the tagged source commit of a pending dataset exists and matches its tag'
   }
 });
 
+/* ------------------ the site must cite the dataset it actually serves */
+
+check('the website citation DOI matches the dataset version the site serves', () => {
+  // cipher-corpus.html offers downloads from public/corpus/, which is the v0.6
+  // archive. Its citation_doi, cite-as link and BibTeX must therefore name v0.6.
+  // Repointing them at a newer version whose bytes the site does not serve would
+  // tell a citer to cite one dataset while handing them another — the exact
+  // cross-surface drift this repository keeps getting caught by.
+  const served = identifiers.datasets.find((entry) => entry.local_archive === 'public/corpus/');
+  assert.ok(served, 'a published dataset is served from public/corpus/');
+
+  const page = read('cipher-corpus.html');
+  const citationDoi = /<meta name="citation_doi" content="([^"]+)"/.exec(page);
+  assert.ok(citationDoi, 'cipher-corpus.html declares a citation_doi');
+  assert.equal(citationDoi[1], served.doi,
+    `cipher-corpus.html must cite v${served.version}, the dataset it serves`);
+  assert.ok(page.includes(`https://doi.org/${served.doi}`),
+    'the cite-as link must name the served dataset');
+
+  // Any other Zenodo DOI appearing on that page must be a known identifier.
+  const known = new Set([
+    ...identifiers.datasets.map((entry) => entry.doi),
+    identifiers.dataset_concept_doi,
+    identifiers.software.doi,
+    identifiers.software.concept_doi
+  ]);
+  for (const match of page.matchAll(/10\.5281\/zenodo\.\d+/g)) {
+    assert.ok(known.has(match[0]), `cipher-corpus.html cites unknown DOI ${match[0]}`);
+  }
+
+  // A pending version must not be advertised as citable on the website.
+  for (const entry of identifiers.pending || []) {
+    assert.ok(!new RegExp(`cite[^\n]{0,80}v${entry.version.replaceAll('.', '\\.')}`, 'i').test(page),
+      `cipher-corpus.html must not invite citation of unpublished v${entry.version}`);
+  }
+});
+
 /* -------------------------------- the recorder, exercised end to end */
 
 const NEEDED = [
   'package.json', '.zenodo.json', 'CITATION.cff', 'LICENSE', '.gitattributes',
   'data/release-identifiers.json', 'public/corpus/stats.json',
   'docs/CORPUS_PUBLISHING.md', 'docs/releases/corpus-v0.7.md',
-  'public/corpus/v0.7/README.md'
+  'public/corpus/v0.7/README.md', 'public/corpus/CHANGELOG.md'
 ];
 
 function scratchRoot() {
@@ -127,6 +164,13 @@ check('recording a DOI updates all six surfaces and leaves metadata valid', () =
   assert.ok(zenodo.related_identifiers.some((item) => item.identifier === synthetic
     && item.resource_type === 'dataset' && item.relation === 'isSupplementedBy'),
     '.zenodo.json links the new dataset');
+
+  // The changelog's unreleased marker is replaced, not left contradicting the
+  // surfaces that now cite a DOI.
+  const changelog = fs.readFileSync(path.join(dir, 'public/corpus/CHANGELOG.md'), 'utf8');
+  assert.doesNotMatch(changelog, /## v0\.7 \(unreleased/,
+    'the changelog must stop calling the version unreleased');
+  assert.ok(changelog.includes(synthetic), 'the changelog records the DOI');
 
   // Prose no longer says the dataset is unpublished.
   for (const relative of ['public/corpus/v0.7/README.md', 'docs/releases/corpus-v0.7.md',
