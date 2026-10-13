@@ -13,3 +13,7 @@ tests/receipt-runner-*.json
 # exclusions and record-level change inventory are committed; the bytes are
 # rebuilt on demand and verified against public/corpus/v0.7/SHA256SUMS.txt.
 public/corpus/v0.7/all.jsonl
+
+# Staged Zenodo upload packages: large generated payloads, rebuilt on demand
+# with `node scripts/build-corpus-deposit.js <version>`.
+dist/

@@ -1,5 +1,17 @@
 # Cipher Corpus Changelog
 
+## v0.7 (unreleased — tagged `corpus-v0.7`, no DOI issued)
+- Resolves the four v0.6 findings that could only be carried as errata, since each needed record bytes to change and the v0.6 archive is immutable. Derived from v0.6 by `scripts/build-corpus-v07.js`; v0.6 keeps its bytes, checksums and DOI.
+- **100,313 canonical records** (from 100,326): 13 withdrawn, 84,002 changed. Every per-record difference is itemised in `v0.7/change-inventory.json`.
+- **Historical records withdrawn for fabricated ciphertext.** 13 records stored a ciphertext of 20+ letters that were all distinct, or a contiguous run of the alphabet — not plausible cipher output at that length (P(26 distinct) is about 6.6e-11), and a signature no synthetic record exhibits. 8 had not been catalogued by any earlier review. They are withdrawn rather than re-encrypted, because generating a replacement with a seeded teaching engine would be a synthetic exercise under a historical title. IDs are retired, not reused; evidence is in `v0.7/excluded-records.json`.
+- **Kryptos K1 corrected.** v0.6 stored 32 of the 63 ciphertext characters and named the alphabet keyword as the Vigenère key. v0.7 stores the full section with keyword `PALIMPSEST`, verified by decrypting to the stored plaintext and against the CIA's published panel text.
+- **Explicit classification.** Every record carries `authenticity`, `pair_status`, `verification_method` and `benchmark_eligible`. 99,801 records are verified known-answer pairs; the other 512 are not, and must not be scored as such. Authenticity and pair status are independent: a teaching reconstruction can be a reproducible pair, and an authentic artifact often is not.
+- **One length contract.** `text_length` and `normalized_text_length` are computed from the plaintext alone, by Unicode code point, normalizing before filtering (`scripts/corpus-text-metrics.js`). 83,918 records corrected.
+- **Unique tags everywhere**, whatever generator batch a record came from. The tolerance for the 484 repeated tags now belongs to the v0.6 dataset contract rather than to a record label.
+- **Split labels described accurately.** Both `public` and `blind` ship in the download; neither is secret or withheld.
+- `dataset_version` is now the release for every record, with the former per-batch label preserved as `source_batch` — the old field never ordered releases (`2.0` was batches 2 and 3, older than `0.6`).
+- Canonical languages drop from 9 to 7: the only Japanese and Russian records were among those withdrawn. Both remain in the non-canonical `historical-expanded.jsonl` supplement.
+
 ## v0.6 (2026-10-11)
 - Append 300 synthetic exercises: 100 each for RS44, German Double Playfair, and AMSCO. Total: 100,326 records, 85 cipher types mapping to 84 museum engines.
 - Preserve the complete 100,026-record v0.5 prefix byte for byte, including IDs, answers, and public/blind assignments; its hash and source commit are recorded in `stats.json`.
