@@ -64,24 +64,55 @@ const TOKEN = token();
 const identifiers = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/release-identifiers.json'), 'utf8'));
 const CONCEPT_DOI = identifiers.dataset_concept_doi;
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
+ * Zenodo fronts its API with a rate limiter that answers bursts with an HTML
+ * 403 ("unusual traffic from your network"), and it also returns the usual 429
+ * and 5xx. None of those mean the request was wrong, and losing a 120 MB upload
+ * to one would be painful, so transient failures are retried with backoff.
+ *
+ * A genuine authorization failure answers with JSON, so an HTML body is the
+ * signal that distinguishes "the gatekeeper is throttling us" from "this token
+ * may not do that". A JSON 403 is never retried.
+ */
+function isTransient(status, body) {
+  if (status === 429 || status >= 500) return true;
+  if (status === 403 && typeof body === 'string' && /<html/i.test(body)) return true;
+  return false;
+}
+
 async function api(route, options = {}) {
   const url = route.startsWith('http') ? route : `${API}${route}`;
-  const response = await fetch(url, {
-    ...options,
-    headers: {
-      Authorization: `Bearer ${TOKEN}`,
-      ...(options.body && !options.raw ? { 'Content-Type': 'application/json' } : {}),
-      ...(options.headers || {})
-    }
-  });
-  const text = response.status === 204 ? '' : await response.text();
-  let body = null;
-  if (text) { try { body = JSON.parse(text); } catch { body = text; } }
-  if (!response.ok) {
-    const detail = typeof body === 'string' ? body : JSON.stringify(body);
-    throw new Error(`${options.method || 'GET'} ${url} -> HTTP ${response.status}\n${String(detail).slice(0, 600)}`);
+  const attempts = options.body && options.raw ? 3 : 5;
+  let last;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    // A stream body can only be read once, so re-open it per attempt.
+    const body = typeof options.reopenBody === 'function' ? options.reopenBody() : options.body;
+    const response = await fetch(url, {
+      ...options,
+      body,
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+        ...(options.body && !options.raw ? { 'Content-Type': 'application/json' } : {}),
+        ...(options.headers || {})
+      }
+    });
+    const text = response.status === 204 ? '' : await response.text();
+    let parsed = null;
+    if (text) { try { parsed = JSON.parse(text); } catch { parsed = text; } }
+    if (response.ok) return parsed;
+
+    const detail = typeof parsed === 'string' ? parsed : JSON.stringify(parsed);
+    last = new Error(`${options.method || 'GET'} ${url} -> HTTP ${response.status}\n`
+      + `${String(detail).slice(0, 400)}`);
+    if (!isTransient(response.status, parsed) || attempt === attempts) throw last;
+    const wait = Math.min(60000, 4000 * 2 ** (attempt - 1));
+    process.stderr.write(`  HTTP ${response.status} (transient); retrying in ${wait / 1000}s `
+      + `[${attempt}/${attempts - 1}]\n`);
+    await sleep(wait);
   }
-  return body;
+  throw last;
 }
 
 const md5 = (file) => crypto.createHash('md5').update(fs.readFileSync(file)).digest('hex');
@@ -114,11 +145,23 @@ async function main() {
   console.log('Token has deposit scope.');
 
   // ---- 2. find the latest published version in the concept lineage
+  //
+  // Resolve it through the concept record, then that record's own versions
+  // endpoint. A `?q=conceptrecid:<id>` search is NOT used: Zenodo answers that
+  // query shape with HTTP 400, which would have failed this step every time.
   const conceptId = CONCEPT_DOI.split('.').pop();
-  const lineage = await api(`/records?q=conceptrecid:${conceptId}&all_versions=true&size=50&sort=-version`);
-  const hits = lineage?.hits?.hits || [];
+  const concept = await api(`/records/${conceptId}`, { redirect: 'follow' });
+  const conceptRecId = concept.conceptrecid || conceptId;
+  const lineage = await api(`/records/${concept.id}/versions`);
+  const hits = (lineage?.hits?.hits || [])
+    .slice()
+    .sort((left, right) => Number(right.id) - Number(left.id));
   if (!hits.length) throw new Error(`no published records found for concept ${CONCEPT_DOI}`);
   const latest = hits[0];
+  if (String(latest.conceptrecid) !== String(conceptRecId)) {
+    throw new Error(`record ${latest.id} is not in concept ${conceptRecId}; refusing to branch `
+      + 'a new version off an unrelated record');
+  }
   console.log(`Concept ${CONCEPT_DOI}: latest published version is `
     + `${latest.metadata?.version || '?'} (record ${latest.id}, doi ${latest.doi}).`);
   if (latest.metadata?.version === version) {
@@ -128,10 +171,13 @@ async function main() {
 
   // ---- 3. open a new version draft
   let draft;
-  const existing = await api(`/deposit/depositions?q=conceptrecid:${conceptId}&size=50`)
+  // List the account's depositions and pick an unsubmitted draft in this concept.
+  // Filtering client-side avoids depending on a server query syntax that has
+  // already proved unreliable here.
+  const existing = await api('/deposit/depositions?size=100&all_versions=true')
     .catch(() => []);
-  const openDraft = (Array.isArray(existing) ? existing : [])
-    .find((entry) => entry.submitted === false);
+  const openDraft = (Array.isArray(existing) ? existing : []).find((entry) =>
+    entry.submitted === false && String(entry.conceptrecid) === String(conceptRecId));
   if (openDraft) {
     draft = await api(`/deposit/depositions/${openDraft.id}`);
     console.log(`Reusing the existing unsubmitted draft ${draft.id}.`);
@@ -160,7 +206,8 @@ async function main() {
     const uploaded = await api(`${bucket}/${encodeURIComponent(entry.name)}`, {
       method: 'PUT',
       raw: true,
-      body: fs.createReadStream(source),
+      body: true, // placeholder: reopenBody supplies the real stream per attempt
+      reopenBody: () => fs.createReadStream(source),
       duplex: 'half',
       headers: { 'Content-Type': 'application/octet-stream' }
     });
