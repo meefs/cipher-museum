@@ -110,7 +110,8 @@ const HAND_BUILT = new Set(['caesar.html', 'playfair.html', 'vigenere.html', 'zo
   // Phase 9+ — hand-built analytics + flagship simulation:
   'bible-code.html', 'enigma.html']);
 // Pure-content modern-crypto, unsolved pages, and biography pages with no interactive demo:
-const STATIC_PAGES = new Set(['aes.html', 'des.html', 'diffie-hellman.html',
+const STATIC_PAGES = new Set([
+  'bombe.html', 'colossus.html','aes.html', 'des.html', 'diffie-hellman.html',
   // Bespoke historical demos are exercised in test-historical-exhibits.js.
   'rs44.html', 'double-playfair.html', 'amsco.html',
   'nema.html', 'hagelin-c36.html', 'turning-grille.html', 'myszkowski.html',

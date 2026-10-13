@@ -399,6 +399,19 @@
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
+    "bombe": {
+      "name": "Turing–Welchman Bombe",
+      "hall": "VII",
+      "era": "1940 · Britain",
+      "family": "Cryptanalysis machinery",
+      "region": "Britain",
+      "usedBy": "Bletchley Park codebreakers and operators",
+      "keyType": "Not an encryption system",
+      "keyIdea": "Search Enigma settings using crib constraints",
+      "trust": null,
+      "securityFailure": null,
+      "modernLesson": "Automation supports analysis; candidate settings still require verification."
+    },
     "book-cipher": {
       "name": "Book Cipher",
       "hall": "V",
@@ -539,6 +552,19 @@
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
+    },
+    "colossus": {
+      "name": "Colossus",
+      "hall": "VII",
+      "era": "1944 · Britain",
+      "family": "Cryptanalysis machinery",
+      "region": "Britain",
+      "usedBy": "Bletchley Park codebreakers and operators",
+      "keyType": "Not an encryption system",
+      "keyIdea": "Score Lorenz wheel hypotheses using electronic logic and counters",
+      "trust": null,
+      "securityFailure": null,
+      "modernLesson": "Automation supports analysis; candidate settings still require verification."
     },
     "columnar": {
       "name": "Columnar Transposition",

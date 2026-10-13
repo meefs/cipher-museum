@@ -1,0 +1,47 @@
+[
+  {
+    "mutation": "sigaba=secure",
+    "exit": 1,
+    "assertion": "reserved for the explicit allowlist"
+  },
+  {
+    "mutation": "typex=secure",
+    "exit": 1,
+    "assertion": "reserved for the explicit allowlist"
+  },
+  {
+    "mutation": "fialka=secure",
+    "exit": 1,
+    "assertion": "reserved for the explicit allowlist"
+  },
+  {
+    "mutation": "kl-7=secure",
+    "exit": 1,
+    "assertion": "reserved for the explicit allowlist"
+  },
+  {
+    "mutation": "navajo-code-talkers=secure",
+    "exit": 1,
+    "assertion": "reserved for the explicit allowlist"
+  },
+  {
+    "mutation": "kahn=broken",
+    "exit": 1,
+    "assertion": "context has no cipher trust label"
+  },
+  {
+    "mutation": "bombe=broken",
+    "exit": 1,
+    "assertion": "context has no cipher trust label"
+  },
+  {
+    "mutation": "museum-map.html",
+    "exit": 1,
+    "assertion": "Stale generated count: museum-map.html"
+  },
+  {
+    "mutation": "ciphers/enigma.html",
+    "exit": 1,
+    "assertion": "enigma: doorway to bombe"
+  }
+]

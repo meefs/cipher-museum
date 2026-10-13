@@ -210,4 +210,6 @@
   <url><loc>https://ciphermuseum.com/ciphers/rs44.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://ciphermuseum.com/ciphers/double-playfair.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://ciphermuseum.com/ciphers/amsco.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ciphermuseum.com/ciphers/bombe.html</loc><lastmod>2026-10-13</lastmod></url>
+<url><loc>https://ciphermuseum.com/ciphers/colossus.html</loc><lastmod>2026-10-13</lastmod></url>
 </urlset>

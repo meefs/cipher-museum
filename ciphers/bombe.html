@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turing–Welchman Bombe — The Cipher Museum</title>
+  <meta name="description" content="A crib becomes a network of constraints; machinery searches for settings that survive.">
+  <meta property="og:title" content="Turing–Welchman Bombe — The Cipher Museum">
+  <meta property="og:description" content="A crib becomes a network of constraints; machinery searches for settings that survive.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciphermuseum.com/ciphers/bombe.html">
+  <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Turing–Welchman Bombe — The Cipher Museum">
+  <meta name="twitter:description" content="A crib becomes a network of constraints; machinery searches for settings that survive.">
+  <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://ciphermuseum.com/ciphers/bombe.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="stylesheet" href="../css/museum.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="2" fill="currentColor"/>
+      </svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../museum-map.html">Explore</a></li>
+      <li><a href="../timeline.html">Timeline</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../cipher-corpus.html">Cipher Corpus</a></li>
+      <li><a href="../cryptanalysis.html">Cryptanalysis</a></li>
+      <li><a href="../challenges.html">Challenges</a></li>
+      <li><a href="../lab/workbench.html">Lab</a></li>
+      <li><a href="../search.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+<div class="page-hero">
+<div class="breadcrumb"><a href="../index.html">Entrance</a><span> › </span><a href="../halls/machines.html">Hall VII: Mechanical Cipher Machines</a><span> › </span>Turing–Welchman Bombe</div>
+<div class="page-meta"><span class="page-num">Exhibit 168 of 169</span><span class="badge era-wwii">1940 · Britain</span></div>
+<h1 class="page-title">Turing–Welchman Bombe</h1><p class="page-tagline">A crib becomes a network of constraints; machinery searches for settings that survive.</p>
+  <p class="exhibit-status-note">Codebreaking machine; not an encryption system.</p>
+</div>
+<div class="exhibit-layout"><div class="exhibit-main">
+<div class="cipher-significance"><h2>Why This Matters</h2><p>The Bombe mechanised part of the attack on Enigma. Alan Turing developed the crib-based approach; Gordon Welchman’s diagonal board improved the search. British Tabulating Machine Company engineers built the machines. Operators and analysts remained essential.</p></div>
+<section class="panel"><div class="panel-body"><h2>How the Search Worked</h2><p>A guessed plaintext passage, called a crib, was aligned with intercepted ciphertext. Its letter relationships formed a menu. The Bombe tested rotor arrangements against these constraints; contradictions eliminated candidates. A stop indicated a candidate to check, not a finished plaintext. Welchman’s diagonal board exploited the reciprocal connections of Enigma’s plugboard.</p></div></section>
+<section class="panel"><div class="panel-body"><h2>Read a Constraint</h2><p>Suppose a proposed crib places A against ciphertext A. Enigma cannot encipher a letter as itself, so that alignment is impossible before a machine search begins. A different alignment may survive this first check and still fail the connected menu constraints. Surviving a filter is evidence to investigate, not proof of a correct key.</p></div></section>
+<section class="panel"><div class="panel-body"><h2>Historical Context and Limits</h2><p>The first British Bombe, Victory, entered service in March 1940; the Turing–Welchman version followed in August. The earlier Polish bomba was an important predecessor with a different attack. This was an electromechanical codebreaking machine, not an encryption system or a general-purpose computer. It attacked Enigma, not Lorenz.</p></div></section>
+</div><aside class="exhibit-side"><section class="panel"><div class="panel-body"><h2>Quick Facts</h2>
+<table class="cipher-table"><tbody><tr><td>Exhibit</td><td>168 of 169</td></tr><tr><td>Type</td><td>Codebreaking machine</td></tr><tr><td>In service</td><td>1940</td></tr></tbody></table>
+<h2>Sources and Further Reading</h2><p><a href="https://www.tnmoc.org/bombe" target="_blank" rel="noopener noreferrer">The National Museum of Computing: Turing–Welchman Bombe</a> — reconstruction and historical account.</p>
+<p>This is a static historical exhibit. No cipher engine or machine simulator is claimed.</p></div></section></aside></div>
+<section class="related-exhibits"><h2 class="related-exhibits__heading">Related Exhibits</h2><div class="related-exhibits__grid"><a class="related-card" href="enigma.html"><span class="related-card__name">Enigma</span></a><a class="related-card" href="lorenz.html"><span class="related-card__name">Lorenz</span></a><a class="related-card" href="bletchley-park.html"><span class="related-card__name">Bletchley Park</span></a><a class="related-card" href="bill-tutte.html"><span class="related-card__name">Bill Tutte</span></a><a class="related-card" href="colossus.html"><span class="related-card__name">Colossus</span></a></div></section>
+<div class="hall-nav"><a class="hall-nav-link" href="../halls/machines.html">Return to Hall VII</a></div>
+</main><footer></footer>
+<script src="../js/trust-labels.js"></script>
+<script src="../js/demo-loader.min.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/lightbox.js"></script>
+</body></html>

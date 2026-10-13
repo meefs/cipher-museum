@@ -168,6 +168,8 @@
     {"number":164,"path":"ciphers/myszkowski.html","label":"broken","note":"Repeated-keyword transposition preserves letter frequencies and is vulnerable to statistical and keyword-search attacks.","collection":"cipher-history","interactive":true},
     {"number":165,"path":"ciphers/rs44.html","label":"broken","note":"Published Allied attacks used captured stencils, retransmissions and probable plaintext; isolated traffic could remain difficult.","collection":"cipher-history","interactive":true},
     {"number":166,"path":"ciphers/double-playfair.html","label":"broken","note":"Allied crib and digraph-statistical attacks are documented for German double-box field ciphers; variants must be distinguished.","collection":"cipher-history","interactive":true},
-    {"number":167,"path":"ciphers/amsco.html","label":"broken","note":"Variable-cell transposition preserves frequencies and is susceptible to probable-word and scored permutation search.","collection":"cipher-history","interactive":true}
+    {"number":167,"path":"ciphers/amsco.html","label":"broken","note":"Variable-cell transposition preserves frequencies and is susceptible to probable-word and scored permutation search.","collection":"cipher-history","interactive":true},
+    {"number":168,"path":"ciphers/bombe.html","label":null,"note":"Codebreaking machine; not an encryption system.","collection":"cipher-history","interactive":false},
+    {"number":169,"path":"ciphers/colossus.html","label":null,"note":"Codebreaking machine; not an encryption system.","collection":"cipher-history","interactive":false}
   ]
 }

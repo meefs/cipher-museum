@@ -27,6 +27,7 @@ const WARTIME_UNBROKEN_SYSTEMS = ['sigaba', 'typex', 'kl-7', 'fialka', 'navajo-c
 const HISTORICAL_COMPROMISES = ['vic', 'stager', 'culper-ring', 'arnold-andre', 'che-guevara'];
 const HISTORICAL_SYSTEMS = [...WARTIME_UNBROKEN_SYSTEMS, ...HISTORICAL_COMPROMISES];
 const CONTEXT_EXHIBITS = [
+  'bombe', 'colossus',
   'egyptian-substitution', 'aeneas-tacticus', 'rosetta-stone', 'chinese-telegraph', 'morse',
   'phaistos-disc', 'bletchley-park', 'cabinet-noir', 'kerckhoffs', 'station-hypo', 'bible-code',
   'rochefort', 'beurling', 'dilly-knox', 'yardley', 'mavis-batey', 'gchq-trio', 'kahn',

@@ -31,6 +31,13 @@ assert.deepEqual([...renderCounts(c)], [...renderCounts(c)], 'Rendering is deter
 assert.match(read('index.html'), /Cipher &amp; History Exhibits/);
 assert.doesNotMatch(read('museum-map.html'), /140 Ciphers/);
 assert.match(read('museum-map.html'), /data-count="cipherHistory"/);
+// Both visitor entry points must expose the same canonical subset and total.
+for (const page of ['index.html', 'museum-map.html']) {
+  const dom = new JSDOM(read(page));
+  assert.equal(Number(dom.window.document.querySelector('[data-count="cipherHistory"]').textContent), c.cipherHistory, page + ' cipher/history count');
+  assert.match(dom.window.document.body.textContent, new RegExp('\\b' + c.total + ' exhibits\\b'), page + ' collection total');
+  dom.window.close();
+}
 const comp = new JSDOM(read('comparison.html'));
 const comparisonRows = read('comparison.html').match(/var CIPHERS = (\[[\s\S]*?\n  \]);/)[1];
 const comparisonCount = require('vm').runInNewContext('(' + comparisonRows + ')').length;
