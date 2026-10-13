@@ -59,6 +59,7 @@ const HAND_BUILT = new Set(['caesar', 'playfair', 'vigenere', 'zodiac',
 // Pages that are intentionally static (no engine, no interactive widget) -
 // modern-crypto math walkthroughs, unsolved manuscripts, biography pages.
 const STATIC_PAGES = new Set([
+  'bombe', 'colossus',
   // Historical expansion: bespoke demos, plus a narrative lineage exhibit.
   'rs44', 'double-playfair', 'amsco',
   'nema', 'hagelin-c36', 'turning-grille', 'myszkowski',

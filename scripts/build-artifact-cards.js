@@ -174,6 +174,12 @@ function main(check = false) {
       securityFailure: trust ? (entry.note || 'See the exhibit’s documented attacks and limitations.') : null,
       modernLesson: lessonFromHtml(html)
     };
+    if (['bombe', 'colossus'].includes(slug)) Object.assign(cards[slug], {
+      family: 'Cryptanalysis machinery', region: 'Britain', usedBy: 'Bletchley Park codebreakers and operators',
+      keyType: 'Not an encryption system',
+      keyIdea: slug === 'bombe' ? 'Search Enigma settings using crib constraints' : 'Score Lorenz wheel hypotheses using electronic logic and counters',
+      modernLesson: 'Automation supports analysis; candidate settings still require verification.'
+    });
     if (OVERRIDES[slug]) Object.assign(cards[slug], OVERRIDES[slug]);
   }
 
