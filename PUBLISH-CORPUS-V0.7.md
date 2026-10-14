@@ -58,11 +58,24 @@ manifests, so these digests are the digests that get uploaded.
 ## Step 2 — create the deposit
 
 Use a Zenodo personal access token with `deposit:write` and `deposit:actions`.
-**Do not reuse the token that appeared in the session transcript — revoke that
-one and issue a fresh one.**
+
+Read the token into the environment with a prompt that does not echo it, so it
+never reaches shell history, the screen, or any file:
 
 ```sh
-export ZENODO_TOKEN='<fresh token>'
+# zsh (this repository's default shell)
+read -rs 'ZENODO_TOKEN?Zenodo token: ' && export ZENODO_TOKEN && echo
+
+# bash
+# read -rsp 'Zenodo token: ' ZENODO_TOKEN && export ZENODO_TOKEN && echo
+```
+
+`export ZENODO_TOKEN=<value>` on one line would be recorded in history; the
+`read` form above is not. Do not write the token to `~/.config/zenodo/token`
+unless you want an at-rest copy — the environment variable is enough and
+disappears when the shell exits.
+
+```sh
 node scripts/zenodo-deposit.js 0.7            # draft only; publishes nothing
 ```
 
@@ -73,7 +86,20 @@ removes the files inherited from v0.6 **from the draft only**, uploads, and
 verifies each file's server-side MD5 against the local bytes. It retries
 Zenodo's rate limiter with backoff.
 
-Review the draft URL it prints. Then:
+### Audit the draft before approving it
+
+```sh
+node scripts/zenodo-deposit.js 0.7 --verify
+```
+
+`--verify` makes **GET requests only** — it creates, changes and publishes
+nothing, and is safe to re-run. It reports the draft id and `submitted=false`,
+the concept lineage and previous version, every file with its server-side MD5
+against the local bytes, any missing/extra file, and each metadata field against
+`zenodo-metadata.json`. It exits non-zero and prints `do not publish` if
+anything disagrees.
+
+Review the printed URL as well. Then, only once satisfied:
 
 ```sh
 node scripts/zenodo-deposit.js 0.7 --publish
@@ -123,7 +149,7 @@ move only when the served archive moves, and a test enforces it.
 1. Verify the published record, its file list, its version and its DOI.
 2. Confirm CI is green and the Pages deployment succeeded.
 3. Confirm v0.6 still verifies: `cd public/corpus && shasum -a 256 -c SHA256SUMS.txt`
-4. **Revoke the token that appeared in the transcript**, if not already done.
+4. `unset ZENODO_TOKEN`, and revoke any token that was exposed outside this flow.
 5. **Delete this file.**
 
 ## Known loose end

@@ -7,7 +7,11 @@
  *
  *   export ZENODO_TOKEN=...            # or put it in ~/.config/zenodo/token
  *   node scripts/zenodo-deposit.js 0.7              # create/refresh the draft
+ *   node scripts/zenodo-deposit.js 0.7 --verify     # read-only audit of the draft
  *   node scripts/zenodo-deposit.js 0.7 --publish    # draft, verify, then publish
+ *
+ * --verify makes GET requests only. It creates, modifies and publishes nothing,
+ * so it is safe to run repeatedly while reviewing a draft before approving it.
  *
  * By default this stops at a reviewable draft and publishes nothing. A draft can
  * be deleted; a published DOI cannot be withdrawn, so --publish is opt-in and
@@ -41,6 +45,7 @@ const API = process.env.ZENODO_API || 'https://zenodo.org/api';
 const args = process.argv.slice(2);
 const version = args.find((value) => /^\d+\.\d+$/.test(value));
 const PUBLISH = args.includes('--publish');
+const VERIFY_ONLY = args.includes('--verify');
 const outFlag = args.indexOf('--package');
 
 if (!version) {
@@ -167,6 +172,99 @@ async function main() {
   if (latest.metadata?.version === version) {
     console.error(`v${version} is already published as ${latest.doi}. Refusing to deposit it twice.`);
     process.exit(1);
+  }
+
+  // ---- 2a. read-only audit of an existing draft, for review before approval.
+  if (VERIFY_ONLY) {
+    const depositions = await api('/deposit/depositions?size=100&all_versions=true');
+    const candidates = (Array.isArray(depositions) ? depositions : [])
+      .filter((entry) => String(entry.conceptrecid) === String(conceptRecId));
+    const unsubmitted = candidates.filter((entry) => entry.submitted === false);
+    const problems = [];
+
+    console.log(`\n--- Cipher Corpus v${version} draft audit (read-only) ---`);
+    console.log(`Depositions in concept ${conceptRecId}: ${candidates.length}`
+      + ` (${unsubmitted.length} unsubmitted)`);
+    if (unsubmitted.length === 0) {
+      console.log('\nNo unsubmitted draft exists. Nothing to audit.');
+      process.exit(1);
+    }
+    if (unsubmitted.length > 1) {
+      problems.push(`${unsubmitted.length} unsubmitted drafts exist; expected exactly one`);
+    }
+    const target = await api(`/deposit/depositions/${unsubmitted[0].id}`);
+
+    // Relationship to the existing dataset.
+    console.log(`\nDraft id        : ${target.id}`);
+    console.log(`State           : submitted=${target.submitted} (false means UNPUBLISHED)`);
+    console.log(`Concept recid   : ${target.conceptrecid}`);
+    console.log(`Previous version: v${latest.metadata?.version} (record ${latest.id}, ${latest.doi})`);
+    console.log(`Reserved DOI    : ${target.metadata?.prereserve_doi?.doi
+      || target.doi || '(not shown until publication)'}`);
+    if (String(target.conceptrecid) !== String(conceptRecId)) {
+      problems.push('draft is not in the dataset concept lineage');
+    }
+    if (target.submitted) problems.push('draft reports submitted=true; it is not an open draft');
+
+    // Files: names, count, and md5 against the local package.
+    const remote = target.files || [];
+    console.log(`\nFiles on draft  : ${remote.length} (package has ${files.length})`);
+    const remoteByName = new Map(remote.map((file) => [file.filename, file]));
+    for (const entry of files) {
+      const found = remoteByName.get(entry.name);
+      if (!found) { problems.push(`missing from draft: ${entry.name}`); console.log(`  MISSING  ${entry.name}`); continue; }
+      const remoteMd5 = String(found.checksum || '').replace(/^md5:/, '');
+      const localMd5 = md5(path.join(PKG, entry.name));
+      const ok = remoteMd5 === localMd5;
+      if (!ok) problems.push(`checksum mismatch: ${entry.name}`);
+      console.log(`  ${ok ? 'ok      ' : 'MISMATCH'} ${entry.name}  md5 ${remoteMd5.slice(0, 16)}…`
+        + `  sha256(local) ${entry.digest.slice(0, 16)}…`);
+      remoteByName.delete(entry.name);
+    }
+    for (const leftover of remoteByName.keys()) {
+      problems.push(`unexpected file on draft: ${leftover}`);
+      console.log(`  EXTRA    ${leftover}`);
+    }
+
+    // Metadata, field by field, against the staged definition.
+    const want = JSON.parse(fs.readFileSync(path.join(PKG, 'zenodo-metadata.json'), 'utf8'));
+    const have = target.metadata || {};
+    console.log('\nMetadata:');
+    for (const key of ['upload_type', 'title', 'version', 'publication_date', 'license', 'access_right']) {
+      const expected = want[key];
+      const actual = typeof have[key] === 'object' && have[key] !== null
+        ? (have[key].id || JSON.stringify(have[key])) : have[key];
+      const ok = String(actual) === String(expected);
+      if (!ok) problems.push(`metadata ${key}: draft has ${JSON.stringify(actual)}, expected ${JSON.stringify(expected)}`);
+      console.log(`  ${ok ? 'ok      ' : 'MISMATCH'} ${key}: ${JSON.stringify(actual)}`);
+    }
+    const creator = (have.creators || [])[0] || {};
+    const wantCreator = want.creators[0];
+    const creatorOk = creator.name === wantCreator.name && creator.orcid === wantCreator.orcid;
+    if (!creatorOk) problems.push('creator name/ORCID does not match');
+    console.log(`  ${creatorOk ? 'ok      ' : 'MISMATCH'} creator: ${creator.name} / ${creator.orcid}`);
+    const wantKeywords = new Set(want.keywords);
+    const haveKeywords = new Set(have.keywords || []);
+    const keywordsOk = wantKeywords.size === haveKeywords.size
+      && [...wantKeywords].every((keyword) => haveKeywords.has(keyword));
+    if (!keywordsOk) problems.push('keywords differ from the staged metadata');
+    console.log(`  ${keywordsOk ? 'ok      ' : 'MISMATCH'} keywords: ${haveKeywords.size} present`);
+    for (const related of want.related_identifiers || []) {
+      const present = (have.related_identifiers || [])
+        .some((item) => item.identifier === related.identifier && item.relation === related.relation);
+      if (!present) problems.push(`related identifier missing: ${related.identifier} (${related.relation})`);
+      console.log(`  ${present ? 'ok      ' : 'MISSING '} related: ${related.identifier} (${related.relation})`);
+    }
+
+    console.log(`\nReview URL      : ${target.links?.html || `https://zenodo.org/deposit/${target.id}`}`);
+    if (problems.length) {
+      console.log(`\n${problems.length} PROBLEM(S) — do not publish:`);
+      for (const problem of problems) console.log(`  - ${problem}`);
+      process.exit(1);
+    }
+    console.log('\nAll checks passed. The draft matches the staged package exactly.');
+    console.log('NOT PUBLISHED. Publication requires an explicit --publish run.');
+    return;
   }
 
   // ---- 3. open a new version draft
