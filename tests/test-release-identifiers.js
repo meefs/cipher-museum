@@ -78,6 +78,32 @@ check('the tagged source commit of a pending dataset exists and matches its tag'
   }
 });
 
+check('the publication handoff file does not outlive the pending version', () => {
+  const handoff = 'PUBLISH-CORPUS-V0.7.md';
+  const exists = fs.existsSync(path.join(root, handoff));
+  const stillPending = (identifiers.pending || []).some((entry) => entry.version === '0.7');
+  if (stillPending) {
+    // While it exists it must not contradict the identifier state by implying a
+    // DOI has been issued.
+    if (exists) {
+      const text = read(handoff);
+      assert.match(text, /no DOI has been issued|not citable/i,
+        `${handoff} must state that v0.7 is unpublished while it is pending`);
+      for (const match of text.matchAll(/10\.5281\/zenodo\.\d+/g)) {
+        const known = identifiers.datasets.some((entry) => entry.doi === match[0])
+          || match[0] === identifiers.dataset_concept_doi
+          || match[0] === identifiers.software.doi
+          || match[0] === identifiers.software.concept_doi;
+        assert.ok(known, `${handoff} cites unknown DOI ${match[0]}`);
+      }
+    }
+    return;
+  }
+  // v0.7 is published: the instructions are spent and would mislead.
+  assert.ok(!exists,
+    `${handoff} describes unfinished publication but v0.7 is published; delete it`);
+});
+
 /* ------------------ the site must cite the dataset it actually serves */
 
 check('the website citation DOI matches the dataset version the site serves', () => {
