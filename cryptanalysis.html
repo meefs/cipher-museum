@@ -215,10 +215,10 @@
       <div class="technique-num">Technique 05</div>
       <div class="technique-name">Known Plaintext Attack</div>
       <div class="technique-by">Universal · Classical through Modern</div>
-      <p class="technique-desc">When some plaintext is known, the key can often be derived directly. The Hill cipher's matrix key is recoverable with just two known plaintext-ciphertext pairs by solving a system of linear equations. Enigma used weather forecasts as cribs.</p>
+      <p class="technique-desc">Known plaintext can expose a classical cipher's key. For a 2×2 Hill cipher, two matched plaintext/ciphertext <em>blocks</em> suffice when the plaintext-block matrix P is invertible modulo 26: gcd(det(P), 26) = 1. Otherwise, more observations or other analysis are needed. Enigma cribs impose different, rotor-machine constraints.</p>
       <figure class="figure" style="margin-top:1rem;">
-        <svg viewBox="0 0 520 210" style="max-width:560px;width:100%;height:auto;display:block;background:#1a1a2e;border:1px solid #2e2e3a;border-radius:6px;" role="img" aria-label="Known plaintext attack: solving C equals K times P recovers the key, which decrypts all other traffic"><rect x="20" y="40" width="110" height="44" fill="#141422" stroke="#e8d5a3" stroke-width="1.3" rx="5"/><text x="75.0" y="33" style="font-family:ui-monospace,monospace;font-size:9.5px;fill:#8b7355;text-anchor:middle">known plaintext P</text><text x="75.0" y="66.0" style="font-family:ui-monospace,monospace;font-size:12px;fill:#e8d5a3;text-anchor:middle;font-weight:700">HILL</text><rect x="20" y="110" width="110" height="44" fill="#141422" stroke="#C85A5A" stroke-width="1.3" rx="5"/><text x="75.0" y="103" style="font-family:ui-monospace,monospace;font-size:9.5px;fill:#8b7355;text-anchor:middle">its ciphertext C</text><text x="75.0" y="136.0" style="font-family:ui-monospace,monospace;font-size:12px;fill:#C85A5A;text-anchor:middle;font-weight:700">APAT</text><path d="M140 62 h40 M140 132 h40 M180 62 v70" fill="none" stroke="#c8b273" stroke-width="1.3"/><line x1="180" y1="97" x2="222" y2="97" stroke="#c8b273" stroke-width="1.3" marker-end="none"/><polygon points="230,97 220,92 220,102" fill="#c8b273"/><rect x="238" y="75" width="120" height="44" fill="#141422" stroke="#d4af37" stroke-width="1.3" rx="5"/><text x="298.0" y="68" style="font-family:ui-monospace,monospace;font-size:9.5px;fill:#8b7355;text-anchor:middle">solve C = K·P</text><text x="298.0" y="101.0" style="font-family:ui-monospace,monospace;font-size:12px;fill:#d4af37;text-anchor:middle;font-weight:700">K = C·P⁻¹</text><line x1="366" y1="97" x2="404" y2="97" stroke="#c8b273" stroke-width="1.3"/><polygon points="412,97 402,92 402,102" fill="#c8b273"/><rect x="420" y="75" width="84" height="44" fill="#141422" stroke="#c8b273" stroke-width="1.3" rx="5"/><text x="462.0" y="68" style="font-family:ui-monospace,monospace;font-size:9.5px;fill:#8b7355;text-anchor:middle">the key</text><text x="462.0" y="101.0" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle;font-weight:700">K</text><text x="262" y="178" style="font-family:ui-monospace,monospace;font-size:10px;fill:#8b7355;text-anchor:middle">two matched pairs give the Hill matrix by linear algebra —</text><text x="262" y="194" style="font-family:ui-monospace,monospace;font-size:10px;fill:#8b7355;text-anchor:middle">the recovered key then opens every other message</text></svg>
-        <figcaption class="figure-caption">Known plaintext attack — using matched plaintext-ciphertext pairs to recover the encryption key.</figcaption>
+        <svg viewBox="0 0 520 210" style="max-width:560px;width:100%;height:auto;display:block;background:#1a1a2e;border:1px solid #2e2e3a;border-radius:6px;" role="img" aria-label="Hill key recovery: HILL to TCOZ gives an invertible plaintext-block matrix P; K equals C times P inverse modulo 26"><rect x="20" y="40" width="110" height="44" fill="#141422" stroke="#e8d5a3" stroke-width="1.3" rx="5"/><text x="75.0" y="33" style="font-family:ui-monospace,monospace;font-size:9.5px;fill:#8b7355;text-anchor:middle">known plaintext P</text><text x="75.0" y="66.0" style="font-family:ui-monospace,monospace;font-size:12px;fill:#e8d5a3;text-anchor:middle;font-weight:700">HILL</text><rect x="20" y="110" width="110" height="44" fill="#141422" stroke="#C85A5A" stroke-width="1.3" rx="5"/><text x="75.0" y="103" style="font-family:ui-monospace,monospace;font-size:9.5px;fill:#8b7355;text-anchor:middle">its ciphertext C</text><text x="75.0" y="136.0" style="font-family:ui-monospace,monospace;font-size:12px;fill:#C85A5A;text-anchor:middle;font-weight:700">TCOZ</text><path d="M140 62 h40 M140 132 h40 M180 62 v70" fill="none" stroke="#c8b273" stroke-width="1.3"/><line x1="180" y1="97" x2="222" y2="97" stroke="#c8b273" stroke-width="1.3" marker-end="none"/><polygon points="230,97 220,92 220,102" fill="#c8b273"/><rect x="238" y="75" width="120" height="44" fill="#141422" stroke="#d4af37" stroke-width="1.3" rx="5"/><text x="298.0" y="68" style="font-family:ui-monospace,monospace;font-size:9.5px;fill:#8b7355;text-anchor:middle">solve C = K·P</text><text x="298.0" y="101.0" style="font-family:ui-monospace,monospace;font-size:12px;fill:#d4af37;text-anchor:middle;font-weight:700">K = C·P⁻¹</text><line x1="366" y1="97" x2="404" y2="97" stroke="#c8b273" stroke-width="1.3"/><polygon points="412,97 402,92 402,102" fill="#c8b273"/><rect x="420" y="75" width="84" height="44" fill="#141422" stroke="#c8b273" stroke-width="1.3" rx="5"/><text x="462.0" y="68" style="font-family:ui-monospace,monospace;font-size:9.5px;fill:#8b7355;text-anchor:middle">the key</text><text x="462.0" y="101.0" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle;font-weight:700">K</text><text x="262" y="178" style="font-family:ui-monospace,monospace;font-size:10px;fill:#8b7355;text-anchor:middle">two matched blocks: gcd(det(P), 26) must equal 1</text><text x="262" y="194" style="font-family:ui-monospace,monospace;font-size:10px;fill:#8b7355;text-anchor:middle">here det(P) = −11, so K = C·P⁻¹ exists modulo 26</text></svg>
+        <figcaption class="figure-caption">Hill key recovery — HILL → TCOZ yields K = [[3, 3], [2, 5]] because the plaintext-block matrix is invertible modulo 26.</figcaption>
       </figure>
       <div class="technique-breaks">
         <a href="ciphers/hill.html" class="badge sec-broken" style="text-decoration:none;">Hill Cipher</a>
@@ -381,7 +381,7 @@
   <!-- Tab: Crib Dragging -->
   <div class="lab-panel" id="tab-crib" role="tabpanel" aria-labelledby="tab-btn-crib" hidden>
     <div style="max-width:700px;">
-      <p style="margin-bottom:1rem;color:var(--tx2);">Drag a probable plaintext word ("crib") across the ciphertext. Where the XOR or subtraction produces readable text, you've found the key position. This is how Bletchley Park broke Enigma — they guessed words like WETTER and HEILHITLER.</p>
+      <p style="margin-bottom:1rem;color:var(--tx2);"><strong>Additive-cipher crib test.</strong> Slide a guessed plaintext word across a Vigenère or running-key ciphertext. At each position this tool computes a possible key fragment, (ciphertext − crib) mod 26, with A = 0. A repeating fragment is a hypothesis to test against other text, not confirmation of the crib or key. <a href="ciphers/enigma.html">Enigma crib attacks</a> instead test rotor and plugboard constraints; this subtraction is not the Enigma attack.</p>
       <div class="input-group" style="margin-bottom:1rem;">
         <label class="input-label" for="cribCipher">Ciphertext (letters only)</label>
         <textarea class="museum-input" id="cribCipher" rows="3" placeholder="LXFOPVEFRNHRLXFOPVEFRNHR…&#10;&#10;Try a Vigenère ciphertext."></textarea>
@@ -398,17 +398,23 @@
   <!-- Tab: Known Plaintext Attack -->
   <div class="lab-panel" id="tab-kpa" role="tabpanel" aria-labelledby="tab-btn-kpa" hidden>
     <div style="max-width:700px;">
-      <p style="margin-bottom:1rem;color:var(--tx2);">If you know some plaintext and its corresponding ciphertext, you can derive the key directly. For a Vigenère cipher: Key[i] = (Cipher[i] − Plain[i]) mod 26. Enter a matched pair to recover the key.</p>
+      <p style="margin-bottom:1rem;color:var(--tx2);">For an additive cipher such as Vigenère, known plaintext reveals the keystream <em>only at the matching positions</em>: Key[i] = (Cipher[i] − Plain[i]) mod 26. Align both inputs at their first letter. A repeating fragment suggests a possible period; finite observations do not prove that the rest of the key repeats.</p>
       <div class="input-group" style="margin-bottom:1rem;">
-        <label class="input-label" for="kpaPlain">Known Plaintext</label>
+        <label class="input-label" for="kpaPlain">Known plaintext prefix</label>
         <input type="text" class="museum-input" id="kpaPlain" placeholder="e.g. ATTACKATDAWN" autocomplete="off" spellcheck="false" style="font-family:var(--fm);letter-spacing:.1em;">
       </div>
       <div class="input-group" style="margin-bottom:1rem;">
         <label class="input-label" for="kpaCipher">Corresponding Ciphertext</label>
         <input type="text" class="museum-input" id="kpaCipher" placeholder="e.g. LXFOPVEFRNHR" autocomplete="off" spellcheck="false" style="font-family:var(--fm);letter-spacing:.1em;">
       </div>
-      <button class="btn btn-primary" data-fn="runKPA" style="font-size:.7rem;">Derive Key</button>
+      <div class="input-group" style="margin-bottom:1rem;">
+        <label class="input-label" for="kpaPeriod">Assumed repeating-key period (optional)</label>
+        <input type="number" class="museum-input" id="kpaPeriod" min="1" step="1" placeholder="Leave blank to show only supported positions" aria-describedby="kpaPeriodHelp">
+        <p id="kpaPeriodHelp" style="margin-top:.5rem;color:var(--tx2);">To explore a hypothesis, enter a period no longer than the observed keystream. Any extension beyond the known plaintext remains unverified.</p>
+      </div>
+      <button class="btn btn-primary" data-fn="runKPA" style="font-size:.7rem;">Inspect Keystream</button>
       <div id="kpaResult" class="lab-result" aria-live="polite"></div>
+      <p style="margin-top:1rem;color:var(--tx2);">Reading: Joshua Holden, <a href="further-reading.html#holden"><em>The Mathematics of Secrets</em></a> (2017), §§5.1–5.2, distinguishes repeating keys, running keys, and one-time pads.</p>
     </div>
   </div>
 
@@ -757,6 +763,19 @@ function runKasiski() {
 }
 
 // ── Crib Dragging ───────────────────────────────────
+// Require at least two complete periods. A match describes only this fragment;
+// it does not establish either the guessed plaintext or the complete key.
+function fragmentPeriod(fragment) {
+  for (let period = 1; period <= Math.floor(fragment.length / 2); period++) {
+    let fits = true;
+    for (let i = period; i < fragment.length; i++) {
+      if (fragment[i] !== fragment[i % period]) { fits = false; break; }
+    }
+    if (fits) return period;
+  }
+  return null;
+}
+
 function runCribDrag() {
   const ct = document.getElementById('cribCipher').value.toUpperCase().replace(/[^A-Z]/g,'');
   const crib = document.getElementById('cribWord').value.toUpperCase().replace(/[^A-Z]/g,'');
@@ -769,15 +788,15 @@ function runCribDrag() {
     for (let j = 0; j < crib.length; j++) {
       key += ALPHA[(ct.charCodeAt(pos + j) - crib.charCodeAt(j) + 26) % 26];
     }
-    const isRepeating = crib.length >= 3 && new Set(key.match(/.{1}/g)).size <= Math.ceil(key.length / 2);
-    const style = isRepeating ? 'border-color:var(--gold);background:var(--gold-glow);' : '';
+    const period = fragmentPeriod(key);
+    const style = period !== null ? 'border-color:var(--gold);background:var(--gold-glow);' : '';
     html += '<div style="font-family:var(--fm);font-size:.75rem;background:var(--s3);border:1px solid var(--s4);border-radius:var(--r);padding:.5rem .75rem;color:var(--tx2);' + style + '">';
     html += '<span style="color:var(--tx3);min-width:60px;display:inline-block;">Pos ' + pos + ':</span> ';
     html += 'Key fragment = <span style="color:var(--gold-lt);font-weight:700;">' + key + '</span>';
-    if (isRepeating) html += ' <span style="color:var(--gold);margin-left:.5rem;">★ possible match</span>';
+    if (period !== null) html += ' <span style="color:var(--gold);margin-left:.5rem;">Period ' + period + ' fits this fragment (hypothesis)</span>';
     html += '</div>';
   }
-  html += '</div>';
+  html += '</div><p style="margin-top:.75rem;color:var(--tx2);">A highlighted period fits at least two repeats within the guessed span. Check the proposed key against plaintext outside the crib. No highlight does not rule out a longer period or a running key.</p>';
   out.innerHTML = html;
 }
 
@@ -792,27 +811,44 @@ function runKPA() {
   for (let i = 0; i < len; i++) {
     key += ALPHA[(cipher.charCodeAt(i) - plain.charCodeAt(i) + 26) % 26];
   }
-  // Detect repeating key
-  let repeatingKey = key;
-  for (let kl = 1; kl <= Math.floor(len / 2); kl++) {
-    const candidate = key.substring(0, kl);
-    let match = true;
-    for (let i = 0; i < len; i++) {
-      if (key[i] !== candidate[i % kl]) { match = false; break; }
+  let html = '<strong>Observed keystream (' + len + ' positions):</strong> <span style="color:var(--gold-lt);font-family:var(--fm);letter-spacing:.1em;overflow-wrap:anywhere;">' + key + '</span>';
+  html += '<br><strong>Supported plaintext span:</strong> <span style="font-family:var(--fm);overflow-wrap:anywhere;">' + plain.slice(0, len) + '</span>';
+  if (plain.length > cipher.length) html += '<br>Extra plaintext has no matching ciphertext and was not used.';
+  if (cipher.length > len) html += '<br><strong>Unknown remainder:</strong> ' + (cipher.length - len) + ' ciphertext positions; the observed fragment alone does not decrypt them.';
+  const period = fragmentPeriod(key);
+  if (period !== null) {
+    html += '<br><strong>Period hypothesis:</strong> ' + period + ' (fragment ' + key.slice(0, period) + '). This fits the observed span; it does not prove the complete key repeats.';
+  } else {
+    html += '<br>No period with two complete repeats fits the observed span. Longer periods and nonrepeating keys remain possible.';
+  }
+
+  const periodInput = document.getElementById('kpaPeriod');
+  const requested = periodInput.value.trim();
+  // Browsers expose unfinished number input (for example "1e") as an empty
+  // value with badInput set. Do not mistake that state for an omitted period.
+  if (periodInput.validity.badInput) {
+    html += '<br><strong>Cannot test that period:</strong> enter a whole number from 1 to ' + len + ', or clear the field.';
+  } else if (requested) {
+    const assumed = Number(requested);
+    if (!Number.isInteger(assumed) || assumed < 1 || assumed > len) {
+      html += '<br><strong>Cannot test that period:</strong> enter a whole number from 1 to ' + len + '.';
+    } else {
+      const candidate = key.slice(0, assumed);
+      const fits = Array.from(key).every((letter, i) => letter === candidate[i % assumed]);
+      if (!fits) {
+        html += '<br><strong>Period ' + assumed + ' rejected:</strong> it contradicts the observed keystream.';
+      } else {
+        let extrapolated = '';
+        for (let i = len; i < cipher.length; i++) {
+          extrapolated += ALPHA[(cipher.charCodeAt(i) - candidate.charCodeAt(i % assumed) + 26) % 26];
+        }
+        html += '<br><br><strong>Assumed key:</strong> ' + candidate + ' (period ' + assumed + ').';
+        if (extrapolated) html += '<br><strong>Unverified extension under this assumption:</strong> <span style="font-family:var(--fm);overflow-wrap:anywhere;">' + extrapolated + '</span>';
+        else html += '<br>There is no ciphertext beyond the known span to extend.';
+        html += '<br>Validate this hypothesis against independent plaintext or other evidence.';
+      }
     }
-    if (match) { repeatingKey = candidate; break; }
   }
-  let html = '<strong>Derived key stream:</strong> <span style="color:var(--gold-lt);font-family:var(--fm);letter-spacing:.1em;">' + key + '</span>';
-  if (repeatingKey.length < key.length) {
-    html += '<br><strong style="color:var(--green);">Repeating key detected:</strong> <span style="color:var(--gold);font-family:var(--fm);letter-spacing:.15em;font-size:1.1rem;font-weight:700;">' + repeatingKey + '</span>';
-    html += '<br><span style="color:var(--tx3);">Key length: ' + repeatingKey.length + '</span>';
-  }
-  // Verify: decrypt the cipher with this key
-  let decrypted = '';
-  for (let i = 0; i < cipher.length; i++) {
-    decrypted += ALPHA[(cipher.charCodeAt(i) - repeatingKey.charCodeAt(i % repeatingKey.length) + 26) % 26];
-  }
-  html += '<br><br><strong>Verification (decrypt full ciphertext):</strong><br><span style="font-family:var(--fm);letter-spacing:.1em;color:var(--tx);">' + decrypted + '</span>';
   out.innerHTML = html;
 }
 

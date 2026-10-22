@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>One-Time Pad — The Cipher Museum</title>
-    <meta name="description" content="One-Time Pad (Miller 1882 / Mauborgne 1917) — the only cipher mathematically unbreakable when the key is truly random, key-length, and never reused (Shannon).">
+    <meta name="description" content="A one-time pad offers perfect secrecy with a secret, uniform, independent message-length key used once. Try ciphertext tampering to see why secrecy is not authentication.">
   <meta property="og:title" content="One-Time Pad — The Cipher Museum">
-  <meta property="og:description" content="One-Time Pad (Miller 1882 / Mauborgne 1917) — the only cipher mathematically unbreakable when the key is truly random, key-length, and never reused (Shannon).">
+  <meta property="og:description" content="A one-time pad offers perfect secrecy with a secret, uniform, independent message-length key used once. Try ciphertext tampering to see why secrecy is not authentication.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/one-time-pad.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,13 +15,14 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="One-Time Pad — The Cipher Museum">
-  <meta name="twitter:description" content="One-Time Pad (Miller 1882 / Mauborgne 1917) — the only cipher mathematically unbreakable when the key is truly random, key-length, and never reused (Shannon).">
+  <meta name="twitter:description" content="A one-time pad offers perfect secrecy with a secret, uniform, independent message-length key used once. Try ciphertext tampering to see why secrecy is not authentication.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/one-time-pad.html">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="stylesheet" href="../css/museum.css">
+  <link rel="stylesheet" href="../css/pad-experiments.css">
   
 </head>
 <body>
@@ -79,6 +80,34 @@
 
 <div class="demo-section" data-cipher="otp"></div>
 
+<section class="panel pad-experiment" id="otp-tampering-experiment" aria-labelledby="tamper-title">
+  <div class="panel-body">
+    <h2 id="tamper-title">Can an attacker change what you read?</h2>
+    <p>Perfect secrecy protects confidentiality. It does <strong>not authenticate the message</strong>. In this letter-based model, adding a shift Δ to one ciphertext letter changes the receiver’s corresponding plaintext letter by the same Δ modulo 26. The attacker needs neither the pad nor the original letter to make that change.</p>
+    <label class="pad-hide" for="tamper-hide"><input id="tamper-hide" type="checkbox" checked>Hide sender data (attacker view)</label>
+    <div id="tamper-sender" hidden>
+      <div class="pad-fields">
+        <div><label for="tamper-message">Sender’s message (uppercase A–Z)</label><input id="tamper-message" type="text" maxlength="32" value="ZEBRA" autocomplete="off" spellcheck="false"></div>
+        <div><label for="tamper-pad">Demonstration pad (same length)</label><input id="tamper-pad" type="text" maxlength="32" value="HODIZ" autocomplete="off" spellcheck="false"></div>
+      </div>
+    </div>
+    <div class="pad-fields">
+      <div><label for="tamper-position">Ciphertext position (starts at 1)</label><input id="tamper-position" type="number" min="1" max="5" step="1" value="1"></div>
+      <div><label for="tamper-delta">Shift Δ (0–25)</label><input id="tamper-delta" type="number" min="0" max="25" step="1" value="1"></div>
+    </div>
+    <button id="tamper-run" type="button">Apply the change</button>
+    <p id="tamper-error" class="pad-error" role="status"></p>
+    <div id="tamper-results" aria-live="polite">
+      <dl><dt>Intercepted ciphertext</dt><dd id="tamper-cipher"></dd><dt>Altered ciphertext</dt><dd id="tamper-altered"></dd><dt>Sender’s plaintext</dt><dd id="tamper-original"></dd><dt>Receiver’s plaintext</dt><dd id="tamper-received"></dd></dl>
+      <p id="tamper-outcome"></p>
+      <pre id="tamper-equation"></pre>
+    </div>
+    <p>Reveal the sender data to inspect the result. A predictable letter shift does not mean the attacker can create a meaningful sentence without knowing the original text. There is no authentication check in this toy, so the receiver accepts the modified letters. A real system needs message authentication in addition to encryption.</p>
+    <p><strong>Teaching limits:</strong> This is an original fixed example with a displayed, non-secret pad, not a secure communication tool or a randomness demonstration. Hiding fields only changes the view; the values remain available to this browser. The attack works even with a truly random, secret, single-use pad.</p>
+    <p class="pad-sources">Reading: Jonathan Katz and Yehuda Lindell, <em>Introduction to Modern Cryptography</em>, revised third edition, §4.1.2, “Encryption vs. Message Authentication”; Niels Ferguson, Bruce Schneier and Tadayoshi Kohno, <em>Cryptography Engineering</em> (2010), Chapters 2 and 6. See <a href="../modern.html">modern cryptography</a> for the wider transition from historical ciphers to secure systems.</p>
+  </div>
+</section>
+
 <div class="exhibit-layout">
   <div class="exhibit-main">
 
@@ -94,8 +123,9 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><pre>Encryption: C = P XOR K
-Decryption: P = C XOR K
+      <div class="panel-body"><pre>Binary OTP: C = P XOR K; P = C XOR K
+Letter OTP used below: C = (P + K) mod 26
+                       P = (C − K) mod 26
 
 Example:
 Plain:  H  E  L  L  O  = 07 04 11 11 14
@@ -217,7 +247,8 @@ Decrypt — subtract mod 26:
 
 Why unbreakable: HHWIBA could decrypt to
 any 6-letter message with some key.
-Without the key, all plaintexts are equally likely.</pre></div>
+The ciphertext does not change the prior probabilities
+of the possible plaintexts.</pre></div>
     </div>
 
     <div class="panel">
@@ -291,6 +322,7 @@ Without the key, all plaintexts are equally likely.</pre></div>
 
 <footer></footer>
 <script src="../js/trust-labels.js"></script>
+<script src="../js/pad-experiments.js" defer></script>
 <script src="../js/ciphers/all-engines.min.js"></script>
 <script src="../js/demo-loader.min.js"></script>
 <script src="../js/nav.js" defer></script>

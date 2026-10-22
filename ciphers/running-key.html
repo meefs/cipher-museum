@@ -66,14 +66,14 @@
   </div>
   <h1 class="page-title">Running Key Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">A book as the key — the closest classical cipher to the one-time pad</p>
+  <p class="page-tagline">A book-length key removes short repetition, but keeps language patterns</p>
   <p class="exhibit-status-note">Source text identification · Statistical analysis</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Various 19th century cryptographers</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1850s</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Full-length key text (book or speech)</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Source text identification · Statistical analysis</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Key length = message length (OTP principle)</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">A long key is not necessarily a random key</span></div>
   </div>
 </div>
 
@@ -84,22 +84,22 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The running key cipher solved Vigenère’s fatal flaw — the repeating keyword — by using a full book passage as the key. It appears statistically similar to a one-time pad, but its reliance on natural language as key material introduces subtle vulnerabilities that cryptanalysts can exploit.</p>
+      <p>A running key replaces Vigenère’s short repeating keyword with a long passage. Removing that short period does not make the key random: natural language remains biased and structured. A book passage therefore does not give the perfect secrecy of a one-time pad.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The running key cipher applies Vigenère's logic but replaces the short repeating keyword with a full-length passage from a pre-agreed text — a book, a speech, a newspaper article. With no repeating key, Kasiski's examination finds nothing. The cipher appears to have the same statistical properties as the one-time pad.</p><p style="margin-top:1rem;">It was used by diplomats and spies who could carry an innocuous-looking book and know which page and line to start from. The key distribution problem was solved by having both parties own the same edition of a common book.</p></div>
+      <div class="panel-body"><p>The running key cipher applies Vigenère's arithmetic but replaces the short repeating keyword with a message-length passage from a pre-agreed text — a book, a speech, or a newspaper article. Kasiski's usual search for a repeated keyword period is no longer the same route to an attack. Accidental repetitions can still occur, and the structure of the plaintext and key text remains available to statistical analysis.</p><p style="margin-top:1rem;">A shared book offers an inconspicuous source of key material: both parties need the same edition and an agreed starting position. It does not provide a secret, uniformly random, independent pad, and sharing the book does not remove the need to manage those choices securely.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
       <div class="panel-body"><pre>Plain: ATTACKATDAWN
-Key:   FROMTHISBOOK
+Key:   FROMTHISBOOKW
 Cipher: each letter shifted by key letter
 
 A+F=F, T+R=K, T+O=H, A+M=M,
-C+T=V, K+H=R, A+I=I, T+S=L...</pre><p style="margin-top:1rem;">Security depends entirely on the key text never being identified. If an attacker guesses the source (any printed book), they can test it against the ciphertext trivially.</p>
+C+T=V, K+H=R, A+I=I, T+S=L...</pre><p style="margin-top:1rem;">An attacker can test guesses for the source passage and starting position. Even without finding the book, statistical attacks can exploit language patterns in both the plaintext and key. Keeping the source unidentified is therefore not a sufficient security condition.</p>
 <figure class="figure">
 <svg viewBox="0 0 380 150" style="width:100%;max-width:380px;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Running key cipher using book text as key">
   <style>text{font-family:'JetBrains Mono',monospace;fill:#EDE5D4}rect{rx:4}</style>
@@ -133,7 +133,7 @@ C+T=V, K+H=R, A+I=I, T+S=L...</pre><p style="margin-top:1rem;">Security depends 
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Source Text Attack</div><div class="attack-diff">Complexity: Moderate-Hard</div><p class="attack-desc">If the key source (a book, speech, or document) can be guessed, the cipher breaks instantly. Historical running key ciphers were often broken when the source text was identified through context clues — agents were known to favor the Bible, Shakespeare, or popular novels of their era.</p></div><div class="attack-panel"><div class="attack-name">Statistical Cryptanalysis</div><div class="attack-diff">Complexity: Hard</div><p class="attack-desc">Even without knowing the source, the key text has English statistical structure. Both the plaintext and key obey English letter frequencies. This creates detectable second-order patterns that sophisticated statistical attacks can exploit — making the running key cipher weaker than a true one-time pad.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Source Text Attack</div><div class="attack-diff">Complexity: Depends on the candidate sources and positions</div><p class="attack-desc">If an attacker identifies the edition and passage used for the key, they can reconstruct that keystream and decrypt the message. A likely book title narrows the search, but the starting position and text preparation still matter.</p></div><div class="attack-panel"><div class="attack-name">Statistical Cryptanalysis</div><div class="attack-diff">Complexity: Hard</div><p class="attack-desc">Even without knowing the source, the key text has English statistical structure. Both the plaintext and key obey English letter frequencies. This creates detectable second-order patterns that sophisticated statistical attacks can exploit — making the running key cipher weaker than a true one-time pad.</p></div></div>
     </div>
 
     <div class="panel">
@@ -141,10 +141,11 @@ C+T=V, K+H=R, A+I=I, T+S=L...</pre><p style="margin-top:1rem;">Security depends 
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from Running Key Cipher</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>Key length = message length</td><td>One-time pad: this is exactly the OTP principle — the key must be as long as the message</td></tr>
+          <tbody><tr><td>Key length = message length</td><td>Necessary but not sufficient for a one-time pad: its secret key must also be uniformly random, independent of the message, and used only once</td></tr>
 <tr><td>Non-repeating key</td><td>Modern stream ciphers: keystream length = message length, never reused</td></tr>
 <tr><td>Key source = security weakness</td><td>True randomness: OTP keys must be random, not drawn from patterned text</td></tr></tbody>
         </table>
+        <p style="margin-top:1rem;">Reading: Joshua Holden, <a href="../further-reading.html#holden"><em>The Mathematics of Secrets</em></a> (2017), §5.1 on running-key attacks and §5.2 on one-time pads. A long key and a uniformly random key are different requirements.</p>
       </div>
     </div>
 

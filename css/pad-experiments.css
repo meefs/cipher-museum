@@ -1,0 +1,24 @@
+.pad-experiment { margin: 1.5rem 0; }
+.pad-experiment .panel-body { padding: clamp(1rem, 3vw, 1.5rem); }
+.pad-experiment h2 { margin: 0 0 .75rem; font-size: 1.35rem; }
+.pad-experiment h3 { margin: 1.3rem 0 .5rem; font-size: 1.1rem; }
+.pad-experiment p { line-height: 1.7; }
+.pad-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; margin: 1rem 0; }
+.pad-fields label { display: block; font-size: .9rem; margin-bottom: .3rem; }
+.pad-fields input { width: 100%; box-sizing: border-box; border: 1px solid var(--s5); border-radius: 4px; background: var(--s2); color: var(--tx); padding: .65rem; font: 1rem var(--fm, monospace); }
+.pad-experiment button { min-height: 44px; padding: .6rem 1rem; background: var(--gold); color: #111; border: 1px solid var(--gold); border-radius: 4px; cursor: pointer; font: inherit; font-weight: 600; }
+.pad-experiment input:focus-visible, .pad-experiment button:focus-visible, .pad-experiment summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.pad-experiment .pad-hide { display: flex; align-items: center; gap: .65rem; margin: 1rem 0; min-height: 44px; }
+.pad-experiment .pad-hide input { width: 1.2rem; height: 1.2rem; }
+.pad-experiment dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .6rem 1rem; padding: 1rem; background: var(--s2); }
+.pad-experiment dt { font-weight: 600; }
+.pad-experiment dd { margin: 0; font-family: var(--fm, monospace); overflow-wrap: anywhere; }
+.pad-experiment pre { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.6; font-size: .9rem; }
+.pad-experiment .pad-error { color: var(--red, #ff9c9c); }
+.pad-experiment .pad-sources { font-size: .85rem; color: var(--tx3); margin-top: 1.25rem; }
+.pad-experiment [hidden] { display: none !important; }
+@media (max-width: 560px) {
+  .pad-fields { grid-template-columns: 1fr; }
+  .pad-experiment dl { grid-template-columns: 1fr; }
+  .pad-experiment dd { padding-bottom: .65rem; }
+}

@@ -157,7 +157,11 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Known Plaintext Attack</div><div class="attack-diff">Complexity: Trivial (with known plaintext)</div><p class="attack-desc">If an attacker knows just n plaintext-ciphertext pairs (where n is the matrix dimension), they can set up a system of linear equations and solve for the key matrix directly using linear algebra. For a 2×2 key, two known pairs are sufficient. This makes the Hill cipher catastrophically weak in any environment where the attacker can observe plaintext-ciphertext pairs.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Known Plaintext Attack</div><div class="attack-diff">Complexity: Easy with suitable known blocks</div><p class="attack-desc">For an n×n Hill key, collect n matched plaintext/ciphertext <em>blocks</em> as the columns of matrices P and C. When P is invertible modulo 26 — that is, gcd(det(P), 26) = 1 — the key follows directly: K = C × P⁻¹ mod 26. Merely knowing n blocks does not guarantee this condition. If it fails, more observations or a more general solution of the linear congruences may be needed. The cipher remains vulnerable because the relation is linear.</p>
+        <p style="margin-top:1rem;"><strong>Enough information:</strong> the two blocks HI and LL give P = [[7, 11], [8, 11]], whose determinant is −11, coprime to 26. Matched with ciphertext TC and OZ, they recover K = [[3, 3], [2, 5]], the demo’s default key.</p>
+        <p style="margin-top:1rem;"><strong>Not enough information:</strong> AA and AB both map to AA and DF under either K = [[3, 3], [2, 5]] or K = [[5, 3], [2, 5]]. Both keys are valid, but these two known blocks do not distinguish them. These examples use classical A = 0 blocks; remember the demo’s X/Q/Z escaping when analyzing other inputs.</p>
+        <p style="margin-top:1rem;">Reading: Joshua Holden, <a href="../further-reading.html#holden"><em>The Mathematics of Secrets</em></a> (2017), §§1.6–1.7. The invertibility check above specifies when the direct matrix-inverse recovery works.</p>
+      </div></div>
     </div>
 
     <div class="panel">

@@ -1,0 +1,22 @@
+/* Scoped to the columnar exhibit's synchronized strip exercise. */
+#multiple-anagramming .ma-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin: 1rem 0; }
+#multiple-anagramming .ma-controls .btn { flex: 0 1 auto; text-transform: none; letter-spacing: normal; }
+#multiple-anagramming select { min-height: 44px; padding: .5rem; background: var(--s2); color: var(--tx); border: 1px solid var(--gold-dim); border-radius: var(--r); font: inherit; }
+#multiple-anagramming button:disabled { opacity: .55; cursor: default; transform: none; }
+#multiple-anagramming .ma-control-toggle { display: flex; gap: .6rem; align-items: center; min-height: 44px; }
+#multiple-anagramming .ma-control-toggle input { width: 1.2rem; height: 1.2rem; flex: 0 0 auto; }
+#multiple-anagramming .ma-strips { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .4rem; padding: 0; margin: 1rem 0; list-style: none; }
+#multiple-anagramming .ma-strip { min-width: 0; border: 1px solid var(--s5); border-radius: var(--r); background: var(--s2); text-align: center; }
+#multiple-anagramming .ma-strip > strong { display: block; padding: .45rem; background: var(--s3); color: var(--gold-lt); }
+#multiple-anagramming .ma-selected { border: 2px solid var(--gold); }
+#multiple-anagramming .ma-column { border-top: 1px solid var(--s5); padding: .35rem .1rem; }
+#multiple-anagramming .ma-column small { display: block; color: var(--tx2); font-size: .7rem; }
+#multiple-anagramming .ma-letters { display: block; white-space: pre-line; font-family: var(--fc, monospace); line-height: 1.4; }
+#multiple-anagramming .ma-candidates { display: grid; gap: .8rem; }
+#multiple-anagramming .ma-candidates > div { min-width: 0; padding: .8rem; border: 1px solid var(--s5); border-radius: var(--r); }
+#multiple-anagramming .ma-candidates h3 { margin: 0 0 .3rem; font-size: 1rem; }
+#multiple-anagramming .ma-intercept { font-size: .8rem; margin: .2rem 0; font-family: var(--fc, monospace); }
+#multiple-anagramming .ma-candidate { display: block; color: var(--gold-lt); overflow-wrap: anywhere; letter-spacing: .08em; font-size: 1rem; }
+#multiple-anagramming .ma-check-result { margin: .3rem 0 0; font-size: .85rem; }
+#multiple-anagramming .ma-status { min-height: 3em; }
+#multiple-anagramming summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }

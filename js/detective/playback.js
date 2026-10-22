@@ -49,9 +49,9 @@
     return [
       /* ── Step 1: Normalise ─── */
       {
-        title: 'Step 1 of 7 \u2014 Normalise the Text',
+        title: 'Step 1 of 7 \u2014 Preserve the Source, Choose a Projection',
         render: function () {
-          return '<p class="pb-narration">Every investigation begins the same way: strip whitespace, punctuation, and case. What remains is the raw signal \u2014 the letters themselves. Everything that follows is derived from this normalised form.</p>' +
+          return '<p class="pb-narration">Preserve the original transcription first. This Detective uppercases its input and extracts A\u2013Z for its letter statistics; characters outside that alphabet after conversion are excluded from those calculations. That is an analysis choice, not a universal preparation rule. Numeric groups, line breaks and uncertain glyphs can be evidence. Inspect them in the <a href="#transcription-workspace">transcription workspace</a> before choosing a projection. Character-set detection still examines the supplied text.</p>' +
             '<div class="pb-card">' +
               '<div class="pb-metrics-row">' +
                 '<div class="pb-metric"><span class="pb-metric-label">Letters extracted</span>' +

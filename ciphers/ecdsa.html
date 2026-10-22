@@ -76,7 +76,7 @@
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
       <p>Encryption keeps a message private. A signature does something different and, on the open internet, more urgent: it proves who wrote it. ECDSA is how a web server proves it owns its domain, how a Bitcoin transaction proves it may spend a coin, and how your phone proves an update really came from its manufacturer.</p>
-      <p>It is also the museum's clearest case of a scheme whose mathematics is sound and whose <em>implementations</em> have failed repeatedly &mdash; always in the same place, always for the same reason.</p>
+      <p>It is also the museum's clearest case of a scheme whose mathematics is sound and whose <em>implementations</em> have failed repeatedly. Nonce mistakes are a particularly revealing example; secure implementation also requires careful arithmetic, validation and side-channel protection.</p>
     </div>
 
     <div class="panel">
@@ -120,7 +120,7 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">The nonce that sank the PlayStation 3</span></div>
       <div class="panel-body">
-        <p>The nonce <em>k</em> must be secret, and it must be <strong>different every time</strong>. Sign two different messages with the same <em>k</em> and the two equations share an unknown. Subtract them and <em>k</em> falls out; substitute back and the private key follows. No lattice, no supercomputer &mdash; secondary-school algebra:</p>
+        <p>The nonce <em>k</em> must be secret. Reusing it with <strong>distinct message-hash values modulo <em>n</em></strong> is dangerous: the two signature equations then share an unknown. Subtract them and <em>k</em> falls out; substitute back and the private key follows. No lattice, no supercomputer &mdash; secondary-school algebra:</p>
         <p style="font-family:ui-monospace,monospace;background:var(--bg2,rgba(255,255,255,.04));padding:12px 16px;border-radius:6px;overflow-x:auto;">k = (h&#8321; &minus; h&#8322;) / (s&#8321; &minus; s&#8322;) &nbsp;&nbsp;then&nbsp;&nbsp; d = (s&#8321;k &minus; h&#8321;) / r</p>
         <p>In December 2010 the group fail0verflow demonstrated that Sony's PlayStation 3 signed every firmware release with the same fixed <em>k</em>. The console's master signing key was recoverable by anyone who owned two signed updates. Sony could not fix it with a patch: the key was the root of the console's trust, and it was now public. The identical bug drained Bitcoin wallets in 2013 when an Android random-number generator repeated its output.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin:18px 0;">
@@ -140,8 +140,9 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
       <div class="panel-body">
-        <p>No practical attack is known against ECDSA's mathematics on a well-chosen curve. Every notable break has been an implementation failure, and almost all of them concern the nonce: repeating it, generating it with a weak random source, or leaking a few of its bits through a timing or cache side channel. Even partial leakage is fatal &mdash; recovering a handful of nonce bits across a few hundred signatures lets an attacker reconstruct the private key by lattice reduction.</p>
-        <p>The standard defence is to stop generating <em>k</em> randomly at all. <strong>Deterministic ECDSA</strong> (RFC 6979) derives the nonce from the private key and the message hash together, so identical messages produce identical signatures and different messages cannot collide. EdDSA (Ed25519) builds the same idea into the scheme by design, which is one reason it is now often preferred.</p>
+        <p>No practical classical attack is known against properly parameterised ECDSA with suitable curves and hashes. Implementations can fail through nonce reuse, weak randomness, faults, or side-channel leakage. <strong>Partial nonce leakage can enable key recovery</strong>, but success depends on the amount and structure of leakage, measurement noise and the number of signatures available; it is not an unconditional result for any leaked bit.</p>
+        <p><strong>Deterministic ECDSA</strong> derives the nonce from the private key and message hash, removing dependence on fresh signing randomness. With the same inputs it produces the same signature. It does <strong>not guarantee collision-free nonces</strong> for different messages, and it does not remove side-channel or fault risks. Correct randomised ECDSA is also possible; secure key generation still needs suitable randomness.</p>
+        <p class="source-note">Source: <a href="https://www.rfc-editor.org/rfc/rfc6979.html#section-4" target="_blank" rel="noopener noreferrer">RFC 6979 (August 2013), §§1, 3.2 and 4</a>, an Informational RFC. Its deterministic nonce procedure retains implementation-security requirements. This exhibit uses visitor-selected toy nonces and does not implement RFC 6979.</p>
         <p>Like all discrete-logarithm cryptography, ECDSA falls to a sufficiently large quantum computer running Shor's algorithm. Its replacement, ML-DSA, rests on lattice problems instead &mdash; the reason that shift works is set out in the <a href="../hall-of-foundations/learning-with-errors.html">Learning With Errors</a> exhibit.</p>
       </div>
     </div>
@@ -163,7 +164,7 @@
         <p><strong>Public key:</strong> the point <em>Q</em> = <em>dG</em>.</p>
         <p><strong>Signature:</strong> a pair (<em>r</em>, <em>s</em>).</p>
         <p><strong>Hard problem:</strong> find <em>d</em> given <em>Q</em> &mdash; the elliptic-curve discrete logarithm.</p>
-        <p><strong>Fatal mistake:</strong> reusing the nonce <em>k</em>. One repeat exposes the private key completely.</p>
+        <p><strong>Fatal mistake:</strong> reusing the nonce <em>k</em> for distinct message-hash values modulo <em>n</em>. Two valid signatures then expose the private key.</p>
         <p style="margin-top:14px;border-top:1px solid var(--gold-b);padding-top:12px;">The mathematics is in the <a href="../hall-of-foundations/elliptic-curves-real.html">Hall of Foundations</a>: the group law that makes <em>dG</em> meaningful, and the finite field it runs in.</p>
       </div>
     </div>
@@ -284,8 +285,8 @@
     el("sigOut").innerHTML =
       "Same signature (r, s) = ("+L.sig.r+", "+L.sig.s+"), but message hash changed "+L.h+" &rarr; "+h2+"<br>"+
       "verify: <b style=\"color:"+(ok?"var(--red,#c94f3d)":"var(--green,#5AC8A0)")+"\">"+
-      (ok?"accepted &mdash; a 1-in-103 coincidence on this toy curve":"REJECTED, as it must be")+
-      "</b><br><span style=\"opacity:.75\">On a real curve n is about 2<sup>256</sup>, so that coincidence never happens.</span>";
+      (ok?"accepted &mdash; a collision on this tiny toy curve":"REJECTED for these inputs")+
+      "</b><br><span style=\"opacity:.75\">Real parameter sizes make such accidental acceptance negligibly likely under the usual security assumptions, not mathematically impossible.</span>";
   }
 
   function reuse(){

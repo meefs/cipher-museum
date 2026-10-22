@@ -1,0 +1,24 @@
+.det-handwork { margin: 1.5rem 0; border: 1px solid var(--s5); border-radius: var(--r); padding: 1rem; background: var(--s2); }
+.det-handwork summary { cursor: pointer; font-family: var(--fd); color: var(--gold-lt); font-size: 1.12rem; padding: .3rem 0; }
+.det-handwork p { line-height: 1.65; color: var(--tx2); }
+.det-handwork label { display: block; margin: .6rem 0 .3rem; color: var(--tx2); }
+.det-handwork input, .det-handwork select, .det-handwork textarea { background: var(--s3); color: var(--tx); border: 1px solid var(--s5); border-radius: var(--r); padding: .5rem; font: inherit; max-width: 100%; box-sizing: border-box; }
+.det-handwork textarea { width: 100%; min-height: 5rem; font-family: var(--fm); }
+.det-handwork button { background: var(--s3); color: var(--gold-lt); border: 1px solid var(--gold-b); border-radius: var(--r); padding: .6rem .8rem; cursor: pointer; font: inherit; min-height: 44px; }
+.det-handwork button:disabled { color: var(--tx3); cursor: not-allowed; }
+.det-handwork :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.det-tools { display: flex; gap: .6rem; flex-wrap: wrap; margin: .75rem 0; align-items: end; }
+.det-key-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(5.2rem, 1fr)); gap: .5rem; }
+.det-key-cell { border: 1px solid var(--s4); padding: .4rem; text-align: center; border-radius: var(--r); }
+.det-key-cell input[type=text] { width: 3rem; text-align: center; font-family: var(--fm); }
+.det-key-cell label { margin: .25rem 0; }
+.det-key-cell .det-lock { font-size: .8rem; display: flex; align-items: center; justify-content: center; gap: .25rem; min-height: 44px; }
+.det-key-cell input[type=checkbox] { width: 1.1rem; height: 1.1rem; }
+.det-work-output { display: block; white-space: pre-wrap; overflow-wrap: anywhere; padding: .8rem; border: 1px solid var(--s4); background: var(--s3); border-radius: var(--r); font-family: var(--fm); line-height: 1.8; }
+.det-handwork .det-status { min-height: 1.7rem; color: var(--gold-lt); }
+.det-handwork .det-source { font-size: .9rem; }
+.det-token-scroll { max-height: 23rem; overflow: auto; margin: .75rem 0; }
+.det-token-table { width: 100%; border-collapse: collapse; }
+.det-token-table th, .det-token-table td { text-align: left; padding: .4rem; border-bottom: 1px solid var(--s4); overflow-wrap: anywhere; }
+.det-token-table select { min-height: 44px; width: 100%; }
+@media (max-width: 480px) { .det-handwork { padding: .75rem; } .det-token-table { font-size: .85rem; } }

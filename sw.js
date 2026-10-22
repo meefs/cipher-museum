@@ -16,7 +16,7 @@
  */
 'use strict';
 
-const VERSION = 'cipher-museum-8f953116';
+const VERSION = 'cipher-museum-a634d1fd';
 
 const CORE = [
   '/',
@@ -30,6 +30,13 @@ const CORE = [
   '/ciphers/amsco.html',
   '/css/manual-cipher-demos.css',
   '/js/manual-cipher-demos.js',
+  '/css/multiple-anagramming.css',
+  '/js/multiple-anagramming.js',
+  '/css/pad-experiments.css',
+  '/js/pad-experiments.js',
+  '/css/detective-workspaces.css',
+  '/js/detective/workspaces.js',
+  '/js/detective/playback.js',
   '/js/ciphers/all-engines.min.js',
   '/css/museum.css',
   '/css/historical-demos.css',

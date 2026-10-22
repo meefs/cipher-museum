@@ -36,6 +36,8 @@
   /* ─── Helpers ────────────────────────────────────────────────── */
 
   function extractLetters(t) {
+    // Scoped statistical projection, not a replacement for the original
+    // transcription. Uppercasing can expand characters (for example ß → SS).
     return t.toUpperCase().replace(/[^A-Z]/g, '');
   }
 

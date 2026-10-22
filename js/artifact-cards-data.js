@@ -1362,7 +1362,7 @@
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Bill Tutte · Known plaintext · Colossus computer (1944)",
+      "securityFailure": "Tiltman: depth (1941) · Tutte: structure (1942) · Colossus: wheel settings (1944)",
       "modernLesson": "Computational cryptanalysis → birth of modern computing"
     },
     "m-94": {
@@ -1896,7 +1896,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Source text identification · Statistical analysis",
-      "modernLesson": "Key length = message length (OTP principle)"
+      "modernLesson": "A long key is not necessarily a random key"
     },
     "sator-square": {
       "name": "Sator Square",

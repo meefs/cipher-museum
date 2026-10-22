@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cipher Detective — The Cipher Museum</title>
-  <meta name="description" content="Paste unknown ciphertext and let the Cipher Detective walk you through the evidence — frequency analysis, Index of Coincidence, Kasiski examination — to identify the most likely cipher family.">
+  <meta name="description" content="Inspect cipher evidence with frequency analysis and Kasiski tests, preserve annotated transcriptions, and try partial keys at a manual substitution desk.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="canonical" href="https://ciphermuseum.com/cipher-detective.html">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="stylesheet" href="css/museum.css">
+  <link rel="stylesheet" href="css/detective-workspaces.css">
   <style>
     .det-workspace    { max-width: 1100px; margin: 0 auto; }
     .det-grid         { display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start; }
@@ -365,6 +366,57 @@
     Awaiting input. The Detective analyses text as you type or paste.
   </div>
 
+  <details class="det-handwork" id="transcription-workspace">
+    <summary>Prepare a transcription — preserve the evidence</summary>
+    <p>Keep the original symbols, spacing and line breaks before making an analysis copy. This workspace is independent of the live Detective input above. A question mark represents one unreadable symbol; a token can also be marked uncertain or missing. This is a small transcription tool, not OCR.</p>
+    <div class="det-tools">
+      <button type="button" id="prep-copy">Copy Detective input</button>
+      <button type="button" id="prep-example">Load damaged-note exercise</button>
+    </div>
+    <label for="prep-raw">Original transcription (up to 10,000 characters)</label>
+    <textarea id="prep-raw" maxlength="10000" spellcheck="false">12 ?4 56
+12 34 5? ◆</textarea>
+    <div class="det-tools">
+      <div><label for="prep-mode">Token alphabet</label><select id="prep-mode"><option value="symbols">All non-space symbols</option><option value="digits" selected>Digits and unreadable ? symbols</option><option value="letters">ASCII letters A–Z and unreadable ? symbols</option></select></div>
+      <div><label for="prep-width">Symbols per token</label><select id="prep-width"><option value="1">1</option><option value="2" selected>2</option><option value="5">5</option></select></div>
+    </div>
+    <p>Groups restart at each space or line break. Excluded symbols end a group too; an incomplete group stays visible. Review and explicitly clear annotations before editing the text or tokenization. A change of width does not resolve an uncertain symbol.</p>
+    <button type="button" id="prep-clear-annotations">Clear annotations after review</button>
+    <p id="prep-losses" class="det-status" aria-live="polite"></p>
+    <div class="det-token-scroll"><table class="det-token-table"><caption>Transcription tokens and uncertainty</caption><thead><tr><th scope="col">Position</th><th scope="col">Token</th><th scope="col">Status</th></tr></thead><tbody id="prep-tokens"></tbody></table></div>
+    <label for="prep-frequencies">Token counts (uncertain tokens remain separate)</label>
+    <output id="prep-frequencies" class="det-work-output"></output>
+    <label for="prep-projection">Preview: optional ASCII A–Z copy for the Detective</label>
+    <output id="prep-projection" class="det-work-output"></output>
+    <p id="prep-projection-note"></p>
+    <div class="det-tools"><button type="button" id="prep-send">Use the displayed A–Z projection</button><button type="button" id="prep-export">Export transcription JSON</button><button type="button" id="prep-download">Download JSON</button></div>
+    <label for="prep-json">Saved transcription JSON — paste an export here to reload it</label>
+    <textarea id="prep-json" spellcheck="false" maxlength="100000"></textarea>
+    <button type="button" id="prep-import">Load saved transcription</button>
+    <p id="prep-status" class="det-status" role="status"></p>
+    <p class="det-source">Reading: Bernhard Esslinger, <em>Learning and Experiencing Cryptography with CrypTool and SageMath</em> (2024), Chapter 3 §§3.4–3.5.1. See the <a href="https://www.cryptool.org/en/ctts/" target="_blank" rel="noopener">CrypTool Transcriber and Solver project</a> for document transcription tools, and the <a href="further-reading.html#esslinger">reading companion</a>.</p>
+  </details>
+
+  <details class="det-handwork" id="manual-substitution">
+    <summary>Solve a substitution cipher by hand</summary>
+    <p>Build a partial key from cipher letters to plaintext letters. A dot (·) means unknown. This mode assumes a one-to-one A–Z substitution; homophonic ciphers need different rules. Spaces and punctuation are preserved, and word-pattern matching assumes the supplied word boundaries are real.</p>
+    <div class="det-tools"><button type="button" id="manual-copy">Copy Detective input</button><button type="button" id="manual-example">Load word-pattern exercise</button></div>
+    <label for="manual-cipher">Ciphertext for the manual desk</label>
+    <textarea id="manual-cipher" maxlength="10000" spellcheck="false">ABBA AB</textarea>
+    <p>Enter a plaintext letter beneath each cipher letter. Lock a mapping to keep it while trying suggestions; unlock it before editing. Changing ciphertext starts a fresh key, and Undo restores the previous text, key and locks.</p>
+    <div id="manual-key" class="det-key-grid" aria-label="Partial substitution key"></div>
+    <div class="det-tools"><button type="button" id="manual-undo">Undo</button><button type="button" id="manual-clear">Clear unlocked mappings</button><button type="button" id="manual-frequency">Try frequency suggestions</button></div>
+    <p>Frequency suggestions fill empty, unlocked entries without displacing your assignments. They are guesses, not a solution. The separate Auto-Solve panel does not modify this desk or use its constraints.</p>
+    <label for="manual-plain">Partial plaintext</label><output id="manual-plain" class="det-work-output"></output>
+    <p id="manual-status" class="det-status" role="status"></p>
+    <label for="manual-words">Candidate dictionary (space- or line-separated A–Z words, maximum 100)</label>
+    <textarea id="manual-words" spellcheck="false" maxlength="3000">NOON DEED NO DO</textarea>
+    <div class="det-tools"><button type="button" id="manual-patterns">Compare word patterns</button><button type="button" id="manual-apply" disabled>Apply the sole compatible candidate</button></div>
+    <output id="manual-candidates" class="det-work-output" aria-live="polite">Compare the patterns in ABBA AB with the small supplied dictionary.</output>
+    <p>A result is compatible only with this dictionary and your current key hypotheses. Even a sole candidate is not proof of the original message. No word boundaries are invented for continuous text. Pattern matching requires resolved A–Z words separated by whitespace; unknown symbols and punctuation must not be silently treated as boundaries. To keep the search responsive, use at most eight distinct cipherwords, each no longer than 20 letters.</p>
+    <p class="det-source">Reading: Al Sweigart, <em>Cracking Codes with Python</em> (2018), <a href="https://inventwithpython.com/cracking/chapter17.html" target="_blank" rel="noopener">Chapter 17: word patterns and intersecting mappings</a>. This small original fixture teaches the constraint step, not the full book’s dictionary attack. <a href="further-reading.html#sweigart">Continue the reading trail</a>.</p>
+  </details>
+
   <div id="det-results" hidden>
 
     <div id="det-playback-area" hidden aria-live="polite"></div>
@@ -471,5 +523,6 @@
 <script src="js/detective/playback.js"></script>
 <script src="js/detective/challenges.js"></script>
 <script src="js/detective/detective.js"></script>
+<script src="js/detective/workspaces.js"></script>
 </body>
 </html>

@@ -157,7 +157,7 @@
         <span class="badge era-modern">1992 &middot; Vanstone</span>
       </div>
       <div class="card-name">ECDSA</div>
-      <p class="card-desc">Signing with elliptic curves &mdash; how a server proves it owns its domain and a wallet proves it may spend a coin. Its mathematics has never been broken; its implementations have, repeatedly, always at the same one-time nonce.</p>
+      <p class="card-desc">Signing with elliptic curves &mdash; how a server proves it owns its domain and a wallet proves it may spend a coin. Nonce reuse exposes the signing key. Deterministic nonces avoid fresh signing-randomness failures, but implementations still need side-channel and fault protection.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 

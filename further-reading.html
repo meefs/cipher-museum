@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Further Reading — The Cipher Museum</title>
-  <meta name="description" content="Curated bibliography for serious students of cryptography and cryptanalysis: canonical books, academic journals, scholar profiles, and primary-source archives.">
+  <meta name="description" content="Chapter-based reading trails connecting cryptography books to hands-on exhibits, plus a curated bibliography, journals, scholars, and primary-source archives.">
   <meta property="og:title" content="Further Reading — The Cipher Museum">
-  <meta property="og:description" content="Curated bibliography for serious students of cryptography and cryptanalysis: canonical books, academic journals, scholar profiles, and primary-source archives.">
+  <meta property="og:description" content="Chapter-based reading trails connecting cryptography books to hands-on exhibits, plus a curated bibliography, journals, scholars, and primary-source archives.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/further-reading.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Further Reading — The Cipher Museum">
-  <meta name="twitter:description" content="Curated bibliography for serious students of cryptography and cryptanalysis: canonical books, academic journals, scholar profiles, and primary-source archives.">
+  <meta name="twitter:description" content="Chapter-based reading trails connecting cryptography books to hands-on exhibits, plus a curated bibliography, journals, scholars, and primary-source archives.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/further-reading.html">
@@ -81,6 +81,26 @@
       font-size: .9rem; color: var(--tx2); line-height: 1.6;
     }
     .fr-alert strong { color: var(--gold-lt); }
+    .fr-trail { margin-bottom: 1rem; border: 1px solid var(--s4); border-radius: var(--rl); background: var(--s2); scroll-margin-top: 6rem; }
+    .fr-trail summary { padding: 1rem 1.25rem; cursor: pointer; color: var(--tx); font-size: 1.05rem; line-height: 1.5; }
+    .fr-trail summary::marker { color: var(--gold); }
+    .fr-trail summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .fr-trail summary small { display: block; margin: .3rem 0 0 1.1rem; color: var(--tx2); font-size: .85rem; }
+    .fr-trail-body { padding: 0 1.25rem 1.25rem; color: var(--tx2); line-height: 1.7; }
+    .fr-trail-body a { color: var(--gold-lt); text-decoration: underline; text-underline-offset: .18em; }
+    .fr-trail-stops { margin: 1rem 0; padding-left: 1.5rem; }
+    .fr-trail-stops li { padding: .75rem 0; border-top: 1px solid var(--s4); }
+    .fr-trail-stops li::marker { color: var(--gold); }
+    .fr-trail-stops strong { color: var(--tx); }
+    .fr-trail-stops p { margin: .25rem 0 0; }
+    .fr-trail-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 1rem 0; }
+    .fr-trail-nav a { color: var(--gold-lt); text-decoration: underline; }
+    @media (max-width: 480px) {
+      .fr-grid { grid-template-columns: minmax(0, 1fr); }
+      .fr-trail summary { padding: 1rem; }
+      .fr-trail-body { padding: 0 1rem 1rem; }
+      .fr-trail-stops { padding-left: 1.15rem; }
+    }
   </style>
 </head>
 <body>
@@ -120,7 +140,7 @@
   </div>
   <span class="page-eyebrow">Curator's Library</span>
   <h1 class="page-title">Further Reading</h1>
-  <p class="page-tagline">Curated bibliography for serious students of cryptography — books, journals, scholars, and archives</p>
+  <p class="page-tagline">Read a chapter, try an exhibit, then return to the book with a question</p>
 </div>
 
 <div class="section">
@@ -128,6 +148,71 @@
   <div class="fr-alert">
     <strong>Note:</strong> The Cipher Museum does not sell, endorse, or affiliate with any publisher or retailer. All links go to official author pages, publisher pages, or open-access repositories. No affiliate codes are used. ISBNs are provided to help you locate copies through your preferred library or bookseller.
   </div>
+
+  <!-- ── CHAPTER COMPANIONS ── -->
+  <section class="fr-section" id="reading-trails" aria-labelledby="reading-trails-heading">
+    <h2 class="fr-section-title" id="reading-trails-heading">Chapter-to-Exhibit Reading Trails</h2>
+    <p class="page-meta">Choose a book below. Each stop pairs a specific chapter or section with a museum activity and a question to investigate. These are concept companions, not reproductions of the books or complete implementations of their programming chapters. Use the stated edition: numbering can change between editions.</p>
+    <nav class="fr-trail-nav" aria-label="Reading trail books">
+      <a href="#sweigart">Sweigart · learn by doing</a>
+      <a href="#gaines">Gaines · classical codebreaking</a>
+      <a href="#holden">Holden · the mathematics</a>
+      <a href="#esslinger">Esslinger · historical evidence</a>
+    </nav>
+    <p class="page-meta">For a route without a book, use the museum's <a href="tours/index.html">guided tours</a>.</p>
+
+    <details class="fr-trail" id="sweigart" open>
+      <summary><em>Cracking Codes with Python</em><small>Al Sweigart · No Starch Press, 2018</small></summary>
+      <div class="fr-trail-body">
+        <p>Read the <a href="https://inventwithpython.com/cracking/" target="_blank" rel="noopener">author's free online book and chapter list</a>. The museum illustrates cipher behavior; the book teaches the Python programs, file handling and testing.</p>
+        <ol class="fr-trail-stops">
+          <li data-chapters="5-6"><strong>Chapters 5–6 · Caesar shifts and exhaustive search</strong><p>Try <a href="ciphers/caesar.html">Caesar</a>, then compare all shifts in <a href="cipher-detective.html">Cipher Detective</a>. What lets you recognize a promising plaintext?</p><p><a href="https://inventwithpython.com/cracking/chapter5.html" target="_blank" rel="noopener">Read chapter 5</a> · <a href="https://inventwithpython.com/cracking/chapter6.html" target="_blank" rel="noopener">Read chapter 6</a></p></li>
+          <li data-chapters="7-12"><strong>Chapters 7–12 · Transposition and testing</strong><p>Use <a href="ciphers/columnar.html">Columnar Transposition</a> to track moved letters. The museum's keyed-column variant differs from the book's width-key program; chapters 9–11 also cover software tests, files and English detection.</p><p><a href="https://inventwithpython.com/cracking/chapter7.html" target="_blank" rel="noopener">Read chapter 7</a> · <a href="https://inventwithpython.com/cracking/chapter12.html" target="_blank" rel="noopener">Read chapter 12</a></p></li>
+          <li data-chapters="13-15"><strong>Chapters 13–15 · Modular arithmetic and affine keys</strong><p>Try valid and invalid multipliers in <a href="ciphers/affine.html">Affine</a>. Why must the multiplier have an inverse modulo 26?</p><p><a href="https://inventwithpython.com/cracking/chapter13.html" target="_blank" rel="noopener">Read chapter 13</a> · <a href="https://inventwithpython.com/cracking/chapter15.html" target="_blank" rel="noopener">Read chapter 15</a></p></li>
+          <li data-chapters="16-17"><strong>Chapters 16–17 · Substitution and word patterns</strong><p>Explore <a href="ciphers/monoalphabetic.html">Monoalphabetic Substitution</a>, then build a partial key in <a href="cipher-detective.html#manual-substitution">Cipher Detective</a>. Which word candidates remain compatible with one shared mapping?</p><p><a href="https://inventwithpython.com/cracking/chapter16.html" target="_blank" rel="noopener">Read chapter 16</a> · <a href="https://inventwithpython.com/cracking/chapter17.html" target="_blank" rel="noopener">Read chapter 17</a></p></li>
+          <li data-chapters="18-20"><strong>Chapters 18–20 · Vigenère and repeated-key evidence</strong><p>Try <a href="ciphers/vigenere.html">Vigenère</a> and the Kasiski tab in the <a href="cryptanalysis.html">Cryptanalysis Lab</a>. Does a repeated fragment prove a key length, or suggest candidates?</p><p><a href="https://inventwithpython.com/cracking/chapter18.html" target="_blank" rel="noopener">Read chapter 18</a> · <a href="https://inventwithpython.com/cracking/chapter20.html" target="_blank" rel="noopener">Read chapter 20</a></p></li>
+          <li data-chapters="21"><strong>Chapter 21 · One-time pads</strong><p>Visit <a href="ciphers/one-time-pad.html">One-Time Pad</a>. Separate the conditions for perfect secrecy from the effects of key reuse and ciphertext tampering.</p><p><a href="https://inventwithpython.com/cracking/chapter21.html" target="_blank" rel="noopener">Read chapter 21</a></p></li>
+          <li data-chapters="22-24"><strong>Chapters 22–24 · Primes and public-key encryption</strong><p>Follow the small-number example in <a href="ciphers/rsa.html">RSA</a>. The arithmetic is educational: production RSA requires secure parameters, padding and implementation protections beyond this trail.</p><p><a href="https://inventwithpython.com/cracking/chapter22.html" target="_blank" rel="noopener">Read chapter 22</a> · <a href="https://inventwithpython.com/cracking/chapter24.html" target="_blank" rel="noopener">Read chapter 24</a></p></li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="fr-trail" id="gaines">
+      <summary><em>Cryptanalysis: A Study of Ciphers and Their Solution</em><small>Helen Fouché Gaines · corrected Dover edition, 1956; original work, 1939</small></summary>
+      <div class="fr-trail-body">
+        <p>A classical cryptanalysis workbook, not present-day deployment guidance. Find the <a href="https://store.doverpublications.com/products/9780486200972" target="_blank" rel="noopener">publisher's edition</a> (ISBN 978-0-486-20097-2); use your library copy for the chapter exercises.</p>
+        <ol class="fr-trail-stops">
+          <li><strong>Chapters VI–VII · Columnar transposition and multiple anagramming</strong><p>Reorder several same-key intercepts in the <a href="ciphers/columnar.html#multiple-anagramming">multiple-anagramming exercise</a>. Can one ordering explain every message? Compare the different-key control.</p></li>
+          <li><strong>Chapters VIII–IX · Substitution fundamentals</strong><p>Use <a href="ciphers/monoalphabetic.html">Monoalphabetic Substitution</a> and <a href="cipher-detective.html#manual-substitution">Cipher Detective</a> to combine letter frequencies with word constraints. A frequent letter is evidence, not a guaranteed mapping.</p></li>
+          <li><strong>Chapters XII and XIV–XV · Vigenère and period hypotheses</strong><p>Move from <a href="ciphers/vigenere.html">Vigenère</a> to the <a href="cryptanalysis.html">Cryptanalysis Lab</a>. Compare Kasiski evidence with a guessed plaintext fragment; keep an inferred key period separate from verified text.</p></li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="fr-trail" id="holden">
+      <summary><em>The Mathematics of Secrets</em><small>Joshua Holden · Princeton University Press, 2017</small></summary>
+      <div class="fr-trail-body">
+        <p><em>Cryptography from Caesar Ciphers to Digital Encryption.</em> See the <a href="https://wordpress.rose-hulman.edu/holden/the-mathematics-of-secrets/" target="_blank" rel="noopener">author's book page, contents and errata</a>. These stops use the 2017 edition (ISBN 978-0-691-14175-6).</p>
+        <ol class="fr-trail-stops">
+          <li><strong>Sections 1.6–1.7 · Hill matrices and known plaintext</strong><p>Visit <a href="ciphers/hill.html">Hill</a>. Check the determinant of the known-plaintext matrix: two matched blocks alone do not guarantee a unique 2 × 2 key.</p></li>
+          <li><strong>Sections 3.5–3.7 · Columnar transposition and anagramming</strong><p>Try the <a href="ciphers/columnar.html#multiple-anagramming">shared-column exercise</a>. Compare plausible neighboring letters across messages; a contact score is not a probability of correctness.</p></li>
+          <li><strong>Sections 5.1–5.2 · Running keys and one-time pads</strong><p>Compare <a href="ciphers/running-key.html">Running-Key</a> and <a href="ciphers/one-time-pad.html">One-Time Pad</a>. Why does a long passage without a short period still differ from independent, uniformly random key material?</p></li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="fr-trail" id="esslinger">
+      <summary><em>Learning and Experiencing Cryptography with CrypTool and SageMath</em><small>Bernhard Esslinger · Artech House, 2024</small></summary>
+      <div class="fr-trail-body">
+        <p>The <a href="https://www.cryptool.org/en/ctbook/" target="_blank" rel="noopener">official companion page</a> provides the contents, software and legal open-access chapters 1 and 3 (ISBN 978-1-68569-017-5). The museum is a separate implementation; it does not run the book's CrypTool or SageMath exercises.</p>
+        <ol class="fr-trail-stops">
+          <li><strong>Chapter 2, sections 2.1–2.2 · Transposition and substitution</strong><p>Compare <a href="ciphers/columnar.html">Columnar Transposition</a> with <a href="ciphers/monoalphabetic.html">Monoalphabetic Substitution</a>. Which changes symbol positions, and which changes the symbols themselves?</p></li>
+          <li><strong>Chapter 3, sections 3.4.1–3.4.2 and 3.5.1 · Transcription and tokenization</strong><p>Prepare a source in <a href="cipher-detective.html#transcription-workspace">Cipher Detective</a> before analyzing it. Preserve uncertain symbols and original lineation, then inspect what an A–Z projection leaves out. For manuscript transcription at larger scale, explore <a href="https://www.cryptool.org/en/ctts/" target="_blank" rel="noopener">CrypTool's CTTS project</a>.</p></li>
+          <li><strong>Chapter 3, sections 3.5.2–3.5.3 · Heuristic search and scoring</strong><p>Compare hill climbing and simulated annealing in the <a href="cryptanalysis.html#hill-climbing">Cryptanalysis Lab</a>. A search score reflects a language model; it does not certify a historically correct reading.</p></li>
+        </ol>
+      </div>
+    </details>
+  </section>
 
   <!-- ── COMPANION EXHIBITS ── -->
   <div class="fr-section">
@@ -675,6 +760,20 @@
 
 <footer></footer>
 
+<script id="reading-trail-navigation">
+(function () {
+  'use strict';
+  function openTrail(hash) {
+    var trail = document.getElementById(hash.slice(1));
+    if (trail && trail.matches('details.fr-trail')) trail.open = true;
+  }
+  openTrail(window.location.hash);
+  window.addEventListener('hashchange', function () { openTrail(window.location.hash); });
+  document.querySelectorAll('.fr-trail-nav a').forEach(function (link) {
+    link.addEventListener('click', function () { openTrail(link.getAttribute('href')); });
+  });
+}());
+</script>
 <script src="js/nav.js" defer></script>
 </body>
 </html>

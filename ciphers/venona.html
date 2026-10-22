@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VENONA Project — The Cipher Museum</title>
-  <meta name="description" content="VENONA (1943–1980) was the US Army codebreaking effort that decrypted thousands of Soviet intelligence cables by exploiting key reuse in one-time pads — revealing Julius Rosenberg, Kim Philby, and the Cambridge Five.">
+  <meta name="description" content="VENONA exploited reused Soviet one-time pads. Explore synthetic five-digit groups, carryless decimal arithmetic, and the separate problem of codebook interpretation.">
   <meta property="og:title" content="VENONA Project — The Cipher Museum">
-  <meta property="og:description" content="VENONA (1943–1980) was the US Army codebreaking effort that decrypted thousands of Soviet intelligence cables by exploiting key reuse in one-time pads — revealing Julius Rosenberg, Kim Philby, and the Cambridge Five.">
+  <meta property="og:description" content="VENONA exploited reused Soviet one-time pads. Explore synthetic five-digit groups, carryless decimal arithmetic, and the separate problem of codebook interpretation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/venona.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,13 +15,14 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="VENONA Project — The Cipher Museum">
-  <meta name="twitter:description" content="VENONA (1943–1980) was the US Army codebreaking effort that decrypted thousands of Soviet intelligence cables by exploiting key reuse in one-time pads — revealing Julius Rosenberg, Kim Philby, and the Cambridge Five.">
+  <meta name="twitter:description" content="VENONA exploited reused Soviet one-time pads. Explore synthetic five-digit groups, carryless decimal arithmetic, and the separate problem of codebook interpretation.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/venona.html">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="stylesheet" href="../css/museum.css">
+  <link rel="stylesheet" href="../css/pad-experiments.css">
   <style>
   /* Option A selected: page ships a real pad-reuse XOR demo to match VENONA prose. */
   .track-b-widget {
@@ -177,6 +178,34 @@
     <tbody id="venona-scan-results"></tbody>
   </table>
 </section>
+<section class="panel pad-experiment" id="venona-decimal-experiment" aria-labelledby="decimal-title">
+  <div class="panel-body">
+    <h2 id="decimal-title">Try the decimal arithmetic</h2>
+    <p>Before the pad was applied, a codebook replaced words with number groups. Work through that extra layer using <strong>invented five-digit groups</strong>. These are original teaching examples, not a historical message, operator procedure, or verified VENONA test vector. The pad is visible so you can check the arithmetic; an interceptor would not know it.</p>
+    <h3>1. Add the same pad to two groups</h3>
+    <p>Add each column separately modulo 10: keep the last digit and never carry into the next column.</p>
+    <div class="pad-fields">
+      <div><label for="decimal-a">Code group A</label><input id="decimal-a" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" value="12345"></div>
+      <div><label for="decimal-b">Code group B</label><input id="decimal-b" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" value="24680"></div>
+      <div><label for="decimal-pad">Reused decimal pad</label><input id="decimal-pad" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" value="78901"></div>
+      <div><label for="decimal-guess">Interceptor’s guess for group A</label><input id="decimal-guess" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" value="12345"></div>
+    </div>
+    <button id="decimal-run" type="button">Work through the groups</button>
+    <p id="decimal-error" class="pad-error" role="status"></p>
+    <div id="decimal-results" aria-live="polite">
+      <dl><dt>Ciphertext A = A + pad</dt><dd id="decimal-cipher-a"></dd><dt>Ciphertext B = B + pad</dt><dd id="decimal-cipher-b"></dd></dl>
+      <h3>2. Subtract to cancel the reused pad</h3>
+      <p>Subtract <em>digit by digit</em> modulo 10, without borrowing: C₁ − C₂ = A − B. This exposes a relation between two code groups; it does not by itself reveal either group.</p>
+      <dl><dt>Digitwise difference C₁ − C₂</dt><dd id="decimal-difference"></dd><dt>Candidate B = guessed A − difference</dt><dd id="decimal-candidate"></dd></dl>
+      <details><summary>Inspect each column</summary><pre id="decimal-steps"></pre></details>
+      <h3>3. Interpret a recovered code group</h3>
+      <p>A candidate group still needs a codebook meaning. Our tiny invented book contains <strong>12345 = MEET, 13579 = DAWN, 97531 = COURIER</strong>; other meanings are unknown. Try B = 13579, then change the guessed A to see why a guess is not a verified recovery.</p>
+      <dl><dt>Candidate group B’s meaning</dt><dd id="decimal-meaning"></dd></dl>
+      <p>A wrong guess for A can produce a wrong B, even one in the sample book. Historical codebook reconstruction required further evidence.</p>
+    </div>
+    <p class="pad-sources">Reading: Stephen Budiansky, <em>Code Warriors</em> (2016), Appendix A, “Enciphered Codes, Depths, and Book Breaking.” Historical context: Robert L. Benson, <a href="https://www.nsa.gov/portals/75/documents/about/cryptologic-heritage/historical-figures-publications/publications/coldwar/venona_story.pdf">The VENONA Story</a>, pp. 26–28, distinguishes stripping additives from recovering codebook meanings. The binary XOR analogy above remains a separate demonstration.</p>
+  </div>
+</section>
 <div class="panel" style="margin:1rem 0 0;">
   <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-flask"/></svg></span><span class="panel-title">Compare: Generic OTP Demo</span></div>
   <div class="panel-body"><p style="margin:0;">Below is the museum's generic one-time-pad playground. It demonstrates OTP operation itself; the dedicated VENONA pad-reuse attack is the panel above.</p></div>
@@ -186,7 +215,7 @@
   <div class="exhibit-main">
     <div class="cipher-significance"><h2>Why This Matters</h2><p>VENONA is the definitive proof that no cipher is more secure than its key generation and management. The Soviets used one-time pads — which are mathematically unbreakable when used correctly — for intelligence traffic between Moscow and their foreign stations. But in 1942–1943, under acute wartime production pressure, Soviet cipher authorities reprinted and reissued key pages that had already been used. American cryptanalysts at the Army's Arlington Hall station discovered the key reuse, enabling partial decryption of thousands of messages. The VENONA decrypts identified Julius Rosenberg (atomic espionage), Kim Philby (British SIS mole), Donald Maclean and Guy Burgess (Cambridge Five), and dozens of other Soviet sources inside the US and British governments — intelligence revelations that shaped the Cold War for forty years.</p></div>
     <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">The Key Reuse Disaster</span></div><div class="panel-body"><p>A genuine one-time pad requires that each key page be used exactly once and then destroyed. In late 1942, Soviet cipher production facilities, overwhelmed by wartime demand, reprinted key material that had already been distributed. The result: some portions of the 1942–1944 NKVD traffic used the same additive key material twice. When Arlington Hall analyst Richard Hallock noticed statistical anomalies suggesting two messages had been enciphered with the same "depth," the VENONA project began reconstructing the additive books and stripping them from messages.</p></div></div>
-    <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">How the Break Worked</span></div><div class="panel-body"><p>The cryptanalytic attack exploited "depth" — two messages enciphered with the same OTP key. If plaintext P₁ and P₂ are enciphered with the same key K as C₁ = P₁ ⊕ K and C₂ = P₂ ⊕ K, then C₁ ⊕ C₂ = P₁ ⊕ P₂ — a "running key" cipher with both messages as mutually known-plaintext constraints. By exploiting linguistic regularities in Soviet diplomatic Russian and known codeword patterns, analysts gradually reconstructed the plaintext and then the actual additive key pages themselves.</p></div></div>
+    <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">How the Break Worked</span></div><div class="panel-body"><p>The cryptanalytic attack exploited "depth" — messages enciphered with repeated pad material. In the decimal model above, subtracting the ciphertext groups digit by digit modulo 10 cancels the shared pad: C₁ − C₂ = G₁ − G₂. That gives a relationship between two initially unknown code groups, not an automatic recovery of either one. Known or guessed groups, patterns across traffic, and further evidence could help reconstruct additive material; recovering codebook meanings was a separate task. The XOR panel shows the analogous cancellation in binary, not the historical traffic format.</p></div></div>
     <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">The Revelations</span></div><div class="panel-body"><p>VENONA decrypts identified: Julius Rosenberg (codeword LIBERAL) and Ethel Rosenberg — named in the cables under her real name, itself telling — passing atomic weapons data to Moscow; Klaus Fuchs (also in atomic network); Kim Philby (British head of anti-Soviet SIS operations — simultaneously Moscow Center's most senior British agent, identified through combined MI5/CIA analysis of VENONA leads); Donald Maclean (codeword HOMER, head of American desk at British Foreign Office); Guy Burgess (HICKS), Anthony Blunt (TONY), and John Cairncross (LISZT) — completing the Cambridge Five. The Rosenbergs were executed in 1953; VENONA remained classified, so the strongest evidence against them could not be used in their trial.</p></div></div>
     <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lock"/></svg></span><span class="panel-title">The 37-Year Secret</span></div><div class="panel-body"><p>VENONA was not declassified until 1995. For forty years, American officials who knew Soviet agents had been identified through VENONA could not publicly explain their certainty without exposing the program. Senator Joseph McCarthy's vague accusations of mass Communist infiltration were partly fueled by officials who knew Soviet penetration was real — but could not say how they knew. The deception of hiding VENONA distorted American political discourse for a generation.</p></div></div>
   </div>
@@ -320,6 +349,7 @@
 })();
 </script>
 <script src="../js/trust-labels.js"></script>
+<script src="../js/pad-experiments.js" defer></script>
 <script src="../js/ciphers/all-engines.min.js"></script>
 <script src="../js/demo-loader.min.js"></script>
 <script src="../js/nav.js" defer></script>

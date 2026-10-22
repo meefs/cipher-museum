@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lorenz Cipher — The Cipher Museum</title>
-    <meta name="description" content="Lorenz SZ40 cipher (1940) — the German High Command teleprinter cipher with twelve pin-wheels. Broken by Bill Tutte in 1942; industrialised by Colossus in 1944.">
+    <meta name="description" content="Lorenz SZ40/42: Tiltman recovered messages and key from a 1941 depth; Tutte and the Research Section inferred the structure by early 1942; Colossus accelerated wheel-setting from February 1944.">
   <meta property="og:title" content="Lorenz Cipher — The Cipher Museum">
-  <meta property="og:description" content="Lorenz SZ40 cipher (1940) — the German High Command teleprinter cipher with twelve pin-wheels. Broken by Bill Tutte in 1942; industrialised by Colossus in 1944.">
+  <meta property="og:description" content="Lorenz SZ40/42: Tiltman recovered messages and key from a 1941 depth; Tutte and the Research Section inferred the structure by early 1942; Colossus accelerated wheel-setting from February 1944.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/lorenz.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lorenz Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Lorenz SZ40 cipher (1940) — the German High Command teleprinter cipher with twelve pin-wheels. Broken by Bill Tutte in 1942; industrialised by Colossus in 1944.">
+  <meta name="twitter:description" content="Lorenz SZ40/42: Tiltman recovered messages and key from a 1941 depth; Tutte and the Research Section inferred the structure by early 1942; Colossus accelerated wheel-setting from February 1944.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/lorenz.html">
@@ -67,12 +67,12 @@
   <h1 class="page-title">Lorenz Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
   <p class="page-tagline">Hitler's strategic cipher — broken by a mistake, and it built the world's first computer</p>
-  <p class="exhibit-status-note">Bill Tutte · Known plaintext · Colossus computer (1944)</p>
+  <p class="exhibit-status-note">Tiltman: depth (1941) · Tutte: structure (1942) · Colossus: wheel settings (1944)</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Lorenz AG · German High Command</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1940</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">12-wheel teleprinter cipher (Vernam-based)</span></div>
-    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Bill Tutte · Known plaintext · Colossus computer (1944)</span></div>
+    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Tiltman: depth (1941) · Tutte: structure (1942) · Colossus: wheel settings (1944)</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Computational cryptanalysis → birth of modern computing</span></div>
   </div>
 </div>
@@ -84,7 +84,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The Lorenz SZ40/42 protected Hitler’s highest-level strategic communications. Breaking it — without ever seeing the machine — led Bill Tutte to reconstruct its logic and Tommy Flowers to build Colossus, the world’s first programmable electronic computer.</p>
+      <p>The Lorenz SZ40/42 protected Hitler’s highest-level strategic communications. John Tiltman recovered messages and key material from a repeated-key transmission; Bill Tutte and the Research Section then inferred the machine’s structure. Tommy Flowers and his team later built Colossus to accelerate statistical wheel-setting.</p>
     </div>
 
     <!-- Museum Artifact -->
@@ -95,7 +95,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>While Enigma protected German field communications, the Lorenz SZ40/42 protected Hitler's strategic communications to his senior commanders. Where Enigma was a hand-operated cipher machine, Lorenz was a fully automatic teleprinter attachment — messages fed in on paper tape, encrypted output punched automatically.</p><p style="margin-top:1rem;">On August 30, 1941, a German operator sent a 4,000-character message, received a request to resend, and sent it again — with the same settings but slightly different plaintext (abbreviating some words). This catastrophic procedural error gave Bletchley Park cryptanalyst Bill Tutte enough to reconstruct the entire Lorenz cipher structure without ever seeing the machine. Tommy Flowers then built Colossus to automate the attack.</p></div>
+      <div class="panel-body"><p>While Enigma protected German field communications, the Lorenz SZ40/42 protected Hitler's strategic communications to his senior commanders. Where Enigma was a hand-operated cipher machine, Lorenz was a fully automatic teleprinter attachment — messages fed in on paper tape, encrypted output punched automatically.</p><p style="margin-top:1rem;">On August 30, 1941, a German operator sent a 4,000-character message, received a request to resend, and sent it again — with the same settings but slightly different plaintext (abbreviating some words). John Tiltman used this <em>depth</em> to recover the two messages and their shared keystream by hand. Tutte and the Research Section analysed the recovered key and inferred the machine’s structure by early 1942, without seeing the machine. Later, Flowers and his team built Colossus, operational at Bletchley Park in February 1944, to accelerate statistical wheel-setting.</p></div>
     </div>
 
     <div class="panel">
@@ -185,8 +185,8 @@ Total period: LCM of all wheels
             <tr><td><strong>Cipher primitive</strong></td><td>Polyalphabetic substitution via 3–4 stepping rotors + reflector + plugboard</td><td>Vernam XOR of 5-bit Baudot characters with a 12-wheel pseudo-random keystream</td></tr>
             <tr><td><strong>Key space</strong></td><td>≈ 1.6 × 10<sup>20</sup> (with plugboard)</td><td>≈ 1.6 × 10<sup>19</sup> wheel period — but reusable settings, not a one-time pad</td></tr>
             <tr><td><strong>Fatal weakness</strong></td><td>Reflector → no letter encrypts to itself → cribs eliminate placements</td><td>Reusing a wheel setting collapses two messages into a depth (P<sub>A</sub> ⊕ P<sub>B</sub>)</td></tr>
-            <tr><td><strong>What broke it</strong></td><td>Cribs + electromechanical Bombe (Turing, Welchman, 1940)</td><td>One operator's depth + Tutte's wheel reconstruction (1942) + Colossus (1944)</td></tr>
-            <tr><td><strong>What it built</strong></td><td>Cryptanalysis as an industrial discipline — 10 000 staff, daily key recovery</td><td>Programmable electronic computing — Colossus is the direct ancestor of every machine you own</td></tr>
+            <tr><td><strong>What broke it</strong></td><td>Cribs + electromechanical Bombe (Turing, Welchman, 1940)</td><td>Tiltman's manual depth recovery (1941) + Tutte's structure inference (1942) + Colossus wheel-setting (1944)</td></tr>
+            <tr><td><strong>What it built</strong></td><td>Cryptanalysis as an industrial discipline — 10 000 staff, daily key recovery</td><td>Programmable electronics — Colossus showed how electronic logic could accelerate statistical searches</td></tr>
             <tr><td><strong>Modern echo</strong></td><td>Side-channel and operational security still beat strong primitives</td><td>Nonce reuse on AES-GCM, IV collisions on WEP — the depth attack, unchanged</td></tr>
           </tbody>
         </table>
@@ -196,10 +196,12 @@ Total period: LCM of all wheels
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Known Plaintext + Depth Attack (1941)</div><div class="attack-diff">Complexity: Extreme · Required Colossus</div><p class="attack-desc">The operator's mistake (same settings, similar plaintext) created a "depth" — two messages XORed together give P1 XOR P2 (the keys cancel). From this, Tutte deduced the complete wheel structure without seeing the machine — a cryptanalytic feat considered one of the greatest intellectual achievements of WWII. Colossus (1943) automated the wheel-setting problem, running at 5,000 characters per second.</p></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Manual Depth Analysis (1941)</div><div class="attack-diff">Manual message/key recovery; later machine-assisted wheel-setting</div><p class="attack-desc">The operator's mistake (same settings, similar plaintext) created a "depth" — two messages XORed together give P1 XOR P2 (the keys cancel). Tiltman recovered the messages and keystream manually. Tutte and the Research Section then inferred the wheel structure by early 1942. Colossus, operational in February 1944, later accelerated statistical wheel-setting; it was not needed for the initial 1941 depth recovery.</p></div>
+
+      <p class="source-note">Sources: NSA Center for Cryptologic History, <a href="https://www.nsa.gov/portals/75/documents/about/cryptologic-heritage/historical-figures-publications/publications/misc/tiltman.pdf" target="_blank" rel="noopener noreferrer"><em>Brigadier John Tiltman: A Giant Among Cryptanalysts</em> (2007), pp. 25–26</a>; <a href="https://www.tnmoc.org/tunny-heath-robinson" target="_blank" rel="noopener noreferrer">The National Museum of Computing, Tunny and Heath Robinson</a>, for the sequence leading to Colossus in February 1944.</p>
 
       <h3 style="font-family:var(--fd);font-size:1.1rem;color:var(--gold);letter-spacing:.06em;margin:2rem 0 .75rem;">The depth attack, in your browser</h3>
-      <p>Two ciphertexts encrypted under the <em>same</em> Lorenz keystream. XOR them together and the keystream cancels — what remains is <code>P1 ⊕ P2</code>, a "depth" that leaks structure. Drag a guessed crib across the depth: where the result reads as English, the crib is correct in one message and the slice you recover is the matching plaintext from the other.</p>
+      <p>Two ciphertexts encrypted under the <em>same</em> Lorenz keystream. XOR them together and the keystream cancels — what remains is <code>P1 ⊕ P2</code>, a "depth" that leaks structure. Drag a guessed crib across the depth: readable output suggests a candidate placement, but does not prove the guess. A correct crib in one message recovers the corresponding slice of the other.</p>
 
       <div class="demo-panel" style="margin-top:1rem;border-color:var(--gold-b);">
         <div class="demo-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="demo-title">Two-Time-Pad Crib Drag</span></div>
@@ -222,10 +224,10 @@ Total period: LCM of all wheels
           </div>
           <button class="btn btn-primary" id="lz-drag" type="button">Drag crib across depth</button>
           <div id="lz-results" style="margin-top:1rem;">
-            <span class="output-empty">Click "Drag crib across depth" to see what the crib reveals at every offset. The top hits — readable English — are positions where your guess is correct.</span>
+            <span class="output-empty">Click "Drag crib across depth" to see what the crib reveals at every offset. The top hits suggest candidate positions; readable English alone does not confirm your guess.</span>
           </div>
           <p style="font-size:.9rem;color:var(--tx3);margin:.75rem 0 0;font-style:italic;">
-            What you just witnessed: a single repeated key turns a Vernam cipher into a paper exercise. The keystream cancels in the XOR, the plaintexts leak through each other, and one good crib unzips both messages. Bill Tutte recovered the entire 12-wheel structure of Lorenz from <em>one</em> 4 000-character depth — without ever seeing the machine.
+            What you just witnessed: reusing a keystream exposes the XOR of the plaintexts. A correct crib reveals the matching span of the other message, not automatically both complete messages. In 1941, Tiltman recovered messages and key from the historical depth; Tutte and the Research Section used that key to infer the Lorenz structure by early 1942.
           </p>
         </div>
       </div>
@@ -307,7 +309,7 @@ With all 12 wheels: period before repetition
             <tr><td>Inventor</td><td>Lorenz AG · German High Command</td></tr>
             <tr><td>Year</td><td>1940</td></tr>
             <tr><td>Key Type</td><td>12-wheel teleprinter cipher (Vernam-based)</td></tr>
-            <tr><td>Broken By</td><td>Bill Tutte · Known plaintext · Colossus computer (1944)</td></tr>
+            <tr><td>Broken By</td><td>Tiltman: depth (1941) · Tutte: structure (1942) · Colossus: wheel settings (1944)</td></tr>
           </tbody>
         </table>
       </div>

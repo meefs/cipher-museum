@@ -31,7 +31,7 @@
     {"number":27,"path":"ciphers/alberti-disk.html","label":"broken","note":"Index of Coincidence · Frequency analysis","collection":"cipher-history","interactive":true},
     {"number":28,"path":"ciphers/jefferson-disk.html","label":"broken","note":"Brute force · Probable word attack","collection":"cipher-history","interactive":true},
     {"number":29,"path":"ciphers/enigma.html","label":"broken","note":"Bombe machine · Crib attacks · Alan Turing · Bletchley Park","collection":"cipher-history","interactive":true},
-    {"number":30,"path":"ciphers/lorenz.html","label":"broken","note":"Bill Tutte · Known plaintext · Colossus computer (1944)","collection":"cipher-history","interactive":true},
+    {"number":30,"path":"ciphers/lorenz.html","label":"broken","note":"Tiltman: depth (1941) · Tutte: structure (1942) · Colossus: wheel settings (1944)","collection":"cipher-history","interactive":true},
     {"number":31,"path":"ciphers/navajo-code-talkers.html","label":"historical","note":"Never publicly broken in wartime service; a historical military code.","collection":"cipher-history","interactive":true},
     {"number":32,"path":"ciphers/pigpen.html","label":"broken","note":"Symbol frequency analysis · Pattern recognition","collection":"cipher-history","interactive":true},
     {"number":33,"path":"ciphers/bacon.html","label":"broken","note":"Pattern recognition · Statistical analysis of A/B distribution","collection":"cipher-history","interactive":true},

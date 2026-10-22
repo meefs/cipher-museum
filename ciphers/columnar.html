@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Columnar Transposition — The Cipher Museum</title>
-    <meta name="description" content="Columnar transposition — write plaintext under a keyword, then read columns in keyword order. Broken by Friedman-era multiple-anagram methods in the 1920s.">
+    <meta name="description" content="Explore columnar transposition and multiple anagramming: rearrange column strips across three synthetic same-key intercepts and compare a different-key control.">
   <meta property="og:title" content="Columnar Transposition — The Cipher Museum">
-  <meta property="og:description" content="Columnar transposition — write plaintext under a keyword, then read columns in keyword order. Broken by Friedman-era multiple-anagram methods in the 1920s.">
+  <meta property="og:description" content="Explore columnar transposition and multiple anagramming: rearrange column strips across three synthetic same-key intercepts and compare a different-key control.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/columnar.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,13 +15,14 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Columnar Transposition — The Cipher Museum">
-  <meta name="twitter:description" content="Columnar transposition — write plaintext under a keyword, then read columns in keyword order. Broken by Friedman-era multiple-anagram methods in the 1920s.">
+  <meta name="twitter:description" content="Explore columnar transposition and multiple anagramming: rearrange column strips across three synthetic same-key intercepts and compare a different-key control.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/columnar.html">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="stylesheet" href="../css/museum.css">
+  <link rel="stylesheet" href="../css/multiple-anagramming.css">
   
 </head>
 <body>
@@ -165,8 +166,42 @@ Read col 5(Z): WEEI</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Frequency Analysis + Anagramming</div><div class="attack-diff">Complexity: Moderate</div><p class="attack-desc">Because transposition preserves all original letters, the ciphertext has the same letter frequency distribution as English plaintext. This immediately identifies it as a transposition cipher. With enough ciphertext, the column width can be determined and columns rearranged using digram/trigram frequency analysis.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Frequency Analysis + Anagramming</div><div class="attack-diff">Complexity: Moderate</div><p class="attack-desc">Transposition preserves the plaintext's letter counts. A distribution resembling English can suggest transposition, but does not identify it with certainty. Analysts try plausible widths and rearrange columns, looking for useful letter contacts and readable text. Several messages with the same width and column order let them test one arrangement against more evidence.</p></div></div>
     </div>
+
+    <section class="panel" id="multiple-anagramming" aria-labelledby="ma-title">
+      <div class="panel-head"><h2 class="panel-title" id="ma-title">Try it: rearrange several intercepts</h2></div>
+      <div class="panel-body">
+        <p>One promising pair of letters can be a coincidence. Can you find an order that makes <strong>three messages</strong> readable at once? Each synthetic message fills four rows of five letters. The sender read the five columns in the same secret order; we have already split each received message into five equal strips.</p>
+        <p>Select a strip and move it left or right. The corresponding column moves in every message. Read each reconstructed message across its rows. Spaces were removed; no letters were added as padding.</p>
+        <div class="ma-controls">
+          <label for="ma-selected">Selected strip</label>
+          <select id="ma-selected">
+            <option value="0">Strip A</option><option value="1">Strip B</option><option value="2">Strip C</option><option value="3">Strip D</option><option value="4">Strip E</option>
+          </select>
+          <button class="btn btn-secondary" type="button" id="ma-left">Move left</button>
+          <button class="btn btn-secondary" type="button" id="ma-right">Move right</button>
+        </div>
+        <label class="ma-control-toggle"><input type="checkbox" id="ma-control" checked> Include a different-key control</label>
+        <p>Current order: <strong id="ma-order">A → B → C → D → E</strong></p>
+        <ol class="ma-strips" id="ma-strips" aria-label="Column strips in the current candidate order"></ol>
+        <p><strong id="ma-score"></strong> across the three same-key messages. This counts adjacent letter pairs from a small English list, only within rows. It is a clue, <strong>not a probability or confirmation</strong>; a wrong order can also score well.</p>
+        <div class="ma-candidates" id="ma-candidates" aria-label="Reconstructed messages"></div>
+        <div class="ma-controls">
+          <button class="btn btn-primary" type="button" id="ma-check">Check arrangement</button>
+          <button class="btn btn-secondary" type="button" id="ma-reveal">Reveal shared order</button>
+          <button class="btn btn-secondary" type="button" id="ma-reset">Reset strips</button>
+        </div>
+        <p id="ma-status" class="ma-status" role="status" aria-live="polite">Try an arrangement, then check it against the prepared messages.</p>
+        <details>
+          <summary>What this exercise assumes</summary>
+          <p>The width, equal column lengths and shared key are supplied to isolate the rearrangement problem. Real analysis may need to establish those facts first and handle incomplete rectangles, padding or multiple transpositions. The fourth intercept deliberately uses a different column order: a key recovered for one group need not solve other traffic. “Check” compares with the known answer to these invented examples; a contact score alone cannot validate a real intercept.</p>
+          <p>Our small contact list is: TH, HE, IN, ER, AN, RE, ON, AT, EN, ND, TI, ES, OR, TE, OF, ED, IS, IT, AL, AR, ST, TO, NT, NG, SE, HA, AS, OU, IO, LE, VE, CO, BE, RT, WA, SC, RO and UR. It is a teaching heuristic, not a fitted language model.</p>
+        </details>
+        <p class="ma-sources">Reading companions: Helen Fouché Gaines, <a href="../further-reading.html#gaines"><cite>Cryptanalysis</cite></a> (1939; Dover edition 1956), Chapter VII, “General Methods — Multiple Anagramming, Etc.”; Joshua Holden, <a href="../further-reading.html#holden"><cite>The Mathematics of Secrets</cite></a> (2017), §3.7. These motivate the method; the messages and simplified score here were created for this exercise.</p>
+        <noscript><p>This exercise needs JavaScript to rearrange the strips. The worked columnar example above remains readable without it.</p></noscript>
+      </div>
+    </section>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
@@ -251,6 +286,7 @@ Read col 5(Z): WEEI</pre>
 <script src="../js/trust-labels.js"></script>
 <script src="../js/ciphers/all-engines.min.js"></script>
 <script src="../js/demo-loader.min.js"></script>
+<script src="../js/multiple-anagramming.js" defer></script>
 <script src="../js/nav.js" defer></script>
 <script src="../js/lightbox.js"></script>
 </body>

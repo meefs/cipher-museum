@@ -22,6 +22,21 @@ test-comprehensive, test-accessibility, test-mobile, test-demo-pages
 test-structural, test-local-links, test-min-fresh (minified bundles current),
 and test-sw-version (service-worker cache version matches the bundle hashes).
 
+The book-review suites are also registered in `tests/run-all.js`:
+
+- `test-classical-review.js`: observed versus extrapolated keystreams, periodic
+  cribs, running-key limits, and Hill recovery conditions.
+- `test-history-modern-review.js`: Lorenz/Zimmermann history, ECDSA conditions,
+  and the DLP/CDH distinction across the affected prose and metadata.
+- `test-detective-review.js`: partial substitution mappings and preserved
+  transcription evidence, including export/import and DOM interactions.
+- `test-multiple-anagramming.js`: synchronized strip ordering, original known
+  answers, letter preservation, and a different-key control.
+- `test-pad-experiments.js`: decimal pad arithmetic and controlled OTP changes,
+  with rendered controls and explicit model limits.
+- `test-reading-trails.js`: edition-specific chapter routes and public source
+  links.
+
 ## Other files in this directory
 
 - Solver and cryptanalysis tests (`test-hillclimb.js`, `test-anneal.js`,

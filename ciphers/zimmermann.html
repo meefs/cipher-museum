@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zimmermann Telegram (German codes 0075 / 13040 · 1917) — The Cipher Museum</title>
-  <meta name="description" content="The decoded German telegram of January 1917 that brought the United States into WWI. A two-stage codebook cipher (0075 then 13040), broken by Britain’s Room 40 and surfaced through one of history’s most consequential intelligence operations.">
+  <meta name="description" content="The January 1917 Zimmermann Telegram: code 0075 to Washington, then re-encoded in 13040 for Mexico. Room 40’s reading helped draw the United States into WWI.">
   <meta property="og:title" content="Zimmermann Telegram (German codes 0075 / 13040 · 1917) — The Cipher Museum">
-  <meta property="og:description" content="The decoded German telegram of January 1917 that brought the United States into WWI. A two-stage codebook cipher (0075 then 13040), broken by Britain’s Room 40 and surfaced through one of history’s most consequential intelligence operations.">
+  <meta property="og:description" content="The January 1917 Zimmermann Telegram: code 0075 to Washington, then re-encoded in 13040 for Mexico. Room 40’s reading helped draw the United States into WWI.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/zimmermann.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Zimmermann Telegram (German codes 0075 / 13040 · 1917) — The Cipher Museum">
-  <meta name="twitter:description" content="The decoded German telegram of January 1917 that brought the United States into WWI. A two-stage codebook cipher (0075 then 13040), broken by Britain’s Room 40 and surfaced through one of history’s most consequential intelligence operations.">
+  <meta name="twitter:description" content="The January 1917 Zimmermann Telegram: code 0075 to Washington, then re-encoded in 13040 for Mexico. Room 40’s reading helped draw the United States into WWI.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/zimmermann.html">
@@ -66,7 +66,7 @@
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">German Foreign Office (Arthur Zimmermann, State Secretary)</span></div>
     <div class="fact"><span class="fact-label">Sent</span><span class="fact-value">16 January 1917</span></div>
-    <div class="fact"><span class="fact-label">Codes</span><span class="fact-value">Sent in 0075 (super-enciphered diplomatic code); re-encoded in 13040 for the Mexico leg</span></div>
+    <div class="fact"><span class="fact-label">Codes</span><span class="fact-value">Code 0075 to Washington; re-encoded in 13040 for the onward Mexico leg</span></div>
     <div class="fact"><span class="fact-label">Broken by</span><span class="fact-value">Nigel de Grey &amp; Reverend William Montgomery, Room 40, January 1917</span></div>
     <div class="fact"><span class="fact-label">Outcome</span><span class="fact-value">US declares war on Germany, 6 April 1917</span></div>
   </div>
@@ -84,7 +84,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>The Zimmermann Telegram was protected by the German diplomatic code <strong>0075</strong>: a two-part codebook in which common words and phrases mapped to 4- and 5-digit code groups, and the resulting digit string was super-enciphered by an additive key. By January 1917 the British had reconstructed enough of 0075 analytically from accumulated diplomatic intercepts to read most of it.</p><p style="margin-top:1rem;">Because the Mexico City legation lacked the 0075 codebook, the Washington embassy forwarded the cable re-encoded in the older diplomatic code <strong>13040</strong>, which the British had also broken. The retransmission was a critical operational error: it gave Room 40 a parallel text in two ciphers and let them attribute the leak to Mexican rather than British sources.</p><p style="margin-top:1rem;">The demo above is a faithful but simplified codebook engine: each input word is encoded as a 5-digit group via a fixed 126-word codebook, with super-enciphered additive applied to every group. Words not in the codebook fall through to a per-letter mode marked by sentinel groups — mirroring how operators handled proper nouns and place names.</p></div>
+      <div class="panel-body"><p>The Zimmermann Telegram was protected by the German diplomatic code <strong>0075</strong>: a two-part codebook in which common words and phrases mapped to 4- and 5-digit code groups, and the resulting digit string was super-enciphered by an additive key. By January 1917 the British had reconstructed enough of 0075 analytically from accumulated diplomatic intercepts to read most of it.</p><p style="margin-top:1rem;">Because the Mexico City legation lacked the 0075 codebook, the Washington embassy forwarded the cable re-encoded in the older diplomatic code <strong>13040</strong>, which the British had also broken. The retransmission was a critical operational error: it gave Room 40 a parallel text in two ciphers and let them attribute the leak to Mexican rather than British sources.</p><p style="margin-top:1rem;">The demo above is an educational codebook model, not a reconstruction of either historical codebook: each input word is encoded as a 5-digit group via a fixed 126-word codebook, with super-enciphered additive applied to every group. Words not in the codebook fall through to a per-letter mode marked by sentinel groups; this is a teaching convention, not a verified reproduction of the 1917 procedure.</p></div>
     </div>
 
     <div class="panel">
@@ -108,11 +108,12 @@
           <tbody>
             <tr><td>Origin</td><td>German Foreign Office (Arthur Zimmermann, State Secretary)</td></tr>
             <tr><td>Sent</td><td>16 January 1917</td></tr>
-            <tr><td>Codes</td><td>Sent in 0075 (super-enciphered diplomatic code); re-encoded in 13040 for the Mexico leg</td></tr>
+            <tr><td>Codes</td><td>Code 0075 to Washington; re-encoded in 13040 for the onward Mexico leg</td></tr>
             <tr><td>Broken by</td><td>Nigel de Grey &amp; Reverend William Montgomery, Room 40, January 1917</td></tr>
             <tr><td>Outcome</td><td>US declares war on Germany, 6 April 1917</td></tr>
           </tbody>
         </table>
+        <p class="source-note">Source: <a href="https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/cryptologic-quarterly/the_zimmermann_telegram.pdf" target="_blank" rel="noopener noreferrer">NSA, <em>The Zimmermann Telegram</em>, p. 45 and the translated 1917 German investigation</a>. The two codes belonged to successive transmission legs, not two encryption layers applied to the same ciphertext.</p>
       </div>
     </div>
   </div>
