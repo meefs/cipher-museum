@@ -15,7 +15,7 @@
  *
  *   CM-002  Historical records gain explicit `authenticity` and `pair_status`
  *           classifications plus a `benchmark_eligible` flag; records whose
- *           ciphertext fails an objective fabrication test are withdrawn; the
+ *           ciphertext matches a source-review trigger are withheld; the
  *           Kryptos K1 pair and key are corrected from a verified primary source.
  *   CM-008  Both length fields are recomputed from `plaintext` alone by the one
  *           definition in scripts/corpus-text-metrics.js.
@@ -50,12 +50,14 @@ const letters = value => String(value ?? '').toUpperCase().replace(/[^A-Z]/g, ''
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 /**
- * Objective fabricated-ciphertext test (CM-002).
+ * Deterministic historical ciphertext review trigger (CM-002).
  *
  * A ciphertext of 20+ A-Z letters whose letters are all distinct, or which is a
- * contiguous run of the alphabet, is not plausible output of any cipher: the
- * uniform probability of 25 distinct letters is ~1.7e-9, and no synthetic record
- * in v0.6 shows the signature. Returns null for a plausible ciphertext.
+ * contiguous run of the alphabet, merits source verification. The probability
+ * of 25 distinct letters is ~1.7e-9 only under independent uniform A-Z draws;
+ * it is not the probability of fabrication under arbitrary cipher models.
+ * Historical API name retained for callers. Null means only that this specific
+ * pattern is absent; it does not establish historical authenticity.
  */
 function fabricationSignature(ciphertext) {
   const text = letters(ciphertext);
@@ -138,18 +140,18 @@ function build() {
     const record = { ...original };
     const recordChanges = [];
 
-    // ---- CM-002: withdraw fabricated historical ciphertexts -------------
+    // ---- CM-002: withhold source-unverified historical ciphertexts -------
     if (record.source_type === 'historical') {
-      const fabrication = fabricationSignature(record.ciphertext);
-      if (fabrication) {
+      const reviewTrigger = fabricationSignature(record.ciphertext);
+      if (reviewTrigger) {
         excluded.push({
           id: record.id,
           title: record.title,
           cipher_type: record.cipher_type,
-          reason: 'fabricated ciphertext',
+          reason: 'historical ciphertext attribution unverified; pattern requires source review',
           evidence: {
-            ...fabrication,
-            uniform_probability_all_distinct: Number(distinctProbability(fabrication.ciphertext_letters).toExponential(2)),
+            ...reviewTrigger,
+            uniform_probability_all_distinct: Number(distinctProbability(reviewTrigger.ciphertext_letters).toExponential(2)),
             ciphertext: String(record.ciphertext)
           },
           source: record.source,

@@ -58,6 +58,13 @@
       gap: .5rem;
     }
     .corpus-card b { color: var(--tx); font-family: var(--fd); letter-spacing: .04em; }
+    .corpus-status {
+      color: var(--tx2);
+      font-size: .88rem;
+      line-height: 1.55;
+      border-left: 2px solid var(--gold-dim);
+      padding-left: .7rem;
+    }
     .corpus-meta {
       font-family: var(--fm);
       font-size: .72rem;
@@ -240,23 +247,29 @@
       <div class="breadcrumb"><a href="index.html">Entrance</a><span>›</span>Cipher Corpus</div>
       <span class="page-eyebrow">Known-Ciphertext Benchmark Library</span>
       <h1 class="page-title">Cipher Corpus</h1>
-      <p class="page-tagline">100,326 ciphertext records for learning, testing, and benchmarking classical cryptanalysis.</p>
-      <p class="page-desc">Each record includes cipher type, key, plaintext, difficulty, language, and expected attacks — fully machine-readable and openly licensed. The on-page browser samples published v0.6: use Challenge Mode to attempt a solve, or switch to Known Answers to study the metadata. A newer corrected download is available below.</p>
-      <p class="page-desc">Corpus v0.6 adds 300 synthetic RS44, German Double Playfair, and AMSCO exercises. Replay verifies 99,800 records exactly; 526 existing noisy or historical-variant records have documented exceptions. <a href="public/corpus/README.md">Dataset scope and conventions</a>.</p>
+      <p class="page-tagline">The corrected v0.8 corpus has 100,313 records for learning, testing, and benchmarking classical cryptanalysis.</p>
+      <p class="page-desc">Each record includes cipher type, key, plaintext, difficulty, language, and expected attacks. The on-page browser samples v0.8: use Challenge Mode to attempt a solve, or switch to Known Answers to study the metadata. Each card states its pair verification and provenance status; a verified computation does not authenticate a historical source.</p>
+      <p class="page-desc">The separately published v0.6 archive has 100,326 records. Of these, 99,800 replayed with museum engines and 526 noisy or historical-variant records had documented exceptions. <a href="public/corpus/README.md">Dataset scope and conventions</a>.</p>
       <p class="page-desc"><strong>Published archive:</strong> <a href="https://doi.org/10.5281/zenodo.23297920" target="_blank" rel="noopener">Zenodo v0.6 · DOI 10.5281/zenodo.23297920</a>. The archive preserves canonical JSONL plus 11 supporting files; the website also provides derived JSON, CSV, subsets, and browser samples.</p>
       <div class="badge-group">
         <span class="pill">85 corpus cipher types · <span data-count="engines">88</span> registered museum engines</span>
-        <span class="pill">9 languages</span>
-        <span class="pill">54 canonical historical records</span>
+        <span class="pill">v0.8 · 7 languages</span>
+        <span class="pill">v0.8 · 41 historical records</span>
         <span class="pill">Beginner → Expert tiers</span>
         <span class="pill">Noisy &amp; multilingual variants</span>
-        <span class="pill">JSONL / CSV / JSON</span>
-        <span class="pill">LLM 3-shot eval export</span>
+        <span class="pill">v0.8 · JSONL</span>
+        <span class="pill">v0.6 archive · JSON / CSV</span>
+        <span class="pill">Versioned LLM 3-shot eval export</span>
       </div>
     </div>
 
     <!-- ── Corpus Browser ───────────────────────── -->
     <section class="section" id="corpus-browser">
+      <div class="section-head">
+        <span class="section-eyebrow">Corrected v0.8 sample</span>
+        <h2 class="section-title">Browse the Corpus</h2>
+        <p class="section-sub">104 examples drawn from the v0.8 download. A reproducing pair is not proof that its historical attribution is authentic; check the status on each card.</p>
+      </div>
       <div class="corpus-controls">
         <div class="corpus-filters">
           <input class="museum-input" id="corpus-search" type="search"
@@ -291,6 +304,10 @@
         <a class="btn btn-primary" href="public/corpus/v0.8/all.jsonl.gz" download>Download v0.8 JSONL (.gz)</a>
         <a class="btn btn-secondary" href="public/corpus/v0.8/SHA256SUMS.txt">Checksums</a>
         <a class="btn btn-secondary" href="public/corpus/v0.8/cipher-corpus.schema.json">v0.8 schema</a>
+        <a class="btn btn-secondary" href="public/corpus/v0.8/historical-supplement.jsonl" download>Corrected historical supplement (87)</a>
+        <a class="btn btn-secondary" href="public/corpus/v0.8/llm-3shot-eval.jsonl" download>Corrected 3-shot evaluation (300)</a>
+        <a class="btn btn-secondary" href="public/corpus/v0.8/supplements-SHA256SUMS.txt">Supplement checksums</a>
+        <p>The historical supplement retains 42 entries from canonical v0.8 (41 historical, one reclassified as synthetic) and 45 additional, explicitly unreviewed entries. It excludes 13 historical records withheld pending source review; those older records remain only in the labeled v0.6 downloads below. The evaluation export corrects the three Two-square prompts. Check each entry’s provenance and pair status before reuse.</p>
         <p>Unzip with <code>gunzip -k all.jsonl.gz</code>. Read the <a href="docs/releases/corpus-v0.8.md">correction notes and verification instructions</a> before benchmarking. v0.8 is available here but has no Zenodo DOI; the citation below identifies the published v0.6 archive only.</p>
       </div>
       <h3 class="download-version-heading">Published v0.6 downloads</h3>
@@ -362,7 +379,7 @@ with open("all.jsonl", "r", encoding="utf-8") as f:
         <h2 class="section-title">Attribution &amp; Citation</h2>
       </div>
       <p>CipherBank (Li et al., 2025) is a research benchmark studying LLM performance on cryptographic decryption tasks. Its reported results depend on model, prompt, algorithm and metric; they are not a measured accuracy result for this museum’s corpus or solvers.</p>
-      <p style="margin-top:1rem;">Cipher Corpus extends this with 100,326 test cases across 85 cipher types (vs. CipherBank's 2,358 across 9), 54 catalogued historical-context exercises, 9 languages, noisy variants, and publicly downloadable split labels. The legacy <code>verified</code> field is not a claim that each historical pair is an authenticated source transcription; see the <a href="docs/CORPUS-V06-ERRATA.md">v0.6 errata</a>. <a href="https://arxiv.org/pdf/2504.19093" target="_blank" rel="noopener">CipherBank paper →</a></p>
+      <p style="margin-top:1rem;">The corrected v0.8 corpus contains 100,313 records across 85 cipher types, including 41 historically themed entries and 7 languages. The published v0.6 archive has 100,326 records, 54 historically themed entries, and 9 languages. Its legacy <code>verified</code> field is not a claim that each historical pair is an authenticated source transcription; see the <a href="docs/CORPUS-V06-ERRATA.md">v0.6 errata</a>. CipherBank (Li et al., 2025) has 2,358 cases across 9 types; the collections use different records and evaluation methods. <a href="https://arxiv.org/pdf/2504.19093" target="_blank" rel="noopener">CipherBank paper →</a></p>
       <div style="margin-top:2rem;">
         <span class="section-eyebrow" style="display:block;margin-bottom:.75rem;">Cite Cipher Corpus</span>
 <pre>@dataset{clark_2026_23297920,

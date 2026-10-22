@@ -47,6 +47,7 @@ ok('CORE parsed out of sw.js', core.length > 0, 'no non-HTML entries found');
 const unhashed = core.filter(rel => !hashed.has(rel));
 ok('every precached cache-first asset is hashed', unhashed.length === 0, unhashed.join(', '));
 ok('minified bundles are hashed', EXTRA.every(rel => hashed.has(rel)));
+ok('offline fallback is precached and hashed', sw.includes("'/offline.html'") && hashed.has('offline.html'));
 
 // Hashing a dependency is insufficient: a newly precached exhibit must be
 // usable before its first online visit has warmed the runtime cache.
@@ -80,11 +81,13 @@ try {
   }
   const original = swVersionFor(fixture);
   for (const rel of hashed) {
-    if (!/\.(css|js|json|svg|webmanifest)$/i.test(rel)) continue;
+    if (!/\.(css|html|js|json|svg|webmanifest)$/i.test(rel)) continue;
     const file = path.join(fixture, rel);
     fs.writeFileSync(file, fs.readFileSync(file, 'utf8').replace(/\r?\n/g, '\r\n'));
   }
   ok('CRLF checkout produces the same version as LF', swVersionFor(fixture) === original);
+  fs.appendFileSync(path.join(fixture, 'offline.html'), '\n<!-- updated offline notice -->\n');
+  ok('offline page changes invalidate the version', swVersionFor(fixture) !== original);
   const script = path.join(fixture, 'js/ui-delegates.js');
   fs.appendFileSync(script, '\r\n// genuine changed content\r\n');
   ok('real text changes still invalidate the version', swVersionFor(fixture) !== original);

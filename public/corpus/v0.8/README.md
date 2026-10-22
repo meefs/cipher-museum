@@ -51,5 +51,36 @@ The builder emits `all.jsonl` locally; it is deliberately ignored by Git.
 The committed 9 MB gzip is the **full** dataset, not a delta file. Use the
 [`cipher-corpus.schema.json`](cipher-corpus.schema.json) record schema and
 filter on `benchmark_eligible` for reproducible known-answer pairs. The older
-v0.6 browser and other file-format buttons on the website remain explicitly
-versioned; they are not interchangeable with this corrected download.
+v0.6 file-format buttons on the website remain explicitly versioned; they are
+not interchangeable with this corrected download. The on-page browser now
+uses a corrected v0.8 sample.
+
+## Versioned supporting downloads
+
+- [Historically themed supplement](historical-supplement.jsonl): 87 entries
+  retained from the older 100-entry supplement after 13 historical records
+  requiring source review were removed. Of the 87, 42 have canonical v0.8 IDs (41
+  historical, one Enigma example reclassified synthetic). The remaining 45
+  are supplemental-only, marked `legacy_unreviewed` and
+  `benchmark_eligible: false`; their old `verified` flag is archived under
+  `legacy_verified_flag` and replaced by `verified: false`. Aeneas's wrong
+  Gutenberg citation is retired, with the former URL in `citation_erratum`.
+  The canonical Beale record already has the equivalent v0.8 correction.
+- [LLM three-shot evaluation export](llm-3shot-eval.jsonl): 300 prompts
+  retained from the old export. All three Two-square prompt records now use
+  the corrected v0.8 examples and challenges. The other 297 were not
+  independently revalidated.
+
+The [supplement manifest](supplements-manifest.json) records the counts,
+lineage, and caveats. Check the
+[supplement SHA-256 list](supplements-SHA256SUMS.txt) separately from the
+complete-corpus checksum list. These supporting downloads are not an
+authenticated historical archive or a replacement for the full corpus. To
+regenerate and check them from the immutable v0.6 source and corrected v0.8
+download:
+
+```sh
+node scripts/build-corpus-v08-supplements.js
+node scripts/build-corpus-v08-supplements.js --check
+node tests/test-corpus-supplements.js
+```

@@ -2,7 +2,7 @@
   "decisions_version": "2026-10-12",
   "corpus_version": "0.7",
   "basis": "data/corpus-historical-review.json (v0.6 review) plus computed evidence reproduced by scripts/build-corpus-v07.js",
-  "note": "Judgment calls only. The fabricated-ciphertext test is objective and lives in the generator, not here, so it reproduces rather than being asserted. Every entry below records why a human decision was made and what evidence supports it.",
+  "note": "Judgment calls only. The ciphertext-pattern screen is deterministic and lives in the generator, but its result does not prove a record was fabricated. Every entry below records why a human decision was made and what evidence supports it.",
 
   "pair_status_values": {
     "verified_pair": "The stored plaintext and ciphertext are a complete pair that reproduces by a documented procedure: either the museum engine replays it exactly, or the record carries a verification entry below. Only these are benchmark-eligible.",
@@ -62,7 +62,7 @@
 
   "reconstructions": {
     "source": "data/corpus-historical-review.json#declared_reconstructions",
-    "note": "Carried forward as authenticity=reconstruction. Records in this list that the generator also detects as fabricated are excluded instead; records that replay exactly keep pair_status=verified_pair, since being a teaching reconstruction and being a reproducible pair are independent properties.",
+    "note": "Carried forward as authenticity=reconstruction. Records in this list that match the historical ciphertext review trigger are excluded pending source review; records that replay exactly keep pair_status=verified_pair, since being a teaching reconstruction and being a reproducible pair are independent properties.",
     "ids": [
       "hist-stager-001",
       "hist-vic-001",
@@ -79,8 +79,8 @@
   },
 
   "exclusion_policy": {
-    "rule": "A historical record whose ciphertext fails the fabricated-ciphertext test is removed from the canonical v0.7 dataset.",
-    "test": "A ciphertext of at least 20 A-Z letters in which every letter is distinct, or whose letters form a contiguous run of the alphabet. Real ciphertext of that length is a near-impossibility under any cipher: P(all 26 distinct) is about 6.6e-11 and P(all 25 distinct) about 1.7e-9, and none of the 100,272 synthetic records in v0.6 exhibits it.",
+    "rule": "A historical-context record whose ciphertext matches the review-trigger pattern is withheld from the canonical v0.7 dataset pending verification against a source. The pattern is not proof of fabrication.",
+    "test": "At least 20 A-Z letters with all letters distinct, or a contiguous run of the alphabet. None of the 100,272 synthetic records in v0.6 exhibits this pattern. Under the narrow baseline of independent, uniformly drawn A-Z letters, P(all 26 distinct) is about 6.6e-11 and P(all 25 distinct) about 1.7e-9. Those numbers are not the probability of fabrication, and other cipher or message models can yield distinct letters.",
     "why_not_regenerated": "Re-encrypting the plaintext with a museum engine would produce a pair whose ciphertext came from a seeded pedagogical model rather than the machine named in the record. That is a synthetic exercise wearing a historical title, so the records are withdrawn from the canonical set rather than back-filled.",
     "preservation": "Every excluded record remains in the immutable v0.6 archive and is listed with its evidence in public/corpus/v0.7/excluded-records.json. The IDs are retired, not reused."
   },

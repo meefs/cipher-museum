@@ -37,13 +37,15 @@ The v0.6 review catalogued five incomplete matched pairs and eleven declared
 reconstructions. Those two lists overlap in `hist-enigma-barbarossa-001`, so
 they cover **15 distinct records, not 16**.
 
-Auditing all 54 historical records found a larger problem than the review
-recorded. **13 records carry a ciphertext whose letters are all distinct** (20
-or more letters), or which is a contiguous run of the alphabet. Real ciphertext
-of that length is essentially never like that: the uniform probability of 26
-distinct letters is about 6.6e-11, of 25 about 1.7e-9 — and **none of the
-100,272 synthetic records in v0.6 shows the signature**. These are placeholders,
-not transcriptions. Eight of the 13 were not catalogued by any previous review:
+Auditing all 54 historical records flagged **13 with 20 or more distinct
+ciphertext letters**, or a contiguous alphabet run. Under an independent,
+uniform A-Z model, the probability of 26 distinct letters is about 6.6e-11,
+and of 25 about 1.7e-9; **none of the 100,272 synthetic records in v0.6 shows
+the pattern**. These observations make the records unsuitable as verified
+historical transcriptions pending source review. They do not prove the
+ciphertexts were fabricated: other cipher and message models can produce
+distinct letters, and the calculation is not a probability of fabrication.
+Eight of the 13 were not catalogued by any previous review:
 `hist-jefferson-wheel-001`, `hist-m94-wwii-001`, `hist-diana-cia-001`,
 `hist-geheimschreiber-001`, `hist-kl7-nato-001`, `hist-fialka-001`,
 `hist-wheatstone-1867-001`, `hist-copiale-2011-001`.
@@ -54,6 +56,13 @@ They were not re-encrypted into place: generating a replacement ciphertext with
 a seeded pedagogical engine would produce a synthetic exercise wearing a
 historical title. Their IDs are retired, not reused, and the records remain in
 the immutable v0.6 archive.
+
+**Exclusion wording correction (22 October 2026):** The original tagged v0.7
+snapshot described the statistical pattern as proof of fabrication. The main
+branch now describes it as a review trigger and states its uniform-sampling
+assumption. This only updates `excluded-records.json` and its checksum manifest;
+the tagged snapshot remains intact, and the canonical v0.7 `all.jsonl`, IDs,
+statistics and v0.6 published archive are unchanged.
 
 **`hist-kryptos-k1-001` is corrected rather than withdrawn.** v0.6 stored the
 first 32 characters of K1 against a 63-character plaintext, and named `KRYPTOS`

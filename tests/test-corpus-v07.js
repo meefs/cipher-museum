@@ -91,10 +91,19 @@ check('the immutable v0.6 archive still verifies against its own manifest', () =
 
 /* ------------------------------------------------------------------- CM-002 */
 
-check('CM-002: no fabricated ciphertext ships in v0.7', () => {
+check('CM-002: no source-review-trigger pattern ships in v0.7', () => {
   for (const record of records) {
     assert.equal(builder.fabricationSignature(record.ciphertext), null,
-      `${record.id}: ciphertext has a fabricated-placeholder signature`);
+      `${record.id}: ciphertext matches the historical source-review trigger`);
+  }
+});
+
+check('CM-002: exclusion rationale distinguishes a heuristic from proof', () => {
+  assert.match(excluded.policy.rule, /pending verification against a source/);
+  assert.match(excluded.policy.test, /independent, uniformly drawn A-Z/);
+  assert.match(excluded.policy.test, /not the probability of fabrication/);
+  for (const entry of excluded.records) {
+    assert.match(entry.reason, /attribution unverified/);
   }
 });
 
@@ -306,17 +315,17 @@ check('the legacy contract still accepts the immutable archive, duplicates inclu
 
 /* ---------------------------------- the replay guard that missed all of this */
 
-check('the replay no longer lets a historical-variant rule excuse a fabricated ciphertext', () => {
+check('the replay no longer lets a historical-variant rule excuse a review-trigger ciphertext', () => {
   const replay = require(path.join(root, 'tests/engines/corpus-replay.js'));
   // The two detectors must agree, or the corpus generator and the replay guard
-  // could disagree about what counts as fabricated.
+  // could disagree about which signatures require separate source review.
   for (const sample of ['QWERTYUIOPASDFGHJKLZXCVBNM', 'ABCDEFGHIJKLMNOPQRSTU', 'NCZWVYSXNSVCXFP', '']) {
     assert.equal(replay.isFabricatedCiphertext(sample),
       builder.fabricationSignature(sample) !== null,
-      `fabrication detectors disagree about ${JSON.stringify(sample.slice(0, 20))}`);
+      `review-trigger detectors disagree about ${JSON.stringify(sample.slice(0, 20))}`);
   }
-  // The enumerated tolerance list must be exactly the fabricated records in the
-  // frozen archive: not fewer (a real one slips through) and not more (a licence
+  // The enumerated tolerance list must be exactly the flagged records in the
+  // frozen archive: not fewer (an unreviewed one slips through) and not more (a licence
   // to add new ones).
   const legacyFabricated = read('public/corpus/all.jsonl').split('\n').filter(Boolean)
     .map(JSON.parse)
@@ -324,7 +333,7 @@ check('the replay no longer lets a historical-variant rule excuse a fabricated c
       && replay.isFabricatedCiphertext(record.ciphertext))
     .map(record => record.id);
   assert.deepEqual([...replay.FABRICATED_V06_IDS].sort(), legacyFabricated.sort(),
-    'the enumerated v0.6 fabrication tolerances must match the archive exactly');
+    'the enumerated v0.6 review-trigger tolerances must match the archive exactly');
   assert.equal(legacyFabricated.length, 13);
   // And every one of them is withdrawn from v0.7.
   const shipped = new Set(records.map(record => record.id));

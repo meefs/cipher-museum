@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0f">
+  <title>Exhibit unavailable offline — The Cipher Museum</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      background: #0a0a0f;
+      color: #f3ede4;
+      font: 1rem/1.6 system-ui, sans-serif;
+    }
+    main {
+      width: min(100%, 37rem);
+      border: 1px solid #6b5640;
+      border-radius: .75rem;
+      padding: clamp(1.5rem, 5vw, 3rem);
+      background: #18171b;
+    }
+    .label { color: #dec392; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { font: 600 clamp(1.8rem, 5vw, 2.5rem)/1.15 Georgia, serif; margin: .7rem 0 1rem; }
+    p { margin: 0 0 1.2rem; }
+    a { color: #ffdd9b; text-underline-offset: .18em; }
+    a:focus-visible { outline: 3px solid #ffdd9b; outline-offset: 4px; }
+    .skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 2; padding: .45rem .7rem; background: #18171b; }
+    .skip-link:focus { top: 1rem; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main id="main-content">
+    <p class="label">The Cipher Museum · Offline</p>
+    <h1>This exhibit is not available offline</h1>
+    <p>Connect to the internet and reload this page to open the exhibit. Pages you have visited while connected may be available offline.</p>
+    <a href="/index.html">Return to the museum entrance</a>
+  </main>
+</body>
+</html>

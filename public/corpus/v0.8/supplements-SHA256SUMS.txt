@@ -1,0 +1,3 @@
+55c1f5091a86489a95ac0af2f6a93fbf67bcf8c08195f140515b20e9e06ae0a8  historical-supplement.jsonl
+fce822410b1db37974a4a2c1edab0e92a4d8811e9eb217e39ed96374c8d5f91d  llm-3shot-eval.jsonl
+462650c578b5c9c435e65aa26c5e680f39cd408530151f6208551007d60108bb  supplements-manifest.json

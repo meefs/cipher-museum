@@ -113,21 +113,21 @@ const KNOWN_DEVIATIONS = [
     matches: (record, kind, candidateEngine) => record.source_type === 'historical'
       && candidateEngine === engineName
       // A historical-variant rule explains why a pedagogical engine differs
-      // from a real machine. It must not also excuse a ciphertext that no
-      // machine produced: these rules matched every historical mismatch for
-      // their engine, which is how thirteen fabricated ciphertexts sat in the
-      // corpus unnoticed. Fabricated content is excused only by the explicit,
-      // enumerated rule below, so a new one fails the run.
+      // from a real machine. It must not also excuse a source-unverified
+      // ciphertext matching the review-trigger pattern: these rules matched
+      // every historical mismatch for their engine, which hid thirteen
+      // suspect records in the v0.6 corpus. Such records are tracked only by
+      // the explicit, enumerated legacy rule below, so a new one fails the run.
       && !isFabricatedCiphertext(record.ciphertext)
   })),
   {
     id: 'fabricated-ciphertext-v06-withdrawn',
-    rationale: 'The v0.6 record stores a placeholder ciphertext whose letters are all distinct, which no cipher produces; these bytes are immutable and the records are withdrawn in corpus v0.7 (see public/corpus/v0.7/excluded-records.json).',
+    rationale: 'The v0.6 historical ciphertext matches a source-review-trigger pattern (all-distinct letters or alphabet run); this does not prove fabrication. The bytes are immutable and these records are withheld from canonical corpus v0.7 pending source verification (see public/corpus/v0.7/excluded-records.json).',
     matches: record => FABRICATED_V06_IDS.has(record.id)
   }
 ];
 
-// Exactly the records whose ciphertext fails the fabrication test in the frozen
+// Exactly the historical records matching the review trigger in the frozen
 // v0.6 archive. Enumerated rather than computed so that a fourteenth such record
 // appearing anywhere is an unexplained failure rather than a silent pass.
 const FABRICATED_V06_IDS = new Set([
@@ -140,10 +140,11 @@ const FABRICATED_V06_IDS = new Set([
 
 /**
  * A ciphertext of 20+ A-Z letters that are all distinct, or that runs
- * contiguously through the alphabet, is a placeholder rather than output of a
- * cipher: P(26 distinct) is about 6.6e-11 and no synthetic corpus record shows
- * the signature. Kept in step with scripts/build-corpus-v07.js, which applies
- * the same test when deciding what v0.7 may ship.
+ * contiguously through the alphabet, merits source review. P(26 distinct) is
+ * about 6.6e-11 only under independent uniform A-Z draws; that is not the
+ * probability of fabrication under arbitrary cipher models. The historical
+ * function name is retained for compatibility with replay accounting. Kept in
+ * step with scripts/build-corpus-v07.js, which applies the same screen.
  */
 function isFabricatedCiphertext(ciphertext) {
   const text = String(ciphertext ?? '').toUpperCase().replace(/[^A-Z]/g, '');
@@ -258,8 +259,8 @@ function deviationFor(record, kind, engineName) {
 // 2026-10-12: totals are unchanged (99,800 passed, 526 known records, 1,051
 // events). 26 events — thirteen records, encode and decode each — moved out of
 // the per-engine historical-variant rules into the enumerated
-// fabricated-ciphertext-v06-withdrawn rule, because those rules no longer
-// excuse a placeholder ciphertext.
+// fabricated-ciphertext-v06-withdrawn rule (historical identifier), because
+// those rules no longer excuse an unverified review-trigger ciphertext.
 const EXPECTED_FULL_RUN = {
   records: 100326,
   passed: 99800,

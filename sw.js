@@ -9,18 +9,19 @@
  *   - The multi-megabyte corpus downloads under /public/ are never cached.
  *
  * VERSION is stamped automatically by `npm run build:js` from a hash of every
- * asset served cache-first — the minified bundles plus the non-HTML entries of
- * CORE below, read straight out of this list (scripts/sw-version.js).
+ * asset served cache-first — the minified bundles, the non-HTML entries of
+ * CORE below, and the self-contained offline fallback page (scripts/sw-version.js).
  * tests/test-sw-version.js fails the suite if it drifts. Old caches are purged
  * on activate, so adding an asset to CORE also re-stamps VERSION.
  */
 'use strict';
 
-const VERSION = 'cipher-museum-e3495f2c';
+const VERSION = 'cipher-museum-bd18f646';
 
 const CORE = [
   '/',
   '/index.html',
+  '/offline.html',
   '/ciphers/myszkowski.html',
   '/ciphers/turning-grille.html',
   '/ciphers/hagelin-c36.html',
@@ -113,7 +114,9 @@ self.addEventListener('fetch', (event) => {
   if (url.pathname.startsWith('/public/')) return;
 
   if (req.mode === 'navigate') {
-    // Network-first for pages.
+    // Network-first for pages. An unvisited exhibit must display an explicit
+    // offline notice, not the homepage at an exhibit URL with broken relative
+    // assets (or misleading homepage content).
     event.respondWith(
       fetch(req)
         .then((res) => {
@@ -121,7 +124,7 @@ self.addEventListener('fetch', (event) => {
           caches.open(VERSION).then((cache) => cache.put(req, copy));
           return res;
         })
-        .catch(() => caches.match(req).then((hit) => hit || caches.match('/index.html')))
+        .catch(() => caches.match(req).then((hit) => hit || caches.match('/offline.html')))
     );
     return;
   }

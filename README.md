@@ -26,6 +26,8 @@ citation and rights information remains in [`public/corpus/README.md`](public/co
 
 ## 📰 Latest Update
 
+- **Cipher Corpus current downloads — 22 October 2026** — the on-page browser now samples corrected v0.8 records and shows each pair's verification and historical provenance status. Separate v0.8 historical and three-shot evaluation supplements replace misleading legacy examples without changing the published v0.6 archive. The corpus page labels version-specific counts, and uncached exhibits show a usable offline notice. See the [v0.8 release notes](docs/releases/corpus-v0.8.md).
+
 - **Museum-wide accuracy and behavior audit — 22 October 2026** — corrected historical attributions, mathematical claims, bibliography destinations, cipher input handling, Two-square’s rule and interactive navigation. Updated shared summaries, added regressions, and documented simplified models and frozen-dataset errata. See [scope, evidence, fixes and verification](docs/FULL_MUSEUM_AUDIT.md).
 
 - **Book-guided codebreaking — 22 October 2026** — six additions connect reading with hands-on work: a manual substitution desk, a transcription workspace, synchronized multiple anagramming, chapter reading trails, a decimal VENONA exercise, and an OTP tampering experiment. Nine correction areas distinguish evidence from guesses, mathematical assumptions from implementation conditions, and the stages of historical codebreaking. The experiments use original teaching fixtures and state their limits; book references link to public author or publisher resources. See [the changes and their checks](docs/BOOK_REVIEW_IMPROVEMENTS.md).
@@ -86,12 +88,12 @@ Type a message, set a key, and watch the cipher work in real time. Demos are dyn
 For a sortable, filterable view of every cipher system in the museum (era, type, security, hall, solved status, key method) see the [Cipher Comparison Table](https://ciphermuseum.com/comparison.html). For the full <!-- count:cipherHistory -->149<!-- /count -->-exhibit roster including biographies and context pages, see the [Museum Map](https://ciphermuseum.com/museum-map.html).
 
 ### 📊 Additional Tools
-- **[Cipher Corpus](https://ciphermuseum.com/cipher-corpus.html)** — A library of synthetic challenges and historically themed exercises for classical cryptanalysis, with 100,326 test cases across 85 cipher types. Includes:
-    - **Corrected v0.8 download**: the complete 100,313-record canonical dataset as compressed JSONL, with corrected Two-square pairs, five unsupported citations identified as errata, and v0.7's historical-pair and metadata corrections. [Download and read the change notes](https://ciphermuseum.com/cipher-corpus.html#corrected-corpus). The on-page browser and published DOI still describe v0.6; v0.8 has no Zenodo DOI.
+- **[Cipher Corpus](https://ciphermuseum.com/cipher-corpus.html)** — A library of synthetic challenges and historically themed exercises for classical cryptanalysis. The current v0.8 download has 100,313 records across 85 cipher types; the published v0.6 archive has 100,326. Includes:
+    - **Corrected v0.8 download**: the complete canonical dataset as compressed JSONL, with corrected Two-square pairs, five unsupported citations identified as errata, and v0.7's historical-pair and metadata corrections. [Download and read the change notes](https://ciphermuseum.com/cipher-corpus.html#corrected-corpus). The separately published v0.6 archive keeps its own DOI; v0.8 has no Zenodo DOI.
     - **Challenge Mode** for learners: hides solutions for ciphertext-only practice.
     - **Known Corpus Mode** for teaching, benchmarking, and tool-building: shows all metadata, keys, and plaintexts.
-    - **Downloadable datasets**: JSONL, JSON, CSV, schema, difficulty splits (beginner–expert), multilingual supplements (5,348 records including Arabic; the canonical set covers 9 languages), noisy transcription variants, and LLM 3-shot evaluation export.
-    - **Quality rules**: Every record includes cipher type, key/settings, plaintext, difficulty, language, expected attack methods, and source/license info. Synthetic and historical records are labeled. The canonical set contains **54 records labeled historical**; the separate historical supplement contains 100 records, of which 45 await canonical merge.
+    - **Versioned exports**: the on-page browser, historical supplement and three-shot evaluation export use corrected v0.8 records. The older JSON, CSV, difficulty, multilingual and noisy exports remain labeled v0.6; its canonical set covers 9 languages, while v0.8 covers 7.
+    - **Quality rules**: Each v0.8 browser card states pair verification and provenance status. Its canonical set contains **41 records labeled historical**. The corrected 87-record historical supplement overlaps 42 canonical IDs (41 historical and one reclassified synthetic Enigma exercise) and contains 45 additional entries that require individual source and pair review before reuse. The original 100-record v0.6 supplement remains available as a labeled archive.
     - **Cryptanalysis tools**: `scripts/hill-climbing-solver.js` and `scripts/sa-solver.js` for automated monoalphabetic cipher breaking (quadgram scoring; no validated accuracy rate is currently published).
     - **Integration**: Linked from main nav, mobile nav, and footer. Direct integration with Cipher Detective and Workbench.
     - **Accessibility**: Includes skip links, labeled controls and keyboard-navigation checks; this is not a complete WCAG conformance certification.
@@ -309,6 +311,14 @@ is a separate compressed JSONL file served by the website. Its
 [release notes](docs/releases/corpus-v0.8.md) describe the changed records and
 how to reproduce them. It has no Zenodo DOI. The v0.6 archive and its files are
 preserved for anyone using the published version DOI.
+
+The [v0.8 browser sample](public/corpus/v0.8/browser-sample.json),
+[historical supplement](public/corpus/v0.8/historical-supplement.jsonl) and
+[three-shot evaluation export](public/corpus/v0.8/llm-3shot-eval.jsonl) have
+separate corrections and a [supplement checksum manifest](public/corpus/v0.8/supplements-SHA256SUMS.txt).
+An entry marked as a reproducing pair is not thereby an authenticated historical
+transcription. The earlier v0.6 supplemental files remain available for
+reproducing past results, with their known limitations documented.
 
 ### Prerequisites
 ```bash

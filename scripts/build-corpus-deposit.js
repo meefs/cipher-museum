@@ -115,7 +115,7 @@ const licenseSummary = {
     'CC0 and CC0-1.0 identify the same CC0 1.0 dedication for synthetic records.',
     'Historical records retain per-record public-domain assertions and source attribution; the deposit does not apply CC0 to historical source material.',
     `Counts were computed from the exact all.jsonl payload in this deposit (${records.length} records).`,
-    `v${version} withdraws 13 v0.6 historical records whose stored ciphertext was a placeholder; see excluded-records.json.`
+    `v${version} withholds 13 v0.6 historical-context records whose ciphertext matches a source-review-trigger pattern; this does not prove fabrication. See excluded-records.json.`
   ]
 };
 
@@ -156,9 +156,10 @@ to their use.
 v${version} does not assert that a historical record is an authentic transcription.
 Each one now carries an explicit \`authenticity\` value and a \`pair_status\`, and
 only records whose plaintext and ciphertext demonstrably correspond are marked
-\`benchmark_eligible\`. Thirteen v0.6 historical records whose stored ciphertext
-was a placeholder rather than a transcription are withdrawn and listed, with
-the evidence, in \`excluded-records.json\`. They remain in the immutable v0.6
+\`benchmark_eligible\`. Thirteen v0.6 historical-context records whose stored
+ciphertext matches a source-review-trigger pattern are withheld and listed,
+with the evidence, in \`excluded-records.json\`. This pattern does not prove
+fabrication. The records remain in the immutable v0.6
 deposit. Of the ${historical.length} historical records retained here,
 ${stats.by_authenticity.catalogued_unreviewed || 0} are labelled
 \`catalogued_unreviewed\`: no review has independently certified them, and that
@@ -325,7 +326,7 @@ const metadata = {
     `<p>${records.length.toLocaleString('en-US')} known-answer ciphertext records across ${stats.cipher_types} classical cipher-type labels, for cryptanalysis teaching, tool development and LLM evaluation. Built from the immutable v0.6 archive at tag <code>${pending.tag}</code> (commit <code>${String(pending.source_commit).slice(0, 12)}</code>).</p>`,
     `<p><strong>What v${version} changes.</strong> Four defects that v0.6 could only record as errata are fixed here, because fixing them required changing record bytes and the v0.6 archive is immutable.</p>`,
     '<ul>',
-    `<li><strong>Historical records are classified.</strong> Every record carries <code>authenticity</code>, <code>pair_status</code> and <code>benchmark_eligible</code>. ${stats.benchmark_eligible.toLocaleString('en-US')} records are verified known-answer pairs; the remaining ${(records.length - stats.benchmark_eligible).toLocaleString('en-US')} are not, and must not be scored as such. Thirteen v0.6 historical records whose stored ciphertext was a placeholder rather than a transcription are withdrawn, with the evidence, in <code>excluded-records.json</code>.</li>`,
+    `<li><strong>Historical records are classified.</strong> Every record carries <code>authenticity</code>, <code>pair_status</code> and <code>benchmark_eligible</code>. ${stats.benchmark_eligible.toLocaleString('en-US')} records are verified known-answer pairs; the remaining ${(records.length - stats.benchmark_eligible).toLocaleString('en-US')} are not, and must not be scored as such. Thirteen v0.6 historical-context records whose ciphertext matches a source-review-trigger pattern are withheld pending source verification, with the evidence in <code>excluded-records.json</code>. The pattern does not prove fabrication.</li>`,
     '<li><strong>Length fields have one reproducible definition.</strong> <code>text_length</code> and <code>normalized_text_length</code> are computed from the plaintext alone, by Unicode code point, with normalization before filtering.</li>',
     '<li><strong>Tags are unique</strong> in every record.</li>',
     '<li><strong>Split labels are described accurately.</strong> Both <code>public</code> and <code>blind</code> ship in this download; neither is secret or withheld.</li>',

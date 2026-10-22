@@ -34,12 +34,19 @@ edit:
 
 | Finding | Status in v0.6 (published) | Status in v0.7 (prepared) |
 |---|---|---|
-| CM-002 | Mitigated. Five incomplete pairs and eleven declared reconstructions inventoried in `data/corpus-historical-review.json`; archived bytes unchanged. | **Fixed.** The two lists overlap in one record, so they cover 15 distinct records. A corpus-wide audit found 13 records with fabricated ciphertext — 8 of them previously uncatalogued — all withdrawn with evidence. Kryptos K1 corrected and verified against a primary source. Every record carries `authenticity`, `pair_status` and `benchmark_eligible`. |
+| CM-002 | Mitigated. Five incomplete pairs and eleven declared reconstructions inventoried in `data/corpus-historical-review.json`; archived bytes unchanged. | **Fixed for dataset inclusion, pending source review for authenticity.** The two lists overlap in one record, so they cover 15 distinct records. A corpus-wide screen found 13 historical-context ciphertexts matching a conspicuous pattern — 8 previously uncatalogued — all withheld with evidence. This pattern does not prove fabrication. Kryptos K1 was corrected and verified against a primary source. Every retained record carries `authenticity`, `pair_status` and `benchmark_eligible`. |
 | CM-008 | Mitigated. The live report recomputes from `plaintext`; the archived fields stand under mixed conventions. | **Fixed.** One definition in `scripts/corpus-text-metrics.js`, applied to every record; 83,918 records corrected; the schema states the contract and the validator enforces it. |
 | CM-014 | Mitigated. 484 records carry a repeated tag; those bytes cannot change. | **Fixed.** Zero duplicate tags. Uniqueness is required of every record whatever its batch; the compatibility exception now belongs to the 0.6 dataset contract, not to a batch label. |
 | CM-020 | Mitigated by erratum. The published and archived schema copies describe `blind` as “held-out for evaluation”. | **Fixed.** The v0.7 schema describes the label accurately and does not repeat the retired phrasing; the v0.6 erratum still records the archived wording. |
 
 Until v0.7 is published, the v0.6 column is the state of the public dataset.
+
+**22 October 2026 wording correction:** The 11 October assessment called the 13
+flagged ciphertexts “fabricated” based on a distinct-letter probability under
+independent uniform sampling. That test alone cannot prove their origin. Their
+exclusion and retired IDs remain; the main-branch exclusion explanation now
+states the source-review condition explicitly. The original v0.7 tag and the
+published v0.6 archive are unchanged.
 
 One further item is deferred by intent, not by constraint:
 `docs/manual-cipher-independent-reference-check.js` is dated evidence pinned to

@@ -2,6 +2,24 @@
 
 **v0.6 · 2026-10-11 · 100,326 records · 85 cipher types.**
 
+This file documents the published v0.6 archive. The museum's current
+[v0.8 download](v0.8/all.jsonl.gz) has 100,313 canonical records across
+85 types, with 41 historically themed entries and 7 languages. Its
+[release notes](../../docs/releases/corpus-v0.8.md) describe corrections and
+verification. The [on-page browser](../../cipher-corpus.html#corpus-browser)
+uses the [v0.8 sample](v0.8/browser-sample.json) and states each record's
+pair-verification and provenance status.
+
+Corrected v0.8 exports are available separately: the
+[87-record historical supplement](v0.8/historical-supplement.jsonl) omits the
+13 historical records withheld pending source review, and the
+[three-shot evaluation export](v0.8/llm-3shot-eval.jsonl) uses corrected
+Two-square pairs. Their [checksums](v0.8/supplements-SHA256SUMS.txt) and the
+release notes explain how to verify them. The supplement's additional
+historical-context records are not authenticated known-answer pairs merely
+because they appear in a download. The v0.6 files below remain unchanged for
+reproducibility; pin a version before comparing results.
+
 Known-plaintext/ciphertext exercises for education and classical cryptanalysis
 benchmarking. This release adds **300 synthetic records: 100 each for RS44,
 German Double Playfair, and AMSCO**. These are generated exercises, not newly

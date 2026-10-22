@@ -3,9 +3,9 @@
 (async function() {
   let records = [];
   if (typeof fetch === 'function') {
-    // Load the browser sample (balanced ~100 records) — full corpus available via download buttons
+    // Load a balanced v0.8 sample; the published v0.6 sample remains an archive.
     try {
-      const res = await fetch('public/corpus/browser-sample.json');
+      const res = await fetch('public/corpus/v0.8/browser-sample.json');
       if (!res.ok) throw new Error('Corpus HTTP ' + res.status);
       records = await res.json();
       if (!Array.isArray(records)) throw new Error('Invalid corpus response');
@@ -36,7 +36,7 @@
   };
   function sourceLink(rec) {
     const original = rec.source_url || (rec.source_provenance && rec.source_provenance.url);
-    if (!original) return '';
+    const erratum = rec.citation_erratum;
     const mistaken = incorrectSourceLinks[original];
     const replacement = sourceLinkUpdates[original];
     const destination = mistaken ? mistaken.related : (replacement || original);
@@ -53,7 +53,33 @@
         }
       } catch (error) { /* Retain any warning; never turn malformed text into a link. */ }
     }
-    return link || warning ? '<div class="corpus-source" style="margin-top:0.7em;font-size:0.9em">' + link + warning + '</div>' : '';
+    const note = erratum && erratum.note
+      ? '<p>Citation note: ' + esc(erratum.note) + '</p>'
+      : '';
+    return link || warning || note
+      ? '<div class="corpus-source" style="margin-top:0.7em;font-size:0.9em">' + link + warning + note + '</div>'
+      : '';
+  }
+
+  function recordStatus(rec) {
+    const pair = {
+      verified_pair: rec.verification_method === 'engine_replay'
+        ? 'Plaintext/ciphertext pair reproduces with a museum engine.'
+        : (rec.verification_method === 'documented_computation'
+          ? 'Plaintext/ciphertext pair checked by documented computation.'
+          : 'Pair is marked verified; check its stated verification method.'),
+      unverified_pair: 'Plaintext/ciphertext pair has not been independently verified; do not use as a known-answer test.',
+      not_a_pair: 'Plaintext and ciphertext cover different extents; do not use as a known-answer pair.'
+    }[rec.pair_status] || 'Pair verification status unknown.';
+    const provenance = {
+      synthetic: 'Synthetic exercise.',
+      reconstruction: 'Teaching reconstruction, not a historical transcription.',
+      catalogued_unreviewed: 'Historical source attribution has not been independently verified.',
+      authentic_excerpt: 'Historical excerpt; see the record source for its scope.',
+      authentic_artifact: 'Historical artifact; see the record source for its scope.'
+    }[rec.authenticity] || 'Provenance not independently verified.';
+    return '<div class="corpus-status">' +
+      '<b>v0.8 record:</b> ' + esc(provenance) + ' ' + esc(pair) + '</div>';
   }
 
   // Safely escape HTML to prevent XSS from record data
@@ -150,6 +176,7 @@
         <span>${esc(rec.cipher_type)}</span> | <span>${esc(rec.cipher_family)}</span> | <span>${esc(rec.difficulty)}</span> | <span>${esc(rec.language)}</span> | <span>${esc(rec.source_type)}</span>
       </div>
       <div class="ciphertext-block corpus-ciphertext">${esc(rec.ciphertext)}</div>
+      ${recordStatus(rec)}
       <div class="corpus-visuals" style="margin:0.7em 0 0.7em 0;">
         <div><b>Letter Frequency</b></div>
         <canvas width="220" height="60" class="freq-canvas"></canvas>

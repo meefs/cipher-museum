@@ -77,6 +77,13 @@ jobs:
       - name: Validate corpus v0.8 against its own contract
         run: npm run validate:corpus:v08
 
+      - name: Verify corrected v0.8 supporting downloads
+        run: node scripts/build-corpus-v08-supplements.js --check
+
+      - name: Verify v0.8 supplement checksums
+        working-directory: public/corpus/v0.8
+        run: sha256sum -c supplements-SHA256SUMS.txt
+
   deploy-pages:
     needs: [test, validate-corpus]
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -107,6 +114,7 @@ jobs:
         run: |
           test -s all.jsonl.gz
           sha256sum --ignore-missing -c SHA256SUMS.txt
+          sha256sum -c supplements-SHA256SUMS.txt
 
       - name: Setup Pages
         uses: actions/configure-pages@v6

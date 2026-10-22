@@ -1,0 +1,24 @@
+{
+  "supplement_release": "0.8",
+  "full_corpus": "public/corpus/v0.8/all.jsonl.gz",
+  "historical": {
+    "file": "historical-supplement.jsonl",
+    "source_file": "public/corpus/historical.jsonl",
+    "source_count": 100,
+    "excluded_withdrawn": 13,
+    "records": 87,
+    "canonical_v0_8": 42,
+    "canonical_historical": 41,
+    "canonical_reclassified_synthetic": 1,
+    "legacy_unreviewed": 45,
+    "note": "Historical titles and contextual links do not authenticate pairs. One formerly historical entry was reclassified synthetic in v0.8. Only canonical records retain their v0.8 pair status. Retained supplemental-only records are unreviewed and excluded from benchmarks."
+  },
+  "llm_eval": {
+    "file": "llm-3shot-eval.jsonl",
+    "source_file": "public/corpus/llm-3shot-eval.jsonl",
+    "records": 300,
+    "two_square_prompts_corrected": 3,
+    "note": "Only the three outdated Two-square prompts changed; other legacy evaluation prompts were copied without a full revalidation."
+  },
+  "published_v0_6_files_unchanged": true
+}
