@@ -42,8 +42,15 @@ async function main() {
   assert.equal(manifest.historical.canonical_historical, 41);
   assert.equal(manifest.historical.canonical_reclassified_synthetic, 1);
   assert.equal(manifest.historical.legacy_unreviewed, 45);
+  assert.deepEqual(manifest.historical.citation_review_states, {
+    context_passage_checked: 13,
+    not_independently_checked: 4,
+    historical_claim_not_substantiated: 1,
+    full_text_access_unavailable: 27
+  });
   assert.equal(manifest.llm_eval.records, 300);
   assert.equal(manifest.llm_eval.two_square_prompts_corrected, 3);
+  assert.equal(manifest.llm_eval.keyless_prompt_labels_corrected, 62);
 
   const checks = fs.readFileSync(path.join(OUT, 'supplements-SHA256SUMS.txt'), 'utf8')
     .trim().split('\n');
@@ -81,29 +88,41 @@ async function main() {
       assert.equal(record.pair_status, 'unverified_pair');
       assert.equal(record.authenticity, 'catalogued_unreviewed');
       assert.equal(record.benchmark_eligible, false);
-      assert.ok(['context_only_not_pair_provenance', 'wrong_work_retired']
+      assert.ok(['context_only_not_pair_provenance', 'contextual_reference_does_not_support_specific_claim']
         .includes(record.source_link_status));
+      assert.equal(record.pair_review.status, 'not_source_authenticated');
+      assert.equal(record.source_provenance.license, 'not_assessed');
+      assert.ok(record.citation_review.status in manifest.historical.citation_review_states);
     }
   }
   assert.equal(matched, 42);
   assert.equal(supplemental, 45);
   assert.equal(currentHistory.find(record => record.id === 'hist-enigma-001').source_type,
     'synthetic', 'the one reclassified canonical record is never advertised as authentic');
+  assert.deepEqual(currentHistory.filter(record => record.supplement_inclusion === 'legacy_unreviewed' &&
+    record.source_type === 'synthetic').map(record => record.id).sort(),
+  ['hist-geez-001', 'hist-homophonic-001', 'hist-railfence-001', 'hist-straddling-001',
+    'hist-twosquare-001']);
   const beale = currentHistory.find(record => record.id === 'hist-beale-paper1-001');
   const aeneas = currentHistory.find(record => record.id === 'hist-aeneas-001');
   assert.equal(beale.source_provenance.url, null);
   assert.equal(beale.citation_erratum.previous_url, 'https://www.gutenberg.org/ebooks/12994');
-  assert.equal(aeneas.source_provenance.url, null);
-  assert.equal(aeneas.source_link_status, 'wrong_work_retired');
+  assert.equal(aeneas.source_provenance.url,
+    'https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Aeneas_Tacticus/E*.html');
+  assert.equal(aeneas.source_link_status, 'context_only_not_pair_provenance');
   assert.equal(aeneas.citation_erratum.previous_url, 'https://www.gutenberg.org/ebooks/31958');
 
   const oldEval = readJsonl(path.join(BASE, 'llm-3shot-eval.jsonl'));
   const currentEval = readJsonl(path.join(OUT, 'llm-3shot-eval.jsonl'));
   assert.equal(currentEval.length, oldEval.length);
   const changed = currentEval.filter((record, i) => JSON.stringify(record) !== JSON.stringify(oldEval[i]));
-  assert.deepEqual(changed.map(record => record.id),
+  assert.equal(changed.length, 65, 'three Two-square and 62 fixed-convention prompts change');
+  const correctedSquares = changed.filter(record => record.cipher_type === 'two_square');
+  assert.deepEqual(correctedSquares.map(record => record.id),
     ['eval-two-square-005', 'eval-two-square-006', 'eval-two-square-007']);
-  for (const prompt of changed) {
+  assert.equal(changed.filter(record => record.prompts.key_recovery.evaluation.target ===
+    'No external key (fixed teaching convention)').length, 62);
+  for (const prompt of correctedSquares) {
     const challenge = canonical.get(prompt.source_record);
     const examples = ['two-square-002', 'two-square-003', 'two-square-004']
       .map(id => canonical.get(id));

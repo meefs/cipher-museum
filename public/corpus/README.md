@@ -14,11 +14,13 @@ Corrected v0.8 exports are available separately: the
 [87-record historical supplement](v0.8/historical-supplement.jsonl) omits the
 13 historical records withheld pending source review, and the
 [three-shot evaluation export](v0.8/llm-3shot-eval.jsonl) uses corrected
-Two-square pairs. Their [checksums](v0.8/supplements-SHA256SUMS.txt) and the
-release notes explain how to verify them. The supplement's additional
-historical-context records are not authenticated known-answer pairs merely
-because they appear in a download. The v0.6 files below remain unchanged for
-reproducibility; pin a version before comparing results.
+Two-square pairs and fixes 62 keyless prompts. Their
+[checksums](v0.8/supplements-SHA256SUMS.txt) and the
+[review notes](v0.8/README.md) explain how to verify them. The 45
+supplemental-only historical-context entries remain unverified and excluded
+from benchmarks, even when a teaching engine reproduces their pair. The v0.6
+files below remain unchanged for reproducibility; pin a version before
+comparing results.
 
 Known-plaintext/ciphertext exercises for education and classical cryptanalysis
 benchmarking. This release adds **300 synthetic records: 100 each for RS44,

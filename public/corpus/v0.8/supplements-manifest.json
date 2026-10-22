@@ -7,18 +7,25 @@
     "source_count": 100,
     "excluded_withdrawn": 13,
     "records": 87,
+    "citation_review_states": {
+      "context_passage_checked": 13,
+      "not_independently_checked": 4,
+      "historical_claim_not_substantiated": 1,
+      "full_text_access_unavailable": 27
+    },
     "canonical_v0_8": 42,
     "canonical_historical": 41,
     "canonical_reclassified_synthetic": 1,
     "legacy_unreviewed": 45,
-    "note": "Historical titles and contextual links do not authenticate pairs. One formerly historical entry was reclassified synthetic in v0.8. Only canonical records retain their v0.8 pair status. Retained supplemental-only records are unreviewed and excluded from benchmarks."
+    "note": "Historical links are contextual and do not authenticate an exact plaintext/ciphertext pair. Forty-five supplemental-only examples remain unverified and excluded from benchmarks. Citation review distinguishes checked passages, unavailable full text, unchecked citations and unsupported claims. Linked works rights were not assessed; older source license labels are archived."
   },
   "llm_eval": {
     "file": "llm-3shot-eval.jsonl",
     "source_file": "public/corpus/llm-3shot-eval.jsonl",
     "records": 300,
+    "keyless_prompt_labels_corrected": 62,
     "two_square_prompts_corrected": 3,
-    "note": "Only the three outdated Two-square prompts changed; other legacy evaluation prompts were copied without a full revalidation."
+    "note": "Three Two-square prompts were corrected against v0.8 and 62 no-key prompts now use meaningful labels and targets. The evaluation export is replay-checked against canonical v0.8 pairs and current engines."
   },
   "published_v0_6_files_unchanged": true
 }

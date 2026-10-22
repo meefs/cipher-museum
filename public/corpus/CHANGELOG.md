@@ -1,5 +1,12 @@
 # Cipher Corpus Changelog
 
+## v0.8 supporting-download review (2026-10-22)
+
+- Corrected misdirected source links and overstated historical wording in supplemental-only teaching records; five unsupported historical attributions are now labeled modern reconstructions. All 45 remain unverified and benchmark-ineligible. A citation inventory distinguishes 13 checked context passages, 27 inaccessible full texts, four unchecked citations and one unsubstantiated historical claim. Linked works' rights are now marked unassessed, with legacy license labels preserved for audit.
+- Independently checked all 300 LLM prompts and 1,200 source/example pair uses against canonical v0.8 and current engines. Corrected 62 fixed-convention prompts that treated `value=null` as a recoverable key, alongside the existing three Two-square corrections.
+- Recorded a separate replay audit: 42 supplemental-only pairs reproduce locally; three have mismatches. This does not authenticate any historical ciphertext.
+- The published v0.6 archive and canonical v0.8 records are unchanged; v0.8 supporting downloads and their checksums reflect this review.
+
 ## v0.7 (unreleased — tagged `corpus-v0.7`, no DOI issued)
 - Resolves the four v0.6 findings that could only be carried as errata, since each needed record bytes to change and the v0.6 archive is immutable. Derived from v0.6 by `scripts/build-corpus-v07.js`; v0.6 keeps its bytes, checksums and DOI.
 - **100,313 canonical records** (from 100,326): 13 withdrawn, 84,002 changed. Every per-record difference is itemised in `v0.7/change-inventory.json`.

@@ -11,6 +11,8 @@ const suites = [
   'tests/test-corpus-v07.js',
   'tests/test-corpus-v08.js',
   'tests/test-corpus-supplements.js',
+  'tests/test-corpus-supplement-replay.js',
+  'tests/test-corpus-eval-v08.js',
   'tests/test-corpus-browser-v08.js',
   'tests/test-release-identifiers.js',
   'tests/test-search.js',

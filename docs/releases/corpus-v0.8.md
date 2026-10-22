@@ -64,9 +64,27 @@ record, each with a `citation_erratum` retaining its old URL.
 
 The new **LLM evaluation export** copies the 300 legacy prompts and replaces
 the three outdated Two-square prompt records using v0.8's corrected examples
-and challenges. The other 297 prompts were not independently revalidated.
+and challenges. Sixty-two fixed-convention prompts that previously asked for a
+`value=null` key now explain that there is no external key. All 300 prompts
+and their 1,200 source/example pair uses were mechanically checked against
+canonical v0.8 and the current engines. These public prompts are not a blind
+held-out evaluation set, and an exact-string key target may reject a different
+but equivalent valid key.
 Their original v0.6 download remains available as a clearly labelled archive;
 do not mix its Two-square prompts with the v0.8 cipher engine.
+
+The 45 supplemental-only historical entries remain unverified and excluded
+from benchmarks. A source review checked contextual passages for 13, could
+not access linked full text for 27, did not independently check four, and
+could not substantiate one specific historical claim. Wrong-work links and
+overstated descriptions were corrected without treating a contextual work as
+proof of a ciphertext. A separate [local-engine replay audit](../../data/corpus-v0.8-supplement-replay-audit.json)
+found 42 pairs reproducing in both directions and three with mismatches;
+those calculations do not authenticate any historical pair. See the
+[supporting download notes](../../public/corpus/v0.8/README.md) for details.
+Five entries whose claimed historical deployment or source could not be
+supported are now explicitly modern reconstructions, with their prior
+classification retained for auditing. Canonical v0.8 records are unchanged.
 
 ```sh
 cd public/corpus/v0.8

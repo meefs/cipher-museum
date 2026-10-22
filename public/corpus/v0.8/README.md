@@ -66,10 +66,33 @@ uses a corrected v0.8 sample.
   `legacy_verified_flag` and replaced by `verified: false`. Aeneas's wrong
   Gutenberg citation is retired, with the former URL in `citation_erratum`.
   The canonical Beale record already has the equivalent v0.8 correction.
+  An October 22 source review corrected demonstrably wrong links and
+  distinguished contextual passages from generated teaching pairs. Its 45
+  supplemental-only records have 13 checked contextual passages, 27 linked
+  full texts unavailable to this review, four unchecked citations, and one
+  specific historical claim not substantiated. None has an exact original
+  plaintext/ciphertext source; all remain unverified and benchmark-ineligible.
+  Former claims that linked works were public domain are retained as legacy
+  metadata, while rights to those works are marked `not_assessed`.
+  Five examples (Ge'ez, rail fence, straddling checkerboard, generic Two-square
+  and Beale-inspired homophonic) are now labeled modern reconstructions rather
+  than historical source pairs; their previous classification is retained as
+  legacy metadata.
 - [LLM three-shot evaluation export](llm-3shot-eval.jsonl): 300 prompts
   retained from the old export. All three Two-square prompt records now use
-  the corrected v0.8 examples and challenges. The other 297 were not
-  independently revalidated.
+  the corrected v0.8 examples and challenges. Sixty-two prompts for
+  fixed-convention ciphers no longer ask learners to recover a nonexistent
+  `value=null` key. All 300 prompt records and 1,200 source/example pair uses
+  were checked against the canonical v0.8 download and replayed through the
+  current engines. These public fixtures are not a blind held-out benchmark;
+  exact-string scoring of a key may reject an equivalent valid key.
+
+The [supplemental-pair replay audit](../../../data/corpus-v0.8-supplement-replay-audit.json)
+reports 42 of the 45 supplemental-only pairs matching the museum engines in
+both directions. `hist-geez-001` and `hist-homophonic-001` fail in both
+directions; `hist-foursquare-001` decodes as stored but re-encodes differently.
+An engine match shows only that a teaching calculation reproduces. It does
+not authenticate a historical artifact or promote a pair into a benchmark.
 
 The [supplement manifest](supplements-manifest.json) records the counts,
 lineage, and caveats. Check the
@@ -83,4 +106,6 @@ download:
 node scripts/build-corpus-v08-supplements.js
 node scripts/build-corpus-v08-supplements.js --check
 node tests/test-corpus-supplements.js
+node tests/test-corpus-supplement-replay.js
+node tests/test-corpus-eval-v08.js
 ```

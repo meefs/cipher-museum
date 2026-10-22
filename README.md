@@ -93,7 +93,7 @@ For a sortable, filterable view of every cipher system in the museum (era, type,
     - **Challenge Mode** for learners: hides solutions for ciphertext-only practice.
     - **Known Corpus Mode** for teaching, benchmarking, and tool-building: shows all metadata, keys, and plaintexts.
     - **Versioned exports**: the on-page browser, historical supplement and three-shot evaluation export use corrected v0.8 records. The older JSON, CSV, difficulty, multilingual and noisy exports remain labeled v0.6; its canonical set covers 9 languages, while v0.8 covers 7.
-    - **Quality rules**: Each v0.8 browser card states pair verification and provenance status. Its canonical set contains **41 records labeled historical**. The corrected 87-record historical supplement overlaps 42 canonical IDs (41 historical and one reclassified synthetic Enigma exercise) and contains 45 additional entries that require individual source and pair review before reuse. The original 100-record v0.6 supplement remains available as a labeled archive.
+    - **Quality rules**: Each v0.8 browser card states pair verification and provenance status. Its canonical set contains **41 records labeled historical**. The corrected 87-record historical supplement overlaps 42 canonical IDs (41 historical and one reclassified synthetic Enigma exercise) and contains 45 additional entries that remain unverified and excluded from benchmarks. A documented citation and replay audit distinguishes contextual sources from authentic historical pairs. The original 100-record v0.6 supplement remains available as a labeled archive.
     - **Cryptanalysis tools**: `scripts/hill-climbing-solver.js` and `scripts/sa-solver.js` for automated monoalphabetic cipher breaking (quadgram scoring; no validated accuracy rate is currently published).
     - **Integration**: Linked from main nav, mobile nav, and footer. Direct integration with Cipher Detective and Workbench.
     - **Accessibility**: Includes skip links, labeled controls and keyboard-navigation checks; this is not a complete WCAG conformance certification.
@@ -317,7 +317,9 @@ The [v0.8 browser sample](public/corpus/v0.8/browser-sample.json),
 [three-shot evaluation export](public/corpus/v0.8/llm-3shot-eval.jsonl) have
 separate corrections and a [supplement checksum manifest](public/corpus/v0.8/supplements-SHA256SUMS.txt).
 An entry marked as a reproducing pair is not thereby an authenticated historical
-transcription. The earlier v0.6 supplemental files remain available for
+transcription. The supporting export now corrects 62 prompts that asked for a
+nonexistent key, and the source review records exactly which contextual
+citations were checked. The earlier v0.6 supplemental files remain available for
 reproducing past results, with their known limitations documented.
 
 ### Prerequisites
