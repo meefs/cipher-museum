@@ -41,7 +41,7 @@
       morse:  'Morse code pattern: only dots, dashes, slashes, and spaces. Likely International Morse.',
       numeric:'Numeric-dominant text. Possible Polybius square, book cipher, or numeric code.',
       adfgvx: 'Only the letters A, D, F, G, V, X appear — a signature of the ADFGVX cipher (WWI).',
-      adfgx:  'Only the letters A, D, F, G, X appear — consistent with the ADFG (no V) variant.',
+      adfgx:  'Only the letters A, D, F, G, X appear — consistent with the five-letter ADFGX variant.',
       mixed:  'Mixed character set. May contain Base64, hex, or special symbols alongside letters.',
       other:  'Unusual character set — no standard pattern matched.'
     };
@@ -163,12 +163,12 @@
                 '<tbody>' + rows + '</tbody>' +
               '</table>';
           } else {
-            kasHtml = '<p class="pb-note">No strong Kasiski trigram repeats detected \u2014 the text may be monoalphabetic or too short for trigram analysis (&lt;40 letters needed).</p>';
+            kasHtml = '<p class="pb-note">No strong Kasiski trigram repeats detected \u2014 the text may be monoalphabetic or too short for trigram analysis (fewer than 40 letters).</p>';
           }
 
-          return '<p class="pb-narration">Friedrich Kasiski noticed in 1863 that if a polyalphabetic cipher uses a repeating keyword, identical plaintext segments at the same key offset produce identical ciphertext segments. The spacing between those repeats is always a multiple of the key length. Friedman\u2019s period-IoC test (1920) confirms it: splitting the ciphertext into every-n-th-letter strands raises each strand\u2019s IoC toward 0.067 when n equals the true key length.</p>' +
+          return '<p class="pb-narration">Friedrich Kasiski noticed in 1863 that if a polyalphabetic cipher uses a repeating keyword, identical plaintext segments at the same key offset produce identical ciphertext segments. The spacing between those repeats is always a multiple of the key length. Period-sliced IoC provides a second statistical clue: splitting the ciphertext into every-n-th-letter strands raises each strand\u2019s IoC toward 0.067 when n is the key length or a suitable multiple; short samples and coincidental repeats can mislead.</p>' +
             '<div class="pb-card">' + periodHtml + kasHtml + '</div>' +
-            (ph ? '<p class="pb-narration">Key period ' + ph + ' confirmed by both tests. Each of the ' + ph + ' interleaved strands can now be broken as an independent Caesar cipher.</p>' : '<p class="pb-narration">No clear period detected. The cipher is likely monoalphabetic, transposition-based, or uses a very long key.</p>');
+            (ph ? '<p class="pb-narration">Key period ' + ph + ' suggested by the available evidence; a statistical hint is not confirmation. If this repeating-key Vigenère hypothesis is correct, each of the ' + ph + ' strands can be tested as a Caesar cipher.</p>' : '<p class="pb-narration">No clear period detected. The cipher is likely monoalphabetic, transposition-based, or uses a very long key.</p>');
         }
       },
 
@@ -205,7 +205,7 @@
         title: 'Step 7 of 7 \u2014 Recommended Next Attack',
         render: function () {
           var nxt = r.nextAttack;
-          return '<p class="pb-narration">Statistics identify cipher families but cannot decrypt. Every family has a targeted attack technique. Here is the most promising one for this ciphertext \u2014 the same approach a professional cryptanalyst would choose first.</p>' +
+          return '<p class="pb-narration">Statistics identify cipher families but cannot decrypt. Every family has a targeted attack technique. Here is the most promising one for this ciphertext \u2014 a starting hypothesis to test, not a guaranteed best attack.</p>' +
             '<div class="pb-card">' +
               (nxt
                 ? '<p class="pb-finding">' + esc(nxt.text) + '</p>' +

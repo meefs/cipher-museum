@@ -75,5 +75,11 @@ var slope = (Qr[1] - Pr[1]) / (Qr[0] - Pr[0]);
 var lineY = Pr[1] + slope * (res.third[0] - Pr[0]);
 assert(Math.abs(lineY - res.third[1]) < 1e-6, "third intersection is collinear with P and Q");
 
+// Vertical chords and tangents meet the identity, not numerical infinity.
+assert(EC.ecAddReal([0,1], [0,-1], 1).sum === null,
+  "real P + (-P) is the point at infinity");
+assert(EC.ecAddReal([1,0], [1,0], -1).sum === null,
+  "real doubling with y=0 is the point at infinity");
+
 console.log("\nec-math: " + passed + " passed, " + failed + " failed");
 process.exit(failed ? 1 : 0);

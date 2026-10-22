@@ -86,9 +86,16 @@
     {id:'foundations',  label:'Annex',    name:'Hall of Foundations',    href:'hall-of-foundations/index.html', icon:'𝔽'}
   ];
 
+  var resetInThisPage = false;
   function getPassed(){
-    try{return JSON.parse(localStorage.getItem('ciphermuseum.path.passed'))||[];}
-    catch(e){return [];}
+    if(resetInThisPage) return [];
+    try {
+      var saved = JSON.parse(localStorage.getItem('ciphermuseum.path.passed'));
+      if(!Array.isArray(saved)) return [];
+      return saved.filter(function(id, i){
+        return saved.indexOf(id) === i && HALLS.some(function(hall){ return hall.id === id; });
+      });
+    } catch(e){ return []; }
   }
 
   function render(){
@@ -128,8 +135,11 @@
 
   document.getElementById('resetBtn').addEventListener('click', function(){
     if(confirm('Reset all learning path progress? This cannot be undone.')){
-      localStorage.removeItem('ciphermuseum.path.passed');
-      localStorage.removeItem('ciphermuseum.path.active');
+      resetInThisPage = true;
+      try {
+        localStorage.removeItem('ciphermuseum.path.passed');
+        localStorage.removeItem('ciphermuseum.path.active');
+      } catch(e) { /* Storage unavailable: reset this page's displayed state. */ }
       render();
     }
   });

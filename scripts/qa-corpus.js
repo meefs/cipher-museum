@@ -147,6 +147,7 @@ const SKIP_ROUNDTRIP = new Set([
 // ── key extraction ────────────────────────────────────────────────────────────
 
 function extractKey(r) {
+  if (r.cipher_type === 'two_square') return 'legacy:' + extractKey({...r, cipher_type:'two_square_legacy_key'});
   const k = r.key;
   if (!k || typeof k !== 'object') return String(k ?? '');
   // Standard {type, value}

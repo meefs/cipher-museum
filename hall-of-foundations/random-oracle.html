@@ -74,13 +74,7 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">&#167;1</span><h2>Two demands on a hash</h2></div>
-    <p>
-      A cryptographic hash must be <span class="term">one-way</span> &#8212; given an
-      output, you cannot find an input that produces it &#8212; and
-      <span class="term">collision-resistant</span> &#8212; you cannot find two
-      inputs that produce the same output. Both reduce to one visible behavior:
-      the output must look utterly unrelated to the input.
-    </p>
+    <p>Preimage resistance asks that finding an input for a specified digest be infeasible; collision resistance asks that finding any two distinct inputs with one digest be infeasible. Neither property follows merely from outputs looking unrelated to their inputs.</p>
     <div class="eq">pre-image: given h, find m with H(m)=h &nbsp;&#183;&nbsp; collision: find m&#8321; &#8800; m&#8322; with H(m&#8321;)=H(m&#8322;)</div>
   </section>
 
@@ -129,13 +123,7 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">&#167;3</span><h2>From random oracle to signature</h2></div>
-    <p>
-      The random-oracle model is the engine of the <span class="term">Fiat&#8211;Shamir
-      heuristic</span>: it turns an interactive proof &#8212; where a verifier sends
-      random challenges &#8212; into a non-interactive signature, by replacing the
-      verifier's coins with a hash of the message. If the hash behaves like a
-      random oracle, the challenge is unpredictable, and the proof stays sound.
-    </p>
+    <p>The Fiat&ndash;Shamir transform replaces the verifier's challenge with a hash of the commitment, public statement and required application context; a signature also binds its message. A proof in the random-oracle model treats that hash as an ideal random function. Correct transcript binding and the proof's assumptions matter, and substituting a real hash does not automatically transfer the proof.</p>
     <div class="pull">
       Hash the message to get an unforgeable challenge, and an interactive proof
       becomes a signature anyone can check.
@@ -145,23 +133,13 @@
   <section class="exhibit">
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
-      <h3>Under most deployed signatures</h3>
-      <p>
-        Fiat&#8211;Shamir is everywhere in deployed cryptography: <strong>ML-DSA</strong>
-        and Schnorr-style signatures convert an interactive identification proof
-        into a signature by hashing &#8212; with <a href="../ciphers/sha256.html">SHA-256</a>-class
-        functions playing the oracle. <strong>ML-DSA</strong> is literally
-        "Fiat&#8211;Shamir with aborts" over the <a href="polynomial-rings.html">polynomial
-        ring</a>. The random-oracle assumption is the ground all of that stands
-        on &#8212; though not every signature needs it. <strong>SLH-DSA</strong>,
-        the hash-based standard, is built to rest on concrete properties of its
-        hash function rather than on an idealized oracle, which is exactly why
-        it exists as a conservative backup.
-      </p>
+      <h3>Used by several signature families</h3>
+      <p>Schnorr-style signatures and ML-DSA use Fiat&ndash;Shamir ideas. ML-DSA uses SHAKE-based hashing and a construction often described as Fiat&ndash;Shamir with aborts. SLH-DSA belongs to a hash-based signature family with different assumptions and tradeoffs. These are distinct constructions, not one security argument applied to every signature.</p>
     </div>
     <p class="aside">Related: <a href="one-way-function.html" style="color:var(--vermilion)">One-Way Functions</a> (pre-image resistance in general), <a href="reduction.html" style="color:var(--vermilion)">Reduction &amp; Proof</a> (what a proof in this model claims).</p>
   </section>
 
+  <p class="aside"><strong>Sources and scope:</strong> <a href="https://www.rfc-editor.org/rfc/rfc8235.html">RFC 8235 (2017)</a>; NIST <a href="https://csrc.nist.gov/pubs/fips/204/final">FIPS 204</a> and <a href="https://csrc.nist.gov/pubs/fips/205/final">FIPS 205</a> (2024). The interactive 16-bit mixer is an illustration, not a cryptographic hash.</p>
   </main>
 
 

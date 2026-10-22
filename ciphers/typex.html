@@ -60,14 +60,14 @@
   </div>
   <h1 class="page-title">Typex</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--historical" href="../museum-map.html#trust-labels" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise." aria-label="Trust label: Historical Only. Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h11v12a2 2 0 0 0 2 2H6a3 3 0 0 1-3-3V7z"/><path d="M16 5a2 2 0 0 1 2 2v8h3a0 0 0 0 1 0 0v2a2 2 0 0 1-2 2"/></svg><span class="trust-label__text">Historical Only</span></a></div>
-  <p class="page-tagline">Britain's improved Enigma — five rotors, no plugboard, used at Bletchley to read its own intercepts.</p>
+  <p class="page-tagline">Britain’s Enigma-derived cipher machine — five rotor positions, with features that varied between models.</p>
   <p class="exhibit-status-note">Never publicly broken by cryptanalysis in wartime service; obsolete today.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Wing Commander O.G.W. Lywood and team, derived from the commercial Enigma G</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Service 1937–1956</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">5 rotors (3 stepping + 2 stator) chosen from a set of 10 or 14</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Never confirmed broken — German cryptanalysts at OKW/Chi reportedly judged it not worth attacking</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Removing a weakness (Enigma's plugboard quirks) by adding rotors trades operator burden for cryptanalytic strength</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Model differences and operational practices matter alongside the rotor count</span></div>
   </div>
 </div>
 
@@ -79,18 +79,18 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The British Government Code & Cypher School bought a commercial Enigma G in 1934, took it apart, and decided they could do better. The result was Typex: five rotors instead of three, no plugboard (the operational headache that bedeviled German Enigma users), and a typing-and-printing mechanism instead of Enigma's lampboard. Typex handled the bulk of British and Commonwealth strategic traffic from 1937 through the mid-1950s. As far as the postwar archives reveal, the Germans never broke it in service — and Bletchley itself used Typex machines, modified to emulate Enigma, as part of the Bombe-driven decryption pipeline.</p>
+      <p>Typex developed from commercial Enigma designs under British military direction. It added features including five rotor positions and printed output. Some models had plugboards, so “no plugboard” is not a description of the whole family. Modified machines also helped Bletchley Park process Enigma traffic once settings had been recovered.</p>
       <p>In the public record, this system was never publicly broken by cryptanalysis in wartime service. That historical record does not establish security today; this obsolete system is presented for historical study.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Typex Mark II entered service with the RAF in 1937. By 1939 the Army and Royal Navy had adopted variants (Mark VI, Mark VIII). Production reached around 12,000 units — far more than SIGABA. Bletchley Park's Hut 6 Decoding Room ran modified Typex machines as Enigma analogues in the final decryption stage, so Britain's own Enigma-attacking pipeline depended on its own Enigma-derived design. Captured German cryptanalytic records (TICOM 1945) suggest the OKW/Chi studied Typex briefly, decided the analytical effort exceeded the likely return, and never mounted a serious break attempt — a stark contrast to the German confidence in Enigma's invulnerability.</p></div>
+      <div class="panel-body"><p>Typex Mark I appeared in 1937 and Mark II in 1939. Later versions differed in interfaces and electrical arrangements. The public wartime record cited here does not establish a successful German cryptanalytic reading; this is a historical observation, not proof of timeless security.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>Five rotors in series. The first three step (with a notch system inherited from Enigma but with <em>multiple</em> notches per rotor, so the stepping is faster and less predictable than Enigma's single-notch design). The last two rotors are stators — they can be set but do not advance. There is no plugboard. Reflector is fixed. The simulation here uses the Enigma core extended with two additional substitution stages and a multi-notch stepping schedule.</p></div>
+      <div class="panel-body"><p>A common Typex arrangement uses three moving rotors and two settable stators. Historical models differed, and later versions included plugboards. This widget is a simplified rotor model, not a wiring-verified reconstruction of every Typex variant.</p></div>
     </div>
 
     <div class="panel">
@@ -99,7 +99,7 @@
         <div class="attack-panel">
           <div class="attack-name">Why It Held</div>
           <div class="attack-diff">Complexity: Beyond OKW/Chi's 1940s analytical reach</div>
-          <p class="attack-desc">Two extra rotors square the search space relative to three-rotor Enigma. The multi-notch stepping destroys the regular &lsquo;ring-setting at fixed positions' that made the Bombe's menu-elimination tractable. No plugboard means no plugboard-induced biases — paradoxically the plugboard, designed to make Enigma stronger, was one of the things that made it breakable, because it constrained possible configurations in ways the Bombe could test. German analysts in 1942–1944 reportedly concluded a Typex break would require resources comparable to Britain's Bombe programme — and Germany never built that infrastructure.</p>
+          <p class="attack-desc">Additional rotor settings and multi-notch movement alter the search problem, but adding two rotors does not mathematically “square the keyspace.” Nor does removing a plugboard automatically improve security: Enigma’s plugboard enlarged its keyspace, even though attacks could exploit constraints in the full machine.</p>
         </div>
       </div>
     </div>
@@ -111,7 +111,7 @@
           <thead><tr><th>Concept from Typex</th><th>Modern Evolution</th></tr></thead>
           <tbody>
             <tr><td>Multi-notch stepping</td><td>Same insight that Hagelin built into the M-209 lugs</td></tr>
-            <tr><td>Fewer features can mean more security</td><td>Removing the plugboard removed an exploitable structural constraint</td></tr>
+            <tr><td>Fewer features can mean more security</td><td>Security depends on the complete design, not simply the number of features</td></tr>
             <tr><td>Asymmetric resource investment</td><td>The Bombe program ran 200+ machines crewed round the clock by Wrens; Germany never matched it</td></tr>
           </tbody>
         </table>
@@ -146,7 +146,7 @@
             <tr><td>Year</td><td>Service 1937–1956</td></tr>
             <tr><td>Key Type</td><td>5 rotors (3 stepping + 2 stator) chosen from a set of 10 or 14</td></tr>
             <tr><td>Broken By</td><td>Never confirmed broken — German cryptanalysts at OKW/Chi reportedly judged it not worth attacking</td></tr>
-            <tr><td>Modern Lesson</td><td>Removing a weakness (Enigma's plugboard quirks) by adding rotors trades operator burden for cryptanalytic strength</td></tr>
+            <tr><td>Modern Lesson</td><td>Model differences and operational practices matter alongside the rotor count</td></tr>
           </tbody>
         </table>
       </div>

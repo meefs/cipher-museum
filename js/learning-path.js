@@ -22,37 +22,37 @@
   var QUIZZES = {
     ancient:[
       {q:'What is the Scytale?',opts:['A substitution cipher','A transposition device using a rod','A Roman military code','A Greek frequency table'],a:1},
-      {q:'How many possible keys does the Caesar cipher have?',opts:['26','25','52','10'],a:1},
-      {q:'Who documented the first frequency analysis technique?',opts:['Julius Caesar','Al-Kindi','Leon Battista Alberti','Blaise de Vigenère'],a:1}
+      {q:'For a 26-letter alphabet, how many nontrivial Caesar shifts are there (excluding the identity shift)?',opts:['26','25','52','10'],a:1},
+      {q:'Which scholar described frequency analysis in a surviving ninth-century treatise?',opts:['Julius Caesar','Al-Kindi','Leon Battista Alberti','Blaise de Vigenère'],a:1}
     ],
     substitution:[
       {q:'What makes frequency analysis effective against monoalphabetic ciphers?',opts:['Each letter always maps to the same cipher letter','The key is too short','The alphabet is preserved','It uses a known plaintext'],a:0},
-      {q:'How many possible keys does a monoalphabetic cipher have?',opts:['26','26!','2²⁵⁶','52!'],a:1},
+      {q:'How many permutations are possible for a general monoalphabetic substitution of 26 letters?',opts:['26','26!','2²⁵⁶','52!'],a:1},
       {q:'What does a homophonic cipher do differently?',opts:['Uses polyalphabetic shifting','Assigns multiple symbols to common letters','Encrypts pairs of letters','Transposes text positions'],a:1}
     ],
     polyalphabetic:[
-      {q:'The Vigenère cipher was called "le chiffre indéchiffrable" for how long?',opts:['50 years','100 years','About 300 years','1,000 years'],a:2},
-      {q:'What technique did Kasiski use to break the Vigenère cipher?',opts:['Brute force','Finding repeated ciphertext sequences to determine key length','Known plaintext attack','Matrix inversion'],a:1},
-      {q:'What makes the Alberti disk historically significant?',opts:['It was unbreakable','It was the first polyalphabetic device','It used a rotor mechanism','It was used in WWII'],a:1}
+      {q:'What gives repeating-key Vigenère its periodic structure?',opts:['Removing spaces','Reversing the alphabet','Reusing the keyword cyclically','Changing the key after every message'],a:2},
+      {q:'What technique did Kasiski use to break the Vigenère cipher?',opts:['Brute force','Finding repeated sequences to suggest possible key lengths','Known plaintext attack','Matrix inversion'],a:1},
+      {q:'What makes the Alberti disk historically significant?',opts:['It was unbreakable','It is an early documented device for polyalphabetic substitution','It used a rotor mechanism','It was used in WWII'],a:1}
     ],
     transposition:[
       {q:'What does a transposition cipher preserve?',opts:['Letter positions','Letter frequencies','The key','The alphabet order'],a:1},
-      {q:'Why is double transposition much stronger than single?',opts:['It uses a longer key','Two passes multiply the possible arrangements','It changes letter frequencies','It adds substitution'],a:1},
-      {q:'How many rails typically make a Rail Fence cipher practical?',opts:['2-10','100+','Just 1','Unlimited'],a:0}
+      {q:'What does a second transposition pass do?',opts:['Guarantees security','Rearranges positions again according to another key','Changes letter frequencies','Adds substitution'],a:1},
+      {q:'In the usual Rail Fence zigzag, what happens if the rail count is at least the message length?',opts:['The letters remain in their original order','The key space becomes infinite','Every letter changes','The message becomes perfectly secret'],a:0}
     ],
     military:[
       {q:'What was ADFGVX designed for?',opts:['Naval communication','WWI German field telegraph','Cold War espionage','WWII Pacific theater'],a:1},
-      {q:'Why was the VIC cipher never broken by cryptanalysis?',opts:['It used a computer','It combined multiple techniques including checkerboard and double transposition','Its key was 256 bits','It was never intercepted'],a:1},
-      {q:'What broke the Nihilist cipher?',opts:['Machine learning','Frequency analysis on digit sums with repeating key detection','Brute force','A defector revealed the key'],a:1}
+      {q:'Which techniques does VIC combine, without thereby proving it unbreakable?',opts:['A computer and RSA','A checkerboard and two transposition stages','A 256-bit block cipher','An unused one-time pad'],a:1},
+      {q:'What can help attack a repeating-key Nihilist substitution?',opts:['Machine learning','Frequency analysis on digit sums with repeating key detection','Brute force','A defector revealed the key'],a:1}
     ],
     'civil-war':[
-      {q:'Which side\'s cipher was never broken during the Civil War?',opts:['Confederate','Union','Both were broken','Neither used ciphers'],a:1},
+      {q:'Which side used Stager route systems, for which no Confederate cryptanalytic break is documented?',opts:['Confederate','Union','Both used the same system','Neither used ciphers'],a:1},
       {q:'What type of cipher did the Stager system use?',opts:['Substitution','Route transposition plus code words','Enigma-style rotors','One-time pad'],a:1},
       {q:'What was the major weakness of Confederate ciphers?',opts:['Too complex to use','They relied on Vigenère with known weaknesses','They used physical machines','The keys were too long'],a:1}
     ],
     machines:[
-      {q:'How many possible daily settings did the Enigma machine have?',opts:['About 1,000','About 10²³','About 26','About 256'],a:1},
-      {q:'What was the historical significance of Colossus?',opts:['It was the first personal computer','It was the first programmable electronic computer','It broke the Caesar cipher','It invented public-key cryptography'],a:1},
+      {q:'Why does an Enigma key-space count need a specified machine and keying procedure?',opts:['Every model has the same settings','Rotor choices, plugboard and permitted settings vary','Enigma has no key','Only message length matters'],a:1},
+      {q:'What was the historical significance of Colossus?',opts:['It was the first personal computer','It was an early programmable electronic digital computer for codebreaking','It broke the Caesar cipher','It invented public-key cryptography'],a:1},
       {q:'What Enigma property ensures a letter never encrypts to itself?',opts:['The plugboard','The reflector','The rotors','The ring settings'],a:1}
     ],
     puzzle:[
@@ -62,11 +62,11 @@
     ],
     unbreakable:[
       {q:'Who proved the One-Time Pad is perfectly secret?',opts:['Alan Turing','Claude Shannon','Blaise de Vigenère','Auguste Kerckhoffs'],a:1},
-      {q:'What is the One-Time Pad\'s critical practical requirement?',opts:['A computer','A truly random key as long as the message, used only once','A 256-bit key','A public key exchange'],a:1},
+      {q:'What is the One-Time Pad\'s critical practical requirement?',opts:['A computer','A secret, independent, uniformly random key as long as the message, used once','A 256-bit key','A public key exchange'],a:1},
       {q:'What caused the VENONA project to succeed against Soviet OTPs?',opts:['Better computers','Key pad reuse due to wartime supply pressure','A mathematical breakthrough','Social engineering'],a:1}
     ],
     codebreakers:[
-      {q:'Who was the first person to describe frequency analysis?',opts:['Al-Kindi (9th century)','Alan Turing (20th century)','Charles Babbage (19th century)','Julius Caesar (1st century BC)'],a:0},
+      {q:'Whose ninth-century treatise is the earliest surviving description of frequency analysis?',opts:['Al-Kindi (9th century)','Alan Turing (20th century)','Charles Babbage (19th century)','Julius Caesar (1st century BC)'],a:0},
       {q:'What did Marian Rejewski use to initially break Enigma?',opts:['A captured machine','Mathematical group theory applied to rotor permutations','Brute force','A defector'],a:1},
       {q:'What principle states that a cipher\'s security must depend only on the key, not secrecy of the algorithm?',opts:['Shannon\'s theorem','Kerckhoffs\'s principle','Turing\'s law','Diffie-Hellman theorem'],a:1}
     ],
@@ -80,12 +80,29 @@
   var LS_PREFIX = 'ciphermuseum.path.';
   var LS_ACTIVE = LS_PREFIX + 'active';
 
-  function isActive(){ return localStorage.getItem(LS_ACTIVE) === '1'; }
+  // Storage may be blocked, or contain data from an older/corrupted session.
+  // Keep the current page usable even when persistence is unavailable.
+  var memory = {};
+  function readSaved(key){
+    if(Object.prototype.hasOwnProperty.call(memory, key)) return memory[key];
+    try { return localStorage.getItem(key); } catch(e) { return memory[key] || null; }
+  }
+  function writeSaved(key, value){
+    memory[key] = value;
+    try { localStorage.setItem(key, value); } catch(e) { /* session-only progress */ }
+  }
+  function isActive(){ return readSaved(LS_ACTIVE) === '1'; }
   function getPassedHalls(){
-    try{ return JSON.parse(localStorage.getItem(LS_PREFIX+'passed')) || []; }
+    try{
+      var saved = JSON.parse(readSaved(LS_PREFIX+'passed'));
+      if(!Array.isArray(saved)) return [];
+      return saved.filter(function(id, i){
+        return saved.indexOf(id) === i && HALLS.some(function(hall){ return hall.id === id; });
+      });
+    }
     catch(e){ return []; }
   }
-  function setPassedHalls(arr){ localStorage.setItem(LS_PREFIX+'passed', JSON.stringify(arr)); }
+  function setPassedHalls(arr){ writeSaved(LS_PREFIX+'passed', JSON.stringify(arr)); }
   function markPassed(hallId){
     var arr = getPassedHalls();
     if(arr.indexOf(hallId)===-1){ arr.push(hallId); setPassedHalls(arr); }
@@ -227,9 +244,32 @@
       background:'var(--s2)',border:'1px solid var(--gold-b)',borderRadius:'var(--rl)',
       padding:'2.5rem',maxWidth:'600px',width:'100%',maxHeight:'80vh',overflowY:'auto'
     });
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'Learning Path quiz');
+    var previousFocus = document.activeElement;
+    var previousOverflow = document.body.style.overflow;
     overlay.appendChild(modal);
-    overlay.addEventListener('click',function(e){ if(e.target===overlay) overlay.remove(); });
-    document.addEventListener('keydown', function onEsc(e){ if(e.key==='Escape'){overlay.remove();document.removeEventListener('keydown',onEsc);} });
+    function closeQuiz(){
+      overlay.remove();
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = previousOverflow;
+      updateProgress(); updateNextBar();
+      (previousFocus && previousFocus.isConnected ? previousFocus : toggle).focus();
+    }
+    function onKey(e){
+      if(e.key === 'Escape'){ e.preventDefault(); closeQuiz(); return; }
+      if(e.key !== 'Tab') return;
+      var buttons = modal.querySelectorAll('button:not([disabled]),a[href],input,select,textarea');
+      if(!buttons.length) return;
+      var first = buttons[0], last = buttons[buttons.length - 1];
+      if(!modal.contains(document.activeElement) || (e.shiftKey && document.activeElement === first) ||
+         (!e.shiftKey && document.activeElement === last)){
+        e.preventDefault(); (e.shiftKey ? last : first).focus();
+      }
+    }
+    overlay.addEventListener('click',function(e){ if(e.target===overlay) closeQuiz(); });
+    document.addEventListener('keydown', onKey);
 
     var currentQ = 0;
     var score = 0;
@@ -239,8 +279,10 @@
       modal.innerHTML =
         '<div style="font-family:var(--fm);font-size:.6rem;letter-spacing:.15em;color:var(--tx3);margin-bottom:1rem">QUESTION ' + (currentQ+1) + ' OF ' + questions.length + '</div>' +
         '<p style="font-family:var(--fd);font-size:1.15rem;color:var(--tx);margin-bottom:1.5rem;line-height:1.5">' + escapeHTML(q.q) + '</p>' +
-        '<div id="quizOpts" style="display:flex;flex-direction:column;gap:.6rem"></div>';
-      var optsEl = document.getElementById('quizOpts');
+        '<div id="quizOpts" style="display:flex;flex-direction:column;gap:.6rem"></div>' +
+        '<button type="button" class="lp-quiz-dismiss" style="margin-top:1rem">Close quiz</button>';
+      var optsEl = modal.querySelector('#quizOpts');
+      modal.querySelector('.lp-quiz-dismiss').addEventListener('click', closeQuiz);
       q.opts.forEach(function(opt,i){
         var btn = document.createElement('button');
         Object.assign(btn.style, {
@@ -259,6 +301,7 @@
         });
         optsEl.appendChild(btn);
       });
+      optsEl.querySelector('button').focus();
     }
 
     function renderResult(){
@@ -276,15 +319,13 @@
           '<button id="quizClose" style="font-family:var(--fd);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--black);background:var(--gold);border:none;padding:.65rem 1.5rem;border-radius:var(--r);cursor:pointer">' +
             (passed ? 'Continue' : 'Try Again Later') + '</button>' +
         '</div>';
-      document.getElementById('quizClose').addEventListener('click', function(){
-        overlay.remove();
-        updateProgress();
-        updateNextBar();
-      });
+      modal.querySelector('#quizClose').addEventListener('click', closeQuiz);
+      modal.querySelector('#quizClose').focus();
     }
 
-    renderQ();
     document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
+    renderQ();
   }
 
   function escapeHTML(s){
@@ -295,7 +336,7 @@
 
   /* ── Activate / Deactivate ─────────────────────────── */
   function activate(){
-    localStorage.setItem(LS_ACTIVE, '1');
+    writeSaved(LS_ACTIVE, '1');
     document.body.classList.add('learning-path-active');
     toggle.setAttribute('aria-pressed','true');
     toggle.style.borderColor = 'var(--gold)';
@@ -307,7 +348,7 @@
   }
 
   function deactivate(){
-    localStorage.setItem(LS_ACTIVE, '0');
+    writeSaved(LS_ACTIVE, '0');
     document.body.classList.remove('learning-path-active');
     toggle.setAttribute('aria-pressed','false');
     toggle.style.borderColor = 'var(--gold-b)';

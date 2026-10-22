@@ -56,31 +56,14 @@
   <div class="hero">
     <div class="kicker">The Foundation Under Post-Quantum Crypto</div>
     <h1>A grid that<br><em>hides</em> its shortcut</h1>
-    <p class="standfirst">
-      A lattice is an infinite grid of points. Somewhere in it sits a shortest
-      nonzero vector — the point nearest the origin. Finding it, in high
-      dimensions, is believed hard even for a quantum computer. That difficulty
-      is the bedrock beneath Kyber, Dilithium, and the whole post-quantum shelf.
-    </p>
+    <p class="standfirst">A lattice consists of integer combinations of basis vectors. The shortest nonzero vector can be hard to find in suitable high-dimensional instances; dimension alone does not make every lattice hard. Related structured lattice problems support ML-KEM and ML-DSA. Other post-quantum families, including hash-based signatures, have different foundations.</p>
   </div>
 
-  <div class="honesty">
-    <strong>The basis is a disguise.</strong> The <em>same</em> lattice can be
-    described by a tidy basis that reveals its short vectors, or a skewed one
-    that hides them &#8212; and recovering the short vectors from a skewed
-    description is the hard problem the post-quantum standards are built on.
-    Drag the vectors below and watch the disguise work.
-  </div>
+  <div class="honesty"><strong>Two views of a lattice.</strong> A change of basis can obscure short vectors, but arbitrary dragging changes the lattice. The two presets hold the square lattice fixed. This two-dimensional model is efficiently solvable and does not establish cryptographic hardness.</div>
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§1</span><h2>Two vectors, infinite grid</h2></div>
-    <p>
-      Pick two vectors <em>b₁</em> and <em>b₂</em>. Every integer combination
-      <em>i·b₁ + j·b₂</em> is a lattice point. Those two vectors are a
-      <span class="term">basis</span> — but they're not the only basis for the
-      same grid. Drag the arrowheads and the grid stays put while the basis that
-      generates it changes.
-    </p>
+    <p>Pick two independent vectors b₁ and b₂. Their integer combinations form a lattice. Arbitrary dragging can change the lattice itself. Only invertible integer changes of basis with determinant ±1 preserve the same lattice. The good and bad preset buttons provide two bases for the same square lattice.</p>
 
     <div class="lab">
       <div class="lab-stage">
@@ -116,14 +99,7 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§2</span><h2>Easy in two dimensions, brutal in five hundred</h2></div>
-    <p>
-      In the plane you can almost eyeball the shortest vector. But cryptographic
-      lattices live in <em>hundreds</em> of dimensions, where the number of
-      candidate combinations explodes beyond any search. The
-      <span class="term">Shortest Vector Problem</span> — and its cousin, finding
-      the closest lattice point to a target — is the hard problem the schemes
-      lean on.
-    </p>
+    <p>In two dimensions efficient reduction algorithms find a shortest vector. In high dimensions, known algorithms for many relevant exact or approximation problems can be expensive. Cryptographic security still depends on the instance distribution, approximation target and parameters, not simply on a large dimension.</p>
     <div class="eq">SVP: given a basis, find the shortest nonzero lattice vector</div>
     <div class="pull">
       The security gap is the distance between eyeballing it in 2D and searching
@@ -134,20 +110,8 @@
   <section class="exhibit">
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
-      <h3>The post-quantum shelf stands here</h3>
-      <p>
-        The deployed post-quantum standards — <strong>ML-KEM</strong> (Kyber) and
-        <strong>ML-DSA</strong> (Dilithium), surveyed in
-        <a href="../modern.html">Modern Cryptography</a> — all
-        rest on lattice hardness. When factoring and discrete logs fall to
-        quantum computers, <strong>this</strong> is the ground that's expected to
-        hold. Their keys don't literally publish a bad basis and hide a good one
-        &#8212; that's the older GGH/NTRU trapdoor shape. Both standards instead
-        publish noisy linear equations and keep a <em>short secret vector</em>;
-        <a href="closest-vector.html">the CVP exhibit</a> lays that out. What
-        carries over is the hardness: finding short vectors in a high-dimensional
-        lattice is what their security ultimately rests on.
-      </p>
+      <h3>The lattice-based standards connect here</h3>
+      <p>ML-KEM and ML-DSA use specific module-lattice assumptions, including Module-LWE and, for signatures, Module-SIS-related assumptions. Their keys contain short secret vectors and structured public equations rather than a generic hidden good basis. The picture offers geometric intuition; it is not a proof that breaking either standard is equivalent to solving arbitrary exact SVP.</p>
     </div>
     <p class="aside"><b>Three views of one problem.</b>
       <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> is the geometry — why the secret stays hidden.
@@ -233,7 +197,7 @@
     const u=nearestUnit(evt);
     if(u.x===0&&u.y===0) return;
     const tgt=dragging==="b1"?b1:b2, other=dragging==="b1"?b2:b1;
-    if(u.x===other.x&&u.y===other.y) return;
+    if(LM.det2([u.x,u.y],[other.x,other.y])===0) return;
     tgt.x=u.x; tgt.y=u.y;
     showShort=false; syncInputs(); draw();
   }
@@ -252,7 +216,10 @@
   document.getElementById("applyBasis").addEventListener("click",()=>{
     const n1x=parseInt(document.getElementById("b1x").value,10), n1y=parseInt(document.getElementById("b1y").value,10);
     const n2x=parseInt(document.getElementById("b2x").value,10), n2y=parseInt(document.getElementById("b2y").value,10);
-    if([n1x,n1y,n2x,n2y].some(isNaN)) return;
+    if([n1x,n1y,n2x,n2y].some(v=>!Number.isFinite(v)||Math.abs(v)>6)){
+      lread.textContent="Use integer components between −6 and 6 for this bounded demonstration.";
+      return;
+    }
     if(LM.det2([n1x,n1y],[n2x,n2y])===0){
       lread.innerHTML="<b style='color:var(--red)'>those vectors are parallel</b> \u2014 they collapse the lattice to a line. Try again.";
       return;

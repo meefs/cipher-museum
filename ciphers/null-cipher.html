@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Null Cipher (Concealment by selective reading · ancient → modern) — The Cipher Museum</title>
-  <meta name="description" content="The null cipher — hide the secret in plain sight by spelling it out with the first letters of an innocuous message. Used by spies, prisoners, and Bacon, since at least the Roman empire.">
+  <meta name="description" content="A null cipher selects a message from a cover text using a positional rule. It conceals information in ordinary-looking writing; discovery of the rule defeats that concealment.">
   <meta property="og:title" content="Null Cipher (Concealment by selective reading · ancient → modern) — The Cipher Museum">
-  <meta property="og:description" content="The null cipher — hide the secret in plain sight by spelling it out with the first letters of an innocuous message. Used by spies, prisoners, and Bacon, since at least the Roman empire.">
+  <meta property="og:description" content="A null cipher selects a message from a cover text using a positional rule. It conceals information in ordinary-looking writing; discovery of the rule defeats that concealment.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/null-cipher.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Null Cipher (Concealment by selective reading · ancient → modern) — The Cipher Museum">
-  <meta name="twitter:description" content="The null cipher — hide the secret in plain sight by spelling it out with the first letters of an innocuous message. Used by spies, prisoners, and Bacon, since at least the Roman empire.">
+  <meta name="twitter:description" content="A null cipher selects a message from a cover text using a positional rule. It conceals information in ordinary-looking writing; discovery of the rule defeats that concealment.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/null-cipher.html">
@@ -79,7 +79,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The null cipher is older than any cipher recognised by name. Roman correspondents are documented hiding instructions in the first letters of innocuous-looking poems; medieval monks did the same in marginalia and acrostics; Renaissance humanists turned the technique into a literary game.</p><p style="margin-top:1rem;">Operationally it returned to prominence in the world wars. Allied and Axis prisoners both used null ciphers in censored letters home; the most-cited example is the WWI German agent's cable whose word-initials spell <em>PERSHING SAILS FROM N.Y. JUNE 1</em>. American POWs in Vietnam hid blink patterns and word-position nulls in propaganda interviews. Cold-war espionage frequently used newspaper classifieds as null carriers.</p>
+      <p>A null cipher hides selected letters inside a longer carrier text. Acrostics and related wordplay have a long history, but the evidence here does not establish this as the oldest named cipher or one universal ancient practice.</p><p style="margin-top:1rem;">A carrier may select word initials, second letters or another agreed position. The often-repeated “PERSHING” example uses a different position rule from word initials, and its attribution needs independent evidence. Jeremiah Denton’s televised blinking in captivity was Morse signalling, not a word-position null cipher.</p>
     </div>
 
     <div class="panel">
@@ -90,12 +90,12 @@ Hidden : H E L P</pre><p>The demo on this page builds carrier sentences from a d
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Suspicion plus the right reading rule</div><div class="attack-diff">Complexity: Trivial once you check</div><p class="attack-desc">Once a censor suspects a letter, they read the first letters, then the last letters, then every second letter, and so on. Within a few minutes any single-rule null cipher is exposed.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Statistical anomaly</div><div class="attack-diff">Complexity: Detectable on long carriers</div><p class="attack-desc">Because the carrier is constrained to spell something, its letter and word-length distributions drift away from natural English. Bletchley-era censors maintained statistical baselines for ordinary correspondence and flagged outliers.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Suspicion plus the right reading rule</div><div class="attack-diff">Complexity: Trivial once you check</div><p class="attack-desc">Once concealment is suspected, an analyst can try simple selection rules. That can expose a naive construction, but neither success nor a fixed recovery time is guaranteed for every carrier and rule.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Statistical anomaly</div><div class="attack-diff">Complexity: Detectable on long carriers</div><p class="attack-desc">Because the carrier is constrained to spell something, its letter and word-length distributions drift away from natural English. Bletchley-era censors maintained statistical baselines for ordinary correspondence and flagged outliers.</p></div></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
-      <div class="panel-body"><p>The null cipher is the ancestor of every <em>covert channel</em> in computer security: timing channels, DNS-tunnel exfiltration, image-LSB steganography, even the way malware hides in CDN traffic. The mechanism is unchanged from the Roman version — pick a carrier nobody will look at, encode the secret in a property of the carrier nobody will measure.</p><p style="margin-top:1rem;">The defensive lesson is also unchanged. Defenders cannot watch every field of every packet, so attackers have rich choices for where to hide. Best modern practice is to assume covert channels exist and to design protocols that minimise the bandwidth available for them — not to chase every clever new carrier.</p></div>
+      <div class="panel-body"><p>Null ciphers illustrate the broader idea of a covert channel: information is carried through a feature of an ordinary-looking message. Digital techniques use different mechanisms; resemblance does not establish a single historical lineage.</p><p style="margin-top:1rem;">The defensive lesson is also unchanged. Defenders cannot watch every field of every packet, so attackers have rich choices for where to hide. Best modern practice is to assume covert channels exist and to design protocols that minimise the bandwidth available for them — not to chase every clever new carrier.</p></div>
     </div>
 
   </div>

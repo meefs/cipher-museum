@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shannon’s measure of surprise: why the one-time pad is perfect and why key length is destiny.">
+<meta name="description" content="Shannon’s measure of surprise: how distributions, independence and key generation affect secrecy.">
 <title>Information &amp; Entropy · Hall of Foundations</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0a0a0f">
 <meta property="og:title" content="Information &amp; Entropy — The Cipher Museum">
-<meta property="og:description" content="Shannon’s measure of surprise: why the one-time pad is perfect and why key length is destiny.">
+<meta property="og:description" content="Shannon’s measure of surprise: how distributions, independence and key generation affect secrecy.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ciphermuseum.com/hall-of-foundations/entropy.html">
 <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -98,13 +98,8 @@
   </section>
 
   <section class="exhibit">
-    <div class="step-head"><span class="step-num">§2</span><h2>Why key length is destiny</h2></div>
-    <p>
-      Every character of a password or key adds entropy — but only as much as its
-      alphabet allows. The comparison below shows how fast real key strength grows
-      with length and character set. This is the arithmetic behind every "use a
-      longer passphrase" warning.
-    </p>
+    <div class="step-head"><span class="step-num">§2</span><h2>Key length under a uniform model</h2></div>
+    <p>These bars assume each character is selected independently and uniformly from the stated alphabet. Under that model, entropy is length × log₂(alphabet size). Human-chosen passwords do not generally follow this model: length and character variety alone do not determine resistance to guessing.</p>
 
     <div class="lab">
       <div class="lab-stage">
@@ -126,13 +121,7 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§3</span><h2>The one-time pad's perfect secret</h2></div>
-    <p>
-      Shannon proved that if your key is truly random, at least as long as the
-      message, and never reused, the ciphertext reveals <em>nothing</em> —
-      perfect secrecy, unbreakable even with infinite computing power. The catch
-      is entropy: you need as many truly random bits as message bits, which is
-      exactly why the pad is rarely practical.
-    </p>
+    <p>A pad chosen uniformly and independently of the message, kept secret, as long as the message and used once provides perfect secrecy for fixed-length messages. Entropy is part of that argument, but a high-entropy string that is public or related to the message is not a secure pad.</p>
     <div class="pull">
       Perfect secrecy exists. It just costs one bit of true randomness for every
       bit you want to hide.
@@ -150,17 +139,7 @@
         searches the small space of likely keys. Entropy is why
         <strong>the random number generator matters as much as the cipher</strong>.
       </p>
-      <p>
-        Be careful with the phrase "128-bit security," though &#8212; it means two
-        different things. For a symmetric cipher it really is a statement about
-        surprise: AES-128 has 2¹²⁸ keys and no better attack than trying them.
-        For a public-key scheme it is a statement about
-        <em>arithmetic</em> difficulty: a 256-bit elliptic curve is called
-        128-bit-secure because the best known discrete-log attack costs about
-        2¹²⁸ operations, not because the key holds 128 bits of entropy. Same
-        label, different claim &#8212; which is why key sizes across the two
-        families are not comparable.
-      </p>
+      <p>Security bits estimate attack cost under a specified model; they are not the same quantity as Shannon entropy. AES-128 has a 128-bit key space and is intended to provide roughly 128-bit classical security. A suitable 256-bit elliptic-curve group has generic discrete-log attacks costing roughly 2¹²⁸ group operations. A source's Shannon entropy alone does not specify its password-guessing cost or a scheme's computational security.</p>
     </div>
     <p class="aside">Where the ceiling is reached:
       <a href="../ciphers/one-time-pad.html" style="color:var(--vermilion)">the One-Time Pad</a>
@@ -204,7 +183,7 @@
 
   // ---- §2 key bars ----
   var keybar=document.getElementById("keybar"), lr=document.getElementById("lr"), kread=document.getElementById("kread");
-  var sets=[{name:"digits (10)",n:10,c:"#D4B765"},{name:"lower (26)",n:26,c:"#5AC8A0"},{name:"full ASCII (94)",n:94,c:"#C85A5A"}];
+  var sets=[{name:"digits (10)",n:10,c:"#D4B765"},{name:"lower (26)",n:26,c:"#5AC8A0"},{name:"printable non-space ASCII (94)",n:94,c:"#C85A5A"}];
   function drawKeys(){
     var W=700,H=340,pad=54; keybar.innerHTML="";
     var L=+lr.value;

@@ -54,7 +54,7 @@
   <main id="main">
 
   <div class="hero">
-    <div class="kicker">The Magic Behind zk-SNARKs</div>
+    <div class="kicker">A Tool Used by Some zk-SNARKs</div>
     <h1>Multiplying the<br><em>unmultipliable</em></h1>
     <p class="standfirst">
       On an elliptic curve you can add points, but you cannot multiply two of
@@ -65,12 +65,7 @@
     </p>
   </div>
 
-  <div class="honesty">
-    <strong>Advanced, and worth it.</strong> This is the deepest exhibit in the
-    hall. The takeaway is one identity: a pairing lets a verifier confirm that
-    hidden numbers multiply correctly &#8212; the exact power that makes succinct
-    zero-knowledge proofs and identity-based encryption possible.
-  </div>
+  <div class="honesty"><strong>A model of one identity.</strong> This page illustrates bilinearity with small modular powers. It neither hides its inputs nor implements a pairing or privacy protocol.</div>
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">&#167;1</span><h2>A bridge between two worlds</h2></div>
@@ -89,14 +84,8 @@
   </section>
 
   <section class="exhibit">
-    <div class="step-head"><span class="step-num">&#167;2</span><h2>Verify a product you can't see</h2></div>
-    <p>
-      Set the two secret scalars a and b. On the curve side, all a verifier sees
-      are the scaled points aP and bQ &#8212; the scalars themselves are hidden. Yet
-      feeding those points through the pairing lands on the <em>same</em> field
-      value as taking the base pairing to the power a&#183;b. Watch the two paths
-      meet.
-    </p>
+    <div class="step-head"><span class="step-num">&#167;2</span><h2>Explore the bilinearity identity</h2></div>
+    <p>This interaction is an <strong>exponent model of bilinearity</strong>. It compares (5ᵃ)ᵇ mod 23 with 5ᵃᵇ mod 23 using the displayed scalars. It does not compute elliptic-curve points, a real pairing, or a zero-knowledge proof. The symbolic labels show where those objects occur in the actual pairing identity.</p>
 
     <div class="lab">
       <div class="lab-stage">
@@ -112,12 +101,7 @@
         </label>
         <div class="readout" id="pread" aria-live="polite" role="status">&#8212;</div>
       </div>
-      <div class="lab-hint">
-        Left path scales the points on the curve, then pairs. Right path pairs
-        first, then exponentiates by a&#183;b. Both land on the <span
-        style="color:var(--teal)">same field element</span> &#8212; that equality is
-        bilinearity. (Values use a toy group so the arithmetic stays small.)
-      </div>
+      <div class="lab-hint">Both paths compute the same tiny modular exponentiation. This checks an exponent identity; the displayed P, Q and e(P,Q) are symbolic stand-ins, not calculated elliptic-curve points or pairing values.</div>
       <div class="a11y-fallback">
         <span class="vh" id="pairKb">Keyboard alternative: set scalars a and b, then evaluate both paths.</span>
         <label>a =
@@ -132,20 +116,9 @@
   </section>
 
   <section class="exhibit">
-    <div class="step-head"><span class="step-num">&#167;3</span><h2>Why this unlocks zero-knowledge</h2></div>
-    <p>
-      A <span class="term">zk-SNARK</span> proves a statement is true while
-      revealing nothing but the proof's validity. In the pairing-based family
-      &#8212; Groth16 above all, plus the KZG-committed systems and BLS
-      signature aggregation &#8212; the final check is a pairing equation: the verifier confirms that certain hidden
-      values satisfy a multiplicative relationship, that the prover's secret
-      witness makes the circuit's equations balance, using exactly the identity
-      above.
-    </p>
-    <div class="pull">
-      The discrete log hides the numbers; the pairing checks their product. That
-      is the seam where zero-knowledge lives.
-    </div>
+    <div class="step-head"><span class="step-num">&#167;3</span><h2>How proof systems use pairings</h2></div>
+    <p>Pairings enable compact verification in systems such as Groth16 and appear in KZG polynomial commitments. BLS signature aggregation is another application, but is not itself a zk-SNARK. Zero knowledge requires additional protocol structure and randomization; bilinearity or a polynomial commitment alone does not provide it.</p>
+    <div class="pull">A pairing checks an algebraic relationship. The surrounding protocol must supply soundness, zero knowledge and any required setup guarantees.</div>
     <p>
       Pairings power several of the most influential and compact proof systems,
       but they are one major family rather than a requirement for succinctness.
@@ -164,18 +137,12 @@
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
       <h3>Under the privacy protocols</h3>
-      <p>
-        Pairings extend the <a href="elliptic-curves-real.html">elliptic-curve</a>
-        exhibits into the privacy-preserving landscape: zk-SNARK proof systems
-        rest on pairing-based verification, and identity-based encryption schemes
-        use the same e(aP,bQ) identity to derive keys from names. Where the curve
-        gave you <strong>a hard discrete log</strong>, the pairing gives you
-        <strong>a way to compute across it</strong> without breaking it.
-      </p>
+      <p>Some zk-SNARKs, identity-based encryption constructions and signature schemes use pairings. The target is typically a multiplicative subgroup of an extension field. The required security assumptions and parameter choices concern both source and target groups; a pairing is an algebraic tool, not an independent promise of privacy.</p>
     </div>
-    <p class="aside">Applied in: <a href="../ciphers/zero-knowledge-proofs.html" style="color:var(--vermilion)">Zero-Knowledge Proofs</a> — where the pairing-based zk-SNARK family puts this identity to work.<br>Builds on: <a href="elliptic-curves-real.html" style="color:var(--vermilion)">Elliptic Curves</a>, <a href="group-theory.html" style="color:var(--vermilion)">Group Theory</a>. Bilinearity identity tested in <code>crypto-algebra.js</code>.</p>
+    <p class="aside">Applied in: <a href="../ciphers/zero-knowledge-proofs.html" style="color:var(--vermilion)">Zero-Knowledge Proofs</a> — where the pairing-based zk-SNARK family puts this identity to work.<br>Builds on: <a href="elliptic-curves-real.html" style="color:var(--vermilion)">Elliptic Curves</a>, <a href="group-theory.html" style="color:var(--vermilion)">Group Theory</a>. Exponent identity tested in <code>crypto-algebra.js</code>.</p>
   </section>
 
+  <p class="aside"><strong>Sources and scope:</strong> <a href="https://eprint.iacr.org/2016/260">Groth, On the Size of Pairing-based Non-interactive Arguments (2016)</a>; <a href="https://crypto.stanford.edu/~dabo/pubs/papers/weilsigs.pdf">Boneh, Lynn and Shacham, Short Signatures from the Weil Pairing (2001)</a>.</p>
   </main>
 
 

@@ -36,11 +36,8 @@
   }
 
   // --- default scenario --------------------------------------------
-  // The same 1941-style mistake: two messages, same machine setting.
-  // P_A is a stylised English render of the operator's first message.
-  // P_B is the lazy resend with abbreviations changed (matches the
-  // historical case that Tutte unwound). Lengths are equal so the
-  // depth is well-defined across the whole message.
+  // Invented German/English examples illustrate a repeated-keystream mistake.
+  // These are not the intercepted 1941 messages or a Lorenz wheel simulation.
   const P_A = 'OBERKOMMANDO DER WEHRMACHT GREIFT IM OSTEN AN BEI MORGENGRAUEN';
   const P_B = 'ARMY HIGH COMMAND ATTACKS IN THE EAST AT DAWN ON SIX SEPTEMBER';
   // Pad the shorter to the longer so they share length 1:1.
@@ -81,12 +78,12 @@
     const maxScore = top[0].score || 1;
     let html = '<table class="cipher-table" style="margin:0;"><thead><tr>'
       + '<th style="width:5rem;">Offset</th>'
-      + '<th>Recovered slice (the <em>other</em> plaintext at this position)</th>'
+      + '<th>Candidate slice (if the crib is correct at this position)</th>'
       + '<th style="width:6rem;text-align:right;">Score</th>'
       + '</tr></thead><tbody>';
     top.forEach((r, i) => {
-      const isReal = r.score > 0 && r.score >= maxScore * 0.5;
-      const colour = isReal ? 'var(--gold)' : 'var(--tx3)';
+      const highScore = r.score > 0 && r.score >= maxScore * 0.5;
+      const colour = highScore ? 'var(--gold)' : 'var(--tx3)';
       const weight = i === 0 ? '700' : '400';
       html += '<tr>'
         + `<td style="color:${colour};font-family:var(--fm,monospace);">${r.offset}</td>`
@@ -98,7 +95,7 @@
     });
     html += '</tbody></table>';
     if (top[0].score > 0) {
-      html += `<p style="font-size:.9rem;color:var(--gold);margin:.75rem 0 0;">↑ Top hit at offset ${top[0].offset}: <code>${escapeHtml(top[0].candidate)}</code> — this is the matching slice from the OTHER message.</p>`;
+      html += `<p style="font-size:.9rem;color:var(--gold);margin:.75rem 0 0;">Highest-scoring candidate at offset ${top[0].offset}: <code>${escapeHtml(top[0].candidate)}</code>. The English score does not confirm the crib or recover the other message by itself; check this hypothesis against additional evidence.</p>`;
     } else {
       html += '<p style="font-size:.9rem;color:var(--tx3);margin:.75rem 0 0;font-style:italic;">No offset produced English-looking output. Try a different crib (longer cribs are more discriminating).</p>';
     }

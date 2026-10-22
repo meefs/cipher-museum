@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vernam Cipher — The Cipher Museum</title>
-  <meta name="description" content="Vernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.">
+  <meta name="description" content="Vernam’s teleprinter system combines text with a key stream. XOR supplies perfect secrecy only when the pad is uniformly random, independent, secret, long enough and never reused.">
   <meta name="keywords" content="vernam cipher, XOR, cryptography, classical cipher, cipher museum, encryption history, stream cipher">
     <meta property="og:title" content="Vernam Cipher — The Cipher Museum">
-  <meta property="og:description" content="Vernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.">
+  <meta property="og:description" content="Vernam’s teleprinter system combines text with a key stream. XOR supplies perfect secrecy only when the pad is uniformly random, independent, secret, long enough and never reused.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/vernam.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -16,7 +16,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vernam Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Vernam cipher (1917) — Gilbert Vernam's AT&T XOR teleprinter patent, the direct ancestor of the One-Time Pad and every modern stream cipher including ChaCha20.">
+  <meta name="twitter:description" content="Vernam’s teleprinter system combines text with a key stream. XOR supplies perfect secrecy only when the pad is uniformly random, independent, secret, long enough and never reused.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/vernam.html">
@@ -76,8 +76,8 @@
   </div>
   <h1 class="page-title">Vernam Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--secure" href="../museum-map.html#trust-labels" title="Still considered secure when used correctly with modern key handling." aria-label="Trust label: Secure (Modern). Still considered secure when used correctly with modern key handling."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span class="trust-label__text">Secure (Modern)</span></a></div>
-  <p class="page-tagline">The XOR operation that underpins every modern stream cipher — patented in 1917</p>
-  <p class="exhibit-status-note">Secure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.</p>
+  <p class="page-tagline">The XOR operation that underpins many modern stream ciphers — developed in 1917 and patented in 1919</p>
+  <p class="exhibit-status-note">XOR gives perfect secrecy only with an independent, uniformly random secret pad at least as long as the message, used once. No authentication.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Gilbert Vernam (AT&amp;T)</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1917</span></div>
@@ -94,7 +94,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Gilbert Vernam’s 1917 XOR-based teleprinter cipher is the direct ancestor of every modern stream cipher. ChaCha20, AES-CTR, and AES-GCM all use the same XOR operation he patented over a century ago.</p>
+      <p>Gilbert Vernam’s 1917 XOR-based teleprinter cipher is an early ancestor of modern XOR-based stream encryption. ChaCha20, AES-CTR, and AES-GCM all use the same XOR operation he patented over a century ago.</p>
     </div>
 
     <div class="panel">
@@ -102,7 +102,7 @@
         <span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
         <p>Gilbert Vernam was an AT&amp;T engineer who in 1917 invented an automatic cipher (patented 1919) for teleprinter communications. Messages on punched paper tape were XOR'd with a key tape character by character. When Joseph Mauborgne suggested using a completely random, non-repeating key tape, they had invented the One-Time Pad — though Shannon would not prove its perfection for another 32 years.</p>
-        <p style="margin-top:1rem;">The Vernam cipher is the direct ancestor of every modern stream cipher. ChaCha20, AES-CTR, and AES-GCM all use the XOR operation Vernam patented. The difference is that modern ciphers generate their keystream from a short key and a nonce, rather than requiring a physical tape as long as the message.</p>
+        <p style="margin-top:1rem;">The Vernam cipher is an early ancestor of modern XOR-based stream encryption. ChaCha20, AES-CTR, and AES-GCM all use the XOR operation Vernam patented. The difference is that modern ciphers generate their keystream from a short key and a nonce, rather than requiring a physical tape as long as the message.</p>
       </div>
     </div>
 
@@ -159,7 +159,7 @@ When key tape is:
         <table class="cipher-table">
           <thead><tr><th>Concept from Vernam</th><th>Modern Evolution</th></tr></thead>
           <tbody>
-            <tr><td>XOR as cipher operation</td><td>All modern stream ciphers: C = P ⊕ keystream</td></tr>
+            <tr><td>XOR as cipher operation</td><td>Typical XOR-based stream encryption: C = P ⊕ keystream</td></tr>
             <tr><td>Key tape = keystream</td><td>ChaCha20 generates 512-bit blocks of keystream per counter value</td></tr>
             <tr><td>Reused key = catastrophic failure</td><td>Nonce uniqueness: AES-GCM fails catastrophically on nonce reuse</td></tr>
             <tr><td>Automatic teleprinter encryption</td><td>Hardware crypto acceleration: AES-NI CPU instructions</td></tr>
@@ -200,7 +200,7 @@ When key tape is:
             <span class="difficulty-rating">Moderate</span>
             <span class="difficulty-pct">40%</span>
           </div>
-          <p class="difficulty-note">Depth attack works if any key material reused. If OTP rules followed: mathematically proven unbreakable (100%).</p>
+          <p class="difficulty-note">Reusing keystream exposes relations between plaintexts. A uniform, independent, secret, single-use message-length pad provides perfect secrecy, but not authentication.</p>
         </div>
       </div>
     </div>

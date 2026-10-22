@@ -1,0 +1,2054 @@
+[
+  {
+    "page": "my-path.html",
+    "staticControls": 1,
+    "genericDemo": [],
+    "scripts": [
+      "js/nav.js",
+      "js/lightbox.js"
+    ]
+  },
+  {
+    "page": "comparison.html",
+    "staticControls": 6,
+    "genericDemo": [],
+    "scripts": [
+      "js/nav.js",
+      "js/trust-labels.js",
+      "js/lightbox.js"
+    ]
+  },
+  {
+    "page": "cipher-corpus.html",
+    "staticControls": 17,
+    "genericDemo": [],
+    "scripts": [
+      "/js/nav.js",
+      "/js/detective-integration.js",
+      "/js/cipher-corpus.js"
+    ]
+  },
+  {
+    "page": "search.html",
+    "staticControls": 12,
+    "genericDemo": [],
+    "scripts": [
+      "js/nav.js",
+      "js/trust-labels.js",
+      "js/search.js"
+    ]
+  },
+  {
+    "page": "cipher-flow.html",
+    "staticControls": 1,
+    "genericDemo": [],
+    "scripts": [
+      "js/nav.js",
+      "js/lightbox.js"
+    ]
+  },
+  {
+    "page": "cryptanalysis.html",
+    "staticControls": 21,
+    "genericDemo": [],
+    "scripts": [
+      "js/cipher-detective.js",
+      "js/nav.js",
+      "js/lightbox.js"
+    ]
+  },
+  {
+    "page": "cipher-detective.html",
+    "staticControls": 23,
+    "genericDemo": [],
+    "scripts": [
+      "js/nav.js",
+      "js/detective/analyses.js",
+      "js/detective/scoring.js",
+      "js/detective/render.js",
+      "js/detective/attacks.js",
+      "js/detective/lang-model.js",
+      "js/detective/solvers.js",
+      "js/detective/playback.js",
+      "js/detective/challenges.js",
+      "js/detective/detective.js",
+      "js/detective/workspaces.js"
+    ]
+  },
+  {
+    "page": "challenges.html",
+    "staticControls": 4,
+    "genericDemo": [],
+    "scripts": [
+      "js/ciphers/all-engines.min.js",
+      "js/nav.js",
+      "js/lightbox.js"
+    ]
+  },
+  {
+    "page": "popular-culture-survey.html",
+    "staticControls": 3,
+    "genericDemo": [],
+    "scripts": [
+      "js/nav.js",
+      "js/lightbox.js"
+    ]
+  },
+  {
+    "page": "index.html",
+    "staticControls": 5,
+    "genericDemo": [],
+    "scripts": [
+      "js/nav.js",
+      "js/lightbox.js"
+    ]
+  },
+  {
+    "page": "lab/workbench.html",
+    "staticControls": 11,
+    "genericDemo": [],
+    "scripts": [
+      "../js/nav.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/diana-cryptosystem.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "diana-cryptosystem"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/navajo-code-talkers.html",
+    "staticControls": 1,
+    "genericDemo": [
+      "navajo-code-talkers"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/mccormick.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "mccormick"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/red-type-a.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "red-type-a"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/venona.html",
+    "staticControls": 11,
+    "genericDemo": [
+      "otp"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/pad-experiments.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/kama-sutra.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "kama-sutra"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/sigsaly.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/one-time-pad.html",
+    "staticControls": 6,
+    "genericDemo": [
+      "otp"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/pad-experiments.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/typex.html",
+    "staticControls": 1,
+    "genericDemo": [
+      "typex"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/sator-square.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "sator-square"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/gravity-falls.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/dancing-men.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "dancing-men"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/playfair.html",
+    "staticControls": 5,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/field-hollers.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/commercial-codebooks.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "commercial-codebooks"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/scytale.html",
+    "staticControls": 1,
+    "genericDemo": [
+      "scytale"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/ira-ciphers.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "ira-ciphers"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/amsco.html",
+    "staticControls": 10,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/manual-cipher-demos.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/null-cipher.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "null-cipher"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/vietnamese-underground.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "vietnamese-underground"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/zodiac.html",
+    "staticControls": 5,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/geheimschreiber.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "geheimschreiber"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/four-square.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "foursquare"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/atbash.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "atbash"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/nema.html",
+    "staticControls": 6,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/demo-loader.min.js",
+      "../js/historical-ciphers.js",
+      "../js/historical-demos.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/zimmermann.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "zimmermann"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/cardano-autokey.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "cardano-autokey"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/voynich.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "voynich"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/krypto-arg.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "krypto-arg"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/copiale.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "copiale"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/shamir-secret-sharing.html",
+    "staticControls": 4,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/protocol-math.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/dagapeyeff.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "dagapeyeff"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/kerckhoffs.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/adfgvx.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "adfgvx"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/bifid.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "bifid"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/station-hypo.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "jn-25"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/fialka.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "fialka"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/zero-knowledge-proofs.html",
+    "staticControls": 6,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/protocol-math.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/egyptian-substitution.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "egyptian-substitution"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/bacon.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "bacon"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/alberti-disk.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "alberti"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/autokey.html",
+    "staticControls": 1,
+    "genericDemo": [
+      "autokey"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/rs44.html",
+    "staticControls": 12,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/manual-cipher-demos.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/trithemius.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "trithemius"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/kl-7.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "kl-7"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/beale.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "beale"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/double-playfair.html",
+    "staticControls": 11,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/manual-cipher-demos.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/vernam.html",
+    "staticControls": 1,
+    "genericDemo": [
+      "vernam"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/dorabella.html",
+    "staticControls": 3,
+    "genericDemo": [
+      "dorabella"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/cardano-grille.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "cardano-grille"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/somerton-man.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "somerton-man"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/microdot.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/affine.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "affine"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/stager.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "stager"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/hill.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "hill"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/trifid.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "trifid"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/m209.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "m209"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/histiaeus-tattoo.html",
+    "staticControls": 6,
+    "genericDemo": [
+      "histiaeus-tattoo"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/phaistos-disc.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "phaistos-disc"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/monoalphabetic.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "monoalphabetic"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/amharic-ge-ez-ciphers.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "amharic-ge-ez-ciphers"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/sigaba.html",
+    "staticControls": 1,
+    "genericDemo": [
+      "sigaba"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/cabinet-noir.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/two-square.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "twosquare"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/vigenere.html",
+    "staticControls": 8,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/enigma.html",
+    "staticControls": 24,
+    "genericDemo": [
+      "enigma"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/ciphers/enigma.js",
+      "../js/demo-loader.min.js",
+      "../js/ciphers/enigma-flagship.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/wheatstone.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "wheatstone"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/red-army-faction.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "raf-otp"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/bazeries.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "bazeries"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/slidex.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "slidex"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/jefferson-disk.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "jefferson"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/bletchley-park.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "enigma"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/kryptos.html",
+    "staticControls": 4,
+    "genericDemo": [
+      "kryptos"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/double-transposition.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "doubleTransposition"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/babington.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "babington"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/wadsworth-cipher.html",
+    "staticControls": 5,
+    "genericDemo": [
+      "wadsworth"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/columnar.html",
+    "staticControls": 7,
+    "genericDemo": [
+      "columnar"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/multiple-anagramming.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/latin-american-codebooks.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "latin-american-codebooks"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/beaufort.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "beaufort"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/gronsfeld.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "gronsfeld"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/nihilist.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "nihilist"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/arnold-andre.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "arnold-andre"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/porta.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "porta"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/mit-mystery-hunt.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "mit-mystery-hunt"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/cicada-3301.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "cicada-3301"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/wallis-ciphers.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "wallis-ciphers"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/tap-code.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "tapCode"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/homophonic.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "homophonic"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/m-94.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "m-94"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/freemason-pigpen.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "freemason-pigpen"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/straddling-checkerboard.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "straddlingCheckerboard"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/myszkowski.html",
+    "staticControls": 6,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/demo-loader.min.js",
+      "../js/historical-ciphers.js",
+      "../js/historical-demos.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/solitaire.html",
+    "staticControls": 9,
+    "genericDemo": [
+      "solitaire"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/shugborough.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "shugborough"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/che-guevara.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "che-vic"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/morse.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "morse"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/culper-ring.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "culper-ring"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/argenti.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "argenti"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/confederate-vigenere.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "confederateVigenere"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/chinese-telegraph.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "chinese-telegraph"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/caesar.html",
+    "staticControls": 11,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/caesar.js",
+      "../js/ciphers/caesar-break.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/great-cipher.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "greatCipher"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/rail-fence.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "railFence"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/kryha.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "kryha"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/nomenclator.html",
+    "staticControls": 1,
+    "genericDemo": [
+      "nomenclator"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/purple.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "purple"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/bach-motif.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "bach-motif"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/dictionary-code.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "dictionaryCode"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/chaocipher.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "chaocipher"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/running-key.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "runningKey"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/ecdsa.html",
+    "staticControls": 9,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/protocol-math.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/jn-25.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "jn-25"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/aeneas-tacticus.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "aeneas-tacticus"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/turning-grille.html",
+    "staticControls": 8,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/demo-loader.min.js",
+      "../js/historical-ciphers.js",
+      "../js/historical-demos.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/vic.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "vic"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/da-vinci-code.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/arabic-nomenclators.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "arabic-nomenclators"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/polybius.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "polybius"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/rot13.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "rot13"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/adfgx.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "adfgx"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/lorenz.html",
+    "staticControls": 5,
+    "genericDemo": [
+      "lorenz"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/ciphers/lorenz-depth.js",
+      "../js/ciphers/lorenz-page.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/patterson-jefferson-cipher.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "patterson-jefferson-cipher"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/bible-code.html",
+    "staticControls": 4,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/els.js",
+      "../js/nav.js",
+      "../js/lightbox.js",
+      "../js/demo-loader.min.js"
+    ]
+  },
+  {
+    "page": "ciphers/national-treasure.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/book-cipher.html",
+    "staticControls": 1,
+    "genericDemo": [
+      "bookCipher"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/rosetta-stone.html",
+    "staticControls": 4,
+    "genericDemo": [
+      "rosetta-stone"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/fractionated-morse.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "fractionatedMorse"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/gold-bug.html",
+    "staticControls": 2,
+    "genericDemo": [
+      "gold-bug"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "ciphers/pigpen.html",
+    "staticControls": 0,
+    "genericDemo": [
+      "pigpen"
+    ],
+    "scripts": [
+      "../js/trust-labels.js",
+      "../js/ciphers/all-engines.min.js",
+      "../js/demo-loader.min.js",
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "tours/tour.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/group-theory.html",
+    "staticControls": 3,
+    "genericDemo": [],
+    "scripts": [
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/finite-fields.html",
+    "staticControls": 4,
+    "genericDemo": [],
+    "scripts": [
+      "ec-math.js",
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/interpolation.html",
+    "staticControls": 8,
+    "genericDemo": [],
+    "scripts": [
+      "crypto-algebra.js",
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/modularity-exhibit.html",
+    "staticControls": 6,
+    "genericDemo": [],
+    "scripts": [
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/reduction.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/one-way-function.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/lattices-svp.html",
+    "staticControls": 8,
+    "genericDemo": [],
+    "scripts": [
+      "lattice-math.js",
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/random-oracle.html",
+    "staticControls": 4,
+    "genericDemo": [],
+    "scripts": [
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/prime-number-theorem.html",
+    "staticControls": 1,
+    "genericDemo": [],
+    "scripts": [
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/learning-with-errors.html",
+    "staticControls": 12,
+    "genericDemo": [],
+    "scripts": [
+      "lwe-math.js",
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/pairings.html",
+    "staticControls": 5,
+    "genericDemo": [],
+    "scripts": [
+      "crypto-algebra.js",
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/polynomial-rings.html",
+    "staticControls": 6,
+    "genericDemo": [],
+    "scripts": [
+      "crypto-algebra.js",
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/elliptic-curves-real.html",
+    "staticControls": 6,
+    "genericDemo": [],
+    "scripts": [
+      "ec-math.js",
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/euler-fermat.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "crypto-algebra.js",
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/closest-vector.html",
+    "staticControls": 9,
+    "genericDemo": [],
+    "scripts": [
+      "lattice-math.js",
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/entropy.html",
+    "staticControls": 2,
+    "genericDemo": [],
+    "scripts": [
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "hall-of-foundations/modular-arithmetic.html",
+    "staticControls": 3,
+    "genericDemo": [],
+    "scripts": [
+      "crypto-algebra.js",
+      "../js/nav.js"
+    ]
+  },
+  {
+    "page": "community/index.html",
+    "staticControls": 6,
+    "genericDemo": [],
+    "scripts": [
+      "../js/nav.js",
+      "../js/lightbox.js"
+    ]
+  }
+]

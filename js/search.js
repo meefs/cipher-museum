@@ -17,7 +17,7 @@
   var INDEX_URL_REL = 'js/search-index.json';
   var BASE = (function () {
     var p = location.pathname;
-    var inSub = /\/(ciphers|halls|tours|lab|community)\//.test(p);
+    var inSub = /\/(ciphers|halls|tours|lab|community|hall-of-foundations)\//.test(p);
     return inSub ? '../' : '';
   })();
 
@@ -50,8 +50,7 @@
     if (_entries) return Promise.resolve(_entries);
     if (_loadPromise) return _loadPromise;
     if (typeof fetch !== 'function') {
-      _entries = [];
-      return Promise.resolve(_entries);
+      return Promise.reject(new Error('Fetch is unavailable'));
     }
     _loadPromise = fetch(BASE + INDEX_URL_REL, {cache: 'force-cache'})
       .then(function (r) {
@@ -59,7 +58,8 @@
         return r.json();
       })
       .then(function (data) {
-        _entries = (data.entries || []).map(function (e) {
+        if (!data || !Array.isArray(data.entries)) throw new Error('Invalid search index');
+        _entries = data.entries.map(function (e) {
           var haystack = e.t + ' ' + (e.h || '') + ' ' + (e.s || '') + ' ' + (e.g || []).join(' ');
           return {
             title: e.t,
@@ -82,8 +82,8 @@
       })
       .catch(function (err) {
         console.error('[CipherSearch] index load failed:', err);
-        _entries = [];
-        return _entries;
+        _loadPromise = null;
+        throw err;
       });
     return _loadPromise;
   }
@@ -165,15 +165,21 @@
   }
 
   function highlight(text, q) {
-    var safe = escapeHTML(text);
+    var raw = String(text);
     var tokens = tokenize(q).filter(function (t) { return t.length >= 2; });
-    if (!tokens.length) return safe;
+    if (!tokens.length) return escapeHTML(raw);
+    // Match original text once. Repeated replacements over escaped HTML can
+    // highlight inside an entity or inside the <mark> tags just inserted.
     tokens.sort(function (a, b) { return b.length - a.length; });
-    tokens.forEach(function (t) {
-      var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-      safe = safe.replace(re, '<mark>$1</mark>');
-    });
-    return safe;
+    var re = new RegExp(tokens.map(function (t) {
+      return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }).join('|'), 'gi');
+    var result = '', cursor = 0, match;
+    while ((match = re.exec(raw))) {
+      result += escapeHTML(raw.slice(cursor, match.index)) + '<mark>' + escapeHTML(match[0]) + '</mark>';
+      cursor = match.index + match[0].length;
+    }
+    return result + escapeHTML(raw.slice(cursor));
   }
 
   window.CipherSearch = {

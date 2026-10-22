@@ -62,9 +62,7 @@
   <span class="page-eyebrow">Hall II · Medieval — Renaissance · 800 – 1929</span>
   <h1 class="page-title">Classical Substitution</h1>
   <p class="page-tagline">The arms race between letter-mappers and frequency counters</p>
-  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">
-    For a thousand years after Caesar, cryptographers mapped letters to other symbols and believed their ciphers were unbreakable. Then in 850 AD, Al-Kindi of Baghdad wrote a nine-page treatise that shattered every substitution cipher ever made — and every one that would be made for the next four centuries. This hall shows the battle that followed.
-  </p>
+  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">Fixed substitutions preserve recognizable structure. Al-Kindi’s surviving treatise explains frequency analysis; later homophonic, digraph and algebraic constructions change what patterns remain. Their attacks require different evidence and methods.</p>
   <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem;position:relative;z-index:1;">
     <span class="badge era-medieval">Medieval</span>
     <span class="badge era-renaissance">Renaissance</span>
@@ -78,7 +76,7 @@
   <div class="callout callout-danger" style="margin-bottom:3rem;">
     <span class="callout-icon">💀</span>
     <div class="callout-body">
-      <p><strong>Al-Kindi's insight (850 AD):</strong> Count how often each letter appears in ciphertext. The most frequent symbol probably represents E (12.7% of English). The second most frequent is probably T (9.1%). Map frequencies to expected values — the key reveals itself. This technique alone broke every cipher in this hall.</p>
+      <p>Frequency analysis compares observed counts with language models. It is useful against fixed substitutions but does not by itself solve every system in this hall. The exhibits distinguish statistical guesses, known plaintext and exhaustive key search.</p>
     </div>
   </div>
 
@@ -90,7 +88,7 @@
         <span class="badge era-medieval">Medieval · ~800 AD</span>
       </div>
       <div class="card-name">Monoalphabetic Substitution</div>
-      <p class="card-desc">Each letter maps permanently to another. A→Q, B→M, C→L… The key is a full 26-letter permutation, giving 26! possible keys — more than 4×10²⁶. Vast keyspace, zero protection.</p>
+      <p class="card-desc">Monoalphabetic substitution — replace each letter with a fixed substitute. Foundation of all substitution ciphers; broken by Al-Kindi's frequency analysis ~850.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.08em;">
         <span style="color:var(--tx3);">Plain:  ABCDEFGHIJKLMNOPQRSTUVWXYZ</span><br>
         <span style="color:var(--tx3);">Cipher: </span><span style="color:var(--gold-lt);">QWERTYUIOPASDFGHJKLZXCVBNM</span>
@@ -107,7 +105,7 @@
         <span class="badge era-renaissance">Renaissance · ~1400</span>
       </div>
       <div class="card-name">Homophonic Substitution</div>
-      <p class="card-desc">The Renaissance answer to frequency analysis: give common letters multiple symbols. E encrypts as 12, 37, or 44. T as 21 or 90. Frequency peaks flatten. Used in European diplomatic ciphers for 400 years.</p>
+      <p class="card-desc">Homophonic substitution (1400s) — replace each letter with one of several numeric codes to flatten frequencies. Defeated Mary in 1586; Great Cipher in 1893.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.08em;">
         <span style="color:var(--tx3);">E → </span><span style="color:var(--gold-lt);">12, 37, 44</span><span style="color:var(--tx3);">   T → </span><span style="color:var(--gold-lt);">21, 90</span><br>
         <span style="color:var(--tx3);">A → </span><span style="color:var(--gold-lt);">05, 63</span><span style="color:var(--tx3);">   Z → </span><span style="color:var(--gold-lt);">99</span>
@@ -124,7 +122,7 @@
         <span class="badge era-19c">~1902</span>
       </div>
       <div class="card-name">Playfair Cipher</div>
-      <p class="card-desc">Charles Wheatstone's breakthrough: encrypt letter pairs, not single letters. A 5×5 key square defines rules for each pair. Defeats single-letter frequency analysis completely. Used by Britain in WWI and WWII.</p>
+      <p class="card-desc">Playfair cipher (1854) — Charles Wheatstone's keyed 5x5 digram cipher promoted by Lord Playfair. Used by the British in WWI; broken by digram analysis.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.08em;line-height:1.6;">
         <span style="color:var(--tx3);">HE → </span><span style="color:var(--gold-lt);">BM</span><span style="color:var(--tx3);">  LL → </span><span style="color:var(--gold-lt);">NA</span><span style="color:var(--tx3);">  PL → </span><span style="color:var(--gold-lt);">ZO</span>
       </div>
@@ -140,7 +138,7 @@
         <span class="badge era-19c">Victorian · 1854</span>
       </div>
       <div class="card-name">Four-Square Cipher</div>
-      <p class="card-desc">Félix Delastelle's two-keyword refinement of Playfair: four 5×5 squares laid in a 2×2 grid, two of them keyed. Encrypts digraphs without Playfair's awkward double-letter rule, and can produce a different ciphertext digraph for the same plaintext digraph appearing in different positions.</p>
+      <p class="card-desc">Four-Square cipher (1902) — Delastelle's digram cipher using two keyed and two standard 5x5 squares. Disrupts Playfair frequencies but breaks to digrams.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.08em;line-height:1.6;">
         <span style="color:var(--tx3);">Two keyed squares (top-right, bottom-left) · two plain squares</span>
       </div>
@@ -156,7 +154,7 @@
         <span class="badge era-19c">~1901</span>
       </div>
       <div class="card-name">Two-Square Cipher</div>
-      <p class="card-desc">Delastelle's pared-back digraph cipher — only two keyed squares, arranged horizontally or vertically. Faster to set up than Four-Square but leaks more digraph structure: plaintext pairs that share a row simply pass through unchanged in the horizontal variant.</p>
+      <p class="card-desc">Two-square uses two keyed 5×5 squares to encipher letter pairs. This demo follows the ACA horizontal rectangle rule and discloses its extra filler-escape convention.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.08em;line-height:1.6;">
         <span style="color:var(--tx3);">Two keyed squares stacked or side-by-side</span>
       </div>
@@ -172,7 +170,7 @@
         <span class="badge era-renaissance">1400s–1800s</span>
       </div>
       <div class="card-name">Nomenclator</div>
-      <p class="card-desc">The 400-year diplomatic standard. A small substitution alphabet plus a 1,000-2,000 entry codebook of words and names — with nulls sprinkled in. The Babington Plot, the Spanish Armada traffic, and Louis XIV's Great Cipher are all nomenclators. Black Chambers in Vienna, Paris, and London built their reputation slowly reconstructing them.</p>
+      <p class="card-desc">Nomenclator (1400s) — The 400-year diplomatic compromise: a small substitution alphabet plus a large code dictionary. Hall II of The Cipher Museum.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.05em;line-height:1.6;">
         <span style="color:var(--tx3);">THE KING ARRIVES IN VIENNA → 60 70 23 09 12 12 64 1899</span>
       </div>
@@ -188,7 +186,7 @@
         <span class="badge era-modern">1929</span>
       </div>
       <div class="card-name">Hill Cipher</div>
-      <p class="card-desc">Lester Hill applied linear algebra to cryptography. Letters become vectors; the key is a matrix; encryption is matrix multiplication. Strong diffusion — every output letter depends on multiple input letters. Broken by known plaintext.</p>
+      <p class="card-desc">Hill’s 1929 cipher mixes groups of letters using an invertible matrix modulo 26. Suitable matched plaintext blocks can expose the key by linear algebra.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.05em;line-height:1.8;">
         <span style="color:var(--tx3);">Cipher = </span><span style="color:var(--gold-lt);">Key Matrix × Plaintext Vector (mod 26)</span>
       </div>
@@ -197,7 +195,7 @@
         <span class="card-arrow">→</span>
       </div>
     </a>
-    <a href="../ciphers/double-playfair.html" class="cipher-card"><div class="card-head"><span class="card-num">Exhibit 166</span><span class="badge era-wwii">December 1941</span></div><div class="card-name">German Double Playfair</div><p class="card-desc">December 1941 edition: vertical pairing and two substitution stages.</p><div class="card-foot"><div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></div><span class="card-arrow">→</span></div></a>
+    <a href="../ciphers/double-playfair.html" class="cipher-card"><div class="card-head"><span class="card-num">Exhibit 166</span><span class="badge era-wwii">December 1941</span></div><div class="card-name">German Double Playfair</div><p class="card-desc">German Double Playfair: reconstruct the December 1941 Doppelkastenschlüssel manual, including 17-column pairing, two substitution stages and its published example.</p><div class="card-foot"><div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></div><span class="card-arrow">→</span></div></a>
 
 
     <a href="../ciphers/great-cipher.html" class="cipher-card">
@@ -206,7 +204,7 @@
         <span class="badge era-renaissance">Baroque · ~1626</span>
       </div>
       <div class="card-name">The Great Cipher</div>
-      <p class="card-desc">The Rossignols' nomenclator for Louis XIV. ~587 numbered codewords stand for syllables, single letters, decoy nulls — and one number means "delete the previous letter." Unread for 200 years; broken by Bazeries in 1893.</p>
+      <p class="card-desc">The Rossignols’ syllabic nomenclator was deciphered by Bazeries in the 1890s. His proposed Man in the Iron Mask identification remains disputed.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.05em;line-height:1.6;">
         <span style="color:var(--tx3);">LE → </span><span style="color:var(--gold-lt);">124</span>&nbsp;&nbsp;<span style="color:var(--tx3);">ROI → </span><span style="color:var(--gold-lt);">301</span>&nbsp;&nbsp;<span style="color:var(--tx3);">(null) → </span><span style="color:var(--gold-lt);">412</span><br>
         <span style="color:var(--tx3);">DELETE PREV → </span><span style="color:var(--gold-lt);">891</span>
@@ -223,7 +221,7 @@
         <span class="badge era-renaissance">Elizabethan · 1586</span>
       </div>
       <div class="card-name">Babington Plot Cipher</div>
-      <p class="card-desc">The 64-glyph nomenclator Mary, Queen of Scots used to plot Elizabeth I's assassination — broken in days by Thomas Phelippes, who then forged a postscript that named the conspirators. The first cipher whose breaking is documented to have caused an execution.</p>
+      <p class="card-desc">The 1586 Babington Plot: intercepted nomenclator letters, a forged postscript, and the difference between compromised keys and an insecure transport channel.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.05em;line-height:1.6;">
         <span style="color:var(--tx3);">23 letter glyphs · 36 codewords · 4 nulls · 1 "doubleth"</span><br>
         <span style="color:var(--tx3);">QUEEN → </span><span style="color:var(--gold-lt);">⟨w28⟩</span>&nbsp;&nbsp;<span style="color:var(--tx3);">DOUBLETH → </span><span style="color:var(--gold-lt);">⟨x2⟩</span>
@@ -257,7 +255,7 @@
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-chart"/></svg></span><span class="panel-title">Matrix Multiplication → Modern Mixing</span></div>
-      <div class="panel-body"><p>Hill's matrix multiplication concept — mixing multiple input letters to produce each output letter — became the MixColumns step in AES, one of the four core operations providing diffusion.</p></div>
+      <div class="panel-body"><p>Hill’s cipher and AES MixColumns both mix multiple input symbols using linear algebra, but they use different fields and play different roles. A linear layer alone does not provide the nonlinear security of a complete modern block cipher.</p></div>
     </div>
   </div>
 

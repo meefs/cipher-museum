@@ -75,7 +75,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Every other exhibit in this hall moves a secret from one place to another while keeping it hidden in transit. A zero-knowledge proof does something that sounds impossible instead: it lets you <em>demonstrate</em> you hold a secret without moving it anywhere at all.</p>
+      <p>A zero-knowledge proof can establish a statement without revealing additional information about its secret witness. Unlike encryption, its purpose is not to deliver the secret to the verifier. The exact guarantee depends on the protocol and on the verifier model.</p>
       <p>The consequence is a whole category of systems that were previously unbuildable &mdash; proving you are over eighteen without revealing your birthday, proving a transaction is valid without revealing who paid whom, proving a computation ran correctly without repeating it.</p>
     </div>
 
@@ -90,10 +90,10 @@
         <p>A zero-knowledge proof must satisfy three properties at once, and the third is the hard one:</p>
         <ul style="line-height:1.9;">
           <li><strong>Completeness</strong> &mdash; an honest prover who really knows the secret always convinces the verifier.</li>
-          <li><strong>Soundness</strong> &mdash; a prover who does not know it is almost certain to be caught.</li>
+          <li><strong>Soundness</strong> &mdash; false statements are accepted only with bounded probability. A proof of knowledge additionally formalizes possession of a witness.</li>
           <li><strong>Zero knowledge</strong> &mdash; the verifier learns nothing they could not have produced alone.</li>
         </ul>
-        <p>Schnorr's protocol demonstrates all three in three messages. The prover knows <em>x</em>; everyone knows <em>y</em> = <em>g</em><sup><em>x</em></sup>. The prover commits to a random <em>r</em> by sending <em>t</em> = <em>g</em><sup><em>r</em></sup>. The verifier replies with a random challenge <em>c</em>. The prover answers <em>s</em> = <em>r</em> + <em>cx</em>, and the verifier checks:</p>
+        <p>This Schnorr identification example has perfect completeness, a knowledge-soundness argument and honest-verifier zero knowledge. The prover knows <em>x</em>; everyone knows <em>y</em> = <em>g</em><sup><em>x</em></sup>. The prover commits to a random <em>r</em> by sending <em>t</em> = <em>g</em><sup><em>r</em></sup>. The verifier replies with a random challenge <em>c</em>. The prover answers <em>s</em> = (<em>r</em> + <em>cx</em>) mod <em>q</em>, where <em>q</em> is the group order, and the verifier checks:</p>
         <p style="font-family:ui-monospace,monospace;background:var(--bg2,rgba(255,255,255,.04));padding:12px 16px;border-radius:6px;overflow-x:auto;">g<sup>s</sup> &nbsp;=&nbsp; t &middot; y<sup>c</sup> &nbsp;(mod p)</p>
         <p>The response <em>s</em> is the secret <em>x</em> masked by the fresh random <em>r</em>, so it discloses nothing. But it could only have been produced by someone who knew <em>x</em> &mdash; unless they guessed the challenge in advance.</p>
       </div>
@@ -102,7 +102,7 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-flask"/></svg></span><span class="panel-title">Run the protocol</span></div>
       <div class="panel-body">
-        <p>Arithmetic runs in a group of prime order 233 modulo 467 &mdash; small enough to print every value. Choose a secret, then play as an honest prover or as a cheat who does not know it.</p>
+        <p>Arithmetic runs in a group of prime order 233 modulo 467 &mdash; small enough to print every value. Its small group and teaching randomness are not secure parameters. Choose a secret, then play as an honest prover or as a cheat who does not know it.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin:18px 0;">
           <label style="display:flex;flex-direction:column;gap:4px;font-size:.85rem;">secret x
             <input type="number" id="x" value="77" min="1" max="232" step="1" style="width:90px;">
@@ -119,7 +119,7 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-mask"/></svg></span><span class="panel-title">Why a transcript proves nothing &mdash; the simulator</span></div>
       <div class="panel-body">
         <p>Here is the argument that makes &lsquo;zero knowledge' precise, and it is genuinely surprising. Take the protocol's steps <em>out of order</em>: choose the challenge and the response first, then work backwards to the commitment that makes the check succeed. The resulting transcript passes verification perfectly &mdash; and it was produced by someone with no secret at all.</p>
-        <p>So a recorded transcript is worthless as evidence. Anyone can forge one. The proof only convinces <strong>the verifier who chose the challenge themselves</strong>, after the commitment was locked in. Conviction lives in the ordering of the messages, not in their contents &mdash; which is exactly why the verifier learns nothing: everything they saw, they could have written themselves.</p>
+        <p>For this interactive protocol with an honestly sampled uniform challenge, the simulator produces the same transcript distribution without the secret. This establishes <em>honest-verifier zero knowledge</em>; it is not by itself a proof for every malicious verifier. A recording of this exchange is not transferable evidence of knowledge, because a third party could have simulated it. That differs from a properly constructed non-interactive signature, whose public verification is intended to be transferable.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin:18px 0;">
           <button id="simulate" class="btn">Forge a transcript with no secret</button>
           <button id="extract" class="btn">Answer two challenges on one commitment</button>
@@ -132,14 +132,14 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
       <div class="panel-body">
         <p>Schnorr's soundness is not perfect and is not meant to be: a cheat who guesses the challenge in advance succeeds, with probability 1 divided by the size of the challenge space. On this page that is 1 in 233, which you can watch happen. Real deployments use challenge spaces around 2<sup>256</sup>, where the same gap is unreachable.</p>
-        <p>Making the protocol non-interactive introduces the sharper risk. The <strong>Fiat&ndash;Shamir transform</strong> replaces the verifier's random challenge with a hash of the commitment, so the prover can generate the challenge themselves without being able to control it. This is how a Schnorr proof becomes a signature &mdash; but its security then rests on the hash behaving like an ideal random function, an assumption examined honestly in <a href="../hall-of-foundations/random-oracle.html">The Random Oracle</a>. Implementations that hash too little into the challenge have been broken repeatedly; the class of bug is common enough to have a name, the &lsquo;weak Fiat&ndash;Shamir' attack.</p>
-        <p>Succinct proof systems add their own concerns. Many pairing-based zk-SNARKs require a trusted setup whose discarded randomness would forge arbitrary proofs if retained &mdash; the reason for elaborate multi-party ceremonies. Transparent systems such as STARKs avoid that setup entirely, at the cost of larger proofs. Pairing-based constructions also inherit the discrete logarithm's vulnerability to quantum attack, while hash-based ones do not.</p>
+        <p>The Fiat&ndash;Shamir transform derives a challenge by hashing the commitment together with the public statement and required application context. A signature must bind the message as well. Domain separation and unambiguous encodings matter. The prover can try different commitments, but should not be able to choose a useful challenge cheaply under the proof's hash model. A random-oracle proof is a conditional security argument, not a proof that a concrete hash is an ideal oracle.</p>
+        <p>Succinct proof systems add their own concerns. Many pairing-based zk-SNARKs require a trusted setup whose discarded randomness would forge arbitrary proofs if retained &mdash; the reason for elaborate multi-party ceremonies. Transparent systems such as STARKs avoid that setup entirely, at the cost of larger proofs. Pairing-based constructions also inherit the discrete logarithm's vulnerability to quantum attack, while suitably designed hash-based systems avoid that particular attack; their post-quantum security still depends on parameters and assumptions.</p>
       </div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-globe"/></svg></span><span class="panel-title">Where You Use It Today</span></div>
-      <div class="panel-body"><p>Zcash uses zk-SNARKs to validate shielded transactions without revealing sender, recipient or amount. Ethereum rollups post a succinct proof that thousands of transactions executed correctly, so the main chain need not re-run them. Anonymous credential systems let you prove an attribute &mdash; over eighteen, a citizen, a subscriber &mdash; without disclosing the underlying document. And every Schnorr or EdDSA signature you verify is a zero-knowledge proof of knowledge that has been made non-interactive.</p></div>
+      <div class="panel-body"><p>Zcash uses zero-knowledge proofs for shielded transactions. Validity rollups can prove that batches of transactions executed correctly; optimistic rollups use a different mechanism. Anonymous credentials can prove attributes without disclosing the full credential. Schnorr and EdDSA signatures use related commitment-and-challenge ideas, but it is misleading to call every signature a zero-knowledge transcript with the guarantees of this interactive demonstration.</p></div>
     </div>
 
   </div>
@@ -154,12 +154,14 @@
         <p><strong>Three messages:</strong> commit, challenge, respond.</p>
         <p><strong>Completeness:</strong> honest provers always pass.</p>
         <p><strong>Soundness:</strong> a cheat's odds are 1 in the challenge space.</p>
-        <p><strong>Zero knowledge:</strong> the transcript can be forged by anyone, so it reveals nothing.</p>
-        <p style="margin-top:14px;border-top:1px solid var(--gold-b);padding-top:12px;">The mathematics is in the <a href="../hall-of-foundations/pairings.html">Hall of Foundations</a>: the bilinear pairing behind the succinct variants, and <a href="../hall-of-foundations/random-oracle.html">the oracle</a> Fiat&ndash;Shamir leans on.</p>
+        <p><strong>Honest-verifier zero knowledge:</strong> a simulator matches the honest transcript distribution without knowing the witness.</p>
+        <p style="margin-top:14px;border-top:1px solid var(--gold-b);padding-top:12px;">The mathematics is in the <a href="../hall-of-foundations/pairings.html">Hall of Foundations</a>: pairings used by some succinct proof systems, and <a href="../hall-of-foundations/random-oracle.html">the oracle</a> Fiat&ndash;Shamir leans on.</p>
       </div>
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="primary-sources"><div class="panel-body"><h2 id="primary-sources">Primary Sources</h2><p><a href="https://www.rfc-editor.org/rfc/rfc8235.html">RFC 8235 (Schnorr NIZK proof, 2017)</a>; <a href="https://www.rfc-editor.org/rfc/rfc8032.html">RFC 8032 (EdDSA, 2017)</a>. These specify related but distinct constructions; this page implements only the small interactive teaching model.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
@@ -229,7 +231,7 @@
 
   function honest(){
     var x=getX(), y=PM.powmod(G.g,x,G.p);
-    var r=ri(1,G.q-1), t=PM.schnorrCommit(r,G);
+    var r=ri(0,G.q-1), t=PM.schnorrCommit(r,G);
     var c=ri(0,G.q-1), s=PM.schnorrRespond(r,c,x,G);
     var ok=PM.schnorrVerify(t,c,s,y,G);
     el("proofOut").innerHTML=
@@ -243,7 +245,7 @@
 
   function cheat(){
     var x=getX(), y=PM.powmod(G.g,x,G.p);
-    var t=PM.schnorrCommit(ri(1,G.q-1),G);
+    var t=PM.schnorrCommit(ri(0,G.q-1),G);
     var c=ri(0,G.q-1), s=ri(0,G.q-1);
     var ok=PM.schnorrVerify(t,c,s,y,G);
     el("proofOut").innerHTML=
@@ -258,7 +260,7 @@
   function cheatRuns(){
     var x=getX(), y=PM.powmod(G.g,x,G.p), wins=0, T=500;
     for(var i=0;i<T;i++){
-      var t=PM.schnorrCommit(ri(1,G.q-1),G);
+      var t=PM.schnorrCommit(ri(0,G.q-1),G);
       if(PM.schnorrVerify(t,ri(0,G.q-1),ri(0,G.q-1),y,G)) wins++;
     }
     el("proofOut").innerHTML=
@@ -269,7 +271,7 @@
 
   function simulate(){
     var x=getX(), y=PM.powmod(G.g,x,G.p);
-    var c=ri(0,G.q-1), s=ri(1,G.q-1);
+    var c=ri(0,G.q-1), s=ri(0,G.q-1);
     var sim=PM.schnorrSimulate(c,s,y,G);
     if(!sim){ el("simOut").textContent="Degenerate draw; press again."; return; }
     var ok=PM.schnorrVerify(sim.t,sim.c,sim.s,y,G);
@@ -284,7 +286,7 @@
 
   function extract(){
     var x=getX();
-    var r=ri(1,G.q-1);
+    var r=ri(0,G.q-1);
     var c1=ri(0,G.q-1), c2=ri(0,G.q-1);
     if(c1===c2) c2=(c1+1)%G.q;
     var s1=PM.schnorrRespond(r,c1,x,G), s2=PM.schnorrRespond(r,c2,x,G);

@@ -72,12 +72,7 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§1</span><h2>Not an ellipse</h2></div>
-    <p>
-      An <span class="term">elliptic curve</span> is the graph of a cubic in
-      Weierstrass form. The name is a historical hand-me-down from the integrals
-      that measure an ellipse's arc — the curve itself is this looping shape,
-      symmetric across the x-axis.
-    </p>
+    <p>A nonsingular Weierstrass cubic, together with its point at infinity, defines the group shown here. Its real points form a smooth symmetric plot; the number of connected components depends on the coefficients. The name comes from elliptic integrals, not from being an ellipse.</p>
     <div class="eq">y² = x³ + ax + b</div>
   </section>
 
@@ -206,6 +201,11 @@
   function drawConstruction(){
     cons.innerHTML=""; if(picks.length<2)return;
     var P=picks[0],Q=picks[1],res=addPoints(P,Q),third=res.third,sum=res.sum,m=res.slope;
+    if(sum===null){
+      cons.appendChild(make("line",{x1:sx(P[0]),y1:0,x2:sx(P[0]),y2:H,stroke:"#C85A5A","stroke-width":2}));
+      readout.textContent="P + Q = ∞ — the point at infinity (the group identity).";
+      return;
+    }
     var yL=P[1]+m*(xmin-P[0]), yR=P[1]+m*(xmax-P[0]);
     cons.appendChild(make("line",{x1:sx(xmin),y1:sy(yL),x2:sx(xmax),y2:sy(yR),stroke:"#C85A5A","stroke-width":2,"stroke-opacity":0.85}));
     cons.appendChild(dot(third[0],third[1],"#d98a7a",5));

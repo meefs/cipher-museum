@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHA-256 &mdash; The Cipher Museum</title>
-  <meta name="description" content="SHA-256 (2001) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.">
+  <meta name="description" content="SHA-256 (2002) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.">
   <meta property="og:title" content="SHA-256 &mdash; The Cipher Museum">
-  <meta property="og:description" content="SHA-256 (2001) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.">
+  <meta property="og:description" content="SHA-256 (2002) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/sha256.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SHA-256 &mdash; The Cipher Museum">
-  <meta name="twitter:description" content="SHA-256 (2001) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.">
+  <meta name="twitter:description" content="SHA-256 (2002) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/sha256.html">
@@ -56,17 +56,17 @@
     SHA-256
   </div>
   <div class="page-meta">
-    <span class="badge era-modern">Modern &middot; 2001</span>
+    <span class="badge era-modern">Modern &middot; 2002</span>
   </div>
   <h1 class="page-title">SHA-256</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--secure" href="../museum-map.html#trust-labels" title="Still considered secure when used correctly with modern key handling." aria-label="Trust label: Secure (Modern). Still considered secure when used correctly with modern key handling."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span class="trust-label__text">Secure (Modern)</span></a></div>
   <p class="page-tagline">A 256-bit fingerprint for any input &mdash; one-way, collision-resistant, and the verification engine of the digital world.</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">NSA (designed); published by NIST as FIPS 180-2 in 2001</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">2001</span></div>
+    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">NSA (designed); published by NIST as FIPS 180-2 in 2002</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">2002</span></div>
     <div class="fact"><span class="fact-label">Type</span><span class="fact-value">Cryptographic hash function (Merkle-Damg&aring;rd construction over the SHA-2 compression function) &mdash; <strong>not a cipher</strong></span></div>
     <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Secure; SHA-3 (Keccak) standardised 2015 as a structural alternative, not a replacement</span></div>
-    <div class="fact"><span class="fact-label">Modern Role</span><span class="fact-value">TLS certificate signatures, software integrity (Git commits, package managers), password storage (with KDFs), Bitcoin proof-of-work, any digital signature scheme</span></div>
+    <div class="fact"><span class="fact-label">Modern Role</span><span class="fact-value">Certificate signatures, software checksums, selected password KDFs, Bitcoin proof-of-work and selected signature schemes</span></div>
   </div>
 </div>
 
@@ -75,22 +75,22 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>A hash function takes any input &mdash; one byte or one terabyte &mdash; and produces a fixed-length output that acts as a unique fingerprint. SHA-256 is the workhorse hash of the post-2010 internet: Git commit IDs, Bitcoin block hashes, TLS certificate signatures, and most password-storage schemes are all built on it. It is not a cipher: there is no key, no decryption, and no way to recover the input from the output. That irreversibility is the entire point.</p>
+      <p>A cryptographic hash maps a variable-length message to a fixed-length digest. Different inputs must sometimes share a digest; collision resistance means that finding such a pair should be computationally infeasible. SHA-256 is widely used for checksums, signatures and Bitcoin proof-of-work. It has no decryption operation, but an attacker can still guess a low-entropy input and compare its digest. A bare hash also does not authenticate its sender.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>SHA-0 (1993) was the NSA's first published hash; an undisclosed weakness led to SHA-1 in 1995. Cryptanalytic advances against MD5 (broken 2004) and SHA-1 (theoretical break 2005, full collision 2017) prompted NIST to standardise the SHA-2 family in 2001 (FIPS 180-2): SHA-224, SHA-256, SHA-384, SHA-512. SHA-256 became the default. After the SHA-1 wake-up call NIST also ran an open competition (2007&ndash;2012) for a structurally different backup; Keccak won and became SHA-3 in 2015 &mdash; not because SHA-256 broke, but to avoid a single-point-of-failure design.</p></div>
+      <div class="panel-body"><p>NIST published SHA-1 in 1995 and FIPS 180-2 in August 2002, adding SHA-256, SHA-384 and SHA-512. SHA-224 was added in a 2004 change notice. The widely publicized MD5 collisions of 2004 and SHA-1 attacks from 2005 therefore came after this SHA-2 standardization. NIST later selected Keccak through a public competition; SHA-3 was standardized in 2015 as a structurally different family, not because full SHA-256 had been practically broken.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>The input is padded so its length is congruent to 448 mod 512, then a 64-bit length is appended. The padded message is split into 512-bit blocks. Each block is processed by the <em>compression function</em>, which mixes the block into a 256-bit internal state through 64 rounds of bitwise operations: rotations, XORs, AND/OR/NOT, modular addition, and round constants derived from the cube roots of the first 64 primes. After the last block the internal state is the hash output.</p><p>Two security properties matter: <strong>preimage resistance</strong> (given a hash, you cannot find an input that produces it &mdash; would take ~2<sup>256</sup> tries) and <strong>collision resistance</strong> (you cannot find two inputs with the same hash &mdash; would take ~2<sup>128</sup> tries by the birthday bound).</p></div>
+      <div class="panel-body"><p>The input is padded so its length is congruent to 448 mod 512, then a 64-bit length is appended. The padded message is split into 512-bit blocks. Each block is processed by the <em>compression function</em>, which mixes the block into a 256-bit internal state through 64 rounds of bitwise operations: rotations, XORs, AND/OR/NOT, modular addition, and round constants derived from the cube roots of the first 64 primes. After the last block the internal state is the hash output.</p><p>Two security goals are preimage resistance (finding an input for a specified digest) and collision resistance (finding any two distinct inputs with the same digest). Generic classical work factors for an ideal 256-bit hash are about 2<sup>256</sup> and 2<sup>128</sup> respectively. These are search-model estimates, not a guarantee that a guessable password takes that much work to recover.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
-      <div class="panel-body"><p>No collision has ever been found in SHA-256. The best published attack reaches 31 of the 64 rounds. SHA-256 is theoretically vulnerable to length-extension attacks &mdash; if you know <code>H(secret &Vert; data)</code> and <code>len(secret &Vert; data)</code>, you can compute <code>H(secret &Vert; data &Vert; padding &Vert; extension)</code> without knowing the secret. The standard mitigation is HMAC-SHA-256 or SHA-3, neither of which has the flaw. Quantum computers using Grover's algorithm reduce SHA-256 preimage resistance from 2<sup>256</sup> to 2<sup>128</sup> &mdash; still secure, which is why SHA-256 is considered post-quantum-safe at lower security levels.</p></div>
+      <div class="panel-body"><p>No practical collision attack is known against full SHA-256. Its Merkle&ndash;Damg&aring;rd structure permits length extension: from H(secret &#x2016; data) and its length, an attacker can derive a digest for an extended message without learning the secret. Therefore that construction is not a safe message authentication code. Use an appropriate keyed construction such as HMAC-SHA-256; changing to an unkeyed SHA-3 hash does not itself provide authentication. Idealized Grover search reduces the generic preimage query exponent, but does not give an inexpensive real-world attack or settle every post-quantum application.</p></div>
     </div>
 
     <div class="panel">
@@ -99,12 +99,12 @@
         <table class="cipher-table">
           <thead><tr><th>Where</th><th>How SHA-256 is Used</th></tr></thead>
           <tbody>
-            <tr><td>TLS / HTTPS</td><td>Every certificate's signature uses SHA-256 (SHA-1 deprecated since 2017)</td></tr>
-            <tr><td>Git</td><td>Every commit, tree, and blob is identified by its SHA-1 hash today; Git is migrating to SHA-256</td></tr>
-            <tr><td>Bitcoin</td><td>Proof-of-work mines for inputs whose double SHA-256 hash starts with N zero bits</td></tr>
-            <tr><td>Password storage</td><td>Used inside KDFs like PBKDF2-HMAC-SHA256, scrypt, Argon2 (which uses BLAKE2)</td></tr>
+            <tr><td>TLS / HTTPS</td><td>SHA-256 is common; certificate signatures can use other approved hashes and signature algorithms</td></tr>
+            <tr><td>Git</td><td>Git supports SHA-1 repositories and a SHA-256 object format; repository format determines the identifier</td></tr>
+            <tr><td>Bitcoin</td><td>Proof-of-work searches for a double-SHA-256 digest, interpreted as an integer, below the current target</td></tr>
+            <tr><td>Password storage</td><td>Used in PBKDF2-HMAC-SHA256 and scrypt. Argon2 instead uses BLAKE2b internally; raw SHA-256 is unsuitable for password storage</td></tr>
             <tr><td>Software integrity</td><td><code>sha256sum</code>, package manager checksums, signed releases on every modern OS</td></tr>
-            <tr><td>Digital signatures</td><td>RSA-PSS, ECDSA, and Ed25519 all sign the SHA-256 hash of the message, not the raw bytes</td></tr>
+            <tr><td>Digital signatures</td><td>RSA-PSS and ECDSA can use SHA-256. Ed25519 uses SHA-512 as specified in RFC 8032</td></tr>
           </tbody>
         </table>
       </div>
@@ -119,18 +119,20 @@
       <div class="panel-body">
         <table class="cipher-table">
           <tbody>
-            <tr><td>Era</td><td>Modern &middot; 2001</td></tr>
+            <tr><td>Era</td><td>Modern &middot; 2002</td></tr>
             <tr><td>Status</td><td>Secure; SHA-3 (Keccak) standardised 2015 as a structural alternative, not a replacement</td></tr>
-            <tr><td>Origin</td><td>NSA (designed); published by NIST as FIPS 180-2 in 2001</td></tr>
-            <tr><td>Year</td><td>2001</td></tr>
+            <tr><td>Origin</td><td>NSA (designed); published by NIST as FIPS 180-2 in 2002</td></tr>
+            <tr><td>Year</td><td>2002</td></tr>
             <tr><td>Type</td><td>Cryptographic hash function (Merkle-Damg&aring;rd construction over the SHA-2 compression function) &mdash; <strong>not a cipher</strong></td></tr>
-            <tr><td>Modern Role</td><td>TLS certificate signatures, software integrity (Git commits, package managers), password storage (with KDFs), Bitcoin proof-of-work, any digital signature scheme</td></tr>
+            <tr><td>Modern Role</td><td>Certificate signatures, software checksums, selected password KDFs, Bitcoin proof-of-work and selected signature schemes</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="primary-sources"><div class="panel-body"><h2 id="primary-sources">Primary Sources</h2><p><a href="https://csrc.nist.gov/pubs/fips/180-2/final">FIPS 180-2 (August 2002)</a> and its <a href="https://csrc.nist.gov/pubs/fips/180-2/upd1/final">2004 change notice</a>; <a href="https://www.rfc-editor.org/rfc/rfc8032.html">RFC 8032 (EdDSA, 2017)</a>; <a href="https://www.rfc-editor.org/rfc/rfc9106.html">RFC 9106 (Argon2, 2021)</a>; <a href="https://git-scm.com/docs/hash-function-transition">Git hash-function transition documentation</a>.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
@@ -153,7 +155,7 @@
       <a href="../hall-of-foundations/random-oracle.html" class="related-card">
       <span class="related-card__number">&sect;154 &middot; Foundations</span>
       <span class="related-card__name">The Random Oracle</span>
-      <span class="related-card__tag">The mathematics beneath: the ideal hash every security proof assumes</span>
+      <span class="related-card__tag">The mathematics beneath: an ideal hash model used by some security proofs</span>
     </a>
   </div>
 </section>

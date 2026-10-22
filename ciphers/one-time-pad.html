@@ -23,7 +23,7 @@
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="stylesheet" href="../css/museum.css">
   <link rel="stylesheet" href="../css/pad-experiments.css">
-  
+
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -67,8 +67,8 @@
   </div>
   <h1 class="page-title">One-Time Pad</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--secure" href="../museum-map.html#trust-labels" title="Still considered secure when used correctly with modern key handling." aria-label="Trust label: Secure (Modern). Still considered secure when used correctly with modern key handling."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span class="trust-label__text">Secure (Modern)</span></a></div>
-  <p class="page-tagline">The only cipher proved mathematically unbreakable — and nearly impossible to use correctly</p>
-  <p class="exhibit-status-note">Requires a secret, truly random, message-length pad used once.</p>
+  <p class="page-tagline">A canonical cipher with proven perfect secrecy — and nearly impossible to use correctly</p>
+  <p class="exhibit-status-note">Perfect secrecy requires an independent, uniformly random secret pad at least as long as the message, used once. No authentication.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Frank Miller (1882) · Vernam (1917) · Shannon (1949)</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1882 / 1917</span></div>
@@ -113,12 +113,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The only cipher mathematically proven to be unbreakable. Claude Shannon’s 1949 proof of its perfect secrecy is a cornerstone of information theory — and the VENONA project showed exactly what happens when its rules are violated.</p>
+      <p>The one-time pad is a canonical example of perfect secrecy when its assumptions hold. Claude Shannon’s 1949 proof of its perfect secrecy is a cornerstone of information theory — and the VENONA project showed exactly what happens when its rules are violated.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Frank Miller described a one-time pad system in 1882. Gilbert Vernam patented a teletype version in 1917. But it was Claude Shannon who proved in 1949 that the OTP achieves <em>perfect secrecy</em> — ciphertext reveals absolutely nothing about the plaintext to an attacker with unlimited computing power.</p><p style="margin-top:1rem;">The VENONA project showed exactly what happens when the rules are broken: Soviet signals officers reused key pages under WWII supply pressure. Army codebreakers at Arlington Hall — work later continued under the NSA — decoded thousands of messages and identified Julius Rosenberg, Klaus Fuchs, and other Soviet agents.</p></div>
+      <div class="panel-body"><p>Frank Miller described a one-time pad system in 1882. Gilbert Vernam developed a teleprinter system in 1917 and received its patent in 1919. But it was Claude Shannon who proved in 1949 that the OTP achieves <em>perfect secrecy</em> — ciphertext reveals absolutely nothing about the plaintext to an attacker with unlimited computing power.</p><p style="margin-top:1rem;">The VENONA project showed exactly what happens when the rules are broken: Soviet signals officers reused key pages under WWII supply pressure. Army codebreakers at Arlington Hall — work later continued under the NSA — decoded thousands of messages and identified Julius Rosenberg, Klaus Fuchs, and other Soviet agents.</p></div>
     </div>
 
     <div class="panel">
@@ -207,7 +207,7 @@ Violate any condition → security collapses</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="callout callout-success"><span class="callout-icon">🔒</span><div class="callout-body"><p><strong>Shannon's proof (1949):</strong> For any ciphertext C and any possible plaintext P, P(plaintext=P | ciphertext=C) = P(plaintext=P). The ciphertext provides zero information about the plaintext. An attacker with unlimited computing power cannot do better than random guessing.</p></div></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">VENONA: Key Reuse Attack</div><div class="attack-diff">Complexity: Moderate if pads reused</div><p class="attack-desc">C1 XOR C2 = P1 XOR P2. If two messages are encrypted with the same key, XORing the ciphertexts eliminates the key and produces the XOR of the plaintexts. With enough crib-based guessing, both plaintexts can be recovered. The Soviets reused pads in 1942-1943 under wartime supply pressure — giving the NSA its entry point.</p></div></div>
+      <div class="panel-body"><div class="callout callout-success"><span class="callout-icon">🔒</span><div class="callout-body"><p><strong>Shannon's proof (1949):</strong> For any ciphertext C and any possible plaintext P, P(plaintext=P | ciphertext=C) = P(plaintext=P). The ciphertext provides zero information about the plaintext. An attacker with unlimited computing power cannot improve on the best guess justified by the plaintext's prior distribution.</p></div></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">VENONA: Key Reuse Attack</div><div class="attack-diff">Complexity: Moderate if pads reused</div><p class="attack-desc">C1 XOR C2 = P1 XOR P2. If two messages are encrypted with the same key, XORing the ciphertexts eliminates the key and produces the XOR of the plaintexts. With enough crib-based guessing, both plaintexts can be recovered. The Soviets reused pads in 1942-1943 under wartime supply pressure — giving the NSA its entry point.</p></div></div>
     </div>
 
     <div class="panel">
@@ -216,9 +216,9 @@ Violate any condition → security collapses</pre>
         <table class="cipher-table">
           <thead><tr><th>Concept from One-Time Pad</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Perfect secrecy (Shannon, 1949)</td><td>Information-theoretic vs computational security: the fundamental distinction</td></tr>
-<tr><td>XOR as cipher operation</td><td>Every modern stream cipher uses XOR with a keystream</td></tr>
+<tr><td>XOR as cipher operation</td><td>Many modern stream ciphers combine data with a pseudorandom keystream using XOR</td></tr>
 <tr><td>Key = message length</td><td>The impracticality drove development of public-key cryptography (RSA, DH)</td></tr>
-<tr><td>Key reuse is catastrophic</td><td>Nonces, IVs, session keys: modern protocols prevent key reuse by design</td></tr></tbody>
+<tr><td>Key reuse is catastrophic</td><td>Modern stream constructions require appropriate nonce and keystream handling; they can safely reuse a long-term key under their specified conditions</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -264,7 +264,7 @@ of the possible plaintexts.</pre></div>
 
   </div>
   <div class="exhibit-side">
-    
+
     <div class="panel" style="border-color:var(--gold-b);">
       <div class="panel-head" style="background:var(--gold-glow);border-color:var(--gold-b);">
         <span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-swords"/></svg></span><span class="panel-title" style="color:var(--gold);">Quick Facts</span>

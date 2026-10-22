@@ -69,14 +69,14 @@
       <table class="cipher-table">
         <thead><tr><th>Classical Cipher Type</th><th>Fatal Weakness</th><th>Modern Solution</th><th>Modern Example</th></tr></thead>
         <tbody>
-          <tr><td>Caesar / Monoalphabetic</td><td>Frequency analysis — letter mapping preserved</td><td>Non-linear S-boxes destroy all frequency patterns</td><td>AES SubBytes</td></tr>
-          <tr><td>Homophonic Substitution</td><td>Still monoalphabetic — poor distribution leaks info</td><td>Uniformly random output: every ciphertext byte equally likely</td><td>AES with proper IV</td></tr>
+          <tr><td>Caesar / Monoalphabetic</td><td>Frequency analysis — letter mapping preserved</td><td>Nonlinear substitution combined with diffusion and key mixing</td><td>AES SubBytes</td></tr>
+          <tr><td>Homophonic Substitution</td><td>One-to-many substitution can retain language and structural clues</td><td>Computational security under a defined attack model</td><td>AES in an appropriate authenticated mode</td></tr>
           <tr><td>Polyalphabetic / Vigenère</td><td>Repeating key creates detectable periodicity</td><td>Non-repeating pseudorandom keystreams, nonce + counter</td><td>ChaCha20, AES-GCM</td></tr>
           <tr><td>Transposition (Rail Fence, Columnar)</td><td>Letters preserved — anagram attacks work</td><td>Substitution combined with permutation every round</td><td>AES ShiftRows + MixColumns</td></tr>
           <tr><td>Playfair / Hill (block)</td><td>Small blocks leak digraph statistics; linear algebra solvable</td><td>128-bit blocks, non-linear operations, round keys</td><td>AES (128-bit block)</td></tr>
           <tr><td>Fractionation (Bifid, ADFGVX)</td><td>Coordinate mixing insufficient with static key square</td><td>Multiple rounds of mixing with key-derived round keys</td><td>AES 10–14 rounds</td></tr>
-          <tr><td>Military layered (ADFGVX, VIC)</td><td>Substitution + transposition — each layer still attackable</td><td>10–14 rounds of 4 operations — computationally infeasible to reverse</td><td>AES, Camellia, SM4</td></tr>
-          <tr><td>Rotor machines (Enigma, Lorenz)</td><td>Physical key distribution; operator errors; structural flaws</td><td>Public-key cryptography eliminates need for shared secret distribution</td><td>RSA, Diffie-Hellman, ECDH</td></tr>
+          <tr><td>Layered classical systems</td><td>Substitution + transposition — each layer still attackable</td><td>Multiple designed rounds; security depends on the whole construction</td><td>AES, Camellia, SM4</td></tr>
+          <tr><td>Rotor machines (Enigma, Lorenz)</td><td>Physical key distribution; operator errors; structural flaws</td><td>Authenticated public-key methods help establish shared secrets</td><td>RSA, Diffie-Hellman, ECDH</td></tr>
           <tr><td>One-Time Pad</td><td>Impractical key management — reuse is catastrophic</td><td>Computationally secure with short key; KDFs for key derivation</td><td>AES-256, X25519 key exchange</td></tr>
         </tbody>
       </table>
@@ -88,14 +88,14 @@
     <div class="mc">
       <div class="mc-name">Caesar / Monoalphabetic</div>
       <div class="mc-row"><span class="mc-label">Weakness</span><span class="mc-val">Frequency analysis — letter mapping preserved</span></div>
-      <div class="mc-row"><span class="mc-label">Solution</span><span class="mc-val">Non-linear S-boxes destroy all frequency patterns</span></div>
+      <div class="mc-row"><span class="mc-label">Solution</span><span class="mc-val">Nonlinear substitution combined with diffusion and key mixing</span></div>
       <div class="mc-row"><span class="mc-label">Example</span><span class="mc-val">AES SubBytes</span></div>
     </div>
     <div class="mc">
       <div class="mc-name">Homophonic Substitution</div>
-      <div class="mc-row"><span class="mc-label">Weakness</span><span class="mc-val">Still monoalphabetic — poor distribution leaks info</span></div>
-      <div class="mc-row"><span class="mc-label">Solution</span><span class="mc-val">Uniformly random output: every ciphertext byte equally likely</span></div>
-      <div class="mc-row"><span class="mc-label">Example</span><span class="mc-val">AES with proper IV</span></div>
+      <div class="mc-row"><span class="mc-label">Weakness</span><span class="mc-val">One-to-many substitution can retain language and structural clues</span></div>
+      <div class="mc-row"><span class="mc-label">Solution</span><span class="mc-val">Computational security under a defined attack model</span></div>
+      <div class="mc-row"><span class="mc-label">Example</span><span class="mc-val">AES in an appropriate authenticated mode</span></div>
     </div>
     <div class="mc">
       <div class="mc-name">Polyalphabetic / Vigenère</div>
@@ -122,15 +122,15 @@
       <div class="mc-row"><span class="mc-label">Example</span><span class="mc-val">AES 10–14 rounds</span></div>
     </div>
     <div class="mc">
-      <div class="mc-name">Military layered (ADFGVX, VIC)</div>
+      <div class="mc-name">Layered classical systems</div>
       <div class="mc-row"><span class="mc-label">Weakness</span><span class="mc-val">Substitution + transposition — each layer still attackable</span></div>
-      <div class="mc-row"><span class="mc-label">Solution</span><span class="mc-val">10–14 rounds of 4 operations — computationally infeasible to reverse</span></div>
+      <div class="mc-row"><span class="mc-label">Solution</span><span class="mc-val">Multiple designed rounds; security depends on the whole construction</span></div>
       <div class="mc-row"><span class="mc-label">Example</span><span class="mc-val">AES, Camellia, SM4</span></div>
     </div>
     <div class="mc">
       <div class="mc-name">Rotor machines (Enigma, Lorenz)</div>
       <div class="mc-row"><span class="mc-label">Weakness</span><span class="mc-val">Physical key distribution; operator errors; structural flaws</span></div>
-      <div class="mc-row"><span class="mc-label">Solution</span><span class="mc-val">Public-key cryptography eliminates need for shared secret distribution</span></div>
+      <div class="mc-row"><span class="mc-label">Solution</span><span class="mc-val">Authenticated public-key methods help establish shared secrets</span></div>
       <div class="mc-row"><span class="mc-label">Example</span><span class="mc-val">RSA, Diffie-Hellman, ECDH</span></div>
     </div>
     <div class="mc">
@@ -148,14 +148,14 @@
       <div class="panel-head" style="background:var(--gold-glow);border-color:var(--gold-b);"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-puzzle"/></svg></span><span class="panel-title" style="color:var(--gold);">Confusion</span></div>
       <div class="panel-body">
         <p>Making the relationship between key and ciphertext as complex as possible. Caesar has zero confusion: C = P + 3. One known pair reveals the entire key.</p>
-        <p style="margin-top:.75rem;"><strong>Modern solution:</strong> AES S-boxes are highly non-linear. Every output bit depends on every input bit in a way that can't be described by any simple mathematical relationship.</p>
+        <p style="margin-top:.75rem;"><strong>Modern solution:</strong> AES S-boxes are highly non-linear. The S-box has a precise public algebraic definition. Its nonlinearity works with the other round operations; an S-box alone does not make encryption secure.</p>
       </div>
     </div>
     <div class="panel" style="border-color:var(--gold-b);">
       <div class="panel-head" style="background:var(--gold-glow);border-color:var(--gold-b);"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-globe"/></svg></span><span class="panel-title" style="color:var(--gold);">Diffusion</span></div>
       <div class="panel-body">
         <p>Spreading each plaintext bit's influence across many ciphertext bits. Caesar has zero diffusion: change one letter, change exactly one ciphertext letter.</p>
-        <p style="margin-top:.75rem;"><strong>Modern solution:</strong> AES avalanche effect — after 2 rounds, every output bit depends on every input bit. After 10 rounds, changing 1 bit changes ~50% of all output bits.</p>
+        <p style="margin-top:.75rem;"><strong>Modern solution:</strong> AES combines ShiftRows and MixColumns to spread byte dependencies. Across suitable inputs, changing one bit of a full AES input changes about half the output bits on average; this is not an exact per-message promise or a standalone security proof.</p>
       </div>
     </div>
   </div>
@@ -193,7 +193,7 @@
   <div style="margin-bottom:2.5rem;">
     <div style="font-family:var(--fm);font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--s4);">🔓 Public-Key Cryptography — Asymmetric Encryption &amp; Signatures</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;">
-      <a href="ciphers/rsa.html" class="panel" style="text-decoration:none;color:inherit;display:block;"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-key"/></svg></span><span class="panel-title">RSA (Asymmetric) <span style="color:var(--gold);font-size:.7rem;">→ exhibit</span></span></div><div class="panel-body"><p>Rivest, Shamir, Adleman (1977). Two keys — public (encrypt) and private (decrypt) — secured by the difficulty of factoring large primes. Used in TLS, email, and digital signatures.</p>
+      <a href="ciphers/rsa.html" class="panel" style="text-decoration:none;color:inherit;display:block;"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-key"/></svg></span><span class="panel-title">RSA (Asymmetric) <span style="color:var(--gold);font-size:.7rem;">→ exhibit</span></span></div><div class="panel-body"><p>Rivest, Shamir, Adleman (1977). Two keys — public (encrypt) and private (decrypt) — based on arithmetic modulo a product of large primes; factoring that composite reveals the private key. Used in TLS, email, and digital signatures.</p>
       </div></a>
     </div>
   </div>
@@ -202,7 +202,7 @@
   <div style="margin-bottom:2.5rem;">
     <div style="font-family:var(--fm);font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--s4);">#️⃣ Hash Functions — One-Way Fingerprints</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;">
-      <a href="ciphers/sha256.html" class="panel" style="text-decoration:none;color:inherit;display:block;"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-lock"/></svg></span><span class="panel-title">SHA-256 (Hash Function) <span style="color:var(--gold);font-size:.7rem;">→ exhibit</span></span></div><div class="panel-body"><p>Produces a fixed 256-bit fingerprint of any input. One-way: given the hash, you cannot recover the input. Collision-resistant: finding two inputs with the same hash requires 2¹²⁸ operations. Used in digital signatures, certificate verification, blockchain. <em>Not a cipher — it cannot be reversed.</em></p>
+      <a href="ciphers/sha256.html" class="panel" style="text-decoration:none;color:inherit;display:block;"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-lock"/></svg></span><span class="panel-title">SHA-256 (Hash Function) <span style="color:var(--gold);font-size:.7rem;">→ exhibit</span></span></div><div class="panel-body"><p>Produces a fixed 256-bit fingerprint of any input. Preimage resistance means finding an input for a chosen digest should be computationally difficult; low-entropy inputs can still be guessed. Generic collision search takes roughly 2¹²⁸ work, rather than having a proven exact lower bound. Used in digital signatures, certificate verification, blockchain. <em>Not a cipher — it cannot be reversed.</em></p>
       </div></a>
     </div>
   </div>
@@ -211,13 +211,13 @@
   <div style="margin-bottom:3rem;">
     <div style="font-family:var(--fm);font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--s4);">🔮 The Future — Post-Quantum Cryptography</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;">
-      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-flask"/></svg></span><span class="panel-title">Post-Quantum Cryptography</span></div><div class="panel-body"><p>Quantum computers will break RSA and Diffie-Hellman. NIST standardised its replacements in 2024: <strong>ML-KEM</strong> (formerly CRYSTALS-Kyber, key encapsulation) and <strong>ML-DSA</strong> (formerly CRYSTALS-Dilithium, signatures), both resting on lattice problems believed to resist quantum attack. The mathematics is on exhibit in the Hall of Foundations: <a href="hall-of-foundations/lattices-svp.html">lattices &amp; the SVP</a>, <a href="hall-of-foundations/closest-vector.html">the closest-vector problem</a>, <a href="hall-of-foundations/learning-with-errors.html">Learning With Errors</a> &mdash; the algebra the standards are actually keyed on &mdash; and <a href="hall-of-foundations/polynomial-rings.html">polynomial rings</a>.</p></div></div>
+      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-flask"/></svg></span><span class="panel-title">Post-Quantum Cryptography</span></div><div class="panel-body"><p>Sufficiently large, fault-tolerant quantum computers could break conventional RSA and Diffie–Hellman using Shor’s algorithm. NIST standardized the first three algorithms from its post-quantum project in 2024: <strong>ML-KEM</strong> (formerly CRYSTALS-Kyber, key encapsulation) and <strong>ML-DSA</strong> (formerly CRYSTALS-Dilithium, signatures), both based on structured lattice problems. NIST also standardized the hash-based SLH-DSA signature scheme in 2024. These are intended to resist known quantum attacks; they are not proofs against every future attack. The mathematics is on exhibit in the Hall of Foundations: <a href="hall-of-foundations/lattices-svp.html">lattices &amp; the SVP</a>, <a href="hall-of-foundations/closest-vector.html">the closest-vector problem</a>, <a href="hall-of-foundations/learning-with-errors.html">Learning With Errors</a> &mdash; an introduction to the mathematical setting of lattice-based standards &mdash; and <a href="hall-of-foundations/polynomial-rings.html">polynomial rings</a>.</p></div></div>
 
-      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-quill"/></svg></span><span class="panel-title">Elliptic-Curve Signatures <span style="color:var(--gold);font-size:.7rem;">&rarr; exhibit</span></span></div><div class="panel-body"><p><a href="ciphers/ecdsa.html">ECDSA</a> (1992) proves authorship rather than hiding content: a private scalar on an elliptic curve, a public point, and a signature anyone can check. A 256-bit curve key matches a 3072-bit RSA key for strength. Its mathematics has never been broken; its implementations have, repeatedly, always at the one-time nonce. The group law is in <a href="hall-of-foundations/elliptic-curves-real.html">the Hall of Foundations</a>.</p></div></div>
+      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-quill"/></svg></span><span class="panel-title">Elliptic-Curve Signatures <span style="color:var(--gold);font-size:.7rem;">&rarr; exhibit</span></span></div><div class="panel-body"><p><a href="ciphers/ecdsa.html">ECDSA</a> (1992) proves authorship rather than hiding content: a private scalar on an elliptic curve, a public point, and a signature anyone can check. A 256-bit curve key matches a 3072-bit RSA key for strength. Security requires an appropriate curve and implementation. Reused or biased nonces, side-channel leakage, faults and validation errors can compromise a signer. Shor’s algorithm also applies to the elliptic-curve discrete logarithm problem. The group law is in <a href="hall-of-foundations/elliptic-curves-real.html">the Hall of Foundations</a>.</p></div></div>
 
-      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">Threshold Secret Sharing <span style="color:var(--gold);font-size:.7rem;">&rarr; exhibit</span></span></div><div class="panel-body"><p><a href="ciphers/shamir-secret-sharing.html">Shamir's Secret Sharing</a> (1979) splits a secret among <em>n</em> holders so any <em>k</em> rebuild it and any <em>k</em>&minus;1 learn nothing at all. Unlike everything else on this page its security is <em>information-theoretic</em> &mdash; not a hard problem but an undetermined one, and so immune to quantum attack. It underpins DNSSEC root key ceremonies and modern threshold signatures.</p></div></div>
+      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">Threshold Secret Sharing <span style="color:var(--gold);font-size:.7rem;">&rarr; exhibit</span></span></div><div class="panel-body"><p><a href="ciphers/shamir-secret-sharing.html">Shamir's Secret Sharing</a> (1979) splits a secret among <em>n</em> holders so any <em>k</em> rebuild it and any <em>k</em>&minus;1 learn nothing at all. Unlike everything else on this page its security is <em>information-theoretic</em> &mdash; not a hard problem but an undetermined one, and so immune to quantum attack. Threshold signing protocols can build on secret-sharing ideas but require additional protections; plain Shamir sharing does not authenticate shares or perform signatures.</p></div></div>
 
-      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-mask"/></svg></span><span class="panel-title">Zero-Knowledge Proofs <span style="color:var(--gold);font-size:.7rem;">&rarr; exhibit</span></span></div><div class="panel-body"><p><a href="ciphers/zero-knowledge-proofs.html">Zero-knowledge proofs</a> (1985) convince a verifier a statement is true while revealing nothing beyond its truth. The succinct variants &mdash; zk-SNARKs and STARKs &mdash; validate private transactions and compress whole blocks of computation into a proof small enough to check on a blockchain. Every Schnorr and EdDSA signature is one, made non-interactive by hashing.</p></div></div>
+      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-mask"/></svg></span><span class="panel-title">Zero-Knowledge Proofs <span style="color:var(--gold);font-size:.7rem;">&rarr; exhibit</span></span></div><div class="panel-body"><p><a href="ciphers/zero-knowledge-proofs.html">Zero-knowledge proofs</a> (1985) convince a verifier a statement is true while revealing nothing beyond its truth. The succinct variants &mdash; zk-SNARKs and STARKs &mdash; validate private transactions and compress whole blocks of computation into a proof small enough to check on a blockchain. The Fiat–Shamir transformation connects certain interactive identification protocols to noninteractive proofs or signatures under additional assumptions. A signature is not automatically a general-purpose zero-knowledge proof.</p></div></div>
     </div>
   </div>
 
@@ -241,7 +241,7 @@
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-signal"/></svg></span><span class="panel-title">Cryptography I (Stanford)</span></div>
-      <div class="panel-body"><p>Dan Boneh’s free Coursera course covers modern cryptographic primitives: stream ciphers, block ciphers, MACs, public-key encryption, and key exchange.</p></div>
+      <div class="panel-body"><p>Dan Boneh’s Coursera course covers modern cryptographic primitives: stream ciphers, block ciphers, MACs, public-key encryption, and key exchange.</p></div>
     </div>
   </div>
 

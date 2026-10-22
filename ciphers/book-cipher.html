@@ -61,7 +61,7 @@
   <h1 class="page-title">Book Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
   <p class="page-tagline">If both correspondents have the same book, the book itself is the key.</p>
-  <p class="exhibit-status-note">Identifying the book — the Beale Cipher 2 was solved when the anonymous pamphleteer (published by James Ward, 1885) tried the Declaration of Independence</p>
+  <p class="exhibit-status-note">Security depends on the book, edition and indexing rule; identifying the source or exploiting context can expose messages.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Pre-revolutionary French military couriers; American Revolutionary War</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1700s onward</span></div>
@@ -79,12 +79,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>A book cipher trades cryptographic complexity for a logistical secret: the book itself. If you and I both own a copy of the same edition of <em>Don Quixote</em>, I can encode my message as a list of page/line/word triples and you can read it. Adversaries who don't know which book is in use face a search problem of unbounded size. The American Revolutionary War, the Aaron Burr conspiracy, the Beale Treasure papers, German WWI sleeper-agent traffic, and SOE WWII low-priority cells all used book ciphers.</p>
+      <p>A book cipher uses an agreed reference text and indexing convention. For a page–line–word system, both parties need matching pagination. The unknown reference gives an attacker a search problem, but its size is not unbounded and a famous or predictable book may be easy to guess. Different historical “book ciphers” used different indexing rules.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Benedict Arnold and John André used a book cipher keyed to <em>Blackstone's Commentaries</em> in 1780; Aaron Burr used one for his 1807 conspiracy correspondence. The most famous book cipher is the second of the three Beale papers — encoded against the Declaration of Independence and decoded by James Ward in 1885 (who then published it along with the still-unsolved papers 1 and 3). German agent ciphers in both World Wars frequently used commercial novels (so they could be replaced if compromised). SOE used printed-silk one-time pads for high-value circuits but reverted to book ciphers for low-priority agents whose loss could be tolerated.</p></div>
+      <div class="panel-body"><p>The Arnold–André correspondence is one historical book-code example. The Beale pamphlet is different evidence: its anonymous narrator claims to have decoded the second sequence using the Declaration of Independence, and James B. Ward published the pamphlet in 1885. Publication does not establish Ward as the solver or verify the earlier narrative. The former claim that SOE knowingly used disposable “low-priority” agents is unsupported and has been removed.</p></div>
     </div>
 
     <div class="panel">
@@ -98,7 +98,7 @@
         <div class="attack-panel">
           <div class="attack-name">Identify the Book</div>
           <div class="attack-diff">Complexity: Unbounded search vs. bounded inference</div>
-          <p class="attack-desc">If the analyst can guess the book, decryption is mechanical. Hints leak constantly: a (page, line, word) format that uses small page numbers suggests a pamphlet rather than a novel; recurring locations suggest a short text re-read; word lengths inferable from spacing point at common words. James Ward solved Beale Cipher 2 by simply trying the Declaration of Independence. Beale 1 and 3 remain unsolved because no one has identified <em>their</em> books.</p>
+          <p class="attack-desc">If the reference text and indexing rules are recovered, the corresponding lookups are mechanical. Repeated coordinates and contextual knowledge may help identify them. The unsolved Beale sequences do not prove that a key book exists: a different construction or a hoax remains possible.</p>
         </div>
       </div>
     </div>

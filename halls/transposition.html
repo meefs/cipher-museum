@@ -71,9 +71,7 @@
   <span class="page-eyebrow">Hall IV · 19th – Early 20th Century</span>
   <h1 class="page-title">Transposition &amp; Fractionation</h1>
   <p class="page-tagline">Rearranging the message instead of replacing its letters</p>
-  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">
-    Substitution ciphers replace letters — but their frequencies always leak. What if instead you kept the letters but scrambled their positions? Transposition ciphers do exactly this. Combined with fractionation — splitting each letter into coordinate pieces before rearranging — these systems produced some of the most sophisticated manual ciphers ever designed, and directly inspired the diffusion layers in modern block ciphers.
-  </p>
+  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">Transposition changes symbol positions. Fractionation splits symbols into coordinate components before rearranging them. These methods provide useful comparisons with modern permutations and mixing layers, while their historical variants retain exploitable structure.</p>
   <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem;position:relative;z-index:1;">
     <span class="badge era-19c">19th Century</span>
     <span class="badge era-wwi">WWI</span>
@@ -116,7 +114,7 @@
         <span class="badge era-19c">19th Century</span>
       </div>
       <div class="card-name">Rail Fence Cipher</div>
-      <p class="card-desc">Write the message in a zigzag across imaginary rails; read it row by row. The key is simply the number of rails. The entire keyspace is the number of possible rail counts — brute-forced in seconds even by hand.</p>
+      <p class="card-desc">Rail Fence transposes a message along a zigzag route. Rail count, offset conventions and message length define the search; there is no universal ten-rail maximum.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span><span class="badge" style="background:rgba(90,144,200,.12);color:var(--blue);border:1px solid rgba(90,144,200,.3);">Teaches Permutation</span></div>
         <span class="card-arrow">→</span>
@@ -129,7 +127,7 @@
         <span class="badge era-19c">19th Century</span>
       </div>
       <div class="card-name">Columnar Transposition</div>
-      <p class="card-desc">Write the message in rows across a grid; read columns in keyword-specified order. The column ordering is the key. Frequency analysis still works because all original letters are present — just rearranged.</p>
+      <p class="card-desc">Explore columnar transposition and multiple anagramming: rearrange column strips across three synthetic same-key intercepts and compare a different-key control.</p>
       <div style="font-family:var(--fm);font-size:.75rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.8;letter-spacing:.06em;">
         <span style="color:var(--tx3);">Key: </span><span style="color:var(--gold);">ZEBRA</span><span style="color:var(--tx3);"> → col order: </span><span style="color:var(--gold-lt);">5-2-1-3-4</span>
       </div>
@@ -145,7 +143,7 @@
         <span class="badge era-wwi">WWI · Germany</span>
       </div>
       <div class="card-name">Double Transposition</div>
-      <p class="card-desc">Apply columnar transposition twice with two different keys. The resulting permutation space is enormous. German military intelligence used this in WWI. Still difficult for computers if ciphertext is short and key length is unknown.</p>
+      <p class="card-desc">Two successive columnar transpositions: historical military use, attack conditions, and modern computerized cryptanalysis; not an unbroken cipher until 2013.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span><span class="badge badge-hard">Hard to Break</span></div>
         <span class="card-arrow">→</span>
@@ -158,7 +156,7 @@
         <span class="badge era-19c">1901</span>
       </div>
       <div class="card-name">Bifid Cipher</div>
-      <p class="card-desc">Felix Delastelle's masterwork: Polybius square converts letters to row/column coordinates, which are written in two separate rows, then recombined into new pairs. The fractionation mixes coordinate information across the entire message.</p>
+      <p class="card-desc">Bifid cipher (1901) — Felix Delastelle's fractionation cipher that splits Polybius coordinates, transposes them across a period, and recombines.</p>
       <div style="font-family:var(--fm);font-size:.75rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">H→23, E→15 → rows: 2 1 | cols: 3 5 → new pairs: 21,35 → FP</span>
       </div>
@@ -174,7 +172,7 @@
         <span class="badge era-19c">1902</span>
       </div>
       <div class="card-name">Trifid Cipher</div>
-      <p class="card-desc">Delastelle's extension of Bifid into three dimensions. A 3×3×3 cube replaces the 5×5 square; each letter becomes three coordinates (layer, row, col) which are woven together across the message. Higher entropy fractionation.</p>
+      <p class="card-desc">Trifid cipher (1902) — Felix Delastelle's three-dimensional 3x3x3 extension of the Bifid that fractionates letters into trits and shuffles them across a period.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span><span class="badge era-19c">3D Fractionation</span></div>
         <span class="card-arrow">→</span>
@@ -187,7 +185,7 @@
         <span class="badge era-19c">19th Century</span>
       </div>
       <div class="card-name">Fractionated Morse</div>
-      <p class="card-desc">Convert plaintext to Morse code (dots, dashes, spaces); group the resulting stream into triples; substitute each triple with a letter using a keyed alphabet. Morse's irregular letter lengths introduce structural noise that resists standard frequency analysis.</p>
+      <p class="card-desc">Fractionated Morse — converts text to Morse, regroups dots, dashes, and separators in trigrams, then substitutes via a keyed alphabet. Broken by trigram stats.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span><span class="badge badge-hard">Hard to Break</span></div>
         <span class="card-arrow">→</span>
@@ -197,17 +195,17 @@
 
     <a href="../ciphers/turning-grille.html" class="cipher-card">
       <div class="card-head"><span class="card-num">Exhibit 163</span><span class="badge era-wwi">1881 · WWI</span></div>
-      <div class="card-name">Fleissner Turning Grille</div><p class="card-desc">Rotate a Fleissner mask through four quarter-turns to fill a complete message grid. Compare transposition with Cardano’s fixed-mask steganography.</p>
+      <div class="card-name">Fleissner Turning Grille</div><p class="card-desc">Fleissner turning grille — a transposition cipher used by Germany in WWI. Rotate an interactive mask 90 degrees and contrast it with Cardano steganography.</p>
       <div class="card-foot"><div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></div><span class="card-arrow">→</span></div>
     </a>
     <a href="../ciphers/myszkowski.html" class="cipher-card">
       <div class="card-head"><span class="card-num">Exhibit 164</span><span class="badge era-19c">1902</span></div>
-      <div class="card-name">Myszkowski Transposition</div><p class="card-desc">Repeated keyword letters share a rank: read tied columns across each row. Try encryption and decryption with an incomplete final row.</p>
+      <div class="card-name">Myszkowski Transposition</div><p class="card-desc">Myszkowski transposition (1902) — repeated keyword letters share a rank. Encrypt and decrypt interactively, including incomplete final rows, and compare columnar transposition.</p>
       <div class="card-foot"><div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></div><span class="card-arrow">→</span></div>
     </a>
-    <a href="../ciphers/rs44.html" class="cipher-card"><div class="card-head"><span class="card-num">Exhibit 165</span><span class="badge era-wwii">1944</span></div><div class="card-name">Rasterschlüssel 44</div><p class="card-desc">March 1944 stencil; 60–200 prepared letters; calculated readout.</p><div class="card-foot"><div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></div><span class="card-arrow">→</span></div></a>
+    <a href="../ciphers/rs44.html" class="cipher-card"><div class="card-head"><span class="card-num">Exhibit 165</span><span class="badge era-wwii">1944</span></div><div class="card-name">Rasterschlüssel 44</div><p class="card-desc">Reconstruct the 27 March 1944 RS44 operating procedure with its original example stencil. Animate permitted-cell entry and keyed extraction.</p><div class="card-foot"><div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></div><span class="card-arrow">→</span></div></a>
 
-    <a href="../ciphers/amsco.html" class="cipher-card"><div class="card-head"><span class="card-num">Exhibit 167</span><span class="badge era-modern">ACA specification</span></div><div class="card-name">AMSCO Transposition</div><p class="card-desc">Alternate single-letter and digraph cells; reconstruct incomplete rows.</p><div class="card-foot"><div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></div><span class="card-arrow">→</span></div></a>
+    <a href="../ciphers/amsco.html" class="cipher-card"><div class="card-head"><span class="card-num">Exhibit 167</span><span class="badge era-modern">ACA specification</span></div><div class="card-name">AMSCO Transposition</div><p class="card-desc">AMSCO from the American Cryptogram Association specification: alternate one-letter and two-letter cells, read keyed columns, and reconstruct an incomplete final row.</p><div class="card-foot"><div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></div><span class="card-arrow">→</span></div></a>
 
 
   </div>
@@ -220,15 +218,15 @@
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;">
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">ShiftRows in AES</span></div>
-      <div class="panel-body"><p>AES's ShiftRows step cyclically shifts the rows of its 4×4 state matrix — a direct descendant of columnar transposition. Every byte's position changes, ensuring that input patterns don't propagate directly to output patterns.</p></div>
+      <div class="panel-body"><p>AES ShiftRows rotates three rows of its byte-state array; the first row stays in place. It works with MixColumns and the other round operations to spread dependencies. This is a conceptual connection to permutation, not evidence of direct descent from columnar transposition.</p></div>
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-chart"/></svg></span><span class="panel-title">MixColumns = Fractionation</span></div>
-      <div class="panel-body"><p>AES's MixColumns operation mixes the four bytes of each column using matrix multiplication over GF(2⁸) — exactly the fractionation principle from Bifid, made mathematically rigorous and non-linear.</p></div>
+      <div class="panel-body"><p>AES MixColumns is a <strong>linear</strong> transformation over GF(2⁸). It combines bytes within each column. Bifid instead rearranges coordinate components; the mechanisms are different, although both illustrate mixing.</p></div>
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">Diffusion</span></div>
-      <div class="panel-body"><p>Shannon defined "diffusion" as spreading the influence of each plaintext bit across many ciphertext bits. Double transposition approximates this. AES achieves it completely: after 2 rounds, every output bit depends on every input bit.</p></div>
+      <div class="panel-body"><p>Diffusion spreads the influence of input information across output components. A pure transposition only moves whole symbols and preserves their frequencies. AES combines permutation and linear mixing with nonlinear substitution and key addition.</p></div>
     </div>
   </div>
 

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cardano Autokey (1550 · the original self-keying cipher) — The Cipher Museum</title>
-  <meta name="description" content="Girolamo Cardano's 1550 autokey — prime the keystream with a single seed letter, then continue it with the plaintext itself. The first published self-keying scheme.">
-  <meta property="og:title" content="Cardano Autokey (1550 · the original self-keying cipher) — The Cipher Museum">
-  <meta property="og:description" content="Girolamo Cardano's 1550 autokey — prime the keystream with a single seed letter, then continue it with the plaintext itself. The first published self-keying scheme.">
+  <title>Cardano and Autokey — Historical Idea, Modern Model — The Cipher Museum</title>
+  <meta name="description" content="Cardano’s self-keying idea and a modern one-letter-primer comparison model. The demo is not an exact reconstruction of Cardano’s historical procedure.">
+  <meta property="og:title" content="Cardano and Autokey — Historical Idea, Modern Model — The Cipher Museum">
+  <meta property="og:description" content="Cardano’s self-keying idea and a modern one-letter-primer comparison model. The demo is not an exact reconstruction of Cardano’s historical procedure.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/cardano-autokey.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -14,8 +14,8 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cardano Autokey (1550 · the original self-keying cipher) — The Cipher Museum">
-  <meta name="twitter:description" content="Girolamo Cardano's 1550 autokey — prime the keystream with a single seed letter, then continue it with the plaintext itself. The first published self-keying scheme.">
+  <meta name="twitter:title" content="Cardano and Autokey — Historical Idea, Modern Model — The Cipher Museum">
+  <meta name="twitter:description" content="Cardano’s self-keying idea and a modern one-letter-primer comparison model. The demo is not an exact reconstruction of Cardano’s historical procedure.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/cardano-autokey.html">
@@ -61,8 +61,8 @@
   </div>
   <h1 class="page-title">Cardano Autokey <span style="opacity:.6;font-weight:400;">1550 · the original self-keying cipher</span></h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">Cardano's original autokey: prime with a single letter, then let the message extend its own key.</p>
-  <p class="exhibit-status-note">Easy (recovery cascade)</p>
+  <p class="page-tagline">Cardano’s self-keying idea, compared with a modern one-letter-primer plaintext-autokey model.</p>
+  <p class="exhibit-status-note">The one-letter-primer widget is a modern comparison with Vigenère-style plaintext autokey, not Cardano’s exact procedure.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Girolamo Cardano, Italy</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1550 (<em>De Subtilitate</em>)</span></div>
@@ -79,7 +79,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Girolamo Cardano (1501–1576) — physician, mathematician, gambler, and author of the first textbook on probability — proposed the autokey idea in <em>De Subtilitate</em> (1550). Cardano's version is much weaker than the autokey usually attributed to Vigenère today: Cardano primed the keystream with a single letter and then used the plaintext from position 0 onward as the key for positions 1, 2, 3 …</p><p style="margin-top:1rem;">The flaw is structural. If an attacker guesses or recovers any plaintext letter, they immediately know the next key letter — and therefore the next plaintext letter — and a cascade unzips the entire message. Vigenère's later refinement (prime with a multi-letter keyword instead of a single letter) blocks the cascade by giving the attacker no foothold to start from.</p>
+      <p>Cardano described using plaintext as key material, but the one-letter-primer algorithm below should not be attributed to him as an exact reconstruction. Holden’s <a href="../further-reading.html#holden"><em>The Mathematics of Secrets</em></a> (2017), §5.3, pp. 157–159, distinguishes Cardano’s word-based scheme from Vigenère’s later use of a priming letter. This interactive isolates a simple autokey recurrence for teaching.</p><p style="margin-top:1rem;">In this model, knowing one plaintext letter gives the next key letter and permits forward propagation. A primer of length k changes this to propagation every k positions; it does <strong>not</strong> eliminate the structural weakness. A sufficiently long correct crib can seed several such chains.</p>
     </div>
 
     <div class="panel">
@@ -92,12 +92,12 @@ Cipher: C Q I X F Q E T F U L Q V O N A</pre></div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Probable-word cascade</div><div class="attack-diff">Complexity: Easy with a crib</div><p class="attack-desc">Guess the first plaintext word. Each correct letter immediately reveals the next key letter and therefore the next plaintext letter. The attack propagates forward through the message at no extra cost. The whole reason Vigenère replaced Cardano with a multi-letter primer was to deny the attacker this foothold.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">26 priming guesses</div><div class="attack-diff">Complexity: Trivial on short messages</div><p class="attack-desc">Try every possible seed letter. For each, run the cascade and look for English. Twenty-six attempts and a frequency check is enough.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Probable-word cascade</div><div class="attack-diff">Complexity: Easy with a crib</div><p class="attack-desc">With a one-letter primer, a correct plaintext guess propagates one position at a time. Wrong guesses generate alternative chains that need evaluation against language or other evidence. Longer primers change the spacing of propagation rather than making plaintext feedback secure.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">26 priming guesses</div><div class="attack-diff">Complexity: Trivial on short messages</div><p class="attack-desc">Try every possible seed letter. For each, run the cascade and look for English. Twenty-six attempts and a frequency check is enough.</p></div></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
-      <div class="panel-body"><p>Cardano's autokey is the cleanest historical example of <em>state confusion</em>: he conflated <em>using the plaintext</em> with <em>using a fresh key</em>. Modern stream ciphers and AEAD modes go to great length to make sure the keystream is independent of the data being encrypted, precisely because Cardano-style coupling enables exactly the cascade attack shown above.</p><p style="margin-top:1rem;">CTR mode and ChaCha20 are the modern correct version of the same idea: the keystream is generated from a key and a counter, never from the plaintext. The lesson — never let your key depend on your data — is one of the load-bearing rules of modern cryptography.</p></div>
+      <div class="panel-body"><p>The lesson is that reusing message letters as raw key material does not supply independent secrecy. It should not be generalized into a rule that every data-dependent cryptographic construction is insecure: the precise construction and security definition matter.</p><p style="margin-top:1rem;">CTR and ChaCha20 generate keystream from a secret key and nonce/counter state. Their security also depends on correct nonce use. The contrast is with this bare letter recurrence, not a claimed direct historical lineage or a universal ban on processing plaintext in authentication and encryption designs.</p></div>
     </div>
 
   </div>
@@ -112,7 +112,7 @@ Cipher: C Q I X F Q E T F U L Q V O N A</pre></div>
             <tr><td>Origin</td><td>Girolamo Cardano, Italy</td></tr>
             <tr><td>Year</td><td>1550 (<em>De Subtilitate</em>)</td></tr>
             <tr><td>Key Type</td><td>Single priming letter</td></tr>
-            <tr><td>Key Length</td><td>Effectively the message length</td></tr>
+            <tr><td>Secret choice in this model</td><td>One of 26 primer letters</td></tr>
             <tr><td>Modern Lesson</td><td>Key reuse from the plaintext is not the same as key freshness</td></tr>
           </tbody>
         </table>

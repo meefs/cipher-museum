@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Double Transposition — The Cipher Museum</title>
-    <meta name="description" content="Double transposition — apply columnar transposition twice with two keys. The WWII Allied workhorse, considered unbreakable until Lasry et al. (2013).">
+    <meta name="description" content="Two successive columnar transpositions: historical military use, attack conditions, and modern computerized cryptanalysis; not an unbroken cipher until 2013.">
   <meta property="og:title" content="Double Transposition — The Cipher Museum">
-  <meta property="og:description" content="Double transposition — apply columnar transposition twice with two keys. The WWII Allied workhorse, considered unbreakable until Lasry et al. (2013).">
+  <meta property="og:description" content="Two successive columnar transpositions: historical military use, attack conditions, and modern computerized cryptanalysis; not an unbroken cipher until 2013.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/double-transposition.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Double Transposition — The Cipher Museum">
-  <meta name="twitter:description" content="Double transposition — apply columnar transposition twice with two keys. The WWII Allied workhorse, considered unbreakable until Lasry et al. (2013).">
+  <meta name="twitter:description" content="Two successive columnar transpositions: historical military use, attack conditions, and modern computerized cryptanalysis; not an unbroken cipher until 2013.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/double-transposition.html">
@@ -97,9 +97,10 @@
       <div class="panel-body"><p>Apply columnar transposition twice using two different keywords:</p><pre>Step 1: Apply columnar transposition with key MARK
 Step 2: Apply columnar transposition with key LION
 
-The resulting permutation of n characters has
-approximately (k1! × k2!) possible arrangements
-where k1, k2 are the key lengths.</pre>
+There are k1! × k2! pairs of column-order settings
+when each key can be any permutation of its columns.
+Different pairs may induce the same permutation;
+this is not a proof of k1! × k2! distinct ciphertexts.</pre>
       <figure class="figure">
         <svg viewBox="0 0 460 190" style="max-width:460px;width:100%;height:auto;" aria-label="Double transposition two-pass diagram">
           <style>
@@ -163,7 +164,7 @@ where k1, k2 are the key lengths.</pre>
           <thead><tr><th>Concept from Double Transposition</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Two-pass permutation</td><td>AES applies 10–14 rounds of operations — multiple passes through cipher structure</td></tr>
 <tr><td>Large combined keyspace</td><td>AES 128-bit key: 2¹²⁸ possible keys — exponentially larger</td></tr>
-<tr><td>No substitution, only permutation</td><td>AES combines SubBytes (substitution) + ShiftRows/MixColumns (permutation) every round</td></tr></tbody>
+<tr><td>No substitution, only permutation</td><td>AES combines nonlinear SubBytes, byte-reordering ShiftRows, and linear MixColumns (omitted in the final round)</td></tr></tbody>
         </table>
       </div>
     </div>

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alberti Cipher Disk — The Cipher Museum</title>
-    <meta name="description" content="Alberti cipher disk — Leon Battista Alberti's 1467 rotating disk, the first true polyalphabetic device and the tool that began the cipher revolution.">
+    <meta name="description" content="Alberti’s fifteenth-century cipher disk illustrates changing substitutions using two alphabets. The exhibit distinguishes historical instructions from a regular-step teaching model.">
   <meta property="og:title" content="Alberti Cipher Disk — The Cipher Museum">
-  <meta property="og:description" content="Alberti cipher disk — Leon Battista Alberti's 1467 rotating disk, the first true polyalphabetic device and the tool that began the cipher revolution.">
+  <meta property="og:description" content="Alberti’s fifteenth-century cipher disk illustrates changing substitutions using two alphabets. The exhibit distinguishes historical instructions from a regular-step teaching model.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/alberti-disk.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Alberti Cipher Disk — The Cipher Museum">
-  <meta name="twitter:description" content="Alberti cipher disk — Leon Battista Alberti's 1467 rotating disk, the first true polyalphabetic device and the tool that began the cipher revolution.">
+  <meta name="twitter:description" content="Alberti’s fifteenth-century cipher disk illustrates changing substitutions using two alphabets. The exhibit distinguishes historical instructions from a regular-step teaching model.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/alberti-disk.html">
@@ -84,12 +84,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Leon Battista Alberti’s 1467 cipher disk was the first polyalphabetic cipher and the first mechanical encryption device — two revolutionary ideas from a single Renaissance polymath that shaped cryptography for the next five centuries.</p>
+      <p>Leon Battista Alberti’s 1467 cipher disk was an early documented polyalphabetic system and an important cipher device — two revolutionary ideas from a single Renaissance polymath that shaped cryptography for the next five centuries.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Leon Battista Alberti — architect, artist, humanist, and one of the great Renaissance polymaths — invented the cipher disk in 1467 and described it in his treatise <em>De Cifris</em>. It is the first known mechanical cipher device and the first polyalphabetic cipher design, predating Vigenère by nearly a century.</p><p style="margin-top:1rem;">Alberti's device consisted of two concentric copper disks. The outer disk bore the standard alphabet; the inner disk bore a scrambled alphabet. By rotating the inner disk to different starting positions during encryption, Alberti created a cipher that used different substitution alphabets for different parts of the message — the core idea of all polyalphabetic ciphers.</p></div>
+      <div class="panel-body"><p>Leon Battista Alberti — architect, artist, humanist, and one of the great Renaissance polymaths — invented the cipher disk in 1467 and described it in his treatise <em>De Cifris</em>. It is an early documented European polyalphabetic design; calling it the first mechanical cipher device would overlook earlier devices such as the scytale.</p><p style="margin-top:1rem;">Alberti described concentric disks with different alphabets. His historical outer ring included 20 letters and the digits 1–4; it was not the ordinary modern 26-letter alphabet. Changing their relative alignment changes the substitution. The diagram and widget here are simplified teaching representations, not an exact reproduction of the historical rings.</p></div>
     </div>
 
     <div class="panel">
@@ -154,7 +154,7 @@ Alberti changed alignment every few words
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Index of Coincidence</div><div class="attack-diff">Complexity: Easy-Moderate</div><p class="attack-desc">Alberti's cipher changes alphabets irregularly (not on a fixed keyword period). However, the IC test can identify sections encrypted with the same disk alignment, and frequency analysis applied to each section recovers that alignment's substitution. With enough ciphertext, all alignments can be recovered.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Index of Coincidence</div><div class="attack-diff">Complexity: Easy-Moderate</div><p class="attack-desc">Irregular alphabet changes avoid a simple fixed keyword period. If enough text shares an alignment, language statistics and probable words may help recover that portion. The index of coincidence does not automatically identify every boundary or guarantee recovery of every alignment from an arbitrary sample.</p></div></div>
     </div>
 
     <div class="panel">

@@ -111,13 +111,13 @@
   <h1 class="page-title">Caesar Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
   <p class="page-tagline">"The simplest cipher — and the most famous failure in history."</p>
-  <p class="exhibit-status-note">Frequency Analysis · Al-Kindi · 850 AD</p>
+  <p class="exhibit-status-note">Exhaustive shift search; frequency evidence helps rank candidates.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Invented</span><span class="fact-value">~58 BC</span></div>
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Julius Caesar</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Shift (1–25)</span></div>
     <div class="fact"><span class="fact-label">Keyspace</span><span class="fact-value">25 possible keys</span></div>
-    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Frequency Analysis · Al-Kindi · 850 AD</span></div>
+    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Exhaustive search or language analysis; no specific ancient break claimed</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">S-boxes in AES</span></div>
   </div>
 </div>
@@ -130,7 +130,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The earliest documented shift cipher and the conceptual ancestor of every shift-based encryption scheme that followed. It introduced the fundamental idea that a message can be systematically transformed by a secret rule.</p>
+      <p>Suetonius records Caesar’s use of a letter shift. The modern A–Z demonstration makes modular substitution easy to inspect; it does not establish the invention date of substitution encryption.</p>
     </div>
 
     <!-- Cipher Wheel Diagram -->
@@ -156,7 +156,7 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
         <p>Julius Caesar used this cipher to communicate with his generals during the Gallic Wars. Suetonius records it in <em>The Twelve Caesars</em> (c. 121 AD): <em>"If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out."</em></p>
-        <p style="margin-top:1rem;">Caesar typically used a shift of 3. His great-nephew Augustus preferred a shift of 1. The cipher offered minimal protection — most of Caesar's enemies were illiterate, so even an unencrypted Latin message was safe from most interceptors.</p>
+        <p style="margin-top:1rem;">Suetonius describes Caesar’s shift of three. His account of Augustus describes a different convention, including AA for Z rather than a modern wraparound alphabet. This exhibit’s fixed 26-letter model should not be mistaken for a facsimile of Roman correspondence.</p>
         <div class="callout callout-info" style="margin-top:1.5rem;">
           <span class="callout-icon">💡</span>
           <div class="callout-body"><p><strong>ROT13</strong> — the modern variant — applies a shift of 13. Because 13+13=26, ROT13 is its own inverse: applying it twice returns the original text. It's still used in online forums to hide spoilers.</p></div>
@@ -206,7 +206,7 @@ Example (shift = 3):
         <div class="attack-panel">
           <div class="attack-name">Frequency Analysis</div>
           <div class="attack-diff">Complexity: Trivial · Invented: ~850 AD · By: Al-Kindi</div>
-          <p class="attack-desc">In any English text, E appears ~12.7%, T ~9.1%, A ~8.2%. Because the Caesar cipher maps each letter to exactly one other letter, these frequencies are preserved in the ciphertext — just shifted. Find the most common ciphertext letter, assume it encrypts E, and the shift is revealed.</p>
+          <p class="attack-desc">Long English samples often have E among their most frequent letters, but individual messages may differ greatly. A Caesar shift preserves the observed letter counts. Treating the most common ciphertext letter as E proposes a key; other shifts and the resulting language must still be checked.</p>
         </div>
         <div class="attack-panel">
           <div class="attack-name">Brute Force</div>
@@ -215,7 +215,7 @@ Example (shift = 3):
         </div>
         <div class="callout callout-danger" style="margin-top:1rem;">
           <span class="callout-icon">⚠️</span>
-          <div class="callout-body"><p><strong>Why it fails fundamentally:</strong> The Caesar cipher has only 25 possible keys. Modern encryption (AES-256) has 2²⁵⁶ ≈ 10⁷⁷ possible keys — more than atoms in the observable universe. Keyspace size is the first lesson of cryptographic security.</p></div>
+          <div class="callout-body"><p><strong>Why it fails fundamentally:</strong> there are only 25 nonidentity shifts on A–Z (26 including leaving the text unchanged). AES-256 has 2²⁵⁶ possible keys. The difference illustrates why a tiny keyspace is vulnerable, but keyspace size alone never proves a cipher secure.</p></div>
         </div>
       </div>
     </div>
@@ -229,7 +229,7 @@ Example (shift = 3):
           <tbody>
             <tr><td>Letter substitution</td><td>Non-linear S-boxes in AES — designed to resist frequency analysis</td></tr>
             <tr><td>Shift = key</td><td>Symmetric key concept — both parties share a secret parameter</td></tr>
-            <tr><td>25-key space</td><td>AES-256 requires 2²⁵⁶ key trials — computationally infeasible</td></tr>
+            <tr><td>25-key space</td><td>Generic search of a uniform AES-256 key takes about 2²⁵⁵ trials on average</td></tr>
             <tr><td>Frequency leak</td><td>Diffusion principle — modern ciphers ensure every output bit depends on every input bit</td></tr>
           </tbody>
         </table>
@@ -313,7 +313,7 @@ Example (shift = 3):
         <div class="callout callout-success" style="margin-top:1.25rem;">
           <span class="callout-icon">🎓</span>
           <div class="callout-body">
-            <p><strong>What you just witnessed.</strong> This is the cryptanalytic technique that broke Caesar ciphers in practice. Because there are only 25 possible shifts, an attacker can simply try all of them and pick the one whose letter frequencies look most like real English. The chi-squared score above measures exactly that distance: the winning row is the candidate whose letter distribution is closest to E&nbsp;12.7%, T&nbsp;9.1%, A&nbsp;8.2%, and so on. This is why short keyspaces are fatal in cryptography — and why every modern cipher has a key space astronomically larger than 25. AES-256 has 2²⁵⁶ keys, more than the number of atoms in the observable universe.</p>
+            <p><strong>What you just witnessed.</strong> The tool tries all 25 nonidentity shifts and ranks them by an English letter-frequency score. The top row is a hypothesis, not a guaranteed plaintext: short or unusual messages can rank incorrectly. Exhaustive search covers the small shift space, while recognizing the right message still needs context.</p>
           </div>
         </div>
       </div>

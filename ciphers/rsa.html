@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RSA &mdash; The Cipher Museum</title>
-  <meta name="description" content="The first practical public-key cryptosystem — one key encrypts, a different key decrypts, and you can publish the encrypting key in the phone book.">
+  <meta name="description" content="RSA uses a public modulus and exponents to support public-key constructions. Secure encryption and signatures need specified padding, adequate parameters and correct implementation.">
   <meta property="og:title" content="RSA &mdash; The Cipher Museum">
-  <meta property="og:description" content="The first practical public-key cryptosystem — one key encrypts, a different key decrypts, and you can publish the encrypting key in the phone book.">
+  <meta property="og:description" content="RSA uses a public modulus and exponents to support public-key constructions. Secure encryption and signatures need specified padding, adequate parameters and correct implementation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/rsa.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="RSA &mdash; The Cipher Museum">
-  <meta name="twitter:description" content="The first practical public-key cryptosystem — one key encrypts, a different key decrypts, and you can publish the encrypting key in the phone book.">
+  <meta name="twitter:description" content="RSA uses a public modulus and exponents to support public-key constructions. Secure encryption and signatures need specified padding, adequate parameters and correct implementation.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/rsa.html">
@@ -75,22 +75,22 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Diffie and Hellman had described public-key cryptography as a <em>goal</em> in 1976; RSA was the first concrete construction that achieved it. The same key pair can be used both ways &mdash; encrypt with the public key and only the holder of the private key can decrypt; sign with the private key and anyone with the public key can verify. That single mathematical object simultaneously solved key distribution, authentication, and non-repudiation. Every TLS certificate, every code-signing chain, every signed software update is descended from this 1977 paper.</p>
+      <p>RSA provided an early practical construction for public-key encryption and digital signatures. These are different schemes built from related arithmetic, not merely one encryption operation run backwards. Secure encodings, key separation, authentication and application context are essential. A valid signature establishes a relationship to a key; it does not by itself establish a person's identity or resolve every non-repudiation dispute.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Rivest, Shamir, and Adleman were MIT researchers reading Diffie-Hellman's paper in 1976 and trying to find a working public-key construction. After dozens of failed attempts, Rivest had the key insight one Passover night in April 1977 after a glass of wine: use the multiplicative inverse <em>d</em> of the encrypting exponent <em>e</em> modulo &phi;(<em>n</em>). The MIT memo went out August 1977; Martin Gardner's <em>Scientific American</em> column in 1977 popularised it with a $100 challenge cipher (factored in 1994 by 600 volunteers). RSA Data Security was founded in 1982; the patent expired in 2000.</p></div>
+      <div class="panel-body"><p>Rivest, Shamir and Adleman developed RSA at MIT in 1977, following the public-key research of Diffie and Hellman. Their construction was publicly described in 1977 and published in Communications of the ACM in 1978. Clifford Cocks had found a related construction at GCHQ in 1973, but that work remained classified until 1997.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>Pick two large primes <em>p</em> and <em>q</em> (each ~1024 bits for RSA-2048). Compute <em>n = p&middot;q</em> and <em>&phi;(n) = (p&minus;1)(q&minus;1)</em>. Choose a public exponent <em>e</em> coprime to <em>&phi;(n)</em> &mdash; almost always 65537. Compute the private exponent <em>d &equiv; e<sup>&minus;1</sup> mod &phi;(n)</em>.</p><p>Public key is <em>(n, e)</em>; private key is <em>(n, d)</em>. To encrypt message <em>m</em>: <em>c = m<sup>e</sup> mod n</em>. To decrypt: <em>m = c<sup>d</sup> mod n</em>. The math works because of Euler's theorem: <em>m<sup>ed</sup> &equiv; m mod n</em> for any <em>m</em> coprime to <em>n</em>. Recovering <em>d</em> from the public key requires factoring <em>n</em>, which is believed to be classically infeasible for 2048-bit moduli.</p></div>
+      <div class="panel-body"><p>Pick two large primes <em>p</em> and <em>q</em> (each ~1024 bits for RSA-2048). Compute <em>n = p&middot;q</em> and <em>&phi;(n) = (p&minus;1)(q&minus;1)</em>. Choose a public exponent <em>e</em> coprime to <em>&phi;(n)</em> &mdash; almost always 65537. Compute the private exponent <em>d &equiv; e<sup>&minus;1</sup> mod &phi;(n)</em>.</p><p>Public key is <em>(n, e)</em>; private key is <em>(n, d)</em>. To encrypt message <em>m</em>: <em>c = m<sup>e</sup> mod n</em>. To decrypt: <em>m = c<sup>d</sup> mod n</em>. The math works because of Euler's theorem: <em>m<sup>ed</sup> &equiv; m mod n</em> for any <em>m</em> coprime to <em>n</em>. Factoring <em>n</em> lets an attacker compute a private exponent. The Chinese remainder theorem extends this correctness argument to all message representatives from 0 to <em>n</em>&minus;1, not only those coprime to <em>n</em>.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
-      <div class="panel-body"><p>Security rests on the integer factorisation problem. The largest RSA modulus publicly factored is RSA-250 (829 bits, 2020), using ~2700 core-years on a CADO-NFS cluster. RSA-2048 is estimated at ~10<sup>11</sup> times harder. <strong>However</strong>: Shor's quantum algorithm factors <em>n</em> in polynomial time, so a sufficiently large quantum computer breaks RSA entirely. NIST's post-quantum standardisation (CRYSTALS-Kyber, ML-KEM) is the planned replacement. RSA also has dangerous implementation pitfalls: textbook RSA leaks small messages and is malleable; production systems must use OAEP padding for encryption and PSS for signatures.</p></div>
+      <div class="panel-body"><p>Factoring the modulus breaks RSA, but general RSA inversion has not been proved equivalent to factoring. Security claims must also specify the encoding and attack model: textbook RSA is deterministic and malleable. RFC 8017 defines schemes such as RSA-OAEP for encryption and RSA-PSS for signatures and recommends using a key pair for one scheme. A sufficiently capable quantum computer running Shor's algorithm would break RSA. NIST finalized ML-KEM for key establishment and ML-DSA and SLH-DSA for signatures in 2024; these serve different roles rather than providing one universal RSA replacement.</p></div>
     </div>
 
     <div class="panel">
@@ -99,11 +99,11 @@
         <table class="cipher-table">
           <thead><tr><th>Where</th><th>How RSA is Used</th></tr></thead>
           <tbody>
-            <tr><td>TLS / HTTPS certificates</td><td>Most certificate authorities still issue RSA-2048 leaf certificates; ECDSA is gaining share</td></tr>
-            <tr><td>Code signing</td><td>Microsoft Authenticode, Apple notarisation, Debian package signing all use RSA</td></tr>
-            <tr><td>PGP / GPG</td><td>Default keypair for encrypted email and signed Git commits</td></tr>
-            <tr><td>SSH host keys</td><td><code>ssh-rsa</code> remains the most common key type, though <code>ed25519</code> is now preferred</td></tr>
-            <tr><td>JWT signatures</td><td><code>RS256</code> is the default for many OAuth / OIDC implementations</td></tr>
+            <tr><td>TLS / HTTPS certificates</td><td>RSA is supported alongside other certificate signature algorithms; key size and policy depend on the deployment</td></tr>
+            <tr><td>Code signing</td><td>RSA signatures are supported in several software-signing ecosystems; the selected scheme varies</td></tr>
+            <tr><td>PGP / GPG</td><td>RSA remains supported; modern OpenPGP implementations also support other key types</td></tr>
+            <tr><td>SSH host keys</td><td>RSA keys can use SHA-256 or SHA-512 signatures. OpenSSH 8.8 disabled the SHA-1-based <code>ssh-rsa</code> signature scheme by default</td></tr>
+            <tr><td>JWT signatures</td><td><code>RS256</code> is an RSA PKCS#1 v1.5 signature option; applications must restrict accepted algorithms</td></tr>
           </tbody>
         </table>
       </div>
@@ -131,6 +131,8 @@
   </div>
 </div>
 
+<section class="panel" aria-labelledby="primary-sources"><div class="panel-body"><h2 id="primary-sources">Primary Sources</h2><p><a href="https://www.rfc-editor.org/rfc/rfc8017.html">RFC 8017 (PKCS #1 v2.2, 2016)</a>; <a href="https://www.openssh.com/txt/release-8.8">OpenSSH 8.8 release notes (2021)</a>; NIST <a href="https://csrc.nist.gov/pubs/fips/203/final">FIPS 203</a>, <a href="https://csrc.nist.gov/pubs/fips/204/final">204</a> and <a href="https://csrc.nist.gov/pubs/fips/205/final">205</a> (2024).</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">
@@ -157,7 +159,7 @@
     <a href="../hall-of-foundations/prime-number-theorem.html" class="related-card">
       <span class="related-card__number">&sect;144 &middot; Foundations</span>
       <span class="related-card__name">The Prime Number Theorem</span>
-      <span class="related-card__tag">The mathematics beneath: why 2048-bit primes are easy to find</span>
+      <span class="related-card__tag">The mathematics beneath: why large primes are easy to find</span>
     </a>
   </div>
 </section>

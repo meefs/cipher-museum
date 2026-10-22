@@ -67,8 +67,7 @@
 
   <div class="honesty">
     <strong>What belongs here.</strong> These are foundations, not primitives.
-    You stand on every one of them when you generate a key or verify a
-    signature — but you never call them directly. For the deployable tools, see
+    Different schemes use different parts of this mathematics; some exhibits provide context rather than a security assumption. For the deployable tools, see
     <a href="../modern.html">Modern Cryptography</a> and
     <a href="../halls/modern-crypto.html">Hall XI</a>. This hall is for
     understanding <em>why they work</em>.
@@ -81,7 +80,7 @@
       <span class="cnum">§142</span>
       <h3>Finite Fields</h3>
       <span class="sym">𝔽ₚ · arithmetic mod a prime</span>
-      <p>Watch a smooth elliptic curve shatter into a scatter of dots — and see why the discrete log becomes hard.</p>
+      <p>Watch a smooth elliptic curve shatter into a scatter of dots — and explore finite-field curve arithmetic.</p>
     </a>
     <a class="card" href="modular-arithmetic.html">
       <span class="cnum">§143</span>
@@ -93,7 +92,7 @@
       <span class="cnum">§144</span>
       <h3>The Prime Number Theorem</h3>
       <span class="sym">π(x) ~ x / ln x</span>
-      <p>Why RSA can find a 2048-bit prime in moments — the one theorem here that's genuinely load-bearing.</p>
+      <p>Prime density explains the expected search for RSA key-generation candidates.</p>
     </a>
     <a class="card" href="euler-fermat.html">
       <span class="cnum">§145</span>
@@ -110,19 +109,19 @@
       <span class="cnum">§146</span>
       <h3>The One-Way Function</h3>
       <span class="sym">easy → · hard ←</span>
-      <p>The conceptual keystone everything is downstream of. Multiply in a blink; factor and sweat.</p>
+      <p>A computational security idea: compare multiplication with a toy factoring search.</p>
     </a>
     <a class="card" href="lattices-svp.html">
       <span class="cnum">§147</span>
       <h3>Lattices &amp; the SVP</h3>
       <span class="sym">ℤⁿ · shortest vector</span>
-      <p>Drag a basis and hunt the shortest vector — the foundation under Kyber, Dilithium, and the post-quantum batch.</p>
+      <p>Drag a basis and hunt the shortest vector — geometric intuition for the lattice-based post-quantum family.</p>
     </a>
     <a class="card" href="closest-vector.html">
       <span class="cnum">§152</span>
       <h3>The Closest Vector Problem</h3>
       <span class="sym">CVP · LWE · Kyber's core</span>
-      <p>Round a target to the nearest lattice corner — right with a short basis, wrong with a skewed one. This is decoding.</p>
+      <p>Round a target to the nearest lattice corner — exact with the orthogonal preset, potentially wrong with a skewed one. This is decoding.</p>
     </a>
     <a class="card" href="reduction.html">
       <span class="cnum">§148</span>
@@ -151,12 +150,12 @@
       <span class="cnum">§151</span>
       <h3>Information &amp; Entropy</h3>
       <span class="sym">H = −Σ p log p</span>
-      <p>Shannon's measure of surprise: why the one-time pad is perfect and why key length is destiny.</p>
+      <p>Shannon's measure of surprise: why the one-time pad is perfect and why randomness assumptions matter.</p>
     </a>
   </div>
 
   <h2 class="group-label">Post-quantum &amp; advanced structures</h2>
-  <p class="group-sub">The exact math the deployed standards and privacy protocols are built from.</p>
+  <p class="group-sub">Teaching models of structures used by standards and privacy protocols.</p>
   <div class="cards">
     <a class="card" href="polynomial-rings.html">
       <span class="cnum">§153</span>
@@ -173,14 +172,14 @@
     <a class="card" href="interpolation.html">
       <span class="cnum">§155</span>
       <h3>Polynomial Interpolation</h3>
-      <span class="sym">k points fix a degree-(k−1) curve</span>
+      <span class="sym">k distinct points fix degree at most k−1</span>
       <p>Drag points until the curve locks and the secret intercept appears — the heart of Shamir sharing.</p>
     </a>
     <a class="card" href="pairings.html">
       <span class="cnum">§156</span>
       <h3>Bilinear Pairings</h3>
       <span class="sym">e(aP,bQ) = e(P,Q)ᵃᵇ</span>
-      <p>Verify a product of hidden scalars without revealing them — the magic under zk-SNARKs.</p>
+      <p>Verify a product of hidden scalars without revealing them — an algebraic tool used by some zk-SNARKs.</p>
     </a>
     <a class="card" href="learning-with-errors.html">
       <span class="cnum">§157</span>
@@ -194,7 +193,7 @@
   <section class="exhibit">
     <p class="aside" style="border-top:none">
       Companion exhibit: <a href="modularity-exhibit.html" style="color:var(--vermilion)">The Ground Beneath the Curve</a>
-      — the modularity theorem and the number theory ECC inherits. Start there if
+      — the modularity theorem as mathematical context alongside ECC. Start there if
       you came from the Fermat's Last Theorem thread.
     </p>
   </section>

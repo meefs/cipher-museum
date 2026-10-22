@@ -66,7 +66,7 @@
   </div>
   <h1 class="page-title">Lorenz Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">Hitler's strategic cipher — broken by a mistake, and it built the world's first computer</p>
+  <p class="page-tagline">A German strategic teleprinter cipher — analysis of its traffic helped lead to Colossus, an early programmable electronic computer.</p>
   <p class="exhibit-status-note">Tiltman: depth (1941) · Tutte: structure (1942) · Colossus: wheel settings (1944)</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Lorenz AG · German High Command</span></div>
@@ -114,7 +114,7 @@ Wheel pin counts: 41,31,29,26,23,
                   43,47,51,53,59,
                   61,37
 
-Total period: LCM of all wheels
+Joint wheel positions alone do not determine the output period
 = astronomically large — never repeats in practice</pre>
       <figure class="figure">
         <svg viewBox="0 0 520 170" style="max-width:440px;width:100%;height:auto;" aria-label="Lorenz cipher wheel structure diagram">
@@ -183,7 +183,7 @@ Total period: LCM of all wheels
             <tr><td><strong>Who used it</strong></td><td>Army, Navy, Luftwaffe — every front-line unit</td><td>OKW &harr; Hitler &amp; senior commanders only</td></tr>
             <tr><td><strong>Operator model</strong></td><td>Hand-typed, lamp-board readout, telegraph the result</td><td>Inline teleprinter attachment — paper tape in, encrypted tape out, fully automatic</td></tr>
             <tr><td><strong>Cipher primitive</strong></td><td>Polyalphabetic substitution via 3–4 stepping rotors + reflector + plugboard</td><td>Vernam XOR of 5-bit Baudot characters with a 12-wheel pseudo-random keystream</td></tr>
-            <tr><td><strong>Key space</strong></td><td>≈ 1.6 × 10<sup>20</sup> (with plugboard)</td><td>≈ 1.6 × 10<sup>19</sup> wheel period — but reusable settings, not a one-time pad</td></tr>
+            <tr><td><strong>Key space</strong></td><td>≈ 1.6 × 10<sup>20</sup> (with plugboard)</td><td>Irregular stepping and wheel patterns determine the output cycle; this is not a keyspace estimate or a one-time pad</td></tr>
             <tr><td><strong>Fatal weakness</strong></td><td>Reflector → no letter encrypts to itself → cribs eliminate placements</td><td>Reusing a wheel setting collapses two messages into a depth (P<sub>A</sub> ⊕ P<sub>B</sub>)</td></tr>
             <tr><td><strong>What broke it</strong></td><td>Cribs + electromechanical Bombe (Turing, Welchman, 1940)</td><td>Tiltman's manual depth recovery (1941) + Tutte's structure inference (1942) + Colossus wheel-setting (1944)</td></tr>
             <tr><td><strong>What it built</strong></td><td>Cryptanalysis as an industrial discipline — 10 000 staff, daily key recovery</td><td>Programmable electronics — Colossus showed how electronic logic could accelerate statistical searches</td></tr>

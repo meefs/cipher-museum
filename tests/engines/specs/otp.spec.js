@@ -23,3 +23,13 @@ test('otp: automatic pad generation uses the platform CSPRNG', () => {
 		crypto.getRandomValues = original;
 	}
 });
+
+test('otp: automatic pads can exceed one Web Crypto request quota', () => {
+  const encoded = engines.otp.encode('A'.repeat(40000), '');
+  const match = encoded.match(/^([A-Z]+)\n\[Key: ([A-Z]+)\]$/);
+  assert.ok(match, 'automatic pad output retains its declared annotation format');
+  assert.equal(match[1].length, 40000);
+  assert.equal(match[2].length, 40000);
+  // With A=0, mod-26 addition exposes the pad exactly: an independent check.
+  assert.equal(match[1], match[2]);
+});

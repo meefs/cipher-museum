@@ -73,7 +73,7 @@
 
 <div class="demo-section" data-cipher="egyptian-substitution">
   <h2>Hieroglyph Substitution Demo</h2>
-  <p style="opacity:.85;">Type a short ASCII phrase to see it rendered in the Khnumhotep-style "unusual variant" set used by Egyptian scribes for ornamental concealment. This is a visualization, not a cryptographic operation — Track B exhibit.</p>
+  <p style="opacity:.85;">This widget maps modern A–Z letters to selected hieroglyphic-looking signs. The assignments are invented for display: they are neither Egyptian transliteration nor a reconstruction of the Khnumhotep inscription. Track B — illustration, not historical encryption.</p>
   <label for="input" style="display:block;margin-top:1rem;font-weight:600;">Input</label>
   <input type="text" id="input" placeholder="PHARAOH" value="KHNUMHOTEP" style="width:100%;padding:.6rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;font-family:monospace;">
   <button type="button" data-fn="encode" style="margin-top:.75rem;padding:.6rem 1.25rem;background:var(--gold-glow);border:1px solid var(--gold-b);color:var(--gold);border-radius:6px;cursor:pointer;font-weight:600;">Render Hieroglyphs</button>
@@ -108,7 +108,7 @@
 
     <div class="cipher-significance">
       <h3>Why This Matters</h3>
-      <p>In a tomb at Beni Hasan, Middle Egypt, the high official Khnumhotep II had his life story carved into the wall around 1900 BCE. The inscription is mostly written in standard hieroglyphs — but for several passages, the scribe substituted unusual variant glyphs in place of common ones. This is the earliest known instance of a deliberate substitution applied to writing for the purpose of concealment or ornament. Whether the scribe meant secrecy, religious mystique, or simple display, the technique itself — replace one symbol with another by rule — is the seed of every substitution cipher that followed.</p>
+      <p>Khnumhotep II’s tomb at Beni Hasan contains unusual hieroglyphic writing, often cited in histories of cryptography. Whether such choices primarily conveyed secrecy, learned display, or religious meaning must be distinguished from the observable use of unusual signs. They do not establish the origin of every later substitution cipher.</p>
     </div>
 
     <div class="panel">
@@ -118,12 +118,12 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Worked</span></div>
-      <div class="panel-body"><p>The Egyptian writing system carried hundreds of glyphs; many sounds could be written with multiple alternative signs. The Beni Hasan scribe systematically chose <em>rare</em> alternates instead of the standard ones. A reader fluent in everyday hieratic would recognize the words but find them harder to scan. A reader unfamiliar with the variant set would be stopped cold. The technique is a one-to-one substitution at the symbol level — exactly the operation Atbash, Caesar, and Mlecchita Vikalpa would later perform on alphabetic scripts.</p></div>
+      <div class="panel-body"><p>Egyptian writing combined phonetic and other sign functions. Its alternate spellings cannot simply be equated with a one-to-one A–Z substitution. The modern widget demonstrates the visual effect of an unfamiliar symbol set, not the ancient inscription’s exact linguistic mechanism.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-globe"/></svg></span><span class="panel-title">Cipher, Code, or Ornament?</span></div>
-      <div class="panel-body"><p>Modern cryptographers distinguish ciphers (mechanical letter-by-letter rules), codes (whole words replaced from a book), and steganography (hidden in plain sight). The Khnumhotep inscription resists those categories — and that is exactly its lesson. The instinct to encode meaning behind a layer of unfamiliar symbols predates the conceptual machinery we use to describe it. Egypt did not invent cryptography; it documented that the impulse already existed.</p></div>
+      <div class="panel-body"><p>Encoding represents information, encryption uses a security construction to protect it, and steganography attempts to conceal its presence. Unusual writing alone does not prove that a secret-key cipher was intended. This is a useful boundary case, provided that its uncertainty remains visible.</p></div>
     </div>
 
   </div>

@@ -128,9 +128,7 @@
   <span class="page-eyebrow">Special Exhibit · The Science of Breaking Codes</span>
   <h1 class="page-title">Cryptanalysis Techniques</h1>
   <p class="page-tagline">"To know how to defend, you must first know how to attack."</p>
-  <p class="page-desc">
-    Ten techniques that break almost every classical cipher in this museum — from Al-Kindi's frequency tables (850 AD) to modern hill-climbing algorithms.
-  </p>
+  <p class="page-desc">Ten approaches to classical cryptanalysis, with seven hands-on demonstrations. Success depends on the cipher, evidence, language, key and message length; no technique here defeats a correctly used one-time pad.</p>
   <a href="lab/workbench.html" style="display:inline-block;margin-top:1rem;font-family:var(--fd);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;padding:.6rem 1.4rem;border:1px solid var(--gold-b);border-radius:var(--r);position:relative;z-index:1;transition:all .25s ease">Open Codebreaker's Workbench →</a>
   <a href="cipher-detective.html" style="display:inline-block;margin-top:1rem;margin-left:.75rem;font-family:var(--fd);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;padding:.6rem 1.4rem;border:1px solid var(--gold-b);border-radius:var(--r);position:relative;z-index:1;transition:all .25s ease">Open Cipher Detective →</a>
 </div>
@@ -199,7 +197,7 @@
       <div class="technique-num">Technique 04</div>
       <div class="technique-name">Crib-Based Cryptanalysis</div>
       <div class="technique-by">Polish Mathematicians · WWII Bletchley</div>
-      <p class="technique-desc">Guess probable plaintext words called "cribs" — military messages often start with standard phrases. The Enigma was broken partly because operators always began with WETTER (weather), HEIL HITLER, or ANX (a header). Known structure is a fatal weakness.</p>
+      <p class="technique-desc">Cribs are hypotheses about plaintext, suggested by message formats, context or repeated phrases. Against Enigma, analysts tested those hypotheses against machine constraints and additional traffic. Known plaintext is an attack model that modern encryption must withstand; it is not automatically a fatal weakness.</p>
       <figure class="figure" style="margin-top:1rem;">
         <svg viewBox="0 0 520 200" style="max-width:560px;width:100%;height:auto;display:block;background:#1a1a2e;border:1px solid #2e2e3a;border-radius:6px;" role="img" aria-label="Crib sliding: offset 0 rejected because T aligns with T; offset 2 is a legal alignment"><text x="70" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">J</text><text x="100" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">X</text><text x="130" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">A</text><text x="160" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">T</text><text x="190" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">Q</text><text x="220" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">B</text><text x="250" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">G</text><text x="280" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">G</text><text x="310" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">Y</text><text x="340" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">W</text><text x="370" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">C</text><text x="400" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">R</text><text x="430" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">Y</text><text x="460" y="32" style="font-family:ui-monospace,monospace;font-size:13px;fill:#e8d5a3;text-anchor:middle">B</text><text x="30" y="32" style="font-family:ui-monospace,monospace;font-size:9px;fill:#8b7355;text-anchor:start">cipher</text><rect x="59" y="60" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="70" y="74" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">W</text><rect x="89" y="60" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="100" y="74" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">E</text><rect x="119" y="60" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="130" y="74" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">T</text><rect x="149" y="60" width="22" height="20" fill="none" stroke="#C85A5A" stroke-width="1.3" rx="3"/><text x="160" y="74" style="font-family:ui-monospace,monospace;font-size:12px;fill:#C85A5A;text-anchor:middle">T</text><text x="160" y="55" style="font-family:ui-monospace,monospace;font-size:8.5px;fill:#C85A5A;text-anchor:middle">T = T</text><rect x="179" y="60" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="190" y="74" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">E</text><rect x="209" y="60" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="220" y="74" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">R</text><text x="260" y="100" style="font-family:ui-monospace,monospace;font-size:10px;fill:#C85A5A;text-anchor:middle">✗ offset 0 rejected — T would encrypt to itself, and Enigma never does</text><rect x="119" y="118" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="130" y="132" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">W</text><rect x="149" y="118" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="160" y="132" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">E</text><rect x="179" y="118" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="190" y="132" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">T</text><rect x="209" y="118" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="220" y="132" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">T</text><rect x="239" y="118" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="250" y="132" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">E</text><rect x="269" y="118" width="22" height="20" fill="none" stroke="#c8b273" stroke-width="1.3" rx="3"/><text x="280" y="132" style="font-family:ui-monospace,monospace;font-size:12px;fill:#c8b273;text-anchor:middle">R</text><text x="260" y="158" style="font-family:ui-monospace,monospace;font-size:10px;fill:#c8b273;text-anchor:middle">✓ offset 2 survives — no letter meets itself; a legal alignment</text><text x="260" y="184" style="font-family:ui-monospace,monospace;font-size:10px;fill:#8b7355;text-anchor:middle">each surviving offset becomes a bombe menu to test</text></svg>
         <figcaption class="figure-caption">Crib-based cryptanalysis — exploiting predictable message headers and standard phrases to break machine ciphers.</figcaption>
@@ -244,13 +242,13 @@
     </div>
 
     <div class="technique-card">
-      <div class="technique-num">Technique 07</div>
+      <div class="technique-num" id="simulated-annealing">Technique 07</div>
       <div class="technique-name">Simulated Annealing / Genetic Algorithms</div>
       <div class="technique-by">Modern · AI-Assisted</div>
-      <p class="technique-desc">Advanced optimization heuristics that explore key space more broadly than pure hill climbing. Genetic algorithms evolve populations of candidate keys. Simulated annealing occasionally accepts worse solutions to escape local optima. Breaks double transposition and Playfair in seconds; cracks small Hill keys too, though Hill's canonical break is the known-plaintext attack above.</p>
+      <p class="technique-desc">Genetic algorithms explore populations of candidate keys; simulated annealing sometimes accepts worse-scoring moves. These methods can help attack classical ciphers, but time and success depend on the problem and settings. A high language score does not prove a correct plaintext.</p>
       <figure class="figure" style="margin-top:1rem;">
         <svg viewBox="0 0 520 236" style="max-width:560px;width:100%;height:auto;display:block;background:#1a1a2e;border:1px solid #2e2e3a;border-radius:6px;" role="img" aria-label="Simulated annealing: an accepted downhill jump escapes the local peak and reaches the global best"><line x1="20" y1="200" x2="500" y2="200" stroke="#555" stroke-width="1"/><path d="M20 190 C 80 150, 110 92, 150 92 C 190 92, 210 150, 260 165 C 300 176, 330 60, 375 46 C 410 36, 460 90, 500 130" fill="none" stroke="#e8d5a3" stroke-width="1.6"/><circle cx="60" cy="168" r="4" fill="#c8b273" stroke="#141422" stroke-width="1"/><circle cx="90" cy="140" r="4" fill="#c8b273" stroke="#141422" stroke-width="1"/><circle cx="118" cy="110" r="4" fill="#c8b273" stroke="#141422" stroke-width="1"/><circle cx="140" cy="95" r="4" fill="#c8b273" stroke="#141422" stroke-width="1"/><path d="M150 88 C 200 60, 230 190, 268 168" fill="none" stroke="#C85A5A" stroke-width="1.4" stroke-dasharray="5,3"/><polygon points="272,166 262,166 268,176" fill="#C85A5A"/><text x="212" y="206" style="font-family:ui-monospace,monospace;font-size:10px;fill:#C85A5A;text-anchor:middle">worse move accepted while "hot"</text><circle cx="300" cy="140" r="4" fill="#d4af37" stroke="#141422" stroke-width="1"/><circle cx="335" cy="80" r="4" fill="#d4af37" stroke="#141422" stroke-width="1"/><circle cx="360" cy="55" r="4" fill="#d4af37" stroke="#141422" stroke-width="1"/><circle cx="375" cy="46" r="4" fill="#d4af37" stroke="#141422" stroke-width="1"/><circle cx="375" cy="46" r="7" fill="none" stroke="#d4af37" stroke-width="1.8"/><text x="375" y="28" style="font-family:ui-monospace,monospace;font-size:11px;fill:#d4af37;text-anchor:middle;font-weight:700">global best ✓</text><text x="260" y="224" style="font-family:ui-monospace,monospace;font-size:10px;fill:#8b7355;text-anchor:middle">temperature cools → downhill jumps become rare</text><text x="30" y="20" style="font-family:ui-monospace,monospace;font-size:10px;fill:#8b7355;text-anchor:start">fitness</text></svg>
-        <figcaption class="figure-caption">Simulated annealing — escaping local optima to find the global best key through controlled randomness.</figcaption>
+        <figcaption class="figure-caption">Simulated annealing — one possible escape from a local optimum; a finite run need not reach the global best.</figcaption>
       </figure>
       <div class="technique-breaks">
         <a href="ciphers/double-transposition.html" class="badge sec-broken" style="text-decoration:none;">Double Transposition</a>
@@ -272,9 +270,9 @@
 
     <div class="technique-card">
       <div class="technique-num">Technique 09</div>
-      <div class="technique-name">HMM &amp; Statistical MT Decoding</div>
+      <div class="technique-name">Computer-Assisted Manuscript Decipherment</div>
       <div class="technique-by">Knight, Megyesi &amp; Schaefer · USC ISI / Uppsala · 2011</div>
-      <p class="technique-desc">When a 250-year-old homophonic cipher resists every manual attack, treat it as a translation problem. Kevin Knight and his collaborators modeled the Copiale manuscript's symbol stream with a hidden Markov model trained on German n-grams, then applied expectation-maximization to align symbols to phonemes. After several false starts (including the wrong source language), the EM algorithm converged on German — and the Copiale Order's initiation ritual emerged. The first major historical cipher broken by computational linguistics.</p>
+      <p class="technique-desc">Knight, Megyesi and Schaefer combined careful transcription, symbol statistics and linguistic reasoning to decipher Copiale. Their 2011 paper describes unsuccessful early automatic-decryption attempts, then progress after treating the Roman letters as spaces and grouping likely homophones. This was a combination of computation and human analysis, not an EM algorithm automatically discovering the answer. <a href="https://aclanthology.org/W11-1202/" target="_blank" rel="noopener noreferrer">Original Copiale paper</a>.</p>
       <div class="technique-breaks">
         <a href="ciphers/copiale.html" class="badge sec-broken" style="text-decoration:none;">Copiale</a>
         <a href="ciphers/homophonic.html" class="badge sec-broken" style="text-decoration:none;">Homophonic</a>
@@ -285,7 +283,7 @@
       <div class="technique-num">Technique 10</div>
       <div class="technique-name">Chaocipher Reconstruction</div>
       <div class="technique-by">Moshe Rubin &amp; George Lasry · 2010–2014</div>
-      <p class="technique-desc">John F. Byrne's Chaocipher (1918) survived 92 years because its dynamic-permutation rule was kept secret. When the family donated his papers to the National Cryptologic Museum in 2010, Moshe Rubin reconstructed the algorithm from the worked examples. George Lasry later confirmed that with sufficient ciphertext (a few hundred characters of crib), simulated annealing on the two starting alphabets recovers the key — proving the cipher is not unbreakable, only secret.</p>
+      <p class="technique-desc">The disclosure of Byrne’s Chaocipher algorithm in 2010 made independent implementation and attack possible. Subsequent research studied known-plaintext and ciphertext-only attacks under specified conditions. Distinguish revealing an algorithm from recovering a secret starting state. <a href="https://www.chaocipher.com/chaocipher-current-state-of-research.htm" target="_blank" rel="noopener noreferrer">Researchers’ record of attacks and solved exhibits</a>.</p>
       <div class="technique-breaks">
         <a href="ciphers/chaocipher.html" class="badge sec-broken" style="text-decoration:none;">Chaocipher</a>
       </div>
@@ -296,7 +294,7 @@
   <div class="callout callout-warn" style="margin-bottom:2rem;">
     <span class="callout-icon">⚡</span>
     <div class="callout-body">
-      <p><strong>Speed comparison:</strong> A Vigenère with a 5-letter key that took weeks in the 1800s is cracked in <strong>under one second</strong> today. Monoalphabetic substitution falls in <strong>milliseconds</strong>.</p>
+      <p><strong>Search speed depends on the problem:</strong> Short repeating keys and long, ordinary-language messages can be easy for automated solvers. Short texts, unusual vocabulary, layered ciphers and poorly chosen scoring models can remain difficult. The demonstrations here are examples, not measured performance guarantees.</p>
     </div>
   </div>
 
@@ -340,7 +338,7 @@
     <div class="callout callout-info" style="margin-top:2rem;">
       <span class="callout-icon">📜</span>
       <div class="callout-body">
-        <p>Frequency analysis is the oldest known cryptanalytic technique, formally described by the 9th-century Arab polymath <a href="halls/codebreakers.html#al-kindi">Al-Kindi</a> in his <em>Manuscript on Deciphering Cryptographic Messages</em> (c. 850 AD). It exploits the fact that <a href="ciphers/monoalphabetic.html">monoalphabetic substitution ciphers</a> preserve letter frequency — the cipher just relabels each letter, but a frequent letter in the plaintext stays frequent in the ciphertext. This is why every cipher invented after <a href="ciphers/vigenere.html">Vigenère</a> had to break this property: a polyalphabetic key flattens the frequency distribution, denying the analyst the very pattern Al-Kindi discovered.</p>
+        <p>Al-Kindi’s surviving treatise describes frequency-based cryptanalysis. A monoalphabetic substitution preserves counts while relabeling symbols; polyalphabetic substitution changes that relationship, but need not make a short sample uniform. Language frequencies are evidence for hypotheses, not a guarantee of successful decryption.</p>
       </div>
     </div>
   </div>
@@ -421,7 +419,7 @@
   <!-- Tab: Hill Climbing -->
   <div class="lab-panel" id="tab-hillclimb" role="tabpanel" aria-labelledby="tab-btn-hillclimb" hidden>
     <div style="max-width:700px;">
-      <p style="margin-bottom:1rem;color:var(--tx2);">Watch a hill-climbing algorithm break a Caesar cipher by scoring each shift against English letter frequencies. The algorithm starts at shift 0, tests neighbors, and keeps the best score — climbing toward the correct key.</p>
+      <p style="margin-bottom:1rem;color:var(--tx2);">Watch a small Caesar-key search score candidate shifts against English frequencies. It illustrates greedy search, not a guaranteed solve: a short or unusual message may score best under an incorrect key.</p>
       <div class="input-group" style="margin-bottom:1rem;">
         <label class="input-label" for="hillInput">Ciphertext</label>
         <input type="text" class="museum-input" id="hillInput" value="KHOOR ZRUOG" autocomplete="off" spellcheck="false" style="font-family:var(--fm);letter-spacing:.1em;">
@@ -434,7 +432,7 @@
   <!-- Tab: Simulated Annealing -->
   <div class="lab-panel" id="tab-anneal" role="tabpanel" aria-labelledby="tab-btn-anneal" hidden>
     <div style="max-width:700px;">
-      <p style="margin-bottom:1rem;color:var(--tx2);">Simulated annealing improves on hill climbing by occasionally accepting worse solutions to escape local optima. Watch the temperature cool as the algorithm converges on the answer. Higher temperature = more exploration; lower = more exploitation.</p>
+      <p style="margin-bottom:1rem;color:var(--tx2);">Simulated annealing sometimes accepts worse-scoring candidates to escape local optima. This Caesar example illustrates the rule; a finite run does not guarantee the globally best score or the authentic plaintext.</p>
       <div class="input-group" style="margin-bottom:1rem;">
         <label class="input-label" for="annealInput">Ciphertext (Caesar)</label>
         <input type="text" class="museum-input" id="annealInput" value="WKLV LV D WHVW PHVVDJH" autocomplete="off" spellcheck="false" style="font-family:var(--fm);letter-spacing:.1em;">
@@ -462,7 +460,7 @@
             <div class="tl-title">Al-Kindi Breaks Substitution</div>
             <div class="tl-person">Al-Kindi · Baghdad</div>
             <div class="tl-technique">Technique: Frequency Analysis</div>
-            <p class="tl-impact">First documented scientific cryptanalysis. Introduced statistical analysis to codebreaking. Every cipher for the next 400 years was vulnerable.</p>
+            <p class="tl-impact">An early surviving systematic account of frequency analysis. Its effectiveness depends on the cipher and available text.</p>
           </div>
         </div>
 
@@ -502,7 +500,7 @@
             <div class="tl-title">US SIS Breaks Japanese Purple</div>
             <div class="tl-person">Friedman's SIS team · Grotjan's insight · Washington DC</div>
             <div class="tl-technique">Technique: Statistical Analysis · Machine Reconstruction</div>
-            <p class="tl-impact">The US could read Japanese diplomatic traffic before Pearl Harbor. The diplomatic warning was there — the military intelligence chain failed to act on it.</p>
+            <p class="tl-impact">Purple provided valuable Japanese diplomatic intelligence. It did not reveal a complete operational plan for the Pearl Harbor attack; diplomatic and naval communications used different systems.</p>
           </div>
         </div>
 
@@ -526,17 +524,17 @@
             <div class="tl-title">Bletchley Park Breaks Enigma</div>
             <div class="tl-person">Alan Turing · Gordon Welchman</div>
             <div class="tl-technique">Technique: Crib Attacks · Electromechanical Bombe</div>
-            <p class="tl-impact">Shortened WWII by an estimated 2–4 years. The Bombe machine tested thousands of possible Enigma settings per minute, exploiting known plaintext cribs.</p>
+            <p class="tl-impact">Polish mathematicians reconstructed military Enigma before the war. Later Allied bombe machines used crib-derived constraints to eliminate settings. The intelligence contribution was substantial; a precise number of years removed from the war cannot be measured.</p>
           </div>
         </div>
 
         <div class="tl-item legendary">
-          <div class="tl-year">1943</div>
+          <div class="tl-year">1941–1944</div>
           <div class="tl-body">
-            <div class="tl-title">Lorenz Cipher Broken with Colossus</div>
+            <div class="tl-title">From the Lorenz Depth to Colossus</div>
             <div class="tl-person">Bill Tutte · Tommy Flowers</div>
             <div class="tl-technique">Technique: Known Plaintext · Early Computer Search</div>
-            <p class="tl-impact">Led to the creation of Colossus — the world's first programmable electronic computer. The direct ancestor of modern computing was built to break a cipher.</p>
+            <p class="tl-impact">Tiltman’s 1941 work and Tutte’s structural reconstruction preceded Colossus. The electronic machine became operational in February 1944 and accelerated statistical wheel-setting searches.</p>
           </div>
         </div>
 
@@ -556,7 +554,7 @@
             <div class="tl-title">Linear Cryptanalysis vs DES</div>
             <div class="tl-person">Mitsuru Matsui</div>
             <div class="tl-technique">Technique: Linear Cryptanalysis</div>
-            <p class="tl-impact">Found linear approximations of DES S-box operations, reducing the work to break DES from 2⁵⁶ to 2⁴³. Accelerated the case for replacing DES with AES.</p>
+            <p class="tl-impact">Linear approximations enabled a statistical attack on DES under a large known-plaintext requirement. The often-cited 2⁴³ figure is a data requirement for a particular attack, not an unconditional reduction of all attack costs to 2⁴³.</p>
           </div>
         </div>
 
@@ -576,7 +574,7 @@
             <div class="tl-title">SHA-1 Collision (SHAttered)</div>
             <div class="tl-person">Google · CWI Institute</div>
             <div class="tl-technique">Technique: Collision Attack</div>
-            <p class="tl-impact">Produced two different PDF files with the same SHA-1 hash. Forced the entire internet to migrate from SHA-1 to SHA-256 and SHA-3. Cryptographic hash functions are not forever.</p>
+            <p class="tl-impact">The SHAttered team produced two different PDFs with the same SHA-1 digest. This demonstrated a practical collision and reinforced a migration already underway; collision resistance and preimage resistance are different properties.</p>
           </div>
         </div>
 

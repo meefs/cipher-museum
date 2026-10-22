@@ -54,15 +54,9 @@
   <main id="main">
 
   <div class="hero">
-    <div class="kicker">What ML-KEM &amp; ML-DSA Actually Hold</div>
+    <div class="kicker">A Teaching Model of Noisy Public Equations</div>
     <h1>The secret hidden<br>by <em>a little noise</em></h1>
-    <p class="standfirst">
-      Schoolroom algebra says a system of linear equations with as many equations
-      as unknowns has exactly one solution, and a mechanical procedure finds it.
-      That is completely true. <span class="term">Learning With Errors</span>
-      breaks it anyway — by perturbing every equation just slightly, so the
-      procedure still runs, still returns an answer, and the answer is worthless.
-    </p>
+    <p class="standfirst">A square linear system has a unique solution when its matrix is invertible. This demo samples invertible matrices modulo 97. With zero error, elimination recovers the secret. With nonzero error, solving the exact equations generally recovers a different vector; a tiny instance remains easy to attack by enumerating the possible secrets.</p>
   </div>
 
   <div class="honesty">
@@ -138,15 +132,7 @@
       The algorithm never fails, never warns, and never notices. It returns a
       confident answer that happens to be noise.
     </div>
-    <p>
-      That is the asymmetry the whole construction rests on. The error is far too
-      small to interfere with anyone who knows <em>s</em>, and far too destructive
-      for anyone applying exact linear algebra without it. Recovering <em>s</em>
-      from <em>(A, t)</em> is the <span class="term">LWE problem</span>; doing it
-      with polynomials instead of plain numbers, as the standards do, is
-      <span class="term">Module-LWE</span>, and it lives in the
-      <a href="polynomial-rings.html">ring next door</a>.
-    </p>
+    <p>Noise prevents exact elimination from being a general secret-recovery method. Security requires suitable dimensions, distributions and parameters: small error does not automatically make every instance hard. LWE and Module-LWE specify such sampling problems, with Module-LWE using structured modules over polynomial rings.</p>
   </section>
 
   <section class="exhibit">
@@ -196,7 +182,7 @@
         <b>m&#183;&#8970;q/2&#8971;</b> for the bit that was actually sent. The
         <span style="color:var(--vermilion)">vermilion line</span> is the budget,
         ⌊q/4⌋ = 24; the track runs to 48, the furthest a value can sit from
-        either ideal. Cross the line and the rounding tips to the wrong bit.
+        the sent ideal. An error strictly below 24 guarantees correct decoding here; at 24 the outcome depends on the bit, direction and tie rule. Larger errors decode incorrectly.
         Raise the error and watch the bar climb.
       </div>
       <div class="a11y-fallback">
@@ -215,9 +201,9 @@
       Three things here are toys, and it is worth naming them.
     </p>
     <ul class="ladder">
-      <li><span class="rung">The size<span>4 &#215; 4, q = 97</span></span><span class="gloss">ML-KEM works over a 256-coefficient polynomial ring with q = 3329, arranged in modules of rank 2 to 4. A 4&#215;4 system mod 97 is brute-forceable in microseconds; it is here to be readable, not hard.</span></li>
-      <li><span class="rung">The randomness<span>uniform, not Gaussian</span></span><span class="gloss">Real schemes draw errors from a centered binomial distribution, and the security proofs depend on that shape. This exhibit picks uniformly in a range, which makes the slider legible but is not what gets deployed.</span></li>
-      <li><span class="rung">The scheme<span>one bit, no KEM</span></span><span class="gloss">This is Regev-style encryption of a single bit. ML-KEM is a key-encapsulation mechanism with compression, a Fujisaki–Okamoto transform for chosen-ciphertext security, and rejection steps this page has no equivalent of.</span></li>
+      <li><span class="rung">The size<span>4 &#215; 4, q = 97</span></span><span class="gloss">ML-KEM works over a 256-coefficient polynomial ring with q = 3329, arranged in modules of rank 2 to 4. The ternary secret here has only 81 possibilities; it is here to be readable, not hard.</span></li>
+      <li><span class="rung">The randomness<span>uniform, not Gaussian</span></span><span class="gloss">ML-KEM draws relevant small values from centered binomial distributions; other schemes use different distributions, and the security proofs depend on that shape. This exhibit picks uniformly in a range, which makes the slider legible but is not what gets deployed.</span></li>
+      <li><span class="rung">The scheme<span>one bit, no KEM</span></span><span class="gloss">This is an LWE-inspired one-bit encryption model, not a standard-compatible implementation. ML-KEM is a key-encapsulation mechanism with compression, a Fujisaki–Okamoto transform for chosen-ciphertext security, and rejection steps this page has no equivalent of.</span></li>
     </ul>
     <p>
       What is faithful is the shape: the public key really is a matrix plus a
@@ -231,17 +217,7 @@
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
       <h3>The bet the post-quantum standards make</h3>
-      <p>
-        Whenever a browser negotiates <strong>ML-KEM</strong>, this structure is
-        running at full size. The reason it is expected to survive a
-        quantum computer is that Shor's algorithm attacks <em>periodicity</em>
-        &#8212; the hidden repeating structure inside factoring and the discrete
-        log, both of which live in the <a href="group-theory.html">cyclic
-        groups</a> of §149. Noisy linear algebra over a module has no such
-        period to find. That is the whole bet, and it is a different bet from the
-        one <a href="../ciphers/rsa.html">RSA</a> and
-        <a href="../ciphers/diffie-hellman.html">Diffie–Hellman</a> made.
-      </p>
+      <p>ML-KEM uses this broad structured noisy-equation pattern at much larger parameters, with additional operations omitted here. No efficient classical or quantum attack is known for its intended security targets. That expectation is based on cryptanalysis of the specified problems, not a proof that merely adding noise eliminates every exploitable quantum structure.</p>
     </div>
     <p class="aside"><b>Three views of one problem.</b>
       <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> is the geometry — why the secret stays hidden.
@@ -251,6 +227,7 @@
       Tested logic in <code>lwe-math.js</code>.</p>
   </section>
 
+  <p class="aside"><strong>Sources and scope:</strong> <a href="https://csrc.nist.gov/pubs/fips/203/final">FIPS 203 (ML-KEM, 2024)</a> and <a href="https://csrc.nist.gov/pubs/fips/204/final">FIPS 204 (ML-DSA, 2024)</a>. This scalar, uniform-error toy is not either standard.</p>
   </main>
 
 
@@ -342,7 +319,7 @@
     }
     var b=+errS.value;
     svg.appendChild(txt(350, 420, b===0 ? "error bound 0 — an exact linear system"
-      : "error bound ±"+b+" — every equation slightly wrong", "var(--muted)"));
+      : "error bound ±"+b+" — equations sampled with bounded noise", "var(--muted)"));
   }
 
   function report(){
@@ -427,8 +404,8 @@
       ok?"var(--teal)":"var(--vermilion)","middle","700"));
     dsvg.appendChild(txt(350, 160, "v − s·u = "+last.out.raw+
       "   (centered "+last.out.centered+")", "var(--ink-soft)"));
-    dsvg.appendChild(txt(350, 340, ok ? "inside the budget — rounding lands on the right bit"
-      : "past the budget — rounding tipped the wrong way",
+    dsvg.appendChild(txt(350, 340, ok ? (n < budget ? "inside the guaranteed margin — rounding lands on the right bit" : "boundary case — rounding is correct for these inputs")
+      : "rounding boundary crossed — recovered the wrong bit",
       ok?"var(--muted)":"var(--vermilion)"));
   }
 
@@ -438,7 +415,7 @@
     dread.innerHTML = last.out.bit===last.m
       ? "Decrypted <b>"+last.out.bit+"</b> — correct. Accumulated error "+last.resid+", budget 24."
       : "Decrypted <b>"+last.out.bit+"</b> — <b>wrong</b>. Accumulated error "+last.resid+
-        " reached the budget of 24, so the rounding tipped over.";
+        " is outside the guaranteed margin (strictly below 24); rounding chose the other bit.";
   }
   derr.addEventListener("input",function(){ derrNum.value=derr.value; });
   document.getElementById("applyDerr").addEventListener("click",function(){

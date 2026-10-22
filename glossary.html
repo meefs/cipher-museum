@@ -106,20 +106,20 @@
       <div class="gl-term">
         <h3 class="gl-word">Algorithm</h3>
         <span class="gl-origin">Mathematics</span>
-        <p class="gl-def">A precise, step-by-step procedure for performing an operation. In cryptography, the algorithm defines how plaintext is transformed into ciphertext and back. Unlike a key, the algorithm itself is usually public — security depends on the key, not the secrecy of the method (<em>Kerckhoffs's Principle</em>).</p>
+        <p class="gl-def">A precise, step-by-step procedure. Cryptographic algorithms include encryption, decryption, signing, verification, hashing and key agreement. Their designs can be public; a secure system must not depend on keeping its algorithm secret.</p>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Asymmetric Encryption</h3>
         <span class="gl-origin">Modern Cryptography · 1976</span>
-        <p class="gl-def">A system using two mathematically linked keys: a <em>public key</em> for encryption and a <em>private key</em> for decryption. Anyone can encrypt a message to you, but only you can decrypt it. RSA (1977) and Diffie-Hellman (1976) are the foundational asymmetric systems.</p>
+        <p class="gl-def">Encryption using a mathematically related public key and private key. A sender encrypts with the recipient’s public key; decryption requires the private key under the scheme’s security assumptions. RSA supports public-key encryption when used with an appropriate encoding scheme. Diffie–Hellman instead establishes shared key material; it does not itself encrypt messages.</p>
         <span class="gl-see">See also: <a href="#gl-P">Public Key</a>, <a href="#gl-K">Key Pair</a></span>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Avalanche Effect</h3>
         <span class="gl-origin">Horst Feistel · 1973</span>
-        <p class="gl-def">The property where a small change in the input (flipping one bit of plaintext or key) causes a large, unpredictable change in the output. Good ciphers exhibit strong avalanche: changing one bit should flip roughly half the output bits. AES achieves full avalanche within 2 rounds.</p>
+        <p class="gl-def">The tendency of a small input change to alter many output bits. For a well-designed cipher, flipping one input bit should change about half the output bits on average over suitable inputs. This is a statistical property, not a promise that every individual change flips exactly half, and it is not by itself proof of security.</p>
       </div>
     </div>
 
@@ -130,7 +130,7 @@
             <div class="gl-term">
         <h3 class="gl-word">Bilinear Pairing</h3>
         <span class="gl-origin">Modern Cryptography</span>
-        <p class="gl-def">A map e(P,Q) taking two elliptic-curve points to a value in which hidden scalars slide out: e(aP,bQ) = e(P,Q)<sup>ab</sup>. It lets a verifier check multiplicative relations between secret values without learning them — the engine of zk-SNARKs and identity-based encryption. Interactive: <a href="hall-of-foundations/pairings.html">Bilinear Pairings (§156)</a>.</p>
+        <p class="gl-def">A map e(P,Q) with the property e(aP,bQ) = e(P,Q)<sup>ab</sup>. Carefully chosen pairings let protocols test relations between hidden scalars. They support some zk-SNARKs, identity-based encryption and signatures; other proof systems use different constructions. Interactive: <a href="hall-of-foundations/pairings.html">Bilinear Pairings (§156)</a>.</p>
       </div>
 <div class="gl-term">
         <h3 class="gl-word">Block Cipher</h3>
@@ -142,7 +142,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Brute Force Attack</h3>
         <span class="gl-origin">Cryptanalysis</span>
-        <p class="gl-def">Trying every possible key until the correct one is found. The time required grows exponentially with key length: a 56-bit key (DES) requires at most 2⁵⁶ attempts (~72 quadrillion); a 256-bit key (AES-256) requires 2²⁵⁶ — more than the atoms in the observable universe.</p>
+        <p class="gl-def">Testing candidate keys until one satisfies the available evidence. A uniformly chosen n-bit key has 2ⁿ possibilities; classical exhaustive search takes about half that many trials on average. Recognizing the right key requires enough known structure or other verification. Algorithmic attacks can be much faster than exhaustive search.</p>
       </div>
     </div>
 
@@ -159,7 +159,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Ciphertext</h3>
         <span class="gl-origin">Core Concept</span>
-        <p class="gl-def">The encrypted output produced by a cipher. Without the correct key, ciphertext should be indistinguishable from random noise. The goal of cryptanalysis is to recover the plaintext from the ciphertext without knowledge of the key.</p>
+        <p class="gl-def">The encrypted output of an encryption scheme. A secure scheme should conceal the protected plaintext under its stated attack model. Ciphertexts can still expose length, public headers or formatting; not every secure format is indistinguishable from uniform random bytes.</p>
         <span class="gl-see">See also: <a href="#gl-P">Plaintext</a></span>
       </div>
 
@@ -220,7 +220,7 @@
             <div class="gl-term">
         <h3 class="gl-word">Elliptic Curve</h3>
         <span class="gl-origin">Mathematics</span>
-        <p class="gl-def">The solution set of y² = x³ + ax + b, carrying a natural addition: draw a line through two points, take the third intersection, reflect across the x-axis. Over a finite field this addition scrambles points unpredictably — the basis of ECDH key exchange and ECDSA signatures. Interactives: <a href="hall-of-foundations/elliptic-curves-real.html">the group law (§150)</a> and <a href="hall-of-foundations/finite-fields.html">the curve over 𝔽ₚ (§142)</a>.</p>
+        <p class="gl-def">For a nonsingular short-Weierstrass curve, the points satisfying y² = x³ + ax + b, together with a point at infinity, form a group. Over the reals, a line-and-reflection construction illustrates addition; over finite fields, modular formulas define it. Addition is efficient. Security in suitable ECDH and ECDSA groups relies on the difficulty of recovering a scalar k from P and kP. Interactives: <a href="hall-of-foundations/elliptic-curves-real.html">the group law (§150)</a> and <a href="hall-of-foundations/finite-fields.html">finite fields (§142)</a>.</p>
       </div>
 <div class="gl-term">
         <h3 class="gl-word">Encryption</h3>
@@ -231,7 +231,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Entropy</h3>
         <span class="gl-origin">Information Theory · Claude Shannon · 1948</span>
-        <p class="gl-def">A measure of randomness or uncertainty in a system. In cryptography, higher entropy means more unpredictability. A key with n bits of entropy has 2ⁿ equally likely values. A strong 256-bit key has 256 bits of entropy; a password like "password123" has far fewer, regardless of length.</p>
+        <p class="gl-def">A measure of uncertainty in a probability distribution. A uniformly sampled n-bit key has n bits of Shannon entropy, but n bits of entropy does not in general imply exactly 2ⁿ equally likely outcomes. Entropy belongs to a generation process, not to a string merely because it looks complicated; min-entropy is useful when bounding the most likely guess.</p>
       </div>
     </div>
 
@@ -242,7 +242,7 @@
             <div class="gl-term">
         <h3 class="gl-word">Finite Field</h3>
         <span class="gl-origin">Mathematics</span>
-        <p class="gl-def">A number system with finitely many elements in which addition, subtraction, multiplication, and division all stay inside — the integers mod a prime p are the canonical example. Public-key cryptography largely lives in finite fields; even the AES S-box is inversion in GF(2⁸). Interactive: <a href="hall-of-foundations/finite-fields.html">Finite Fields (§142)</a>.</p>
+        <p class="gl-def">A finite set with field arithmetic: addition, subtraction, multiplication and division by any nonzero element. Integers modulo a prime p form a field. AES uses GF(2⁸); its S-box combines field inversion (with a special rule at zero) and an affine transformation. Interactive: <a href="hall-of-foundations/finite-fields.html">Finite Fields (§142)</a>.</p>
       </div>
 <div class="gl-term">
         <h3 class="gl-word">Fractionation</h3>
@@ -253,7 +253,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Frequency Analysis</h3>
         <span class="gl-origin">Al-Kindi · Baghdad · ~850 AD</span>
-        <p class="gl-def">The study of letter (or symbol) frequency in ciphertext. In English, E appears ~12.7% of the time, T ~9.1%, A ~8.2%. If a cipher preserves these frequencies — as all monoalphabetic substitutions do — counting letter occurrences reveals the key. The first systematic cryptanalysis technique ever described.</p>
+        <p class="gl-def">Comparing symbol and symbol-sequence frequencies with expected language patterns. Monoalphabetic substitution preserves frequency counts while relabeling the symbols. Those counts suggest mappings; short samples, unusual vocabulary and ambiguity prevent them from guaranteeing a key. Al-Kindi’s surviving treatise is an early systematic account.</p>
       </div>
     </div>
 
@@ -264,7 +264,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Hash Function</h3>
         <span class="gl-origin">Modern Cryptography</span>
-        <p class="gl-def">A one-way function that maps input of any size to a fixed-size output (digest). Cryptographic hash functions must be: (1) preimage-resistant (can't reverse), (2) collision-resistant (can't find two inputs with the same hash), (3) avalanche-exhibiting (small input change → completely different hash). SHA-256 produces a 256-bit digest.</p>
+        <p class="gl-def">A function mapping messages to fixed-size digests, within its defined input limits. Cryptographic hashes aim for computational resistance to preimage, second-preimage and collision attacks. Collisions necessarily exist; security concerns the difficulty of finding them. SHA-256 produces a 256-bit digest, and a plain unkeyed hash does not authenticate a message.</p>
       </div>
 
       <div class="gl-term">
@@ -281,13 +281,13 @@
       <div class="gl-term">
         <h3 class="gl-word">Index of Coincidence (IC)</h3>
         <span class="gl-origin">William Friedman · 1922</span>
-        <p class="gl-def">The probability that two randomly chosen letters from a text are the same. English text has IC ≈ 0.0667; random text ≈ 0.0385. Used to estimate whether a cipher is monoalphabetic or polyalphabetic, and to determine the key length in Vigenère-type ciphers.</p>
+        <p class="gl-def">The probability that two distinct positions sampled without replacement from a text contain the same letter. For N letters with counts nᵢ, IC = Σ nᵢ(nᵢ−1) / [N(N−1)]. Typical long English samples are near 0.066; uniform A–Z samples approach 1/26 ≈ 0.0385. Values depend on language, text length and preprocessing, and provide clues rather than certain cipher identification.</p>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Initialization Vector (IV)</h3>
         <span class="gl-origin">Modern Cryptography</span>
-        <p class="gl-def">A random or pseudo-random value used to ensure that encrypting the same plaintext with the same key produces different ciphertext each time. Required by block cipher modes like CBC and GCM. The IV is not secret but must not be reused with the same key.</p>
+        <p class="gl-def">A public input to a cipher mode whose requirements depend on that mode. CBC encryption needs an unpredictable IV; uniqueness alone is insufficient. GCM requires nonce/IV uniqueness for each key, with careful limits when values are generated randomly. An IV need not be secret, and it does not replace authentication. See <a href="https://csrc.nist.gov/pubs/sp/800/38/a/final">NIST SP 800-38A</a> and <a href="https://csrc.nist.gov/pubs/sp/800/38/d/final">SP 800-38D</a>.</p>
       </div>
     </div>
 
@@ -298,31 +298,31 @@
       <div class="gl-term">
         <h3 class="gl-word">Kasiski Examination</h3>
         <span class="gl-origin">Friedrich Kasiski · 1863</span>
-        <p class="gl-def">A technique for determining the key length of a Vigenère cipher. Find repeated sequences in the ciphertext, measure the distances between them, and compute the GCD of those distances. The GCD is likely the key length (or a multiple). Once you know the key length, each column becomes a simple Caesar cipher.</p>
+        <p class="gl-def">A way to propose repeating-key periods. Measure the distances between repeated ciphertext fragments and examine common factors. Repetitions can be accidental, and useful distances may reflect multiples of the true period. Check proposed periods with additional statistical evidence rather than treating their greatest common divisor as proof.</p>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Kerckhoffs's Principle</h3>
         <span class="gl-origin">Auguste Kerckhoffs · 1883</span>
-        <p class="gl-def">"A cryptosystem should be secure even if everything about the system, except the key, is public knowledge." The opposite of <em>security through obscurity</em>. Modern corollary: AES, RSA, and SHA are all published algorithms — their security relies entirely on the secrecy and strength of the keys.</p>
+        <p class="gl-def">A cryptosystem should remain secure when its design is known to an adversary. Published algorithms still need appropriate keys, parameters, protocols and implementations. Unkeyed hashes such as SHA-256 have no secret key; their security goals depend on the difficulty of specified attacks.</p>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Key</h3>
         <span class="gl-origin">Core Concept</span>
-        <p class="gl-def">The secret value that parameterizes a cipher. The same algorithm with different keys produces different ciphertexts from the same plaintext. Key length determines the brute-force difficulty: doubling the key length squares the search space. A 128-bit key has 2¹²⁸ possible values.</p>
+        <p class="gl-def">A value that selects an operation within a cryptographic scheme. Symmetric and private keys are secret; public keys are intentionally shared. An unrestricted n-bit key space contains 2ⁿ values, but effective security also depends on the sampling process and attacks against the scheme.</p>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Key Pair</h3>
         <span class="gl-origin">Asymmetric Cryptography · 1976</span>
-        <p class="gl-def">A matched set of public key and private key in an asymmetric cryptosystem. The public key is shared openly; the private key is kept secret. In encryption schemes like RSA, what the public key encrypts only the private key can decrypt; in signature schemes the roles reverse — the private key signs, the public key verifies. Used for encryption (RSA), digital signatures (ECDSA), and key exchange (DH).</p>
+        <p class="gl-def">A related public key and private key used by an asymmetric scheme. The public key is shared and the private key kept secret. Encryption, signatures and key agreement are different operations: signatures are not generally encryption run backwards. Examples include RSA encryption, ECDSA signatures and Diffie–Hellman key agreement.</p>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Keyspace</h3>
         <span class="gl-origin">Cryptanalysis</span>
-        <p class="gl-def">The set of all possible keys for a given cipher. Caesar cipher: 25 keys. Monoalphabetic substitution: 26! ≈ 4×10²⁶ keys. AES-256: 2²⁵⁶ keys. A large keyspace is necessary but not sufficient for security — frequency analysis breaks monoalphabetic despite its enormous keyspace.</p>
+        <p class="gl-def">The set of permitted keys. Caesar has 26 shifts if the identity shift is included, or 25 nonidentity shifts. A substitution permutation has 26! possibilities; AES-256 has 2²⁵⁶ keys. Large keyspaces alone do not guarantee security: attacks may exploit structure without testing every key.</p>
       </div>
     </div>
 
@@ -334,12 +334,12 @@
           <div class="gl-term">
         <h3 class="gl-word">Lattice</h3>
         <span class="gl-origin">Post-Quantum Cryptography</span>
-        <p class="gl-def">The regular grid of all integer combinations of a set of basis vectors. Finding the shortest vector (SVP) or the closest lattice point (CVP) in high dimension is believed hard even for quantum computers — the foundation of the ML-KEM and ML-DSA standards. Interactive: <a href="hall-of-foundations/lattices-svp.html">Lattices &amp; the SVP (§147)</a>.</p>
+        <p class="gl-def">The set of integer combinations of independent basis vectors. Certain high-dimensional lattice problems are believed hard for classical and quantum computers. ML-KEM and ML-DSA use structured module-lattice assumptions; they do not rely on every lattice instance being difficult. Interactive: <a href="hall-of-foundations/lattices-svp.html">Lattices &amp; the SVP (§147)</a>.</p>
       </div>
       <div class="gl-term">
         <h3 class="gl-word">Learning With Errors (LWE)</h3>
         <span class="gl-origin">Post-Quantum Cryptography</span>
-        <p class="gl-def">The problem of recovering a secret from linear equations that have each been perturbed by a small amount of noise — equivalent to decoding a point lying near a lattice. LWE is the direct hardness assumption behind ML-KEM, whose public key is a matrix and a noisy product of it with a short secret vector; decryption uses that vector to cancel the shared term and rounds the remaining noise away. Interactive: <a href="hall-of-foundations/learning-with-errors.html">Learning With Errors (§157)</a> for the algebra, <a href="hall-of-foundations/closest-vector.html">The Closest Vector Problem (§152)</a> for the geometry.</p>
+        <p class="gl-def">Distinguishing or recovering a secret from noisy linear relations, under a specified distribution of matrices, secrets and errors. ML-KEM uses Module-LWE: its public key encodes a noisy matrix–secret-vector product, and decapsulation uses the short secret vector to cancel a shared term before decoding. The plain LWE and module variants are related but distinct assumptions. Interactive: <a href="hall-of-foundations/learning-with-errors.html">Learning With Errors (§157)</a>; <a href="hall-of-foundations/closest-vector.html">the geometry of decoding (§152)</a>.</p>
       </div>
 </div>
 
@@ -355,7 +355,7 @@
             <div class="gl-term">
         <h3 class="gl-word">Modular Arithmetic</h3>
         <span class="gl-origin">Mathematics</span>
-        <p class="gl-def">Clock arithmetic: numbers wrap around at a modulus n, so 9 + 5 ≡ 2 (mod 12). The multiplicative structure of the integers mod a prime — cyclic, generated by primitive roots — is the original home of Diffie–Hellman and RSA. Interactive: <a href="hall-of-foundations/modular-arithmetic.html">Modular Arithmetic (§143)</a>.</p>
+        <p class="gl-def">Arithmetic with residues: 9 + 5 ≡ 2 (mod 12). Classical finite-field Diffie–Hellman uses a suitable subgroup modulo a prime. RSA uses arithmetic modulo a composite number n, normally the product of two primes. Interactive: <a href="hall-of-foundations/modular-arithmetic.html">Modular Arithmetic (§143)</a>.</p>
       </div>
 <div class="gl-term">
         <h3 class="gl-word">Monoalphabetic Cipher</h3>
@@ -372,7 +372,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Nonce</h3>
         <span class="gl-origin">Number used once</span>
-        <p class="gl-def">A value that must never repeat in a given context. Similar to an IV but with a stricter uniqueness requirement. In AES-GCM, reusing a nonce with the same key completely breaks authentication and can leak plaintext via XOR of ciphertext streams.</p>
+        <p class="gl-def">A value required to be unique within the context specified by a protocol, often for each encryption key. Reusing an AES-GCM nonce repeats its counter-mode keystream, revealing the XOR of equal-length plaintext portions, and can enable authentication forgeries. Nonces may be counters or carefully generated random values; requirements are scheme-specific.</p>
       </div>
 
       <div class="gl-term">
@@ -389,12 +389,12 @@
       <div class="gl-term">
         <h3 class="gl-word">One-Time Pad (OTP)</h3>
         <span class="gl-origin">Gilbert Vernam · 1917 / Claude Shannon · 1949</span>
-        <p class="gl-def">The only cipher proven to be unbreakable — if the key is truly random, at least as long as the message, used only once, and kept secret. Shannon proved this mathematically in 1949. Impractical for most uses because the key distribution problem is equivalent to the message distribution problem.</p>
+        <p class="gl-def">Encryption with uniformly random secret key material independent of the message, at least as long as the message, and never reused. Under those conditions it provides perfect secrecy for fixed-length messages. Other constructions can also provide perfect secrecy. The pad does not hide length or authenticate ciphertext, and secure key distribution remains essential.</p>
       </div>
       <div class="gl-term">
         <h3 class="gl-word">One-Way Function</h3>
         <span class="gl-origin">Modern Cryptography</span>
-        <p class="gl-def">A function easy to compute forward but believed infeasible to invert — multiplying two large primes takes microseconds; factoring the product would take longer than the age of the universe. The conceptual keystone beneath every public-key scheme. Interactive: <a href="hall-of-foundations/one-way-function.html">The One-Way Function (§146)</a>.</p>
+        <p class="gl-def">A function that is efficient to compute but conjectured hard to invert on inputs sampled from a specified distribution. No general existence proof is known. Multiplication of suitably sampled primes illustrates a candidate based on factoring, whose difficulty depends on size and structure. Interactive: <a href="hall-of-foundations/one-way-function.html">The One-Way Function (§146)</a>.</p>
       </div>
 
     </div>
@@ -431,7 +431,7 @@
 <div class="gl-term">
         <h3 class="gl-word">Public Key</h3>
         <span class="gl-origin">Diffie-Hellman · 1976</span>
-        <p class="gl-def">The freely shared half of an asymmetric key pair. Anyone can use your public key to encrypt a message to you or to verify your digital signature. The mathematical relationship between public and private keys must be computationally infeasible to reverse (factoring for RSA, discrete log for DH/ECDH).</p>
+        <p class="gl-def">The publicly shared key of an asymmetric key pair. Its purpose depends on the scheme: encryption, signature verification or key agreement. The related private key must remain infeasible to recover under the scheme’s assumptions, and users also need a way to authenticate whose public key they received.</p>
       </div>
     </div>
 
@@ -447,7 +447,7 @@
 <div class="gl-term">
         <h3 class="gl-word">Rotor</h3>
         <span class="gl-origin">Enigma Machine · 1920s</span>
-        <p class="gl-def">A wired disk that performs a substitution cipher by routing electrical signals through scrambled connections. Multiple rotors in series create a polyalphabetic cipher. The rotors step after each keypress, changing the substitution — giving Enigma ~17,576 initial rotor positions per rotor order.</p>
+        <p class="gl-def">A wired wheel that maps input contacts to output contacts. In Enigma, several rotors and a reflector produce a changing substitution; the stepping mechanism advances before the electrical transformation. Three 26-position rotors have 17,576 displayed starting positions for a fixed order, while ring settings, plugboard choices and stepping behavior are separate parts of the configuration.</p>
       </div>
 
       <div class="gl-term">
@@ -470,12 +470,12 @@
             <div class="gl-term">
         <h3 class="gl-word">Secret Sharing (Shamir&#39;s)</h3>
         <span class="gl-origin">Modern Cryptography</span>
-        <p class="gl-def">Splitting a secret into n shares so that any k of them reconstruct it and any k−1 reveal nothing — guaranteed by polynomial interpolation, since k points fix a degree-(k−1) curve and fewer leave it completely free. Interactive: <a href="hall-of-foundations/interpolation.html">Polynomial Interpolation (§155)</a>.</p>
+        <p class="gl-def">Represent a secret as the constant coefficient of a polynomial of degree at most k−1 over a finite field. Sample the other coefficients independently and uniformly. Any k distinct nonzero share positions reconstruct the secret; fewer than k reveal no information under this model. Ordinary Shamir sharing does not detect forged shares. Interactive: <a href="hall-of-foundations/interpolation.html">Polynomial Interpolation (§155)</a>.</p>
       </div>
       <div class="gl-term">
         <h3 class="gl-word">Shortest Vector Problem (SVP)</h3>
         <span class="gl-origin">Post-Quantum Cryptography</span>
-        <p class="gl-def">Given a skewed basis for a lattice, find the shortest nonzero lattice vector. Trivial in two dimensions, believed exponentially hard in hundreds — the bedrock hardness assumption of post-quantum cryptography. Interactive: <a href="hall-of-foundations/lattices-svp.html">Lattices &amp; the SVP (§147)</a>.</p>
+        <p class="gl-def">Given a basis of a lattice, find a shortest nonzero vector. Difficulty depends on dimension, the lattice family and whether an exact or approximate answer is required. Lattice cryptography uses carefully specified related assumptions, and is only one family of post-quantum cryptography. Interactive: <a href="hall-of-foundations/lattices-svp.html">Lattices &amp; the SVP (§147)</a>.</p>
       </div>
 <div class="gl-term">
         <h3 class="gl-word">Steganography</h3>
@@ -486,7 +486,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Stream Cipher</h3>
         <span class="gl-origin">Modern Cryptography</span>
-        <p class="gl-def">A cipher that encrypts one bit (or byte) at a time by XORing plaintext with a pseudorandom keystream generated from a key and nonce. Faster than block ciphers for streaming data. ChaCha20 is the most widely deployed modern stream cipher (used in TLS, WireGuard).</p>
+        <p class="gl-def">A cipher that combines a message with a generated keystream. Modern binary examples such as ChaCha20 use XOR and derive the stream from a secret key, nonce and counter. Performance depends on the platform; block-cipher counter modes also generate streams. Encryption alone does not provide message authentication.</p>
         <span class="gl-see">See also: <a href="#gl-B">Block Cipher</a></span>
       </div>
 
@@ -516,7 +516,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Transposition Cipher</h3>
         <span class="gl-origin">Ancient / Military</span>
-        <p class="gl-def">A cipher that rearranges the positions of plaintext characters without changing them. Rail Fence, Columnar, and Route ciphers are all transposition methods. Letter frequencies are completely preserved (unlike substitution), so frequency analysis is useless — but anagramming and pattern analysis can break them.</p>
+        <p class="gl-def">A cipher that permutes plaintext positions. Rail Fence, Columnar and Route ciphers preserve each symbol’s frequency, apart from any added padding. Frequency analysis can therefore suggest the language or cipher family, but cannot by itself recover the permutation. Anagramming, structural clues and language scoring help reconstruct the order.</p>
       </div>
     </div>
 
@@ -538,7 +538,7 @@
       <div class="gl-term">
         <h3 class="gl-word">XOR (Exclusive OR)</h3>
         <span class="gl-origin">Boolean Logic / Cryptography</span>
-        <p class="gl-def">A binary operation: 0⊕0=0, 0⊕1=1, 1⊕0=1, 1⊕1=0. The workhorse of modern cryptography because it's perfectly balanced (output is equally likely 0 or 1), self-inverse (A⊕B⊕B=A), and extremely fast in hardware. The One-Time Pad and all stream ciphers use XOR as their core operation.</p>
+        <p class="gl-def">The binary operation 0⊕0=0, 0⊕1=1, 1⊕0=1, 1⊕1=0. It is self-inverse: A⊕B⊕B=A. XOR with an independent uniform bit produces a uniform output; XOR alone does not create randomness from arbitrary inputs. Binary one-time pads and modern binary stream ciphers use it; alphabetic additive ciphers may use modular addition instead.</p>
       </div>
     </div>
 

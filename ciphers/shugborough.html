@@ -85,7 +85,7 @@
         var raw = (document.getElementById('input').value || '').trim();
         var words = raw.split(/\s+/);
         var out = document.getElementById('output');
-        if (words.length === 0 || words[0] === '') { out.textContent = 'Type 8 words to test.'; return; }
+        if (words.length !== 8 || words.some(function(w) { return !/^[A-Za-z]/.test(w); })) { out.textContent = 'Enter exactly 8 words beginning with letters.'; return; }
         var lines = ['Target: O \u00b7 U \u00b7 O \u00b7 S \u00b7 V \u00b7 A \u00b7 V \u00b7 V', ''];
         var matches = 0;
         for (var i = 0; i < 8; i++) {
@@ -117,17 +117,17 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Thomas Anson commissioned the monument from sculptor Peter Scheemakers around 1748; the inscription, added by 1763, may memorialise his sister-in-law Elizabeth, who died in 1760. The Poussin original — <em>Et in Arcadia Ego</em>, 'Even in Arcadia, there am I' — was already famous; Scheemakers carved a mirrored copy in marble. The eight-letter inscription was added by 1763. In 2004 the Bletchley Park veterans Oliver and Sheila Lawn proposed the Latin acrostic <em>Optimae Uxoris Optimae Sororis Viduus Amantissimus Vovit Virtutibus</em> — 'Best of wives, best of sisters, a most loving widower dedicates [this] to your virtues' — fitting Anson's memorial intent. Other proposals invoke George Anson's circumnavigation, Jacobite codes, or freemasonic Latin.</p></div>
+      <div class="panel-body"><p>The monument belongs to the eighteenth-century landscape at Shugborough. Many expansions of its initials have been proposed, including a Latin memorial phrase beginning <em>Optimae Uxoris Optimae Sororis</em>. A matching set of initials does not authenticate an attribution, date or intention; none is treated as established here.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">Technical Notes</span></div>
-      <div class="panel-body"><p>Cryptanalytically the corpus is hopeless: eight letters and a two-letter footer. Any interpretation is consistent with thousands of plausible Latin or English acrostics. Without independent confirmation (a letter, a will, an estate document), no proposed solution can be validated. The cipher is a textbook case of an inscription whose <em>plaintext space</em> is so large that every plausible decoding is also a plausible coincidence.</p></div>
+      <div class="panel-body"><p>Eight initials and a two-letter footer permit many possible expansions. An acrostic match is therefore weak evidence by itself. Independent documents or archaeological context could strengthen an interpretation; the problem is unresolved, not proven permanently impossible.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">Modern Echo</span></div>
-      <div class="panel-body"><p>The Shugborough inscription is preserved by the National Trust and remains one of the most-visited unsolved English ciphers. It is regularly cited in introductory cryptanalysis courses to demonstrate that <em>length matters</em>: short ciphers without keys are not cryptographically secure, they are simply unsolvable in a different sense — under-specified.</p></div>
+      <div class="panel-body"><p>The inscription is preserved at the National Trust’s Shugborough estate. It illustrates the need for independent evidence when interpreting short inscriptions whose encoding rules, if any, are unknown.</p></div>
     </div>
 
   </div>

@@ -4,10 +4,57 @@
   let records = [];
   if (typeof fetch === 'function') {
     // Load the browser sample (balanced ~100 records) — full corpus available via download buttons
-    const res = await fetch('/public/corpus/browser-sample.json');
-    records = await res.json();
+    try {
+      const res = await fetch('public/corpus/browser-sample.json');
+      if (!res.ok) throw new Error('Corpus HTTP ' + res.status);
+      records = await res.json();
+      if (!Array.isArray(records)) throw new Error('Invalid corpus response');
+    } catch (error) {
+      const container = document.getElementById('corpus-cards');
+      if (container) {
+        container.textContent = 'The corpus could not be loaded. Check your connection and reload this page to try again.';
+        container.setAttribute('role', 'status');
+      }
+      return;
+    }
   }
   let mode = 'challenge';
+
+  // Live navigation repairs only. Frozen source_provenance/source_url values remain unchanged in
+  // the published corpus and record downloads; these do not verify provenance.
+  const sourceLinkUpdates = {
+    "https://www.nsa.gov/Portals/75/documents/news-features/declassified-documents/venona/": "https://www.nsa.gov/Helpful-Links/NSA-FOIA/Declassification-Transparency-Initiatives/Historical-Releases/VENONA/",
+    "https://www.cs.cornell.edu/courses/cs6820/2012fa/handouts/alberti.pdf": "https://library.cmu.edu/about/news/2023-01/Alberti-La-Cifra",
+    "https://www.cryptomuseum.com/crypto/chaocipher/": "https://www.chaocipher.com/",
+    "https://www.cryptomuseum.com/crypto/wheatstone/": "https://collection.sciencemuseumgroup.org.uk/objects/co60528",
+    "https://en.wikisource.org/wiki/The_Lives_of_the_Twelve_Caesars/Life_of_Julius_Caesar": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Julius*.html#56.6"
+};
+  const incorrectSourceLinks = {
+    'https://www.gutenberg.org/ebooks/12994': { work: "Russell's Sydney Smith", related: 'https://archive.org/details/41733399077263' },
+    'https://www.gutenberg.org/ebooks/31958': { work: 'Tunturikoski', related: 'https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Aeneas_Tacticus/E*.html' },
+    'https://www.gutenberg.org/ebooks/7012': { work: "Mistral's Mes Origines" }
+  };
+  function sourceLink(rec) {
+    const original = rec.source_url || (rec.source_provenance && rec.source_provenance.url);
+    if (!original) return '';
+    const mistaken = incorrectSourceLinks[original];
+    const replacement = sourceLinkUpdates[original];
+    const destination = mistaken ? mistaken.related : (replacement || original);
+    const warning = mistaken
+      ? '<p>The original dataset citation points to a different work (' + esc(mistaken.work) + '). This does not authenticate the record.</p>'
+      : (replacement ? '<p>Original dataset citation unavailable. This does not authenticate the record.</p>' : '');
+    let link = '';
+    if (destination) {
+      try {
+        const url = new URL(destination);
+        if (/^https?:$/.test(url.protocol)) {
+          link = '<a href="' + esc(url.href) + '" target="_blank" rel="noopener noreferrer">' +
+            (replacement || mistaken ? 'Related verified resource' : 'Dataset source citation') + '</a>';
+        }
+      } catch (error) { /* Retain any warning; never turn malformed text into a link. */ }
+    }
+    return link || warning ? '<div class="corpus-source" style="margin-top:0.7em;font-size:0.9em">' + link + warning + '</div>' : '';
+  }
 
   // Safely escape HTML to prevent XSS from record data
   function esc(str) {
@@ -25,7 +72,7 @@
   let filtered = records;
 
   function applyFilter() {
-    const q = (document.getElementById('corpus-search') || {}).value || '';
+    const q = ((document.getElementById('corpus-search') || {}).value || '').trim();
     const diff = (document.getElementById('corpus-diff-filter') || {}).value || '';
     filtered = records.filter(r => {
       if (diff && r.difficulty !== diff) return false;
@@ -129,6 +176,7 @@
           ${rec.scoring_notes ? '<br><b>Scoring:</b> ' + esc(rec.scoring_notes) : ''}
         </div>
       </div>
+      ${sourceLink(rec)}
       <div class="corpus-details" style="display:none;margin-top:0.7em;font-size:0.93em;color:var(--fg-muted,#bfa76a);"></div>
     `;
 
@@ -142,24 +190,34 @@
 
     // Wire up buttons using event listeners — no inline JS, no XSS risk
     card.querySelector('.btn-copy').addEventListener('click', function() {
-      navigator.clipboard.writeText(rec.ciphertext).catch(() => {});
-      this.textContent = 'Copied!';
-      setTimeout(() => { this.textContent = 'Copy Ciphertext'; }, 1200);
+      const button = this;
+      function selectForCopy() {
+        const block = card.querySelector('.ciphertext-block');
+        const range = document.createRange(); range.selectNodeContents(block);
+        const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+        button.textContent = 'Text selected — copy manually';
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(rec.ciphertext).then(() => {
+          button.textContent = 'Copied!';
+          setTimeout(() => { button.textContent = 'Copy Ciphertext'; }, 1200);
+        }, selectForCopy);
+      } else selectForCopy();
     });
     card.querySelector('.btn-detective').addEventListener('click', () => {
-      navigator.clipboard.writeText(rec.ciphertext).catch(() => {});
-      window.open('/cipher-detective.html', '_blank');
+      openInDetective(rec.ciphertext);
     });
     card.querySelector('.btn-workbench').addEventListener('click', () => {
-      navigator.clipboard.writeText(rec.ciphertext).catch(() => {});
-      window.open('/lab/workbench.html', '_blank');
+      openInWorkbench(rec.ciphertext);
     });
     card.querySelector('.btn-download-rec').addEventListener('click', () => {
       const blob = new Blob([JSON.stringify(rec, null, 2)], { type: 'application/json' });
       const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
+      const objectUrl = URL.createObjectURL(blob);
+      a.href = objectUrl;
       a.download = rec.id + '.json';
       a.click();
+      setTimeout(() => URL.revokeObjectURL(objectUrl), 0);
     });
 
     card.querySelectorAll('.btn-reveal').forEach(btn => {
@@ -179,6 +237,7 @@
 
   function drawFrequencyBar(canvas, text) {
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const counts = Array(26).fill(0);
     const A = 'A'.charCodeAt(0);
@@ -200,6 +259,7 @@
 
   function drawBigramHeatmap(canvas, text) {
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const bigrams = {};
     let prev = null;
@@ -222,9 +282,11 @@
 
   // Mode toggle — button group (.mode-btn / .mode-btn.active)
   document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.setAttribute('aria-pressed', String(btn.dataset.mode === mode));
     btn.addEventListener('click', function() {
-      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.mode-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
       this.classList.add('active');
+      this.setAttribute('aria-pressed', 'true');
       mode = this.dataset.mode;
       const explanation = document.getElementById('mode-explanation');
       if (explanation) {

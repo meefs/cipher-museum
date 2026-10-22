@@ -76,7 +76,7 @@ for (const slug of CONTEXT_EXHIBITS) {
 for (const slug of HISTORICAL_SYSTEMS) {
   const rel = `ciphers/${slug}.html`;
   assert.equal(byPath.get(rel)?.label, 'historical', `${slug}: obsolete service success is Historical Only`);
-  assert.match(byPath.get(rel)?.note || '', /never|capture|defector|superseded|cryptanalytic/i,
+  assert.match(byPath.get(rel)?.note || '', slug === 'che-guevara' ? /historical pad system/i : /never|capture|defector|defection|superseded|cryptanalytic|operational/i,
     `${slug}: manifest note distinguishes cryptanalysis from operational history`);
   const dom = parse(rel);
   assert.equal(dom.window.document.querySelector('.page-meta .sec-secure'), null,
@@ -87,7 +87,7 @@ for (const slug of WARTIME_UNBROKEN_SYSTEMS) {
   const rel = `ciphers/${slug}.html`;
   const dom = parse(rel);
   assert.match(dom.window.document.querySelector('.cipher-significance').textContent,
-    /never publicly broken/i, `${slug}: qualify the historical claim in exhibit prose`);
+    /never publicly broken|no publicly documented.*break|not publicly documented.*broken|no public.*cryptanalytic break/i, `${slug}: qualify the historical claim in exhibit prose`);
   dom.window.close();
 }
 for (const slug of ['scytale', 'caesar', 'polybius', 'pigpen', 'bacon', 'tap-code', 'atbash', 'rot13',
@@ -239,7 +239,7 @@ function readmeRow(slug) {
 for (const slug of HISTORICAL_COMPROMISES) {
   const row = readmeRow(slug);
   const note = exhibits.find(entry => entry.path === `ciphers/${slug}.html`).note || '';
-  assert(/Never broken|never captured|no cryptanalytic break|capture|superseded/i.test(note),
+  assert((slug === 'che-guevara' ? /not Guevara.*historical pad system/i : /Never broken|never captured|no cryptanalytic break|capture|superseded|defection|operational/i).test(note),
     `${slug}: trust note records the operational compromise`);
   for (const [target, pattern, reason] of RETIRED_README_CLAIMS) {
     if (target !== slug) continue;

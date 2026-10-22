@@ -24,7 +24,7 @@
 
 (function (global) {
 
-  /* ─── English letter frequencies (Lewand / Norvig approximations) ─── */
+  /* ─── Fixed rounded English frequency heuristic ─── */
   var ENG_FREQ = {
     A:0.08167,B:0.01492,C:0.02782,D:0.04253,E:0.12702,F:0.02228,
     G:0.02015,H:0.06094,I:0.06966,J:0.00153,K:0.00772,L:0.04025,

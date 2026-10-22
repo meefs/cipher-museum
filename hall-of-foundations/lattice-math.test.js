@@ -76,5 +76,12 @@ var rBad = recoveryRate(bad1, bad2, 0.3, 3000);
 assert(rGood > rBad, "good basis tolerates more noise than bad (" + (rGood * 100).toFixed(0) + "% vs " + (rBad * 100).toFixed(0) + "%)");
 assert(rGood > 0.95, "good basis near-perfect at noise 0.3");
 
+assert(LM.shortestVector([1,1], [2,2]) === null,
+  "a dependent pair is not a 2D basis and must not report zero as a shortest vector");
+var badRecovery;
+try { badRecovery=LM.lweRecover({x:1,y:1},{x:0,y:0},[1,1],[2,2]); } catch (_) {}
+assert(badRecovery && !badRecovery.ok && badRecovery.recovered === null,
+  "degenerate recovery fails explicitly without dereferencing null");
+
 console.log("\nlattice-math: " + passed + " passed, " + failed + " failed");
 process.exit(failed ? 1 : 0);

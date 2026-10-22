@@ -468,9 +468,13 @@
 
   function updateMessage() {
     var text = document.getElementById('pf-msg-input').value;
-    var pairs = preparePairs(text);
+    var normalized = text.toUpperCase().replace(/[^A-Z]/g, '').replace(/J/g, 'I');
+    var pairs = mode === 'encrypt' ? preparePairs(text) : (normalized.match(/.{1,2}/g) || []);
     var pairsEl = document.getElementById('pf-msg-pairs');
     var outEl = document.getElementById('pf-msg-output');
+    if (mode !== 'encrypt' && normalized.length % 2) {
+      pairsEl.textContent = ''; outEl.textContent = 'Ciphertext must have an even number of letters (complete pairs).'; return;
+    }
     pairsEl.textContent = 'Digraphs: ' + pairs.join(' ');
     var result = [];
     var fn = mode === 'encrypt' ? encryptPair : decryptPair;

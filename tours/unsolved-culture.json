@@ -1,16 +1,48 @@
 {
   "id": "unsolved-culture",
   "title": "Unsolved to Culture",
-  "description": "A bridge tour from Hall XII's open cryptanalytic problems to Hall XIII's public puzzle culture.",
+  "description": "Compare unresolved texts, partial decipherments and archival recoveries, then explore public puzzle culture.",
   "icon": "🧭",
   "stops": [
-    {"href": "../halls/unsolved.html", "label": "Hall XII: Unsolved Ciphers", "note": "Start with active open problems and current research framing."},
-    {"href": "../ciphers/kryptos.html", "label": "Kryptos", "note": "The best-known modern unsolved monument cipher with evolving clue releases."},
-    {"href": "../ciphers/voynich.html", "label": "Voynich Manuscript", "note": "A centuries-old unresolved script where language and cipher hypotheses still compete."},
-    {"href": "../ciphers/zodiac.html", "label": "Zodiac Z-13/Z-32", "note": "Partial solves alongside remaining fragments that sustain public cryptanalytic effort."},
-    {"href": "../halls/culture.html", "label": "Hall XIII: Cipher Culture", "note": "See how unsolved and breakable ciphers migrate into fiction, games, and mass participation."},
-    {"href": "../ciphers/gold-bug.html", "label": "Poe's Gold-Bug", "note": "The canonical literary case where readers are taught to decode along with the story."},
-    {"href": "../ciphers/gravity-falls.html", "label": "Gravity Falls Ciphers", "note": "A modern broadcast-era cipher ecosystem that trains audience codebreakers."},
-    {"href": "../ciphers/cicada-3301.html", "label": "Cicada 3301", "note": "Internet-scale puzzle design blending cryptography, steganography, and culture."}
+    {
+      "href": "../halls/unsolved.html",
+      "label": "Hall XII: Unsolved Ciphers",
+      "note": "Start with active open problems and current research framing."
+    },
+    {
+      "href": "../ciphers/kryptos.html",
+      "label": "Kryptos",
+      "note": "K1–K3 were publicly solved; K4 plaintext was found in archival papers in 2025, distinct from a public cryptanalytic solution."
+    },
+    {
+      "href": "../ciphers/voynich.html",
+      "label": "Voynich Manuscript",
+      "note": "A centuries-old unresolved script where language and cipher hypotheses still compete."
+    },
+    {
+      "href": "../ciphers/zodiac.html",
+      "label": "Zodiac Z-13/Z-32",
+      "note": "Z408 and Z340 are solved; the short Z13 and Z32 fragments lack generally accepted solutions."
+    },
+    {
+      "href": "../halls/culture.html",
+      "label": "Hall XIII: Cipher Culture",
+      "note": "See how unsolved and breakable ciphers migrate into fiction, games, and mass participation."
+    },
+    {
+      "href": "../ciphers/gold-bug.html",
+      "label": "Poe's Gold-Bug",
+      "note": "The canonical literary case where readers are taught to decode along with the story."
+    },
+    {
+      "href": "../ciphers/gravity-falls.html",
+      "label": "Gravity Falls Ciphers",
+      "note": "A modern broadcast-era cipher ecosystem that trains audience codebreakers."
+    },
+    {
+      "href": "../ciphers/cicada-3301.html",
+      "label": "Cicada 3301",
+      "note": "Internet-scale puzzle design blending cryptography, steganography, and culture."
+    }
   ]
 }

@@ -89,7 +89,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Delastelle extended his Bifid cipher one year later by adding a third dimension. Where Bifid used a 5×5 square (25 cells for 25 letters, I/J shared), Trifid uses a 3×3×3 cube (27 cells for 26 letters plus one null). Each letter becomes three coordinates: layer, row, and column. These three streams are woven together across the message before being converted back.</p></div>
+      <div class="panel-body"><p>Delastelle’s Trifid uses a 3×3×3 arrangement, giving 27 symbols, and combines three coordinate streams. His posthumous 1902 treatise describes the method. The extra symbol may be a period or another agreed symbol; it is not inherently a null that must be discarded.</p></div>
     </div>
 
     <div class="panel">
@@ -151,7 +151,7 @@ HELLO encrypted:
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Statistical Cryptanalysis</div><div class="attack-diff">Complexity: Hard — more so than Bifid</div><p class="attack-desc">The three-dimensional fractionation creates stronger diffusion than Bifid. Each ciphertext letter depends on three plaintext letters' coordinates woven together. Modern solvers use hill climbing with trigram statistics but require more ciphertext than Bifid attacks.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Statistical Cryptanalysis</div><div class="attack-diff">Complexity: Hard — more so than Bifid</div><p class="attack-desc">Three-coordinate fractionation changes how information is mixed across a block. Exactly which plaintext positions influence an output depends on the period and layout. A third coordinate alone does not prove that Trifid always requires more ciphertext to attack than Bifid.</p></div></div>
     </div>
 
     <div class="panel">

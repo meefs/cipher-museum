@@ -63,7 +63,7 @@
   <h1 class="page-title">The Unbreakable</h1>
   <p class="page-tagline">Where classical cryptography reached its limits — and mathematics drew the line</p>
   <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">
-    Many historical ciphers succumbed to cryptanalysis; others were exposed by operational mistakes, became obsolete, or remain unresolved. Claude Shannon proved perfect secrecy for a correctly used one-time pad: a secret, truly random, message-length key used once. Its demanding key-distribution requirements limit its use. This hall examines that guarantee and how pad reuse undermined it.
+    Many historical ciphers succumbed to cryptanalysis; others were exposed by operational mistakes, became obsolete, or remain unresolved. Claude Shannon proved perfect secrecy for a correctly used one-time pad: a secret, uniformly random, independent message-length key used once. Its demanding key-distribution requirements limit its use. This hall examines that guarantee and how pad reuse undermined it.
   </p>
   <p style="max-width:680px;font-size:.95rem;color:var(--tx3);line-height:1.8;margin-top:1rem;position:relative;z-index:1;">What came next — AES, RSA, Diffie-Hellman, and the systems that protect the digital world — lives in the <a href="../modern.html" style="color:var(--gold);">Modern Cryptography</a> wing.</p>
   <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem;position:relative;z-index:1;">
@@ -83,7 +83,7 @@
         <span class="badge era-theoretical">1882 · Theoretical</span>
       </div>
       <div class="card-name">One-Time Pad</div>
-      <p class="card-desc">The only cipher proved mathematically unbreakable by Claude Shannon (1949). Three requirements: the key must be truly random, exactly as long as the message, and never reused. If any condition is violated, security collapses entirely — as the VENONA project proved when Soviet operators reused pads under wartime pressure.</p>
+      <p class="card-desc">A one-time pad offers perfect secrecy with a secret, uniform, independent message-length key used once. Try ciphertext tampering to see why secrecy is not authentication.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">Plain:  </span><span style="color:var(--tx);">HELLO</span><br>
         <span style="color:var(--tx3);">Key:    </span><span style="color:var(--gold);">XMCKL</span><span style="color:var(--tx3);"> (truly random)</span><br>
@@ -104,7 +104,7 @@
         <span class="badge era-wwi">1917 · AT&amp;T</span>
       </div>
       <div class="card-name">Vernam Cipher</div>
-      <p class="card-desc">Gilbert Vernam's teleprinter cipher XORed each plaintext character with a key character from a paper tape. When the key tape is truly random and never reused, the Vernam cipher becomes the one-time pad — the only cipher with mathematically proven perfect secrecy.</p>
+      <p class="card-desc">Vernam’s teleprinter system combines text with a key stream. XOR supplies perfect secrecy only when the pad is uniformly random, independent, secret, long enough and never reused.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">Plain:  </span><span style="color:var(--tx);">H (01000)</span><br>
         <span style="color:var(--tx3);">Key:    </span><span style="color:var(--gold);">Q (10001)</span><br>
@@ -125,7 +125,7 @@
         <span class="badge era-coldwar">1943–1980 · Cold War</span>
       </div>
       <div class="card-name">VENONA Project</div>
-      <p class="card-desc">The canonical one-time-pad failure case. Soviet operators reused OTP key material under wartime pressure; Arlington Hall analysts exploited message depths to recover plaintext and identify major espionage networks.</p>
+      <p class="card-desc">VENONA analysed intercepted Soviet messages, chiefly from the 1940s, by exploiting duplicated pad material. The project ran from 1943 to 1980.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">Depth relation: </span><span style="color:var(--gold-lt);">C₁ ⊕ C₂ = P₁ ⊕ P₂</span><br>
         <span style="color:var(--tx3);">Failure mode: </span><span style="color:var(--gold);">Key page reuse</span><br>
@@ -146,7 +146,7 @@
         <span class="badge era-modern">1999 · Schneier</span>
       </div>
       <div class="card-name">Solitaire / Pontifex</div>
-      <p class="card-desc">Bruce Schneier's hand cipher for Neal Stephenson's <em>Cryptonomicon</em> — a stream cipher whose keystream is generated by shuffling a single deck of 54 playing cards. No electronics required, leaves nothing incriminating to seize. Paul Crowley's 1999 analysis showed a measurable bias in the keystream, but no practical break has emerged in 27 years.</p>
+      <p class="card-desc">Solitaire / Pontifex (1999) — Bruce Schneier's hand cipher driven by a 54-card deck (written for Cryptonomicon). Crowley showed a ~1/22.5 keystream bias.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">Key: deck order · Output: 1–26 per card draw</span><br>
         <span style="color:var(--tx3);">Bias: 1/22.5 vs 1/26 ideal (Crowley 1999)</span>
@@ -172,7 +172,7 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-chart"/></svg></span><span class="panel-title">Shannon's 1949 Proof</span></div>
       <div class="panel-body">
-        <p>In "Communication Theory of Secrecy Systems" (1949), Claude Shannon proved that a cipher achieves <strong>perfect secrecy</strong> if and only if: the key is chosen uniformly at random, the key space is at least as large as the message space, and each key is used at most once.</p>
+        <p>Perfect secrecy means observing ciphertext does not change the prior probability of any plaintext: P(M=m | C=c) = P(M=m), for ciphertexts with nonzero probability. Plaintexts need not be equally likely beforehand. An independently uniform one-time pad meets this definition; it is not the only possible perfectly secret construction. Encryption alone does not authenticate a message.</p>
         <p style="margin-top:.75rem;">This means: for any ciphertext, every possible plaintext is equally likely. An attacker — even with unlimited computing power — gains zero information from the ciphertext alone.</p>
         <p style="margin-top:.75rem;">The one-time pad is the only cipher that satisfies all three conditions.</p>
       </div>
@@ -189,7 +189,7 @@
         </ul>
         <div class="callout callout-danger" style="margin-top:1rem;">
           <span class="callout-icon">⚡</span>
-          <div class="callout-body"><p><strong>VENONA:</strong> Soviet operators reused OTP key pages under WWII supply pressure. The NSA exploited this reuse to decode thousands of Soviet messages — exposing the Rosenbergs and Klaus Fuchs.</p></div>
+          <div class="callout-body"><p><strong>VENONA:</strong> US Army analysts, and later successor organizations including NSA, exploited reused Soviet additive key material. The historical traffic used decimal subtraction without borrowing, not binary XOR; the exhibit shows both the principle and a decimal teaching exercise.</p></div>
         </div>
       </div>
     </div>
@@ -219,7 +219,7 @@
       </div>
       <div class="panel-body">
         <p>Spreading the influence of each plaintext bit across many ciphertext bits. <em>Caesar has zero diffusion</em> — changing one letter changes exactly one ciphertext letter. Frequency analysis exploits this directly.</p>
-        <p style="margin-top:.75rem;"><strong>Modern solution:</strong> After 2 rounds of AES, every output bit depends on every input bit. After 10 rounds, changing one input bit changes ~half of all output bits (the Avalanche Effect).</p>
+        <p style="margin-top:.75rem;"><strong>Modern comparison:</strong> AES combines nonlinear substitution, key mixing and linear diffusion. A full-cipher avalanche measurement describes behavior across inputs, not a promise that every change flips exactly half the bits.</p>
       </div>
     </div>
   </div>
@@ -257,7 +257,7 @@
   <div class="callout callout-success">
     <span class="callout-icon">🎓</span>
     <div class="callout-body">
-      <p><strong>The museum's final lesson:</strong> Modern cryptography didn't replace classical ciphers by being cleverer. It replaced them by being <em>mathematically honest</em> — defining precisely what security means (computational hardness), proving that breaking the cipher requires solving problems believed to take billions of years, and designing systems that fail loudly when used incorrectly rather than silently. Every exhibit in this museum is a lesson in what "mathematically honest" means.</p>
+      <p><strong>The museum’s lesson:</strong> State the security goal and assumptions explicitly. Perfect secrecy, computational security, authenticity and implementation resistance are different claims. Real systems need appropriate parameters, secure key handling and careful implementation; they do not invariably fail loudly when misused.</p>
     </div>
   </div>
 

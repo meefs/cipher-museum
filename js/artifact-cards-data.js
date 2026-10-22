@@ -8,15 +8,15 @@
       "era": "WWI · June 1918",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "6×6 Polybius square + columnar key",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "ADFGVX combined a 6×6 substitution square with columnar transposition. Painvin’s June 1918 solutions exploited particular traffic and keys, not every later message automatically.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Georges Painvin · 48 hours of continuous work",
+      "securityFailure": "Painvin recovered keys from German traffic in June 1918.",
       "modernLesson": "Layered cipher rounds"
     },
     "adfgx": {
@@ -25,15 +25,15 @@
       "era": "WWI · March 1918",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Polybius key square + columnar key",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Germany’s ADFGX field cipher appeared in March 1918; Painvin obtained solutions in April. Its square-plus-transposition construction required continuing key recovery.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Georges Painvin · 1918 · Differential frequency analysis",
+      "securityFailure": "Painvin and other Allied analysts used repeated traffic, statistics and transposition analysis in 1918.",
       "modernLesson": "Substitution + transposition = modern cipher rounds"
     },
     "aeneas-tacticus": {
@@ -42,12 +42,12 @@
       "era": "Classical Greece · ~350 BCE",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Aeneas’s water-clock signaling, preserved in Polybius: synchronized vessels selected preset military messages, not letters of an alphabet.",
       "trust": null,
       "securityFailure": null,
-      "modernLesson": "Out-of-band synchronization is a real cryptographic primitive"
+      "modernLesson": "Synchronization enables signaling; it does not itself provide secrecy"
     },
     "aes": {
       "name": "AES (Advanced Encryption Standard)",
@@ -55,9 +55,9 @@
       "era": "Modern &middot; 2001",
       "family": "Modern Cryptography",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Modern Cryptography transformation of plaintext into protected form",
+      "keyIdea": "AES (2001) — the cipher that encrypts the modern world; chosen by open competition, scrutinised for two decades, still without a practical attack.",
       "trust": {
         "key": "secure",
         "text": "Secure (Modern)",
@@ -72,16 +72,16 @@
       "era": "Antiquity → 1800s · math-age",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Pair (a,b) — a coprime to 26 → 12·26 = 312 keys",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "The affine cipher — a single linear formula E(x)=a·x+b mod 26 that generalises Caesar (a=1) and Atbash (a=25, b=25). Just 312 keys; trivially broken.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "See the exhibit’s documented attacks and limitations.",
-      "modernLesson": "Linearity is fatal to security"
+      "modernLesson": "This small affine keyspace and visible language patterns are insecure"
     },
     "agnes-driscoll": {
       "name": "Agnes Meyer Driscoll",
@@ -89,9 +89,9 @@
       "era": "Interwar & WWII · USA",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Agnes Meyer Driscoll helped develop U.S. naval cryptanalysis and trained later analysts. Her work included Japanese naval codes, early JN-25 and cipher-machine analysis.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -102,9 +102,9 @@
       "era": "Renaissance · 1467",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Physical rotating disk (two alphabets)",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Alberti’s fifteenth-century cipher disk illustrates changing substitutions using two alphabets. The exhibit distinguishes historical instructions from a regular-step teaching model.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -114,20 +114,20 @@
       "modernLesson": "Physical key material → rotor machines"
     },
     "amharic-ge-ez-ciphers": {
-      "name": "Ethiopian Geʼez Monastic Ciphers",
+      "name": "Geʼez Script and a Substitution Model",
       "hall": "I",
-      "era": "East Africa · 14th–19th c.",
+      "era": "East Africa · teaching model",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "A modern substitution model using Ethiopic script, with an explicit distinction between documented manuscript heritage and unverified cipher attribution.",
       "trust": {
-        "key": "broken",
-        "text": "Broken",
-        "description": "Cryptographically broken — historically important but unsafe to use today."
+        "key": "educational",
+        "text": "Educational",
+        "description": "A didactic construction for learning cryptographic concepts, not for security."
       },
-      "securityFailure": "Historical (low security)",
+      "securityFailure": "Illustrative Latin-letter substitution model; no identified manuscript authenticates this as a particular Geʽez monastic cipher.",
       "modernLesson": "Large syllabic alphabets complicate frequency analysis"
     },
     "amsco": {
@@ -136,9 +136,9 @@
       "era": "American Cryptogram Association specification",
       "family": "Transposition",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Permutation of column ranks; first cell length",
-      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "keyIdea": "AMSCO from the American Cryptogram Association specification: alternate one-letter and two-letter cells, read keyed columns, and reconstruct an incomplete final row.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -153,9 +153,9 @@
       "era": "Abbasid Caliphate · ~850 CE",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Arabic cryptanalytic scholarship and a teaching model of nomenclators: frequency analysis, codewords, and the need to identify a particular historical key.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -170,9 +170,9 @@
       "era": "Renaissance Italy · 1500s–1600s",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "Matteo and Marcello Argenti served as papal cryptanalysts to seven popes. Their Trattato in Cifra codified the homophonic-nomenclator pattern that dominated European diplomacy for two centuries.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -187,9 +187,9 @@
       "era": "American Revolution · 1779–1780",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The book cipher Benedict Arnold and Major John André used to plot the surrender of West Point. Each plaintext word located in a shared book (Blackstone’s Commentaries ) and transmitted as the triple page.line.word.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -204,9 +204,9 @@
       "era": "Ancient · ~500 BC",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "None (fixed reflection)",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Atbash — the ancient Hebrew reflection cipher (A Z, B Y, C X), self-inverse and used in the Book of Jeremiah (25:26, 51:41) for SHESHACH.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -221,15 +221,15 @@
       "era": "Renaissance · 1586",
       "family": "Polyalphabetic",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Short keyword, then plaintext itself extends the key",
-      "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
+      "keyIdea": "Plaintext autokey extends a primer with message letters. It removes a fixed repeating keyword but retains exploitable language structure and error propagation.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Friedman's index of coincidence + autokey-aware crib dragging (1920s)",
+      "securityFailure": "Crib propagation and language-scored searches; ordinary repeating-key Kasiski analysis does not apply directly.",
       "modernLesson": "Self-keyed schemes still leak: the key is no longer random once it carries plaintext statistics"
     },
     "babington": {
@@ -238,9 +238,9 @@
       "era": "Elizabethan · 1586",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Nomenclator: 23 letter symbols + 36 codewords + 4 nulls + 1 \"doubleth\"",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "The 1586 Babington Plot: intercepted nomenclator letters, a forged postscript, and the difference between compromised keys and an insecure transport channel.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -255,9 +255,9 @@
       "era": "Baroque Germany · 1750",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "The four notes B♭ – A – C – B♮ spell 'BACH' in German musical notation — a self-signature Bach embedded in his final unfinished fugue.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -268,9 +268,9 @@
       "era": "1605",
       "family": "Puzzle and Cultural Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "5-bit binary (A/B patterns)",
-      "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Bacon’s biliteral alphabet represents letters with patterns of two forms and can hide them in a carrier. Binary representation is distinct from a direct historical origin for ASCII.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -285,9 +285,9 @@
       "era": "1890s · France",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Numeric keyword (Polybius + transposition)",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Bazeries cylinder cipher — Etienne Bazeries' 1891 wheel cipher with 20 alphabet disks, an evolution later adopted by the US Army as the M-94 in 1922.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -302,9 +302,9 @@
       "era": "19th Century · published 1885",
       "family": "Unsolved Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Beale ciphers — three numerical ciphers published in an 1885 Lynchburg pamphlet, said to have been written in the 1820s and to point to a Virginia treasure. Only #2 was solved (Declaration of Independence key); #1 and #3 unsolved.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -319,9 +319,9 @@
       "era": "Victorian · 1857",
       "family": "Polyalphabetic",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Repeating keyword",
-      "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
+      "keyIdea": "Beaufort cipher (1857) — Sir Francis Beaufort's reciprocal Vigenère variant where encrypt and decrypt are the same operation. Broken by Kasiski examination.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -336,9 +336,9 @@
       "era": "WWII · Sweden",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Arne Beurling’s 1940 reconstruction of the Siemens T52, with assistance and subsequent daily-key recovery distinguished from the initial breakthrough.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -349,9 +349,9 @@
       "era": "1994 · Refuted 1999",
       "family": "Puzzle and Cultural Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The Bible Code — equidistant letter sequences (ELS) claimed to hide prophecies in the Hebrew scriptures. A rigorous statistical refutation by McKay et al. (1999) showed the same method finds identical 'predictions' in War and Peace and Moby-Dick.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "The law of large numbers always produces patterns — the question is whether they exceed expectation"
@@ -362,9 +362,9 @@
       "era": "1901",
       "family": "Transposition",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "5×5 keyword square",
-      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "keyIdea": "Bifid cipher (1901) — Felix Delastelle's fractionation cipher that splits Polybius coordinates, transposes them across a period, and recombines.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -379,9 +379,9 @@
       "era": "WWII · Britain",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Bill Tutte and the Research Section inferred the Lorenz structure by early 1942, analysing key material recovered by John Tiltman from a 1941 repeated-key transmission.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -392,9 +392,9 @@
       "era": "WWII · 1939–1945",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Bletchley Park (Station X) was the British WWII signals intelligence headquarters where 10,000 people broke Enigma, Lorenz, and dozens of other Axis ciphers — arguably shortening the war by two years.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -418,15 +418,15 @@
       "era": "18th–20th c.",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "An agreed-upon book; ciphertext is a list of (page, line, word) or (page, word) coordinates",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Book Cipher (18th c.) — if both correspondents share the same book, the book itself is the key. Used by Benedict Arnold, Aaron Burr, and Beale.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Identifying the book — the Beale Cipher 2 was solved when the anonymous pamphleteer (published by James Ward, 1885) tried the Declaration of Independence",
+      "securityFailure": "Security depends on the book, edition and indexing rule; identifying the source or exploiting context can expose messages.",
       "modernLesson": "Key distribution is the hard part; the underlying primitive can be trivial"
     },
     "cabinet-noir": {
@@ -435,9 +435,9 @@
       "era": "Europe · 1550–1850",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "The European Black Chambers (cabinets noirs) were government departments that intercepted, deciphered, and resealed diplomatic mail from the 16th through 19th centuries — proto-signals-intelligence agencies.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Signals intelligence is as old as the written word"
@@ -448,15 +448,15 @@
       "era": "Ancient Rome",
       "family": "Historical Cryptography",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Shift (1–25)",
-      "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
+      "keyIdea": "Caesar cipher — the simplest substitution cipher, used by Julius Caesar around 58 BC with a shift of 3. Broken by Al-Kindi's frequency analysis circa 850 AD.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Frequency Analysis · Al-Kindi · 850 AD",
+      "securityFailure": "Exhaustive shift search; frequency evidence helps rank candidates.",
       "modernLesson": "S-boxes in AES"
     },
     "cardano-autokey": {
@@ -465,15 +465,15 @@
       "era": "Italian Renaissance · 1550",
       "family": "Polyalphabetic",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Single priming letter",
-      "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
+      "keyIdea": "Cardano’s self-keying idea and a modern one-letter-primer comparison model. The demo is not an exact reconstruction of Cardano’s historical procedure.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Easy (recovery cascade)",
+      "securityFailure": "The one-letter-primer widget is a modern comparison with Vigenère-style plaintext autokey, not Cardano’s exact procedure.",
       "modernLesson": "Key reuse from the plaintext is not the same as key freshness"
     },
     "cardano-grille": {
@@ -482,9 +482,9 @@
       "era": "Italian Renaissance · 1550",
       "family": "Transposition",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "The grille pattern (positions of the holes)",
-      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "keyIdea": "Girolamo Cardano's 1550 grille — a card with cut-out windows. Write the secret through the windows; fill the rest with innocuous text; the recipient overlays an identical grille to read.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -499,9 +499,9 @@
       "era": "Modern · 1918",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Two scrambled 26-letter alphabets",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Chaocipher (1918) — John F. Byrne's two-disk dynamic cipher. Disclosed in 2010; published known-plaintext and in-depth ciphertext-only attacks recover its keys.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -511,21 +511,21 @@
       "modernLesson": "Self-modifying ciphers can be strong with simple parts"
     },
     "che-guevara": {
-      "name": "Che Guevara's VIC Variant",
+      "name": "Che Guevara’s Checkerboard and Pad",
       "hall": "V",
       "era": "Cold War · 1956–1967",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
-      "keyType": "Personal key phrase + numeric ladder",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "usedBy": "See the exhibit for historical participants and source evidence",
+      "keyType": "Checkerboard and secret pad digits",
+      "keyIdea": "Che Guevara’s checkerboard and digit-pad communications, distinguished from the VIC cipher and from the museum’s simplified comparison demo.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Bolivian Army capture (1967); no cryptanalytic break claimed",
-      "modernLesson": "Physical security of key material is the hardest problem"
+      "securityFailure": "Historical checkerboard-plus-pad system; the widget compares a condensed VIC model, not Guevara’s historical pad system.",
+      "modernLesson": "Key handling is part of communications security"
     },
     "chinese-telegraph": {
       "name": "Chinese Telegraph Code Standard Telegraph Codebook · 1881",
@@ -533,9 +533,9 @@
       "era": "Late Qing → PRC · 1881–1980s",
       "family": "American and Civil War Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "American and Civil War Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The 1881 Chinese Telegraph Code mapped 7,000+ Chinese characters to 4-digit code groups so they could ride the same Morse-style telegraph network as the Latin alphabet — and was super-enciphered for diplomatic and military traffic in the 20th century.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -546,9 +546,9 @@
       "era": "Internet era · 2012–2014",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "An anonymous 2012–2014 internet recruitment puzzle that combined steganography, classical ciphers, GPS coordinates on physical posters, and a copy of the Liber Primus hand-illustrated in glyphic runes.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -572,9 +572,9 @@
       "era": "19th Century",
       "family": "Transposition",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Column-ordering keyword",
-      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "keyIdea": "Explore columnar transposition and multiple anagramming: rearrange column strips across three synthetic same-key intercepts and compare a different-key control.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -589,15 +589,11 @@
       "era": "Victorian → inter-war · 1870s–1930s",
       "family": "American and Civil War Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "American and Civil War Ciphers transformation of plaintext into protected form",
-      "trust": {
-        "key": "broken",
-        "text": "Broken",
-        "description": "Cryptographically broken — historically important but unsafe to use today."
-      },
-      "securityFailure": "Public codebooks (compression, not secrecy)",
+      "keyIdea": "Commercial telegraph codebooks (ABC Code, Bentley’s, Lieber’s) were the workhorses of Victorian and Edwardian global business. Each English word or phrase mapped to a 5-letter pronounceable codeword — cheaper, denser, and incidentally a layer of confidentiality.",
+      "trust": null,
+      "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "confederate-vigenere": {
@@ -606,15 +602,15 @@
       "era": "Confederate · 1862",
       "family": "Historical Cryptography",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Vigenère keyword (15 letters typical)",
-      "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
+      "keyIdea": "Confederate Vigenère (1861-1865) — the brass cipher disk used by Confederate officers, broken in 1863 once the three repeating field keys were recovered.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Union cryptanalysts · Kasiski (published 1863)",
+      "securityFailure": "Union analysts exploited repeated keywords and language patterns.",
       "modernLesson": "Operational security failures"
     },
     "copiale": {
@@ -623,9 +619,9 @@
       "era": "18th Century · ~1760s",
       "family": "Puzzle and Cultural Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Knight, Megyesi and Schaefer deciphered the Copiale manuscript in 2011 using transcription, statistics and manual analysis. The exhibit separates that result from its invented demonstration alphabet.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -640,15 +636,15 @@
       "era": "American Revolution · 1778–1783",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Major Benjamin Tallmadge’s 1779 codebook for George Washington’s Culper Spy Ring. Roughly 760 numbered entries covering people, places, military terms, and common words — used by Abraham Woodhull and Robert Townsend on British-occupied Long Island and Manhattan.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Codebook (never captured, never broken)",
+      "securityFailure": "Historical numerical codebook; captured documents and contextual evidence are distinct from cryptanalytic breaks.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "da-vinci-code": {
@@ -657,9 +653,9 @@
       "era": "Fiction · 2003",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "Dan Brown's 2003 thriller made cryptography mainstream — Atbash, the Fibonacci sequence, and anagrams as plot devices that introduced millions to cipher thinking.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -670,9 +666,9 @@
       "era": "Pre-WWII Britain · 1939",
       "family": "Unsolved Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "keyIdea": "A 1939 textbook 'cryptogram for the student' that the author himself later admitted he had forgotten how to solve.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -687,9 +683,9 @@
       "era": "Edwardian Britain · 1903",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "The fictional stick-figure cipher Sherlock Holmes solves in The Adventure of the Dancing Men (1903) — a frequency-analysis primer disguised as a Strand magazine story.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -700,9 +696,9 @@
       "era": "Modern &middot; 1977",
       "family": "Modern Cryptography",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Modern Cryptography transformation of plaintext into protected form",
+      "keyIdea": "DES was standardized in 1977. Its 56-bit key became vulnerable to practical exhaustive search, demonstrated by EFF’s Deep Crack in 1998.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -717,9 +713,9 @@
       "era": "Cold War · 1960s–1990s",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The US Army Special Forces one-time pad field system (1960s–1990s) — trigraph-based OTP cards issued to Green Berets in Vietnam.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -734,9 +730,9 @@
       "era": "Confederate · 1862",
       "family": "Historical Cryptography",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Page and word number from shared dictionary",
-      "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
+      "keyIdea": "Dictionary codes replace words with references in an agreed book. Repeated references and language patterns can still leak information; this widget is a simplified model.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -751,7 +747,7 @@
       "era": "Modern &middot; 1976",
       "family": "Modern Cryptography",
       "region": "Global",
-      "usedBy": "Every TLS handshake negotiating forward secrecy",
+      "usedBy": "Many authenticated key-agreement protocols, including ephemeral-DH modes of TLS",
       "keyType": "No key input — the protocol produces one",
       "keyIdea": "Two parties derive a shared secret over a public channel; nothing is encrypted",
       "trust": {
@@ -768,9 +764,9 @@
       "era": "WWI/WWII · Britain",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Dilly Knox worked on commercial and military Enigma variants, including Italian naval and Abwehr traffic, with colleagues whose contributions the exhibit identifies.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -781,9 +777,9 @@
       "era": "19th c. · 1897",
       "family": "Unsolved Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Custom 24-symbol alphabet of arcs and orientations",
-      "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Edward Elgar’s 1897 Dorabella cryptogram contains 87 symbols. No proposed reading has achieved general acceptance.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -798,9 +794,9 @@
       "era": "German armed forces · December 1941 edition",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Two ordered 5 × 5 squares; 17-column pairing",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "German Double Playfair: reconstruct the December 1941 Doppelkastenschlüssel manual, including 17-column pairing, two substitution stages and its published example.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -815,9 +811,9 @@
       "era": "WWI · Germany",
       "family": "Transposition",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Two columnar keywords",
-      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "keyIdea": "Two successive columnar transpositions: historical military use, attack conditions, and modern computerized cryptanalysis; not an unbroken cipher until 2013.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -832,9 +828,9 @@
       "era": "Modern · Cryptographer",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Elonka Dunin is a game designer and cryptography author known for documenting unsolved cryptograms and studying Kryptos.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -847,7 +843,7 @@
       "region": "Global",
       "usedBy": "TLS certificates, Bitcoin and Ethereum transactions, secure-boot chains",
       "keyType": "Private scalar d with public point Q = dG",
-      "keyIdea": "Proves authorship of a message hash using a private scalar on an elliptic curve",
+      "keyIdea": "Verifies a signature under an elliptic-curve public key; identity requires authenticating that key",
       "trust": {
         "key": "secure",
         "text": "Secure (Modern)",
@@ -862,9 +858,9 @@
       "era": "Middle Kingdom Egypt · ~1900 BCE",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The Khnumhotep II tomb inscription (~1900 BCE) — the world's earliest surviving instance of a deliberate substitution cipher, using unusual hieroglyph variants.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "The line between cipher, code, and ornament is older than writing itself"
@@ -875,9 +871,9 @@
       "era": "Interwar & WWII · USA",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Elizebeth Smith Friedman led important American cryptanalytic work against smuggling and wartime clandestine communications, with a team whose work remained little known for years.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -888,15 +884,15 @@
       "era": "WWII · 1918–1945",
       "family": "One-Time Pad and Theoretical Security",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Rotor wiring + plugboard settings",
-      "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
+      "keyIdea": "Enigma (1923) — the German rotor cipher securing Wehrmacht and Kriegsmarine traffic. Broken by Polish mathematician Marian Rejewski in 1932.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Bombe machine · Crib attacks · Alan Turing · Bletchley Park",
+      "securityFailure": "Polish prewar reconstruction; later Allied crib searches and bombe machinery.",
       "modernLesson": "Complexity ≠ security without proper operational discipline"
     },
     "fialka": {
@@ -905,9 +901,9 @@
       "era": "Cold War · 1956",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Fialka was a Soviet ten-rotor machine with variant-specific alphabets, stepping and a punched-card permutation. The browser uses a simplified Latin-alphabet model.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -922,9 +918,9 @@
       "era": "Americas · 1619–1865",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "Song, shared meaning, and covert communication: documented traditions, disputed Drinking Gourd claims, and a clearly labeled modern annotation exercise.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Steganography hides existence of message; cryptography hides content"
@@ -935,9 +931,9 @@
       "era": "Late 19th Century · ~1902",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Two keywords (two keyed squares)",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "Four-Square cipher (1902) — Delastelle's digram cipher using two keyed and two standard 5x5 squares. Disrupts Playfair frequencies but breaks to digrams.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -952,9 +948,9 @@
       "era": "19th Century",
       "family": "Transposition",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Substitution alphabet for Morse triples",
-      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "keyIdea": "Fractionated Morse — converts text to Morse, regroups dots, dashes, and separators in trigrams, then substitutes via a keyed alphabet. Broken by trigram stats.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -969,9 +965,9 @@
       "era": "Early modern Europe · 17th–19th c.",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "Pigpen uses geometric symbols for letters and appears in fraternal cipher traditions. The fixed substitution is readily reversible once the alphabet is known.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -982,9 +978,9 @@
       "era": "Cold War · GCHQ",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Ellis’s January 1970 non-secret encryption report, Cocks’s 1973 construction, and Williamson’s 1974 key-agreement work, disclosed publicly in 1997.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -995,9 +991,9 @@
       "era": "WWII · 1932–1945",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "The Siemens T52 “Sturgeon” — a German WWII teleprinter cipher with ten irregularly-clocked wheels feeding an additive keystream and a per-character permutation. Broken by Arne Beurling and the Swedish FRA in summer 1940.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1012,9 +1008,9 @@
       "era": "Antebellum America · 1843",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "Poe’s The Gold-Bug (1843) makes a substitution decipherment central to a fictional treasure hunt and explains the reasoning to readers.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1025,9 +1021,9 @@
       "era": "Animation · 2012–2016",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "Gravity Falls used classical ciphers and visual clues across its episodes and associated puzzles, inviting viewers to decode messages.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1038,9 +1034,9 @@
       "era": "Baroque · ~1626",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Codebook of ~587 numbered syllables",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "The Rossignols’ syllabic nomenclator was deciphered by Bazeries in the 1890s. His proposed Man in the Iron Mask identification remains disputed.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1055,9 +1051,9 @@
       "era": "17th Century",
       "family": "Polyalphabetic",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Numeric keyword (digits 0-9)",
-      "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
+      "keyIdea": "Gronsfeld cipher (1655) — a Vigenère variant restricted to numeric keys (0-9), making it field-portable but with a smaller key space that falls fast to Kasiski.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1089,9 +1085,9 @@
       "era": "1929",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Invertible key matrix (n×n)",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "Hill’s 1929 cipher mixes groups of letters using an invertible matrix modulo 26. Suitable matched plaintext blocks can expose the key by linear algebra.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1106,9 +1102,9 @@
       "era": "Classical Greece · ~499 BCE",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Histiaeus of Miletus (~499 BCE) — the Greek tyrant who tattooed a secret revolt order on a slave's shaved scalp, then waited for the hair to regrow before sending him.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -1123,9 +1119,9 @@
       "era": "Renaissance · ~1400",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Symbol-to-letter mapping table",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "Homophonic substitution (1400s) — replace each letter with one of several numeric codes to flatten frequencies. Defeated Mary in 1586; Great Cipher in 1893.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1140,9 +1136,9 @@
       "era": "Ireland · 1926–1928",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "About 1,300 IRA cryptograms from the papers of chief of staff Moss Twomey, mostly 1926–1927, enciphered by columnar transposition and broken almost in their entirety by Jim Gillogly with hill-climbing software — published as Decoding the IRA (2008).",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1157,9 +1153,9 @@
       "era": "1795 (Jefferson) · 1922 (M-94)",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Physical disk arrangement (36 disks)",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Jefferson disk cipher (1795) — Thomas Jefferson's 36-disk wheel cipher, rediscovered and adopted by the US Army as the M-94 in 1922. Solved by the late 20th c.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1174,9 +1170,9 @@
       "era": "World War II - 1939-1945",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "JN-25 (1939-1945) - the Imperial Japanese Navy's superenciphered codebook system broken by Station HYPO and central to Midway intelligence.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1191,9 +1187,9 @@
       "era": "WWII · Britain",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Joan Clarke, Hut 8 cryptanalyst and expert practitioner of Banburismus, helped reduce the search for Naval Enigma settings.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1204,9 +1200,9 @@
       "era": "Modern · Journalist/Historian",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "David Kahn’s The Codebreakers (1967) brought cryptographic history to a wide audience. The exhibit distinguishes its scholarship, influence and publication controversies.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1217,9 +1213,9 @@
       "era": "Classical India · ~400 CE",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Pairing seed (rearranges 13 letter pairs)",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Mlecchita-vikalpa, secret writing among the Kama Sutra’s arts. The interactive illustrates a modern paired-letter substitution, not a recovered ancient alphabet.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1234,9 +1230,9 @@
       "era": "Foundational · 1883",
       "family": "Modern Cryptography",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Modern Cryptography transformation of plaintext into protected form",
+      "keyIdea": "Auguste Kerckhoffs's 1883 principle — 'A cipher should be secure even if everything about the system, except the key, is public knowledge' — is the bedrock of modern cryptographic design.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Open design allows public scrutiny that defeats hidden flaws"
@@ -1247,9 +1243,9 @@
       "era": "Cold War · 1952",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "KL-7: an American eight-rotor cipher machine with irregular stepping and re-entry. Stolen key material compromised traffic during the Walker espionage case.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -1264,9 +1260,9 @@
       "era": "Inter-war commercial · 1924",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Kryha’s clockwork cipher devices used irregularly moving alphabets. Friedman and colleagues attacked a published challenge in 1933; this widget uses generated settings.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1281,9 +1277,9 @@
       "era": "Web 2.0 · 2001–present",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "Alternate-reality games — from The Beast (2001) to Year Zero (2007) and beyond — built on the assumption that players will recognise, transcribe, and crack classical ciphers across forums, phone calls, and physical artifacts.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1294,15 +1290,15 @@
       "era": "Modern · 1990",
       "family": "Unsolved Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Kryptos: K1–K3 publicly solved; K4 plaintext recovered from an archive in 2025, without a publicly demonstrated cryptanalytic solution.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "K1–K3 Broken · K4 Unsolved",
+      "securityFailure": "K1–K3 publicly solved. K4 plaintext was recovered from archival papers in 2025; that is distinct from a public cryptanalytic solution.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "lasry": {
@@ -1311,9 +1307,9 @@
       "era": "Modern · Computational",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "George Lasry, computational cryptanalyst and co-decipherer of Mary Stuart’s lost letters, published in 2023 with Norbert Biermann and Satoshi Tomokiyo.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1324,15 +1320,15 @@
       "era": "Americas · 1870s–1940s",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Commercial telegraph codebooks compressed business messages. Their regional use and editions need documentary evidence; the demo uses an invented vocabulary.",
       "trust": {
-        "key": "broken",
-        "text": "Broken",
-        "description": "Cryptographically broken — historically important but unsafe to use today."
+        "key": "educational",
+        "text": "Educational",
+        "description": "A didactic construction for learning cryptographic concepts, not for security."
       },
-      "securityFailure": "Low (commercial, not military)",
+      "securityFailure": "Commercial codebook illustration; specific regional military use requires archival evidence.",
       "modernLesson": "Efficiency and secrecy drove code adoption as much as military need"
     },
     "leo-marks": {
@@ -1341,9 +1337,9 @@
       "era": "WWII · Britain",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Leo Marks worked to improve SOE field communications, advocating prepared keys and letter one-time pads and writing The Life That I Have.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1354,9 +1350,9 @@
       "era": "WWII · Germany · 1940",
       "family": "One-Time Pad and Theoretical Security",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "12-wheel teleprinter cipher (Vernam-based)",
-      "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
+      "keyIdea": "Lorenz SZ40/42: Tiltman recovered messages and key from a 1941 depth; Tutte and the Research Section inferred the structure by early 1942; Colossus accelerated wheel-setting from February 1944.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1371,9 +1367,9 @@
       "era": "WWI → WWII tactical · 1922–1943",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "The M-94, adopted by the US Army in 1922, used 25 alphabet disks. It resembles Jefferson’s earlier unpublished wheel but was independently developed.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1388,9 +1384,9 @@
       "era": "World War II · 1940",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "6 pinwheels (lengths 26, 25, 23, 21, 19, 17) + 27 lug bars",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "M-209 cipher machine (1940) — the US Army's portable Hagelin C-38 with six co-prime pin-wheels and a 27-bar lug cage. Broken in the field in WWII.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1402,18 +1398,18 @@
     "mary-stuart-castelnau-letters": {
       "name": "Mary Queen of Scots — The Castelnau Letters",
       "hall": "X",
-      "era": "1586",
+      "era": "1578–1584",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Mary Stuart’s letters from 1578–1584: 57 deciphered letters, about 50,000 words, published by Lasry, Biermann and Tomokiyo in 2023.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Solved 2022 — after 436 years",
+      "securityFailure": "57 letters from 1578–1584, approximately 50,000 words; decipherment published 8 February 2023.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "mavis-batey": {
@@ -1422,9 +1418,9 @@
       "era": "WWII · Britain",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Mavis Batey (née Lever) was a Bletchley Park cryptanalyst who broke the Italian naval Enigma in 1941, providing the intelligence behind the Battle of Cape Matapan — the Royal Navy's greatest WWII Mediterranean victory.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1435,15 +1431,15 @@
       "era": "Late 20th-c. United States · 1999",
       "family": "Unsolved Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Ricky McCormick’s two handwritten notes, released by the FBI in 2011 for public help. Their meaning and writing system remain unresolved.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Unsolved homicide-evidence cipher",
+      "securityFailure": "Undeciphered notes released by the FBI; no accepted public interpretation.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "microdot": {
@@ -1452,9 +1448,9 @@
       "era": "Modern · 1941–1980s",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Microdots conceal miniature photographic images in ordinary carriers. The browser demonstration is a visual metaphor, not optical microphotography or encryption.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -1469,9 +1465,9 @@
       "era": "MIT · 1981–present",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "An annual three-day puzzle marathon at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1482,15 +1478,15 @@
       "era": "Medieval · ~800 AD",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Full alphabet permutation (26! keys)",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "Monoalphabetic substitution — replace each letter with a fixed substitute. Foundation of all substitution ciphers; broken by Al-Kindi's frequency analysis ~850.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Al-Kindi · Frequency Analysis · 850 AD",
+      "securityFailure": "Language statistics and word patterns can expose a fixed substitution.",
       "modernLesson": "S-boxes in AES"
     },
     "morse": {
@@ -1499,9 +1495,9 @@
       "era": "Telegraph age · 1840s →",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "International Morse code — the dot-dash telegraph alphabet that made the wired world possible and provided the carrier signal for a century of military and amateur ciphers.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1529,9 +1525,9 @@
       "era": "Fiction · 2004",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "The 2004 Disney film National Treasure sent audiences hunting for cipher clues on the US dollar bill, the Liberty Bell, and Independence Hall — all real historical sites.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1542,9 +1538,9 @@
       "era": "WWII · 1942–1945",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Natural language (Navajo)",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Navajo code talkers used a specialized military vocabulary and spelling alphabet during World War II. Their language and the constructed code were distinct layers.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -1576,9 +1572,9 @@
       "era": "1880s · Russia",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Polybius square + numeric keyword",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Nihilist cipher (1880s) — the Russian revolutionary classic adding Polybius numbers to a repeating keyword's Polybius numbers by plain addition. Broken early 1900s.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1593,15 +1589,15 @@
       "era": "Renaissance · 1400s–1800s",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Alphabet substitution + 1,000–2,000 entry codebook of words and names",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "Nomenclator (1400s) — The 400-year diplomatic compromise: a small substitution alphabet plus a large code dictionary. Hall II of The Cipher Museum.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Black Chambers (Vienna, Paris, London) c. 1700–1850 by sheer intercept volume",
+      "securityFailure": "Historical systems combine code groups, letter substitutions, homophones and nulls; evidence varies by key and traffic.",
       "modernLesson": "Hybrid systems with mixed-granularity tokens still need uniform statistical hardness"
     },
     "null-cipher": {
@@ -1610,9 +1606,9 @@
       "era": "Antiquity → present",
       "family": "Transposition",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Position rule — first/last letter, Nth letter, Nth word, …",
-      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "keyIdea": "A null cipher selects a message from a cover text using a positional rule. It conceals information in ordinary-looking writing; discovery of the rule defeats that concealment.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -1627,15 +1623,15 @@
       "era": "1882 · Theoretical",
       "family": "One-Time Pad and Theoretical Security",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Random key same length as message (used once)",
-      "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
+      "keyIdea": "A one-time pad offers perfect secrecy with a secret, uniform, independent message-length key used once. Try ciphertext tampering to see why secrecy is not authentication.",
       "trust": {
         "key": "secure",
         "text": "Secure (Modern)",
         "description": "Still considered secure when used correctly with modern key handling."
       },
-      "securityFailure": "Requires a secret, truly random, message-length pad used once.",
+      "securityFailure": "Perfect secrecy requires an independent, uniformly random secret pad at least as long as the message, used once. No authentication.",
       "modernLesson": "Information-theoretic security (Shannon, 1949)"
     },
     "patterson-jefferson-cipher": {
@@ -1644,9 +1640,9 @@
       "era": "1801",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "Robert Patterson's 1801 cipher for Thomas Jefferson — text written down the lines, cut into sections of at most nine, the lines shuffled and padded with arbitrary letters. Unread for 206 years until Lawren Smithline solved it in 2007 by dynamic programming over digraph frequencies.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1661,9 +1657,9 @@
       "era": "Bronze Age Crete · ~1700 BCE",
       "family": "Unsolved Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The Phaistos Disc is a Bronze Age stamped inscription from Crete. Its language and reading remain disputed; it is not established as a cipher.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1674,9 +1670,9 @@
       "era": "18th Century",
       "family": "Puzzle and Cultural Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Fixed symbol-to-letter grid",
-      "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Pigpen cipher (~1700) — Freemason geometric substitution where each letter becomes the lines and dots of its grid cell. Trivial once the glyph table is seen.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1691,9 +1687,9 @@
       "era": "Victorian · 1854",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "5×5 keyword square",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "Playfair cipher (1854) — Charles Wheatstone's keyed 5x5 digram cipher promoted by Lord Playfair. Used by the British in WWI; broken by digram analysis.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1708,9 +1704,9 @@
       "era": "Ancient Greece · ~150 BC",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "None (fixed grid)",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Polybius square (~150 BC) — ancient Greek 5x5 grid mapping each letter to a row-column digit pair. Foundation for Bifid, Trifid, Nihilist, ADFGX, and tap codes.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1725,9 +1721,9 @@
       "era": "Renaissance · 1563",
       "family": "Polyalphabetic",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Repeating keyword (pair-based)",
-      "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
+      "keyIdea": "Porta cipher (1563) — della Porta's reciprocal polyalphabetic table where each key letter swaps two halves of the alphabet. Falls to Kasiski just like Vigenère.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1742,9 +1738,9 @@
       "era": "World War II · 1939–1945",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Stepping-switch banks (6-vowel + 20-consonant split) plus daily key sheet",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Purple machine (1939) — Japan's Type 97 stepping-switch cipher for diplomatic traffic. Broken on 20 September 1940 by Frank Rowlett and the US Army SIS team.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1759,9 +1755,9 @@
       "era": "19th Century",
       "family": "Transposition",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Number of rails (2-10)",
-      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "keyIdea": "Rail Fence transposes a message along a zigzag route. Rail count, offset conventions and message length define the search; there is no universal ten-rail maximum.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1776,26 +1772,26 @@
       "era": "Cold War · 1970–1998",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "RAF–Stasi contacts are documented, but this exhibit does not establish a specific RAF one-time-pad system. The interactive is a generic arithmetic illustration.",
       "trust": {
-        "key": "historical",
-        "text": "Historical Only",
-        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
+        "key": "educational",
+        "text": "Educational",
+        "description": "A didactic construction for learning cryptographic concepts, not for security."
       },
-      "securityFailure": "See the exhibit’s documented attacks and limitations.",
+      "securityFailure": "Illustrative book-cipher model; not a reconstruction of an authenticated RAF key or message.",
       "modernLesson": "State sponsor infrastructure dramatically elevates non-state actor crypto capabilities"
     },
     "red-type-a": {
       "name": "Red (Type A)",
       "hall": "VII",
-      "era": "Interwar to WWII - 1931-1938",
+      "era": "Interwar to WWII - 1930s",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Red (Type A) (1930s) - the Japanese diplomatic stepping-switch predecessor to Purple and the cryptanalytic bridge to MAGIC.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1810,9 +1806,9 @@
       "era": "WWII · Pacific",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Commander Joseph Rochefort led Station HYPO and broke JN-25 in 1942, providing the intelligence that won the Battle of Midway and turned the tide of the Pacific War.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1823,9 +1819,9 @@
       "era": "Ptolemaic Egypt · 196 BCE",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The Rosetta Stone (196 BCE) records a decree in two languages and three scripts. It supported the decipherment of Egyptian hieroglyphs; it is not an encryption system.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "A known plaintext is the most powerful cryptanalytic asset there is"
@@ -1836,9 +1832,9 @@
       "era": "Modern · 1980s",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "None (fixed shift of 13)",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "ROT13 (~1983, Usenet) — the self-inverse Caesar with shift 13, designed as a spoiler obscurer rather than a cipher. One operation toggles text in and out.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1853,9 +1849,9 @@
       "era": "German field cipher · 1944",
       "family": "Transposition",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Daily stencil, column ranks, starting cell and minute",
-      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "keyIdea": "Reconstruct the 27 March 1944 RS44 operating procedure with its original example stencil. Animate permitted-cell entry and keyed extraction.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1870,9 +1866,9 @@
       "era": "Modern &middot; 1977",
       "family": "Modern Cryptography",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Modern Cryptography transformation of plaintext into protected form",
+      "keyIdea": "RSA uses a public modulus and exponents to support public-key constructions. Secure encryption and signatures need specified padding, adequate parameters and correct implementation.",
       "trust": {
         "key": "secure",
         "text": "Secure (Modern)",
@@ -1887,9 +1883,9 @@
       "era": "19th Century",
       "family": "Polyalphabetic",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Full-length key text (book or speech)",
-      "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
+      "keyIdea": "Running Key cipher (19th c.) — a Vigenère variant using a long passage of natural text as the key. Broken by Friedman with high-probability-trigram dragging.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1904,9 +1900,9 @@
       "era": "Roman Empire · 1st–4th c. CE",
       "family": "Ciphers in Culture",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ciphers in Culture transformation of plaintext into protected form",
+      "keyIdea": "The SATOR square has five palindromically arranged words. Its letters form a PATER NOSTER cross with two A’s and two O’s left over; the intended meaning remains debated.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1917,21 +1913,21 @@
       "era": "Sparta · ~500 BC",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Rod diameter (physical key)",
-      "keyIdea": "Ancient and Foundational Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The traditional scytale reconstruction illustrates transposition, but the dates and cryptographic interpretation of ancient evidence are disputed.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Brute force — try different rod diameters",
+      "securityFailure": "Simple transposition model; historical origin and military use are debated.",
       "modernLesson": "Transposition & key space"
     },
     "sha256": {
       "name": "SHA-256",
       "hall": "XI",
-      "era": "Modern &middot; 2001",
+      "era": "Modern &middot; 2002",
       "family": "Modern Cryptography",
       "region": "Global",
       "usedBy": "Certificate chains, Bitcoin mining, file integrity, password storage (via KDFs)",
@@ -1951,7 +1947,7 @@
       "era": "Modern &middot; 1979",
       "family": "Modern Cryptography",
       "region": "Global",
-      "usedBy": "DNSSEC root key ceremonies, HSM master key custody, cryptocurrency custodians",
+      "usedBy": "Threshold backup and custody designs; deployment details vary",
       "keyType": "No key — the secret is the object being split",
       "keyIdea": "Hides a secret as a polynomial constant term; any k of n points recover it, k−1 reveal nothing",
       "trust": {
@@ -1968,9 +1964,9 @@
       "era": "Georgian England · ~1748–1763",
       "family": "Unsolved Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "keyIdea": "An 18th-century English garden monument bearing the cryptic letters O · U · O · S · V · A · V · V — debated for 250 years and never definitively cracked.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -1985,9 +1981,9 @@
       "era": "WWII · 1940",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "15 rotors arranged as 3 banks of 5 (cipher × 5, control × 5, index × 5)",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "SIGABA used fifteen rotors in cipher, control and index banks. No successful enemy wartime cryptanalytic break is publicly documented; the widget is a simplified model.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -2002,16 +1998,16 @@
       "era": "WWII · 1943–1946",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "SIGSALY protected high-level Allied voice communications using quantised vocoder parameters and matched one-time key records. The demo illustrates modular addition only.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "See the exhibit’s documented attacks and limitations.",
-      "modernLesson": "The first practical secure voice communication predates digital age by 50 years"
+      "modernLesson": "An early operational use of digital speech parameters and one-time keys"
     },
     "slidex": {
       "name": "Slidex British WWII tactical code card",
@@ -2019,15 +2015,15 @@
       "era": "WWII & Cold War · 1943–1980s",
       "family": "American and Civil War Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "American and Civil War Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Slidex (1943) — the British Army's front-line tactical code card. A 204-cell vocabulary grid plus two sliding coordinate strips. Fast for a platoon signaller; read by German units within hours.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Tactical (intentionally weak)",
+      "securityFailure": "Short-lived tactical vocabulary cards and changing cursor settings; the widget is a simplified bigram model.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "solitaire": {
@@ -2036,9 +2032,9 @@
       "era": "Modern · 1999",
       "family": "One-Time Pad and Theoretical Security",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Initial ordering of a 54-card deck (52 + 2 jokers)",
-      "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
+      "keyIdea": "Solitaire / Pontifex (1999) — Bruce Schneier's hand cipher driven by a 54-card deck (written for Cryptonomicon). Crowley showed a ~1/22.5 keystream bias.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -2053,15 +2049,15 @@
       "era": "Post-WWII Australia · 1948",
       "family": "Unsolved Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The Somerton Man inscription: uncertain letter groups associated with a 1948 death. Researchers proposed Carl Webb’s identity in 2022; the inscription’s meaning remains unconfirmed.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Unsolved Cold-War-era inscription",
+      "securityFailure": "Unresolved inscription; a 2022 genealogical identification proposal is separate from deciphering these letters.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "stager": {
@@ -2070,15 +2066,15 @@
       "era": "Union · 1861",
       "family": "Historical Cryptography",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Route transposition + code words",
-      "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
+      "keyIdea": "The Union’s Stager system combined word transposition, code words and operational procedures. Wartime success is a historical claim, not a proof of mathematical security.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Never broken in wartime — superseded after the war",
+      "securityFailure": "Historical Union route-code system; wartime operational success is not a mathematical security guarantee.",
       "modernLesson": "Route transposition as message obfuscation"
     },
     "station-hypo": {
@@ -2087,9 +2083,9 @@
       "era": "WWII · 1940–1942",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Station HYPO at Pearl Harbor was the US Navy signals intelligence unit that broke JN-25 in 1942 and gave Admiral Nimitz advance warning of the Japanese fleet's target at Midway — turning the tide of the Pacific War.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -2100,9 +2096,9 @@
       "era": "Late 19th – 20th Century",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "8 high-frequency letters in row 0",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Straddling Checkerboard (1930s) — the Soviet variable-length digit substitution: common letters get one digit, rare letters two. The substitution layer of VIC.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -2117,9 +2113,9 @@
       "era": "Korean War · Vietnam War",
       "family": "Puzzle and Cultural Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "5×5 Polybius grid (no key)",
-      "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Tap Code (1965) — the 5x5 Polybius square tapped through walls as row-then-column knocks. Used by US POWs in the Hanoi Hilton during the Vietnam War.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -2134,9 +2130,9 @@
       "era": "1902",
       "family": "Transposition",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "3×3×3 keyword cube",
-      "keyIdea": "Transposition transformation of plaintext into protected form",
+      "keyIdea": "Trifid cipher (1902) — Felix Delastelle's three-dimensional 3x3x3 extension of the Bifid that fractionates letters into trits and shuffles them across a period.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -2151,9 +2147,9 @@
       "era": "German Renaissance · 1518",
       "family": "Polyalphabetic",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Optional starting offset only",
-      "keyIdea": "Polyalphabetic transformation of plaintext into protected form",
+      "keyIdea": "Johannes Trithemius's progressive shift cipher (Polygraphia, 1518) — the first published polyalphabetic, where every successive letter is shifted one further than the last.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -2185,9 +2181,9 @@
       "era": "Late 19th Century · ~1902",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Two keywords (two keyed squares)",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "Two-square uses two keyed 5×5 squares to encipher letter pairs. This demo follows the ACA horizontal rectangle rule and discloses its extra filler-escape convention.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -2202,16 +2198,16 @@
       "era": "WWII · 1937",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "5 rotors (3 stepping + 2 stator) chosen from a set of 10 or 14",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Typex (1937) — Britain's improved Enigma — five rotors, no plugboard, used at Bletchley to read its own intercepts. Hall VII of The Cipher Museum.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Never publicly broken by cryptanalysis in wartime service; obsolete today.",
-      "modernLesson": "Removing a weakness (Enigma's plugboard quirks) by adding rotors trades operator burden for cryptanalytic strength"
+      "modernLesson": "Model differences and operational practices matter alongside the rotor count"
     },
     "venona": {
       "name": "VENONA Project",
@@ -2219,9 +2215,9 @@
       "era": "Cold War · 1943–1980",
       "family": "One-Time Pad and Theoretical Security",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
+      "keyIdea": "VENONA analysed intercepted Soviet messages, chiefly from the 1940s, by exploiting duplicated pad material. The project ran from 1943 to 1980.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -2236,15 +2232,15 @@
       "era": "1917",
       "family": "One-Time Pad and Theoretical Security",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Key tape (bitwise XOR)",
-      "keyIdea": "One-Time Pad and Theoretical Security transformation of plaintext into protected form",
+      "keyIdea": "Vernam’s teleprinter system combines text with a key stream. XOR supplies perfect secrecy only when the pad is uniformly random, independent, secret, long enough and never reused.",
       "trust": {
         "key": "secure",
         "text": "Secure (Modern)",
         "description": "Still considered secure when used correctly with modern key handling."
       },
-      "securityFailure": "Secure only under OTP conditions: a secret, truly random, message-length pad used once. XOR alone or pad reuse is not secure.",
+      "securityFailure": "XOR gives perfect secrecy only with an independent, uniformly random secret pad at least as long as the message, used once. No authentication.",
       "modernLesson": "XOR as cipher operation · nonce uniqueness"
     },
     "vic": {
@@ -2253,15 +2249,15 @@
       "era": "Cold War · 1950s",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Straddling checkerboard + double transposition",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "VIC cipher (1953) — Reino Häyhänen's KGB hand cipher: straddling checkerboard, double transposition, date-driven keystream. Exposed in 1957 after his defection, not broken cryptanalytically.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Never broken by cryptanalysis — exposed by defector (1957)",
+      "securityFailure": "Historical Soviet hand system; the key procedure became known through Häyhänen’s 1957 defection. No proof of unbreakability.",
       "modernLesson": "Peak hand-cipher design principles"
     },
     "vietnamese-underground": {
@@ -2270,15 +2266,15 @@
       "era": "Modern · 1940s–1975",
       "family": "Military and Field Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Military and Field Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Vietnamese wartime communications used changing codes and ciphers. This keyword-substitution widget is a teaching model, not a verified universal underground system.",
       "trust": {
-        "key": "broken",
-        "text": "Broken",
-        "description": "Cryptographically broken — historically important but unsafe to use today."
+        "key": "educational",
+        "text": "Educational",
+        "description": "A didactic construction for learning cryptographic concepts, not for security."
       },
-      "securityFailure": "SIGINT (NSA/ARVN), captured materials",
+      "securityFailure": "Illustrative concealment and cipher models; specific operational attribution is not established here.",
       "modernLesson": "Compartmentalization limits damage from key compromise"
     },
     "vigenere": {
@@ -2287,9 +2283,9 @@
       "era": "Renaissance · 1553",
       "family": "Historical Cryptography",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Repeating keyword",
-      "keyIdea": "Historical Cryptography transformation of plaintext into protected form",
+      "keyIdea": "Vigenère cipher (1553) — the polyalphabetic shift driven by a repeating keyword, called le chiffre indéchiffrable for 300 years. Broken by Kasiski in 1863.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -2304,15 +2300,15 @@
       "era": "Early 15th c. · Carbon-dated 1404–1438",
       "family": "Unsolved Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Unsolved Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The Voynich manuscript remains undeciphered. Radiocarbon dating concerns its parchment; script, language and interpretation remain unresolved.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "No one. Every published \"solution\" has been refuted.",
+      "securityFailure": "No generally accepted decipherment; whether the text encodes language or a cipher remains unresolved.",
       "modernLesson": "Statistical signatures alone cannot tell cipher from constructed language from hoax"
     },
     "wadsworth-cipher": {
@@ -2321,9 +2317,9 @@
       "era": "1817 · USA",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Wadsworth’s 1817 device uses geared disks with 33 and 26 positions. A published 2020 ciphertext-only search studied key recovery for this historical design.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -2338,9 +2334,9 @@
       "era": "English Civil War · 1642–1651",
       "family": "Substitution",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Substitution transformation of plaintext into protected form",
+      "keyIdea": "John Wallis served successive English governments as a cryptanalyst. The interactive illustrates a nomenclator rather than reproducing an authenticated Royalist key.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -2355,15 +2351,15 @@
       "era": "Victorian London · 1867",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Mixed-alphabet keyword (inner dial)",
-      "keyIdea": "Mechanical and Rotor Machines transformation of plaintext into protected form",
+      "keyIdea": "Charles Wheatstone's 1867 cryptograph — two geared clock dials whose hands sweep an outer plain alphabet and an inner mixed alphabet, generating a polyalphabetic ciphertext one click at a time.",
       "trust": {
-        "key": "broken",
-        "text": "Broken",
-        "description": "Cryptographically broken — historically important but unsafe to use today."
+        "key": "historical",
+        "text": "Historical Only",
+        "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Weak (1867 standards)",
+      "securityFailure": "Historical unequal-dial device. The current equal-dial widget is a fixed-substitution teaching model, not its mechanism.",
       "modernLesson": "Mechanisation does not, by itself, add security"
     },
     "yardley": {
@@ -2372,9 +2368,9 @@
       "era": "Interwar · USA",
       "family": "Codebreakers and Cryptanalysis",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Codebreakers and Cryptanalysis transformation of plaintext into protected form",
+      "keyIdea": "Herbert Osborne Yardley founded America's Black Chamber in 1919, broke Japanese diplomatic codes at the 1921 Washington Naval Conference, and then infamously published the secrets in his 1931 bestseller.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -2387,7 +2383,7 @@
       "region": "Global",
       "usedBy": "Zcash shielded transactions, Ethereum rollups, anonymous credential systems",
       "keyType": "Witness known only to the prover",
-      "keyIdea": "Demonstrates knowledge of a secret without transmitting any part of it",
+      "keyIdea": "Proves a statement without revealing the witness beyond what the statement and model permit",
       "trust": {
         "key": "secure",
         "text": "Secure (Modern)",
@@ -2402,9 +2398,9 @@
       "era": "WWI · January 1917",
       "family": "American and Civil War Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "American and Civil War Ciphers transformation of plaintext into protected form",
+      "keyIdea": "The January 1917 Zimmermann Telegram: code 0075 to Washington, then re-encoded in 13040 for Mexico. Room 40’s reading helped draw the United States into WWI.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -2419,9 +2415,9 @@
       "era": "1969 · Solved 2020",
       "family": "Puzzle and Cultural Ciphers",
       "region": "Global",
-      "usedBy": "Historical operators, states, or communities documented for this exhibit",
+      "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Homophonic substitution + diagonal transposition",
-      "keyIdea": "Puzzle and Cultural Ciphers transformation of plaintext into protected form",
+      "keyIdea": "Zodiac killer ciphers (1969) — homophonic substitution as in Z-408 (broken in 1969 by the Hardens) and Z-340 (broken in 2020 by Oranchak, Blake, and Van Eycke).",
       "trust": {
         "key": "broken",
         "text": "Broken",

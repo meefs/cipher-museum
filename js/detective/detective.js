@@ -38,6 +38,9 @@
 'use strict';
 
 (function (global) {
+  var autoSolveTimer = null;
+  var autoSolveRevision = 0;
+  var autoSolveLabel = null;
 
   /* ─── Core pipeline ─────────────────────────────────────────── */
   function analyse(text) {
@@ -74,6 +77,8 @@
       var _lastRanked = null;
 
       function update() {
+        cancelAutoSolve();
+        if (global.DetectivePlayback) global.DetectivePlayback.skip();
         var text = input.value;
         if (!text || !text.trim()) {
           global.DetectiveRender.clear();
@@ -242,6 +247,20 @@
   }
 
   /* ─── Auto-Solve runner (v3) ────────────────────────────────── */
+  function cancelAutoSolve() {
+    autoSolveRevision++;
+    if (autoSolveTimer !== null) clearTimeout(autoSolveTimer);
+    autoSolveTimer = null;
+    var btn = document.getElementById('det-autosolve-btn');
+    var out = document.getElementById('det-autosolve-result');
+    if (btn) {
+      btn.classList.remove('autosolve-btn--running');
+      if (autoSolveLabel !== null) btn.innerHTML = autoSolveLabel;
+    }
+    autoSolveLabel = null;
+    if (out) out.textContent = '';
+  }
+
   function runAutoSolve(ciphertext, stats, ranked) {
     var btn  = document.getElementById('det-autosolve-btn');
     var out  = document.getElementById('det-autosolve-result');
@@ -253,10 +272,14 @@
     btn.disabled = true;
     btn.classList.add('autosolve-btn--running');
     var oldLabel = btn.innerHTML;
+    autoSolveLabel = oldLabel;
+    var revision = autoSolveRevision;
     btn.innerHTML = '\u2699\uFE0F Working\u2026';
     out.innerHTML = '<p class="autosolve-runtime">Running every applicable solver\u2026</p>';
 
-    setTimeout(function () {
+    autoSolveTimer = setTimeout(function () {
+      autoSolveTimer = null;
+      if (revision !== autoSolveRevision) return;
       var result;
       try {
         result = global.DetectiveSolvers.solveAuto(ciphertext, { stats: stats, ranked: ranked });
@@ -265,12 +288,14 @@
         btn.disabled = false;
         btn.classList.remove('autosolve-btn--running');
         btn.innerHTML = oldLabel;
+        autoSolveLabel = null;
         return;
       }
       out.innerHTML = renderAutoSolveResult(result, ciphertext);
       btn.disabled = false;
       btn.classList.remove('autosolve-btn--running');
       btn.innerHTML = oldLabel;
+      autoSolveLabel = null;
     }, 30);
   }
 

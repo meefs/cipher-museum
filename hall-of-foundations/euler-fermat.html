@@ -105,7 +105,7 @@
       <span class="term">Chinese Remainder Theorem</span>. Real implementations
       also use Carmichael's λ(<em>n</em>) rather than φ(<em>n</em>) to pick
       <em>d</em>; it divides φ(<em>n</em>) and yields the same round trip with a
-      smaller exponent.
+      potentially smaller exponent.
     </p>
 
     <div class="lab">
@@ -137,17 +137,13 @@
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
       <h3>The reason the mailbox opens</h3>
-      <p>
-        The security of <a href="../ciphers/rsa.html">RSA</a> rests on factoring being hard (see
-        <a href="one-way-function.html">The One-Way Function</a>). But its
-        <strong>correctness</strong> — the promise that the right key recovers
-        the message — rests entirely here, on Euler's theorem. Hardness keeps
-        the attacker out; this theorem lets the owner back in.
-      </p>
+      <p>Factoring the modulus breaks RSA; the converse equivalence between general RSA inversion and factoring is not known. Correctness is a separate question, supplied here by modular arithmetic and the Chinese remainder theorem. This raw textbook-RSA round trip lacks secure encodings and must not be used for real encryption.</p>
     </div>
   </section>
 
-  </main>
+  <p class="aside"><strong>Sources and scope:</strong> <a href="https://www.rfc-editor.org/rfc/rfc8017.html">RFC 8017 (2016)</a>, RSA key relations and complete encryption/signature schemes.</p>
+  <p class="aside">Continue with <a href="../ciphers/rsa.html">RSA</a> or explore <a href="modular-arithmetic.html">modular arithmetic</a>.</p>
+</main>
 
 
   <footer></footer>

@@ -84,7 +84,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The technique appears in late-19th-century anarchist and nihilist correspondence in Russia, where pamphlets had to be encrypted by amateurs working from memory. Soviet intelligence later adopted it as the substitution layer of the VIC cipher carried by deep-cover agent Reino Häyhänen, exposed in 1957 when he defected and revealed the system to the FBI.</p></div>
+      <div class="panel-body"><p>A straddling checkerboard is documented as part of the VIC system revealed through the Häyhänen espionage case. Earlier origins and particular nineteenth-century users need separate evidence; this page does not establish an exact first use.</p></div>
     </div>
 
     <div class="panel">
@@ -97,7 +97,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Frequency Analysis on Digits</div><div class="attack-diff">Complexity: Easy (used alone)</div><p class="attack-desc">By itself, the checkerboard is just a substitution from letters to digits. Counting digit frequencies and pair frequencies recovers the alphabet in minutes. Its strength only emerges when combined with additional layers — additive keys, transposition, chain addition — as in VIC.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Frequency Analysis on Digits</div><div class="attack-diff">Complexity: Easy (used alone)</div><p class="attack-desc">By itself, the checkerboard is a variable-length substitution. Its statistics can aid analysis, but there is no universal minutes-to-recovery guarantee. VIC combined a checkerboard with two transposition stages and a key-derivation procedure; chain addition in that procedure should not be confused with a separate one-time-pad layer.</p></div></div>
     </div>
 
     <div class="panel">

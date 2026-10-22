@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rail Fence Cipher — The Cipher Museum</title>
-    <meta name="description" content="Rail Fence cipher — write the message in a zigzag across N rails, then read off rail by rail. Trivial to break: brute-force every rail count from 2 to about 10.">
+    <meta name="description" content="Rail Fence transposes a message along a zigzag route. Rail count, offset conventions and message length define the search; there is no universal ten-rail maximum.">
   <meta property="og:title" content="Rail Fence Cipher — The Cipher Museum">
-  <meta property="og:description" content="Rail Fence cipher — write the message in a zigzag across N rails, then read off rail by rail. Trivial to break: brute-force every rail count from 2 to about 10.">
+  <meta property="og:description" content="Rail Fence transposes a message along a zigzag route. Rail count, offset conventions and message length define the search; there is no universal ten-rail maximum.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/rail-fence.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Rail Fence Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Rail Fence cipher — write the message in a zigzag across N rails, then read off rail by rail. Trivial to break: brute-force every rail count from 2 to about 10.">
+  <meta name="twitter:description" content="Rail Fence transposes a message along a zigzag route. Rail count, offset conventions and message length define the search; there is no universal ten-rail maximum.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/rail-fence.html">
@@ -84,12 +84,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The Rail Fence is one of the simplest transposition ciphers, yet it introduces the core concept that rearranging letter positions — without changing the letters themselves — can obscure a message. It has been used informally from antiquity through the American Civil War.</p>
+      <p>Rail Fence is a simple transposition exercise: it changes letter positions while preserving the letters themselves. Its precise origin and particular historical deployments are not established by the references here.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The Rail Fence cipher is one of the simplest transposition techniques, used informally for centuries before cryptographers took it seriously. The name comes from the appearance of the zigzag pattern resembling a split-rail fence. It was reportedly used during the American Civil War for simple field messages, though the Union Stager cipher was far superior.</p></div>
+      <div class="panel-body"><p>The zigzag pattern gives the cipher its name. This exhibit teaches that arrangement rather than attributing a specific unverified military use to it.</p></div>
     </div>
 
     <div class="panel">
@@ -141,7 +141,7 @@ Read rows: HOL + ELWRD + LO = HOLELWRDLO</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Brute Force</div><div class="attack-diff">Complexity: Trivial</div><p class="attack-desc">The Rail Fence cipher has at most a dozen practical key values (number of rails). An attacker simply tries each rail count, decrypts, and checks if the result is English. The correct decryption is immediately obvious. Even a human can crack it in under a minute.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Brute Force</div><div class="attack-diff">Complexity: Trivial</div><p class="attack-desc">For a message of n characters, the usual rail-count-only model has fewer than n nontrivial rail counts. Trying them is a small search compared with a general substitution, though very short or unusual plaintext may be ambiguous. The widget’s rail limit is an interface choice, not a universal historical bound.</p></div></div>
     </div>
 
     <div class="panel">

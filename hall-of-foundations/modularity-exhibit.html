@@ -80,12 +80,7 @@
       <span class="step-num">§1</span>
       <h2>A curve is a cubic</h2>
     </div>
-    <p>
-      An <span class="term">elliptic curve</span> over the rationals is the set
-      of solutions to a cubic in <em>Weierstrass form</em>. It is not an ellipse;
-      the name is a historical accident inherited from the integrals that measure
-      an ellipse's arc length.
-    </p>
+    <p>For this exhibit an elliptic curve is a nonsingular Weierstrass cubic together with a point at infinity. Its equation has rational coefficients, while this smooth plot shows its real solutions. Rational, real and finite-field points are different sets. The name comes from the history of elliptic integrals.</p>
     <div class="eq">y² = x³ + ax + b</div>
     <p>
       Fix <em>a</em> and <em>b</em> so the curve is smooth — no cusps, no
@@ -148,8 +143,8 @@
       takes this same group law and draws it by hand, and
       <a href="finite-fields.html" style="color:var(--vermilion)">Finite Fields</a>
       shows the smooth curve shattering into the scatter cryptography actually uses.
-      Real primitive, no simulated math: point coordinates are computed from the
-      actual group law over the reals and projected to the canvas.
+      Teaching model using floating-point approximations: point coordinates are computed from the
+      actual group law over the reals and projected onto the display; no cryptographic protocol is implemented.
     </p>
   </section>
 
@@ -167,13 +162,7 @@
       easy to compute forward, believed infeasible to reverse.
     </p>
     <div class="eq">P, Q known &nbsp;→&nbsp; find k such that Q = kP &nbsp; ✗ hard</div>
-    <p>
-      That asymmetry is the entire basis of ECDH key exchange and ECDSA
-      signatures. But <em>why</em> should such curves behave so regularly, so
-      reliably, across every prime you might build a key on? To answer that,
-      number theorists had to look at the curve from an entirely different
-      direction.
-    </p>
+    <p>Suitable finite-field elliptic-curve groups support hard discrete-log and related assumptions used by protocols such as ECDH and ECDSA. Not every curve or prime is secure, and visual scattering does not prove hardness. The modularity story below is mathematical context rather than a prerequisite for that security claim.</p>
   </section>
 
   <!-- STEP 4 -->
@@ -182,19 +171,8 @@
       <span class="step-num">§4</span>
       <h2>The second face: modular forms</h2>
     </div>
-    <p>
-      Every elliptic curve over ℚ carries a <span class="term">Hasse–Weil
-      zeta function</span> — a bookkeeping of how many points the curve has
-      modulo each prime. Separately, in complex analysis, live
-      <span class="term">modular forms</span>: wildly symmetric functions on the
-      upper half-plane, unrelated on their face to any cubic.
-    </p>
-    <p>
-      The <span class="term">Modularity Theorem</span> says these two faces are
-      one. Every elliptic curve over ℚ <em>is</em> modular: its zeta function
-      matches a modular form exactly. This is the bridge — proved for semistable
-      curves by Wiles, completed by Taylor–Wiles, and in full by 2001.
-    </p>
+    <p>An elliptic curve over ℚ has an L-function built from arithmetic data, including point counts at primes of good reduction. Modular forms are highly symmetric functions on the complex upper half-plane. Their connection is deep number theory, not an extra encryption operation.</p>
+    <p>The Modularity Theorem associates every elliptic curve over ℚ with a weight-two cuspidal newform whose L-function matches that of the curve. Wiles and Taylor&ndash;Wiles established the semistable case in work published in 1995; the general case was completed by 2001. This is an equality of L-functions, not a claim that a zeta function literally is a modular form.</p>
     <div class="pull">
       Two traditions that never spoke — point-counting and the analysis of
       symmetric functions — turned out to be the same language.
@@ -240,17 +218,8 @@
   <section class="exhibit">
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
-      <h3>Foundations, not primitives</h3>
-      <p>
-        No cipher calls Fermat's Last Theorem. What ECC inherits is the
-        <strong>structural certainty</strong> the modularity world provides:
-        the theory of Galois representations attached to elliptic curves, the
-        control over how points behave modulo each prime, and the confidence
-        that these objects are as rigid and well-understood as any in
-        mathematics. When you generate an ECDSA key, you are standing on ground
-        that this 100-page proof helped survey — even though you never touch the
-        theorem itself.
-      </p>
+      <h3>Mathematical context, not a security assumption</h3>
+      <p>ECC does not require the Modularity Theorem or Fermat's Last Theorem for its group law, correctness or security assumption. The theorem is valuable mathematical context. Practical ECC depends on finite-field arithmetic, suitable group parameters and protocol-specific computational assumptions; modularity does not prove that those assumptions are hard.</p>
     </div>
     <p class="aside">
       This exhibit is reference and education. For the deployable primitives —
@@ -348,6 +317,9 @@
 
   // add two points via chord-and-tangent (handles the doubling case)
   function addPoints(P, Q) {
+    if (Math.abs(P[0]-Q[0]) < 1e-9 && Math.abs(P[1]+Q[1]) < 1e-9) {
+      return { third: null, sum: null, slope: null };
+    }
     let m;
     if (Math.abs(P[0] - Q[0]) < 1e-9 && Math.abs(P[1] - Q[1]) < 1e-9) {
       m = (3 * P[0] * P[0] + A) / (2 * P[1]);      // tangent slope (P = Q)
@@ -365,6 +337,11 @@
     const [P, Q] = picks;
     const { third, sum, slope: m } = addPoints(P, Q);
 
+    if (sum === null) {
+      cons.appendChild(make("line", {x1:sx(P[0]), y1:0, x2:sx(P[0]), y2:H, stroke:"#C85A5A", "stroke-width":2}));
+      readout.textContent = "P + Q = ∞ — the point at infinity (the group identity).";
+      return;
+    }
     const yL = P[1] + m * (xmin - P[0]);
     const yR = P[1] + m * (xmax - P[0]);
     cons.appendChild(make("line", { x1: sx(xmin), y1: sy(yL), x2: sx(xmax), y2: sy(yR),

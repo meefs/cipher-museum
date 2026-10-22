@@ -19,7 +19,7 @@ for (const p of ['timeline.html','ciphers/great-cipher.html']) {
 for (const p of ['modern.html','halls/modern-crypto.html','halls/unbreakable.html','learn.html','halls/polyalphabetic.html']) {
  assert.doesNotMatch(plain(p),/Every classical cipher failed|Every cipher.*(?:has been broken|eventually fell)|broke every classical cipher|key that never repeats|keys that never repeat|public-key cryptography.*not ciphers/i,p);
 }
-assert.match(plain('halls/unbreakable.html'),/secret, truly random, message-length key used once/);
+assert.match(plain('halls/unbreakable.html'),/secret, uniformly random, independent message-length key used once/);
 assert.doesNotMatch(plain('timeline.html'), /every monoalphabetic cipher falls to a frequency table|Every simple substitution cipher is now breakable/);
 assert.match(plain('halls/substitution.html'), /With enough suitable ciphertext/);
 assert.doesNotMatch(plain('halls/substitution.html'), /Every monoalphabetic cipher is broken/);

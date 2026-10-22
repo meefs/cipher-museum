@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DES (Data Encryption Standard) &mdash; The Cipher Museum</title>
-  <meta name="description" content="DES (1977) — the first public, government-standardised cipher; broken by EFF Deep Crack in 1998 and the spark of modern academic cryptanalysis.">
+  <meta name="description" content="DES was standardized in 1977. Its 56-bit key became vulnerable to practical exhaustive search, demonstrated by EFF’s Deep Crack in 1998.">
   <meta property="og:title" content="DES (Data Encryption Standard) &mdash; The Cipher Museum">
-  <meta property="og:description" content="DES (1977) — the first public, government-standardised cipher; broken by EFF Deep Crack in 1998 and the spark of modern academic cryptanalysis.">
+  <meta property="og:description" content="DES was standardized in 1977. Its 56-bit key became vulnerable to practical exhaustive search, demonstrated by EFF’s Deep Crack in 1998.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/des.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DES (Data Encryption Standard) &mdash; The Cipher Museum">
-  <meta name="twitter:description" content="DES (1977) — the first public, government-standardised cipher; broken by EFF Deep Crack in 1998 and the spark of modern academic cryptanalysis.">
+  <meta name="twitter:description" content="DES was standardized in 1977. Its 56-bit key became vulnerable to practical exhaustive search, demonstrated by EFF’s Deep Crack in 1998.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/des.html">
@@ -60,14 +60,14 @@
   </div>
   <h1 class="page-title">DES (Data Encryption Standard)</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">The first public, government-standardised cipher &mdash; and the cipher that started a generation of academic cryptanalysis.</p>
+  <p class="page-tagline">A landmark public, government-standardised block cipher &mdash; and the cipher that started a generation of academic cryptanalysis.</p>
   <p class="exhibit-status-note">Broken (brute force, 1998)</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">IBM (Lucifer, 1971), modified by NSA, standardised by NBS as FIPS 46</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1977</span></div>
     <div class="fact"><span class="fact-label">Type</span><span class="fact-value">Symmetric block cipher (Feistel network, 64-bit block, 56-bit key)</span></div>
-    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Withdrawn 2005; replaced by AES; 3DES deprecated 2023</span></div>
-    <div class="fact"><span class="fact-label">Modern Role</span><span class="fact-value">Historical foundation; 3DES still appears in legacy banking and EMV until 2023 sunset</span></div>
+    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">DES withdrawn in 2005; NIST disallowed new TDEA protection after 2023</span></div>
+    <div class="fact"><span class="fact-label">Modern Role</span><span class="fact-value">Historical foundation; legacy TDEA data may still require processing during migration</span></div>
   </div>
 </div>
 
@@ -76,22 +76,22 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>DES was the first cipher whose specification was fully public, peer-reviewed, and adopted as a government standard. That openness &mdash; controversial at the time &mdash; created modern academic cryptanalysis: Biham and Shamir's <em>differential cryptanalysis</em> (1991) and Matsui's <em>linear cryptanalysis</em> (1993) were both invented to attack DES, and both reshaped how every subsequent cipher is designed.</p>
+      <p>DES made a complete modern block-cipher specification widely available as a US federal standard. Its public scrutiny helped establish academic cryptanalysis. Differential and linear cryptanalysis used DES as a major test case and influenced the design of later ciphers.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>IBM's Horst Feistel led the design of <em>Lucifer</em> in the early 1970s. NBS (now NIST) issued an open call for a standard cipher; IBM submitted a hardened Lucifer derivative; NSA modified the S-boxes and reduced the key from 112 bits to 56 bits. Cryptographers cried foul over the key-length cut and the unexplained S-box changes &mdash; until 1991, when Biham and Shamir showed the NSA's S-boxes were specifically hardened against differential cryptanalysis, a technique IBM and NSA both knew about and the public did not.</p></div>
+      <div class="panel-body"><p>IBM's Horst Feistel led the design of <em>Lucifer</em> in the early 1970s. NBS (now NIST) issued an open call for a standard cipher; IBM submitted a hardened Lucifer derivative; NSA participated in the review; the resulting DES design used a 56-bit effective key and strengthened S-boxes. Cryptographers cried foul over the key-length cut and the unexplained S-box changes &mdash; until 1991, when Biham and Shamir showed the NSA's S-boxes were specifically hardened against differential cryptanalysis, a technique IBM and NSA both knew about and the public did not.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>DES is a 16-round Feistel network. The 64-bit plaintext is split into two 32-bit halves L and R. Each round computes <code>L<sub>i+1</sub> = R<sub>i</sub></code> and <code>R<sub>i+1</sub> = L<sub>i</sub> &oplus; F(R<sub>i</sub>, K<sub>i</sub>)</code>. The round function F expands R to 48 bits, XORs the round subkey, passes the result through eight 6-to-4-bit S-boxes (the heart of DES's non-linearity), and applies a final permutation. Sixteen rounds of this with sixteen subkeys derived from the 56-bit master key produce ciphertext that survives all linear and differential attacks within its key budget &mdash; but not exhaustive search.</p></div>
+      <div class="panel-body"><p>DES is a 16-round Feistel network. The 64-bit plaintext is split into two 32-bit halves L and R. Each round computes <code>L<sub>i+1</sub> = R<sub>i</sub></code> and <code>R<sub>i+1</sub> = L<sub>i</sub> &oplus; F(R<sub>i</sub>, K<sub>i</sub>)</code>. The round function F expands R to 48 bits, XORs the round subkey, passes the result through eight 6-to-4-bit S-boxes (the heart of DES's non-linearity), and applies a final permutation. Sixteen rounds of this with sixteen subkeys derived from the 56-bit master key produce a reversible block cipher. Its 56-bit key is too small to withstand modern exhaustive search.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
-      <div class="panel-body"><p>In 1998 the EFF's $250,000 <em>Deep Crack</em> machine recovered a DES key in 56 hours by brute force. By 2008 a single FPGA cluster could do it in under a day. Differential cryptanalysis requires ~2<sup>47</sup> chosen plaintexts, linear cryptanalysis ~2<sup>43</sup> known plaintexts &mdash; impractical operationally, but a clear theoretical break. Triple-DES (3DES) extended the effective key to 112 bits and bought DES another two decades, but by 2023 NIST formally retired 3DES because of the small 64-bit block size (the Sweet32 birthday attack) and modern computing capacity.</p></div>
+      <div class="panel-body"><p>In 1998 the EFF's Deep Crack machine recovered a DES key in about 56 hours. Differential and linear cryptanalysis also showed important theoretical weaknesses, although their data requirements limit their practical use. Triple-DES extended DES's useful life, but retained its small 64-bit block size. NIST withdrew SP 800-67 Rev. 2 on 1 January 2024: TDEA is disallowed for applying new protection, while processing already protected data remains permitted. This is a NIST transition rule, not a claim that every banking deployment ended on that date.</p></div>
     </div>
 
     <div class="panel">
@@ -103,7 +103,7 @@
             <tr><td>Banking (1980s&ndash;2010s)</td><td>ATM PIN encryption, EMV chip cards (3DES); legacy systems still in slow migration</td></tr>
             <tr><td>Unix passwd (until 1990s)</td><td><code>crypt(3)</code> used DES iterated 25 times to hash passwords</td></tr>
             <tr><td>Kerberos v4</td><td>DES was the original Kerberos cipher; v5 added AES support</td></tr>
-            <tr><td>Cryptanalysis education</td><td>Every academic cryptography course still teaches DES because Feistel, S-boxes, and the avalanche effect are easiest to demonstrate on it</td></tr>
+            <tr><td>Cryptanalysis education</td><td>DES remains a useful teaching example because Feistel, S-boxes, and the avalanche effect are easiest to demonstrate on it</td></tr>
           </tbody>
         </table>
       </div>
@@ -119,17 +119,19 @@
         <table class="cipher-table">
           <tbody>
             <tr><td>Era</td><td>Modern &middot; 1977</td></tr>
-            <tr><td>Status</td><td>Withdrawn 2005; replaced by AES; 3DES deprecated 2023</td></tr>
+            <tr><td>Status</td><td>DES withdrawn in 2005; NIST disallowed new TDEA protection after 2023</td></tr>
             <tr><td>Origin</td><td>IBM (Lucifer, 1971), modified by NSA, standardised by NBS as FIPS 46</td></tr>
             <tr><td>Year</td><td>1977</td></tr>
             <tr><td>Type</td><td>Symmetric block cipher (Feistel network, 64-bit block, 56-bit key)</td></tr>
-            <tr><td>Modern Role</td><td>Historical foundation; 3DES still appears in legacy banking and EMV until 2023 sunset</td></tr>
+            <tr><td>Modern Role</td><td>Historical foundation; legacy TDEA data may still require processing during migration</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="primary-sources"><div class="panel-body"><h2 id="primary-sources">Primary Sources</h2><p><a href="https://csrc.nist.gov/News/2023/nist-to-withdraw-sp-800-67-rev-2">NIST withdrawal notice for TDEA (2023; effective 1 January 2024)</a>.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
@@ -147,7 +149,7 @@
     <a href="../ciphers/lorenz.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Lorenz</span>
-      <span class="related-card__tag">Earlier rotor-style symmetric cipher DES replaced in concept</span>
+      <span class="related-card__tag">Earlier teleprinter stream cipher with a different construction</span>
     </a>
   </div>
 </section>

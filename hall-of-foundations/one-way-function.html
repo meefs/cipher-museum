@@ -56,12 +56,7 @@
   <div class="hero">
     <div class="kicker">The Conceptual Keystone</div>
     <h1>Easy one way,<br><em>hard</em> the other</h1>
-    <p class="standfirst">
-      Strip cryptography down to a single idea and this is what remains: a
-      function anyone can compute forward, but no one can practically reverse.
-      Every cipher, signature, and key exchange in the building is downstream
-      of this one asymmetry.
-    </p>
+    <p class="standfirst">Many computational cryptographic constructions depend on functions that are easy to evaluate and difficult to invert on properly sampled inputs. Their security is conjectured, not proved merely by drawing an arrow. Information-theoretic systems such as the one-time pad do not require this computational assumption.</p>
   </div>
 
   <div class="honesty">
@@ -73,12 +68,7 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§1</span><h2>Multiply, then try to undo it</h2></div>
-    <p>
-      The friendliest one-way function is multiplication of primes. Multiplying
-      two large primes is instant. Recovering them from the product — factoring —
-      is, as far as anyone knows, brutally slow. Move the slider to enlarge the
-      primes and watch the two costs diverge.
-    </p>
+    <p>Multiplying suitably chosen large primes and attempting to recover them illustrates a candidate one-way relationship. For the tiny values shown, factoring is easy. The plot compares multiplication with a trial-division estimate, not with the fastest known general factoring algorithms.</p>
 
     <div class="lab">
       <div class="lab-stage">
@@ -92,55 +82,29 @@
         <button id="fac">Factor it (watch it crawl)</button>
         <div class="readout" id="oread" aria-live="polite" role="status">—</div>
       </div>
-      <div class="lab-hint">
-        Forward stays flat and fast. The factoring bar climbs exponentially —
-        and this is only tens of bits. Real keys use <b>2048</b>. The factoring
-        here is a live trial-division counter, not a simulation.
-      </div>
+      <div class="lab-hint">The bar estimates trial division up to √n. The Factor button counts actual trial divisions for this tiny sample. More advanced factoring algorithms are substantially faster at large sizes; do not extrapolate this bar into an RSA security estimate.</div>
     </div>
   </section>
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§2</span><h2>The trapdoor twist</h2></div>
-    <p>
-      A plain one-way function locks the door for everyone. Cryptography needs a
-      little more: a <span class="term">trapdoor</span> — a secret that makes the
-      reverse easy for the one who holds it. In RSA, knowing the two primes is the
-      trapdoor; without them you factor, with them you divide.
-    </p>
+    <p>Some public-key constructions add a trapdoor. RSA's relevant operation is modular exponentiation: knowing the prime factors lets the owner compute a private exponent and invert that operation. Decryption is not division of the ciphertext by a prime.</p>
     <div class="eq">public: n = p·q &nbsp;·&nbsp; trapdoor: the pair (p, q)</div>
-    <p>
-      That is the shape of every public-key scheme: a wall everyone faces, with a
-      hidden gate only the key-holder can walk through.
-    </p>
+    <p>Trapdoor functions are one design pattern, not a description of every public-key scheme. Diffie&ndash;Hellman key agreement, for example, has a different structure.</p>
   </section>
 
   <section class="exhibit">
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
       <h3>The bet under everything</h3>
-      <p>
-        <a href="../ciphers/rsa.html">RSA</a> bets on factoring.
-        <a href="../ciphers/diffie-hellman.html">Diffie–Hellman</a> and ECC bet on
-        discrete logs. The post-quantum standards bet on
-        <a href="lattices-svp.html">lattice problems</a> instead — because a
-        quantum computer would win the factoring and discrete-log bets. Different
-        walls, same architecture: <strong>easy forward, hard back, secret gate.</strong>
-      </p>
-      <p>
-        One family deliberately omits the gate.
-        <a href="../ciphers/sha256.html">SHA-256</a> is meant to be one-way with
-        <em>no</em> trapdoor at all &#8212; nobody, including its designers,
-        should be able to run it backwards. That makes a hash the purest example
-        on this page: all wall, no door. Public-key cryptography is the harder
-        trick, because it needs the wall <em>and</em> a way through for exactly
-        one person.
-      </p>
+      <p>Factoring breaks RSA, and solving discrete logs breaks classical DH and ECC. Post-quantum designs use several families, including lattice, code and hash-based assumptions. Security claims must name the particular construction and problem, rather than treating all these as the same trapdoor.</p>
+      <p>A cryptographic hash is intended to resist preimage search without a secret inversion trapdoor. This does not mean an attacker cannot recover a low-entropy input by guessing. No proof establishes that a concrete hash such as SHA-256 is a one-way function against every efficient attacker.</p>
     </div>
     <p class="aside">Next: <a href="reduction.html" style="color:var(--vermilion)">Reduction &amp; Proof</a> — how we argue one wall is at least as tall as another.</p>
   </section>
 
-  </main>
+  <p class="aside">Continue with <a href="../ciphers/rsa.html">RSA</a> or explore <a href="reduction.html">security reductions</a>.</p>
+</main>
 
 
   <footer></footer>
@@ -183,7 +147,7 @@
     // n label
     var tn=el("text",{x:W/2,y:pad-14,fill:"#F3EEDF","font-family":"ui-monospace,monospace","font-size":"15","text-anchor":"middle","font-weight":"700"});
     tn.textContent=p+" × "+q+" = "+n; owf.appendChild(tn);
-    oread.innerHTML="n = <b>"+n+"</b> ("+bits+" bits) · factor cost ≈ √n ≈ <b>"+Math.round(facCost)+"</b> steps";
+    oread.innerHTML="n = <b>"+n+"</b> ("+(Math.floor(Math.log2(n))+1)+" bits) · trial-division estimate ≈ √n ≈ <b>"+Math.round(facCost)+"</b> steps";
     owf._current={n:n,p:p,q:q};
   }
   function runFactor(){

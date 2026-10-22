@@ -77,12 +77,7 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§1</span><h2>A point that isn't on the grid</h2></div>
-    <p>
-      Drag the <span style="color:var(--vermilion)">target</span> anywhere. The
-      <span class="term">Closest Vector Problem</span> asks for the lattice point
-      nearest to it. In two dimensions your eye finds it instantly — but your eye
-      is using the grid's true shape, which the attacker doesn't get to see.
-    </p>
+    <p>An attacker given a basis has a description of the entire lattice. The difficulty of finding a closest point in suitable high-dimensional instances is computational, not that the grid's geometry was withheld.</p>
 
     <div class="lab">
       <div class="lab-stage">
@@ -117,32 +112,17 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§2</span><h2>Rounding in the basis you're handed</h2></div>
-    <p>
-      The natural algorithm &#8212; <span class="term">Babai's rounding</span> &#8212;
-      rewrites the target in terms of the two basis vectors, then rounds each
-      coordinate to the nearest whole number. It's fast and exact when the
-      vectors are short and near-perpendicular. When they're long and skewed, the
-      rounding boxes are stretched slivers, and the nearest lattice coordinates
-      point at the wrong corner.
-    </p>
+    <p>This demo uses coordinate rounding: express the target in the supplied basis, then round each coefficient. It is exact for the orthogonal good basis shown here. A merely short or nearly perpendicular basis does not guarantee exact rounding for every target. Skewed bases can make this simple algorithm fail.</p>
     <div class="eq">t = a&#183;b&#8321; + b&#183;b&#8322; &nbsp;&#8594;&nbsp; round(a), round(b) &nbsp;&#8594;&nbsp; nearest corner?</div>
     <ul class="ladder">
-      <li><span class="rung">Good basis<span>the trapdoor</span></span><span class="gloss">Short, near-perpendicular vectors. Rounding lands on the true nearest corner every time.</span></li>
-      <li><span class="rung">Bad basis<span>what an attacker gets</span></span><span class="gloss">Long, skewed vectors for the same lattice. Rounding misfires on most targets &#8212; about four in five.</span></li>
+      <li><span class="rung">Good basis<span>the trapdoor</span></span><span class="gloss">Orthogonal vectors in this preset. Coordinate rounding gives a nearest lattice point.</span></li>
+      <li><span class="rung">Bad basis<span>what an attacker gets</span></span><span class="gloss">Long, skewed vectors for the same lattice. Rounding misfires on most targets &#8212; for many targets.</span></li>
     </ul>
   </section>
 
   <section class="exhibit">
-    <div class="step-head"><span class="step-num">§3</span><h2>Add noise, and you have Learning With Errors</h2></div>
-    <p>
-      Here is the geometric model behind noisy lattice encryption. Take a genuine lattice point, nudge
-      it by a small random <span class="term">error</span>, and publish the
-      result &#8212; that's a ciphertext. Decryption is a Closest Vector Problem: round
-      back to the nearest corner to recover the point. It works only while the
-      noise stays inside the cell around that corner. Push the
-      <b>noise</b> slider and watch even the good basis start to fail as the error
-      grows past what its cell can absorb.
-    </p>
+    <div class="step-head"><span class="step-num">§3</span><h2>A geometric model of noisy decoding</h2></div>
+    <p>This is a geometric decoding model: add a random displacement of the displayed magnitude to a lattice point, then try to recover that original point. Decoding succeeds when the perturbation stays in that point's nearest-neighbor cell. This is not itself the LWE sampling distribution or a deployed encryption scheme.</p>
 
     <div class="lab">
       <div class="lab-stage">
@@ -188,47 +168,19 @@
       with a noisy product of that matrix and a <em>short secret vector</em>:
     </p>
     <div class="eq">public: (A, t) &nbsp;where&nbsp; t = A&#183;s + e &nbsp;&#183;&nbsp; secret: the short vector s</div>
-    <p>
-      There is no secret good basis anywhere in that key.
-      <a href="learning-with-errors.html">§157</a> is that equation, live &#8212;
-      solve it with the noise off, then switch the noise on and watch the same
-      algebra collapse. Recovering <em>s</em>
-      from <em>(A, t)</em> is the <span class="term">Module-LWE</span> problem,
-      which lives in the <a href="polynomial-rings.html">polynomial ring</a>
-      next door. Decryption does not round with a private basis either &#8212; it
-      uses <em>s</em> to cancel the large shared term out of the ciphertext,
-      leaving the message plus a little noise, and then rounds that away.
-    </p>
+    <p>These keys contain short secret vectors, not a generic secret good basis. The public equations and their sampling rules lead to Module-LWE-related assumptions; ML-DSA also rounds the public product and uses additional assumptions. In ML-KEM's underlying encryption, the secret cancels a shared term before decoding. ML-DSA is a signature scheme and does not decrypt messages.</p>
     <div class="pull">
       The secret is a short <em>vector</em>, not a short <em>basis</em>. Same
       geometric family, different key structure.
     </div>
-    <p>
-      So why keep this exhibit? Because the geometry survives the change of key
-      format. LWE <em>is</em> a bounded-distance decoding problem: the ciphertext
-      is a point sitting near a lattice point, and everything you just watched
-      &#8212; why a noise budget exists, why exceeding it breaks decryption, why
-      a skewed view of a lattice is useless &#8212; is what the noise is
-      defending. The best known attacks on ML-KEM run lattice reduction and then
-      solve exactly this problem. The picture is right; only the key layout
-      differs.
-    </p>
+    <p>The connection is geometric intuition: lattice attacks can turn noisy equations into decoding or short-vector problems. Concrete attacks include primal, dual and hybrid approaches; it is inaccurate to say they all solve exactly this two-dimensional closest-point task. See the LWE exhibit for the public equations and message-cancellation model.</p>
   </section>
 
   <section class="exhibit">
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
       <h3>Why the owner can still get in</h3>
-      <p>
-        Where <a href="lattices-svp.html">the SVP exhibit</a> showed <em>why the
-        secret stays hidden</em>, this one shows <strong>why its holder can
-        still decrypt &#8212; and why the noise budget is the whole game.</strong>
-        Set the error too small and an attacker can decode the ciphertext
-        themselves; too large and the legitimate recipient rounds to the wrong
-        answer. Every lattice standard surveyed in
-        <a href="../modern.html">Modern Cryptography</a> is, in part, a careful
-        choice of that margin.
-      </p>
+      <p>This exhibit shows how decoding can recover a point from a bounded perturbation. Real encryption balances correctness and resistance to attacks using a complete parameter set. Signatures have different correctness conditions; a decryption noise budget is not a universal description of lattice cryptography.</p>
     </div>
     <p class="aside"><b>Three views of one problem.</b>
       <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> is the geometry — why the secret stays hidden.

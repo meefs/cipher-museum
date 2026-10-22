@@ -87,12 +87,12 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
-        <p>Purple replaced the older "Red" machine in 1939 for high-grade Japanese diplomatic traffic. Where Enigma used rotating wheels, the Japanese designers chose <strong>stepping switches</strong> — telephone-exchange relays that step to a new contact each cycle. Purple split each plaintext character into two streams: the six vowels (A, E, I, O, U, Y) went through one stepping-switch bank, and the twenty consonants went through three more. That asymmetric design was its defining feature and ultimately the structural seam that exposed it.</p>
+        <p>Purple replaced Red for important Japanese diplomatic traffic in 1939. It used telephone-type stepping switches rather than Enigma-style rotors. Its wiring separated six electrical paths from twenty others. With the external alphabet connections, these groups need not correspond to vowels and consonants; “sixes” and “twenties” are the more precise names.</p>
         <p>William Friedman recruited Frank Rowlett to lead the cryptanalytic attack. The team had no machine, no diagram, and no defector — only ciphertext. For 18 months they hunted patterns in stepping cycles. On the afternoon of September 20, 1940, junior cryptanalyst Genevieve Grotjan brought Rowlett a worksheet with a recurring alignment in the consonant alphabet. Within weeks, the SIS had constructed a working analog of Purple from inference alone.</p>
         <div class="callout callout-info">
           <span class="callout-icon">💡</span>
           <div class="callout-body">
-            <p><em>The MAGIC intercepts read Tokyo's instructions to its Washington embassy in the days before Pearl Harbor. The intelligence existed; the failure to act on it was bureaucratic, not cryptanalytic.</em></p>
+            <p>MAGIC revealed diplomatic instructions before Pearl Harbor, including the breakdown in negotiations. Those messages did not disclose the Pearl Harbor attack plan or its target. Reading diplomatic traffic was not the same as reading every Japanese operational order.</p>
           </div>
         </div>
       </div>
@@ -101,14 +101,14 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works (Simplified)</span></div>
       <div class="panel-body">
-        <p>The pedagogical demo on this page faithfully reproduces Purple's <strong>structural design</strong>, not its full electrical wiring. The interactive engine implements:</p>
+        <p>This pedagogical demo is a simplified split-alphabet stepping model, not a faithful reconstruction of Purple’s wiring, alphabet connections or switch movement. It implements:</p>
         <ol>
           <li>Split the input alphabet into a 6-letter vowel set and a 20-letter consonant set.</li>
           <li>Apply a stepping permutation to each set, advanced by an internal counter.</li>
           <li>Re-merge the encrypted vowels and consonants into the output stream in the original positions.</li>
           <li>Step the switch positions according to a daily key.</li>
         </ol>
-        <p>The actual 1940 machine used three stepping switches for the consonant bank wired in series, with carry-over advancement triggered by completed cycles — closer in spirit to a digital odometer than a rotor. The SIS analog used the same partition but standard rotary switches, since stepping relays were scarce in the US.</p>
+        <p>The historical machine used one switch for the sixes and three in series for the twenties. The latter had designated fast, medium and slow roles and an irregular stepping rule. This is not an ordinary odometer, and the widget’s simple counter does not reproduce it.</p>
       </div>
     </div>
 
@@ -128,7 +128,7 @@
         <div class="callout callout-warn">
           <span class="callout-icon">⚠️</span>
           <div class="callout-body">
-            <p><strong>Why it failed fundamentally:</strong> Treating vowels and consonants as separate sub-ciphers halved the effective keyspace and produced statistically distinguishable streams. Any modern design would feed the entire alphabet through a single, uniform permutation precisely to avoid this kind of structural seam.</p>
+            <p><strong>Structural lesson:</strong> The sixes/twenties separation gave analysts an important foothold. It does not follow that the effective keyspace was simply halved. Recovering Purple required a combination of traffic, repeated patterns, painstaking analysis and machine reconstruction.</p>
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@
         <div class="callout callout-info" style="margin-top:1rem;">
           <span class="callout-icon">🎓</span>
           <div class="callout-body">
-            <p>The principle Purple violated — uniform treatment of all input symbols — is enforced explicitly in modern designs like the AES S-box, which applies the same nonlinear transformation to every byte regardless of value or position.</p>
+            <p>Modern cipher security is assessed through the complete construction and its attack model. Merely applying one substitution to every input byte is insufficient: a fixed substitution still preserves frequency information.</p>
           </div>
         </div>
       </div>

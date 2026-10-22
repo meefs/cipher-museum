@@ -105,7 +105,7 @@
   </div>
   <h1 class="page-title">Bible Code — Equidistant Letter Sequences</h1>
   <p class="page-tagline">Not a cipher — a lesson in probability. The same method finds the same "prophecies" in Moby-Dick.</p>
-  <p class="exhibit-status-note">Debunked</p>
+  <p class="exhibit-status-note">Statistical claims challenged by controlled counterexamples and analysis of selection flexibility.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Claimed by</span><span class="fact-value">Witztum, Rips &amp; Rosenberg (1994); Michael Drosnin (1997)</span></div>
     <div class="fact"><span class="fact-label">Method</span><span class="fact-value">Equidistant Letter Sequences (ELS) in Hebrew Torah text</span></div>
@@ -119,7 +119,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Exhibit Exists</h2>
-      <p>The Bible Code is the museum's only exhibit on a claim that is <em>not</em> a real cipher. It is here because the tools used to "find" it are the same statistical tools used to <em>break</em> real ciphers — and misunderstanding those tools has caused enormous harm. The 1994 paper appeared in a peer-reviewed journal. Drosnin's 1997 bestseller sold millions of copies. The statistical error it embodies — confusing "pattern found" with "pattern is significant" — remains one of the most common mistakes in security and intelligence analysis today.</p>
+      <p>This exhibit concerns a disputed claim of hidden messages, not a demonstrated encryption system. It separates the 1994 statistical experiment on Genesis from later popular predictions, and uses ELS searches to explain why a pattern’s existence alone does not establish intent or statistical significance.</p>
     </div>
 
     <div class="panel">
@@ -135,33 +135,25 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How ELS Works</span></div>
       <div class="panel-body">
         <p>Take any text. Remove all spaces, punctuation, and numbers, keeping only letters. This gives you a letter string. Now pick a target word and a <strong>skip value</strong> <em>d</em>. Starting at position <em>p</em>, read every <em>d</em>-th letter: positions <em>p</em>, <em>p+d</em>, <em>p+2d</em>, and so on. If the result spells your target word, you have found an ELS at (start=<em>p</em>, skip=<em>d</em>).</p>
-        <pre>Example: text = THEQUICKBROWNFOX
-Word = "TOX", skip = 4
-Position 0 → T
-Position 4 → U  ✗  (not O)
+        <pre>Text = ABCDEFGHI, target = ADG
+Zero-based start 0, positive skip 3: positions 0, 3, 6.
 
-Word = "TRX", skip = 4
-Position 0 → T
-Position 4 → U  ✗
+For length N, target length m, and positive skips 1…D:
+valid start/skip pairs = Σ max(N − (m−1)d, 0).
 
-Try skip = 5:
-Position 0 → T
-Position 5 → I  ✗
+N = 100,000, m = 4, D = 1,000:
+98,498,500 valid pairs (not 100,000,000).
+Under independent uniformly distributed A–Z letters,
+expected hits = 98,498,500 / 26⁴ ≈ 215.54.</pre>
 
-Finding real words requires scanning ALL (start, skip) pairs.
-In a 100,000-letter corpus with skips up to 1,000, that is
-100,000 × 1,000 = 100,000,000 pairs per target word.
-Any 4-letter word with average letter frequencies is
-expected to appear hundreds to thousands of times.</pre>
-
-        <p style="margin-top:1rem;">The key statistical fact: for a 100,000-character text searched with skips up to 1,000, a 4-letter word like EDEN or FIRE has an <strong>expected hit count of several hundred to several thousand</strong> depending on its letter frequencies. Finding hundreds of hits is not evidence of hidden messages — it is arithmetic.</p>
+        <p style="margin-top:1rem;">The expectation above uses an <strong>independent uniform-letter model</strong>, not real prose. With independently sampled nonuniform letters, multiply the number of valid pairs by the product of the target letters’ probabilities. Overlapping searches need not be independent for this expectation, but a significance test needs an appropriate distribution and must account for other searched words and settings.</p>
       </div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">The Refutation — Run It Yourself</span></div>
       <div class="panel-body">
-        <p>The two boxes below search the same word in two texts of identical length: a passage of English prose and a randomly generated text with the same letter frequencies. <strong>The hit counts are statistically indistinguishable.</strong> Finding a word in a long text by ELS is not evidence of intent — it is the expected consequence of searching enough (start, skip) pairs.</p>
+        <p>The boxes compare a prose passage with a shuffled control containing the same letters. Their hit counts may differ. <strong>This comparison is an illustration, not a significance test or proof that the texts are statistically indistinguishable.</strong> A sound test needs a specified hypothesis, null model, search procedure, and accounting for all comparisons.</p>
 
         <div class="input-group" style="margin-top:1rem;">
           <label class="input-label" for="els-word">Search word (3–8 letters, A–Z)</label>
@@ -222,7 +214,7 @@ expected to appear hundreds to thousands of times.</pre>
         <div class="attack-panel" style="margin-top:1rem;">
           <div class="attack-name">The Multiplicity Problem (searching for significance)</div>
           <div class="attack-diff">Method: Combinatorial argument</div>
-          <p class="attack-desc">A 100,000-letter text, words of length 3–6, skips up to 1,000, forward and backward: the total search space exceeds 10<sup>9</sup> (start, skip, direction, word) combinations. If any combination counts as a "hit," and you search widely enough, hits are certain. The post-hoc selection of "remarkable" hits from a universe of a billion candidates is not statistical significance — it is the Texas Sharpshooter Fallacy at scale. Modern cryptanalysis requires pre-specifying the hypothesis before searching.</p>
+          <p class="attack-desc">Trying more names, spellings, skips, directions, and texts creates more opportunities for matches. Hits are not certain for every target, and no single search-space count applies without specifying those choices. Exploratory discoveries need independent confirmation or a statistical method that accounts for the selection process.</p>
         </div>
       </div>
     </div>
@@ -235,7 +227,7 @@ expected to appear hundreds to thousands of times.</pre>
           <tbody>
             <tr>
               <td>Searching billions of (start, skip) pairs post-hoc and reporting only the hits</td>
-              <td><strong>Statistical significance in security audits:</strong> running 1,000 statistical tests and reporting the 50 that pass at p&lt;0.05 produces 50 false positives by construction — the same error that plagued early side-channel research</td>
+              <td><strong>Statistical significance in security audits:</strong> under valid null hypotheses, 1,000 tests at a 0.05 threshold have an expected 50 false positives; the observed count need not be exactly 50</td>
             </tr>
             <tr>
               <td>Treating a pattern found in scripture as non-accidental without comparing to a random baseline</td>
@@ -243,7 +235,7 @@ expected to appear hundreds to thousands of times.</pre>
             </tr>
             <tr>
               <td>The "remarkable" result depended on a specific optimised dataset the authors had adjusted over years</td>
-              <td><strong>Chosen-input bias:</strong> constructing a test set to fit a desired result is the practitioner error behind broken PRNG certification tests — e.g. the Dual EC DRBG backdoor design</td>
+              <td><strong>Chosen-input bias:</strong> choosing a dataset after inspecting results can invalidate a test’s stated significance</td>
             </tr>
             <tr>
               <td>Short ciphertext + flexible parameters = near-certain matching</td>
@@ -251,7 +243,7 @@ expected to appear hundreds to thousands of times.</pre>
             </tr>
             <tr>
               <td>Peer review passed the original claim; independent replication killed it</td>
-              <td><strong>Security proofs require adversarial review:</strong> the NSA's BSAFE RNG and WEP both passed internal review; independent public cryptanalysis found flaws within months. The parallel refutation is why open cryptographic standards survive and secret ones fail</td>
+              <td><strong>Security proofs require adversarial review:</strong> a published claim still needs independent examination of its assumptions, evidence, and reproducibility; publication alone does not settle it</td>
             </tr>
           </tbody>
         </table>
@@ -261,7 +253,7 @@ expected to appear hundreds to thousands of times.</pre>
     <div class="callout callout-warn" style="margin-top:0;margin-bottom:0;">
       <span class="callout-icon">⚠</span>
       <div class="callout-body">
-        <p><strong>On the original 1994 paper.</strong> Witztum, Rips, and Rosenberg were not fraudsters — they were mathematicians who made a genuine statistical error of a kind that was not well-understood in 1994. The journal editors published the paper as a challenge to the community to find the flaw. The community found it. That process — publication, replication, refutation — is exactly how science and cryptanalysis are supposed to work. The exhibit is critical of the claim, not of the people who made it.</p>
+        <p><strong>On the original 1994 paper.</strong> The criticism concerns the experimental choices and the interpretation of the evidence. It does not establish the authors’ motives. Multiple-comparison problems were known before 1994; the important question is whether the reported procedure accounted adequately for its choices and search flexibility.</p>
       </div>
     </div>
 
@@ -301,10 +293,10 @@ expected to appear hundreds to thousands of times.</pre>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-chart"/></svg></span><span class="panel-title">The Numbers</span></div>
       <div class="panel-body">
-        <p style="font-size:.88rem;color:var(--tx2);line-height:1.8;">For a 78,000-letter Hebrew text (the Torah), searching words of length 5 at skips up to 1,000:</p>
+        <p style="font-size:.88rem;color:var(--tx2);line-height:1.8;">For an illustrative text of 78,000 letters, a five-letter target, and positive skips 1–1,000, there are 75,998,000 valid start/skip pairs. Compare two explicitly idealized alphabets:</p>
         <div class="els-stat-row">
           <div class="els-stat">
-            <span class="els-stat-val">~78M</span>
+            <span class="els-stat-val">75,998,000</span>
             <span class="els-stat-label">start × skip pairs searched</span>
           </div>
           <div class="els-stat">
@@ -314,15 +306,15 @@ expected to appear hundreds to thousands of times.</pre>
         </div>
         <div class="els-stat-row" style="margin-top:.5rem;">
           <div class="els-stat">
-            <span class="els-stat-val">~6.6</span>
-            <span class="els-stat-label">expected hits for any 5-letter uniform word</span>
+            <span class="els-stat-val">~6.40</span>
+            <span class="els-stat-label">expected hits: independent uniform A–Z model</span>
           </div>
           <div class="els-stat">
-            <span class="els-stat-val">~104</span>
-            <span class="els-stat-label">expected hits for a common 5-letter word (e.g. WATER)</span>
+            <span class="els-stat-val">~14.75</span>
+            <span class="els-stat-label">expected hits: independent uniform 22-letter model (N / 22⁵)</span>
           </div>
         </div>
-        <p style="font-size:.8rem;color:var(--tx3);margin-top:.75rem;">Before asking whether a hit is "significant," you must ask: how many hits were expected? In a 78M-pair search, finding 50 hits for a specific name is exactly what chance predicts.</p>
+        <p style="font-size:.8rem;color:var(--tx3);margin-top:.75rem;">These expectations are for artificial independent-letter models. Hebrew has 22 base letters, not 26; its real letter frequencies and textual structure are not uniform. A number of hits alone cannot establish significance, and a 78,000-letter example should not be mislabeled as the complete Torah.</p>
       </div>
     </div>
 

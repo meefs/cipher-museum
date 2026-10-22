@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aeneas Tacticus — Water-Clock Signal Code — The Cipher Museum</title>
-  <meta name="description" content="Aeneas Tacticus (~350 BCE) — the Greek general who wrote the world's earliest surviving manual on military communications, including the synchronized water-clock signaling code.">
+  <meta name="description" content="Aeneas’s water-clock signaling, preserved in Polybius: synchronized vessels selected preset military messages, not letters of an alphabet.">
   <meta property="og:title" content="Aeneas Tacticus — Water-Clock Signal Code — The Cipher Museum">
-  <meta property="og:description" content="Aeneas Tacticus (~350 BCE) — the Greek general who wrote the world's earliest surviving manual on military communications, including the synchronized water-clock signaling code.">
+  <meta property="og:description" content="Aeneas’s water-clock signaling, preserved in Polybius: synchronized vessels selected preset military messages, not letters of an alphabet.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/aeneas-tacticus.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Aeneas Tacticus — Water-Clock Signal Code — The Cipher Museum">
-  <meta name="twitter:description" content="Aeneas Tacticus (~350 BCE) — the Greek general who wrote the world's earliest surviving manual on military communications, including the synchronized water-clock signaling code.">
+  <meta name="twitter:description" content="Aeneas’s water-clock signaling, preserved in Polybius: synchronized vessels selected preset military messages, not letters of an alphabet.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/aeneas-tacticus.html">
@@ -64,9 +64,9 @@
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Author</span><span class="fact-value">Aeneas Tacticus (Aeneas the Tactician)</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~350 BCE</span></div>
-    <div class="fact"><span class="fact-label">Work</span><span class="fact-value"><em>Poliorketika</em> (How to Survive a Siege)</span></div>
-    <div class="fact"><span class="fact-label">Method</span><span class="fact-value">Synchronized water clocks signaling letter numbers</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Out-of-band synchronization is a real cryptographic primitive</span></div>
+    <div class="fact"><span class="fact-label">Work</span><span class="fact-value">Lost work quoted by Polybius, <em>Histories</em> 10.44</span></div>
+    <div class="fact"><span class="fact-label">Method</span><span class="fact-value">Synchronized water clocks selecting preset messages</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Synchronization enables signaling; it does not itself provide secrecy</span></div>
   </div>
 </div>
 
@@ -77,22 +77,22 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Aeneas Tacticus, writing in the 4th century BCE, produced the earliest surviving Greek military manual — and it includes a chapter devoted to <strong>covert and remote signaling</strong>. He describes torch codes, hidden messages inside hollowed dice, drilled letters in book bindings, and most famously the <strong>water-clock telegraph</strong>: two identical vessels at distant watchtowers, each marked with letters down a floating rod. A torch signal starts and stops the drain; whichever letter the rod reaches, that letter is sent. This is the first recorded engineered cipher system.</p>
+      <p>Aeneas wrote about military communication in the fourth century BCE. His water-clock scheme survives in <a href="https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/10*.html">Polybius, <em>Histories</em> 10.44–45</a>: matched vessels selected <strong>prearranged military messages</strong>. It was a signaling code, not an alphabetic encryption system.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Aeneas wrote a series of treatises on warfare; only <em>Poliorketika</em> ("How to Survive a Siege") survives. Greek city-states needed to coordinate over distance, often surrounded by enemies. Aeneas catalogues every signaling trick he knows — from concealed messages tied to arrows, to wax tablets scraped clean and re-engraved, to the synchronized water-clock telegraph. His manual treats secrecy and fast remote communication as a single problem.</p></div>
+      <div class="panel-body"><p>The surviving <em>Poliorketika</em> discusses concealed messages. The water-clock account comes from a different, lost work, quoted by Polybius. Keeping those sources distinct avoids attributing every later Greek signaling method to Aeneas.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How the Water Clock Worked</span></div>
-      <div class="panel-body"><p>Two senders prepare identical bronze vessels. A vertical rod floats inside, marked at intervals with messages a commander might need: "infantry approaching", "ships sighted", or — in the more flexible variant — letters of the alphabet. A torch is raised: both senders simultaneously open a drain plug. When the rod sinks to the desired marker, the sender raises a second torch. Both close the drain at once. Whatever marker is now level with the rim is the transmitted message.</p></div>
+      <div class="panel-body"><p>Sender and receiver prepared matching earthenware vessels with floating corks and marked rods. Torch signals coordinated the start and stop of draining. The rod level indicated a preset message. Polybius emphasized the limitation: an unexpected event could not be expressed unless it was already on the list.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">Security Properties</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Visibility, not secrecy</div><div class="attack-diff">Complexity: None</div><p class="attack-desc">The water-clock telegraph is a code, not a cipher — anyone with the same vessel could read it. Its value is <em>speed</em>: a 24-letter alphabet can be transmitted across kilometers in minutes, far faster than horse couriers, and over terrain that a runner could not cross. The system later evolved into Polybius's torch-grid signaling, which is structurally identical to the modern Polybius square.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Visibility, not secrecy</div><div class="attack-diff">Complexity: None</div><p class="attack-desc">An observer who knew the message list and timing could interpret the signals. Synchronization alone supplied no encryption. Polybius next describes a separate alphabetic torch system; that should not be merged into the water-clock mechanism.</p></div></div>
     </div>
 
   </div>
@@ -108,9 +108,9 @@
             <tr><td>Region</td><td>Classical Greece</td></tr>
             <tr><td>Era</td><td>~350 BCE</td></tr>
             <tr><td>Author</td><td>Aeneas Tacticus</td></tr>
-            <tr><td>Work</td><td><em>Poliorketika</em></td></tr>
-            <tr><td>Method</td><td>Number → letter encoding</td></tr>
-            <tr><td>Successor</td><td>Polybius square</td></tr>
+            <tr><td>Work</td><td>Polybius, <em>Histories</em> 10.44</td></tr>
+            <tr><td>Method</td><td>Preset-message signaling</td></tr>
+            <tr><td>Related system</td><td>Polybius square</td></tr>
 
           </tbody>
         </table>
@@ -130,12 +130,12 @@
     <a href="../ciphers/polybius.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Polybius Square</span>
-      <span class="related-card__tag">Direct successor of Aeneas's torch signaling</span>
+      <span class="related-card__tag">A separate alphabetic torch system</span>
     </a>
     <a href="../ciphers/histiaeus-tattoo.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Histiaeus's Tattoo</span>
-      <span class="related-card__tag">Greek covert messaging, same century</span>
+      <span class="related-card__tag">Earlier Greek covert messaging</span>
     </a>
   </div>
 </section>

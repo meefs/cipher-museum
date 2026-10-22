@@ -89,7 +89,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Count Josef von Gronsfeld modified the Vigenère cipher to use numeric keys instead of letter keys. A soldier could memorize '31415' far more easily than 'LEMON'. The tradeoff: digits only give 10 possible shift values (0-9) instead of 26, dramatically weakening the cipher.</p><p style="margin-top:1rem;">The Gronsfeld cipher illustrates a persistent tension in cryptography: usability versus security. A cipher that field operators can't remember correctly is useless — but a cipher that trades security for memorability may be worse than none.</p></div>
+      <div class="panel-body"><p>The cipher traditionally attributed to Count Gronsfeld adapts the Vigenère cipher to use numeric keys instead of letter keys. A soldier could memorize '31415' far more easily than 'LEMON'. The tradeoff: digits only give 10 possible shift values (0-9) instead of 26, dramatically weakening the cipher.</p><p style="margin-top:1rem;">The Gronsfeld cipher illustrates a persistent tension in cryptography: usability versus security. A cipher that field operators can't remember correctly is useless — but a cipher that trades security for memorability may be worse than none.</p></div>
     </div>
 
     <div class="panel">
@@ -139,8 +139,8 @@ Only 10 possible shifts per position (0-9)</pre>
         <table class="cipher-table">
           <thead><tr><th>Concept from Gronsfeld Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Digit keys (0-9)</td><td>Key entropy matters: AES-256 uses 256-bit keys for 2²⁵⁶ possible values</td></tr>
-<tr><td>Usability-security tradeoff</td><td>Modern KDFs (PBKDF2, Argon2) derive strong keys from memorable passwords</td></tr>
-<tr><td>Small effective alphabet</td><td>Full 256-byte S-box in AES uses all possible values uniformly</td></tr></tbody>
+<tr><td>Usability-security tradeoff</td><td>Password KDFs raise guessing cost; they do not create entropy absent from the password</td></tr>
+<tr><td>Small effective alphabet</td><td>AES’s bijective 8-bit S-box maps 256 values; output frequencies still depend on its inputs</td></tr></tbody>
         </table>
       </div>
     </div>

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  * generate-benchmark-report.js
- * Generates per-cipher accuracy baseline reports from the Cipher Corpus.
- * Reports corpus statistics, difficulty distributions, and expected solver baselines.
+ * Generates descriptive statistics from the Cipher Corpus.
+ * This is a dataset inventory, not a measurement of solver accuracy.
  *
  * Usage: node scripts/generate-benchmark-report.js
  * Output: public/reports/benchmark-baselines.json, public/reports/benchmark-baselines.html
@@ -15,7 +15,7 @@ const CORPUS_DIR = path.join(__dirname, '../public/corpus');
 const REPORTS_DIR = path.join(__dirname, '../public/reports');
 if (!fs.existsSync(REPORTS_DIR)) fs.mkdirSync(REPORTS_DIR, { recursive: true });
 
-const TODAY = '2026-10-11';
+const TODAY = '2026-10-22';
 
 // Load corpus
 const lines = fs.readFileSync(path.join(CORPUS_DIR, 'all.jsonl'), 'utf8').split('\n').filter(Boolean);
@@ -26,13 +26,8 @@ function groupBy(arr, key) {
   return arr.reduce((acc, r) => { (acc[r[key]] = acc[r[key]] || []).push(r); return acc; }, {});
 }
 
-// Expected solver accuracy baselines from difficulty-calibration.json
-const SOLVER_BASELINES = {
-  beginner: { human: '95-100%', automated: '95-100%', llm_3shot: '80-95%', llm_0shot: '60-80%' },
-  intermediate: { human: '60-90%', automated: '60-90%', llm_3shot: '40-70%', llm_0shot: '20-50%' },
-  advanced: { human: '20-60%', automated: '20-60%', llm_3shot: '10-40%', llm_0shot: '5-20%' },
-  expert: { human: '5-30%', automated: '5-30%', llm_3shot: '2-15%', llm_0shot: '1-5%' },
-};
+// No solver run is supplied to this generator. Do not invent accuracy ranges.
+const SOLVER_BASELINES = {};
 
 const byDifficulty = groupBy(records, 'difficulty');
 const byCipherType = groupBy(records, 'cipher_type');
@@ -82,7 +77,7 @@ const familyStats = Object.entries(byFamily).map(([family, recs]) => ({
 const report = {
   generated: TODAY,
   version: '0.6',
-  description: 'Cipher Corpus benchmark baseline statistics for solver evaluation',
+  description: 'Cipher Corpus descriptive statistics; solver accuracy is not measured here',
   corpus_url: 'https://ciphermuseum.com/cipher-corpus.html',
   citation: {
     cipher_corpus: {
@@ -124,8 +119,9 @@ const report = {
     ),
   },
   solver_baselines: {
-    description: 'Expected accuracy ranges for different solver types by difficulty tier',
-    methodology: 'Estimated from cryptanalytic complexity, key space size, historical time-to-break, and LLM evaluation data',
+    status: 'not_measured',
+    description: 'No measured solver accuracy is supplied by this report',
+    methodology: 'Record counts and text lengths are computed from the corpus. Previously displayed numerical accuracy ranges were unsupported estimates and have been removed. Use a documented solver run and reproducibility receipt for performance claims.',
     baselines: SOLVER_BASELINES,
   },
   per_cipher_stats: cipherStats,
@@ -169,8 +165,6 @@ const htmlRows = cipherStats.slice(0, 50).map(s =>
     <td class="diff-${s.difficulty}">${s.difficulty}</td>
     <td>${s.record_count}</td>
     <td>${s.avg_plaintext_symbols}</td>
-    <td>${s.solver_baselines.llm_3shot || '—'}</td>
-    <td>${s.solver_baselines.llm_0shot || '—'}</td>
   </tr>`
 ).join('\n');
 
@@ -179,7 +173,7 @@ const html = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cipher Corpus Benchmark Baselines</title>
+  <title>Cipher Corpus Statistics and Evaluation Status</title>
   <link rel="stylesheet" href="/css/museum.css">
   <style>
     table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.95em; }
@@ -196,7 +190,7 @@ const html = `<!DOCTYPE html>
   </style>
 </head>
 <body>
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;background:#ffd700;color:#000;padding:0.5em 1em;z-index:9999">Skip to main content</a>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <header>
   <nav>
     <a href="../../index.html">🏛️ Cipher Museum</a>
@@ -204,31 +198,30 @@ const html = `<!DOCTYPE html>
     <a href="benchmark-baselines.html" aria-current="page">Benchmark Report</a>
   </nav>
 </header>
-<main>
-  <h1>Cipher Corpus Benchmark Baselines</h1>
+<main id="main-content" tabindex="-1">
+  <h1>Cipher Corpus Statistics and Evaluation Status</h1>
   <p style="color:var(--fg-muted,#bfa76a)">Generated ${TODAY} · v0.6 · <a href="/public/reports/benchmark-baselines.json">Download JSON</a></p>
 
   <div>
     <div class="stat-box"><div class="stat-num">${report.summary.total_records.toLocaleString()}</div><div class="stat-label">Total Records</div></div>
     <div class="stat-box"><div class="stat-num">${report.summary.cipher_types}</div><div class="stat-label">Cipher Types</div></div>
     <div class="stat-box"><div class="stat-num">${report.summary.languages.length}</div><div class="stat-label">Languages</div></div>
-    <div class="stat-box"><div class="stat-num">${report.summary.blind_split}</div><div class="stat-label">Blind Split Records</div></div>
-    <div class="stat-box"><div class="stat-num">${report.summary.historical_records}</div><div class="stat-label">Historical Records</div></div>
+    <div class="stat-box"><div class="stat-num">${report.summary.blind_split}</div><div class="stat-label">Publicly Available Evaluation Records</div></div>
+    <div class="stat-box"><div class="stat-num">${report.summary.historical_records}</div><div class="stat-label">Records Labeled Historical</div></div>
   </div>
 
-  <h2>Expected Solver Accuracy by Difficulty</h2>
+  <h2>Evaluation Status</h2>
+  <p><strong>No solver accuracy has been measured for this report.</strong> Earlier human, automated-solver and LLM percentages were unsupported estimates, not benchmark results, and have been removed. Difficulty labels are curriculum metadata, not calibrated success probabilities.</p>
+  <p>The downloadable “blind” split is public and includes answers. It is not confidential held-out data. Records labeled historical include teaching adaptations; the legacy verified flag does not establish source authenticity. See <a href="../corpus/README.md">dataset scope and errata</a>.</p>
+  <h2>Record Counts by Difficulty</h2>
   <table>
-    <thead><tr><th>Difficulty</th><th>Records</th><th>Human Expert</th><th>Automated Solver</th><th>LLM 3-Shot</th><th>LLM 0-Shot Challenge</th></tr></thead>
-    <tbody>
-      ${Object.entries(SOLVER_BASELINES).map(([diff, b]) =>
-        `<tr><td class="diff-${diff}">${diff}</td><td>${(byDifficulty[diff]||[]).length}</td><td>${b.human}</td><td>${b.automated}</td><td>${b.llm_3shot}</td><td>${b.llm_0shot}</td></tr>`
-      ).join('\n')}
-    </tbody>
+    <thead><tr><th>Difficulty</th><th>Records</th></tr></thead>
+    <tbody>${Object.entries(byDifficulty).map(([diff, recs]) => `<tr><td class="diff-${diff}">${diff}</td><td>${recs.length}</td></tr>`).join('')}</tbody>
   </table>
 
   <h2>Per-Cipher Statistics (Top 50 by Record Count)</h2>
   <table>
-    <thead><tr><th>Cipher Type</th><th>Family</th><th>Difficulty</th><th>Records</th><th>Avg plaintext symbols</th><th>LLM 3-Shot</th><th>LLM 0-Shot</th></tr></thead>
+    <thead><tr><th>Cipher Type</th><th>Family</th><th>Difficulty</th><th>Records</th><th>Avg plaintext symbols</th></tr></thead>
     <tbody>${htmlRows}</tbody>
   </table>
 

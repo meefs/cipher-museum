@@ -56,27 +56,17 @@
   <div class="hero">
     <div class="kicker">The Math Behind Splitting a Secret</div>
     <h1>Points that<br><em>lock</em> a curve</h1>
-    <p class="standfirst">
-      Two points determine a line. Three determine a parabola. In general, k
-      points pin down exactly one polynomial of degree k&#8722;1 &#8212; and any fewer
-      leave it free to be anything. That rigidity is the whole trick behind
-      sharing a secret among many people so that only a quorum can recover it.
-    </p>
+    <p class="standfirst">At <em>k distinct x-coordinates</em>, the point values determine one polynomial of degree <em>at most k</em>&minus;1. Fewer nonzero-coordinate points leave its intercept undetermined. That algebra supplies the reconstruction step in Shamir secret sharing.</p>
   </div>
 
-  <div class="honesty">
-    <strong>Secrecy from geometry.</strong> Hide a secret as a curve's height at
-    x = 0. Hand out points on the curve as "shares." Below the threshold, the
-    curve &#8212; and the secret &#8212; could be anything. At the threshold, it snaps
-    into place.
-  </div>
+  <div class="honesty"><strong>Interpolation geometry.</strong> Nonzero, distinct share coordinates let you reconstruct the intercept once enough points are present. Perfect secrecy additionally needs the finite-field randomness assumptions described below.</div>
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">&#167;1</span><h2>Drop points, watch the curve commit</h2></div>
     <p>
       The secret is the <span style="color:var(--vermilion)">height where the
       curve crosses x = 0</span>. Add points one at a time. With too few, infinitely
-      many curves fit &#8212; the secret is unknowable. The moment you place the k-th
+      many curves fit &#8212; the intercept is not uniquely determined. The moment you place the k-th
       point, a single polynomial locks in and the intercept is revealed.
     </p>
 
@@ -117,13 +107,7 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">&#167;2</span><h2>Recovering the secret with Lagrange</h2></div>
-    <p>
-      Given k shares, <span class="term">Lagrange interpolation</span> reconstructs
-      the polynomial and evaluates it at x = 0 in one formula &#8212; no guessing. In
-      real <span class="term">Shamir's Secret Sharing</span> this all happens over
-      a finite field, so the shares leak nothing about the secret's size, but the
-      geometry is identical to what you see here.
-    </p>
+    <p>Lagrange interpolation reconstructs a polynomial from distinct-coordinate values. Real Shamir secret sharing uses a finite field, distinct nonzero coordinates, and independently uniform random coefficients. The real-number curves here illustrate interpolation only; they are not an information-theoretically secure sharing scheme.</p>
     <div class="eq">secret = f(0) = &#931; y&#7522; &#183; &#8719;&#11388;&#8800;&#7522; (&#8722;x&#11388;) / (x&#7522; &#8722; x&#11388;) &nbsp;(mod p)</div>
   </section>
 
@@ -131,21 +115,16 @@
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
       <h3>The threshold behind shared keys</h3>
-      <p>
-        This is the exact mechanism of <strong>Shamir&#8217;s Secret Sharing</strong>,
-        and the threshold logic under modern threshold-signature schemes such
-        as FROST. A key is split so that <strong>any k of n</strong> parties can act
-        together but no k&#8722;1 can &#8212; guaranteed not by policy but by the
-        impossibility of pinning down a degree-(k&#8722;1) curve from too few points.
-      </p>
+      <p>Shamir's scheme uses this interpolation identity over a finite field. With proper randomness, any <em>k</em> of <em>n</em> shares recover the secret and fewer than <em>k</em> leave its prior distribution unchanged. Threshold signatures such as FROST add further protocol steps and security requirements.</p>
     </div>
-    <p class="aside">Applied in: <a href="../ciphers/shamir-secret-sharing.html" style="color:var(--vermilion)">Shamir's Secret Sharing</a> — this exact mechanism, at working size, guarding DNSSEC root keys.<br>Related foundations:
+    <p class="aside">Applied in: <a href="../ciphers/shamir-secret-sharing.html" style="color:var(--vermilion)">Shamir's Secret Sharing</a> — a small finite-field demonstration of reconstruction and its limits.<br>Related foundations:
       <a href="finite-fields.html" style="color:var(--vermilion)">Finite Fields</a> — the arithmetic the shares actually live in, without which the "curve" leaks information;
       <a href="entropy.html" style="color:var(--vermilion)">Information &amp; Entropy</a> — why <em>k</em>&#8722;1 shares reveal nothing at all, which is an information-theoretic claim rather than a computational one;
       <a href="polynomial-rings.html" style="color:var(--vermilion)">Polynomial Rings</a> — the same objects put to a very different use.
       Tested logic (Lagrange interpolation over a field) in <code>crypto-algebra.js</code>.</p>
   </section>
 
+  <p class="aside"><strong>Sources and scope:</strong> <a href="https://doi.org/10.1145/359168.359176">Shamir, How to Share a Secret (1979)</a>; <a href="https://www.rfc-editor.org/rfc/rfc9591.html">RFC 9591 (FROST, 2024)</a>.</p>
   </main>
 
 
@@ -199,7 +178,9 @@
     if(!enough && pts.length>=1){
       // draw several ghost curves that all pass through current points but differ
       for(let g=0;g<4;g++){
-        const extra=[...pts,[6-g*0.7, 1+g*2.3]]; // add a varying phantom point
+        let ghostX=6-g*0.7;
+        while(pts.some(p=>Math.abs(p[0]-ghostX)<1e-8)) ghostX+=0.1;
+        const extra=[...pts,[ghostX, 1+g*2.3]]; // keep all abscissas distinct
         if(extra.length>=2){
           const f=lagrangePoly(extra.slice(0,Math.max(pts.length+1,2)));
           let d="";
@@ -260,7 +241,8 @@
     let nx=xmin+(mx-pad)/(W-2*pad)*(xmax-xmin);
     let ny=ymin+(H-pad-my)/(H-2*pad)*(ymax-ymin);
     nx=Math.max(0.5,Math.min(xmax,nx)); ny=Math.max(ymin,Math.min(ymax,ny));
-    // keep x distinct so interpolation stays defined
+    // Keep x distinct so interpolation stays defined.
+    if(pts.some((p,i)=>i!==dragging&&Math.abs(p[0]-nx)<1e-8)) return;
     pts[dragging]=[nx,ny]; draw();
   }
   svg.addEventListener("mousedown",e=>{ dragging=nearestPt(e); });
@@ -271,14 +253,22 @@
   window.addEventListener("touchend",()=>{dragging=-1;});
 
   function addShare(atX){
+    if(pts.length>=k){
+      iread.textContent="The curve is already fixed by "+k+" shares. Clear it or raise the threshold to add another.";
+      return;
+    }
     // pick an x not already used
     let x=atX;
+    if(x!=null&&(!Number.isFinite(x)||x<0.5||x>xmax)){
+      iread.textContent="Choose a share coordinate between 0.5 and "+xmax+"; x=0 is the secret itself.";
+      return;
+    }
     if(x==null){ x=1; while(pts.some(p=>Math.abs(p[0]-x)<0.4)&&x<xmax) x++; }
     if(pts.some(p=>Math.abs(p[0]-x)<0.4)) return;
     pts.push([x, 2+Math.random()*6]);
     draw();
   }
-  document.getElementById("ksel").addEventListener("change",e=>{ k=+e.target.value; draw(); });
+  document.getElementById("ksel").addEventListener("change",e=>{ k=+e.target.value; pts=pts.slice(0,k); draw(); });
   document.getElementById("addPt").addEventListener("click",()=>addShare(null));
   document.getElementById("clr").addEventListener("click",()=>{ pts=[]; draw(); });
   document.getElementById("addAt").addEventListener("click",()=>{
@@ -300,6 +290,10 @@
     else return;
     e.preventDefault();
     nx=Math.max(0.5,Math.min(xmax,nx)); ny=Math.max(ymin,Math.min(ymax,ny));
+    if(pts.some((p,j)=>j!==i&&Math.abs(p[0]-nx)<1e-8)){
+      iread.textContent="Shares need distinct x coordinates; that position is already occupied.";
+      return;
+    }
     pts[i]=[nx,ny]; draw();
     iread.innerHTML+=" · share "+(i+1)+" moved to ( <b>"+nx.toFixed(2)+"</b>, <b>"+ny.toFixed(2)+"</b> ), step "+KB_STEP;
   });

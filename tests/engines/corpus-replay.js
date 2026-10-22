@@ -157,6 +157,9 @@ function engineNameFor(cipherType) {
 }
 
 function extractKey(record) {
+  // Published two_square records used the pre-audit nonstandard transformation.
+  // Replay it explicitly; do not rewrite immutable dataset bytes or claim ACA provenance.
+  if (record.cipher_type === 'two_square') return 'legacy:' + extractKey({...record, cipher_type: 'two_square_legacy_key'});
   const key = record.key;
   // These historical records carry settings outside the intentionally narrow
   // teaching APIs. Feed a valid neutral setting so replay records the expected

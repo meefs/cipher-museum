@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Copiale Cipher — The Cipher Museum</title>
-  <meta name="description" content="Copiale Cipher — the 105-page 18th-century Oculist Order manuscript with homophonic substitution. Broken in 2011 by Knight, Megyesi, and Schaefer using HMM.">
+  <meta name="description" content="Knight, Megyesi and Schaefer deciphered the Copiale manuscript in 2011 using transcription, statistics and manual analysis. The exhibit separates that result from its invented demonstration alphabet.">
   <meta property="og:title" content="Copiale Cipher — The Cipher Museum">
-  <meta property="og:description" content="Copiale Cipher — the 105-page 18th-century Oculist Order manuscript with homophonic substitution. Broken in 2011 by Knight, Megyesi, and Schaefer using HMM.">
+  <meta property="og:description" content="Knight, Megyesi and Schaefer deciphered the Copiale manuscript in 2011 using transcription, statistics and manual analysis. The exhibit separates that result from its invented demonstration alphabet.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/copiale.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Copiale Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Copiale Cipher — the 105-page 18th-century Oculist Order manuscript with homophonic substitution. Broken in 2011 by Knight, Megyesi, and Schaefer using HMM.">
+  <meta name="twitter:description" content="Knight, Megyesi and Schaefer deciphered the Copiale manuscript in 2011 using transcription, statistics and manual analysis. The exhibit separates that result from its invented demonstration alphabet.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/copiale.html">
@@ -81,22 +81,22 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The Copiale Cipher is a beautiful handwritten manuscript using ~90 symbols — a mix of Latin letters, Greek letters, and invented glyphs. It surfaced in the East Berlin academy archives after the fall of the Wall and resisted analysis for two decades. In 2011 a team led by Kevin Knight at USC used statistical machine-translation software (originally built for translating between languages) to crack it: a homophonic substitution cipher in German, describing the initiation rituals of an 18th-century secret society called the Oculist Order ("eye-doctors"), apparently obsessed with vision and ophthalmology.</p>
+      <p>The Copiale manuscript contains about 75,000 handwritten characters across 105 pages. In 2011 Kevin Knight, Beáta Megyesi, and Christiane Schaefer reported its decipherment using computational analysis and human linguistic reasoning. It contains German text about a secret society’s rituals. Their <a href="https://aclanthology.org/W11-1202/">original paper</a> documents the sequence of hypotheses, including unsuccessful ones.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Knight's team treated the unknown symbols as an unknown language and ran an expectation-maximization (EM) algorithm to find the most likely letter mappings, scoring hypotheses against German n-gram statistics. The breakthrough was recognizing that some symbols were nulls (decoys), some were homophones (multiple symbols → one letter), and that the language was German rather than Latin. The decoded text turned out to be a manual of initiation: candidates for membership had a single hair plucked from their eyebrow; new members took an oath in a darkened chamber; the ritual involved an "eye operation" symbolizing the gain of secret sight. The order has no documented connection to the Bavarian Illuminati but may have been a related fraternal experiment.</p></div>
+      <div class="panel-body"><p>A crucial discovery was that unaccented Roman letters represented <strong>word spaces</strong>, while other signs encoded the text. They were not arbitrary meaningless filler. Grouping symbols by their contexts, testing likely words, and examining German spelling helped the researchers work out the system.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>Each plaintext letter is enciphered as one of multiple symbols (a homophonic substitution). Common letters (E, N, R, S in German) get more symbols; rare letters get fewer. Some symbols stand for nothing — they are pure decoys inserted to flatten frequencies. A small set of symbols stands for whole words or syllables.<br><br>The Copiale uses ~90 symbols to encode a 26-letter alphabet, giving about 3–4 symbols per letter on average for the most common ones.</p></div>
+      <div class="panel-body"><p>The manuscript uses homophones, word separators, and signs for some letter groups and concepts. Its roughly 90 cipher signs do not divide uniformly among 26 letters. The common letter E has several representations; unaccented Roman letters mark spaces. The model should not equate every extra symbol with a random null.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Statistical Machine Translation (2011)</div><div class="attack-diff">Complexity: Computational</div><p class="attack-desc">Kevin Knight, Beáta Megyesi, and Christiane Schaefer treated the cipher as an unknown language. Their EM algorithm iteratively refined a probability distribution over symbol-to-letter mappings, scoring against German letter and bigram frequencies. Wrong guesses about the language (Latin, English) produced gibberish; switching to German immediately produced fluent text.</p></div><div class="attack-panel"><div class="attack-name">Hypothesis-Driven Symbol Classification</div><div class="attack-diff">Complexity: Insight</div><p class="attack-desc">The team discovered that certain frequent-but-strange symbols had to be nulls (decoys), and that letter pairs like CH and SCH had dedicated symbols — exactly the German bigrams that needed compression. Recognizing the structural patterns of German shrank the search space dramatically.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Statistical Machine Translation (2011)</div><div class="attack-diff">Complexity: Computational</div><p class="attack-desc">The initial automated attack on the wrong subset of symbols failed. The published solution combined statistical tools with changes of hypothesis and linguistic interpretation; switching a language setting did not instantly produce the full plaintext.</p></div><div class="attack-panel"><div class="attack-name">Hypothesis-Driven Symbol Classification</div><div class="attack-diff">Complexity: Insight</div><p class="attack-desc">Recognizing the space symbols and language-dependent groups was essential. A good statistical tool cannot compensate for an incorrect assumption about which symbols carry letters, separators, or other information.</p></div></div>
     </div>
 
     <div class="panel">

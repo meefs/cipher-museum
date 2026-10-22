@@ -106,7 +106,7 @@ const KATS = {
   // With natural squares, AA occupies matching (0,0) cells and remains AA.
   foursquare: kat('AA', engine => engine.encode('AA', 'A,A'), 'Four-Square cell derivation'),
   // With natural squares, AB shares a row and the no-flip variant leaves it AB.
-  twosquare: kat('AB', engine => engine.encode('AB', 'A,A'), 'Two-Square row derivation'),
+  twosquare: kat('BA', engine => engine.encode('AB', 'A,A'), 'ACA Two-Square same-row reversal'),
   // ATONESIRE occupies top-row slots 0,1,3,4,5,6,8,9; therefore A=0.
   straddlingCheckerboard: kat('0', engine => engine.encode('A', 'ATONESIRE'), 'checkerboard derivation'),
   // Key A yields natural left alphabet and right rotated by 13; right-A index 13 -> left-N.

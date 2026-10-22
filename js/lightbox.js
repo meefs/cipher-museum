@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var overlay = document.createElement('div');
   overlay.className = 'lightbox-overlay';
   overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
   overlay.setAttribute('aria-label', 'Enlarged image');
 
   var closeBtn = document.createElement('button');
@@ -28,14 +29,19 @@ document.addEventListener('DOMContentLoaded', function () {
   document.body.appendChild(overlay);
 
   var lastTrigger = null; // focus returns here on close
+  var previousOverflow = '';
+  function lockScroll(){
+    if(!overlay.classList.contains('active')) previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+  }
 
   function openLightbox(src, alt, cap) {
     lbImg.src = src;
     lbImg.alt = alt || '';
     lbImg.style.display = '';
     caption.textContent = cap || '';
+    lockScroll();
     overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
     closeBtn.focus();
   }
 
@@ -52,14 +58,14 @@ document.addEventListener('DOMContentLoaded', function () {
     svgHolder.appendChild(clone);
     lbImg.style.display = 'none';
     caption.textContent = cap || '';
+    lockScroll();
     overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
     closeBtn.focus();
   }
 
   function closeLightbox() {
     overlay.classList.remove('active');
-    document.body.style.overflow = '';
+    document.body.style.overflow = previousOverflow;
     lbImg.src = '';
     svgHolder.innerHTML = '';
     if (lastTrigger) { lastTrigger.focus(); lastTrigger = null; }
@@ -78,8 +84,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && overlay.classList.contains('active')) {
-      closeLightbox();
+    if (!overlay.classList.contains('active')) return;
+    if (e.key === 'Escape') {
+      e.preventDefault(); closeLightbox();
+    } else if (e.key === 'Tab') {
+      // Images/diagrams are display content; Close is the sole dialog control.
+      e.preventDefault(); closeBtn.focus();
     }
   });
 

@@ -55,6 +55,10 @@
   // The group law drawn by hand: line through P and Q, third intersection,
   // reflect across the x-axis. Returns { third, sum, slope }.
   function ecAddReal(P, Q, a) {
+    // A vertical chord (including a vertical tangent at y=0) reaches O.
+    if (Math.abs(P[0] - Q[0]) < 1e-9 && Math.abs(P[1] + Q[1]) < 1e-9) {
+      return { third: null, sum: null, slope: null };
+    }
     let m;
     if (Math.abs(P[0] - Q[0]) < 1e-9 && Math.abs(P[1] - Q[1]) < 1e-9) {
       m = (3 * P[0] * P[0] + a) / (2 * P[1]);

@@ -366,5 +366,51 @@ console.log("  checking announced results against independent truth...");
     "this file lists no pages that no longer exist (stale: " + stale.join(", ") + ")");
 })();
 
+// Regressions found by the full museum audit: selectable inverse points,
+// duplicate interpolation abscissas and out-of-domain lattice components.
+["elliptic-curves-real.html", "modularity-exhibit.html"].forEach(function (file) {
+  var p=load(file); p.set("selP",0); p.set("selQ",1); p.click("addKb");
+  assert(/point at infinity|∞/.test(p.$("readout").textContent), file+" shows P+(-P)=identity");
+  assert(!/NaN|Infinity/.test(p.$("stage").outerHTML), file+" draws no non-finite SVG attributes");
+  p.close();
+});
+{
+  var p=load("interpolation.html"); p.set("ksel",2); p.$("shareSel").selectedIndex=0;
+  for(var move=0;move<8;move++) p.$("movePad").dispatchEvent(new p.win.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
+  assert(!/NaN|Infinity/.test(p.doc.querySelector("main svg").outerHTML),
+    "interpolation prevents equal x coordinates through keyboard movement");
+  assert(!/share 1 \( 3.00,/.test(p.$("shareSel").options[0].textContent),
+    "interpolation does not move a share onto another share's x coordinate");
+  p.click("clr"); p.set("xIn",0); p.click("addAt");
+  assert(p.$("shareSel").options.length===0, "interpolation rejects a share at the secret coordinate x=0");
+  p.close();
+}
+{
+  var p=load("lattices-svp.html");
+  p.set("b1x",100); p.set("b1y",99); p.set("b2x",99); p.set("b2y",98); p.click("applyBasis");
+  assert(/range|between|−6|6/.test(p.$("lread").textContent) && !/shortest =/.test(p.$("lread").textContent),
+    "SVP rejects keyboard inputs outside the bounded exact-search demonstration");
+  p.close();
+}
+
+// New audit regression: don't silently ignore an extra inconsistent share.
+{
+  var p = load("interpolation.html");
+  p.click("clr"); p.set("ksel",2); p.click("addPt"); p.click("addPt");
+  p.click("addPt");
+  assert(p.$("shareSel").options.length === 2,
+    "interpolation caps the active construction at its threshold instead of ignoring extra shares");
+  p.close();
+}
+// q=97 has an asymmetric rounding boundary: residual 24 can still decode.
+{
+  var p = load("learning-with-errors.html");
+  p.win.LWEMath.encryptBit = function(){ return {u:[0,0,0,0],v:72}; };
+  p.set("bit",1); p.click("send");
+  assert(!/inside the budget/.test(p.$("dec").textContent),
+    "successful LWE boundary case is not called strictly inside its guaranteed margin");
+  p.close();
+}
+
 console.log("\nexhibit-interaction: " + passed + " passed, " + failed + " failed");
 process.exit(failed ? 1 : 0);

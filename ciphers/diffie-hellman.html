@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diffie-Hellman Key Exchange &mdash; The Cipher Museum</title>
-  <meta name="description" content="Diffie-Hellman (1976) — two strangers create a shared secret over an open wire, ending three thousand years of must-meet-first cryptography.">
+  <meta name="description" content="Diffie–Hellman derives a shared group element over a public channel. Authentication, appropriate groups and key derivation are needed for secure protocol use.">
   <meta property="og:title" content="Diffie-Hellman Key Exchange &mdash; The Cipher Museum">
-  <meta property="og:description" content="Diffie-Hellman (1976) — two strangers create a shared secret over an open wire, ending three thousand years of must-meet-first cryptography.">
+  <meta property="og:description" content="Diffie–Hellman derives a shared group element over a public channel. Authentication, appropriate groups and key derivation are needed for secure protocol use.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/diffie-hellman.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Diffie-Hellman Key Exchange &mdash; The Cipher Museum">
-  <meta name="twitter:description" content="Diffie-Hellman (1976) — two strangers create a shared secret over an open wire, ending three thousand years of must-meet-first cryptography.">
+  <meta name="twitter:description" content="Diffie–Hellman derives a shared group element over a public channel. Authentication, appropriate groups and key derivation are needed for secure protocol use.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/diffie-hellman.html">
@@ -65,8 +65,8 @@
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Whitfield Diffie &amp; Martin Hellman, &lsquo;New Directions in Cryptography' (1976); Ralph Merkle independently</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1976</span></div>
     <div class="fact"><span class="fact-label">Type</span><span class="fact-value">Public-key key-agreement protocol &mdash; <strong>not a cipher</strong> (does not encrypt data)</span></div>
-    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">In active use everywhere; modern variant ECDH (X25519) preferred over classical DH</span></div>
-    <div class="fact"><span class="fact-label">Modern Role</span><span class="fact-value">Establishes the symmetric key for nearly every TLS 1.3, SSH, Signal, and WireGuard session in existence</span></div>
+    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Widely used; finite-field DH and elliptic-curve variants such as X25519 have different parameter choices</span></div>
+    <div class="fact"><span class="fact-label">Modern Role</span><span class="fact-value">Contributes shared secrets to TLS, SSH, Signal and WireGuard; some protocols also combine post-quantum mechanisms</span></div>
   </div>
 </div>
 
@@ -75,7 +75,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>For three thousand years cryptography assumed the two parties had already met to exchange a secret key. Diffie and Hellman proved that assumption wrong: two people who have never communicated can derive a shared secret while every byte they exchange is read by an eavesdropper. Without this single 1976 paper there would be no HTTPS, no Signal, no encrypted email, no online banking &mdash; the entire idea of secure communication between strangers depends on it.</p>
+      <p>Diffie&ndash;Hellman showed how two parties can agree on a secret over a public channel without first transporting that secret. The unauthenticated exchange protects against a passive eavesdropper under its computational assumptions. A secure protocol must also authenticate the participants or their exchanged values to resist an active intermediary.</p>
     </div>
 
     <div class="panel">
@@ -85,7 +85,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>Both parties agree on a large prime <em>p</em> and a generator <em>g</em>. Alice picks a secret integer <em>a</em> and sends <em>g<sup>a</sup> mod p</em>. Bob picks a secret integer <em>b</em> and sends <em>g<sup>b</sup> mod p</em>. Each computes the shared key <em>K = g<sup>ab</sup> mod p</em> &mdash; Alice raises Bob's value to her secret, Bob raises Alice's value to his. An eavesdropper sees <em>p</em>, <em>g</em>, <em>A = g<sup>a</sup></em> and <em>B = g<sup>b</sup></em>. Recovering an exponent <em>a</em> or <em>b</em> is a <strong>discrete logarithm problem (DLP)</strong>. Computing only the shared value <em>K</em> is the <strong>computational Diffie–Hellman problem (CDH)</strong>. A DLP solver gives a CDH solver: recover <em>a</em>, then compute <em>B<sup>a</sup></em>. The converse is not established for arbitrary groups. See <a href="../hall-of-foundations/reduction.html">Reduction &amp; Proof</a> for why the direction of an implication matters.</p></div>
+      <div class="panel-body"><p>Both parties agree on a large prime <em>p</em> and a generator <em>g</em>. Alice picks a secret integer <em>a</em> and sends <em>g<sup>a</sup> mod p</em>. Bob picks a secret integer <em>b</em> and sends <em>g<sup>b</sup> mod p</em>. Each computes the shared value <em>K = g<sup>ab</sup> mod p</em> &mdash; Alice raises Bob's value to her secret, Bob raises Alice's value to his. An eavesdropper sees <em>p</em>, <em>g</em>, <em>A = g<sup>a</sup></em> and <em>B = g<sup>b</sup></em>. Recovering an exponent <em>a</em> or <em>b</em> is a <strong>discrete logarithm problem (DLP)</strong>. Computing only the shared value <em>K</em> is the <strong>computational Diffie–Hellman problem (CDH)</strong>. A DLP solver gives a CDH solver: recover <em>a</em>, then compute <em>B<sup>a</sup></em>. The converse is not established for arbitrary groups. See <a href="../hall-of-foundations/reduction.html">Reduction &amp; Proof</a> for why the direction of an implication matters.</p></div>
     </div>
 
     <div class="panel">
@@ -98,7 +98,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
-      <div class="panel-body"><p>Resistance to recovering the shared value rests on the computational Diffie–Hellman assumption in the selected group; discrete-log hardness alone does not establish that assumption. With a 2048-bit prime, no classical attack is known to be feasible. The 2015 <em>Logjam</em> attack exploited servers using common 512-bit primes &mdash; the lesson was to use larger groups and to switch to elliptic curves where 256-bit keys suffice (X25519). DH is vulnerable to <em>active</em> man-in-the-middle attacks because the exchanged values are unauthenticated &mdash; in practice DH is always combined with authentication (signatures, certificates, or a pre-shared password).</p></div>
+      <div class="panel-body"><p>Resistance to recovering the shared value rests on the computational Diffie–Hellman assumption in the selected group; discrete-log hardness alone does not establish that assumption. Parameter size, subgroup choice and public-key validation all matter; a bit length alone does not establish security. The 2015 <em>Logjam</em> attack exploited servers using common 512-bit primes &mdash; the lesson was to use larger groups and to switch to elliptic curves where 256-bit keys suffice (X25519). DH is vulnerable to <em>active</em> man-in-the-middle attacks because the exchanged values are unauthenticated &mdash; in practice DH is always combined with authentication (for example signatures, certificates or a suitable pre-shared-key protocol). A human password requires a properly designed password-authenticated key exchange, not an improvised password check.</p></div>
     </div>
 
     <div class="panel">
@@ -107,11 +107,11 @@
         <table class="cipher-table">
           <thead><tr><th>Where</th><th>How Diffie-Hellman is Used</th></tr></thead>
           <tbody>
-            <tr><td>TLS 1.3 (HTTPS)</td><td>Every modern HTTPS handshake uses ECDHE (ephemeral elliptic-curve DH) for forward secrecy</td></tr>
-            <tr><td>Signal / WhatsApp / iMessage</td><td>X3DH and the Double Ratchet are layered Diffie-Hellman exchanges</td></tr>
-            <tr><td>SSH</td><td>Default key-exchange method since SSH-2</td></tr>
+            <tr><td>TLS 1.3 (HTTPS)</td><td>TLS 1.3 supports ephemeral finite-field DH, ECDH and pre-shared-key modes; PSK-only exchange does not provide the same forward-secrecy guarantee</td></tr>
+            <tr><td>Signal</td><td>X3DH and the classical Double Ratchet are historical foundations. Signal later introduced PQXDH and the Triple Ratchet with a continuing post-quantum ratchet</td></tr>
+            <tr><td>SSH</td><td>DH and ECDH are among SSH key-exchange families; negotiated choices vary</td></tr>
             <tr><td>WireGuard / Tor</td><td>Both built on Curve25519 ECDH</td></tr>
-            <tr><td>IPsec / IKEv2</td><td>DH groups 14&ndash;21 in every VPN handshake</td></tr>
+            <tr><td>IPsec / IKEv2</td><td>IKEv2 negotiates key-exchange groups; no single group set applies to every VPN</td></tr>
           </tbody>
         </table>
       </div>
@@ -127,17 +127,19 @@
         <table class="cipher-table">
           <tbody>
             <tr><td>Era</td><td>Modern &middot; 1976</td></tr>
-            <tr><td>Status</td><td>In active use everywhere; modern variant ECDH (X25519) preferred over classical DH</td></tr>
+            <tr><td>Status</td><td>Widely used; finite-field DH and elliptic-curve variants such as X25519 have different parameter choices</td></tr>
             <tr><td>Origin</td><td>Whitfield Diffie &amp; Martin Hellman, &lsquo;New Directions in Cryptography' (1976); Ralph Merkle independently</td></tr>
             <tr><td>Year</td><td>1976</td></tr>
             <tr><td>Type</td><td>Public-key key-agreement protocol &mdash; <strong>not a cipher</strong> (does not encrypt data)</td></tr>
-            <tr><td>Modern Role</td><td>Establishes the symmetric key for nearly every TLS 1.3, SSH, Signal, and WireGuard session in existence</td></tr>
+            <tr><td>Modern Role</td><td>Contributes shared secrets to TLS, SSH, Signal and WireGuard; some protocols also combine post-quantum mechanisms</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="primary-sources"><div class="panel-body"><h2 id="primary-sources">Primary Sources</h2><p><a href="https://www.rfc-editor.org/rfc/rfc8446.html">RFC 8446 (TLS 1.3, 2018), key-exchange modes</a>; <a href="https://signal.org/blog/spqr/">Signal: SPQR and the Triple Ratchet (2 October 2025)</a>; <a href="https://signal.org/docs/specifications/doubleratchet/">Signal ratchet specification</a>. Protocols feed DH outputs through a key derivation function; this exhibit shows the underlying shared-value arithmetic.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>

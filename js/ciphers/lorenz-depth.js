@@ -2,8 +2,8 @@
  * Lorenz Depth-Attack Engine
  * --------------------------
  * The 1941 Bletchley Park cryptanalytic breakthrough that broke the
- * Lorenz SZ40 — and, by extension, every modern stream cipher whose
- * nonce gets reused. Pure JavaScript, no DOM dependencies.
+ * Lorenz SZ40. The XOR cancellation applies whenever two messages use
+ * the same additive keystream. Pure JavaScript, no DOM dependencies.
  *
  * Background
  * ----------
@@ -19,9 +19,11 @@
  * message, was asked to resend, and re-sent with the same machine
  * settings but slightly different abbreviations — handing Bletchley
  * Park its first depth. Bill Tutte unwound the entire wheel structure
- * from this single mistake, and Tommy Flowers built Colossus to
- * automate the search. This exact attack (now called nonce-reuse)
- * still breaks WEP, IV-reused TLS, and weak GCM implementations today.
+ * after John Tiltman recovered the paired plaintexts; Tommy Flowers
+ * later built Colossus to assist Lorenz cryptanalysis. Reusing a nonce
+ * under the same key can repeat the keystream in modes such as CTR/GCM;
+ * consequences depend on the construction and cannot be generalized to
+ * every TLS cipher suite or every use of an IV.
  *
  * Public API
  * ----------
@@ -121,8 +123,8 @@
    * Crib-drag: slide `crib` across `depthXor` (which equals P1 XOR P2).
    * At each offset i, compute depthXor[i..] XOR crib. If `crib` matches
    * P1 at offset i, the result is the corresponding slice of P2 — and
-   * vice versa. Readable output at offset i is strong evidence that
-   * `crib` is correct at that position in one of the two messages.
+   * vice versa. Readable output is a hypothesis to investigate, not a
+   * probability or proof that the guessed crib is correct.
    *
    * Returns an array of { offset, candidate, score, printable } for
    * every legal offset, sorted by descending score.

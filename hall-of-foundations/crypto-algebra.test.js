@@ -65,5 +65,10 @@ var prCount = 0;
 for (var g13 = 2; g13 < 13; g13++) if (CA.isPrimitiveRoot(g13, 13)) prCount++;
 assert(prCount === 4, "exactly phi(12) = 4 primitive roots mod 13");
 
+assert(CA.lagrangeAtZero([[1,2],[1,3]],17) === null,
+  "duplicate x coordinates cannot silently reconstruct zero");
+assert(CA.lagrangeAtZero([[1,2],[18,3]],17) === null,
+  "x coordinates equal modulo p are rejected");
+
 console.log("\ncrypto-algebra: " + passed + " passed, " + failed + " failed");
 process.exit(failed ? 1 : 0);

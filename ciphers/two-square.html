@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Two-Square Cipher — The Cipher Museum</title>
-  <meta name="description" content="Two-Square cipher (late 19th c.) — a lighter Delastelle variant using only two keyed 5x5 squares. Many digrams self-encode, leaking the key squares.">
+  <meta name="description" content="Two-square uses two keyed 5×5 squares to encipher letter pairs. This demo follows the ACA horizontal rectangle rule and discloses its extra filler-escape convention.">
   <meta property="og:title" content="Two-Square Cipher — The Cipher Museum">
-  <meta property="og:description" content="Two-Square cipher (late 19th c.) — a lighter Delastelle variant using only two keyed 5x5 squares. Many digrams self-encode, leaking the key squares.">
+  <meta property="og:description" content="Two-square uses two keyed 5×5 squares to encipher letter pairs. This demo follows the ACA horizontal rectangle rule and discloses its extra filler-escape convention.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/two-square.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Two-Square Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Two-Square cipher (late 19th c.) — a lighter Delastelle variant using only two keyed 5x5 squares. Many digrams self-encode, leaking the key squares.">
+  <meta name="twitter:description" content="Two-square uses two keyed 5×5 squares to encipher letter pairs. This demo follows the ACA horizontal rectangle rule and discloses its extra filler-escape convention.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/two-square.html">
@@ -79,24 +79,24 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>A pared-down version of the Four-square: only two keyed squares, side by side. Slightly easier to use by hand but with a glaring weakness — when a digram's two letters happen to lie in the same row of their respective squares, the cipher leaves them unchanged. Roughly 20% of digrams pass through unencrypted.</p>
+      <p>A pared-down version of the Four-square: only two keyed squares, side by side. Slightly easier to use by hand but with a glaring weakness — when a digram's two letters happen to lie in the same row of their respective squares, the ACA output-order convention reverses the pair. For independent uniformly distributed positions, a same-row event has probability 1/5; ordinary text need not follow that distribution.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Published alongside the Four-square in Delastelle's 1902 treatise. The "horizontal" variant places the squares side by side; a "vertical" variant stacks them. Both share the same-row leak. Used recreationally rather than militarily.</p></div>
+      <div class="panel-body"><p>Published alongside the Four-square in Delastelle's 1902 treatise. The "horizontal" variant places the squares side by side; a "vertical" variant stacks them. Horizontal layouts can have a same-row transparency; vertical layouts have a corresponding same-column case. Exact output-order conventions matter. Used recreationally rather than militarily.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>Arrange two keyed 5×5 squares horizontally. For each digram, look up the first letter in the left square and the second in the right square. Read the ciphertext from the opposite corners of the rectangle they form.<br><br><pre>If the two letters share a row → leave them unchanged.
+      <div class="panel-body"><p>Arrange two keyed 5×5 squares horizontally. For each digram, look up the first letter in the left square and the second in the right square. Read the ciphertext from the opposite corners of the rectangle they form.<br><br><pre>If the two letters share a row → reverse their order.
 Otherwise:
-  cipher[0] = left[ row(L), col(R) ]
-  cipher[1] = right[ row(R), col(L) ]</pre></p>
+  cipher[0] = right[ row(L), col(R) ]
+  cipher[1] = left[ row(R), col(L) ]</pre></p>
         <div class="callout callout-info">
           <span class="callout-icon">ℹ️</span>
           <div class="callout-body">
-            <p><strong>About this demo:</strong> To guarantee that Decrypt exactly restores your original message, this demo reversibly escapes the letters X, Q, and Z (as ZA, ZB, ZC) before enciphering, so padding and filler X can never be confused with a real letter. Messages containing X, Q, or Z therefore produce slightly different ciphertext than a strictly classical two-square cipher would. Odd-length messages are padded with a trailing X.</p>
+            <p><strong>Rule and source:</strong> The current engine follows the horizontal output order in the <a href="https://www.cryptogram.org/downloads/aca.info/ciphers/TwoSquare.pdf">American Cryptogram Association specification and worked example</a>. Older museum corpus records used a different transformation; prefix a key with <code>legacy:</code> only when replaying those records. That mode is not the ACA rule.</p><p><strong>About this demo:</strong> To guarantee that Decrypt exactly restores your original message, this demo reversibly escapes the letters X, Q, and Z (as ZA, ZB, ZC) before enciphering, so padding and filler X can never be confused with a real letter. Messages containing X, Q, or Z therefore produce slightly different ciphertext than a strictly classical two-square cipher would. Odd-length messages are padded with a trailing X.</p>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@ Otherwise:
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Same-Row Leakage</div><div class="attack-diff">Complexity: Easy</div><p class="attack-desc">Roughly one in five digrams passes through the cipher unchanged. An attacker can identify these by noticing common English digrams (TH, HE, IN, ER) appearing as themselves in the ciphertext. From there, the rows are partially recovered.</p></div><div class="attack-panel"><div class="attack-name">Digram Frequency Analysis</div><div class="attack-diff">Complexity: Moderate</div><p class="attack-desc">As with Four-square, the cipher is a fixed digram-to-digram substitution. Digram frequency tables and simulated annealing recover both keys with a few hundred characters of ciphertext.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Same-Row Leakage</div><div class="attack-diff">Complexity: Easy</div><p class="attack-desc">The same-row case occurs with probability 1/5 under a uniform independent-position model, not necessarily for an English message. Such cases can provide hypotheses from common English digrams (TH, HE, IN, ER) appearing in reverse order in the ciphertext. Those hypotheses still need testing against the rest of the message.</p></div><div class="attack-panel"><div class="attack-name">Digram Frequency Analysis</div><div class="attack-diff">Complexity: Moderate</div><p class="attack-desc">A fixed two-square mapping can leak digram statistics. Search methods exploit this structure, but success and required sample length depend on the key conventions, plaintext and available evidence.</p></div></div>
     </div>
 
     <div class="panel">
@@ -113,8 +113,8 @@ Otherwise:
         <table class="cipher-table">
           <thead><tr><th>Concept from Two-Square Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody>
-            <tr><td>Identity transformations as weakness</td><td>Modern designs eliminate fixed points (e.g., AES S-box has no fixed point)</td></tr>
-            <tr><td>Two-key fractionation</td><td>Twin-key constructions appear in HMAC and double-encryption</td></tr>
+            <tr><td>Transparent or reversed pairs as clues</td><td>A repeated structural feature may supply clues; isolated fixed points alone do not determine security</td></tr>
+            <tr><td>Two keyed squares</td><td>Two keyed squares are not equivalent to HMAC or a modern two-key security proof</td></tr>
           </tbody>
         </table>
       </div>

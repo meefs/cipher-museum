@@ -197,7 +197,7 @@ const STATIC_PAGES = new Set([
 
     // OTP/Vernam annotate ciphertext with "[Key: …]" when key is auto-generated.
     let cleanCipher = ciphertext;
-    const keyMatch = ciphertext.match(/\[Key:\s*([A-Z]+)\]/i);
+    const keyMatch = ciphertext.match(/\[Key:\s*((?:hex:)?[A-Z0-9]+)\]/i);
     if (keyMatch) {
       cleanCipher = ciphertext.replace(/\n?\[Key:[^\]]*\]/i, '').trim();
       const keyField = document.getElementById('demo-key-' + dataCipher);

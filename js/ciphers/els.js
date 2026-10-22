@@ -7,19 +7,14 @@
  * d across the text and asks: starting at position p, do every d-th
  * letter spell the target?
  *
- *     skip d=5, start p=0:  T_____X_____Y_____Z   →  reads "TXYZ"
+ *     skip d=5, start p=0:  T____X____Y____Z   →  reads "TXYZ"
  *
- * The cryptanalytic critique is statistical, not literary. For any
- * sufficiently long text, the *number of expected hits* for a target
- * word grows roughly with text-length × alphabet-frequency-product.
- * Long texts find any short word at many skips. The famous 1999
- * refutation (McKay, Bar-Natan, Bar-Hillel, Kalai, Statistical
- * Science) showed the same Witztum-Rips method finds "predictions"
- * of modern events in the Hebrew translation of *War and Peace* and
- * in *Moby-Dick* — including assassinations of Kennedy, Gandhi,
- * Trotsky, and Indira Gandhi.
- *
- * This engine is designed to make that demonstration *runnable*.
+ * Under an independent-letter model, the expected number of hits is
+ * the number of legal placements times the product of letter frequencies.
+ * Searching more placements creates more opportunities for coincidences.
+ * This classroom search illustrates that effect; it does not reproduce
+ * the full WRR experiment, the McKay et al. critique, or a significance
+ * test comparing natural-language texts with random controls.
  *
  * Public API
  * ----------
@@ -37,8 +32,8 @@
 (function (root) {
   'use strict';
 
-  // English letter frequencies (Norvig corpus). The same table is used
-  // by caesar-break.js and lorenz-depth.js — kept consistent on purpose.
+  // Fixed rounded English letter-frequency heuristic. This is not a
+  // frequency estimate measured from the visitor's selected text.
   const FREQ = {
     A:0.0817, B:0.0150, C:0.0278, D:0.0425, E:0.1270, F:0.0223,
     G:0.0202, H:0.0609, I:0.0697, J:0.0015, K:0.0077, L:0.0403,
@@ -51,6 +46,21 @@
   function normalise(text) {
     if (!text) return '';
     return String(text).toUpperCase().replace(/[^A-Z]/g, '');
+  }
+
+  function options(opts) {
+    const o = opts || {};
+    const positiveInteger = (value, fallback, name) => {
+      const number = value === undefined ? fallback : Number(value);
+      if (!Number.isSafeInteger(number) || number < 1) throw new Error(name + ' must be a positive safe integer.');
+      return number;
+    };
+    const minSkip = positiveInteger(o.minSkip, 2, 'Minimum skip');
+    return {
+      minSkip,
+      maxSkip: Math.max(minSkip, positiveInteger(o.maxSkip, 1000, 'Maximum skip')),
+      maxResults: positiveInteger(o.maxResults, 100, 'Result limit')
+    };
   }
 
   /**
@@ -69,10 +79,7 @@
    * { start, skip, end } where end = start + skip*(target.length-1).
    */
   function findELS(text, target, opts) {
-    const o = opts || {};
-    const minSkip = Math.max(1, o.minSkip || 2);
-    const maxSkip = Math.max(minSkip, o.maxSkip || 1000);
-    const maxResults = o.maxResults || 100;
+    const { minSkip, maxSkip, maxResults } = options(opts);
 
     const txt = normalise(text);
     const tgt = normalise(target);
@@ -82,7 +89,8 @@
     const L = tgt.length;
     const hits = [];
 
-    for (let d = minSkip; d <= maxSkip && hits.length < maxResults; d++) {
+    const lastSkip = L > 1 ? Math.min(maxSkip, Math.floor((N - 1) / (L - 1))) : maxSkip;
+    for (let d = minSkip; d <= lastSkip && hits.length < maxResults; d++) {
       const span = d * (L - 1);
       const lastStart = N - span - 1;
       if (lastStart < 0) continue;
@@ -109,26 +117,30 @@
    *
    * For each (start, skip), the probability of a hit is the product of
    * English letter frequencies of the target. The number of (start, skip)
-   * pairs is approximately textLen × (maxSkip − minSkip). Multiplying
-   * gives the expected number of hits — typically very large for short
-   * targets in long texts.
+   * pairs is the sum of max(0, textLen - skip*(targetLength-1)).
+   * Multiplying gives the expectation under this independent-letter model;
+   * real prose need not follow that model. Overlapping placements do not
+   * invalidate the sum of their individual expectations.
    *
    * This is the single most important number on the page: it is why
    * "the Bible predicts" any short word.
    */
   function expectedHits(textLen, target, opts) {
-    const o = opts || {};
-    const minSkip = Math.max(1, o.minSkip || 2);
-    const maxSkip = Math.max(minSkip, o.maxSkip || 1000);
+    const { minSkip, maxSkip } = options(opts);
+    if (!Number.isSafeInteger(textLen) || textLen < 0) throw new Error('Text length must be a nonnegative safe integer.');
     const tgt = normalise(target);
     if (!tgt.length || textLen <= 0) return 0;
     let p = 1;
     for (let i = 0; i < tgt.length; i++) {
       p *= (FREQ[tgt[i]] || 0.0001);
     }
-    // Approximation: ignore the small reduction in valid starts for
-    // large skips. Good to within a few percent for textLen >> maxSkip*L.
-    const pairs = textLen * (maxSkip - minSkip + 1);
+    // Count only starts whose final character is inside the text. Summing
+    // this arithmetic progression is exact even for very short passages.
+    const strideCount = tgt.length - 1;
+    const lastSkip = strideCount ? Math.min(maxSkip, Math.floor((textLen - 1) / strideCount)) : maxSkip;
+    if (lastSkip < minSkip) return 0;
+    const count = lastSkip - minSkip + 1;
+    const pairs = count * textLen - strideCount * count * (minSkip + lastSkip) / 2;
     return p * pairs;
   }
 

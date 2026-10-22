@@ -89,6 +89,7 @@
       </div>
 
       <div id="wbExtra" style="margin-top:.75rem"></div>
+      <p id="wbKeyWarning" role="status" hidden></p>
 
       <div class="wb-actions" style="margin-top:1rem">
         <button class="wb-btn wb-btn-primary" id="wbEncode">Encrypt</button>
@@ -101,7 +102,7 @@
     <div class="wb-panel" style="position:relative">
       <h3>Output</h3>
       <button class="wb-copy" id="wbCopy">COPY</button>
-      <div class="wb-output-area" id="wbOutput"></div>
+      <div class="wb-output-area" id="wbOutput" aria-live="polite" tabindex="0"></div>
     </div>
 
   </div>
@@ -274,6 +275,7 @@
       keyEl.parentElement.style.display='none';
     }
     extraEl.innerHTML = '';
+    document.getElementById('wbKeyWarning').hidden = true;
   });
   sel.dispatchEvent(new Event('change'));
 
@@ -288,6 +290,19 @@
     if(!e) { showOutput('Engine not available for: ' + c.name); return; }
     var text = document.getElementById('wbInput').value;
     var key = document.getElementById('wbKey').value || (c.keyDefault || '');
+    var warning = document.getElementById('wbKeyWarning');
+    warning.hidden = true;
+    warning.textContent = '';
+    if(c.id === 'runningKey') {
+      var keyLength = key.toUpperCase().replace(/[^A-Z]/g, '').length;
+      var messageLength = text.toUpperCase().replace(/[^A-Z]/g, '').length;
+      if(!keyLength || keyLength < messageLength) {
+        warning.textContent = keyLength
+          ? 'This key has ' + keyLength + ' letters for ' + messageLength + ' message letters, so the teaching engine repeats it. Supply a full-length passage for a non-repeating running key.'
+          : 'No alphabetic key supplied: the engine uses its built-in teaching excerpt and repeats it if needed.';
+        warning.hidden = false;
+      }
+    }
     try {
       var result = enc ? e.encode(text, key) : e.decode(text, key);
       if(typeof result === 'object' && result.out) result = result.out;
@@ -315,15 +330,26 @@
   document.getElementById('wbClear').addEventListener('click', function(){
     document.getElementById('wbInput').value = '';
     document.getElementById('wbOutput').textContent = '';
+    document.getElementById('wbKeyWarning').hidden = true;
     updateFreq();
   });
 
   document.getElementById('wbCopy').addEventListener('click', function(){
     var text = document.getElementById('wbOutput').textContent;
-    if(navigator.clipboard){ navigator.clipboard.writeText(text); }
-    this.textContent = 'COPIED';
     var btn = this;
-    setTimeout(function(){ btn.textContent = 'COPY'; }, 1500);
+    function unavailable(){
+      btn.textContent = 'SELECT OUTPUT TO COPY';
+      var output = document.getElementById('wbOutput');
+      output.focus();
+      var range = document.createRange(); range.selectNodeContents(output);
+      var selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        btn.textContent = 'COPIED';
+        setTimeout(function(){ btn.textContent = 'COPY'; }, 1500);
+      }, unavailable);
+    } else unavailable();
   });
 
   /* ─── Quick Tools ─── */
@@ -402,6 +428,18 @@
 
   /* Live update */
   document.getElementById('wbInput').addEventListener('input', updateFreq);
+  // Ciphertext is passed in the fragment so it is not sent in the HTTP request.
+  function importCiphertext(){
+    var params = new URLSearchParams(location.hash.slice(1));
+    if(params.has('ct')) {
+      document.getElementById('wbInput').value = params.get('ct');
+      document.getElementById('wbOutput').textContent = '';
+      document.getElementById('wbKeyWarning').hidden = true;
+      updateFreq();
+    }
+  }
+  window.addEventListener('hashchange', importCiphertext);
+  importCiphertext();
   updateFreq();
 })();
 </script>

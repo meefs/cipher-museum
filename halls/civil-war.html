@@ -77,9 +77,7 @@
   <span class="page-eyebrow" style="color:var(--purple);">Hall VI · Special Exhibition · 1861 – 1865</span>
   <h1 class="page-title">The American Civil War Gallery</h1>
   <p class="page-tagline">The telegraph transformed warfare — and cryptography with it</p>
-  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">
-    The American Civil War was the first major conflict fought using the electric telegraph. Hundreds of miles of wire crisscrossed both sides' territory, and both sides knew the other was listening — wiretapping was common, well-documented, and expected. For the first time in history, <em>all</em> sensitive communications required encryption. This gallery presents three systems that decided the outcome of Lincoln's war.
-  </p>
+  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">The American Civil War made extensive use of electric telegraphy for military command. It was not the first war to use telegraphs. Operators had to balance speed, interception risks and key distribution; the three systems here show different approaches rather than a single cause of the war’s outcome.</p>
   <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem;position:relative;z-index:1;">
     <span class="badge badge-civil">Union Cipher</span>
     <span class="badge badge-civil">Confederate</span>
@@ -94,7 +92,7 @@
   <div class="callout callout-mystery" style="margin-bottom:3rem;">
     <span class="callout-icon">⚡</span>
     <div class="callout-body">
-      <p><strong>The telegraph changed everything.</strong> Before the Civil War, a commander's dispatches traveled only as fast as a horse. With the telegraph, Lincoln could communicate with generals hundreds of miles away in minutes. But every telegraph operator along the wire could read every message — and both sides actively wiretapped enemy lines. The OR (Official Records) documents many such interceptions. Every strategic telegram had to be encrypted before transmission.</p>
+      <p><strong>Telegraphy and interception:</strong> Electrical messages could cross long distances quickly, while intermediaries and wiretaps created security risks. Sensitive military traffic used codes and ciphers, but not every telegram was encrypted.</p>
     </div>
   </div>
 
@@ -106,7 +104,7 @@
         <span class="badge badge-civil">Union · 1861</span>
       </div>
       <div class="card-name">Stager Cipher</div>
-      <p class="card-desc">Anson Stager's route transposition cipher secured every Union telegraph from the first Battle of Bull Run to Appomattox. Words written in a matrix, columns read by a prearranged route — plus hundreds of code-word substitutions that made even correctly transposed messages meaningless without the code book. The Confederates never broke it.</p>
+      <p class="card-desc">The Union’s Stager system combined word transposition, code words and operational procedures. Wartime success is a historical claim, not a proof of mathematical security.</p>
 
       <!-- Stager route diagram -->
       <div class="telegraph-demo" style="margin:.5rem 0;">
@@ -144,7 +142,7 @@
         <span class="badge badge-civil">Confederate · 1862</span>
       </div>
       <div class="card-name">Confederate Vigenère</div>
-      <p class="card-desc">The Confederate Signal Corps issued the Vigenère cipher as "the government cipher" — the same cipher that had been "unbreakable" for 300 years, publicly broken by Kasiski in 1863, two years into the war. Union cryptanalysts read Confederate dispatches regularly. Real keywords used throughout the war by Jefferson Davis, Robert E. Lee, and Kirby Smith.</p>
+      <p class="card-desc">Confederate Vigenère (1861-1865) — the brass cipher disk used by Confederate officers, broken in 1863 once the three repeating field keys were recovered.</p>
 
       <!-- Keywords -->
       <div style="margin:.5rem 0;">
@@ -174,7 +172,7 @@
         <span class="badge badge-civil">Confederate · 1862</span>
       </div>
       <div class="card-name">Confederate Dictionary Code</div>
-      <p class="card-desc">Jefferson Davis arranged a dictionary code with Generals A.S. Johnston and J.E. Johnston using Noah Webster's 1857 <em>Primary-School Pronouncing Dictionary</em>. Words identified by page and word position: "ship" = (674)26. A communication failure of historic proportions: when J.E. Johnston used it with Robert E. Lee, Lee had a different dictionary and could not read the dispatch.</p>
+      <p class="card-desc">Dictionary codes replace words with references in an agreed book. Repeated references and language patterns can still leak information; this widget is a simplified model.</p>
       <div style="font-family:var(--fm);font-size:.75rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">ship → page 674, word 26 → </span><span style="color:var(--gold-lt);">(674)26</span><br>
         <span style="color:var(--tx3);">Webster 1857 edition required</span>

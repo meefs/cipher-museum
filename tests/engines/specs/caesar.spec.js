@@ -63,3 +63,15 @@ defineRobustnessSpec({
 });
 
 defineKnownAnswerSpec('caesar', engines.caesar);
+
+test('caesar: legacy page engine normalizes negative and multi-turn shifts', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const vm = require('node:vm');
+  const context = vm.createContext({});
+  vm.runInContext(fs.readFileSync(path.resolve(__dirname, '../../../js/ciphers/caesar.js'), 'utf8') + '\nthis.engine = CaesarCipher;', context);
+  for (const key of [1, 27, 53, -25, -51]) {
+    assert.equal(context.engine.encode('Az az!', key), 'Ba ba!');
+    assert.equal(context.engine.decode('Ba ba!', key), 'Az az!');
+  }
+});

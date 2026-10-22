@@ -294,8 +294,8 @@ const VECTORS = [
   // (1,1,2)(3,2,1)(2,2,3). Passing the plain alphabet reproduces that cube.
   ['trifid.html', 'trifid', 'encode', 'HEL', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'BVO', 'letters', DERIVED], // the figure stops before naming the output letters
   ['trithemius.html', 'trithemius', 'encode', 'STEGANOGRAPHIA', '0', 'SUGJESUNZJZSUN', 'letters'],
-  ['two-square.html', 'twosquare', 'encode', 'COME QUICKLY WE NEED HELP', 'EXAMPLE,KEYWORD', 'FYMEYCYFLYCKVYHOXRHECM', 'letters', DEMO],
-  ['two-square.html', 'twosquare', 'decode', 'FYMEYCYFLYCKVYHOXRHECM', 'EXAMPLE,KEYWORD', 'COMEQUICKLYWENEEDHELP', 'letters', DERIVED], // roundtrip of the demo default
+  ['two-square.html', 'twosquare', 'encode', 'COME QUICKLY WE NEED HELP', 'EXAMPLE,KEYWORD', 'CAEMXFXGRAAEUAGPELGXAO', 'letters', DEMO],
+  ['two-square.html', 'twosquare', 'decode', 'CAEMXFXGRAAEUAGPELGXAO', 'EXAMPLE,KEYWORD', 'COMEQUICKLYWENEEDHELP', 'letters', DERIVED], // roundtrip of the demo default
   ['typex.html', 'typex', 'decode', 'RZEBVVKJUAVRKTBFBT', 'AAAAA', 'BRITISH SIGNAL READY', 'letters'],
   ['typex.html', 'typex', 'encode', 'BRITISH SIGNAL READY', 'AAAAA', 'RZEBVVKJUAVRKTBFBT', 'letters'],
   ['vernam.html', 'vernam', 'encode', 'GOLD', 'KEYS', '0c0a1517', 'letters'],

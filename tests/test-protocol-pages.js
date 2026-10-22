@@ -105,6 +105,22 @@ function load(page) {
   p.close();
 }
 
+// Failed operations must invalidate earlier teaching transcripts.
+{
+  const p = load('ecdsa.html');
+  p.set('d', 42); p.set('k', 7); p.set('h', 101); p.click('sign');
+  assert(/degenerate/i.test(p.text('sigOut')), 'ECDSA exercises a zero-s signature');
+  assert(!p.win.__lastSig, 'ECDSA clears a previous signature after failed signing');
+  p.click('verifyOther');
+  assert(p.errors.length === 0 && /degenerate/i.test(p.text('sigOut')),
+    'ECDSA refuses verification after failed signing without stale state or an exception');
+  p.set('h1', 11); p.set('h2', 29); p.click('reuse');
+  p.set('h2', 11); p.click('reuse'); p.click('attack');
+  assert(/first/.test(p.text('atkOut')) && !p.win.__reuse,
+    'ECDSA failed nonce-reuse setup clears the previous attack transcript');
+  p.close();
+}
+
 /* ────────────── §159 Shamir's Secret Sharing ────────────── */
 {
   const p = load('shamir-secret-sharing.html');
@@ -204,6 +220,19 @@ function load(page) {
       '§160 blind guessing stays near the 1/233 bound over 500 tries (got ' + wins + ')');
   }
   assert(p.errors.length === 0, '§160 survives every interaction without throwing');
+  p.close();
+}
+
+// The honest and simulated Schnorr transcripts require the whole scalar field.
+{
+  const p = load('zero-knowledge-proofs.html');
+  p.win.Math.random = () => 0;
+  p.click('honest');
+  assert(/t = g.*?= 1/.test(p.text('proofOut')) && /s = r \+ cx = 0/.test(p.text('proofOut')),
+    'Schnorr honest nonce includes zero, giving t=1 and s=0 when c=0');
+  p.click('simulate');
+  assert(/response s = 0 and challenge c = 0/.test(p.text('simOut')),
+    'Schnorr simulator samples response zero as well as all other scalars');
   p.close();
 }
 

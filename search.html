@@ -123,6 +123,8 @@
     var emptyEl = document.getElementById('empty');
     var statusEl = document.getElementById('status');
     var suggestionsEl = document.getElementById('suggestions');
+    var indexReady = false;
+    statusEl.setAttribute('role', 'status');
 
     function escapeHTML(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 
@@ -135,6 +137,7 @@
     }
 
     function render() {
+      if (!indexReady) return;
       var raw = q.value.trim();
       var kind = kindFilter.value;
       if (!raw) {
@@ -145,8 +148,10 @@
         return;
       }
       suggestionsEl.style.display = 'none';
-      var hits = window.CipherSearch.query(raw, 60);
+      var hits = window.CipherSearch.query(raw);
       if (kind) hits = hits.filter(function (h) { return h.entry.kind === kind; });
+      var matchCount = hits.length;
+      hits = hits.slice(0, 60);
       if (!hits.length) {
         resultsEl.innerHTML = '';
         emptyEl.style.display = '';
@@ -154,7 +159,7 @@
         return;
       }
       emptyEl.style.display = 'none';
-      statusEl.textContent = hits.length + ' match' + (hits.length === 1 ? '' : 'es') + ' for "' + raw + '"';
+      statusEl.textContent = matchCount + ' match' + (matchCount === 1 ? '' : 'es') + ' for "' + raw + '"' + (matchCount > hits.length ? ' · showing first ' + hits.length : '');
       var hl = window.CipherSearch.highlight;
       resultsEl.innerHTML = hits.map(function (h) {
         var e = h.entry;
@@ -213,12 +218,25 @@
       render();
     }
 
-    if (window.CipherSearch) {
+    function loadIndex() {
+      indexReady = false;
+      statusEl.textContent = 'Loading index…';
+      emptyEl.style.display = 'none';
       window.CipherSearch.load().then(function (entries) {
-        if (preset) q.value = preset;
+        indexReady = true;
         init(entries);
-        if (preset) render();
+      }).catch(function () {
+        resultsEl.innerHTML = '';
+        statusEl.textContent = 'The search index could not be loaded. ';
+        var retry = document.createElement('button');
+        retry.id = 'searchRetry'; retry.type = 'button'; retry.textContent = 'Retry';
+        retry.addEventListener('click', loadIndex);
+        statusEl.appendChild(retry);
       });
+    }
+    if (window.CipherSearch) {
+      if (preset) q.value = preset;
+      loadIndex();
     } else {
       statusEl.textContent = 'Search script failed to load.';
     }

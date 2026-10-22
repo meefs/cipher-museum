@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kryha (Pocket cipher machine · 1924) — The Cipher Museum</title>
-  <meta name="description" content="Alexander von Kryha’s 1924 pocket cipher — a clockwork-driven mixed alphabet wheel sold to banks and diplomats as unbreakable, then broken in two hours by William Friedman.">
+  <meta name="description" content="Kryha’s clockwork cipher devices used irregularly moving alphabets. Friedman and colleagues attacked a published challenge in 1933; this widget uses generated settings.">
   <meta property="og:title" content="Kryha (Pocket cipher machine · 1924) — The Cipher Museum">
-  <meta property="og:description" content="Alexander von Kryha’s 1924 pocket cipher — a clockwork-driven mixed alphabet wheel sold to banks and diplomats as unbreakable, then broken in two hours by William Friedman.">
+  <meta property="og:description" content="Kryha’s clockwork cipher devices used irregularly moving alphabets. Friedman and colleagues attacked a published challenge in 1933; this widget uses generated settings.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/kryha.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kryha (Pocket cipher machine · 1924) — The Cipher Museum">
-  <meta name="twitter:description" content="Alexander von Kryha’s 1924 pocket cipher — a clockwork-driven mixed alphabet wheel sold to banks and diplomats as unbreakable, then broken in two hours by William Friedman.">
+  <meta name="twitter:description" content="Kryha’s clockwork cipher devices used irregularly moving alphabets. Friedman and colleagues attacked a published challenge in 1933; this widget uses generated settings.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/kryha.html">
@@ -68,7 +68,7 @@
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Patented 1924; sold widely 1924–1930s</span></div>
     <div class="fact"><span class="fact-label">Mechanism</span><span class="fact-value">Single mixed alphabet wheel, clockwork-driven</span></div>
     <div class="fact"><span class="fact-label">Marketed as</span><span class="fact-value">Unbreakable; recommended by German banks and diplomats</span></div>
-    <div class="fact"><span class="fact-label">Broken by</span><span class="fact-value">William Friedman & Solomon Kullback, US Army SIS, 1933</span></div>
+    <div class="fact"><span class="fact-label">Broken by</span><span class="fact-value">Friedman, Kullback, Rowlett and Sinkov, US Army SIS, 1933</span></div>
   </div>
 </div>
 
@@ -79,22 +79,22 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Alexander von Kryha was a Ukrainian-born engineer who emigrated to Berlin after the Russian Revolution and patented his “Kryha Chiffriermaschine” in 1924. It was the first widely-marketed civilian cipher machine: a brass case the size of a pocket watch, sold to German banks, embassies, and businesses with extravagant claims of unbreakability.</p><p style="margin-top:1rem;">Sales pitches included challenge messages with cash prizes. Kryha’s machine was used commercially through the late 1920s and was even adopted by the German Foreign Office for some diplomatic traffic — a decision that intelligence historians regard as one of the more avoidable cryptographic mistakes of the inter-war period.</p>
+      <p>Alexander von Kryha marketed clockwork cipher machines in the 1920s. Models varied: the small Liliput should not be confused with the larger Standard machine. Commercial claims of strength were later challenged by practical cryptanalysis.</p><p style="margin-top:1rem;">Sales pitches included challenge messages with cash prizes. Kryha’s machine was used commercially through the late 1920s and was even adopted by the German Foreign Office for some diplomatic traffic — a decision that intelligence historians regard as one of the more avoidable cryptographic mistakes of the inter-war period.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>Two concentric wheels: a fixed outer ring of plaintext letters and an inner wheel carrying a <em>mixed</em> alphabet. The operator types a letter on the outer ring, reads off the cipher letter from the inner wheel, then triggers a spring-driven escapement that advances the inner wheel by an irregular number of positions — between 1 and roughly 26 — according to a stepping pattern fixed by the wheel design.</p><p style="margin-top:1rem;">The advertising claimed astronomical key spaces by counting wheel orientations and stepping pawls. The reality is that the inner wheel is a single mixed alphabet rotated by a finite, repeating sequence of step sizes — a polyalphabetic cipher with a long but eventually periodic key.</p></div>
+      <div class="panel-body"><p>Two concentric wheels: a fixed outer ring of plaintext letters and an inner wheel carrying a <em>mixed</em> alphabet. The operator locates a letter on the outer ring, reads off the cipher letter from the inner wheel, then triggers a spring-driven escapement that advances the inner wheel by an irregular number of positions — between 1 and roughly 26 — according to a stepping pattern fixed by the wheel design.</p><p style="margin-top:1rem;">The advertising claimed astronomical key spaces by counting wheel orientations and stepping pawls. The reality is that the inner wheel is a single mixed alphabet rotated by a finite, repeating sequence of step sizes — a polyalphabetic cipher with a long but eventually periodic key.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Friedman & Kullback, 1933</div><div class="attack-diff">Complexity: Two analysts, 2 hours 41 minutes, ciphertext only</div><p class="attack-desc">William Friedman and Solomon Kullback at the US Army Signal Intelligence Service were given a 1135-letter test message generated by a Kryha. Recognising the periodic structure of the stepping, they reduced the cipher to a small number of correlated substitutions, applied frequency analysis to each, and recovered the plaintext in 2 hours 41 minutes. Their internal report became a standard demonstration of how marketing claims fail under analysis.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Kasiski / index of coincidence</div><div class="attack-diff">Complexity: Routine for any polyalphabetic with finite period</div><p class="attack-desc">Because the stepping repeats, the Kryha is asymptotically a Vigenère-like cipher with a long, mixed-alphabet key. The same techniques that work on Vigenère — Kasiski examination to find the period, then frequency analysis on each column — work on Kryha as soon as you have a few hundred characters of ciphertext.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Friedman & Kullback, 1933</div><div class="attack-diff">Complexity: Two analysts, 2 hours 41 minutes, ciphertext only</div><p class="attack-desc">William Friedman, Solomon Kullback, Frank Rowlett and Abraham Sinkov solved a 1,135-character Kryha test message in 2 hours 41 minutes in 1933. The result concerns that challenge and its conditions; it is not a universal running-time bound for every message or key.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Kasiski / index of coincidence</div><div class="attack-diff">Complexity: Routine for any polyalphabetic with finite period</div><p class="attack-desc">The repeated stepping structure creates related substitutions that can be exploited. How much ciphertext is needed depends on the settings, message and available information; “a few hundred characters” is not a guaranteed threshold.</p></div></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
-      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Kryha lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Counting wheel orientations ≠ key strength</td><td>Key length ≠ entropy in modern key analysis</td></tr><tr><td>Vendor unbreakability claims with no public review</td><td>“Trust us” crypto vs. open peer-reviewed standards</td></tr><tr><td>Fixed stepping pattern = finite period</td><td>Why modern stream ciphers need state at least as large as the security level</td></tr><tr><td>2 hours 41 minutes is a long time to admire a cipher</td><td>Time-to-first-break is the only honest security claim</td></tr></tbody></table></div>
+      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Kryha lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Counting wheel orientations ≠ key strength</td><td>Key length ≠ entropy in modern key analysis</td></tr><tr><td>Vendor unbreakability claims with no public review</td><td>“Trust us” crypto vs. open peer-reviewed standards</td></tr><tr><td>Fixed stepping pattern = finite period</td><td>Why modern stream ciphers need state at least as large as the security level</td></tr><tr><td>2 hours 41 minutes is a long time to admire a cipher</td><td>A demonstrated attack is stronger evidence than a marketing keyspace count</td></tr></tbody></table></div>
     </div>
 
   </div>
@@ -110,7 +110,7 @@
             <tr><td>Year</td><td>Patented 1924; sold widely 1924–1930s</td></tr>
             <tr><td>Mechanism</td><td>Single mixed alphabet wheel, clockwork-driven</td></tr>
             <tr><td>Marketed as</td><td>Unbreakable; recommended by German banks and diplomats</td></tr>
-            <tr><td>Broken by</td><td>William Friedman & Solomon Kullback, US Army SIS, 1933</td></tr>
+            <tr><td>Broken by</td><td>Friedman, Kullback, Rowlett and Sinkov, US Army SIS, 1933</td></tr>
           </tbody>
         </table>
       </div>

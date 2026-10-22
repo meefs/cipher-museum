@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hill Cipher — The Cipher Museum</title>
-    <meta name="description" content="Hill cipher (1929) — Lester S. Hill's matrix-based polygraphic cipher, first to apply linear algebra to encryption. Broken by known-plaintext (mod-26 system).">
+    <meta name="description" content="Hill’s 1929 cipher mixes groups of letters using an invertible matrix modulo 26. Suitable matched plaintext blocks can expose the key by linear algebra.">
   <meta property="og:title" content="Hill Cipher — The Cipher Museum">
-  <meta property="og:description" content="Hill cipher (1929) — Lester S. Hill's matrix-based polygraphic cipher, first to apply linear algebra to encryption. Broken by known-plaintext (mod-26 system).">
+  <meta property="og:description" content="Hill’s 1929 cipher mixes groups of letters using an invertible matrix modulo 26. Suitable matched plaintext blocks can expose the key by linear algebra.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/hill.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hill Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Hill cipher (1929) — Lester S. Hill's matrix-based polygraphic cipher, first to apply linear algebra to encryption. Broken by known-plaintext (mod-26 system).">
+  <meta name="twitter:description" content="Hill’s 1929 cipher mixes groups of letters using an invertible matrix modulo 26. Suitable matched plaintext blocks can expose the key by linear algebra.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/hill.html">
@@ -66,7 +66,7 @@
   </div>
   <h1 class="page-title">Hill Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">Linear algebra enters cryptography — and is immediately defeated</p>
+  <p class="page-tagline">Matrix multiplication encrypts blocks — and linear relations enable a known-plaintext attack.</p>
   <p class="exhibit-status-note">Known plaintext attack (matrix algebra)</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Lester S. Hill</span></div>
@@ -170,7 +170,7 @@
         <table class="cipher-table">
           <thead><tr><th>Concept from Hill Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Matrix multiplication as cipher operation</td><td>AES MixColumns: matrix multiplication over GF(2⁸) for diffusion</td></tr>
-<tr><td>Multiple letters encrypted together</td><td>Block cipher: AES processes 128-bit (16-letter) blocks simultaneously</td></tr>
+<tr><td>Multiple letters encrypted together</td><td>Block cipher: AES processes 128-bit (16-byte) blocks simultaneously</td></tr>
 <tr><td>Linear structure = linear algebra attack</td><td>AES non-linearity: S-boxes prevent linear algebraic attacks</td></tr></tbody>
         </table>
       </div>

@@ -2,11 +2,10 @@
 
    Guards the Hall's link topology.
 
-   The wing is meant to be an integrated layer of the Cipher Museum, not a
-   satellite that points outward. Today every link in every exhibit is internal
-   — but that is true by habit, not by construction, and the first outbound
-   link to a sister project would break the property silently. This file makes
-   it a rule.
+   The wing is an integrated layer of the Cipher Museum. Onward navigation
+   remains inside the museum; explicit primary-source citations are allowed.
+   Source additions require review of this exact URL allowlist, not a broad
+   permission for any external destination or sister-project launcher.
 
    It also checks the reciprocal direction: an exhibit whose whole purpose is
    to explain the mathematics under a museum primitive should be reachable FROM
@@ -35,7 +34,7 @@ function hrefs(file) {
   return out;
 }
 
-// ---- 1. no exhibit may link off-site ----
+// ---- 1. external links must be reviewed primary-source citations ----
 // Sister projects in particular: the Hall must not become a launcher for them.
 var FOREIGN = /crypto-lab|systemslibrarian\.dev|systemslibrarian\.github\.io/i;
 pages.forEach(function (p) {
@@ -44,12 +43,27 @@ pages.forEach(function (p) {
     p + " links to a sister project (must stay inside the museum): " + bad.join(", "));
 });
 
-// Any absolute http(s) link at all, with a narrow allowance for the canonical
-// self-reference every page carries in its <head>.
+// Exact primary-source destinations reviewed during the accuracy audit.
+// Do not replace this with an unrestricted host allowlist.
+var PRIMARY_SOURCES = new Set([
+  "https://www.rfc-editor.org/rfc/rfc8017.html",
+  "https://www.rfc-editor.org/rfc/rfc7919.html",
+  "https://www.rfc-editor.org/rfc/rfc8235.html",
+  "https://www.rfc-editor.org/rfc/rfc9591.html",
+  "https://csrc.nist.gov/pubs/sp/800/186/final",
+  "https://csrc.nist.gov/pubs/fips/203/final",
+  "https://csrc.nist.gov/pubs/fips/204/final",
+  "https://csrc.nist.gov/pubs/fips/205/final",
+  "https://doi.org/10.1145/359168.359176",
+  "https://crypto.stanford.edu/~dabo/cryptobook/",
+  "https://crypto.stanford.edu/~dabo/pubs/papers/weilsigs.pdf",
+  "https://eprint.iacr.org/2016/260"
+]);
+// Canonical self-references and reviewed citations are the only exceptions.
 pages.forEach(function (p) {
   var bad = hrefs(path.join(DIR, p)).filter(function (h) {
     if (!/^https?:\/\//i.test(h)) return false;
-    return h.indexOf("https://ciphermuseum.com/") !== 0; // canonical / og:url / og:image
+    return h.indexOf("https://ciphermuseum.com/") !== 0 && !PRIMARY_SOURCES.has(h); // canonical / og:url / og:image
   });
   assert(bad.length === 0,
     p + " has an off-site absolute link: " + bad.join(", "));

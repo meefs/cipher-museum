@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-11",
+  "generated": "2026-10-22",
   "version": "0.6",
-  "description": "Cipher Corpus benchmark baseline statistics for solver evaluation",
+  "description": "Cipher Corpus descriptive statistics; solver accuracy is not measured here",
   "corpus_url": "https://ciphermuseum.com/cipher-corpus.html",
   "citation": {
     "cipher_corpus": {
@@ -64,34 +64,10 @@
     }
   },
   "solver_baselines": {
-    "description": "Expected accuracy ranges for different solver types by difficulty tier",
-    "methodology": "Estimated from cryptanalytic complexity, key space size, historical time-to-break, and LLM evaluation data",
-    "baselines": {
-      "beginner": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
-      "intermediate": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
-      "advanced": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
-      "expert": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      }
-    }
+    "status": "not_measured",
+    "description": "No measured solver accuracy is supplied by this report",
+    "methodology": "Record counts and text lengths are computed from the corpus. Previously displayed numerical accuracy ranges were unsupported estimates and have been removed. Use a documented solver run and reproducibility receipt for performance claims.",
+    "baselines": {}
   },
   "per_cipher_stats": [
     {
@@ -116,12 +92,7 @@
         "frequency analysis (noisy)",
         "error correction"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 4992,
       "noisy_count": 110
     },
@@ -147,12 +118,7 @@
         "frequency analysis",
         "Kasiski examination (noisy)"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 4867,
       "noisy_count": 112
     },
@@ -178,12 +144,7 @@
         "known plaintext",
         "algebraic attack"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 4635,
       "noisy_count": 0
     },
@@ -204,12 +165,7 @@
         "known plaintext",
         "frequency analysis (noisy)"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 3680,
       "noisy_count": 102
     },
@@ -235,12 +191,7 @@
         "column reordering",
         "multiple anagramming (noisy)"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 3381,
       "noisy_count": 109
     },
@@ -266,12 +217,7 @@
         "digraph analysis",
         "bigram frequency analysis (noisy)"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 2985,
       "noisy_count": 51
     },
@@ -296,12 +242,7 @@
         "index of coincidence",
         "reciprocal property"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 2815,
       "noisy_count": 0
     },
@@ -323,12 +264,7 @@
         "cribs",
         "index of coincidence"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 2723,
       "noisy_count": 0
     },
@@ -348,12 +284,7 @@
         "frequency analysis",
         "numeric key recovery"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 2538,
       "noisy_count": 0
     },
@@ -375,12 +306,7 @@
         "frequency analysis",
         "disk cryptanalysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 2141,
       "noisy_count": 0
     },
@@ -405,12 +331,7 @@
         "pattern analysis",
         "wave pattern"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 2125,
       "noisy_count": 0
     },
@@ -430,12 +351,7 @@
         "frequency analysis",
         "Bazeries method"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1970,
       "noisy_count": 0
     },
@@ -461,12 +377,7 @@
         "self-key recovery",
         "index of coincidence"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1910,
       "noisy_count": 0
     },
@@ -485,12 +396,7 @@
         "brute force diameter",
         "transposition analysis"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1860,
       "noisy_count": 0
     },
@@ -516,12 +422,7 @@
         "Polybius square recovery",
         "Polybius recovery"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1853,
       "noisy_count": 0
     },
@@ -542,12 +443,7 @@
         "index of coincidence",
         "probable word"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1682,
       "noisy_count": 0
     },
@@ -568,12 +464,7 @@
         "frequency analysis",
         "index of coincidence"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1681,
       "noisy_count": 0
     },
@@ -593,12 +484,7 @@
         "index of coincidence",
         "frequency analysis"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1680,
       "noisy_count": 0
     },
@@ -618,12 +504,7 @@
         "columnar transposition recovery",
         "Polybius recovery"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1552,
       "noisy_count": 0
     },
@@ -643,12 +524,7 @@
         "probable word",
         "3D Polybius recovery"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1530,
       "noisy_count": 0
     },
@@ -668,12 +544,7 @@
         "trigram frequency",
         "probable word"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1450,
       "noisy_count": 0
     },
@@ -693,12 +564,7 @@
         "matrix analysis",
         "modular arithmetic"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1450,
       "noisy_count": 0
     },
@@ -720,12 +586,7 @@
         "superimposition",
         "Polybius recovery"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1391,
       "noisy_count": 0
     },
@@ -746,12 +607,7 @@
         "dual-disk recovery",
         "algorithmic reconstruction"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1391,
       "noisy_count": 0
     },
@@ -771,12 +627,7 @@
         "probable word",
         "transposition analysis"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1390,
       "noisy_count": 0
     },
@@ -798,12 +649,7 @@
         "Tutte reconstruction",
         "wheel pattern analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1301,
       "noisy_count": 0
     },
@@ -823,12 +669,7 @@
         "probable word",
         "four-square structure"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1284,
       "noisy_count": 0
     },
@@ -849,12 +690,7 @@
         "route reconstruction",
         "route analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1282,
       "noisy_count": 0
     },
@@ -875,12 +711,7 @@
         "pin-and-lug analysis",
         "known plaintext attack"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1221,
       "noisy_count": 0
     },
@@ -901,12 +732,7 @@
         "known plaintext",
         "Vigenere attack"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1162,
       "noisy_count": 0
     },
@@ -927,12 +753,7 @@
         "never broken",
         "rotor analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1161,
       "noisy_count": 0
     },
@@ -954,12 +775,7 @@
         "Soviet methods",
         "rotor analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1161,
       "noisy_count": 0
     },
@@ -980,12 +796,7 @@
         "TSEC methods",
         "rotor analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1161,
       "noisy_count": 0
     },
@@ -1007,12 +818,7 @@
         "XOR analysis",
         "statistical attack"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1161,
       "noisy_count": 0
     },
@@ -1031,12 +837,7 @@
         "frequency analysis",
         "paired substitution analysis"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1160,
       "noisy_count": 0
     },
@@ -1056,12 +857,7 @@
         "autokey recovery",
         "frequency analysis"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1160,
       "noisy_count": 0
     },
@@ -1081,12 +877,7 @@
         "frequency analysis",
         "stepping switch"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1160,
       "noisy_count": 0
     },
@@ -1106,12 +897,7 @@
         "statistical analysis",
         "Enigma-family methods"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1160,
       "noisy_count": 0
     },
@@ -1130,12 +916,7 @@
         "hill climbing",
         "stream/substitution factorisation"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1100,
       "noisy_count": 0
     },
@@ -1156,12 +937,7 @@
         "Soviet VIC methods",
         "checkerboard recovery"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1074,
       "noisy_count": 0
     },
@@ -1181,12 +957,7 @@
         "index of coincidence",
         "additive recovery"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1072,
       "noisy_count": 0
     },
@@ -1205,12 +976,7 @@
         "bigram frequency analysis",
         "probable word"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1072,
       "noisy_count": 0
     },
@@ -1230,12 +996,7 @@
         "keyed alphabet recovery",
         "monoalphabetic methods"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 930,
       "noisy_count": 0
     },
@@ -1257,12 +1018,7 @@
         "vowel/consonant separation",
         "switch analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 872,
       "noisy_count": 0
     },
@@ -1284,12 +1040,7 @@
         "symbolic analysis",
         "symbol frequency analysis"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 871,
       "noisy_count": 0
     },
@@ -1310,12 +1061,7 @@
         "Playfair variant analysis",
         "disk analysis"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 871,
       "noisy_count": 0
     },
@@ -1337,12 +1083,7 @@
         "Bazeries method",
         "syllabic analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 871,
       "noisy_count": 0
     },
@@ -1363,12 +1104,7 @@
         "Pacific COMINT",
         "codebook reconstruction"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 871,
       "noisy_count": 0
     },
@@ -1389,12 +1125,7 @@
         "XOR analysis",
         "Venona project"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 871,
       "noisy_count": 0
     },
@@ -1414,12 +1145,7 @@
         "Polybius recovery",
         "Soviet methods"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 870,
       "noisy_count": 0
     },
@@ -1439,12 +1165,7 @@
         "Friedman attack",
         "index of coincidence"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 870,
       "noisy_count": 0
     },
@@ -1464,12 +1185,7 @@
         "codebook recovery",
         "papal methods"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 870,
       "noisy_count": 0
     },
@@ -1489,12 +1205,7 @@
         "transposition analysis",
         "slide recovery"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 870,
       "noisy_count": 0
     },
@@ -1515,12 +1226,7 @@
         "card deck analysis",
         "keystream recovery"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 811,
       "noisy_count": 0
     },
@@ -1542,12 +1248,7 @@
         "frequency analysis",
         "context-based attack"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 811,
       "noisy_count": 0
     },
@@ -1566,12 +1267,7 @@
         "codebook reconstruction",
         "frequency analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 810,
       "noisy_count": 0
     },
@@ -1592,12 +1288,7 @@
         "probable word",
         "column analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 772,
       "noisy_count": 0
     },
@@ -1618,12 +1309,7 @@
         "disk alignment",
         "column analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 757,
       "noisy_count": 0
     },
@@ -1643,12 +1329,7 @@
         "frequency analysis",
         "Wallis methods"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 580,
       "noisy_count": 0
     },
@@ -1668,12 +1349,7 @@
         "pad reuse attack",
         "perfect secrecy"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 485,
       "noisy_count": 0
     },
@@ -1692,12 +1368,7 @@
         "XOR-based pad recovery",
         "pad reuse attack"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 485,
       "noisy_count": 0
     },
@@ -1723,12 +1394,7 @@
         "frequency analysis",
         "brute force"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 405,
       "noisy_count": 0
     },
@@ -1753,12 +1419,7 @@
         "known encoding",
         "frequency analysis"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 405,
       "noisy_count": 0
     },
@@ -1784,12 +1445,7 @@
         "known encoding",
         "known encoding scheme"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 378,
       "noisy_count": 0
     },
@@ -1808,12 +1464,7 @@
         "known plaintext",
         "progressive shift analysis"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 350,
       "noisy_count": 0
     },
@@ -1832,12 +1483,7 @@
         "probable word attack",
         "running key alignment"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 348,
       "noisy_count": 0
     },
@@ -1858,12 +1504,7 @@
         "Room 40 methods",
         "traffic analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 292,
       "noisy_count": 0
     },
@@ -1884,12 +1525,7 @@
         "American Revolution",
         "frequency analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 292,
       "noisy_count": 0
     },
@@ -1908,12 +1544,7 @@
         "known encoding scheme",
         "symbol frequency"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 290,
       "noisy_count": 0
     },
@@ -1933,12 +1564,7 @@
         "word frequency analysis",
         "telegraph era"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 290,
       "noisy_count": 0
     },
@@ -1958,12 +1584,7 @@
         "known encoding",
         "pattern matching"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 252,
       "noisy_count": 0
     },
@@ -1983,12 +1604,7 @@
         "glyph substitution",
         "linguistic analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 252,
       "noisy_count": 0
     },
@@ -2009,12 +1625,7 @@
         "Walsingham methods",
         "nomenclator reconstruction"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 249,
       "noisy_count": 1
     },
@@ -2036,12 +1647,7 @@
         "carrier detection",
         "word selection pattern"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 234,
       "noisy_count": 0
     },
@@ -2060,12 +1666,7 @@
         "known encoding scheme",
         "frequency analysis"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 192,
       "noisy_count": 0
     },
@@ -2086,12 +1687,7 @@
         "word frequency",
         "linguistic analysis"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 119,
       "noisy_count": 0
     },
@@ -2112,12 +1708,7 @@
         "West Point treason",
         "codebook reconstruction"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 117,
       "noisy_count": 0
     },
@@ -2136,12 +1727,7 @@
         "known encoding scheme",
         "pattern recognition"
       ],
-      "solver_baselines": {
-        "human": "95-100%",
-        "automated": "95-100%",
-        "llm_3shot": "80-95%",
-        "llm_0shot": "60-80%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 116,
       "noisy_count": 0
     },
@@ -2160,12 +1746,7 @@
         "numeric position analysis",
         "known encoding"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 116,
       "noisy_count": 0
     },
@@ -2186,12 +1767,7 @@
         "homophone grouping",
         "frequency analysis"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 107,
       "noisy_count": 0
     },
@@ -2210,12 +1786,7 @@
         "known-stencil message fitting",
         "crib analysis"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 100,
       "noisy_count": 0
     },
@@ -2234,12 +1805,7 @@
         "known-plaintext analysis",
         "heuristic key search"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 100,
       "noisy_count": 0
     },
@@ -2258,12 +1824,7 @@
         "column permutation search",
         "language scoring"
       ],
-      "solver_baselines": {
-        "human": "60-90%",
-        "automated": "60-90%",
-        "llm_3shot": "40-70%",
-        "llm_0shot": "20-50%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 100,
       "noisy_count": 0
     },
@@ -2284,12 +1845,7 @@
         "probable word",
         "Declaration of Independence mapping"
       ],
-      "solver_baselines": {
-        "human": "5-30%",
-        "automated": "5-30%",
-        "llm_3shot": "2-15%",
-        "llm_0shot": "1-5%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 65,
       "noisy_count": 1
     },
@@ -2309,12 +1865,7 @@
         "bigram analysis",
         "index of coincidence"
       ],
-      "solver_baselines": {
-        "human": "20-60%",
-        "automated": "20-60%",
-        "llm_3shot": "10-40%",
-        "llm_0shot": "5-20%"
-      },
+      "solver_baselines": {},
       "legacy_verified_flag_count": 1,
       "noisy_count": 0
     }

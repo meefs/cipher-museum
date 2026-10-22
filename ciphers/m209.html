@@ -68,7 +68,7 @@
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1940 (US Army adoption)</span></div>
     <div class="fact"><span class="fact-label">Production</span><span class="fact-value">~140,000 units (Smith Corona, US)</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">6 pinwheels (lengths 26, 25, 23, 21, 19, 17) + 27 lug bars</span></div>
-    <div class="fact"><span class="fact-label">Period</span><span class="fact-value">101,405,850 letters (LCM of wheel lengths)</span></div>
+    <div class="fact"><span class="fact-label">Period</span><span class="fact-value">101,405,850 wheel-position cycle; output period may divide it</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Mechanical key streams need long periods</span></div>
   </div>
 </div>
@@ -82,7 +82,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Boris Hagelin's C-38 design, sold to the US Army as the M-209, became the standard tactical cipher of American forces in WWII. Compact (about the size of a hardcover book), it weighed 2.7 kg and ran without electricity — a clerk operated it by hand, advancing a wheel and reading off ciphertext one letter at a time. Hagelin became the first millionaire in cryptography from this single contract.</p>
+      <p>Boris Hagelin's C-38 design, sold to the US Army as the M-209, became the standard tactical cipher of American forces in WWII. Compact (about the size of a hardcover book), it weighed 2.7 kg and ran without electricity — a clerk operated it by hand, advancing a wheel and reading off ciphertext one letter at a time. The large production contract made the machine a major commercial success.</p>
     </div>
 
     <div class="panel">
@@ -92,7 +92,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>Six pinwheels with co-prime lengths (26, 25, 23, 21, 19, 17) advance one position per letter. Each wheel has tiny pins around its edge, set to "active" or "inactive" by the operator. A bank of 27 lug bars reads which wheels are currently active and produces a displacement K from 0 to 27. The indicator alphabet is reversed, so with A=0 encryption uses the reciprocal transformation:<br><br><pre>cipher = (25 - plaintext + K) mod 26</pre>With no displaced bars A becomes Z; with 20 displaced bars A becomes T. Because the wheel lengths are pairwise co-prime, the key sequence has period 26 × 25 × 23 × 21 × 19 × 17 = <strong>101,405,850</strong> letters before repeating.</p></div>
+      <div class="panel-body"><p>Six pinwheels with co-prime lengths (26, 25, 23, 21, 19, 17) advance one position per letter. Each wheel has tiny pins around its edge, set to "active" or "inactive" by the operator. A bank of 27 lug bars reads which wheels are currently active and produces a displacement K from 0 to 27. The indicator alphabet is reversed, so with A=0 encryption uses the reciprocal transformation:<br><br><pre>cipher = (25 - plaintext + K) mod 26</pre>With no displaced bars A becomes Z; with 20 displaced bars A becomes T. Because the wheel lengths are pairwise co-prime, the joint wheel positions repeat after 26 × 25 × 23 × 21 × 19 × 17 = <strong>101,405,850</strong> steps. The output keystream can have a smaller period, depending on pin and lug settings.</p></div>
     </div>
 
     <div class="panel">
@@ -130,7 +130,7 @@
             <tr><td>Year</td><td>1940 (US Army adoption)</td></tr>
             <tr><td>Production</td><td>~140,000 units (Smith Corona, US)</td></tr>
             <tr><td>Key Type</td><td>6 pinwheels (lengths 26, 25, 23, 21, 19, 17) + 27 lug bars</td></tr>
-            <tr><td>Period</td><td>101,405,850 letters (LCM of wheel lengths)</td></tr>
+            <tr><td>Period</td><td>101,405,850 wheel-position cycle; output period may divide it</td></tr>
             <tr><td>Modern Lesson</td><td>Mechanical key streams need long periods</td></tr>
           </tbody>
         </table>

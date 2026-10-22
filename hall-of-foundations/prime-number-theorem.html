@@ -56,12 +56,7 @@
   <div class="hero">
     <div class="kicker">The One Foundation That's Genuinely Load-Bearing</div>
     <h1>How to find a<br>prime in the <em>dark</em></h1>
-    <p class="standfirst">
-      RSA needs two enormous primes — hundreds of digits each. There is no
-      formula that hands them to you. Instead you guess, test, and repeat. The
-      only reason this ever finishes is a theorem about how densely primes are
-      scattered among the integers.
-    </p>
+    <p class="standfirst">RSA key generation commonly samples large candidates and tests for primality. The Prime Number Theorem explains their approximate density and therefore the expected number of attempts. It does not itself prove that a particular candidate is prime or impose a fixed running time.</p>
   </div>
 
   <div class="honesty">
@@ -81,10 +76,7 @@
       1⁄ln x.
     </p>
     <div class="eq">π(x) ≈ x / ln x &nbsp;·&nbsp; density near x ≈ 1 / ln x</div>
-    <p>
-      Drag the slider from small numbers up toward cryptographic sizes and watch
-      the true prime count track the theorem's smooth prediction.
-    </p>
+    <p>The slider shows small, exactly countable ranges. Cryptographic primes are vastly larger; the asymptotic theorem helps explain their density, not a direct enumeration on this screen.</p>
 
     <div class="lab">
       <div class="lab-stage">
@@ -113,30 +105,20 @@
       tests even numbers, and discarding half the candidates doubles your odds:
       roughly <strong>1 in 355 odd candidates</strong> is prime. Sieve out small
       factors like 3 and 5 first and the rate improves again. So you test a few
-      hundred candidates with a fast primality check, and you're done — in
-      milliseconds.
+      hundred candidates with a fast primality check, and finish with an expected runtime that depends on the implementation and hardware.
     </p>
     <div class="eq" id="bitsbox">at 1024 bits: ~1 in 710 integers &#183; ~1 in 355 <em>odd</em> candidates</div>
     <p class="aside">Keep the claim narrow: this theorem explains why RSA can <em>find</em> its primes quickly. It says nothing about why factoring their product is hard — that bet is made in
       <a href="one-way-function.html" style="color:var(--vermilion)">The One-Way Function</a>, and the arithmetic that makes the resulting key <em>work</em> is in
       <a href="euler-fermat.html" style="color:var(--vermilion)">Euler &amp; Fermat</a>.</p>
-    <p>
-      Without the theorem's guarantee that primes stay this dense, key generation
-      could take longer than the age of the universe. The density is the whole
-      reason RSA is practical.
-    </p>
+    <p>Prime density explains why random sampling is practical. Reliable random generation, primality testing, parameter choices and implementation are also necessary; a density theorem is not a complete key-generation algorithm.</p>
   </section>
 
   <section class="exhibit">
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
-      <h3>Every RSA key ever made</h3>
-      <p>
-        Every <a href="../ciphers/rsa.html">RSA</a> key generator works by
-        exactly this loop: pick random, test primality, repeat. It terminates quickly for one reason — the Prime
-        Number Theorem promises the primes are there to be found. This is the
-        rare foundation you <strong>do</strong> lean on every single time.
-      </p>
+      <h3>Why random prime search is practical</h3>
+      <p>Random sampling with primality testing is a common strategy, but other constructions also exist. The theorem describes asymptotic density; expected runtime depends on candidate filtering, the primality test and the machine.</p>
     </div>
   </section>
 

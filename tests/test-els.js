@@ -92,6 +92,18 @@ const real5 = findELS(corpus, 'STAR', { minSkip: 2, maxSkip: 100, maxResults: 5 
 assert('every reported hit actually spells the target',
   real5.length > 0 && real5.every(h => verifyHit(corpus, 'STAR', h)));
 
+// Count placements independently, including the boundary where no target fits.
+// For N=10, L=3 and skips 2..4 the legal starts are 6 + 4 + 2 = 12.
+assert('expectation uses exactly the valid finite-text placements',
+  Math.abs(expectedHits(10, 'AAA', { minSkip: 2, maxSkip: 4 }) - 12 * 0.0817 ** 3) < 1e-12);
+assert('target that cannot fit has zero expected hits',
+  expectedHits(3, 'AAAA', { minSkip: 2, maxSkip: 10 }) === 0);
+assert('impossible large skips add no expected hits',
+  expectedHits(10, 'AAA', { minSkip: 2, maxSkip: 1000 }) === expectedHits(10, 'AAA', { minSkip: 2, maxSkip: 4 }));
+assert('counting starts agrees with exhaustive all-A search',
+  Math.abs(expectedHits(10, 'AAA', { minSkip: 2, maxSkip: 10 }) / 0.0817 ** 3 -
+    findELS('A'.repeat(10), 'AAA', { minSkip: 2, maxSkip: 10, maxResults: 1000 }).length) < 1e-10);
+
 console.log(`\n${pass} passed · ${fail} failed`);
 if (fail > 0) {
   console.log('\nFailures:');

@@ -5,7 +5,7 @@
 'use strict';
 const CaesarCipher = (() => {
   function shift(text, n, encode) {
-    const s = encode ? ((n%26)+26)%26 : ((26-n)%26);
+    const s = (((encode ? n : -n) % 26) + 26) % 26;
     return text.split('').map(ch => {
       const c = ch.charCodeAt(0);
       if (c>=65&&c<=90) return String.fromCharCode(((c-65+s)%26)+65);

@@ -280,12 +280,12 @@
       inputs: [{ type: 'number', id: 'shift', label: 'Starting Shift', value: '0', placeholder: '0' }]
     },
     'cardano-autokey': {
-      label: 'Cardano Autokey (1550)', engine: 'cardanoAutokey',
+      label: 'Plaintext Autokey — Modern Comparison Model', engine: 'cardanoAutokey',
       defaultMsg: 'MEET ME AT MIDNIGHT',
       inputs: [{ type: 'text', id: 'keyword', label: 'Single Seed Letter', value: 'Q', placeholder: 'Q' }]
     },
     'wheatstone': {
-      label: 'Wheatstone Cryptograph (1867)', engine: 'wheatstone',
+      label: 'Equal-Dial Substitution Model — Not Historical Wheatstone', engine: 'wheatstone',
       defaultMsg: 'TELEGRAPH SIGNAL',
       inputs: [{ type: 'text', id: 'keyword', label: 'Inner-Dial Keyword', value: 'WHEATSTONE', placeholder: 'Keyword…' }]
     },
@@ -372,13 +372,13 @@
       inputs: [{ type: 'text', id: 'keyword', label: 'Nomenclator Key', value: 'WALLIS', placeholder: 'WALLIS' }]
     },
     'raf-otp': {
-      label: 'Red Army Faction One-Time Pad (1970\u20131998)', engine: 'otp',
+      label: 'One-Time Pad Teaching Model — Not an Authenticated RAF System', engine: 'otp',
       defaultMsg: 'OPERATION READY', inputs: [
         { type: 'text', id: 'keyword', label: 'Pad (leave blank for random)', value: '', placeholder: 'OTP key material…' }
       ]
     },
     'che-vic': {
-      label: 'Che Guevara\u2019s VIC Variant (1956\u20131967)', engine: 'vic',
+      label: 'VIC Comparison Model — Not Guevara’s Pad System', engine: 'vic',
       defaultMsg: 'COMRADES MOVE NORTH',
       inputs: [{ type: 'text', id: 'keyword', label: 'Personal Key', value: 'GUEVARA', placeholder: 'Personal phrase' }]
     },
@@ -388,7 +388,7 @@
       inputs: [{ type: 'text', id: 'keyword', label: 'Transposition Keyword', value: 'IRELAND', placeholder: 'Keyword\u2026' }]
     },
     'latin-american-codebooks': {
-      label: 'Latin American Telegraphic Codebooks (1870s\u20131940s)', engine: 'commercialCode',
+      label: 'Invented Commercial Codebook Illustration', engine: 'commercialCode',
       defaultMsg: 'CARGO ARRIVED BUENOSAIRES',
       inputs: [{ type: 'text', id: 'keyword', label: 'Codebook (informational only)', value: 'COMERCIAL', placeholder: 'C\u00f3digo Comercial Mexicano…' }]
     },
@@ -409,12 +409,12 @@
       inputs: [{ type: 'text', id: 'keyword', label: 'Inner-Disk Keyword', value: 'WADSWORTH', placeholder: 'Keyword\u2026' }]
     },
     'amharic-ge-ez-ciphers': {
-      label: 'Ethiopian Ge\u02bcez Monastic Cipher (~14th\u201319th c.)', engine: 'geezMonastic',
+      label: 'Illustrative Latin Substitution — Historical Attribution Unverified', engine: 'geezMonastic',
       defaultMsg: 'PRESERVE THE TEXT',
-      inputs: [{ type: 'text', id: 'keyword', label: 'Syllabary Key', value: 'GEEZ', placeholder: 'Key word\u2026' }]
+      inputs: [{ type: 'text', id: 'keyword', label: 'Latin Alphabet Seed', value: 'GEEZ', placeholder: 'Key word\u2026' }]
     },
     'vietnamese-underground': {
-      label: 'Vietnamese Underground Codes (1940s\u20131975)', engine: 'monoalphabetic',
+      label: 'Illustrative Substitution — No Specific Operational Attribution', engine: 'monoalphabetic',
       defaultMsg: 'ADVANCE TO POSITIONS',
       inputs: [{ type: 'text', id: 'keyword', label: 'Cell Key', value: 'GIAIPHONG', placeholder: 'Key word\u2026' }]
     }
@@ -492,6 +492,7 @@
               <button class="btn btn-primary" id="demo-run-${cipherName}">Run Cipher</button>
               <button class="btn btn-secondary" id="demo-clear-${cipherName}">Clear</button>
             </div>
+            <p class="demo-key-warning" role="status" hidden></p>
             <div class="input-group">
               <span class="input-label" id="demo-output-label-${cipherName}">Output</span>
               <div class="output-box" id="demo-output-${cipherName}" aria-live="polite" aria-labelledby="demo-output-label-${cipherName}" role="status">
@@ -532,21 +533,36 @@
     const clearBtn = document.getElementById('demo-clear-' + cipherName);
     const outputBox = document.getElementById('demo-output-' + cipherName);
     const msgInput = document.getElementById(inputId);
+    const keyWarning = container.querySelector('.demo-key-warning');
 
     runBtn.addEventListener('click', () => {
       const msg = msgInput.value;
       const key = getKey();
+      keyWarning.hidden = true;
+      keyWarning.textContent = '';
+      if (config.engine === 'runningKey') {
+        const keyLength = String(key).toUpperCase().replace(/[^A-Z]/g, '').length;
+        const messageLength = msg.toUpperCase().replace(/[^A-Z]/g, '').length;
+        if (!keyLength || keyLength < messageLength) {
+          keyWarning.textContent = !keyLength
+            ? 'No alphabetic key supplied: the engine uses its built-in teaching excerpt and repeats it if needed. Supply a book passage at least as long as your message for a non-repeating running key.'
+            : 'This key has ' + keyLength + ' letters for ' + messageLength + ' message letters, so the teaching engine repeats it. This run is periodic, unlike a full-length non-repeating running key.';
+          keyWarning.hidden = false;
+        }
+      }
       try {
         const result = mode === 'enc' ? engine.encode(msg, key) : engine.decode(msg, key);
         outputBox.innerHTML = '';
         outputBox.textContent = result;
       } catch (e) {
-        outputBox.innerHTML = '<span class="output-empty">Error: ' + e.message + '</span>';
+        outputBox.textContent = 'Error: ' + e.message;
       }
     });
 
     clearBtn.addEventListener('click', () => {
       msgInput.value = '';
+      keyWarning.hidden = true;
+      keyWarning.textContent = '';
       outputBox.innerHTML = '<span class="output-empty">Result appears here…</span>';
     });
 
@@ -602,225 +618,225 @@
   /* ─── Sources & Further Reading ─── */
   const SOURCES = {
     caesar: [
-      { text: 'Suetonius, <em>The Twelve Caesars</em>, "Divus Iulius" §56', url: 'https://en.wikipedia.org/wiki/Caesar_cipher' },
-      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 1', url: 'https://en.wikipedia.org/wiki/The_Code_Book' },
+      { text: 'Suetonius, <em>The Twelve Caesars</em>, "Divus Iulius" §56 — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Caesar_cipher' },
+      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 1', url: 'https://simonsingh.net/books/the-code-book/' },
       { text: 'Practical Cryptography — Caesar Cipher', url: 'https://practicalcryptography.com/ciphers/caesar-cipher/' }
     ],
     polybius: [
-      { text: 'Polybius, <em>Histories</em>, Book X §45', url: 'https://en.wikipedia.org/wiki/Polybius_square' },
+      { text: 'Polybius, <em>Histories</em>, Book X §45 — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Polybius_square' },
       { text: 'Practical Cryptography — Polybius Square', url: 'https://practicalcryptography.com/ciphers/polybius-cipher/' }
     ],
     scytale: [
-      { text: 'Plutarch, <em>Life of Lysander</em> §19', url: 'https://en.wikipedia.org/wiki/Scytale' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 2', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' }
+      { text: 'Plutarch, <em>Life of Lysander</em> §19 — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Scytale' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 2', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     monoalphabetic: [
-      { text: 'Al-Kindi, <em>A Manuscript on Deciphering Cryptographic Messages</em> (~850 AD)', url: 'https://en.wikipedia.org/wiki/Al-Kindi' },
-      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 1', url: 'https://en.wikipedia.org/wiki/The_Code_Book' },
+      { text: 'Al-Kindi, <em>A Manuscript on Deciphering Cryptographic Messages</em> (~850 AD) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Al-Kindi' },
+      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 1', url: 'https://simonsingh.net/books/the-code-book/' },
       { text: 'Practical Cryptography — Simple Substitution', url: 'https://practicalcryptography.com/ciphers/simple-substitution-cipher/' }
     ],
     homophonic: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 3', url: 'https://en.wikipedia.org/wiki/Substitution_cipher#Homophonic_substitution' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 3', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Practical Cryptography — Homophonic Substitution', url: 'https://practicalcryptography.com/ciphers/homophonic-substitution-cipher/' }
     ],
     babington: [
-      { text: 'Pollen, John Hungerford. <em>Mary Queen of Scots and the Babington Plot</em> (Scottish History Society, 1922)', url: 'https://archive.org/details/maryqueenofscots00poll' },
-      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 1 — "The Cipher of Mary Queen of Scots"', url: 'https://en.wikipedia.org/wiki/The_Code_Book' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4', url: 'https://en.wikipedia.org/wiki/Babington_Plot' },
-      { text: 'British Library — Cotton MS Caligula C IX (Babington letter facsimile)', url: 'https://www.bl.uk/manuscripts/' }
+      { text: 'Pollen, John Hungerford. <em>Mary Queen of Scots and the Babington Plot</em> (Scottish History Society, 1922)', url: 'https://archive.org/details/maryqueenofscots00polluoft' },
+      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 1 — "The Cipher of Mary Queen of Scots"', url: 'https://simonsingh.net/books/the-code-book/' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
+      { text: 'British Library — Digitised manuscripts and archives (collection portal)', url: 'https://www.bl.uk/collection/digitised-manuscripts-archives' }
     ],
     voynich: [
       { text: 'Beinecke MS 408 — Voynich Manuscript full digitization (Yale)', url: 'https://collections.library.yale.edu/catalog/2002046' },
       { text: 'Reddy &amp; Knight, "What we know about the Voynich Manuscript" (ACL 2011)', url: 'https://aclanthology.org/W11-1511/' },
       { text: 'Pelling, Nick. <em>The Curse of the Voynich</em> (2006)', url: 'https://ciphermysteries.com/the-voynich-manuscript' },
-      { text: 'Kennedy &amp; Churchill. <em>The Voynich Manuscript</em> (Orion, 2004)', url: 'https://en.wikipedia.org/wiki/Voynich_manuscript' }
+      { text: 'Kennedy &amp; Churchill. <em>The Voynich Manuscript</em> (Orion, 2004) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Voynich_manuscript' }
     ],
     playfair: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 6', url: 'https://en.wikipedia.org/wiki/Playfair_cipher' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 6', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Practical Cryptography — Playfair Cipher', url: 'https://practicalcryptography.com/ciphers/playfair-cipher/' }
     ],
     m209: [
       { text: 'War Department, <em>TM 11-380: Converter M-209, M-209-A, M-209-B</em> (17 March 1944)', url: 'https://www.nsa.gov/news-features/declassified-documents/friedman-documents/assets/files/publications/FOLDER_075/41709299074861.pdf' }
     ],
     hill: [
-      { text: 'Hill, Lester S., "Cryptography in an Algebraic Alphabet," <em>American Math Monthly</em> 36 (1929)', url: 'https://en.wikipedia.org/wiki/Hill_cipher' },
+      { text: 'Hill, Lester S., "Cryptography in an Algebraic Alphabet," <em>American Math Monthly</em> 36 (1929) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Hill_cipher' },
       { text: 'Practical Cryptography — Hill Cipher', url: 'https://practicalcryptography.com/ciphers/hill-cipher/' }
     ],
     vigenere: [
-      { text: 'Vigenère, Blaise de. <em>Traicté des chiffres</em> (1586)', url: 'https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher' },
-      { text: 'Kasiski, Friedrich. <em>Die Geheimschriften und die Dechiffrirkunst</em> (1863)', url: 'https://en.wikipedia.org/wiki/Kasiski_examination' },
-      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 2', url: 'https://en.wikipedia.org/wiki/The_Code_Book' }
+      { text: 'Vigenère, Blaise de. <em>Traicté des chiffres</em> (1586) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher' },
+      { text: 'Kasiski, Friedrich. <em>Die Geheimschriften und die Dechiffrirkunst</em> (1863) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Kasiski_examination' },
+      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 2', url: 'https://simonsingh.net/books/the-code-book/' }
     ],
     beaufort: [
-      { text: 'Beaufort, Sir Francis. <em>Cipher system</em> (1857)', url: 'https://en.wikipedia.org/wiki/Beaufort_cipher' },
+      { text: 'Beaufort, Sir Francis. <em>Cipher system</em> (1857) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Beaufort_cipher' },
       { text: 'Practical Cryptography — Beaufort Cipher', url: 'https://practicalcryptography.com/ciphers/beaufort-cipher/' }
     ],
     gronsfeld: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 5', url: 'https://en.wikipedia.org/wiki/Gronsfeld_cipher' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 5', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     porta: [
-      { text: 'Porta, Giovanni Battista della. <em>De Furtivis Literarum Notis</em> (1563)', url: 'https://en.wikipedia.org/wiki/Porta_cipher' }
+      { text: 'Satoshi Tomokiyo, Cryptiana — Porta’s <em>De furtivis literarum notis</em> (1563): illustrated analysis', url: 'https://cryptiana.web.fc2.com/code/porta.htm' }
     ],
     runningKey: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 5', url: 'https://en.wikipedia.org/wiki/Running_key_cipher' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 5', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Practical Cryptography — Running Key Cipher', url: 'https://practicalcryptography.com/ciphers/running-key-cipher/' }
     ],
     railFence: [
       { text: 'Practical Cryptography — Rail Fence Cipher', url: 'https://practicalcryptography.com/ciphers/rail-fence-cipher/' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4', url: 'https://en.wikipedia.org/wiki/Rail_fence_cipher' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     columnar: [
       { text: 'Practical Cryptography — Columnar Transposition', url: 'https://practicalcryptography.com/ciphers/columnar-transposition-cipher/' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 13', url: 'https://en.wikipedia.org/wiki/Transposition_cipher#Columnar_transposition' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 13', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     doubleTransposition: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 13', url: 'https://en.wikipedia.org/wiki/Transposition_cipher#Double_transposition' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 13', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     bacon: [
-      { text: 'Bacon, Francis. <em>De Augmentis Scientiarum</em> (1623)', url: 'https://en.wikipedia.org/wiki/Bacon%27s_cipher' },
-      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 1', url: 'https://en.wikipedia.org/wiki/The_Code_Book' }
+      { text: 'Bacon, Francis. <em>De Augmentis Scientiarum</em> (1623) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Bacon%27s_cipher' },
+      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 1', url: 'https://simonsingh.net/books/the-code-book/' }
     ],
     tapCode: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>', url: 'https://en.wikipedia.org/wiki/Tap_code' },
-      { text: 'Stockdale, Jim. <em>In Love and War</em>', url: 'https://en.wikipedia.org/wiki/Tap_code' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
+      { text: 'Stockdale, Jim. <em>In Love and War</em> — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Tap_code' }
     ],
     pigpen: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>', url: 'https://en.wikipedia.org/wiki/Pigpen_cipher' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     bifid: [
-      { text: 'Delastelle, Félix. <em>Traité élémentaire de cryptographie</em> (1902)', url: 'https://en.wikipedia.org/wiki/Bifid_cipher' },
+      { text: 'Delastelle, Félix. <em>Traité élémentaire de cryptographie</em> (1902) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Bifid_cipher' },
       { text: 'Practical Cryptography — Bifid Cipher', url: 'https://practicalcryptography.com/ciphers/bifid-cipher/' }
     ],
     trifid: [
-      { text: 'Delastelle, Félix. <em>Traité élémentaire de cryptographie</em> (1902)', url: 'https://en.wikipedia.org/wiki/Trifid_cipher' }
+      { text: 'Delastelle, Félix. <em>Traité élémentaire de cryptographie</em> (1902) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Trifid_cipher' }
     ],
     adfgx: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 11', url: 'https://en.wikipedia.org/wiki/ADFGX_cipher' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 11', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     adfgvx: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 11', url: 'https://en.wikipedia.org/wiki/ADFGVX_cipher' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 11', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Practical Cryptography — ADFGVX Cipher', url: 'https://practicalcryptography.com/ciphers/adfgvx-cipher/' }
     ],
     nihilist: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 7', url: 'https://en.wikipedia.org/wiki/Nihilist_cipher' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 7', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Practical Cryptography — Nihilist Cipher', url: 'https://practicalcryptography.com/ciphers/nihilist-cipher/' }
     ],
     otp: [
-      { text: 'Shannon, Claude. "Communication Theory of Secrecy Systems" (1949)', url: 'https://en.wikipedia.org/wiki/One-time_pad' },
-      { text: 'Vernam, Gilbert. US Patent 1,310,719 (1919)', url: 'https://en.wikipedia.org/wiki/Gilbert_Vernam' }
+      { text: 'Shannon, Claude. "Communication Theory of Secrecy Systems" (1949) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/One-time_pad' },
+      { text: 'Vernam, Gilbert. US Patent 1,310,719 (1919) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Gilbert_Vernam' }
     ],
     fractionatedMorse: [
       { text: 'Practical Cryptography — Fractionated Morse', url: 'https://practicalcryptography.com/ciphers/fractionated-morse-cipher/' }
     ],
     confederateVigenere: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 8', url: 'https://en.wikipedia.org/wiki/Confederate_cipher_disk' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 8', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     bazeries: [
-      { text: 'Bazeries, Étienne. <em>Les Chiffres et les Lettres</em> (1901)', url: 'https://en.wikipedia.org/wiki/Bazeries_cylinder' }
+      { text: 'Bazeries, Étienne. <em>Les Chiffres et les Lettres</em> (1901) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Bazeries_cylinder' }
     ],
     alberti: [
-      { text: 'Alberti, Leon Battista. <em>De Componendis Cifris</em> (1467)', url: 'https://en.wikipedia.org/wiki/Alberti_cipher' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' }
+      { text: 'Alberti, Leon Battista. <em>De Componendis Cifris</em> (1467) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Alberti_cipher' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     jefferson: [
-      { text: 'Jefferson, Thomas. Papers, 1795', url: 'https://en.wikipedia.org/wiki/Jefferson_disk' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 7', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' }
+      { text: 'Jefferson, Thomas. Papers, 1795 — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Jefferson_disk' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 7', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     enigma: [
-      { text: 'Hodges, Andrew. <em>Alan Turing: The Enigma</em>', url: 'https://en.wikipedia.org/wiki/Enigma_machine' },
-      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 4–6', url: 'https://en.wikipedia.org/wiki/The_Code_Book' },
-      { text: 'Kahn, David. <em>Seizing the Enigma</em>', url: 'https://en.wikipedia.org/wiki/Seizing_the_Enigma' }
+      { text: 'Hodges, Andrew. <em>Alan Turing: The Enigma</em>', url: 'https://www.turing.org.uk/book/' },
+      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 4–6', url: 'https://simonsingh.net/books/the-code-book/' },
+      { text: 'Kahn, David. <em>Seizing the Enigma</em> (revised edition, 2012)', url: 'https://www.usni.org/press/books/seizing-enigma' }
     ],
     lorenz: [
-      { text: 'Jack Copeland, <em>Colossus: The Secrets of Bletchley Park</em>', url: 'https://en.wikipedia.org/wiki/Lorenz_cipher' },
-      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 6', url: 'https://en.wikipedia.org/wiki/The_Code_Book' }
+      { text: 'Jack Copeland, <em>Colossus: The Secrets of Bletchley Park</em> — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Lorenz_cipher' },
+      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 6', url: 'https://simonsingh.net/books/the-code-book/' }
     ],
     dictionaryCode: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 5', url: 'https://en.wikipedia.org/wiki/Book_cipher' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 5', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     stager: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 8', url: 'https://en.wikipedia.org/wiki/Transposition_cipher#Route_cipher' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 8', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     vic: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 18', url: 'https://en.wikipedia.org/wiki/VIC_cipher' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 18', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     vernam: [
-      { text: 'Vernam, Gilbert. US Patent 1,310,719 (1919)', url: 'https://en.wikipedia.org/wiki/Gilbert_Vernam' },
-      { text: 'Shannon, Claude. "Communication Theory of Secrecy Systems" (1949)', url: 'https://en.wikipedia.org/wiki/One-time_pad' }
+      { text: 'Vernam, Gilbert. US Patent 1,310,719 (1919) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Gilbert_Vernam' },
+      { text: 'Shannon, Claude. "Communication Theory of Secrecy Systems" (1949) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/One-time_pad' }
     ],
     'navajo-code-talkers': [
-      { text: 'Meadows, William C. <em>The Comanche Code Talkers of World War II</em>', url: 'https://en.wikipedia.org/wiki/Code_talker' },
-      { text: 'National Museum of the American Indian — Navajo Code Talkers', url: 'https://en.wikipedia.org/wiki/Navajo_Code_Talkers%27_Dictionary' }
+      { text: 'Meadows, William C. <em>The Comanche Code Talkers of World War II</em> — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Code_talker' },
+      { text: 'National Museum of the American Indian — <em>Native Words, Native Warriors</em>: Code Talking', url: 'https://americanindian.si.edu/nk360/code-talkers/code-talking/' }
     ],
     zodiac: [
-      { text: 'Oranchak, David et al. "Cracking the Zodiac 340-Character Cipher" (2020)', url: 'https://en.wikipedia.org/wiki/Zodiac_Killer#Communications' },
-      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 8', url: 'https://en.wikipedia.org/wiki/The_Code_Book' }
+      { text: 'Oranchak, David et al. "Cracking the Zodiac 340-Character Cipher" (2020) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Zodiac_Killer#Communications' },
+      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 8', url: 'https://simonsingh.net/books/the-code-book/' }
     ],
     autokey: [
-      { text: 'Vigenère, Blaise de. <em>Traicté des chiffres</em> (1586) — autokey variant', url: 'https://en.wikipedia.org/wiki/Autokey_cipher' },
+      { text: 'Vigenère, Blaise de. <em>Traicté des chiffres</em> (1586) — autokey variant — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Autokey_cipher' },
       { text: 'Practical Cryptography — Autokey Cipher', url: 'https://practicalcryptography.com/ciphers/autokey-cipher/' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 5', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 5', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     nomenclator: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4 — "The Era of the Black Chambers"', url: 'https://en.wikipedia.org/wiki/Nomenclator_cipher' },
-      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 1', url: 'https://en.wikipedia.org/wiki/The_Code_Book' }
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4 — "The Era of the Black Chambers"', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
+      { text: 'Singh, Simon. <em>The Code Book</em>, ch. 1', url: 'https://simonsingh.net/books/the-code-book/' }
     ],
     bookCipher: [
-      { text: 'Ward, James B. <em>The Beale Papers</em> (1885)', url: 'https://en.wikipedia.org/wiki/Beale_ciphers' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 18', url: 'https://en.wikipedia.org/wiki/Book_cipher' }
+      { text: 'Ward, James B. <em>The Beale Papers</em> (1885) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Beale_ciphers' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 18', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     sigaba: [
-      { text: 'Stamp &amp; Chan, "SIGABA: Cryptanalysis of the Full Keyspace" (2007)', url: 'https://en.wikipedia.org/wiki/SIGABA' },
+      { text: 'Stamp &amp; Chan, "SIGABA: Cryptanalysis of the Full Keyspace" (2007) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/SIGABA' },
       { text: 'NSA Center for Cryptologic History — SIGABA', url: 'https://www.nsa.gov/History/Cryptologic-History/' }
     ],
     typex: [
-      { text: 'Erskine, Ralph. "The Development of Typex" (Cryptologia, 1997)', url: 'https://en.wikipedia.org/wiki/Typex' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 11', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' }
+      { text: 'Erskine, Ralph. "The Development of Typex" (Cryptologia, 1997) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Typex' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 11', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' }
     ],
     jn25: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 17 (Pacific cryptanalysis)', url: 'https://en.wikipedia.org/wiki/JN-25' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 17 (Pacific cryptanalysis)', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Carlson, Elliot. <em>Joe Rochefort\'s War</em> (2011)', url: 'https://www.usni.org/press/books/joe-rocheforts-war' },
-      { text: 'Parshall & Tully, <em>Shattered Sword</em> (Midway and the AF deception)', url: 'https://en.wikipedia.org/wiki/Battle_of_Midway' }
+      { text: 'Parshall & Tully, <em>Shattered Sword</em> (Midway and the AF deception) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Battle_of_Midway' }
     ],
     redTypeA: [
-      { text: 'Rowlett, Frank. <em>The Story of Magic</em> (Purple predecessor context)', url: 'https://en.wikipedia.org/wiki/Japanese_diplomatic_cipher_machine' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, Red/Purple transition chapters', url: 'https://en.wikipedia.org/wiki/Purple_(cipher_machine)' },
+      { text: 'Rowlett, Frank. <em>The Story of Magic</em> (1998; library catalog record)', url: 'https://ci.nii.ac.jp/ncid/BA54201586' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, Red/Purple transition chapters', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'NSA CCH materials on SIS Japanese machine exploitation', url: 'https://www.nsa.gov/History/Cryptologic-History/' }
     ],
     affine: [
       { text: 'Lyons, James. "Affine Cipher" — Practical Cryptography', url: 'https://practicalcryptography.com/ciphers/classical-era/affine/' },
-      { text: 'Stinson, Douglas. <em>Cryptography: Theory and Practice</em>, ch. 1 (modular arithmetic primer)', url: 'https://en.wikipedia.org/wiki/Affine_cipher' },
+      { text: 'Stinson, Douglas. <em>Cryptography: Theory and Practice</em>, ch. 1 (modular arithmetic primer) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Affine_cipher' },
       { text: 'Wikipedia — Affine cipher (key-space derivation)', url: 'https://en.wikipedia.org/wiki/Affine_cipher' }
     ],
     trithemius: [
-      { text: 'Trithemius, Johannes. <em>Polygraphia</em> (1518) — first printed cryptography book', url: 'https://en.wikipedia.org/wiki/Polygraphia_(book)' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 5 (Renaissance polyalphabetics)', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' },
+      { text: 'Trithemius, Johannes. <em>Polygraphia</em> (1518) — first printed cryptography book — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Polygraphia_(book)' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 5 (Renaissance polyalphabetics)', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Practical Cryptography — Trithemius cipher', url: 'https://practicalcryptography.com/ciphers/classical-era/trithemius/' }
     ],
     cardanoAutokey: [
-      { text: 'Cardano, Girolamo. <em>De Subtilitate</em> (1550)', url: 'https://en.wikipedia.org/wiki/Gerolamo_Cardano' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4 (Cardano and Vigenère)', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' },
+      { text: 'Cardano, Girolamo. <em>De Subtilitate</em> (1550) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Gerolamo_Cardano' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4 (Cardano and Vigenère)', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Wikipedia — Autokey cipher (history section)', url: 'https://en.wikipedia.org/wiki/Autokey_cipher' }
     ],
     wheatstone: [
-      { text: 'Wheatstone, Charles. <em>Cryptograph</em> — 1867 Paris Universal Exposition (described in Kahn)', url: 'https://en.wikipedia.org/wiki/Charles_Wheatstone#Cryptography' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 7 (Wheatstone &amp; Playfair)', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' },
+      { text: 'Wheatstone, Charles. <em>Cryptograph</em> — 1867 Paris Universal Exposition (described in Kahn) — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Charles_Wheatstone#Cryptography' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 7 (Wheatstone &amp; Playfair)', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Crypto Museum — Cipher disks and dial machines', url: 'https://www.cryptomuseum.com/crypto/' }
     ],
     morse: [
       { text: 'ITU-R Recommendation M.1677 — International Morse Code', url: 'https://www.itu.int/rec/R-REC-M.1677/' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 9 (telegraph &amp; code)', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 9 (telegraph &amp; code)', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Wikipedia — Morse code', url: 'https://en.wikipedia.org/wiki/Morse_code' }
     ],
     cardanoGrille: [
-      { text: 'Cardano, Girolamo. <em>De Subtilitate</em> (1550) — original grille proposal', url: 'https://en.wikipedia.org/wiki/Cardan_grille' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4 (grilles &amp; turning grilles)', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' },
+      { text: 'Cardano, Girolamo. <em>De Subtilitate</em> (1550) — original grille proposal — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Cardan_grille' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 4 (grilles &amp; turning grilles)', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Wikipedia — Grille (cryptography)', url: 'https://en.wikipedia.org/wiki/Grille_(cryptography)' }
     ],
     nullCipher: [
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 14 (concealment ciphers in WWII)', url: 'https://en.wikipedia.org/wiki/The_Codebreakers' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 14 (concealment ciphers in WWII)', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Wikipedia — Null cipher', url: 'https://en.wikipedia.org/wiki/Null_cipher' },
-      { text: 'Stamatatos, Efstathios. "A Survey of Modern Authorship Attribution Methods" (2009) — statistical detection of constrained text', url: 'https://en.wikipedia.org/wiki/Stylometry' }
+      { text: 'Stamatatos, Efstathios. "A Survey of Modern Authorship Attribution Methods" (2009) — statistical detection of constrained text — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Stylometry' }
     ],
     fialka: [
       { text: 'Crypto Museum — Fialka M-125 deep dive', url: 'https://www.cryptomuseum.com/crypto/fialka/' },
@@ -834,51 +850,51 @@
     ],
     geheimschreiber: [
       { text: 'Crypto Museum — Siemens &amp; Halske T52 Geheimschreiber', url: 'https://www.cryptomuseum.com/crypto/siemens/t52/' },
-      { text: 'Beckman, Bengt. <em>Codebreakers: Arne Beurling and the Swedish Crypto Program</em>', url: 'https://en.wikipedia.org/wiki/Arne_Beurling' },
+      { text: 'Beckman, Bengt. <em>Codebreakers: Arne Beurling and the Swedish Crypto Program</em> — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Arne_Beurling' },
       { text: 'Wikipedia — Siemens and Halske T52 / "Sturgeon" / Fish (cryptography)', url: 'https://en.wikipedia.org/wiki/Siemens_and_Halske_T52' }
     ],
     kryha: [
-      { text: 'Friedman, Kullback, Sinkov, Rosen — broke Kryha in a few hours; declassified analysis', url: 'https://www.nsa.gov/Portals/70/documents/news-features/declassified-documents/friedman-documents/' },
+      { text: 'NSA — William F. Friedman documents (declassified collection portal)', url: 'https://www.nsa.gov/Helpful-Links/NSA-FOIA/Declassification-Transparency-Initiatives/Historical-Releases/Friedman-Documents/' },
       { text: 'Crypto Museum — Kryha Standard Cipher Machine', url: 'https://www.cryptomuseum.com/crypto/kryha/' },
       { text: 'Wikipedia — Kryha', url: 'https://en.wikipedia.org/wiki/Kryha' }
     ],
     m94: [
       { text: 'Crypto Museum — M-94 / CSP-488', url: 'https://www.cryptomuseum.com/crypto/usa/m94/' },
-      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 12 (US Army cylinder devices)', url: 'https://en.wikipedia.org/wiki/M-94' },
+      { text: 'Kahn, David. <em>The Codebreakers</em>, ch. 12 (US Army cylinder devices)', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Wikipedia — M-94 and M-138-A', url: 'https://en.wikipedia.org/wiki/M-94' }
     ],
     chineseTelegraph: [
       { text: 'Wikipedia — Chinese telegraph code', url: 'https://en.wikipedia.org/wiki/Chinese_telegraph_code' },
       { text: 'Mullaney, Thomas S. <em>The Chinese Typewriter: A History</em> — covers the 1881 codebook', url: 'https://mitpress.mit.edu/9780262536103/the-chinese-typewriter/' },
-      { text: 'Standard Telegraph Codebook scans (Internet Archive)', url: 'https://archive.org/details/chinesetelegrap00gordgoog' }
+      { text: 'Columbia University Libraries — Chinese Telegraphic Codebooks and Cryptography (collection overview, 2019)', url: 'https://blogs.library.columbia.edu/rbml/2019/10/09/chinese-telegraphic-codebooks-and-cryptography/' }
     ],
     zimmermann: [
       { text: 'NSA Center for Cryptologic History — The Zimmermann Telegram', url: 'https://www.nsa.gov/Helpful-Links/NSA-FOIA/Declassification-Transparency-Initiatives/Historical-Releases/' },
-      { text: 'Tuchman, Barbara W. <em>The Zimmermann Telegram</em> (1958)', url: 'https://en.wikipedia.org/wiki/The_Zimmermann_Telegram_(book)' },
+      { text: 'Tuchman, Barbara W. <em>The Zimmermann Telegram</em> (1985 edition; first published 1958)', url: 'https://www.penguinrandomhouse.com/books/180859/the-zimmermann-telegram-by-barbara-w-tuchman/' },
       { text: 'National Archives — Zimmermann Telegram (decoded text)', url: 'https://www.archives.gov/education/lessons/zimmermann' },
       { text: 'Boghardt, Thomas. <em>The Zimmermann Telegram: Intelligence, Diplomacy, and America\'s Entry into WWI</em>', url: 'https://www.usni.org/press/books/zimmermann-telegram' }
     ],
     slidex: [
       { text: 'Crypto Museum — Slidex', url: 'https://www.cryptomuseum.com/crypto/uk/slidex/' },
       { text: 'Wikipedia — Slidex', url: 'https://en.wikipedia.org/wiki/Slidex' },
-      { text: 'GCHQ historical pamphlet on tactical cipher cards (declassified)', url: 'https://www.gchq.gov.uk/history' }
+      { text: 'GCHQ — History articles and resources', url: 'https://www.gchq.gov.uk/section/advice-guidance/all-topics?topics=History' }
     ],
     commercialCode: [
-      { text: 'McKenna, Edward L. <em>Code-Books and the Telegraph</em>', url: 'https://en.wikipedia.org/wiki/Commercial_code_(communications)' },
+      { text: 'McKenna, Edward L. <em>Code-Books and the Telegraph</em> — related Wikipedia overview', url: 'https://en.wikipedia.org/wiki/Commercial_code_(communications)' },
       { text: 'Bentley\'s Complete Phrase Code (1906) — Internet Archive', url: 'https://archive.org/details/bentleyscomplete00bent' },
-      { text: 'ABC Telegraphic Code, 5th edition (1901) — Internet Archive', url: 'https://archive.org/details/abctelegraphicco00clauuoft' },
-      { text: 'Standage, Tom. <em>The Victorian Internet</em> (cultural context)', url: 'https://www.bloomsbury.com/uk/victorian-internet-9781620405925/' }
+      { text: 'ABC Telegraphic Code, 5th edition (1901) — Internet Archive', url: 'https://archive.org/details/abcuniversalcom00clau' },
+      { text: 'Standage, Tom. <em>The Victorian Internet</em> (cultural context)', url: 'https://www.bloomsbury.com/us/victorian-internet-9781635573961/' }
     ],
     culperRing: [
-      { text: 'Rose, Alexander. <em>Washington\'s Spies: The Story of America\'s First Spy Ring</em> (2006)', url: 'https://www.simonandschuster.com/books/Washingtons-Spies/Alexander-Rose/9780553383294' },
+      { text: 'Rose, Alexander. <em>Washington’s Spies: The Story of America’s First Spy Ring</em> (2007 paperback; first published 2006)', url: 'https://www.penguinrandomhouse.com/books/157145/washingtons-spies-by-alexander-rose/' },
       { text: 'Library of Congress — Tallmadge\'s codebook (digitised pages)', url: 'https://www.loc.gov/collections/george-washington-papers/' },
       { text: 'Mount Vernon — “Culper Spy Ring Codes”, full transcription of the code book (PDF). This is the source for the numbers quoted on this page: 711 = “Gen Washington”, 727 = “New York”', url: 'https://mtv-main-assets.mountvernon.org/files/resources/culpercodebook.pdf' },
-      { text: 'Mount Vernon — The Culper Spy Ring', url: 'https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/the-culper-code-book/' },
+      { text: 'Mount Vernon — The Culper Code Book', url: 'https://www.mountvernon.org/george-washington/the-revolutionary-war/spying-and-espionage/the-culper-code-book' },
       { text: 'Wikipedia — Culper Ring', url: 'https://en.wikipedia.org/wiki/Culper_Ring' }
     ],
     arnoldAndre: [
       { text: 'Wikipedia — Benedict Arnold and John André correspondence', url: 'https://en.wikipedia.org/wiki/Benedict_Arnold' },
-      { text: 'Bakeless, John. <em>Turncoats, Traitors and Heroes</em> (1959) — chapter on the Arnold cipher', url: 'https://en.wikipedia.org/wiki/Turncoats,_Traitors_and_Heroes' },
+      { text: 'Bakeless, John. <em>Turncoats, Traitors and Heroes</em> (1998 reprint; first published 1959)', url: 'https://www.hachettebookgroup.com/titles/john-bakeless/turncoats-traitors-and-heroes/9780306808432/' },
       { text: 'Mount Vernon — André\'s captured ciphered letter', url: 'https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/john-andre/' },
       { text: 'Cipher History — Arnold-André book cipher analysis', url: 'https://www.tandfonline.com/journals/ucry20' }
     ],
@@ -886,7 +902,6 @@
       { text: 'Meister, Aloys. <em>Die Geheimschrift im Dienste der päpstlichen Kurie</em> (1906)', url: 'https://archive.org/details/diegeheimschrift00meis' },
       { text: 'Kahn, David. <em>The Codebreakers</em> (1967) — chapter 4 on Renaissance Italian cryptanalysis', url: 'https://www.simonandschuster.com/books/The-Codebreakers/David-Kahn/9780684831305' },
       { text: 'Vatican Apostolic Archive — Argenti family papers (Trattato in Cifra)', url: 'https://www.archivioapostolicovaticano.va/content/aav/en.html' },
-      { text: 'Wikipedia — Matteo Argenti', url: 'https://en.wikipedia.org/wiki/Matteo_Argenti' }
     ],
     wallisCiphers: [
       { text: 'Wallis, John. Cipher notes — Bodleian Library MSS', url: 'https://www.bodleian.ox.ac.uk/' },
@@ -896,7 +911,7 @@
     ],
     'raf-otp': [
       { text: 'Aust, Stefan. <em>The Baader-Meinhof Complex</em> (2008 English ed.)', url: 'https://www.bodleyhead.co.uk/' },
-      { text: 'Peters, Butz. <em>T\u00f6dlicher Irrtum: Die Geschichte der RAF</em> (2004)', url: 'https://www.argon-verlag.de/' },
+      { text: 'Peters, Butz. <em>Tödlicher Irrtum: Die Geschichte der RAF</em> (2007 paperback; first published 2004)', url: 'https://www.fischerverlage.de/buch/butz-peters-toedlicher-irrtum-9783596172658' },
       { text: 'Bundeskriminalamt \u2014 RAF forensic archive (Stammheim materials)', url: 'https://www.bka.de/' },
       { text: 'Wikipedia \u2014 Red Army Faction (Communications &amp; Tradecraft)', url: 'https://en.wikipedia.org/wiki/Red_Army_Faction' }
     ],
@@ -907,16 +922,15 @@
       { text: 'Wikipedia \u2014 VIC Cipher', url: 'https://en.wikipedia.org/wiki/VIC_cipher' }
     ],
     'ira-ciphers': [
-      { text: 'Moloney, Ed. <em>A Secret History of the IRA</em> (2002)', url: 'https://www.penguinrandomhouse.com/books/89164/a-secret-history-of-the-ira-by-ed-moloney/' },
+      { text: 'Moloney, Ed. <em>A Secret History of the IRA</em> (updated edition, 2007)', url: 'https://www.penguin.co.uk/books/54420/a-secret-history-of-the-ira-by-ed-moloney/9780141028767' },
       { text: 'Smith, M.L.R. <em>Fighting for Ireland?</em> (1995)', url: 'https://www.routledge.com/' },
       { text: 'Powell, Jonathan. <em>Great Hatred, Little Room: Making Peace in Northern Ireland</em> (2008)', url: 'https://www.bodleyhead.co.uk/' },
       { text: 'Wikipedia — Book cipher (the general technique and its dependence on a shared edition)', url: 'https://en.wikipedia.org/wiki/Book_cipher' }
     ],
     'latin-american-codebooks': [
       { text: '<em>C\u00f3digo Comercial Mexicano</em> (Mexican commercial telegraph code)', url: 'https://www.bnm.unam.mx/' },
-      { text: 'ABC Telegraphic Code, 6th ed. (1920)', url: 'https://archive.org/details/abctelegraphicco00clau' },
+      { text: 'ABC Telegraphic Code, 6th ed. (1920; DTU library catalog)', url: 'https://tekniskkulturarv.dk/book/37f3ce38-b439-40e9-95b7-004972d51ae4' },
       { text: 'Bentley, E.L. <em>Bentley\u2019s Complete Phrase Code</em> (1906)', url: 'https://archive.org/details/bentleyscomplete00bent' },
-      { text: 'Rhodes, James Boyd. <em>The Telegraph in America</em>', url: 'https://www.cambridge.org/' }
     ],
     'diana-cryptosystem': [
       { text: 'US Army FM 34-40-2 \u2014 Cryptanalysis (declassified editions)', url: 'https://armypubs.army.mil/' },
@@ -952,9 +966,9 @@
       { text: 'Wikipedia — Great Cipher (records the syllabic code and the “ignore the previous codegroup” trap)', url: 'https://en.wikipedia.org/wiki/Great_Cipher' }
     ],
     'amharic-ge-ez-ciphers': [
-      { text: 'Hammerschmidt, Ernst. <em>\u00c4thiopische Handschriften</em>', url: 'https://www.steiner-verlag.de/' },
-      { text: 'Hill Museum &amp; Manuscript Library \u2014 EMML Ethiopian collection', url: 'https://hmml.org/collections/ethiopian/' },
-      { text: 'Delamarter, Steve. <em>Catalogue of the Ethiopic Manuscripts</em> (Codices Aethiopici)', url: 'https://www.peeters-leuven.be/' },
+      { text: 'Six, Verona, with Ernst Hammerschmidt. <em>Äthiopische Handschriften 1: Die Handschriften der Staatsbibliothek Preußischer Kulturbesitz</em>', url: 'https://www.steiner-verlag.de/AEthiopische-Handschriften-1/9783515030366' },
+      { text: 'Hill Museum &amp; Manuscript Library — Ethiopia manuscript preservation overview', url: 'https://hmml.org/about/global-operations/Ethiopia/' },
+      { text: 'Haile, Getatchew, et al. <em>Catalogue of the Ethiopic Manuscript Imaging Project</em>, Vol. 1: Codices 1–105, Magic Scrolls 1–134 (2009)', url: 'https://wipfandstock.com/9781606088715/catalogue-of-the-ethiopic-manuscript-imaging-project/' },
       { text: 'Wikipedia \u2014 Ge\u02bcez script', url: 'https://en.wikipedia.org/wiki/Ge%CA%BDez_script' }
     ]
   };

@@ -64,12 +64,7 @@
     </p>
   </div>
 
-  <div class="honesty">
-    <strong>The whole point.</strong> Over the real numbers, addition on a curve
-    is smooth and geometric — you can see where a point is going. Over 𝔽ₚ, the
-    same rule sends points leaping around unpredictably. That unpredictability
-    <em>is</em> the security.
-  </div>
+  <div class="honesty"><strong>Arithmetic, not a security test.</strong> The real and finite-field pictures use related formulas, but apparent visual disorder does not prove discrete-log hardness. Curve choice, subgroup order, validation and implementation all matter.</div>
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§1</span><h2>A field with no infinity</h2></div>
@@ -81,11 +76,7 @@
       <em>field</em> rather than just a ring.
     </p>
     <div class="eq">𝔽ₚ = { 0, 1, 2, …, p−1 } &nbsp;with arithmetic mod p</div>
-    <p>
-      The same elliptic-curve equation, y² = x³ + ax + b, now asks: for which
-      pairs (x, y) in this finite world does the equation hold? The answer is a
-      finite set of points — no smooth curve, just dots.
-    </p>
+    <p>The same elliptic-curve equation, y² = x³ + ax + b, now asks which pairs (x, y) satisfy it modulo the prime. The group also includes an identity called the point at infinity; that identity is not an extra field element.</p>
   </section>
 
   <section class="exhibit">
@@ -145,14 +136,13 @@
       <div class="lab-hint">
         You can see <em>k</em> and where <em>kG</em> landed. The
         <span class="term">discrete log problem</span> is the reverse: given only
-        the landing spot, recover <em>k</em>. With thousands of points and no
-        pattern, there's nothing to do but search.
+        the landing spot, recover <em>k</em>. This tiny group is easy to search; the plot alone tells us nothing about cryptographic hardness.
       </div>
     </div>
 
     <div class="pull">
       Forward is a walk. Backward is a search of the whole field. That gap is
-      the entire fortress.
+      one algebraic ingredient in a secure protocol.
     </div>
   </section>
 
@@ -160,13 +150,7 @@
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
       <h3>This is the ground floor of ECC</h3>
-      <p>
-        Real elliptic-curve cryptography uses this exact machinery over a prime
-        with <strong>256 bits</strong> — a field with more elements than there
-        are atoms in the observable universe. Your ECDH shared secret is some
-        <em>kG</em>; your ECDSA signature proves you know a <em>k</em> without
-        revealing it. This exhibit is why it all works.
-      </p>
+      <p>Real elliptic-curve cryptography uses carefully selected large fields, curves and prime-order subgroups. For common 256-bit prime-order groups, generic discrete-log attacks take roughly the square root of the group order, not a search through every field element. These tiny plots are readily enumerable and demonstrate arithmetic, not security.</p>
       <p>
         <a href="../ciphers/aes.html">AES</a> uses a finite field too, but a
         different <em>kind</em> of one, and the distinction is worth drawing.
@@ -186,6 +170,7 @@
     </p>
   </section>
 
+  <p class="aside"><strong>Sources and scope:</strong> <a href="https://csrc.nist.gov/pubs/sp/800/186/final">NIST SP 800-186 (2023)</a> specifies recommended elliptic-curve domain parameters; the small groups here are teaching examples.</p>
   </main>
 
 

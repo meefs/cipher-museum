@@ -51,7 +51,7 @@
 
   // ---- Lagrange interpolation (Shamir's Secret Sharing) ----
   // Evaluate the unique polynomial through the given points at x = 0,
-  // all arithmetic mod p. points: [[x,y], ...]. Returns the secret f(0).
+  // all arithmetic mod p. points: [[x,y], ...]. Returns the secret f(0), or null when a denominator has no inverse.
   function lagrangeAtZero(points, p) {
     let secret = 0;
     for (let i = 0; i < points.length; i++) {
@@ -62,6 +62,7 @@
         den = mod(den * (points[i][0] - points[j][0]), p);
       }
       const inv = modInv(den, p);
+      if (inv === null) return null;
       secret = mod(secret + points[i][1] * mod(num * inv, p), p);
     }
     return secret;

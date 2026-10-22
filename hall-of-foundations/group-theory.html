@@ -66,7 +66,7 @@
 
   <div class="honesty">
     <strong>The unifying abstraction.</strong> Diffie–Hellman's clock,
-    elliptic-curve points, RSA's residues — these look different but are all
+    elliptic-curve points, RSA's invertible residues under multiplication — these look different but are all
     <em>groups</em>. Learn the vocabulary once and every scheme reads the same.
   </div>
 
@@ -110,12 +110,7 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§2</span><h2>Why cryptographers care about order</h2></div>
-    <p>
-      The <span class="term">order</span> of a generator is the size of the space
-      a secret can hide in. Too small, and an attacker just enumerates it. Real
-      schemes insist on generators of large prime order — hundreds of bits —
-      precisely so the "keep adding g" walk has nowhere small to get trapped.
-    </p>
+    <p>The order of an element is the number of additions needed to reach the identity again. Discrete-log protocols generally use large prime-order subgroups and validate public values. A large order is necessary but does not make every group secure.</p>
     <div class="eq">order of g = smallest k &gt; 0 with k·g ≡ 0 &nbsp;(divides n)</div>
   </section>
 
@@ -131,20 +126,12 @@
         <strong>generator and its order</strong>, every scheme in that family
         reads the same way.
       </p>
-      <p>
-        The family has an edge, though, and it is worth knowing where it falls.
-        The post-quantum standards are not built this way: ML-KEM and ML-DSA
-        rest on <a href="lattices-svp.html">lattice</a> problems over
-        <a href="polynomial-rings.html">polynomial rings</a>, and hash-based
-        signatures on nothing but a hash function. Those are rings and modules,
-        not cyclic groups with a generator. That is not a footnote &#8212; it is
-        the whole reason they survive a quantum computer, which breaks this
-        exhibit's structure specifically.
-      </p>
+      <p>Post-quantum standards use different assumptions: ML-KEM uses Module-LWE, ML-DSA uses module-lattice assumptions including Module-LWE and Module-SIS-related problems, and SLH-DSA uses hash-based constructions. Rings and modules also have underlying groups. Their expected quantum resistance is not proved merely by calling them something other than cyclic groups; it rests on the absence of efficient known attacks for the chosen problems and parameters.</p>
     </div>
     <p class="aside">Related: <a href="modular-arithmetic.html" style="color:var(--vermilion)">Modular Arithmetic</a> is this exhibit's multiplicative cousin.</p>
   </section>
 
+  <p class="aside"><strong>Sources and scope:</strong> NIST <a href="https://csrc.nist.gov/pubs/fips/203/final">FIPS 203</a>, <a href="https://csrc.nist.gov/pubs/fips/204/final">204</a> and <a href="https://csrc.nist.gov/pubs/fips/205/final">205</a> (2024).</p>
   </main>
 
 

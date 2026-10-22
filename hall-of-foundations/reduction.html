@@ -64,22 +64,11 @@
     </p>
   </div>
 
-  <div class="honesty">
-    <strong>The honest caveat, stated plainly.</strong> "Provably secure" never
-    means "unbreakable." It means "no easier to break than the underlying hard
-    problem." If that problem falls, so does the scheme. The proof moves the
-    risk; it doesn't erase it.
-  </div>
+  <div class="honesty"><strong>A conditional claim.</strong> A proof names an assumption, adversary model and quantitative reduction loss. It neither proves that assumption nor licenses reversing the reduction arrow.</div>
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§1</span><h2>The contrapositive machine</h2></div>
-    <p>
-      A <span class="term">reduction</span> is an argument by contradiction. To
-      show a scheme is at least as hard as factoring, you assume an attacker who
-      breaks the scheme — and then use that attacker as a tool to factor. Since
-      factoring is believed impossible-in-practice, the attacker must be too.
-      Trace the logic below.
-    </p>
+    <p>Suppose a precisely defined reduction could turn a successful scheme-breaker into a solver for a specified hard problem. If the transformation preserved sufficient running time and success probability, the problem's assumed hardness would bound the attacker. The animation is a hypothetical logic diagram, not an implementation or a proof that RSA inversion is equivalent to factoring.</p>
 
     <div class="lab">
       <div class="lab-stage">
@@ -102,49 +91,26 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§2</span><h2>The chain of trust</h2></div>
-    <p>
-      This is why the whole edifice hangs together. Each scheme reduces to a hard
-      problem; break the scheme and you'd break the problem beneath it. The
-      difficulty flows downhill from a small set of assumptions everyone watches
-      closely.
-    </p>
+    <p>The direction of the implication matters. A reduction using an attacker to solve a problem supports a conditional security claim. The opposite direction&mdash;using a problem solver to break a scheme&mdash;shows a possible attack but is not that security proof. A broken assumption can invalidate a proof without automatically yielding an attack on every scheme.</p>
     <ul class="ladder">
-      <li><span class="rung">RSA<span>reduces to</span></span><span class="gloss">the hardness of factoring large integers.</span></li>
-      <li><span class="rung">ECC · DH<span>reduces to</span></span><span class="gloss">the discrete logarithm problem in a group.</span></li>
-      <li><span class="rung">Kyber · Dilithium<span>reduces to</span></span><span class="gloss">worst-case lattice problems like the SVP.</span></li>
+      <li><span class="rung">RSA<span>known attack direction</span></span><span class="gloss">factoring the modulus breaks RSA. General RSA inversion is not known to be equivalent to factoring.</span></li>
+      <li><span class="rung">ECC · DH<span>scheme-specific assumptions</span></span><span class="gloss">CDH, DDH or other group assumptions, according to the protocol and security goal. A discrete-log solver is enough to break DH.</span></li>
+      <li><span class="rung">ML-KEM · ML-DSA<span>module-lattice assumptions</span></span><span class="gloss">specific Module-LWE and Module-SIS-related problems and additional construction assumptions; not an equivalence to arbitrary exact SVP.</span></li>
     </ul>
-    <div class="pull">
-      A proof of security is a promise: to break me, you must first break
-      something older and better-studied than me.
-    </div>
+    <div class="pull">A reduction says how an attacker would imply a solver under stated conditions. It does not require an attacker to literally run that solver first.</div>
   </section>
 
   <section class="exhibit">
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
       <h3>Why anyone trusts a primitive</h3>
-      <p>
-        When a <em>public-key</em> scheme claims a security level, that claim is
-        a reduction to one of the hard problems in this hall. It's also why
-        <strong>assumptions matter more than cleverness</strong>: a scheme with a
-        tight reduction to lattices is trusted not because it looks complex, but
-        because its difficulty is anchored to a problem the world has failed to
-        solve for decades.
-      </p>
-      <p>
-        Symmetric cryptography earns trust the other way, and the contrast is
-        the honest end of this exhibit. There is no reduction proving
-        <a href="../ciphers/aes.html">AES</a> secure &#8212; no hard problem
-        underneath it to reduce to. What AES has instead is thirty years of the
-        world's best cryptanalysts attacking it in public and failing to find
-        anything close to practical. That is evidence, not proof, and it is a
-        genuinely different currency from the arguments on this page. Both kinds
-        of trust are load-bearing; neither is a substitute for the other.
-      </p>
+      <p>Public-key security estimates combine formal definitions, conditional reductions and concrete cryptanalysis. A reduction has an attack model, parameter restrictions and a loss in time or success probability; it may not be tight. No reduction proves the underlying hardness assumption itself.</p>
+      <p>AES is supported by decades of public cryptanalysis rather than a proof from an independently established hard problem. Higher-level symmetric constructions can still have reductions to assumptions about their block cipher or hash. Both the mathematical model and practical attack evidence matter.</p>
     </div>
     <p class="aside">Foundations referenced here: <a href="one-way-function.html" style="color:var(--vermilion)">One-Way Functions</a>, <a href="lattices-svp.html" style="color:var(--vermilion)">Lattices &amp; the SVP</a>.</p>
   </section>
 
+  <p class="aside"><strong>Sources and scope:</strong> <a href="https://crypto.stanford.edu/~dabo/cryptobook/">Boneh and Shoup, A Graduate Course in Applied Cryptography, v0.6, Chapter 10</a>; NIST <a href="https://csrc.nist.gov/pubs/fips/203/final">FIPS 203</a> and <a href="https://csrc.nist.gov/pubs/fips/204/final">FIPS 204</a>.</p>
   </main>
 
 

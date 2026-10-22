@@ -13,7 +13,7 @@
 (function (global) {
 
   /* English letter frequencies as percentages, index 0=A … 25=Z.
-     Source: Lewand / Norvig approximations. */
+     Fixed rounded English frequency heuristic; not a calibrated language probability. */
   var ENG_PCT = [
     8.167, 1.492, 2.782, 4.253,12.702, 2.228,
     2.015, 6.094, 6.966, 0.153, 0.772, 4.025,

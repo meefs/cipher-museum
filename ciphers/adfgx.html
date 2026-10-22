@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADFGX Cipher — The Cipher Museum</title>
-    <meta name="description" content="ADFGX cipher — March 1918 German field cipher pairing a 5x5 Polybius square with keyed columnar transposition. Broken by Painvin three months later.">
+    <meta name="description" content="Germany’s ADFGX field cipher appeared in March 1918; Painvin obtained solutions in April. Its square-plus-transposition construction required continuing key recovery.">
   <meta property="og:title" content="ADFGX Cipher — The Cipher Museum">
-  <meta property="og:description" content="ADFGX cipher — March 1918 German field cipher pairing a 5x5 Polybius square with keyed columnar transposition. Broken by Painvin three months later.">
+  <meta property="og:description" content="Germany’s ADFGX field cipher appeared in March 1918; Painvin obtained solutions in April. Its square-plus-transposition construction required continuing key recovery.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/adfgx.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,14 +15,14 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ADFGX Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="ADFGX cipher — March 1918 German field cipher pairing a 5x5 Polybius square with keyed columnar transposition. Broken by Painvin three months later.">
+  <meta name="twitter:description" content="Germany’s ADFGX field cipher appeared in March 1918; Painvin obtained solutions in April. Its square-plus-transposition construction required continuing key recovery.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/adfgx.html">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="stylesheet" href="../css/museum.css">
-  
+
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -67,7 +67,7 @@
   <h1 class="page-title">ADFGX Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
   <p class="page-tagline">Germany's front-line WWI cipher — broken in weeks by one exhausted Frenchman</p>
-  <p class="exhibit-status-note">Georges Painvin · 1918 · Differential frequency analysis</p>
+  <p class="exhibit-status-note">Painvin and other Allied analysts used repeated traffic, statistics and transposition analysis in 1918.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Lieutenant Fritz Nebel · German Army</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">March 1918</span></div>
@@ -89,7 +89,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>As Germany prepared its 1918 Spring Offensive, Colonel Fritz Nebel designed the ADFGX cipher for front-line use. The letters A, D, F, G, X were specifically chosen because they sound very distinct in Morse code — reducing the risk of garbled transmissions misreading one letter as another.</p><p style="margin-top:1rem;">French cryptanalyst Georges Painvin broke the cipher within weeks of its introduction, despite working under extreme pressure with limited ciphertext. When ADFGVX replaced it in June 1918, Painvin broke that version too — an achievement that may have changed the outcome of WWI.</p></div>
+      <div class="panel-body"><p>As Germany prepared its 1918 Spring Offensive, Fritz Nebel designed the ADFGX cipher for front-line use. The letters A, D, F, G, X were specifically chosen because they sound very distinct in Morse code — reducing the risk of garbled transmissions misreading one letter as another.</p><p style="margin-top:1rem;">French cryptanalyst Georges Painvin broke the cipher within weeks of its introduction, despite working under extreme pressure with limited ciphertext. When ADFGVX replaced it in June 1918, Painvin broke that version too — an achievement that may have changed the outcome of WWI.</p></div>
     </div>
 
     <div class="panel">
@@ -139,7 +139,7 @@ HELLO → FF DX FX FX GF → columnar → ciphertext</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Painvin's Differential Analysis (1918)</div><div class="attack-diff">Complexity: Hard · Broken under wartime pressure</div><p class="attack-desc">Painvin exploited repeated message headers and known message structures (military traffic had predictable formats) to identify probable plaintext positions. He used differential frequency analysis across multiple messages with the same key to gradually recover first the transposition key, then the substitution square. The attack required enormous amounts of intercepted traffic and days of continuous work.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Painvin's Differential Analysis (1918)</div><div class="attack-diff">Complexity: Hard · Broken under wartime pressure</div><p class="attack-desc">Painvin used relationships among intercepted messages and hypotheses about their structure to recover keys. The work required suitable traffic, not a guaranteed attack from one short message. His own later account distinguishes particular recovered keys from a universal break of all ADFGX traffic.</p></div></div>
     </div>
 
     <div class="panel">
@@ -156,7 +156,7 @@ HELLO → FF DX FX FX GF → columnar → ciphertext</pre>
 
   </div>
   <div class="exhibit-side">
-    
+
     <div class="panel" style="border-color:var(--gold-b);">
       <div class="panel-head" style="background:var(--gold-glow);border-color:var(--gold-b);">
         <span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-swords"/></svg></span><span class="panel-title" style="color:var(--gold);">Quick Facts</span>
@@ -167,7 +167,7 @@ HELLO → FF DX FX FX GF → columnar → ciphertext</pre>
             <tr><td>Exhibit</td><td>20 of 169</td></tr>
             <tr><td>Era</td><td>WWI · March 1918</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
-            <tr><td>Inventor</td><td>Colonel Fritz Nebel · German Army</td></tr>
+            <tr><td>Inventor</td><td>Fritz Nebel · German Army</td></tr>
             <tr><td>Year</td><td>March 1918</td></tr>
             <tr><td>Key Type</td><td>Polybius key square + columnar key</td></tr>
             <tr><td>Broken By</td><td>Georges Painvin · 1918 · Differential frequency analysis</td></tr>

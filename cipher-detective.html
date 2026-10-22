@@ -500,9 +500,9 @@
     <h3>What the Detective can&#8217;t tell you</h3>
     <ul>
       <li>Short ciphertext (under ~60 characters) makes statistical analysis unreliable.</li>
-      <li>Non-English plaintext breaks all English-based frequency analysis.</li>
-      <li>Modern ciphers (AES, ChaCha20) produce statistically random output; the Detective will report &#8220;random&#8221; but cannot identify <em>which</em> modern cipher.</li>
-      <li>Layered ciphers (VIC, Purple, multi-stage) defeat single-pass identification.</li>
+      <li>English-language scores can mislead on non-English plaintext.</li>
+      <li>Random-looking data may be encrypted, compressed or simply random. These letter-based heuristics cannot reliably identify a modern cipher, establish its security or prove that a sample is encrypted.</li>
+      <li>Layered constructions and simplified machine models can confound single-pass identification.</li>
       <li>The Detective&#8217;s <em>Auto-Solve</em> can recover plaintext for Caesar, ROT13, Atbash, Vigen&egrave;re, monoalphabetic substitution, and columnar transposition. For richer hand-tools and other ciphers, open the <a href="lab/workbench.html">Codebreaker&#8217;s Workbench</a>.</li>
     </ul>
   </div>

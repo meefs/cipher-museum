@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wadsworth Cipher — The Cipher Museum</title>
-  <meta name="description" content="Wadsworth's cipher device (1817) — Colonel Decius Wadsworth's two geared disks, 33 outer positions against 26 inner letters, the first working progressive cipher machine. Broken by a ciphertext-only hill-climbing attack in 2020.">
+  <meta name="description" content="Wadsworth’s 1817 device uses geared disks with 33 and 26 positions. A published 2020 ciphertext-only search studied key recovery for this historical design.">
   <meta property="og:title" content="Wadsworth Cipher — The Cipher Museum">
-  <meta property="og:description" content="Wadsworth's cipher device (1817) — Colonel Decius Wadsworth's two geared disks, 33 outer positions against 26 inner letters, the first working progressive cipher machine. Broken by a ciphertext-only hill-climbing attack in 2020.">
+  <meta property="og:description" content="Wadsworth’s 1817 device uses geared disks with 33 and 26 positions. A published 2020 ciphertext-only search studied key recovery for this historical design.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/wadsworth-cipher.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Wadsworth Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Wadsworth's cipher device (1817) — Colonel Decius Wadsworth's two geared disks, 33 outer positions against 26 inner letters, the first working progressive cipher machine. Broken by a ciphertext-only hill-climbing attack in 2020.">
+  <meta name="twitter:description" content="Wadsworth’s 1817 device uses geared disks with 33 and 26 positions. A published 2020 ciphertext-only search studied key recovery for this historical design.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/wadsworth-cipher.html">
@@ -161,7 +161,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Charles Wheatstone's Cryptograph is the famous one — displayed, reproduced, written about. Wadsworth's device did the same job half a century earlier and did one thing distinctly better. Wheatstone geared 27 outer positions against 26 inner; Wadsworth geared 33 against 26. Both mismatches produce a cipher whose alphabet keeps advancing, but 33 and 26 share no common factor and sit far enough apart that a given plaintext letter must exhaust all thirty-three of its possible substitutions before any of them can recur. That is a deliberate piece of design, and it is the more thoughtful of the two.</p>
+      <p>Wadsworth’s device used 33 outer positions against 26 inner positions; Wheatstone’s better-known design used 27 against 26. In the arithmetic model here, repeatedly encrypting the same letter consecutively advances the outer position by 26 each time, visiting all 33 positions before repeating. Intervening different letters change the advance, so this is not a guarantee about arbitrary separated occurrences of a letter.</p>
     </div>
 
     <div class="panel">
@@ -209,7 +209,7 @@ To encipher one letter:
           </tbody>
         </table>
         <p style="margin-top:1rem;">Ciphertext: <code>BG8U4B</code>. Look at the two <em>T</em>s — <code>G</code> and <code>8</code>. Look at the two <em>A</em>s — <code>B</code> and <code>U</code>. Frequency analysis has nothing to count.</p>
-        <p style="margin-top:1rem;">Note also the honest wrinkle: the final <em>K</em> also lands on <code>B</code>, colliding with the first <em>A</em>. The guarantee is per plaintext letter, not across the whole message — different letters may share a ciphertext symbol. And because one turn moves the outer disk by between 1 and 26 teeth, seven of its thirty-three positions are out of reach from wherever it currently stands — a different seven at every step.</p>
+        <p style="margin-top:1rem;">Note also the honest wrinkle: the final <em>K</em> also lands on <code>B</code>, colliding with the first <em>A</em>. The 33-symbol cycle applies to consecutive repetitions of a letter, not arbitrary occurrences throughout a message — different letters may share a ciphertext symbol. And because one turn moves the outer disk by between 1 and 26 teeth, seven of its thirty-three positions are out of reach from wherever it currently stands — a different seven at every step.</p>
         <p style="margin-top:1rem;">Feed the letter <em>A</em> to the device forty times and, after the first, the outer disk advances twenty-six positions every time — a repeated letter always costs a full revolution of the inner disk. Because 26 and 33 are coprime, those advances walk every one of the thirty-three outer symbols before the sequence repeats — on the thirty-fourth <em>A</em>, not before. The disks themselves only return to their common starting alignment after 858 teeth, the least common multiple of 26 and 33.</p>
       </div>
     </div>
@@ -222,7 +222,7 @@ To encipher one letter:
           <div class="attack-diff">Complexity: tractable on a modern computer — no known plaintext required</div>
           <p class="attack-desc">In 2020 Thomas Kaeding published an automated attack covering this whole family of devices — what he calls "cipher clocks", the machines built from revolving hands or rotating concentric disks: Wheatstone's Cryptograph, Wadsworth's device, and the Urkryptografen. The key observation is structural. The action of a cipher clock <em>factors</em>: it is a stream cipher followed by a monoalphabetic substitution. Once you see it that way, the disk arrangement stops being an unbreakable physical secret and becomes an ordinary substitution sitting on top of a known, deterministic stream — and substitutions fall to search. Kaeding hill-climbs the substitution against a fitness measure of how well the result looks like the stream component alone, with no crib and no known plaintext.</p>
         </div>
-        <p style="margin-top:1rem;font-size:.92rem;line-height:1.7;">The techniques are ones this museum covers in their own right: see <a href="../cryptanalysis.html#hill-climbing">hill climbing</a> and <a href="../cryptanalysis.html#simulated-annealing">simulated annealing</a>. The lesson generalises past this device. A long period is not the same thing as a large search space. Wadsworth bought 858 teeth of non-repetition, and that defeats the pencil-and-paper cryptanalysis of his own century completely — but it never hid the fact that the machine's output is a fixed function of a small, searchable secret.</p>
+        <p style="margin-top:1rem;font-size:.92rem;line-height:1.7;">Kaeding’s attack illustrates why a mechanical cycle length is not a security level. The disk arrangement and deterministic movement provide structure for automated search. Nothing here establishes that Wadsworth’s design defeated all nineteenth-century pencil-and-paper analysis.</p>
       </div>
     </div>
 
@@ -277,7 +277,7 @@ To encipher one letter:
             <tr><td>1860s</td><td><a href="../ciphers/wheatstone.html">Wheatstone</a> — two geared hands on a clock face, 26:27</td></tr>
           </tbody>
         </table>
-        <p style="font-size:.92rem;line-height:1.7;margin-top:.8rem;">That is a sequence, not a lineage. The museum makes <em>no</em> claim that any of these inventors drew on an earlier one. Jefferson's wheel cipher was never published and lay unread for over a century, so a derivation from it in 1817 would need evidence that the sources here do not provide; Wheatstone's device is generally treated as an independent invention. Where later devices are demonstrably descended from earlier ones — as with Bazeries and the M-94 from Jefferson's wheel — this museum says so and cites it. Here it does not.</p>
+        <p style="font-size:.92rem;line-height:1.7;margin-top:.8rem;">The chronology does not by itself establish transmission of ideas. Jefferson’s unpublished wheel, Wadsworth’s device, Bazeries’s later cylinder and the M-94 should not be labelled a documented direct lineage without evidence; similar mechanisms can be independently developed.</p>
       </div>
     </div>
 

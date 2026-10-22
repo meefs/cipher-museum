@@ -70,16 +70,15 @@
     if (_loaded) { cb(); return; }
     if (typeof fetch === 'function') {
       fetch('data/detective-challenges.json')
-        .then(function (r) { return r.json(); })
+        .then(function (r) { if (r.ok === false) throw new Error('Challenge data unavailable'); return r.json(); })
         .then(function (data) {
           _challenges = (data && data.challenges) ? data.challenges : [];
           _loaded = true;
           cb();
         })
-        .catch(function () {
-          _challenges = [];
-          _loaded = true;
-          cb();
+        .catch(function (error) {
+          _loaded = false;
+          cb(error);
         });
     } else {
       /* Node.js test environment — data injected via DetectiveChallenges._inject() */
@@ -327,10 +326,15 @@
 
   /* ─── Public: init ───────────────────────────────────────────── */
   function init() {
-    loadData(function () {
+    loadData(function (error) {
       var container = el('det-challenge-mode');
       if (!container) return;
       container.hidden = false;
+      if (error) {
+        container.innerHTML = '<p role="status">Challenges could not be loaded. Check your connection and try again.</p><button id="det-challenge-retry" class="pb-btn">Retry</button>';
+        el('det-challenge-retry').addEventListener('click', init);
+        return;
+      }
       renderModeUI();
     });
   }

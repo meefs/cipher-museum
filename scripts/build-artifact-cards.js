@@ -123,7 +123,7 @@ function main(check = false) {
     'diffie-hellman': {
       keyIdea: 'Two parties derive a shared secret over a public channel; nothing is encrypted',
       keyType: 'No key input — the protocol produces one',
-      usedBy: 'Every TLS handshake negotiating forward secrecy'
+      usedBy: 'Many authenticated key-agreement protocols, including ephemeral-DH modes of TLS'
     },
     'sha256': {
       keyIdea: 'One-way compression of any input to a fixed 256-bit digest; not reversible by design',
@@ -131,17 +131,17 @@ function main(check = false) {
       usedBy: 'Certificate chains, Bitcoin mining, file integrity, password storage (via KDFs)'
     },
     'ecdsa': {
-      keyIdea: 'Proves authorship of a message hash using a private scalar on an elliptic curve',
+      keyIdea: 'Verifies a signature under an elliptic-curve public key; identity requires authenticating that key',
       keyType: 'Private scalar d with public point Q = dG',
       usedBy: 'TLS certificates, Bitcoin and Ethereum transactions, secure-boot chains'
     },
     'shamir-secret-sharing': {
       keyIdea: 'Hides a secret as a polynomial constant term; any k of n points recover it, k−1 reveal nothing',
       keyType: 'No key — the secret is the object being split',
-      usedBy: 'DNSSEC root key ceremonies, HSM master key custody, cryptocurrency custodians'
+      usedBy: 'Threshold backup and custody designs; deployment details vary'
     },
     'zero-knowledge-proofs': {
-      keyIdea: 'Demonstrates knowledge of a secret without transmitting any part of it',
+      keyIdea: 'Proves a statement without revealing the witness beyond what the statement and model permit',
       keyType: 'Witness known only to the prover',
       usedBy: 'Zcash shielded transactions, Ethereum rollups, anonymous credential systems'
     }
@@ -167,9 +167,9 @@ function main(check = false) {
       era: eraFromHtml(html),
       family,
       region: 'Global',
-      usedBy: 'Historical operators, states, or communities documented for this exhibit',
+      usedBy: 'See the exhibit for historical participants and source evidence',
       keyType: keyTypeFromHtml(html),
-      keyIdea: `${family} transformation of plaintext into protected form`,
+      keyIdea: stripTags(between(html, /<meta name="description" content="([^"]*)"/i, "See the exhibit for its mechanism and limitations.")),
       trust,
       securityFailure: trust ? (entry.note || 'See the exhibit’s documented attacks and limitations.') : null,
       modernLesson: lessonFromHtml(html)

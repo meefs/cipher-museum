@@ -16,6 +16,7 @@
   // Shortest nonzero lattice vector by exhaustive search over |i|,|j| <= R.
   // Returns { x, y, i, j, len } or null if the lattice is degenerate.
   function shortestVector(b1, b2, R) {
+    if (det2(b1, b2) === 0) return null;
     R = R || 7;
     var best = Infinity, bv = null;
     for (var i = -R; i <= R; i++) {
@@ -62,14 +63,14 @@
   function lweRecover(v, e, b1, b2) {
     var t = { x: v.x + e.x, y: v.y + e.y };
     var r = babaiRound(t, b1, b2);
-    return { recovered: r, ok: (r.x === v.x && r.y === v.y), noisyTarget: t };
+    return { recovered: r, ok: (r !== null && r.x === v.x && r.y === v.y), noisyTarget: t };
   }
 
   // Whether Babai in this basis returns the TRUE closest point for target t.
   function babaiIsCorrect(t, b1, b2) {
     var r = babaiRound(t, b1, b2);
     var c = closestPoint(t);
-    return r.x === c.x && r.y === c.y;
+    return r !== null && r.x === c.x && r.y === c.y;
   }
 
   var api = {

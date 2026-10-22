@@ -84,7 +84,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Félix Delastelle’s Bifid cipher was the first to combine substitution and transposition into a single operation, creating genuine interdependence between letter positions — a property Claude Shannon would later formalize as ‘diffusion.’</p>
+      <p>Delastelle’s Bifid combines coordinate substitution with transposition, spreading each letter’s coordinate information across positions. This is a useful early illustration of diffusion; it is not established here as the first system ever to combine substitution and transposition.</p>
     </div>
 
     <div class="panel">
@@ -171,7 +171,7 @@ Cipher: HKNFO</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Statistical Cryptanalysis + Hill Climbing</div><div class="attack-diff">Complexity: Moderate-Hard</div><p class="attack-desc">The Bifid's fractionation mixes coordinate information across positions, making simple frequency analysis ineffective. However, because the period is the message length, modern hill climbing with bigram/trigram scoring can recover the key square. The attack requires a few hundred characters of ciphertext to work reliably.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Statistical Cryptanalysis + Hill Climbing</div><div class="attack-diff">Complexity: Moderate-Hard</div><p class="attack-desc">Bifid mixes coordinate information within a chosen period. Some variants use fixed-size groups; this demo uses its documented grouping rule. Computer attacks can search candidate squares using language scores, but success depends on period, text length, key conventions, and search effort. No fixed few-hundred-character guarantee applies universally.</p></div></div>
     </div>
 
     <div class="panel">

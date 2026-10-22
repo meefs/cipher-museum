@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIGABA (ECM Mark II) — The Cipher Museum</title>
-  <meta name="description" content="SIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.">
+  <meta name="description" content="SIGABA used fifteen rotors in cipher, control and index banks. No successful enemy wartime cryptanalytic break is publicly documented; the widget is a simplified model.">
   <meta property="og:title" content="SIGABA (ECM Mark II) — The Cipher Museum">
-  <meta property="og:description" content="SIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.">
+  <meta property="og:description" content="SIGABA used fifteen rotors in cipher, control and index banks. No successful enemy wartime cryptanalytic break is publicly documented; the widget is a simplified model.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/sigaba.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SIGABA (ECM Mark II) — The Cipher Museum">
-  <meta name="twitter:description" content="SIGABA (ECM Mark II) (1940) — The American WWII rotor machine the Axis never broke — fifteen rotors, irregular stepping. Hall VII of The Cipher Museum.">
+  <meta name="twitter:description" content="SIGABA used fifteen rotors in cipher, control and index banks. No successful enemy wartime cryptanalytic break is publicly documented; the widget is a simplified model.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/sigaba.html">
@@ -79,13 +79,13 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Enigma stepped its rotors like a car odometer: predictable, regular, exploitable. Rowlett's insight in the late 1930s was that the rotor advance itself should be cryptographically driven. SIGABA added two extra rotor banks whose only job was to decide, on each keystroke, which of the five <em>cipher</em> rotors should step — sometimes one, sometimes four, never the same pattern twice in any reasonable interval. That single design choice, combined with rotors that could be inserted in either direction, made SIGABA the most secure operational cipher machine of WWII.</p>
+      <p>SIGABA used separate control and index rotor banks to decide which cipher rotors advanced. Individual stepping patterns can repeat; the design does not promise that no pattern occurs twice. Its operational record differs from a mathematical proof of security, and standard Enigma stepping itself includes a double-step rather than being a perfect odometer.</p>
       <p>In the public record, this system was never publicly broken by cryptanalysis in wartime service. That historical record does not establish security today; this obsolete system is presented for historical study.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>SIGABA was the joint Army/Navy successor to a tangle of incompatible 1930s machines (M-134, the Navy's CSP-889). Friedman and Rowlett at the SIS provided the analytical work; Safford's OP-20-G added the index permuter. About 10,000 units were built — they were heavy, expensive, and required two operators. The machine handled all US strategic Army and Navy traffic in the European and Pacific theatres. No SIGABA traffic is known to have been read by the Axis. The machine remained classified until 1996, decades after its retirement; modern cryptanalytic analyses (Stamp, Chan; Lee 2000s) suggest SIGABA's effective key space is around 2<sup>95</sup>, well beyond what 1940s electromechanics could exhaustively search.</p></div>
+      <div class="panel-body"><p>SIGABA was used for important American military communications during World War II. Its five cipher rotors were controlled by two additional banks of five rotors. No successful Axis cryptanalytic reading is established in the public record cited here. Numbers describing possible settings are not automatically equivalent to bits of attack resistance.</p></div>
     </div>
 
     <div class="panel">
@@ -99,7 +99,7 @@
         <div class="attack-panel">
           <div class="attack-name">Why It Held</div>
           <div class="attack-diff">Complexity: ~2<sup>95</sup> effective key space</div>
-          <p class="attack-desc">Enigma fell to two structural weaknesses: regular stepping (so the position of each rotor was predictable as a function of message length) and the reflector (which guaranteed no letter encoded to itself, providing the famous &lsquo;I/I&rsquo; crib elimination). SIGABA has irregular stepping by construction, no reflector, and no plugboard self-pairing constraint. The Bombe-style menu-and-stepping attack that worked on Enigma simply has nothing to grip. Modern (post-2000) academic analyses confirm that even with full machine knowledge, the search remains intractable for 1940s computing. SIGABA is the rare WWII machine that actually was as good as its designers claimed.</p>
+          <p class="attack-desc">SIGABA differs from Enigma in both stepping and signal path, including the absence of an Enigma-style reflector. Those differences matter to attacks. They do not justify saying that analysis has “nothing to grip,” or that absence of a wartime break proves a machine secure for later use.</p>
         </div>
       </div>
     </div>

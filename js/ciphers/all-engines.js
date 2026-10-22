@@ -1,8 +1,8 @@
 /**
  * THE CIPHER MUSEUM — All Cipher Engines
- * Complete implementations for every cipher exhibit (88 engines across the 167-exhibit
- * collection; the remaining exhibits are biographies, context
- * pages, and unsolved/visualization-only widgets).
+ * Shared cipher implementations and explicitly scoped teaching models.
+ * See docs/ENGINE_INVENTORY.md for each engine's domain and evidence level;
+ * reproducible model output is not proof of historical-machine fidelity.
  */
 'use strict';
 
@@ -18,15 +18,22 @@ cipherMuseumGlobal.CipherEngines = (() => {
     const parsed = Number.parseInt(value, 10);
     return Number.isSafeInteger(parsed) && parsed >= min && parsed <= max ? parsed : fallback;
   };
-  const secureRandomLetters = length => {
+  const secureRandomBytes = length => {
     const crypto = globalThis.crypto;
     if (!crypto || typeof crypto.getRandomValues !== 'function') {
       throw new Error('Secure random generator unavailable');
     }
+    const bytes = new Uint8Array(length);
+    for (let offset = 0; offset < length; offset += 65536) {
+      crypto.getRandomValues(bytes.subarray(offset, Math.min(offset + 65536, length)));
+    }
+    return bytes;
+  };
+  const secureRandomLetters = length => {
     let result = '';
     while (result.length < length) {
-      const bytes = new Uint8Array(Math.max(32, (length - result.length) * 2));
-      crypto.getRandomValues(bytes);
+      // Web Crypto rejects any single request larger than 65,536 bytes.
+      const bytes = secureRandomBytes(Math.min(65536, Math.max(32, (length - result.length) * 2)));
       for (const byte of bytes) {
         if (byte < 234) result += A[byte % 26];
         if (result.length === length) break;
@@ -217,10 +224,17 @@ cipherMuseumGlobal.CipherEngines = (() => {
   /* ─── 6. Hill ─── */
   const hill = (() => {
     function modInv(a, m) { a = mod(a, m); for (let x = 1; x < m; x++) if ((a * x) % m === 1) return x; return -1; }
+    function matrix(keyStr) {
+      const parts = String(keyStr || '3,3,2,5').split(',');
+      if (parts.length !== 4 || parts.some(v => v.trim() === '' || !Number.isSafeInteger(Number(v)))) return null;
+      // Reduce before multiplying: products of individually safe integers need
+      // not themselves be safe integers, while residues 0..25 are exact.
+      return parts.map(v => mod(Number(v), 26));
+    }
     return {
       encode: (text, keyStr) => {
-        const t = escapeFillers(clean(text)); const k = (keyStr || '3,3,2,5').split(',').map(Number);
-        if (k.length < 4 || k.some(v => !Number.isFinite(v))) return 'Need 4 numbers (2x2 matrix)';
+        const t = escapeFillers(clean(text)); const k = matrix(keyStr);
+        if (!k) return 'Need 4 safe integers (2x2 matrix)';
         if (modInv(mod(k[0] * k[3] - k[1] * k[2], 26), 26) < 0) return 'Matrix not invertible mod 26';
         const padded = t.length % 2 ? t + 'X' : t; let r = '';
         for (let i = 0; i < padded.length; i += 2) {
@@ -230,8 +244,9 @@ cipherMuseumGlobal.CipherEngines = (() => {
         return r;
       },
       decode: (text, keyStr) => {
-        const t = clean(text); const k = (keyStr || '3,3,2,5').split(',').map(Number);
-        if (k.length < 4) return 'Need 4 numbers';
+        const t = clean(text); const k = matrix(keyStr);
+        if (!k) return 'Need 4 safe integers (2x2 matrix)';
+        if (t.length % 2) return 'Ciphertext must contain complete two-letter blocks';
         const det = mod(k[0] * k[3] - k[1] * k[2], 26); const di = modInv(det, 26);
         if (di < 0) return 'Matrix not invertible mod 26';
         const inv = [mod(k[3] * di, 26), mod(-k[1] * di, 26), mod(-k[2] * di, 26), mod(k[0] * di, 26)];
@@ -492,6 +507,12 @@ cipherMuseumGlobal.CipherEngines = (() => {
   /* ─── 19. Trifid ─── */
   const trifid = (() => {
     const alpha27 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ+';
+    function parsePeriod(period) {
+      if (period === undefined || period === null || period === '') return 5;
+      const value = Number(period);
+      if (!Number.isSafeInteger(value) || value < 1) throw new Error('Trifid period must be a positive safe integer.');
+      return value;
+    }
     function makeGrid(key) {
       const k = clean(key || 'FELIX') + '+'; const seen = new Set(); let grid = '';
       for (const c of k) if (!seen.has(c)) { seen.add(c); grid += c; }
@@ -505,7 +526,7 @@ cipherMuseumGlobal.CipherEngines = (() => {
     return {
       encode: (text, key, period) => {
         const t = clean(text).replace(/[^A-Z]/g, ''), grid = makeGrid(key);
-        const per = parseInt(period) || 5;
+        const per = parsePeriod(period);
         let result = '';
         for (let s = 0; s < t.length; s += per) {
           const block = t.substr(s, per);
@@ -518,7 +539,7 @@ cipherMuseumGlobal.CipherEngines = (() => {
       },
       decode: (text, key, period) => {
         // Trifid alphabet includes '+' so we cannot use the global clean() which strips non-letters.
-        const t = (text || '').toUpperCase().replace(/[^A-Z+]/g, ''), grid = makeGrid(key), per = parseInt(period) || 5;
+        const t = (text || '').toUpperCase().replace(/[^A-Z+]/g, ''), grid = makeGrid(key), per = parsePeriod(period);
         let result = '';
         for (let s = 0; s < t.length; s += per) {
           const block = t.substr(s, per), blen = block.length;
@@ -1098,32 +1119,26 @@ cipherMuseumGlobal.CipherEngines = (() => {
       const t = escapeFillers(clean(text));
       const cols = boundedInt(key, 5, 2, 10000);
       const rows = Math.ceil(t.length / cols);
-      const grid = [];
-      let idx = 0;
-      for (let r = 0; r < rows; r++) {
-        grid[r] = [];
-        for (let c = 0; c < cols; c++) grid[r][c] = idx < t.length ? t[idx++] : 'X';
-      }
-      let result = '', r = 0, c = 0, dir = 1;
+      // Read the route directly from a flat row-major message. Tens of
+      // thousands of tiny row arrays create avoidable allocation/GC pressure.
+      const result = [];
       for (let col = 0; col < cols; col++) {
-        if (col % 2 === 0) for (let row = 0; row < rows; row++) result += grid[row][col];
-        else for (let row = rows - 1; row >= 0; row--) result += grid[row][col];
+        if (col % 2 === 0) for (let row = 0; row < rows; row++) result.push(t[row * cols + col] || 'X');
+        else for (let row = rows - 1; row >= 0; row--) result.push(t[row * cols + col] || 'X');
       }
-      return result;
+      return result.join('');
     },
     decode: (text, key) => {
       const t = clean(text);
       const cols = boundedInt(key, 5, 2, 10000);
       const rows = Math.ceil(t.length / cols);
-      const grid = Array.from({ length: rows }, () => Array(cols).fill(''));
+      const grid = Array(rows * cols).fill('');
       let idx = 0;
       for (let col = 0; col < cols; col++) {
-        if (col % 2 === 0) for (let row = 0; row < rows; row++) { if (idx < t.length) grid[row][col] = t[idx++]; }
-        else for (let row = rows - 1; row >= 0; row--) { if (idx < t.length) grid[row][col] = t[idx++]; }
+        if (col % 2 === 0) for (let row = 0; row < rows; row++) { if (idx < t.length) grid[row * cols + col] = t[idx++]; }
+        else for (let row = rows - 1; row >= 0; row--) { if (idx < t.length) grid[row * cols + col] = t[idx++]; }
       }
-      let result = '';
-      for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) result += grid[r][c];
-      return unescapeFillers(result.replace(/X+$/, ''));
+      return unescapeFillers(grid.join('').replace(/X+$/, ''));
     }
   }))();
 
@@ -1277,8 +1292,10 @@ cipherMuseumGlobal.CipherEngines = (() => {
         let generatedKey = '';
         if (keyBytes.length > 0 && keyBytes.length < plainBytes.length) return 'Key must be at least as long as message';
         if (!keyBytes.length && plainBytes.length) {
-          generatedKey = secureRandomLetters(plainBytes.length);
-          keyBytes = parseKey(generatedKey);
+          // A bytewise XOR pad needs uniformly sampled bytes, not only ASCII
+          // uppercase letters. Hex preserves every byte, including 00 and ff.
+          keyBytes = secureRandomBytes(plainBytes.length);
+          generatedKey = 'hex:' + Array.from(keyBytes, byte => byte.toString(16).padStart(2, '0')).join('');
         }
         const ciphertext = Array.from(plainBytes, (byte, index) => (byte ^ keyBytes[index]).toString(16).padStart(2, '0')).join('');
         return generatedKey ? ciphertext + '\n[Key: ' + generatedKey + ']' : ciphertext;
@@ -1746,23 +1763,35 @@ cipherMuseumGlobal.CipherEngines = (() => {
     }
     function pos(sq, ch) { const i = sq.indexOf(ch); return [Math.floor(i / 5), i % 5]; }
     function run(text, key, enc) {
-      const [k1, k2] = (key || 'EXAMPLE,KEYWORD').split(',');
+      const legacy = typeof key === 'string' && key.startsWith('legacy:');
+      const [k1, k2] = ((legacy ? key.slice(7) : key) || 'EXAMPLE,KEYWORD').split(',');
       const L = makeSquare(k1), R = makeSquare(k2);
       let t = clean(text).replace(/J/g, 'I');
       if (enc) t = escapeFillers(t);
-      if (t.length % 2) t += 'X';
+      if (t.length % 2) {
+        if (!enc && !legacy) throw new Error('Two-square ciphertext must contain complete pairs');
+        t += 'X';
+      }
       let out = '';
       for (let i = 0; i < t.length; i += 2) {
         const a = t[i], b = t[i + 1];
-        const [r1, c1] = pos(L, a);
-        const [r2, c2] = pos(R, b);
-        if (r1 === r2) { out += L[r1 * 5 + c1] + R[r2 * 5 + c2]; } // same row → unchanged
-        else { out += L[r1 * 5 + c2] + R[r2 * 5 + c1]; }
+        if (legacy) {
+          // Pre-audit museum transformation, retained only for frozen corpus replay.
+          const [r1,c1] = pos(L,a), [r2,c2] = pos(R,b);
+          out += r1 === r2 ? a+b : L[r1*5+c2]+R[r2*5+c1];
+        } else if (enc) {
+          // ACA horizontal convention: right-square corner first; same row reverses.
+          const [r1,c1] = pos(L,a), [r2,c2] = pos(R,b);
+          out += R[r1*5+c2] + L[r2*5+c1];
+        } else {
+          const [r1,c2] = pos(R,a), [r2,c1] = pos(L,b);
+          out += L[r1*5+c1] + R[r2*5+c2];
+        }
       }
       if (!enc) return unescapeFillers(out.replace(/X+$/, ''));
       return out;
     }
-    // Two-square is reciprocal in the "no-flip" variant we use
+    // Output order matters: decoding reads the first cipher letter in the right square.
     return { encode: (t, k) => run(t, k, true), decode: (t, k) => run(t, k, false) };
   })();
 
@@ -2223,7 +2252,7 @@ cipherMuseumGlobal.CipherEngines = (() => {
   /* ─── 51. Autokey (Vigenère self-extending) ─── */
   const autokey = (() => {
     function enc(text, key) {
-      const k = clean(key || 'KEY');
+      const k = clean(key) || 'KEY';
       const t = clean(text); let out = '';
       for (let i = 0; i < t.length; i++) {
         const ki = i < k.length ? A.indexOf(k[i]) : A.indexOf(t[i - k.length]);
@@ -2233,7 +2262,7 @@ cipherMuseumGlobal.CipherEngines = (() => {
       return out;
     }
     function dec(text, key) {
-      const k = clean(key || 'KEY');
+      const k = clean(key) || 'KEY';
       const c = clean(text);
       // Accumulate into an array, not a string. Autokey decryption has to read
       // back the plaintext it has already recovered, and indexing into a string
@@ -2415,7 +2444,8 @@ cipherMuseumGlobal.CipherEngines = (() => {
       return { rotors, reflector };
     }
     function step(positions, i) {
-      // 3 stepping rotors with multi-notch (notches at every 5, 7, 11 positions)
+      // Synthetic schedule: first rotor every character, second every five,
+      // third every 35; this does not implement historical notch rings.
       positions[0] = (positions[0] + 1) % 26;
       if (i % 5 === 0) positions[1] = (positions[1] + 1) % 26;
       if (i % 35 === 0) positions[2] = (positions[2] + 1) % 26;
@@ -2663,10 +2693,10 @@ cipherMuseumGlobal.CipherEngines = (() => {
 
   /* ─── Round 3 Phase 4: KL-7 (USA, 1952) ─── */
   // Pedagogical model. Real KL-7 had 8 rotors with a re-entry path and a
-  // notched-ring stepping mechanism roughly four times more complex than
-  // SIGABA. This engine models the essential idea: eight rotor substitutions
-  // with irregular stepping driven by notch tables; reciprocal via reflector
-  // so the same operation encrypts and decrypts (matching the real KL-7).
+  // notched-ring stepping mechanism. This teaching model uses eight seeded
+  // 26-letter rotor substitutions and synthetic notch tables. Its added
+  // reflector makes the model reciprocal; that is a model convenience,
+  // not a claim about the historical KL-7's signal path or reciprocity.
   const kl7 = (() => {
     function build(key) {
       const rng = _seededRng('KL7' + clean(key || 'TSEC'));
@@ -2841,7 +2871,7 @@ cipherMuseumGlobal.CipherEngines = (() => {
       let order = null;
       if (parsed.length && /^\d+$/.test(parsed[0])) {
         offset = parseInt(parsed[0], 10) || 5;
-        if (offset < 1) offset = 1; if (offset > count - 1) offset = count - 1;
+        if (offset < 1) offset = 1; if (offset > A.length - 1) offset = A.length - 1;
         parsed.shift();
       }
       if (parsed.length === count && parsed.every(p => /^\d+$/.test(p))) {
@@ -2896,6 +2926,9 @@ cipherMuseumGlobal.CipherEngines = (() => {
         throw new Error('Affine key must contain two integers: a,b.');
       }
       const parts = raw.split(',').map(s => Number(s.trim()));
+      if (parts.some(value => !Number.isSafeInteger(value))) {
+        throw new Error('Affine key entries must be safe integers.');
+      }
       let a = parts[0];
       let b = parts[1];
       a = mod(a, 26);
@@ -2999,9 +3032,10 @@ cipherMuseumGlobal.CipherEngines = (() => {
   // hand walks the mixed alphabet beneath, producing a polyalphabetic
   // stream. Pedagogical model: derive the inner alphabet from a keyword
   // (Polybius-style dedupe + remainder), and step both dials per letter.
-  // The historical machine used a 27-mark outer dial (26 letters + space)
-  // to telegraph word breaks; this Track A model uses 26-mark outer dials
-  // on both sides so encrypt/decrypt is unambiguous and round-trips.
+  // The historical device's unequal dial sizes matter. This existing
+  // 26:26 teaching model instead collapses to fixed keyword substitution:
+  // both positions advance equally, so innerPos always equals outerPos.
+  // It is not evidence of the historical cryptograph's polyalphabeticity.
   const wheatstone = (() => {
     function makeInner(key) {
       const k = clean(key || 'WHEATSTONE');

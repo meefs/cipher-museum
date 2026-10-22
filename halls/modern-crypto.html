@@ -77,7 +77,7 @@
         <span class="badge era-modern">1977 &middot; NBS / NSA</span>
       </div>
       <div class="card-name">DES (Data Encryption Standard)</div>
-      <p class="card-desc">The first public, government-standardised cipher. A 16-round Feistel network with a 56-bit key &mdash; broken by EFF's Deep Crack in 1998 (56 hours). Triple-DES extended its life until 2023. The cipher that birthed academic cryptanalysis: differential and linear cryptanalysis were both invented to attack it.</p>
+      <p class="card-desc">DES was standardized in 1977. Its 56-bit key became vulnerable to practical exhaustive search, demonstrated by EFF’s Deep Crack in 1998.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span>
 
@@ -93,7 +93,7 @@
         <span class="badge era-modern">1976 &middot; Stanford</span>
       </div>
       <div class="card-name">Diffie-Hellman Key Exchange</div>
-      <p class="card-desc">Two strangers create a shared secret over an open wire. Not a cipher &mdash; a key-agreement protocol. The 1976 paper that overturned cryptography's three-thousand-year-old &lsquo;you must meet first' assumption. Every TLS 1.3, SSH, Signal, and WireGuard handshake descends from it.</p>
+      <p class="card-desc">Diffie–Hellman derives a shared group element over a public channel. Authentication, appropriate groups and key derivation are needed for secure protocol use.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -109,7 +109,7 @@
         <span class="badge era-modern">1977 &middot; MIT</span>
       </div>
       <div class="card-name">RSA</div>
-      <p class="card-desc">The first practical public-key cryptosystem. One key encrypts, a different key decrypts &mdash; and you can publish the encrypting key. Solved key distribution, authentication, and digital signatures in one stroke. Every TLS certificate, code-signing chain, and PGP keypair is descended from this 1977 paper.</p>
+      <p class="card-desc">RSA uses a public modulus and exponents to support public-key constructions. Secure encryption and signatures need specified padding, adequate parameters and correct implementation.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -125,7 +125,7 @@
         <span class="badge era-modern">2001 &middot; FIPS 197</span>
       </div>
       <div class="card-name">AES (Advanced Encryption Standard)</div>
-      <p class="card-desc">The cipher that encrypts the modern world. Chosen by open international competition in 2001; designed by Joan Daemen and Vincent Rijmen of Belgium. Substitution-permutation network, 128-bit blocks, 128/192/256-bit keys, 10&ndash;14 rounds. After two decades of intense scrutiny, no practical attack exists.</p>
+      <p class="card-desc">AES (2001) — the cipher that encrypts the modern world; chosen by open competition, scrutinised for two decades, still without a practical attack.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -141,7 +141,7 @@
         <span class="badge era-modern">2001 &middot; NSA / NIST</span>
       </div>
       <div class="card-name">SHA-256</div>
-      <p class="card-desc">A 256-bit fingerprint for any input. One-way, collision-resistant, and the verification engine of Git, Bitcoin, TLS certificates, and software integrity. Not a cipher &mdash; there is no key and no decryption. Irreversibility is the entire point.</p>
+      <p class="card-desc">SHA-256 (2002) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -157,7 +157,7 @@
         <span class="badge era-modern">1992 &middot; Vanstone</span>
       </div>
       <div class="card-name">ECDSA</div>
-      <p class="card-desc">Signing with elliptic curves &mdash; how a server proves it owns its domain and a wallet proves it may spend a coin. Nonce reuse exposes the signing key. Deterministic nonces avoid fresh signing-randomness failures, but implementations still need side-channel and fault protection.</p>
+      <p class="card-desc">ECDSA (1992) — signing with elliptic curves, and the one-line mistake that handed Sony's PlayStation 3 master key to the world.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -173,7 +173,7 @@
         <span class="badge era-modern">1979 &middot; Adi Shamir</span>
       </div>
       <div class="card-name">Shamir&#39;s Secret Sharing</div>
-      <p class="card-desc">Split a secret among n holders so any k rebuild it and any k&minus;1 learn nothing at all. Not hard to break &mdash; mathematically undetermined, like the one-time pad, and just as immune to a quantum computer.</p>
+      <p class="card-desc">Shamir's Secret Sharing (1979) — split a secret so any k of n holders can rebuild it and any k−1 learn absolutely nothing.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -189,7 +189,7 @@
         <span class="badge era-modern">1985 &middot; GMR</span>
       </div>
       <div class="card-name">Zero-Knowledge Proofs</div>
-      <p class="card-desc">Prove a statement is true while revealing nothing but its truth. Rejected by reviewers three times before publication; now the engine of private transactions, blockchain rollups, and anonymous credentials.</p>
+      <p class="card-desc">Zero-knowledge proofs (1985) — convince someone a statement is true while revealing nothing beyond its truth. Run the Schnorr protocol and its simulator.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -229,7 +229,7 @@
 
   <div class="callout callout-mystery" style="margin-top:3rem;">
     <span class="callout-icon">🎓</span>
-    <div class="callout-body"><p><strong>The museum's closing lesson:</strong> Classical cryptography failed because it relied on obscurity, physical key distribution, and small key spaces. Modern cryptography replaces all three with mathematical hardness, public-key mathematics, and key sizes large enough that brute force is physically impossible &mdash; and expanded the field beyond ciphers into protocols, signatures, and proofs.</p></div>
+    <div class="callout-body"><p><strong>The museum’s closing lesson:</strong> Modern cryptography specifies security goals, attack models and assumptions. Public designs, suitable parameters and careful implementations matter together. Historical weaknesses do not imply that every classical system is broken, or that modern primitives are secure under every use.</p></div>
   </div>
 
 </div>

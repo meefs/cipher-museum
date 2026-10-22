@@ -84,12 +84,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Giambattista della Porta’s 1563 cipher introduced a 13-row reciprocal polyalphabetic table — smaller and more practical than Vigenère’s 26 rows, yet equally resistant to simple frequency analysis. It was used by European courts for decades.</p>
+      <p>Porta’s 1563 book describes reciprocal polyalphabetic substitution. This demo uses the modern 26-letter, 13-row adaptation; the historical alphabet and table were smaller. It should not be mistaken for an exact facsimile of the original table.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Giambattista della Porta was one of the most prolific natural philosophers of the Renaissance — he wrote on optics, agriculture, meteorology, and magic. His 1563 book <em>De Furtivis Literarum Notis</em> contained one of the most sophisticated cipher systems of his era: a 13-row reciprocal polyalphabetic cipher.</p><p style="margin-top:1rem;">Unlike Vigenère's 26 rows, Porta used 13 rows — each shared by two key letters. This made the table smaller and easier to use in the field, while still providing polyalphabetic variation. The cipher remained in use by European courts for decades.</p></div>
+      <div class="panel-body"><p>Giambattista della Porta discussed secret writing in <em>De Furtivis Literarum Notis</em> (1563). The reciprocal tables associated with his name can use the same operation for encryption and decryption.</p><p style="margin-top:1rem;">In the modern table shown here, two key letters select each of 13 reciprocal substitutions. The number of rows alone does not determine overall security: period, message length and language statistics also matter.</p></div>
     </div>
 
     <div class="panel">
@@ -127,7 +127,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Index of Coincidence</div><div class="attack-diff">Complexity: Moderate</div><p class="attack-desc">The Porta cipher's 13-row structure halves the number of distinct alphabets — pairs of key letters select the same row. This actually makes it somewhat easier to attack than Vigenère. The IC test identifies the key length; once found, each column can be attacked with frequency analysis on 13-letter alphabets.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Index of Coincidence</div><div class="attack-diff">Complexity: Moderate</div><p class="attack-desc">Repeating key positions expose related substitution problems. Index-of-coincidence and repetition tests can suggest periods, but do not guarantee the true key length. Candidate keys still need to be checked against the complete ciphertext.</p></div></div>
     </div>
 
     <div class="panel">

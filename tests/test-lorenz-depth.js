@@ -73,6 +73,26 @@ assert('isLikelyEnglish rejects control bytes', isLikelyEnglish('AB\x01CD') === 
 assert('cribDrag with empty crib returns []', cribDrag(depth, '').length === 0);
 assert('xorStrings with empty input returns ""', xorStrings('', 'KEY') === '');
 
+// A high English score cannot establish that a guessed crib is true. Equal
+// ciphertexts give zero depth, so ANY crib comes back as its own candidate.
+{
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const { JSDOM } = require('jsdom');
+  const doc = new JSDOM(fs.readFileSync(path.join(__dirname, '../ciphers/lorenz.html'), 'utf8'), { runScripts: 'outside-only' });
+  const w = doc.window;
+  w.eval(fs.readFileSync(path.join(__dirname, '../js/ciphers/lorenz-depth.js'), 'utf8'));
+  w.eval(fs.readFileSync(path.join(__dirname, '../js/ciphers/lorenz-page.js'), 'utf8'));
+  w.document.getElementById('lz-c1').value = '000000';
+  w.document.getElementById('lz-c2').value = '000000';
+  w.document.getElementById('lz-crib').value = 'THE';
+  w.document.getElementById('lz-drag').click();
+  const rendered = w.document.getElementById('lz-results').textContent;
+  assert('rendered positive-score candidate is conditional, not confirmed recovery',
+    /candidate/i.test(rendered) && /does not confirm/i.test(rendered) && !/this is the matching slice/i.test(rendered));
+  w.close();
+}
+
 console.log(`\n${pass} passed · ${fail} failed`);
 if (fail > 0) {
   console.log('\nFailures:');

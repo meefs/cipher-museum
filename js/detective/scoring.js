@@ -26,7 +26,7 @@
     { id: 'adfgvx',        name: 'ADFGVX Fractionated (WWI German)',       url: 'ciphers/adfgvx.html',      era: 'classical' },
     { id: 'morse',         name: 'Morse Code',                             url: 'ciphers/morse.html',       era: 'classical' },
     { id: 'numeric',       name: 'Book Cipher / Numeric Code',             url: 'ciphers/book-cipher.html', era: 'classical' },
-    { id: 'otp',           name: 'One-Time Pad / Random / Modern',         url: 'ciphers/otp.html',         era: 'modern'   },
+    { id: 'otp',           name: 'One-Time Pad / Random / Modern',         url: 'ciphers/one-time-pad.html',         era: 'modern'   },
     { id: 'bifid',         name: 'Bifid / Polybius Fractionated',          url: 'ciphers/bifid.html',       era: 'classical' }
   ];
 
@@ -67,7 +67,7 @@
           againstEv.push('Best-shift chi-square ' + bsr.chi.toFixed(1) + ' — no single shift gives English-like distribution');
         }
         if (chi0 > 100 && bsr.chi < 100) {
-          score += 1; forEv.push('Unshifted chi-square ' + chi0.toFixed(1) + ' confirms a fixed offset displaced the letters');
+          score += 1; forEv.push('Unshifted chi-square ' + chi0.toFixed(1) + ' is consistent with a fixed offset');
         }
         if (charset === 'alpha') { score += 1; forEv.push('Letters-only ciphertext — consistent with a letter cipher'); }
         if (ioc < 0.050) { score -= 3; }
@@ -294,7 +294,7 @@
 
     /* Kasiski hint */
     if (stats.kasiski.length > 0 && stats.periodHint) {
-      sentences.push('Kasiski examination found repeated trigrams whose spacing GCDs suggest a key period around ' + stats.periodHint + '. Period-sliced IoC analysis partially confirms this — strong evidence for a polyalphabetic cipher.');
+      sentences.push('Kasiski examination found repeated trigrams whose spacing GCDs suggest a key period around ' + stats.periodHint + '. Period-sliced IoC is another heuristic clue, not confirmation of a particular cipher or key length.');
     }
 
     /* Top suspect */

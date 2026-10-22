@@ -29,7 +29,7 @@
 
     if ('revealNext' in el.dataset) {
       var next = el.nextElementSibling;
-      if (next) next.style.display = 'block';
+      if (next) { next.hidden = false; next.style.display = 'block'; }
       el.style.display = 'none';
       return;
     }

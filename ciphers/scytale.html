@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scytale — The Cipher Museum</title>
-  <meta name="description" content="Scytale (~500 BC) — the Spartan transposition device that wraps a leather strip around a rod of fixed diameter. Broken trivially by trying every rod width.">
+  <meta name="description" content="The traditional scytale reconstruction illustrates transposition, but the dates and cryptographic interpretation of ancient evidence are disputed.">
   <meta name="keywords" content="scytale, cryptography, classical cipher, cipher museum, encryption history, Sparta, transposition">
     <meta property="og:title" content="Scytale — The Cipher Museum">
-  <meta property="og:description" content="Scytale (~500 BC) — the Spartan transposition device that wraps a leather strip around a rod of fixed diameter. Broken trivially by trying every rod width.">
+  <meta property="og:description" content="The traditional scytale reconstruction illustrates transposition, but the dates and cryptographic interpretation of ancient evidence are disputed.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/scytale.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -16,7 +16,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Scytale — The Cipher Museum">
-  <meta name="twitter:description" content="Scytale (~500 BC) — the Spartan transposition device that wraps a leather strip around a rod of fixed diameter. Broken trivially by trying every rod width.">
+  <meta name="twitter:description" content="The traditional scytale reconstruction illustrates transposition, but the dates and cryptographic interpretation of ancient evidence are disputed.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/scytale.html">
@@ -77,7 +77,7 @@
   <h1 class="page-title">Scytale</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
   <p class="page-tagline">A leather strip, a wooden rod, and the birth of military cryptography</p>
-  <p class="exhibit-status-note">Brute force — try different rod diameters</p>
+  <p class="exhibit-status-note">Simple transposition model; historical origin and military use are debated.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Sparta, Ancient Greece</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~500 BC</span></div>
@@ -94,16 +94,16 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The Scytale is the oldest documented military cipher device, used by Spartan generals over 2,500 years ago. It introduced the concept of transposition cryptography — hiding a message by rearranging letter order rather than changing letters.</p>
+      <p>The traditional scytale reconstruction illustrates transposition: letters are rearranged rather than substituted. Ancient references to staffs and dispatches do not securely establish this as the first military cipher or date the reconstructed method to 500 BCE.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span>
         <span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
-        <p>The Scytale is the oldest documented military cipher device, used by Spartan generals and ephors to send secret orders to field commanders. Thucydides and Plutarch both describe it. The recipient needed an identical rod — the first example of a shared physical key.</p>
+        <p>Later accounts, especially Plutarch’s <em>Life of Lysander</em>, describe a staff and written strip. The earlier sources and their cryptographic interpretation are disputed. The physical reconstruction below is useful for teaching, but should not be presented as an uncontested account of Spartan practice.</p>
         <p style="margin-top:1rem;">Spartan ephors (civilian magistrates) used the scytale to communicate secretly with generals in the field. The system ensured that if a messenger was captured — or defected — the message would appear as nothing more than a meaningless strip of leather with scrambled letters.</p>
-        <p style="margin-top:1rem;">The scytale represents the birth of transposition cryptography — the idea that you can hide a message not by changing its letters, but by rearranging their order. This concept survived 2,500 years and is visible today in AES ShiftRows.</p>
+        <p style="margin-top:1rem;">The familiar scytale reconstruction illustrates transposition cryptography — the idea that you can hide a message not by changing its letters, but by rearranging their order. This concept survived 2,500 years and is visible today in AES ShiftRows.</p>
       </div>
     </div>
 
@@ -144,7 +144,7 @@ restores the original reading order.</pre>
         <div class="attack-panel">
           <div class="attack-name">Brute Force — Try Different Rod Diameters</div>
           <div class="attack-diff">Complexity: Trivial · By any interceptor with a set of rods</div>
-          <p class="attack-desc">The key space is the number of practical rod diameters, which is very small. An interceptor with a set of rods of varying widths could try each one and quickly identify the readable output. This is arguably the first documented example of a brute force attack — and a lesson that a small key space provides no real security.</p>
+          <p class="attack-desc">In this transposition model, an attacker can try plausible dimensions and examine the results. The size of that search depends on message length and handling assumptions. No ancient account of a first documented brute-force attack is established here.</p>
         </div>
       </div>
     </div>

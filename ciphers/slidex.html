@@ -62,7 +62,7 @@
   <h1 class="page-title">Slidex <span style="opacity:.6;font-weight:400;">British WWII tactical code card</span></h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
   <p class="page-tagline">A printed card, two sliding strips, and a pencilled daily key — the code the British Army handed to every front-line signaller from 1943 to the 1980s.</p>
-  <p class="exhibit-status-note">Tactical (intentionally weak)</p>
+  <p class="exhibit-status-note">Short-lived tactical vocabulary cards and changing cursor settings; the widget is a simplified bigram model.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Royal Signals, United Kingdom</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">In service 1943 – early 1980s</span></div>
@@ -91,7 +91,7 @@
         <div class="callout callout-info">
           <span class="callout-icon">ℹ️</span>
           <div class="callout-body">
-            <p><strong>About this demo:</strong> the interactive above is a simplification, not a reproduction of a real card. It builds a deterministic <strong>26&times;26</strong> table from your seed and substitutes plaintext letter-pairs for cipher letter-pairs, so that any English text can be run through it — a genuine 204-cell card can only send the vocabulary printed on it. It also reversibly escapes the letters X, Q and Z (as ZA, ZB, ZC) before enciphering, so that padding can never be confused with a real letter; messages containing X, Q or Z therefore produce slightly different output than a classical bigram card would. Odd-length messages are padded with a trailing X.</p>
+            <p><strong>About this demo:</strong> the interactive above is a simplification, not a reproduction of a real card. It builds a deterministic <strong>26&times;26</strong> table from your seed and substitutes plaintext letter-pairs for cipher letter-pairs, so that any English text can be run through it — a genuine 204-cell card combined vocabulary with spelling symbols and switching instructions. It also reversibly escapes the letters X, Q and Z (as ZA, ZB, ZC) before enciphering, so that padding can never be confused with a real letter; messages containing X, Q or Z therefore produce slightly different output than a classical bigram card would. Odd-length messages are padded with a trailing X.</p>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
-      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Slidex lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Cryptographic strength is a function of how long the secret matters</td><td>Modern “forward secrecy” — yesterday’s key shouldn’t decrypt tomorrow’s traffic</td></tr><tr><td>Tactical cipher ≠ strategic cipher</td><td>Different threat models for ephemeral vs long-lived data</td></tr><tr><td>Paper crypto for non-specialist users</td><td>Modern “one-glance” safety: emoji codes, SAS pairing, QR-key exchange</td></tr><tr><td>Stereotyped templates leak structure</td><td>Why protocol designers obsess over removing predictable headers (HTTP/2 HPACK)</td></tr></tbody></table></div>
+      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Slidex lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Cryptographic strength is a function of how long the secret matters</td><td>Forward secrecy protects past session keys after later compromise of long-term keys; that is a separate property</td></tr><tr><td>Tactical cipher ≠ strategic cipher</td><td>Different threat models for ephemeral vs long-lived data</td></tr><tr><td>Paper crypto for non-specialist users</td><td>Modern “one-glance” safety: emoji codes, SAS pairing, QR-key exchange</td></tr><tr><td>Stereotyped templates leak structure</td><td>Modern encryption must resist known-plaintext attacks; header compression is not that security guarantee</td></tr></tbody></table></div>
     </div>
 
     <div class="panel">

@@ -56,12 +56,7 @@
   <div class="hero">
     <div class="kicker">The Cyclic World Diffie–Hellman Lives In</div>
     <h1>Arithmetic on<br>a <em>clock</em></h1>
-    <p class="standfirst">
-      A clock counts to twelve and starts over. Modular arithmetic does the
-      same with any number — and inside that wrap-around lives the cyclic
-      structure that key exchange is built on. Some starting points visit every
-      hour on the clock; those are the ones cryptography wants.
-    </p>
+    <p class="standfirst">A clock counts to twelve and starts over. Modular arithmetic does the same with any modulus. Powers modulo a prime reveal cyclic groups and subgroups; deployed key exchanges often use a large prime-order subgroup rather than every nonzero residue.</p>
   </div>
 
   <div class="honesty">
@@ -109,14 +104,7 @@
 
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§2</span><h2>The one-way staircase</h2></div>
-    <p>
-      Going <em>up</em> — from an exponent to gˣ mod p — is a quick climb.
-      Coming back <em>down</em> — from gˣ to x — is the
-      <span class="term">discrete logarithm problem</span>, the same wall we met
-      with elliptic curves, in its original multiplicative form. The orbit above
-      looks orderly, but knowing a landing spot tells you nothing about how many
-      steps it took to get there.
-    </p>
+    <p>Computing gˣ mod p is efficient. Recovering an exponent from the result is the discrete logarithm problem. This tiny group is easy to search; suitable large groups make known attacks expensive. The result constrains the exponent modulo the order of g.</p>
     <div class="eq">x ↦ gˣ mod p &nbsp; easy &nbsp;·&nbsp; gˣ ↦ x &nbsp; hard</div>
   </section>
 
@@ -124,29 +112,13 @@
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
       <h3>The original public-key setting</h3>
-      <p>
-        Textbook <a href="../ciphers/diffie-hellman.html">Diffie–Hellman</a> happens in exactly this group: a prime with a
-        primitive root, thousands of bits wide. Alice sends <em>gᵃ</em>, Bob
-        sends <em>gᵇ</em>, and both compute <em>gᵃᵇ</em> — while an eavesdropper,
-        stuck with the discrete log, cannot. Elliptic curves later swapped this
-        multiplicative clock for a point group, but the shape of the idea was
-        born here.
-      </p>
-      <p>
-        Deployed Diffie–Hellman adds one refinement worth knowing. A primitive
-        root generates <em>everything</em> mod <em>p</em>, including the small
-        cycles hiding inside the group, and an attacker who can push a key
-        exchange into one of those learns far more than they should. So the
-        standard groups use a safe prime and a generator chosen to walk a single
-        large <span class="term">prime-order subgroup</span> instead &#8212;
-        often <em>g</em> = 2, which is not a primitive root at all. No small
-        cycles to be trapped in. The clock is the right picture; real
-        implementations just fence off part of the dial.
-      </p>
+      <p>In finite-field Diffie&ndash;Hellman, Alice sends gᵃ and Bob sends gᵇ; each computes gᵃᵇ. Computing that value as an eavesdropper is the computational Diffie&ndash;Hellman problem. Solving a discrete logarithm would suffice, but discrete-log hardness alone is not a proof of CDH hardness.</p>
+      <p>Many deployed finite-field DH groups use a safe prime and a large prime-order subgroup. This avoids treating small-order elements as acceptable public keys, provided implementations also apply the protocol's public-key validation rules. Choosing a generator alone does not prevent an active attacker from sending an invalid or small-order value.</p>
     </div>
     <p class="aside">See also: <a href="group-theory.html" style="color:var(--vermilion)">Group Theory</a> for the general structure, and <a href="finite-fields.html" style="color:var(--vermilion)">Finite Fields</a> for the elliptic-curve version.</p>
   </section>
 
+  <p class="aside"><strong>Sources and scope:</strong> <a href="https://www.rfc-editor.org/rfc/rfc7919.html">RFC 7919 (2016)</a>, standardized finite-field DH groups and validation; <a href="https://crypto.stanford.edu/~dabo/cryptobook/">Boneh and Shoup, §10.4.2</a>, CDH and discrete logarithms.</p>
   </main>
 
 

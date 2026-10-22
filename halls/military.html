@@ -62,9 +62,7 @@
   <span class="page-eyebrow">Hall V · 1880s — Cold War · 1880 – 1970</span>
   <h1 class="page-title">Military &amp; Spy Ciphers</h1>
   <p class="page-tagline">When lives depend on secrecy — the peak of hand-cipher design</p>
-  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">
-    The ciphers in this hall were designed not for scholars but for soldiers and spies — people who needed to encrypt messages quickly in the field, under fire, without a computer. They represent the absolute peak of what human ingenuity could achieve in manual cryptography. Some fell within weeks. One — the VIC cipher — may never have been broken by cryptanalysis alone.
-  </p>
+  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">Military hand systems balance speed, key logistics, operator training and resistance to attack. The examples here had different operational roles and weaknesses; none should be used for present-day security.</p>
   <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem;position:relative;z-index:1;">
     <span class="badge era-wwi">WWI</span>
     <span class="badge era-wwii">WWII</span>
@@ -90,7 +88,7 @@
         <span class="badge era-19c">1880s · Russia</span>
       </div>
       <div class="card-name">Nihilist Cipher</div>
-      <p class="card-desc">Used by Russian revolutionary cells to communicate past Tsarist secret police. Polybius square coordinates added to a repeating numeric key. Produces numbers rather than letters — obscuring standard letter-frequency patterns in arithmetic noise.</p>
+      <p class="card-desc">Nihilist cipher (1880s) — the Russian revolutionary classic adding Polybius numbers to a repeating keyword's Polybius numbers by plain addition. Broken early 1900s.</p>
       <div style="font-family:var(--fm);font-size:.75rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">H=23, key=31 → </span><span style="color:var(--gold-lt);">54</span>
         <span style="color:var(--tx3);">  E=15, key=14 → </span><span style="color:var(--gold-lt);">29</span>
@@ -107,7 +105,7 @@
         <span class="badge era-wwi">WWI · Germany · March 1918</span>
       </div>
       <div class="card-name">ADFGX Cipher</div>
-      <p class="card-desc">Germany's front-line cipher for the Spring Offensive. A Polybius square using only the letters A, D, F, G, X (chosen because they sound distinct in Morse), followed by columnar transposition. Broken by French cryptanalyst Georges Painvin within weeks.</p>
+      <p class="card-desc">Germany’s ADFGX field cipher appeared in March 1918; Painvin obtained solutions in April. Its square-plus-transposition construction required continuing key recovery.</p>
       <div style="font-family:var(--fm);font-size:.75rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">Plain → Polybius(ADFGX) → Columnar transpose</span><br>
         <span style="color:var(--tx3);">H → </span><span style="color:var(--gold-lt);">AF</span><span style="color:var(--tx3);">  E → </span><span style="color:var(--gold-lt);">DA</span>
@@ -124,7 +122,7 @@
         <span class="badge era-wwi">WWI · Germany · June 1918</span>
       </div>
       <div class="card-name">ADFGVX Cipher</div>
-      <p class="card-desc">ADFGX extended with V to include digits — a 6×6 grid encoding 36 characters. Introduced specifically for the Paris Gun bombardment and the Ludendorff Offensive. Painvin broke it in 48 hours of continuous work, potentially altering the outcome of WWI.</p>
+      <p class="card-desc">ADFGVX combined a 6×6 substitution square with columnar transposition. Painvin’s June 1918 solutions exploited particular traffic and keys, not every later message automatically.</p>
       <div style="font-family:var(--fm);font-size:.75rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">6×6 grid · Letters AND digits · Same two-step process</span>
       </div>
@@ -140,7 +138,7 @@
         <span class="badge era-19c">1890s · France</span>
       </div>
       <div class="card-name">Bazeries Cipher</div>
-      <p class="card-desc">Étienne Bazeries — himself a famous codebreaker — designed a layered cipher combining a keyword-numbered Polybius square with transposition keyed by the same number word. He spent years trying to convince the French military to adopt it, never succeeding.</p>
+      <p class="card-desc">Bazeries cylinder cipher — Etienne Bazeries' 1891 wheel cipher with 20 alphabet disks, an evolution later adopted by the US Army as the M-94 in 1922.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span><span class="badge badge-hard">Hard to Break</span></div>
         <span class="card-arrow">→</span>
@@ -153,7 +151,7 @@
         <span class="badge era-coldwar">Cold War · 1950s</span>
       </div>
       <div class="card-name">VIC Cipher</div>
-      <p class="card-desc">The most sophisticated hand cipher ever deployed in real espionage. Soviet spy Reino Häyhänen carried it to America. Combines a straddling checkerboard, double transposition, and a key derived from a song lyric. Most intercepted VIC messages were never broken by cryptanalysis — the cipher was exposed only by a defector in 1957.</p>
+      <p class="card-desc">VIC cipher (1953) — Reino Häyhänen's KGB hand cipher: straddling checkerboard, double transposition, date-driven keystream. Exposed in 1957 after his defection, not broken cryptanalytically.</p>
       <div style="font-family:var(--fm);font-size:.75rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.8;letter-spacing:.06em;">
         <span style="color:var(--tx3);">Checkerboard → chain addition → double transposition</span>
       </div>
@@ -170,7 +168,7 @@
         <span class="badge era-19c">18th–20th c.</span>
       </div>
       <div class="card-name">Book Cipher</div>
-      <p class="card-desc">If both correspondents share a book, the book itself is the key. Benedict Arnold and John André used Blackstone's Commentaries; Aaron Burr used one for his 1807 conspiracy; the second of the three Beale papers was solved against the Declaration of Independence; SOE used commercial novels for low-priority WWII agent circuits. Identifying the book is the only attack that works.</p>
+      <p class="card-desc">Book Cipher (18th c.) — if both correspondents share the same book, the book itself is the key. Used by Benedict Arnold, Aaron Burr, and Beale.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.05em;line-height:1.6;">
         <span style="color:var(--tx3);">"RIVER" → look up in shared book → (page, line, word) = (127, 14, 6)</span>
       </div>
@@ -186,7 +184,7 @@
         <span class="badge era-19c">Russian Nihilists · ~1880s</span>
       </div>
       <div class="card-name">Straddling Checkerboard</div>
-      <p class="card-desc">A 10-column substitution table where the eight most-frequent letters take single-digit codes and the rest take two digits, exploiting frequency to compress the ciphertext. The core building block inside both the VIC cipher and the Soviet Nihilist family — simple alone, devastating in combination.</p>
+      <p class="card-desc">Straddling Checkerboard (1930s) — the Soviet variable-length digit substitution: common letters get one digit, rare letters two. The substitution layer of VIC.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.06em;line-height:1.6;">
         <span style="color:var(--tx3);">E→3  T→9  A→6  HELLO → </span><span style="color:var(--gold-lt);">71 3 18 18 02</span>
       </div>
@@ -202,7 +200,7 @@
   <div class="callout callout-mystery" style="margin-bottom:3rem;">
     <span class="callout-icon">🇫🇷</span>
     <div class="callout-body">
-      <p><strong>Georges Painvin and the cipher that changed WWI:</strong> In June 1918, Germany launched its final offensive toward Paris. Their communications used the ADFGVX cipher. French cryptanalyst Georges Painvin worked for 48 consecutive hours, lost 15 pounds, and broke the cipher — revealing German supply routes. Allied forces repositioned. The offensive failed. Many historians credit Painvin's break as a turning point of the war. He never claimed the title himself.</p>
+      <p>Painvin’s work against ADFGX and ADFGVX contributed useful intelligence during the 1918 fighting. Repeated traffic and painstaking manual analysis mattered. Attributing the result of an entire offensive to one decipherment overstates what the evidence can establish.</p>
     </div>
   </div>
 
@@ -210,7 +208,7 @@
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;">
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">Layering → Multiple Rounds</span></div>
-      <div class="panel-body"><p>ADFGVX combined substitution and transposition — two different operations. Modern block ciphers like AES apply 10–14 rounds of four different operations (SubBytes, ShiftRows, MixColumns, AddRoundKey) for the same reason: layering makes each step harder to undo.</p></div>
+      <div class="panel-body"><p>ADFGVX combines coordinate substitution and transposition. AES likewise composes operations, but its mathematical structure and security analysis differ. AES has 10, 12 or 14 rounds depending on key size; the final round omits MixColumns.</p></div>
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-quill"/></svg></span><span class="panel-title">Checkerboard → Variable-Length Encoding</span></div>
@@ -218,7 +216,7 @@
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">Human Factors Always Win</span></div>
-      <div class="panel-body"><p>The VIC cipher was never broken cryptanalytically. It was broken by a defector. The ADFGVX was broken partly because operators reused keys. The lesson of this hall: the strongest cipher fails when humans make procedural mistakes.</p></div>
+      <div class="panel-body"><p>VIC’s full key procedure became known through a defection. That differs from recovering a key by cryptanalysis. Operational compromise can expose a system even when a particular mathematical attack has not been demonstrated.</p></div>
     </div>
   </div>
 
