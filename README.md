@@ -87,6 +87,7 @@ For a sortable, filterable view of every cipher system in the museum (era, type,
 
 ### 📊 Additional Tools
 - **[Cipher Corpus](https://ciphermuseum.com/cipher-corpus.html)** — A library of synthetic challenges and historically themed exercises for classical cryptanalysis, with 100,326 test cases across 85 cipher types. Includes:
+    - **Corrected v0.8 download**: the complete 100,313-record canonical dataset as compressed JSONL, with corrected Two-square pairs, five unsupported citations identified as errata, and v0.7's historical-pair and metadata corrections. [Download and read the change notes](https://ciphermuseum.com/cipher-corpus.html#corrected-corpus). The on-page browser and published DOI still describe v0.6; v0.8 has no Zenodo DOI.
     - **Challenge Mode** for learners: hides solutions for ciphertext-only practice.
     - **Known Corpus Mode** for teaching, benchmarking, and tool-building: shows all metadata, keys, and plaintexts.
     - **Downloadable datasets**: JSONL, JSON, CSV, schema, difficulty splits (beginner–expert), multilingual supplements (5,348 records including Arabic; the canonical set covers 9 languages), noisy transcription variants, and LLM 3-shot evaluation export.
@@ -300,6 +301,14 @@ the software archive distinct from the published dataset. Download the canonical
 archived JSONL and its supporting files from
 [Cipher Corpus v0.6 on Zenodo](https://doi.org/10.5281/zenodo.23297920), or use
 Git LFS when cloning this repository.
+
+The [corrected v0.8 full-corpus download](https://ciphermuseum.com/public/corpus/v0.8/all.jsonl.gz)
+is a separate compressed JSONL file served by the website. Its
+[checksum manifest](public/corpus/v0.8/SHA256SUMS.txt),
+[schema](public/corpus/v0.8/cipher-corpus.schema.json) and
+[release notes](docs/releases/corpus-v0.8.md) describe the changed records and
+how to reproduce them. It has no Zenodo DOI. The v0.6 archive and its files are
+preserved for anyone using the published version DOI.
 
 ### Prerequisites
 ```bash

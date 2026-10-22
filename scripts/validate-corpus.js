@@ -5,7 +5,7 @@
  * validate-corpus.js — validate a Cipher Corpus file against a dataset contract.
  *
  * Usage:
- *   node scripts/validate-corpus.js <corpus.jsonl> [--contract 0.6|0.7] [--schema <file>]
+ *   node scripts/validate-corpus.js <corpus.jsonl> [--contract 0.6|0.7|0.8] [--schema <file>]
  *
  * The contract is a property of the dataset being validated, not of individual
  * records. This matters for duplicate tags: 484 records in the published v0.6
@@ -22,7 +22,8 @@
  * Contract 0.7 adds: unique tags everywhere; both length fields equal to the
  * values computed by scripts/corpus-text-metrics.js from the plaintext;
  * text_length >= normalized_text_length; the classification fields present and
- * internally consistent; and corpus_version matching the contract.
+ * internally consistent; and corpus_version matching the contract. Contract
+ * 0.8 retains these requirements with its separately versioned schema.
  */
 
 const fs = require('fs');
@@ -55,6 +56,12 @@ const CONTRACTS = {
   },
   '0.7': {
     schema: path.join(ROOT, 'public/corpus/v0.7/cipher-corpus.schema.json'),
+    allowDuplicateTags: false,
+    enforceLengthContract: true,
+    requireClassification: true
+  },
+  '0.8': {
+    schema: path.join(ROOT, 'public/corpus/v0.8/cipher-corpus.schema.json'),
     allowDuplicateTags: false,
     enforceLengthContract: true,
     requireClassification: true
@@ -126,21 +133,22 @@ function semanticErrors(record, contract, seenIds) {
 function main() {
   const args = parseArgs(process.argv.slice(2));
   if (!args.corpus) {
-    console.error('Usage: node validate-corpus.js <corpus.jsonl> [--contract 0.6|0.7] [--schema <file>]');
+    console.error('Usage: node validate-corpus.js <corpus.jsonl> [--contract 0.6|0.7|0.8] [--schema <file>]');
     process.exit(1);
   }
 
   let contractName = args.contract;
   if (!contractName) {
     // Infer from the file's own records so a caller cannot silently validate a
-    // v0.7 dataset against the laxer legacy contract.
+    // v0.7/v0.8 dataset against the laxer legacy contract. A version marker
+    // we do not recognize is an error, never a fallback to the old contract.
     const firstLine = fs.readFileSync(args.corpus, 'utf8').split('\n').find(line => line.trim());
     const first = firstLine ? JSON.parse(firstLine) : {};
-    contractName = first.corpus_version === '0.7' ? '0.7' : '0.6';
+    contractName = first.corpus_version || '0.6';
   }
   const contract = CONTRACTS[contractName];
   if (!contract) {
-    console.error(`Unknown contract ${contractName}; expected 0.6 or 0.7`);
+    console.error(`Unknown contract ${contractName}; expected 0.6, 0.7 or 0.8`);
     process.exit(1);
   }
 

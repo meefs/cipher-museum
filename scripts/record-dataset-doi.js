@@ -214,15 +214,11 @@ const prose = [
     // moment the DOI exists, so it is rewritten rather than left to contradict
     // the section above it.
     file: 'docs/CORPUS_PUBLISHING.md',
-    from: 'Website download links, the corpus page\'s counts and the citation surfaces still\n'
-      + `describe v0.6 deliberately. They change only when v${version} is actually published, so\n`
-      + 'the site never advertises a dataset that has no DOI behind it.',
-    to: `Citation surfaces record v${version} as of its publication; run\n`
-      + `\`node scripts/record-dataset-doi.js <version> <doi>\` to update them all at once, and\n`
-      + 'never ahead of an issued DOI. The website download links and the corpus page\n'
-      + `still serve the v0.6 archive from \`public/corpus/\`, which keeps its own DOI;\n`
-      + `the v${version} canonical bytes are distributed from the Zenodo deposit, since they\n`
-      + 'are generated rather than committed.'
+    from: 'The original website downloads, page counts, and citation surfaces still describe\n'
+      + 'v0.6. They must not be silently reassigned to a different dataset version.',
+    to: `The original website downloads and page counts still describe v0.6. Citation\n`
+      + `surfaces may be updated to v${version} only after its DOI is issued. The separately\n`
+      + 'labeled v0.8 file remains available without a Zenodo DOI.'
   }
 ];
 

@@ -49,8 +49,8 @@ been updated until its files and metadata have been independently verified.
 v0.7 is built in `public/corpus/v0.7/` and resolves the four findings v0.6 could
 only record as errata. Its source commit is tagged **`corpus-v0.7`**; it has
 **no Zenodo deposit and no DOI**, so it is not yet citable. v0.6 remains the
-published, citable dataset and the one the website serves; its files and
-checksums are untouched.
+published, citable dataset and the version the on-page browser samples; its
+files and checksums are untouched.
 
 Dataset versions are tagged but **never released on GitHub**. The Zenodo webhook
 on this repository is active on `release` events and would mint a *software* DOI
@@ -60,9 +60,20 @@ is how v0.5 and v0.6 were handled and how v0.7 must be.
 Release notes and the full before/after accounting:
 [`releases/corpus-v0.7.md`](releases/corpus-v0.7.md).
 
-Website download links, the corpus page's counts and the citation surfaces still
-describe v0.6 deliberately. They change only when v0.7 is actually published, so
-the site never advertises a dataset that has no DOI behind it.
+The original website downloads, page counts, and citation surfaces still describe
+v0.6. They must not be silently reassigned to a different dataset version.
+
+## Corpus v0.8 (corrected website download; no DOI)
+
+The site also offers a separately labeled, complete
+[`all.jsonl.gz`](../public/corpus/v0.8/all.jsonl.gz) download derived from v0.7.
+It corrects the 1,072 Two-square known-answer pairs using the museum's current
+American Cryptogram Association rectangle rule. Read the
+[v0.8 release notes](releases/corpus-v0.8.md) and verify the digest in
+[`SHA256SUMS.txt`](../public/corpus/v0.8/SHA256SUMS.txt) before comparing results.
+Serving a downloadable file on GitHub Pages is not a Zenodo deposit; no v0.8
+DOI has been issued. The v0.6 citation on the page applies only to v0.6, not
+the newer download.
 
 ## Future release checklist
 

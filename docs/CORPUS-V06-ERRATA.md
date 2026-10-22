@@ -34,7 +34,7 @@ Three legacy conventions also need care when analysing the archive:
   counts from `plaintext` instead of aggregating either field.
 - 484 pre-v0.6 records contain a repeated tag. The duplicate value has no
   semantic meaning. The 300 v0.6 additions do not contain repeated tags. The
-  The tolerance belongs to this dataset, not to a record label: validating with
+  tolerance belongs to this dataset, not to a record label: validating with
   `--contract 0.6` accepts them because these bytes cannot change, while
   `--contract 0.7` requires unique tags of every record whatever generator batch
   it came from. `dataset_version` was a per-batch label rather than a release
@@ -54,10 +54,11 @@ Three legacy conventions also need care when analysing the archive:
 Corrections to canonical record fields belong in a future corpus release so
 that v0.6 citations and checksums remain reproducible.
 
-The earlier record-shape corrections are included in the prepared **corpus v0.7**; the source-link and Two-square findings below also apply to that prepared release. See see
-[`releases/corpus-v0.7.md`](releases/corpus-v0.7.md). v0.7 is not published and
-has no DOI, so this errata continues to govern the published v0.6 archive and
-the statements above remain true of it.
+The earlier record-shape corrections are included in the prepared **corpus v0.7**;
+the source-link and Two-square findings below also apply to that prepared
+release. The separate [v0.8 full-corpus download](releases/corpus-v0.8.md)
+corrects these pair and citation fields. v0.8 has no Zenodo DOI. The v0.6
+archive remains unchanged, so this errata still governs its published bytes.
 
 ## Additional findings — 22 October 2026
 

@@ -14,6 +14,10 @@ tests/receipt-runner-*.json
 # rebuilt on demand and verified against public/corpus/v0.7/SHA256SUMS.txt.
 public/corpus/v0.7/all.jsonl
 
+# Rebuilt locally from v0.7. The separately committed gzip is the complete
+# v0.8 website download and is checked against the generated plain JSONL.
+public/corpus/v0.8/all.jsonl
+
 # Staged Zenodo upload packages: large generated payloads, rebuilt on demand
 # with `node scripts/build-corpus-deposit.js <version>`.
 dist/

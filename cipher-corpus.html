@@ -156,6 +156,17 @@
       margin-bottom: .4rem;
       font-size: .75rem;
     }
+    .corrected-download {
+      border: 1px solid var(--gold-b);
+      border-radius: var(--rl);
+      padding: 1.5rem;
+      background: var(--s2);
+      max-width: 740px;
+    }
+    .corrected-download h3 { color: var(--gold); margin-bottom: .5rem; }
+    .corrected-download p { margin: .5rem 0 1rem; }
+    .corrected-download .btn { display: inline-block; margin: 0 .5rem .5rem 0; }
+    .download-version-heading { margin-top: 2rem; }
 
     /* ── Use-it two-col ─────────────────────────── */
     .use-grid {
@@ -230,7 +241,7 @@
       <span class="page-eyebrow">Known-Ciphertext Benchmark Library</span>
       <h1 class="page-title">Cipher Corpus</h1>
       <p class="page-tagline">100,326 ciphertext records for learning, testing, and benchmarking classical cryptanalysis.</p>
-      <p class="page-desc">Each record includes cipher type, key, plaintext, difficulty, language, and expected attacks — fully machine-readable and openly licensed. Browse in Challenge Mode to attempt a solve, or switch to Known Answers to study the metadata.</p>
+      <p class="page-desc">Each record includes cipher type, key, plaintext, difficulty, language, and expected attacks — fully machine-readable and openly licensed. The on-page browser samples published v0.6: use Challenge Mode to attempt a solve, or switch to Known Answers to study the metadata. A newer corrected download is available below.</p>
       <p class="page-desc">Corpus v0.6 adds 300 synthetic RS44, German Double Playfair, and AMSCO exercises. Replay verifies 99,800 records exactly; 526 existing noisy or historical-variant records have documented exceptions. <a href="public/corpus/README.md">Dataset scope and conventions</a>.</p>
       <p class="page-desc"><strong>Published archive:</strong> <a href="https://doi.org/10.5281/zenodo.23297920" target="_blank" rel="noopener">Zenodo v0.6 · DOI 10.5281/zenodo.23297920</a>. The archive preserves canonical JSONL plus 11 supporting files; the website also provides derived JSON, CSV, subsets, and browser samples.</p>
       <div class="badge-group">
@@ -272,8 +283,17 @@
       <div class="section-head">
         <span class="section-eyebrow">Open Dataset</span>
         <h2 class="section-title">Download Corpus</h2>
-        <p class="section-sub">Website downloads include JSONL, JSON, CSV, and subsets. Synthetic records are CC0; historical records retain their per-record public-domain assertions and provenance.</p>
+        <p class="section-sub">Choose the corrected full dataset or the published v0.6 archive and its derived formats. Synthetic records are CC0; review historical records' per-record provenance and rights before reuse.</p>
       </div>
+      <div class="corrected-download" id="corrected-corpus">
+        <h3>Corrected full corpus · v0.8</h3>
+        <p>Download all 100,313 canonical records as compressed JSONL. This build applies the American Cryptogram Association Two-square rectangle rule to the 1,072 affected examples, flags five unsupported source citations, and retains the v0.7 historical-pair and metadata corrections. Those citation fixes do not authenticate a historical pair. The old files and their checksums remain unchanged.</p>
+        <a class="btn btn-primary" href="public/corpus/v0.8/all.jsonl.gz" download>Download v0.8 JSONL (.gz)</a>
+        <a class="btn btn-secondary" href="public/corpus/v0.8/SHA256SUMS.txt">Checksums</a>
+        <a class="btn btn-secondary" href="public/corpus/v0.8/cipher-corpus.schema.json">v0.8 schema</a>
+        <p>Unzip with <code>gunzip -k all.jsonl.gz</code>. Read the <a href="docs/releases/corpus-v0.8.md">correction notes and verification instructions</a> before benchmarking. v0.8 is available here but has no Zenodo DOI; the citation below identifies the published v0.6 archive only.</p>
+      </div>
+      <h3 class="download-version-heading">Published v0.6 downloads</h3>
       <div class="download-grid">
         <div class="download-group">
           <h3>Complete Dataset</h3>

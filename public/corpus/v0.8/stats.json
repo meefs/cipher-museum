@@ -1,0 +1,52 @@
+{
+  "corpus_version": "0.8",
+  "records": 100313,
+  "cipher_types": 85,
+  "languages": 7,
+  "by_source_type": {
+    "synthetic": 100272,
+    "historical": 41
+  },
+  "by_split": {
+    "blind": 30194,
+    "public": 70119
+  },
+  "by_authenticity": {
+    "synthetic": 100272,
+    "reconstruction": 7,
+    "catalogued_unreviewed": 31,
+    "authentic_excerpt": 2,
+    "authentic_artifact": 1
+  },
+  "by_pair_status": {
+    "verified_pair": 99801,
+    "unverified_pair": 510,
+    "not_a_pair": 2
+  },
+  "by_verification_method": {
+    "engine_replay": 99800,
+    "none": 512,
+    "documented_computation": 1
+  },
+  "by_source_batch": {
+    "0.2": 19869,
+    "0.5": 9488,
+    "2.0": 70656,
+    "0.6": 300
+  },
+  "benchmark_eligible": 99801,
+  "normalized_text_length": {
+    "definition": "See scripts/corpus-text-metrics.js",
+    "min": 6,
+    "max": 182,
+    "mean": 58.716
+  },
+  "raw_jsonl_sha256": "61abacfdba5dbd646ef56f28c5097178fcad99a0eb64b7aaf5defb5d8db1a685",
+  "corrections_from_v07": {
+    "records_in": 100313,
+    "records_out": 100313,
+    "two_square_recomputed": 1072,
+    "two_square_ciphertexts_changed": 1071,
+    "source_citations_corrected": 5
+  }
+}

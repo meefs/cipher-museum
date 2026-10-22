@@ -40,10 +40,12 @@ fifth edition, and a library catalog record must not be described as a complete
 facsimile. Unsubstantiated author/title combinations should be removed rather
 than repaired by guessing a new URL.
 
-Published corpus files are preserved. Their original URLs and source claims
-must remain inspectable, even when the live browser offers an explicitly
-labeled related source or correction. Repairing a source link does **not**
-authenticate the fixture or establish a historical plaintext/ciphertext pair.
+Published v0.6 corpus files and the tagged v0.7 files are preserved. Their
+original URLs and source claims remain inspectable. The newer, separately
+versioned [v0.8 download](releases/corpus-v0.8.md) retires five unsupported
+URLs from active provenance and keeps them in `citation_erratum`. Repairing a
+source link does **not** authenticate the fixture or establish a historical
+plaintext/ciphertext pair.
 
 Three legacy Gutenberg links return successful HTTP responses for the wrong
 works:
@@ -54,16 +56,19 @@ works:
 | `https://www.gutenberg.org/ebooks/31958` | Aeneas Tacticus | Onkel Adam, *Tunturikoski* |
 | `https://www.gutenberg.org/ebooks/7012` | *Le Petit Prince* | Mistral, *Mes Origines* |
 
-The first occurs in released v0.6/v0.7 descendants; the others are in legacy
-source/archive JSONL. Treat these as attribution errors in errata, not ordinary
+The first occurs in published v0.6 and its prepared v0.7 descendant; the
+others are in legacy source/archive JSONL. Treat these as attribution errors in errata, not ordinary
 redirect updates. Two older NSA heritage URLs also resolve to generic About
 content instead of the cited collection. Legacy frozen files contain additional
-404 citations listed individually in the evidence file. All 21 remaining HTTP
-404 candidates belong to archived JSON/JSONL citations; five are also lookup
-keys in the live source-correction map, not rendered link destinations. No
+404 citations listed individually in the evidence file. At the time of this
+audit, all 21 remaining HTTP 404 candidates belonged to archived JSON/JSONL
+citations; five were also lookup keys in the live source-correction map, not
+rendered link destinations. The v0.8 record-level citation errata identify
+four of those unavailable old links without treating related pages as proof of
+the cryptograms. No
 confirmed 404 remains in active navigation or bibliography targets from this
 scan. The live corpus browser shows related sources or wrong-work warnings,
-and the downloadable records retain their original fields.
+and the older downloadable records retain their original fields.
 
 ## Limits and inconclusive results
 

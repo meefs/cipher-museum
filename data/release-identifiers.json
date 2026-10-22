@@ -43,6 +43,17 @@
       "status": "tagged; no Zenodo deposit and no DOI issued",
       "blocked_on": "A Zenodo deposit must be created under dataset_concept_doi by someone holding credentials for that Zenodo account. Build the canonical bytes with `npm run build:corpus:v07` and verify them against public/corpus/v0.7/SHA256SUMS.txt before uploading.",
       "on_issue": "Run `node scripts/record-dataset-doi.js 0.7 <issued-doi>` to move this entry into `datasets` and update every citation surface at once."
+    },
+    {
+      "version": "0.8",
+      "doi": null,
+      "records": 100313,
+      "cipher_type_labels": 85,
+      "tag": null,
+      "source_commit": null,
+      "local_archive": "public/corpus/v0.8/",
+      "status": "complete compressed download served by website; no Zenodo deposit or DOI issued",
+      "blocked_on": "For a citable archival release, verify public/corpus/v0.8/SHA256SUMS.txt, tag the committed source and create a Zenodo deposit under dataset_concept_doi before recording its issued DOI."
     }
   ]
 }
