@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "kind": "public-original-synthetic-exercises",
+  "description": "Museum-authored prose; no authentic manuscript claim. Public fixtures and keys are not blind benchmarks or a trained key pool.",
+  "cases": [
+    {"id":"letter-a","language":"modern English","text":"The messenger returned before the rain. She carried a letter and a small wooden box. We read the letter together, but the name at the end was missing. The keeper asked us to compare the marks on the box with the marks in the book before making a decision.","keySeed":61031},
+    {"id":"letter-b","language":"modern English","text":"The old map showed a road across the valley. There were three bridges on the road and a tower beside the river. The first report said that the eastern bridge was closed. A second report arrived in the morning, so the travelers checked both accounts before leaving.","keySeed":90217},
+    {"id":"language-shift","language":"modern French","text":"La lettre arrive avant la nuit. Nous gardons les signes et les espaces du document original. Une lecture possible ne suffit pas pour prouver le sens du message. Il faut comparer les autres lettres et expliquer les passages qui restent incertains.","keySeed":31287}
+  ]
+}

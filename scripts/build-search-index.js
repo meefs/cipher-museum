@@ -320,11 +320,15 @@ const TOP_LEVEL = [
   'popular-culture-survey.html',
   'teaching.html',
   'my-path.html',
+  'lab/workbench.html',
+  'lab/evidence-workbench.html',
+  'lab/decipherment-cases.html',
+  'lab/modern-attack-evidence.html',
 ];
 
 function processTopPage(file) {
   const html  = fs.readFileSync(file, 'utf8');
-  const slug  = path.basename(file);
+  const slug  = path.relative(ROOT, file).split(path.sep).join('/');
 
   const title = extractTag(html, 'page-title')
              || (html.match(/<title>([^<|]+)/) || [])[1]?.trim() || '';

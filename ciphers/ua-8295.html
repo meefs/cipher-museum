@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>UA-8295: A Changed Cipher Behind the Same Interface — The Cipher Museum</title>
+<meta name="description" content="Compare recovered firmware, measured key recovery and forensic claims about intent.">
+<link rel="canonical" href="https://ciphermuseum.com/ciphers/ua-8295.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/museum.css">
+<link rel="stylesheet" href="../css/research-workbench.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+<circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+<circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/>
+<circle cx="16" cy="16" r="2" fill="currentColor"/>
+<line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.5"/>
+<line x1="16" y1="26" x2="16" y2="30" stroke="currentColor" stroke-width="1.5"/>
+<line x1="2" y1="16" x2="6" y2="16" stroke="currentColor" stroke-width="1.5"/>
+<line x1="26" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li>
+<a href="../museum-map.html">Explore</a>
+</li>
+      <li>
+<a href="../timeline.html">Timeline</a>
+</li>
+      <li>
+<a href="../learn.html">Learn</a>
+</li>
+      <li>
+<a href="../cipher-corpus.html">Cipher Corpus</a>
+</li>
+      <li>
+<a href="../cryptanalysis.html">Cryptanalysis</a>
+</li>
+      <li>
+<a href="../challenges.html">Challenges</a>
+</li>
+      <li>
+<a href="../lab/workbench.html">Lab</a>
+</li>
+      <li>
+<a href="../search.html">Search</a>
+</li>
+    </ul>
+  </div>
+</nav>
+<div class="page-hero">
+<div class="breadcrumb">
+<a href="../index.html">Entrance</a>
+<span>›</span>
+<a href="../halls/modern-crypto.html">Hall XI: Modern Cryptography</a>
+<span>›</span>UA-8295: A Changed Cipher Behind the Same Interface</div>
+<div class="page-meta">
+<span class="page-num">Exhibit 170 of 172</span>
+<span class="badge era-modern">Modern cryptography · research case study</span>
+</div>
+<h1 class="page-title">UA-8295: A Changed Cipher Behind the Same Interface</h1>
+  <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
+<p class="page-tagline">Compare recovered firmware, measured key recovery and forensic claims about intent.</p>
+  <p class="exhibit-status-note">Recovered SBTcipher has implemented key-recovery attacks under specified input/output and resource conditions.</p>
+<div class="exhibit-facts">
+<div class="fact">
+<span class="fact-label">Device</span>
+<span class="fact-value">USFA UA-8295 Short Burst Terminal</span>
+</div>
+<div class="fact">
+<span class="fact-label">Original design</span>
+<span class="fact-value">Nokia DA-8520 · DES in OFB mode</span>
+</div>
+<div class="fact">
+<span class="fact-label">Altered cipher</span>
+<span class="fact-value">SBTcipher</span>
+</div>
+<div class="fact">
+<span class="fact-label">Research</span>
+<span class="fact-value">2026 · ePrint preprint</span>
+</div>
+</div>
+</div>
+<main id="main-content" class="research-main" tabindex="-1">
+<section>
+<h2>One terminal, two cryptographic designs</h2>
+<p>The UA-8295 Short Burst Terminal connects hardware history with forensic cryptanalysis. The original Nokia DA-8520 used DES in output-feedback mode. The USFA version studied by Maatje and Stevens used replacement firmware containing a different design, which the authors call SBTcipher. The 2026 paper reconstructs that cipher from the recovered firmware and evaluates how its structure supports key recovery.</p>
+<p>According to the paper’s documented device history, the replacement ROMs came through an NSA–USFA arrangement. The original and altered versions kept the same visible interface and startup version, and even matching full-ROM checksums. A different cipher could therefore sit behind familiar equipment behavior. The authors had both versions available for comparison.</p>
+</section>
+<section>
+<h2>Separate observations from explanations</h2>
+<table class="cipher-table">
+<thead>
+<tr>
+<th scope="col">Evidence layer</th>
+<th scope="col">What it supports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Firmware comparison</td>
+<td>The DES-based original and the altered SBTcipher implementation are materially different despite their similar presentation.</td>
+</tr>
+<tr>
+<td>Recovered specification</td>
+<td>Limited mixing and partial-key dependencies give an attacker structure to exploit.</td>
+</tr>
+<tr>
+<td>Implemented attacks</td>
+<td>List Merge and Branch-and-Prune recover keys under the tested input/output and resource conditions.</td>
+</tr>
+<tr>
+<td>Forensic interpretation</td>
+<td>The authors compare plausible intended attacks using their “Backdoor Conjecture” methodology. This is an argument about design intent, not direct observation of the designers’ decisions.</td>
+</tr>
+</tbody>
+</table>
+<p>A weakness alone does not prove deliberate sabotage. Here the technical analysis accompanies the device’s documented history. The paper also identifies a nonce-generation weakness inherited from the original terminal; that defect should not be attributed solely to the replacement cipher.</p>
+</section>
+<section>
+<h2>Read the experiment with its conditions</h2>
+<p>The authors benchmarked 20 random keys using a fixed initial input block and zero to three additional randomly sampled input/output block pairs. Those outputs were computed with SBTcipher. The experiment measures key recovery given suitable pairs; it does not demonstrate that every intercepted message supplies them.</p>
+<p>Runs used a server with two Intel Xeon Gold 6248 processors and 1.5 TB installed RAM; individual attacks were single-threaded. Installed server memory is not the memory consumed by each attack. The paper reports List Merge preprocessing and main attack separately; Branch-and-Prune memory stayed around 3 MiB. Additional pairs sharply reduced recovery time. Read runtime, memory, preprocessing, sample size and available data together rather than selecting the fastest row as a universal result.</p>
+<p>The paper’s discussion of what 1980s hardware might have achieved is retrospective analysis. It is distinct from the measured modern-server experiments.</p>
+</section>
+<section>
+<h2>The museum connection</h2>
+<p>Compare this case with <a href="hagelin-c36.html">Hagelin and Crypto AG’s supplier history</a>, while keeping the organizations, equipment and evidence distinct. Compare the original cipher with <a href="des.html">DES</a>. The common question is whether the delivered implementation matches the security story told to its users.</p>
+<p>This exhibit presents the documented design comparison and attack conditions. It does not simulate the terminal or reproduce its complete attacks.</p>
+</section>
+<section>
+<h2>Primary source</h2>
+<p>Stijn Maatje and Marc Stevens, <a href="https://eprint.iacr.org/2026/1309">“Forensic Cryptanalysis of the Backdoored UA-8295 Message Terminal”</a>, ePrint 2026/1309, revision reviewed: 22 September 2026. This source is an ePrint preprint; posting is not evidence of peer review. See §1.2, the recovered design, §5.4 and §6; PDF pp. 3–6, 11–14 and 20–26.</p>
+</section>
+<div class="hall-nav">
+<a href="../ciphers/sodark.html" class="hall-nav-link next">
+<span class="hall-nav-dir">Next case →</span>
+<span class="hall-nav-name">SoDark and Radio Linking</span>
+</a>
+</div>
+</main>
+<footer>
+</footer>
+<script src="../js/demo-loader.min.js"></script>
+<script src="../js/trust-labels.js"></script>
+<script src="../js/nav.js" defer></script>
+</body>
+</html>

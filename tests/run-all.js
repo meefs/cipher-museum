@@ -41,6 +41,8 @@ const suites = [
   'tests/test-classical-review.js',
   'tests/test-history-modern-review.js',
   'tests/test-detective-review.js',
+  'tests/test-research-workbench.js',
+  'tests/test-research-evaluation.js',
   'tests/test-multiple-anagramming.js',
   'tests/test-pad-experiments.js',
   'tests/test-reading-trails.js',

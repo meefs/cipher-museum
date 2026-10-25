@@ -229,6 +229,12 @@
     });
     function exportPrep() { var json = JSON.stringify(validateDocument(prep), null, 2); el('prep-json').value = json; prepStatus('Export includes the exact original transcription, alphabet, width and positional annotations.'); return json; }
     el('prep-export').addEventListener('click', exportPrep);
+    if (el('prep-evidence')) el('prep-evidence').addEventListener('click', function () {
+      try {
+        global.sessionStorage.setItem('museum-evidence-import', JSON.stringify(validateDocument(prep)));
+        global.location.href = 'lab/evidence-workbench.html';
+      } catch (e) { prepStatus('Could not transfer the record. Export JSON and import it in the Evidence Workbench. ' + e.message); }
+    });
     el('prep-download').addEventListener('click', function () {
       var json = exportPrep();
       if (!global.URL || !global.URL.createObjectURL) { prepStatus('Use the exported JSON text below to save this transcription.'); return; }

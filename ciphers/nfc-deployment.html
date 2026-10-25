@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NFC Authentication: When the Tag Stays Unlocked — The Cipher Museum</title>
+<meta name="description" content="A case study of protocol state, key storage, integrity checks and counterfeit hardware.">
+<link rel="canonical" href="https://ciphermuseum.com/ciphers/nfc-deployment.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/museum.css">
+<link rel="stylesheet" href="../css/research-workbench.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+<circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+<circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/>
+<circle cx="16" cy="16" r="2" fill="currentColor"/>
+<line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.5"/>
+<line x1="16" y1="26" x2="16" y2="30" stroke="currentColor" stroke-width="1.5"/>
+<line x1="2" y1="16" x2="6" y2="16" stroke="currentColor" stroke-width="1.5"/>
+<line x1="26" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li>
+<a href="../museum-map.html">Explore</a>
+</li>
+      <li>
+<a href="../timeline.html">Timeline</a>
+</li>
+      <li>
+<a href="../learn.html">Learn</a>
+</li>
+      <li>
+<a href="../cipher-corpus.html">Cipher Corpus</a>
+</li>
+      <li>
+<a href="../cryptanalysis.html">Cryptanalysis</a>
+</li>
+      <li>
+<a href="../challenges.html">Challenges</a>
+</li>
+      <li>
+<a href="../lab/workbench.html">Lab</a>
+</li>
+      <li>
+<a href="../search.html">Search</a>
+</li>
+    </ul>
+  </div>
+</nav>
+<div class="page-hero">
+<div class="breadcrumb">
+<a href="../index.html">Entrance</a>
+<span>›</span>
+<a href="../halls/modern-crypto.html">Hall XI: Modern Cryptography</a>
+<span>›</span>NFC Authentication: When the Tag Stays Unlocked</div>
+<div class="page-meta">
+<span class="page-num">Exhibit 172 of 172</span>
+<span class="badge era-modern">Modern cryptography · research case study</span>
+</div>
+<h1 class="page-title">NFC Authentication: When the Tag Stays Unlocked</h1>
+<p class="page-tagline">A case study of protocol state, key storage, integrity checks and counterfeit hardware.</p>
+  <p class="exhibit-status-note">Protocol and deployment case: results depend on tag model, configuration and attacker access; not a break of AES.</p>
+<div class="exhibit-facts">
+<div class="fact">
+<span class="fact-label">Systems</span>
+<span class="fact-value">Ultralight C / AES · NTAG 22x DNA</span>
+</div>
+<div class="fact">
+<span class="fact-label">Security question</span>
+<span class="fact-value">Authentication state and post-authentication commands</span>
+</div>
+<div class="fact">
+<span class="fact-label">Scope</span>
+<span class="fact-value">Device- and configuration-dependent attacks</span>
+</div>
+<div class="fact">
+<span class="fact-label">Source version</span>
+<span class="fact-value">Preprint revision 1.1 · 28 August 2026</span>
+</div>
+</div>
+</div>
+<main id="main-content" class="research-main" tabindex="-1">
+<section>
+<h2>Authentication is only one step</h2>
+<p>The 2026 “BREAKMEIFYOUCAN!” study examines MIFARE Ultralight C, Ultralight AES, NTAG 223/224 DNA and several compatible or counterfeit products. Its central lesson is that protocol state, writable key storage, integrity checks, key diversification and hardware quality can determine the outcome even when a device uses 3DES or AES.</p>
+<p>This is a deployment and protocol case, not a break of the AES primitive. The tag model and configuration matter: results from one counterfeit family do not automatically apply to genuine NXP silicon or every installation.</p>
+</section>
+<section>
+<h2>The relay leaves the tag authenticated</h2>
+<p>In the paper’s relay scenario, the attacker’s goal is to leave the <strong>tag</strong> in an authenticated state. The legitimate reader may time out while the tag accepts the relayed exchange. That is more specific than the usual story of persuading a reader that a distant card is nearby.</p>
+<p>Subsequent actions depend on the tag’s access controls and command integrity. Where authenticated key storage remains writable, partial overwrites can reduce the unknown key material. Multiple tags sharing a key can make recovery easier. These conditions belong next to the result; “uses AES” alone does not describe the system.</p>
+</section>
+<section>
+<h2>Configuration changes the attack surface</h2>
+<table class="cipher-table">
+<thead>
+<tr>
+<th scope="col">Condition to inspect</th>
+<th scope="col">Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Locked versus writable key/configuration pages</td>
+<td>Controls whether the relevant post-authentication overwrite path is available.</td>
+</tr>
+<tr>
+<td>Command integrity, including enforced CMAC where supported</td>
+<td>Authentication alone may leave later commands insufficiently protected; protocol variants have different integrity facilities.</td>
+</tr>
+<tr>
+<td>Shared versus diversified keys</td>
+<td>Several tags using the same secret can support attacks that are unavailable in that form with per-tag keys. Diversification does not prove every other path safe.</td>
+</tr>
+<tr>
+<td>Genuine versus compatible/counterfeit hardware</td>
+<td>Randomness, lock behavior and implementation details differ. Fast results on weak counterfeit generators are separate from genuine-tag results.</td>
+</tr>
+<tr>
+<td>Relay timing and authenticated state</td>
+<td>A reader timeout does not by itself demonstrate that the tag returned to an unauthenticated state.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Demonstration, extrapolation and theory</h2>
+<p>The paper distinguishes implemented attacks from workload estimates and theoretical proposals. In particular, its single-tag Ultralight C proposal in §17 is theoretical and time-intensive, with a roughly 777-day estimate in the discussed configuration. It must not be presented as the fast counterfeit-tag demonstration.</p>
+<p>This exhibit follows revision 1.1, dated 28 August 2026. The revision corrects an earlier recovered-bit extrapolation. Numbers copied from an older summary can therefore misrepresent the paper’s current evidence.</p>
+<p>A browser demonstration cannot measure physical distance securely. Crypto Lab’s distance-bounding work is a related protocol lesson; this museum exhibit supplies the device history and the distinctions between authentication, proximity, integrity and key storage.</p>
+</section>
+<section>
+<h2>Primary source and connections</h2>
+<p>Nathan Nye and coauthors, <a href="https://eprint.iacr.org/2026/100">“BREAKMEIFYOUCAN!: Exploiting Keyspace Reduction and Relay Attacks in 3DES and AES-protected NFC Technologies”</a>, ePrint 2026/100, revision 1.1 (28 August 2026). This is a preprint; ePrint posting does not establish peer review. See §4, the configuration-specific attack sections, §17 and Appendix A; PDF pp. 3–5, 15–16 and 23–30.</p>
+<p>
+<a href="aes.html">AES</a> · <a href="des.html">DES and Triple DES</a> · <a href="../lab/modern-attack-evidence.html">Compare measured attacks, extrapolations and physical fault access</a>
+</p>
+</section>
+<div class="hall-nav">
+<a href="../ciphers/sodark.html" class="hall-nav-link">
+<span class="hall-nav-dir">← Previous case</span>
+<span class="hall-nav-name">SoDark and Radio Linking</span>
+</a>
+</div>
+</main>
+<footer>
+</footer>
+<script src="../js/demo-loader.min.js"></script>
+<script src="../js/trust-labels.js"></script>
+<script src="../js/nav.js" defer></script>
+</body>
+</html>

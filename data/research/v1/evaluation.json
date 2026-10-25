@@ -1,0 +1,357 @@
+{
+  "version": 1,
+  "model": "museum-prose-quadgram-v1",
+  "modelSha256": "5d7b3680d6671e49fa407d2db8020147a457c432e6730ab610902f87c7935f2e",
+  "scorerSha256": "2621e72bf6124d1d0e864d7ff643bcac62cbb22ae56a4cb0be70388f6129a492",
+  "solverSha256": "8b7b94977421047d3cb360dad250af8513c3d7d350c141b0d4f1fc466e42b174",
+  "fixturesSha256": "30633f1a2bd3466e68032d9fed244fb185afd349c46e111e55c9639378661cb8",
+  "scope": "Public demonstrations; no training, blind holdout or historical-language coverage claim. One-symbol-unlocked runs disclose the rest of the key; they do not establish general recovery.",
+  "records": [
+    {
+      "id": "letter-a",
+      "kind": "synthetic",
+      "language": "modern English",
+      "keySeed": 61031,
+      "sourceDocument": "letter-a",
+      "tokens": 202,
+      "symbols": 40,
+      "inputNormalization": "Uppercase ASCII letters only; original prose retained in exercises.json.",
+      "unassisted": {
+        "options": {
+          "seed": 41,
+          "steps": 15000,
+          "locks": {}
+        },
+        "metrics": {
+          "exact": false,
+          "editDistance": 67,
+          "plaintextError": 0.3316831683168317,
+          "keyError": 0.525
+        },
+        "candidate": "THELETTETTERRETURNESSECORETHERAINTHENARRIEDASETTERATSATLASSWOASENSANDEREASTHELETTERTORETHERSATTHENALEATTHEENDDATLITTINTTHEREEVERATIESATTONALSARETHELARITATTHEDONWITHTHELARITINTHESOOISECAREMAIINTASEDITIAT",
+        "verified": false
+      },
+      "allSymbolsLocked": {
+        "task": "known-key-application",
+        "metrics": {
+          "exact": true,
+          "editDistance": 0,
+          "plaintextError": 0,
+          "keyError": 0
+        }
+      },
+      "oneSymbolUnlocked": {
+        "unlocked": "g1",
+        "locks": {
+          "g25": "T",
+          "g27": "H",
+          "g38": "H",
+          "g23": "E",
+          "g13": "E",
+          "g12": "M",
+          "g9": "M",
+          "g41": "S",
+          "g36": "S",
+          "g2": "N",
+          "g26": "N",
+          "g0": "G",
+          "g21": "G",
+          "g37": "R",
+          "g4": "R",
+          "g33": "U",
+          "g15": "U",
+          "g6": "D",
+          "g10": "D",
+          "g35": "B",
+          "g28": "B",
+          "g3": "F",
+          "g7": "O",
+          "g14": "O",
+          "g31": "A",
+          "g40": "A",
+          "g24": "I",
+          "g39": "I",
+          "g11": "C",
+          "g34": "C",
+          "g20": "L",
+          "g19": "L",
+          "g22": "W",
+          "g8": "W",
+          "g32": "X",
+          "g17": "K",
+          "g5": "K",
+          "g29": "P",
+          "g18": "P"
+        },
+        "seed": 41,
+        "steps": 3000,
+        "metrics": {
+          "exact": true,
+          "editDistance": 0,
+          "plaintextError": 0,
+          "keyError": 0
+        }
+      },
+      "relabellingInvariant": true,
+      "differentIndependentKey": {
+        "metrics": {
+          "exact": false,
+          "editDistance": 176,
+          "plaintextError": 0.8712871287128713,
+          "keyError": 0.9743589743589743
+        },
+        "meaning": "Applying the old key to a new independent key is a negative control, not recovery."
+      }
+    },
+    {
+      "id": "letter-b",
+      "kind": "synthetic",
+      "language": "modern English",
+      "keySeed": 90217,
+      "sourceDocument": "letter-b",
+      "tokens": 213,
+      "symbols": 40,
+      "inputNormalization": "Uppercase ASCII letters only; original prose retained in exercises.json.",
+      "unassisted": {
+        "options": {
+          "seed": 41,
+          "steps": 15000,
+          "locks": {}
+        },
+        "metrics": {
+          "exact": false,
+          "editDistance": 98,
+          "plaintextError": 0.460093896713615,
+          "keyError": 0.675
+        },
+        "candidate": "THEELSTERSHERESERIATERSISSTHENATTEDTHEREVERETHSEERSISTESENTHESIASENTATEVERRESISETHERINESTHEMOSSTSELESTSEISTHATTHEEESTESCRRITTERESTTISESASETICSRELISTARSONETINTHETERCICASETHETRATELESSTHERGETRITHETREACTSDEMISETEETICT",
+        "verified": false
+      },
+      "allSymbolsLocked": {
+        "task": "known-key-application",
+        "metrics": {
+          "exact": true,
+          "editDistance": 0,
+          "plaintextError": 0,
+          "keyError": 0
+        }
+      },
+      "oneSymbolUnlocked": {
+        "unlocked": "g32",
+        "locks": {
+          "g5": "T",
+          "g29": "H",
+          "g22": "H",
+          "g10": "E",
+          "g30": "E",
+          "g38": "O",
+          "g16": "O",
+          "g28": "L",
+          "g26": "L",
+          "g39": "D",
+          "g3": "D",
+          "g4": "M",
+          "g14": "A",
+          "g15": "A",
+          "g37": "P",
+          "g25": "P",
+          "g0": "S",
+          "g2": "S",
+          "g6": "W",
+          "g34": "W",
+          "g21": "R",
+          "g33": "R",
+          "g23": "C",
+          "g11": "C",
+          "g8": "V",
+          "g42": "V",
+          "g19": "Y",
+          "g20": "B",
+          "g27": "B",
+          "g43": "I",
+          "g17": "I",
+          "g9": "G",
+          "g13": "G",
+          "g7": "N",
+          "g12": "N",
+          "g1": "F",
+          "g41": "F",
+          "g18": "K",
+          "g31": "U"
+        },
+        "seed": 41,
+        "steps": 3000,
+        "metrics": {
+          "exact": true,
+          "editDistance": 0,
+          "plaintextError": 0,
+          "keyError": 0
+        }
+      },
+      "relabellingInvariant": true,
+      "differentIndependentKey": {
+        "metrics": {
+          "exact": false,
+          "editDistance": 192,
+          "plaintextError": 0.9014084507042254,
+          "keyError": 0.9487179487179487
+        },
+        "meaning": "Applying the old key to a new independent key is a negative control, not recovery."
+      }
+    },
+    {
+      "id": "language-shift",
+      "kind": "synthetic",
+      "language": "modern French",
+      "keySeed": 31287,
+      "sourceDocument": "language-shift",
+      "tokens": 202,
+      "symbols": 36,
+      "inputNormalization": "Uppercase ASCII letters only; original prose retained in exercises.json.",
+      "unassisted": {
+        "options": {
+          "seed": 41,
+          "steps": 15000,
+          "locks": {}
+        },
+        "metrics": {
+          "exact": false,
+          "editDistance": 148,
+          "plaintextError": 0.7326732673267327,
+          "keyError": 0.8888888888888888
+        },
+        "candidate": "REREAMNEENSELEELETAREDANATEARLESIODSRESSETTEREATESERIENESITIONTHEDMESELETERATETEDMANECORRECTEDERTSSEACTRIOTSISETHENTESEDROTHERSTTENTHETANOHITSESTERETASESTEMANESEAEWITNSAESTERCESSELERSTENERMETANTNESATEDS",
+        "verified": false
+      },
+      "allSymbolsLocked": {
+        "task": "known-key-application",
+        "metrics": {
+          "exact": true,
+          "editDistance": 0,
+          "plaintextError": 0,
+          "keyError": 0
+        }
+      },
+      "oneSymbolUnlocked": {
+        "unlocked": "g29",
+        "locks": {
+          "g7": "L",
+          "g4": "A",
+          "g0": "A",
+          "g23": "E",
+          "g22": "E",
+          "g17": "T",
+          "g16": "T",
+          "g34": "R",
+          "g38": "R",
+          "g33": "I",
+          "g28": "I",
+          "g5": "V",
+          "g21": "V",
+          "g32": "N",
+          "g9": "N",
+          "g2": "U",
+          "g19": "U",
+          "g20": "O",
+          "g35": "O",
+          "g8": "S",
+          "g30": "S",
+          "g10": "G",
+          "g26": "G",
+          "g3": "D",
+          "g1": "D",
+          "g36": "P",
+          "g39": "P",
+          "g13": "C",
+          "g37": "C",
+          "g15": "M",
+          "g25": "B",
+          "g24": "F",
+          "g31": "F",
+          "g6": "X",
+          "g27": "Q"
+        },
+        "seed": 41,
+        "steps": 3000,
+        "metrics": {
+          "exact": false,
+          "editDistance": 5,
+          "plaintextError": 0.024752475247524754,
+          "keyError": 0.027777777777777776
+        }
+      },
+      "relabellingInvariant": true,
+      "differentIndependentKey": {
+        "metrics": {
+          "exact": false,
+          "editDistance": 178,
+          "plaintextError": 0.8811881188118812,
+          "keyError": 1
+        },
+        "meaning": "Applying the old key to a new independent key is a negative control, not recovery."
+      }
+    }
+  ],
+  "damagedTranscription": {
+    "input": "AB?DEF",
+    "glyphError": 0.16666666666666666,
+    "unresolvedCoverage": 0.16666666666666666,
+    "searchRejected": true,
+    "plaintextError": null,
+    "reason": "Missing glyphs are not silently deleted or sent to letter-only search."
+  },
+  "segmentation": {
+    "source": "2228",
+    "expectedBoundaries": [
+      1,
+      3
+    ],
+    "allPaths": [
+      {
+        "codes": [
+          "2",
+          "2",
+          "2",
+          "8"
+        ],
+        "text": "AAAD",
+        "score": 0
+      },
+      {
+        "codes": [
+          "2",
+          "22",
+          "8"
+        ],
+        "text": "AND",
+        "score": 0
+      },
+      {
+        "codes": [
+          "22",
+          "2",
+          "8"
+        ],
+        "text": "NAD",
+        "score": 0
+      }
+    ],
+    "wrongHypothesisBoundarySymmetricDifference": 1,
+    "meaning": "2|2|2|8 adds a boundary after digit 2 compared with 2|22|8. No unique segmentation is selected by the source alone."
+  },
+  "historical": {
+    "id": "z340-section-1",
+    "kind": "historical-source-replay",
+    "correctRouteExact": true,
+    "wrongRouteExact": false,
+    "task": "known-key replay",
+    "fullZ340Recovery": false
+  },
+  "randomNegativeControl": {
+    "tokens": 160,
+    "verified": false,
+    "candidate": "ERRESEEATITITSRROSISHEDESRARRSHHASESHATETRAIIETHRESEARVESEREEANDSTEREDIENTHEAEMEDDISNEERENTHERTERSEETEDIRENTIESNEEROTASTASSEETSEVERESTEDNEERSITANAATNSREEIDENEAH",
+    "plaintextError": null,
+    "meaning": "Random input has no planted plaintext. An English-looking candidate is not a successful decipherment."
+  }
+}

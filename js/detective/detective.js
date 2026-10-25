@@ -340,7 +340,7 @@
       html += '</tbody></table></div>';
     }
 
-    html += '<p class="autosolve-runtime">Solved in ' + result.runtimeMs + ' ms.</p>';
+    html += '<p class="autosolve-runtime">Search completed in ' + result.runtimeMs + ' ms.</p>';
     return html;
   }
 

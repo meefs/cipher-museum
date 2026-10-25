@@ -96,6 +96,22 @@ function main(check = false) {
   // key agreement, a hash, a signature, a sharing scheme and a proof system
   // all protect something without encrypting anything.
   const OVERRIDES = {
+    'ua-8295': {
+      family: 'Firmware forensics', region: 'Finland / Netherlands',
+      usedBy: 'Nokia DA-8520 / USFA UA-8295 terminal users',
+      keyType: 'Original DES-OFB versus altered SBTcipher',
+      modernLesson: 'Separate recovered implementation facts, measured attacks and inferences about intent.'
+    },
+    sodark: {
+      family: 'Tweakable block cipher and radio protocol',
+      keyType: '56-bit key; 64-bit tweak; attacked eight-round 2G configuration',
+      modernLesson: 'State the protected traffic, round count, data requirement and attacker access.'
+    },
+    'nfc-deployment': {
+      family: 'Protocol and deployment case study',
+      keyType: 'Device-specific 3DES/AES keys, storage and diversification',
+      modernLesson: 'Primitive strength does not establish command integrity or secure authentication state.'
+    },
     'nema': {
       region: 'Switzerland', usedBy: 'Swiss Army; training and war-reserve configurations',
       keyType: 'Wheel selection and pairing; ten starting window letters',

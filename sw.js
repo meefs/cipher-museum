@@ -16,7 +16,7 @@
  */
 'use strict';
 
-const VERSION = 'cipher-museum-bd18f646';
+const VERSION = 'cipher-museum-a765acf4';
 
 const CORE = [
   '/',
@@ -38,6 +38,21 @@ const CORE = [
   '/css/detective-workspaces.css',
   '/js/detective/workspaces.js',
   '/js/detective/playback.js',
+  '/js/detective/lang-model.js',
+  '/lab/evidence-workbench.html',
+  '/lab/decipherment-cases.html',
+  '/lab/modern-attack-evidence.html',
+  '/ciphers/ua-8295.html',
+  '/ciphers/sodark.html',
+  '/ciphers/nfc-deployment.html',
+  '/css/research-workbench.css',
+  '/js/research-model.js',
+  '/js/research-worker.js',
+  '/js/research-language-model.js',
+  '/data/research/v1/language-model.json',
+  '/js/research-ui.js',
+  '/js/research-cases.js',
+  '/data/research/v1/z340-section-1.json',
   '/js/ciphers/all-engines.min.js',
   '/css/museum.css',
   '/css/historical-demos.css',

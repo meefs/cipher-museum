@@ -8,6 +8,7 @@
     "validate:release": "node scripts/validate-release-metadata.js",
     "test:engines": "node tests/engines/run.js",
     "test:deep": "node tests/test-deep-ciphers.js",
+    "test:research": "node tests/test-research-workbench.js && node scripts/evaluate-research.js --check",
     "test:comprehensive": "node tests/test-comprehensive.js",
     "test:demos": "node tests/test-demo-pages.js",
     "test:playground": "node tests/test-playground.js",

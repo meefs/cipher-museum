@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SoDark and Radio Linking — The Cipher Museum</title>
+<meta name="description" content="An eight-round attack on HF link establishment, with its data and access conditions visible.">
+<link rel="canonical" href="https://ciphermuseum.com/ciphers/sodark.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/museum.css">
+<link rel="stylesheet" href="../css/research-workbench.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+<circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+<circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/>
+<circle cx="16" cy="16" r="2" fill="currentColor"/>
+<line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.5"/>
+<line x1="16" y1="26" x2="16" y2="30" stroke="currentColor" stroke-width="1.5"/>
+<line x1="2" y1="16" x2="6" y2="16" stroke="currentColor" stroke-width="1.5"/>
+<line x1="26" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li>
+<a href="../museum-map.html">Explore</a>
+</li>
+      <li>
+<a href="../timeline.html">Timeline</a>
+</li>
+      <li>
+<a href="../learn.html">Learn</a>
+</li>
+      <li>
+<a href="../cipher-corpus.html">Cipher Corpus</a>
+</li>
+      <li>
+<a href="../cryptanalysis.html">Cryptanalysis</a>
+</li>
+      <li>
+<a href="../challenges.html">Challenges</a>
+</li>
+      <li>
+<a href="../lab/workbench.html">Lab</a>
+</li>
+      <li>
+<a href="../search.html">Search</a>
+</li>
+    </ul>
+  </div>
+</nav>
+<div class="page-hero">
+<div class="breadcrumb">
+<a href="../index.html">Entrance</a>
+<span>›</span>
+<a href="../halls/modern-crypto.html">Hall XI: Modern Cryptography</a>
+<span>›</span>SoDark and Radio Linking</div>
+<div class="page-meta">
+<span class="page-num">Exhibit 171 of 172</span>
+<span class="badge era-modern">Modern cryptography · research case study</span>
+</div>
+<h1 class="page-title">SoDark and Radio Linking</h1>
+  <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
+<p class="page-tagline">An eight-round attack on HF link establishment, with its data and access conditions visible.</p>
+  <p class="exhibit-status-note">Practical attacks target eight-round 2G ALE with suitable data; the paper does not establish the same break of sixteen-round 3G variants.</p>
+<div class="exhibit-facts">
+<div class="fact">
+<span class="fact-label">Protected traffic</span>
+<span class="fact-value">HF automatic link establishment</span>
+</div>
+<div class="fact">
+<span class="fact-label">Block / key / tweak</span>
+<span class="fact-value">24 / 56 / 64 bits</span>
+</div>
+<div class="fact">
+<span class="fact-label">Attacked version</span>
+<span class="fact-value">Eight-round 2G ALE</span>
+</div>
+<div class="fact">
+<span class="fact-label">Research</span>
+<span class="fact-value">2021 · IACR ToSC</span>
+</div>
+</div>
+</div>
+<main id="main-content" class="research-main" tabindex="-1">
+<section>
+<h2>Protecting the link before the conversation</h2>
+<p>Automatic Link Establishment helps HF radios find and establish a usable connection. Its linking-protection facility protects link-establishment traffic. A weakness can therefore affect authentication and availability, even before considering the confidentiality of voice or data carried over the resulting link.</p>
+<p>Marcus Dansarie’s 2021 paper studies SoDark’s 24-bit block, 56-bit key and 64-bit tweak. Its practical result targets the <strong>eight-round cipher used by 2G ALE</strong>. The sixteen-round 3G variants must be treated separately.</p>
+</section>
+<section>
+<h2>What the attack assumes</h2>
+<table class="cipher-table">
+<thead>
+<tr>
+<th scope="col">Experiment</th>
+<th scope="col">Data and success point</th>
+<th scope="col">Reported time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPU known-plaintext attack</td>
+<td>About 2<sup>12.7</sup> plaintext–ciphertext–tweak tuples at the paper’s 50% success point; the attack exploits suitable related tweaks.</td>
+<td>42 minutes</td>
+</tr>
+<tr>
+<td>GPU chosen-ciphertext attack</td>
+<td>2<sup>8</sup> queries at the 50% success point, with an oracle returning plaintext for selected ciphertext/tweak inputs.</td>
+<td>42 minutes</td>
+</tr>
+<tr>
+<td>Reference GPU brute force</td>
+<td>Two known tuples; full-keyspace comparison.</td>
+<td>About five days</td>
+</tr>
+</tbody>
+</table>
+<p>These are the paper’s dated Table 4 measurements on its six-Nvidia-GPU computer, not promises for a visitor’s laptop. The known-plaintext and chosen-ciphertext models provide different access. Capturing ordinary radio traffic is not automatically equivalent to possessing the chosen-ciphertext oracle.</p>
+</section>
+<section>
+<h2>What the result establishes</h2>
+<p>The implemented attacks undermine the stated linking-protection goals of the eight-round 2G system under their data assumptions. The paper does not demonstrate the same attack against the sixteen-round 3G versions. Nor is this a blanket claim that HF voice encryption has been broken.</p>
+<p>The 24-bit block size, tweak structure, number of rounds and operational protocol all belong in the explanation. A key-length headline alone hides the properties the cryptanalysis actually uses.</p>
+</section>
+<section>
+<h2>Primary source and connections</h2>
+<p>Marcus Dansarie, <a href="https://doi.org/10.46586/tosc.v2021.i3.36-53">“Cryptanalysis of the SoDark Cipher for HF Radio Automatic Link Establishment”</a>, IACR Transactions on Symmetric Cryptology 2021(3), pp. 36–53. Peer-reviewed journal paper. See §3–4 and Table 4, PDF pp. 11–15. <a href="https://github.com/dansarie/SoCracked">Author’s implementation</a>.</p>
+<p>Continue to <a href="nfc-deployment.html">NFC authentication and deployment</a> to compare another gap between primitive-level protection and a system’s actual security goal, or visit <a href="../modern.html">modern cryptography</a>.</p>
+</section>
+<div class="hall-nav">
+<a href="../ciphers/ua-8295.html" class="hall-nav-link">
+<span class="hall-nav-dir">← Previous case</span>
+<span class="hall-nav-name">UA-8295</span>
+</a>
+<a href="../ciphers/nfc-deployment.html" class="hall-nav-link next">
+<span class="hall-nav-dir">Next case →</span>
+<span class="hall-nav-name">NFC Authentication</span>
+</a>
+</div>
+</main>
+<footer>
+</footer>
+<script src="../js/demo-loader.min.js"></script>
+<script src="../js/trust-labels.js"></script>
+<script src="../js/nav.js" defer></script>
+</body>
+</html>

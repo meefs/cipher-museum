@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Evidence Workbench — The Cipher Museum</title><meta name="description" content="Keep the original, compare readings, and make every decipherment hypothesis inspectable.">
+<link rel="canonical" href="https://ciphermuseum.com/lab/evidence-workbench.html"><link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/museum.css"><link rel="stylesheet" href="../css/research-workbench.css">
+</head><body><a class="skip-link" href="#main-content">Skip to main content</a><nav class="museum-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1"/><circle cx="16" cy="16" r="2" fill="currentColor"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="26" x2="16" y2="30" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="16" x2="6" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="26" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.5"/></svg>
+      <span class="nav-logo-text">The Cipher Museum</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../museum-map.html">Explore</a></li>
+      <li><a href="../timeline.html">Timeline</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../cipher-corpus.html">Cipher Corpus</a></li>
+      <li><a href="../cryptanalysis.html">Cryptanalysis</a></li>
+      <li><a href="../challenges.html">Challenges</a></li>
+      <li><a href="../lab/workbench.html">Lab</a></li>
+      <li><a href="../search.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="page-hero"><p class="hero-sub">Research and evidence</p><h1>Evidence Workbench</h1><p class="hero-intro">Keep the original, compare readings, and make every decipherment hypothesis inspectable.</p></header>
+<main id="main-content" class="research-main" tabindex="-1">
+<p>Read a manuscript, preserve competing interpretations, and test a cipher hypothesis. Everything runs in this browser. Export your record before closing; source images stay on your device. <a href="decipherment-cases.html">Start with the historical investigations</a> or <a href="../cipher-detective.html">return to Cipher Detective</a>.</p>
+<nav aria-label="Workbench sections"><p><a href="#source">Source</a> · <a href="#annotations">Readings</a> · <a href="#keys">Known keys</a> · <a href="#segmentation">Number grouping</a> · <a href="#homophonic">Homophonic search</a></p></nav>
+<p id="record-status" class="research-status" role="status">Start with a transcription or import a Cipher Detective JSON export.</p>
+<div class="research-actions"><button id="export-record" type="button">Export evidence JSON</button><button id="restore-record" type="button" disabled>Restore previous saved record</button></div>
+<label for="import-file">Import version 1 or 2 transcription JSON (up to 750 KB)</label><input id="import-file" type="file" accept="application/json,.json">
+<section id="source"><h2>1. Preserve the source</h2><p>Keep case, diacritics, spaces and line breaks. A missing symbol is different from a null that deliberately contributes no plaintext. Revisions preserve the original transcription and its annotations.</p>
+<div class="research-grid">
+<div><label for="source-artifactId">Stable artifact identifier</label><input id="source-artifactId" maxlength="500" placeholder="For example: archive:collection:folio">
+<label for="source-archive">Archive or holding institution</label><input id="source-archive" maxlength="500">
+<label for="source-shelfmark">Shelfmark</label><input id="source-shelfmark" maxlength="500">
+<label for="source-folio">Folio or page</label><input id="source-folio" maxlength="500">
+<label for="source-url">Public source URL (optional)</label><input id="source-url" type="url" maxlength="2000"></div>
+<div><label for="source-transcriber">Transcriber</label><input id="source-transcriber" maxlength="500">
+<label for="source-date">Transcription date, including uncertainty if needed</label><input id="source-date" maxlength="500" placeholder="2026-10-25">
+<label for="source-method">Method and transcription convention</label><input id="source-method" maxlength="500" placeholder="Manual reading; symbol IDs assigned by first appearance">
+<label for="source-imageName">Recorded image filename</label><input id="source-imageName" maxlength="500">
+<label for="image-file">Open a local source image (PNG, JPEG or WebP; under 8 MB)</label><input id="image-file" type="file" accept="image/png,image/jpeg,image/webp"></div></div>
+<div id="image-wrap" class="research-image" hidden><img id="source-image" alt="Locally selected manuscript source"><div id="image-region" class="research-region" hidden></div></div>
+<label for="source-raw">Transcription, exactly as recorded (up to 10,000 characters)</label><textarea id="source-raw" maxlength="10000" rows="5" spellcheck="false"></textarea>
+<p id="revision-label" class="research-note"></p><label for="revision-reason">Reason for changing the transcription</label><input id="revision-reason" maxlength="1000" placeholder="Required when the saved transcription changes">
+<div class="research-actions"><button id="save-revision" type="button">Save source and revision</button><button id="select-span" type="button">Use selected text for a reading span</button></div>
+<details><summary>Retained source revisions</summary><div id="revision-list"></div></details></section>
+<section id="annotations"><h2>2. Record readings and uncertainty</h2><p>Select text above, then use “Use selected text,” or enter positions. Positions count Unicode characters from 1 and include both endpoints. New interpretations are appended; earlier readings remain visible.</p>
+<div class="research-grid"><div><label for="span-start">First character</label><input id="span-start" type="number" min="1" value="1"><label for="span-end">Last character (inclusive)</label><input id="span-end" type="number" min="1" value="1">
+<label for="span-type">Span type</label><select id="span-type"><option value="ciphertext">Ciphertext</option><option value="cleartext">Cleartext</option><option value="marginal">Marginal note</option><option value="missing">Missing or illegible material</option><option value="editorial">Editorial notation</option></select>
+<label for="span-uncertain"><input id="span-uncertain" type="checkbox" checked>Reading remains uncertain</label>
+<label for="span-region">Image region: left, top, width, height (fractions 0–1; optional)</label><input id="span-region" placeholder="0.1, 0.2, 0.15, 0.05" aria-describedby="region-help"><p id="region-help" class="research-note">For example, 0.1 is 10% of the image width or height. Coordinates attach to the recorded image, not a changing screen size.</p></div>
+<div><label for="span-alternatives">Alternative readings, one per line</label><textarea id="span-alternatives" maxlength="4000" placeholder="g17&#10;g17-dot"></textarea><label for="span-reading">Accepted or proposed reading (optional)</label><input id="span-reading" maxlength="200"><label for="span-reason">Evidence for this reading or change</label><textarea id="span-reason" maxlength="1000"></textarea></div></div>
+<button id="add-span" type="button">Append evidence span</button><div id="span-list"></div>
+<h3>Derived readings</h3><p>Keep the symbol sequence, diplomatic reading (original spelling), normalized reading and translation separate. Record which earlier layer you transformed.</p>
+<div class="research-grid"><div><label for="layer-kind">New layer</label><select id="layer-kind"><option value="symbols">Segmented symbol IDs</option><option value="diplomatic">Diplomatic plaintext</option><option value="normalized">Normalized plaintext</option><option value="translation">Translation</option></select><label for="layer-parent">Derived from</label><select id="layer-parent"></select><label for="layer-note">Transformation and evidence</label><textarea id="layer-note" maxlength="1000"></textarea></div><div><label for="layer-text">Reading</label><textarea id="layer-text" maxlength="20000" rows="7"></textarea></div></div>
+<button id="add-layer" type="button">Append reading layer</button><div id="layer-list"></div></section>
+<section id="keys"><h2>3. Apply a known key</h2><p>Historical nomenclators mix letters, syllables, whole words, names and controls. This tool applies an entered key; it does not recover one. Multiple readings stay unresolved. The explicit teaching convention for <code>repeat</code> and <code>erase</code> acts on one preceding resolved Unicode character; check the manuscript’s actual convention.</p>
+<div class="research-grid"><div><label for="typed-key">Typed key entries (JSON array)</label><textarea id="typed-key" rows="10" spellcheck="false">[
+  {"symbol":"g1","type":"letter","values":["A"]},
+  {"symbol":"g2","type":"name","values":["MARY"]},
+  {"symbol":"g3","type":"space","values":[]},
+  {"symbol":"g4","type":"null","values":[]},
+  {"symbol":"g5","type":"word","values":["KING","QUEEN"]}
+]</textarea><p class="research-note">Types: letter, syllable, word, name, null, space, repeat, erase, unknown. This example is invented, not Mary Stuart’s historical key.</p></div>
+<div><label for="key-input">Whitespace-separated symbol IDs</label><textarea id="key-input" maxlength="20000" spellcheck="false">g1 g3 g2 g4 g3 g5</textarea><label for="key-title">Key title</label><input id="key-title" maxlength="200" value="Original teaching key"><label for="key-source">Key source URL (optional)</label><input id="key-source" type="url" maxlength="2000"></div></div>
+<div class="research-actions"><button id="apply-key" type="button">Apply entered key</button><button id="save-key" type="button">Save key in evidence record</button></div><output id="key-output" aria-live="polite"></output>
+<details><summary>Link sources, keys and readings</summary><p>Use IDs such as <code>revision-1</code>, <code>layer-1</code>, <code>key-1</code>, or an external archive identifier. A relationship records a claim and its evidence; matching metadata alone does not establish a historical connection.</p>
+<div class="research-grid"><div><label for="relation-from">From identifier</label><input id="relation-from" maxlength="2000"><label for="relation-to">To identifier</label><input id="relation-to" maxlength="2000"></div><div><label for="relation-type">Relationship</label><select id="relation-type"><option value="transcribes">Transcribes</option><option value="applies-key">Applies key</option><option value="supports">Supports</option><option value="alternative-to">Alternative to</option></select><label for="relation-evidence">Supporting evidence</label><textarea id="relation-evidence" maxlength="2000"></textarea></div></div><button id="add-relation" type="button">Record relationship</button><pre id="relations-list"></pre></details></section>
+<section id="segmentation"><h2>4. Compare numerical segmentations</h2><p>A known key can leave the boundaries ambiguous: <code>2228</code> can be <code>2|2|2|8</code>, <code>2|22|8</code> or <code>22|2|8</code>. Compare readings without changing the original digits. This is bounded known-key path enumeration, not unknown-key cryptanalysis.</p>
+<div class="research-grid"><div><label for="segment-digits">Exact digit stream (1–80 digits)</label><input id="segment-digits" value="2228" maxlength="80" inputmode="numeric"><label for="segment-key">Code-to-reading key (JSON object)</label><textarea id="segment-key" spellcheck="false">{"2":"A","22":"N","8":"D"}</textarea><label for="segment-locks">Mandatory cuts after these digit positions (comma separated)</label><input id="segment-locks" placeholder="For example: 1, 3"></div><div><label for="segment-budget">Search-node budget (1–20,000)</label><input id="segment-budget" type="number" min="1" max="20000" value="10000"><label for="segment-score">Ranking model</label><select id="segment-score"><option value="neutral">Neutral: preserve equal alternatives</option><option value="english">Museum modern-English n-gram model</option></select><p class="research-note">At most 32 complete paths are retained. Scores compare candidates; they are not probabilities. The English model is unsuitable for historical French, German or Latin, and assigns zero to readings shorter than three letters.</p></div></div>
+<button id="segment-run" type="button">Compare segmentations</button><div id="segment-output" aria-live="polite"></div></section>
+<section id="homophonic"><h2>5. Search a homophonic letter key (experimental)</h2><p>Several symbol IDs may map to the same letter. A seeded simulated-annealing search tests consistent mappings using a four-letter model built from museum exhibit prose, with a declared letter-frequency penalty. Short texts can still produce persuasive errors; inspect alternatives and use independent evidence. It does not handle nulls, word codes, control signs, uncertain symbols or transposition. Resolve those hypotheses first.</p>
+<label for="search-raw">Whitespace-separated symbol IDs (3–600 tokens; up to 100 distinct IDs)</label><textarea id="search-raw" maxlength="12000" rows="5" spellcheck="false"></textarea>
+<div class="research-grid"><div><label for="search-locks">Locked symbol-to-letter mappings (JSON; uppercase A–Z)</label><textarea id="search-locks" spellcheck="false">{}</textarea><p class="research-note">A crib becomes a declared lock. If every symbol is locked, the result is known-key application, not recovery.</p></div><div><label for="search-seed">Random seed</label><input id="search-seed" type="number" min="0" max="4294967295" value="41"><label for="search-steps">Mutation-step budget</label><input id="search-steps" type="number" min="1" max="100000" value="15000"><p class="research-note">Maximum 20 million token evaluations. Five distinct candidates are retained. Use Cancel to stop the background worker. Larger budgets do not guarantee recovery.</p></div></div>
+<div class="research-actions"><button id="search-example" type="button">Load generated exercise</button><button id="search-run" type="button">Search for candidates</button><button id="search-cancel" type="button" disabled>Cancel search</button><button id="search-export" type="button" disabled>Export search receipt</button></div>
+<p id="search-status" class="research-status" role="status">No search performed.</p><div id="search-results"></div>
+<details><summary>What would count as evidence?</summary><p>The receipt records the exact input, locks, seed, budget, model, candidate keys and score trace. A high score alone does not establish a historical reading. Check the mapping against every occurrence, account for exceptions, and seek evidence that did not select the candidate. Short or damaged texts can yield convincing errors.</p><p>The public generated exercise reads THE SECRET LETTER IS IN THE CHEST… It is a practice fixture, not a blind benchmark. <a href="../data/research/v1/README.md">Read the evaluation protocol and limitations</a>.</p></details></section>
+<section><h2>Research behind the workbench</h2><ul class="source-list"><li><a href="https://ep.liu.se/en/conference-article.aspx?Article_No=14&amp;issue=171&amp;series=ecp">Historical-cipher transcription conventions (2020)</a>: preserve the source and uncertainty.</li><li><a href="https://aclanthology.org/2022.emnlp-main.44/">Numerical cipher segmentation (2022)</a>: known keys can still leave multiple paths.</li><li><a href="https://doi.org/10.1080/01611194.2022.2160677">Lasry, Biermann and Tomokiyo (2023), Appendix A</a>: annealing helps with letter homophones; nomenclature and archival corroboration still require human work.</li></ul></section>
+</main><footer></footer>
+<script src="../js/nav.js" defer></script><script src="../js/detective/lang-model.js"></script><script src="../js/research-model.js"></script><script src="../js/research-ui.js"></script></body></html>

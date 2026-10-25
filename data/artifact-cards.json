@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T16:31:38.597Z",
-  "totalExhibits": 152,
+  "generatedAt": "2026-10-25T12:48:15.710Z",
+  "totalExhibits": 155,
   "cards": {
     "adfgvx": {
       "name": "ADFGVX Cipher",
@@ -1567,6 +1567,19 @@
       "securityFailure": "Obsolete Swiss military rotor machine. The demo fixes one historical wheel configuration; the 17,576-keypress state period is not its key space.",
       "modernLesson": "Count the state period separately from the initial key space"
     },
+    "nfc-deployment": {
+      "name": "NFC Authentication: When the Tag Stays Unlocked",
+      "hall": "XI",
+      "era": "Modern cryptography · research case study",
+      "family": "Protocol and deployment case study",
+      "region": "Global",
+      "usedBy": "See the exhibit for historical participants and source evidence",
+      "keyType": "Device-specific 3DES/AES keys, storage and diversification",
+      "keyIdea": "A case study of protocol state, key storage, integrity checks and counterfeit hardware.",
+      "trust": null,
+      "securityFailure": null,
+      "modernLesson": "Primitive strength does not establish command integrity or secure authentication state."
+    },
     "nihilist": {
       "name": "Nihilist Cipher",
       "hall": "V",
@@ -2027,6 +2040,23 @@
       "securityFailure": "Short-lived tactical vocabulary cards and changing cursor settings; the widget is a simplified bigram model.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
+    "sodark": {
+      "name": "SoDark and Radio Linking",
+      "hall": "XI",
+      "era": "Modern cryptography · research case study",
+      "family": "Tweakable block cipher and radio protocol",
+      "region": "Global",
+      "usedBy": "See the exhibit for historical participants and source evidence",
+      "keyType": "56-bit key; 64-bit tweak; attacked eight-round 2G configuration",
+      "keyIdea": "An eight-round attack on HF link establishment, with its data and access conditions visible.",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Practical attacks target eight-round 2G ALE with suitable data; the paper does not establish the same break of sixteen-round 3G variants.",
+      "modernLesson": "State the protected traffic, round count, data requirement and attacker access."
+    },
     "solitaire": {
       "name": "Solitaire / Pontifex",
       "hall": "IX",
@@ -2209,6 +2239,23 @@
       },
       "securityFailure": "Never publicly broken by cryptanalysis in wartime service; obsolete today.",
       "modernLesson": "Model differences and operational practices matter alongside the rotor count"
+    },
+    "ua-8295": {
+      "name": "UA-8295: A Changed Cipher Behind the Same Interface",
+      "hall": "XI",
+      "era": "Modern cryptography · research case study",
+      "family": "Firmware forensics",
+      "region": "Finland / Netherlands",
+      "usedBy": "Nokia DA-8520 / USFA UA-8295 terminal users",
+      "keyType": "Original DES-OFB versus altered SBTcipher",
+      "keyIdea": "Compare recovered firmware, measured key recovery and forensic claims about intent.",
+      "trust": {
+        "key": "broken",
+        "text": "Broken",
+        "description": "Cryptographically broken — historically important but unsafe to use today."
+      },
+      "securityFailure": "Recovered SBTcipher has implemented key-recovery attacks under specified input/output and resource conditions.",
+      "modernLesson": "Separate recovered implementation facts, measured attacks and inferences about intent."
     },
     "venona": {
       "name": "VENONA Project",
