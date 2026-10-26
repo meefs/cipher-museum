@@ -1,0 +1,1951 @@
+{
+  "head": "831685994a5875d76310d2091d8c4f6ce00ab474",
+  "workingTree": true,
+  "scope": "Local routes, script errors and horizontal overflow; external resources blocked; not a historical verification.",
+  "pages": [
+    {
+      "file": "404.html",
+      "status": 200,
+      "title": "Exhibit Not Found — The Cipher Museum",
+      "h1": "Exhibit Not Found",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "challenges.html",
+      "status": 200,
+      "title": "Cipher Challenges — The Cipher Museum",
+      "h1": "Cipher Challenges",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "cipher-corpus.html",
+      "status": 200,
+      "title": "Cipher Corpus — Known-Ciphertext Benchmark Library | Cipher Museum",
+      "h1": "Cipher Corpus",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "cipher-detective.html",
+      "status": 200,
+      "title": "Cipher Detective — The Cipher Museum",
+      "h1": "Cipher Detective",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "cipher-flow.html",
+      "status": 200,
+      "title": "Cipher Flow Explorer — The Cipher Museum",
+      "h1": "Cipher Flow",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/adfgvx.html",
+      "status": 200,
+      "title": "ADFGVX Cipher — The Cipher Museum",
+      "h1": "ADFGVX Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/adfgx.html",
+      "status": 200,
+      "title": "ADFGX Cipher — The Cipher Museum",
+      "h1": "ADFGX Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/aeneas-tacticus.html",
+      "status": 200,
+      "title": "Aeneas Tacticus — Water-Clock Signal Code — The Cipher Museum",
+      "h1": "Aeneas Tacticus Water-Clock Signal Code",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/aes.html",
+      "status": 200,
+      "title": "AES (Advanced Encryption Standard) — The Cipher Museum",
+      "h1": "AES (Advanced Encryption Standard)",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/affine.html",
+      "status": 200,
+      "title": "Affine Cipher (E(x) = a·x + b mod 26) — The Cipher Museum",
+      "h1": "Affine Cipher E(x) = a·x + b mod 26",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/agnes-driscoll.html",
+      "status": 200,
+      "title": "Agnes Meyer Driscoll — The Cipher Museum",
+      "h1": "Agnes Meyer Driscoll",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/alberti-disk.html",
+      "status": 200,
+      "title": "Alberti Cipher Disk — The Cipher Museum",
+      "h1": "Alberti Cipher Disk",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/amharic-ge-ez-ciphers.html",
+      "status": 200,
+      "title": "Geʼez Script and a Substitution Model — The Cipher Museum",
+      "h1": "Geʼez Script and a Substitution Model",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/amsco.html",
+      "status": 200,
+      "title": "AMSCO Transposition — The Cipher Museum",
+      "h1": "AMSCO Transposition",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/arabic-nomenclators.html",
+      "status": 200,
+      "title": "Arabic Nomenclators (al-Kindi Era) — The Cipher Museum",
+      "h1": "Arabic Nomenclators",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/argenti.html",
+      "status": 200,
+      "title": "Argenti Family Cipher (Vatican papal nomenclators · 1500s–1600s) — The Cipher Museum",
+      "h1": "Argenti Family Cipher Vatican papal nomenclators · 1500s–1600s",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/arnold-andre.html",
+      "status": 200,
+      "title": "Arnold–André Book Cipher (Book codes · 1779–1780) — The Cipher Museum",
+      "h1": "Arnold–André Book Cipher Book codes · 1779–1780",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/atbash.html",
+      "status": 200,
+      "title": "Atbash — The Cipher Museum",
+      "h1": "Atbash",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/autokey.html",
+      "status": 200,
+      "title": "Autokey — The Cipher Museum",
+      "h1": "Autokey",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/babington.html",
+      "status": 200,
+      "title": "The Babington Plot Cipher (1586) — The Cipher Museum",
+      "h1": "The Babington Plot Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/bach-motif.html",
+      "status": 200,
+      "title": "Bach's B-A-C-H Motif — The Cipher Museum",
+      "h1": "Bach's B-A-C-H Motif",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/bacon.html",
+      "status": 200,
+      "title": "Bacon's Cipher — The Cipher Museum",
+      "h1": "Bacon's Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/bazeries.html",
+      "status": 200,
+      "title": "Bazeries Cipher — The Cipher Museum",
+      "h1": "Bazeries Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/beale.html",
+      "status": 200,
+      "title": "Beale Ciphers — The Cipher Museum",
+      "h1": "Beale Ciphers",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/beaufort.html",
+      "status": 200,
+      "title": "Beaufort Cipher — The Cipher Museum",
+      "h1": "Beaufort Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/beurling.html",
+      "status": 200,
+      "title": "Arne Beurling — The Cipher Museum",
+      "h1": "Arne Beurling",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/bible-code.html",
+      "status": 200,
+      "title": "Bible Code (ELS) — The Cipher Museum",
+      "h1": "Bible Code — Equidistant Letter Sequences",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/bifid.html",
+      "status": 200,
+      "title": "Bifid Cipher — The Cipher Museum",
+      "h1": "Bifid Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/bill-tutte.html",
+      "status": 200,
+      "title": "Bill Tutte — The Cipher Museum",
+      "h1": "Bill Tutte",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/bletchley-park.html",
+      "status": 200,
+      "title": "Bletchley Park — The Cipher Museum",
+      "h1": "Bletchley Park",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/bombe.html",
+      "status": 200,
+      "title": "Turing–Welchman Bombe — The Cipher Museum",
+      "h1": "Turing–Welchman Bombe",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/book-cipher.html",
+      "status": 200,
+      "title": "Book Cipher — The Cipher Museum",
+      "h1": "Book Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/cabinet-noir.html",
+      "status": 200,
+      "title": "Cabinet Noir — Black Chambers of Europe — The Cipher Museum",
+      "h1": "Cabinet Noir — Black Chambers of Europe",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/caesar.html",
+      "status": 200,
+      "title": "Caesar Cipher — The Cipher Museum",
+      "h1": "Caesar Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/cardano-autokey.html",
+      "status": 200,
+      "title": "Cardano and Autokey — Historical Idea, Modern Model — The Cipher Museum",
+      "h1": "Cardano Autokey 1550 historical idea · modern comparison model",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/cardano-grille.html",
+      "status": 200,
+      "title": "Cardano Grille (1550 · steganography by template) — The Cipher Museum",
+      "h1": "Cardano Grille 1550 · steganography by template",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/chaocipher.html",
+      "status": 200,
+      "title": "Chaocipher — The Cipher Museum",
+      "h1": "Chaocipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/che-guevara.html",
+      "status": 200,
+      "title": "Che Guevara’s Checkerboard and Pad — The Cipher Museum",
+      "h1": "Che Guevara’s Checkerboard and Pad",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/chinese-telegraph.html",
+      "status": 200,
+      "title": "Chinese Telegraph Code (Standard Telegraph Codebook · 1881) — The Cipher Museum",
+      "h1": "Chinese Telegraph Code Standard Telegraph Codebook · 1881",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/cicada-3301.html",
+      "status": 200,
+      "title": "Cicada 3301 — The Cipher Museum",
+      "h1": "Cicada 3301",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/colossus.html",
+      "status": 200,
+      "title": "Colossus — The Cipher Museum",
+      "h1": "Colossus",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/columnar.html",
+      "status": 200,
+      "title": "Columnar Transposition — The Cipher Museum",
+      "h1": "Columnar Transposition",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/commercial-codebooks.html",
+      "status": 200,
+      "title": "Commercial Telegraph Codebooks (ABC, Bentley’s, Lieber’s · 1870s–1930s) — The Cipher Museum",
+      "h1": "Commercial Telegraph Codebooks ABC, Bentley’s, Lieber’s · 1870s–1930s",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/confederate-vigenere.html",
+      "status": 200,
+      "title": "Confederate Vigenère — The Cipher Museum",
+      "h1": "Confederate Vigenère",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/copiale.html",
+      "status": 200,
+      "title": "Copiale Cipher — The Cipher Museum",
+      "h1": "Copiale Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/culper-ring.html",
+      "status": 200,
+      "title": "Culper Ring / Tallmadge Code (Washington’s spy ring codebook · 1779) — The Cipher Museum",
+      "h1": "Culper Ring / Tallmadge Code Washington’s spy ring codebook · 1779",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/da-vinci-code.html",
+      "status": 200,
+      "title": "The Da Vinci Code — The Cipher Museum",
+      "h1": "The Da Vinci Code",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/dagapeyeff.html",
+      "status": 200,
+      "title": "D'Agapeyeff Cipher — The Cipher Museum",
+      "h1": "D'Agapeyeff Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/dancing-men.html",
+      "status": 200,
+      "title": "Conan Doyle's Dancing Men — The Cipher Museum",
+      "h1": "Conan Doyle's Dancing Men",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/des.html",
+      "status": 200,
+      "title": "DES (Data Encryption Standard) — The Cipher Museum",
+      "h1": "DES (Data Encryption Standard)",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/diana-cryptosystem.html",
+      "status": 200,
+      "title": "Diana Cryptosystem — The Cipher Museum",
+      "h1": "Diana Cryptosystem",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/dictionary-code.html",
+      "status": 200,
+      "title": "Confederate Dictionary Code — The Cipher Museum",
+      "h1": "Confederate Dictionary Code",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/diffie-hellman.html",
+      "status": 200,
+      "title": "Diffie-Hellman Key Exchange — The Cipher Museum",
+      "h1": "Diffie-Hellman Key Exchange",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/dilly-knox.html",
+      "status": 200,
+      "title": "Dilly Knox — The Cipher Museum",
+      "h1": "Dilly Knox",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/dorabella.html",
+      "status": 200,
+      "title": "Dorabella Cipher — The Cipher Museum",
+      "h1": "Dorabella Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/double-playfair.html",
+      "status": 200,
+      "title": "Doppelkastenschlüssel — German Double Playfair — The Cipher Museum",
+      "h1": "Doppelkastenschlüssel — German Double Playfair",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/double-transposition.html",
+      "status": 200,
+      "title": "Double Transposition — The Cipher Museum",
+      "h1": "Double Transposition",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/dunin.html",
+      "status": 200,
+      "title": "Elonka Dunin — The Cipher Museum",
+      "h1": "Elonka Dunin",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/ecdsa.html",
+      "status": 200,
+      "title": "ECDSA — The Cipher Museum",
+      "h1": "ECDSA",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/egyptian-substitution.html",
+      "status": 200,
+      "title": "Egyptian Substitution Hieroglyphs — The Cipher Museum",
+      "h1": "Egyptian Substitution Hieroglyphs",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/elizebeth-friedman.html",
+      "status": 200,
+      "title": "Elizebeth Smith Friedman — The Cipher Museum",
+      "h1": "Elizebeth Smith Friedman",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/enigma.html",
+      "status": 200,
+      "title": "Enigma Machine — The Cipher Museum",
+      "h1": "Enigma Machine",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/fialka.html",
+      "status": 200,
+      "title": "Fialka M-125 (Soviet 10-rotor machine · 1956) — The Cipher Museum",
+      "h1": "Fialka M-125 Soviet 10-rotor machine · 1956",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/field-hollers.html",
+      "status": 200,
+      "title": "Field Hollers and Coding Songs — The Cipher Museum",
+      "h1": "Field Hollers and Coding Songs",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/four-square.html",
+      "status": 200,
+      "title": "Four-Square Cipher — The Cipher Museum",
+      "h1": "Four-Square Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/fractionated-morse.html",
+      "status": 200,
+      "title": "Fractionated Morse Cipher — The Cipher Museum",
+      "h1": "Fractionated Morse Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/freemason-pigpen.html",
+      "status": 200,
+      "title": "Freemason Pigpen Tradition — The Cipher Museum",
+      "h1": "Freemason Pigpen Tradition",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/gchq-trio.html",
+      "status": 200,
+      "title": "The GCHQ Trio — Ellis, Cocks, and Williamson — The Cipher Museum",
+      "h1": "The GCHQ Trio — Ellis, Cocks, and Williamson",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/geheimschreiber.html",
+      "status": 200,
+      "title": "Geheimschreiber T52 (Sturgeon) (Siemens & Halske teleprinter cipher) — The Cipher Museum",
+      "h1": "Geheimschreiber T52 (Sturgeon) Siemens & Halske teleprinter cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/gold-bug.html",
+      "status": 200,
+      "title": "Poe's Gold-Bug Cipher — The Cipher Museum",
+      "h1": "Poe's Gold-Bug Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/gravity-falls.html",
+      "status": 200,
+      "title": "Gravity Falls Cipher System — The Cipher Museum",
+      "h1": "Gravity Falls Cipher System",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/great-cipher.html",
+      "status": 200,
+      "title": "The Great Cipher (Grand Chiffre des Rossignols) — The Cipher Museum",
+      "h1": "The Great Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/gronsfeld.html",
+      "status": 200,
+      "title": "Gronsfeld Cipher — The Cipher Museum",
+      "h1": "Gronsfeld Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/hagelin-c36.html",
+      "status": 200,
+      "title": "Hagelin C-36 / C-52 Lineage — The Cipher Museum",
+      "h1": "Hagelin C-36 / C-52 Lineage",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/hill.html",
+      "status": 200,
+      "title": "Hill Cipher — The Cipher Museum",
+      "h1": "Hill Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/histiaeus-tattoo.html",
+      "status": 200,
+      "title": "Histiaeus's Tattooed Messenger — The Cipher Museum",
+      "h1": "Histiaeus's Tattooed Messenger",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/homophonic.html",
+      "status": 200,
+      "title": "Homophonic Substitution — The Cipher Museum",
+      "h1": "Homophonic Substitution",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/ira-ciphers.html",
+      "status": 200,
+      "title": "IRA Cipher Traffic (Twomey Papers) — The Cipher Museum",
+      "h1": "IRA Cipher Traffic",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/jefferson-disk.html",
+      "status": 200,
+      "title": "Jefferson Disk — The Cipher Museum",
+      "h1": "Jefferson Disk",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/jn-25.html",
+      "status": 200,
+      "title": "JN-25 (Japanese Naval Code) - The Cipher Museum",
+      "h1": "JN-25 (Japanese Naval Code)",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/joan-clarke.html",
+      "status": 200,
+      "title": "Joan Clarke — The Cipher Museum",
+      "h1": "Joan Clarke",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/kahn.html",
+      "status": 200,
+      "title": "David Kahn — The Cipher Museum",
+      "h1": "David Kahn",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/kama-sutra.html",
+      "status": 200,
+      "title": "Kama Sutra Cipher (Mlecchita Vikalpa) — The Cipher Museum",
+      "h1": "Kama Sutra Cipher (Mlecchita Vikalpa)",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/kerckhoffs.html",
+      "status": 200,
+      "title": "Kerckhoffs's Principle — The Cipher Museum",
+      "h1": "Kerckhoffs's Principle",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/kl-7.html",
+      "status": 200,
+      "title": "KL-7 ADONIS (NATO eight-rotor machine · 1952) — The Cipher Museum",
+      "h1": "KL-7 ADONIS NATO eight-rotor machine · 1952",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/kryha.html",
+      "status": 200,
+      "title": "Kryha (Pocket cipher machine · 1924) — The Cipher Museum",
+      "h1": "Kryha Pocket cipher machine · 1924",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/krypto-arg.html",
+      "status": 200,
+      "title": "ARG Ciphers — The Cipher Museum",
+      "h1": "ARG Ciphers",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/kryptos.html",
+      "status": 200,
+      "title": "Kryptos — The Cipher Museum",
+      "h1": "Kryptos",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/lasry.html",
+      "status": 200,
+      "title": "George Lasry — The Cipher Museum",
+      "h1": "George Lasry",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/latin-american-codebooks.html",
+      "status": 200,
+      "title": "Latin American Telegraphic Codebooks — The Cipher Museum",
+      "h1": "Latin American Telegraphic Codebooks",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/leo-marks.html",
+      "status": 200,
+      "title": "Leo Marks — The Cipher Museum",
+      "h1": "Leo Marks",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/lorenz.html",
+      "status": 200,
+      "title": "Lorenz Cipher — The Cipher Museum",
+      "h1": "Lorenz Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/m-94.html",
+      "status": 200,
+      "title": "M-94 / CSP-488 (US Army strip / disk cipher · 1922) — The Cipher Museum",
+      "h1": "M-94 / CSP-488 US Army strip / disk cipher · 1922",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/m209.html",
+      "status": 200,
+      "title": "M-209 (Hagelin C-38) — The Cipher Museum",
+      "h1": "M-209 (Hagelin C-38)",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/mary-stuart-castelnau-letters.html",
+      "status": 200,
+      "title": "Mary Queen of Scots — Castelnau Letters — The Cipher Museum",
+      "h1": "Mary Queen of Scots — The Castelnau Letters",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/mavis-batey.html",
+      "status": 200,
+      "title": "Mavis Batey — The Cipher Museum",
+      "h1": "Mavis Batey",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/mccormick.html",
+      "status": 200,
+      "title": "McCormick Notes — The Cipher Museum",
+      "h1": "McCormick Notes",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/microdot.html",
+      "status": 200,
+      "title": "Microdot Steganography — The Cipher Museum",
+      "h1": "Microdot Steganography",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/mit-mystery-hunt.html",
+      "status": 200,
+      "title": "MIT Mystery Hunt — The Cipher Museum",
+      "h1": "MIT Mystery Hunt",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/monoalphabetic.html",
+      "status": 200,
+      "title": "Monoalphabetic Substitution — The Cipher Museum",
+      "h1": "Monoalphabetic Substitution",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/morse.html",
+      "status": 200,
+      "title": "Morse Code (Telegraphy's universal alphabet · 1840s) — The Cipher Museum",
+      "h1": "Morse Code Telegraphy's universal alphabet · 1840s",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/myszkowski.html",
+      "status": 200,
+      "title": "Myszkowski Transposition — The Cipher Museum",
+      "h1": "Myszkowski Transposition",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/national-treasure.html",
+      "status": 200,
+      "title": "National Treasure — The Cipher Museum",
+      "h1": "National Treasure",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/navajo-code-talkers.html",
+      "status": 200,
+      "title": "Navajo Code Talkers — The Cipher Museum",
+      "h1": "Navajo Code Talkers",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/nema.html",
+      "status": 200,
+      "title": "NEMA — Swiss Rotor Machine — The Cipher Museum",
+      "h1": "NEMA — Swiss Rotor Machine",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/nfc-deployment.html",
+      "status": 200,
+      "title": "NFC Authentication: When the Tag Stays Unlocked — The Cipher Museum",
+      "h1": "NFC Authentication: When the Tag Stays Unlocked",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/nihilist.html",
+      "status": 200,
+      "title": "Nihilist Cipher — The Cipher Museum",
+      "h1": "Nihilist Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/nomenclator.html",
+      "status": 200,
+      "title": "Nomenclator — The Cipher Museum",
+      "h1": "Nomenclator",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/null-cipher.html",
+      "status": 200,
+      "title": "Null Cipher (Concealment by selective reading · ancient → modern) — The Cipher Museum",
+      "h1": "Null Cipher Concealment by selective reading · ancient → modern",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/one-time-pad.html",
+      "status": 200,
+      "title": "One-Time Pad — The Cipher Museum",
+      "h1": "One-Time Pad",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/patterson-jefferson-cipher.html",
+      "status": 200,
+      "title": "Patterson's Cipher for Jefferson (1801, solved 2007) — The Cipher Museum",
+      "h1": "Patterson's Cipher for Jefferson",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/phaistos-disc.html",
+      "status": 200,
+      "title": "Phaistos Disc — The Cipher Museum",
+      "h1": "Phaistos Disc",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/pigpen.html",
+      "status": 200,
+      "title": "Pigpen Cipher — The Cipher Museum",
+      "h1": "Pigpen Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/playfair.html",
+      "status": 200,
+      "title": "Playfair Cipher — The Cipher Museum",
+      "h1": "Playfair Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/polybius.html",
+      "status": 200,
+      "title": "Polybius Square — The Cipher Museum",
+      "h1": "Polybius Square",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/porta.html",
+      "status": 200,
+      "title": "Porta Cipher — The Cipher Museum",
+      "h1": "Porta Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/purple.html",
+      "status": 200,
+      "title": "Purple (Type 97) — The Cipher Museum",
+      "h1": "Purple (97-shiki ōbun injiki)",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/rail-fence.html",
+      "status": 200,
+      "title": "Rail Fence Cipher — The Cipher Museum",
+      "h1": "Rail Fence Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/red-army-faction.html",
+      "status": 200,
+      "title": "RAF–Stasi Records and an OTP Teaching Model — The Cipher Museum",
+      "h1": "RAF–Stasi Records and an OTP Teaching Model",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/red-type-a.html",
+      "status": 200,
+      "title": "Red (Type A) - The Cipher Museum",
+      "h1": "Red (Type A)",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/rochefort.html",
+      "status": 200,
+      "title": "Joseph Rochefort — The Cipher Museum",
+      "h1": "Joseph Rochefort",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/rosetta-stone.html",
+      "status": 200,
+      "title": "The Rosetta Stone — The Cipher Museum",
+      "h1": "The Rosetta Stone",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/rot13.html",
+      "status": 200,
+      "title": "ROT13 — The Cipher Museum",
+      "h1": "ROT13",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/rs44.html",
+      "status": 200,
+      "title": "Rasterschlüssel 44 (RS44) — The Cipher Museum",
+      "h1": "Rasterschlüssel 44 (RS44)",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/rsa.html",
+      "status": 200,
+      "title": "RSA — The Cipher Museum",
+      "h1": "RSA",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/running-key.html",
+      "status": 200,
+      "title": "Running Key Cipher — The Cipher Museum",
+      "h1": "Running Key Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/sator-square.html",
+      "status": 200,
+      "title": "Sator Square — The Cipher Museum",
+      "h1": "Sator Square",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/scytale.html",
+      "status": 200,
+      "title": "Scytale — The Cipher Museum",
+      "h1": "Scytale",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/sha256.html",
+      "status": 200,
+      "title": "SHA-256 — The Cipher Museum",
+      "h1": "SHA-256",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/shamir-secret-sharing.html",
+      "status": 200,
+      "title": "Shamir's Secret Sharing — The Cipher Museum",
+      "h1": "Shamir's Secret Sharing",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/shugborough.html",
+      "status": 200,
+      "title": "Shugborough Inscription — The Cipher Museum",
+      "h1": "Shugborough Inscription",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/sigaba.html",
+      "status": 200,
+      "title": "SIGABA (ECM Mark II) — The Cipher Museum",
+      "h1": "SIGABA (ECM Mark II)",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/sigsaly.html",
+      "status": 200,
+      "title": "SIGSALY — The Encrypted Speech System — The Cipher Museum",
+      "h1": "SIGSALY — The Encrypted Speech System",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/slidex.html",
+      "status": 200,
+      "title": "Slidex (British WWII tactical code card) — The Cipher Museum",
+      "h1": "Slidex British WWII tactical code card",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/sodark.html",
+      "status": 200,
+      "title": "SoDark and Radio Linking — The Cipher Museum",
+      "h1": "SoDark and Radio Linking",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/solitaire.html",
+      "status": 200,
+      "title": "Solitaire / Pontifex — The Cipher Museum",
+      "h1": "Solitaire / Pontifex",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/somerton-man.html",
+      "status": 200,
+      "title": "Somerton Man Code — The Cipher Museum",
+      "h1": "Somerton Man Code",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/stager.html",
+      "status": 200,
+      "title": "Stager Cipher — The Cipher Museum",
+      "h1": "Stager Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/station-hypo.html",
+      "status": 200,
+      "title": "Station HYPO — Pearl Harbor to Midway — The Cipher Museum",
+      "h1": "Station HYPO — Pearl Harbor to Midway",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/straddling-checkerboard.html",
+      "status": 200,
+      "title": "Straddling Checkerboard — The Cipher Museum",
+      "h1": "Straddling Checkerboard",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/tap-code.html",
+      "status": 200,
+      "title": "Tap Code — The Cipher Museum",
+      "h1": "Tap Code",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/trifid.html",
+      "status": 200,
+      "title": "Trifid Cipher — The Cipher Museum",
+      "h1": "Trifid Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/trithemius.html",
+      "status": 200,
+      "title": "Trithemius Progressive Cipher (Polygraphia · 1518) — The Cipher Museum",
+      "h1": "Trithemius Progressive Cipher Polygraphia · 1518",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/turning-grille.html",
+      "status": 200,
+      "title": "Fleissner Turning Grille — The Cipher Museum",
+      "h1": "Fleissner Turning Grille",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/two-square.html",
+      "status": 200,
+      "title": "Two-Square Cipher — The Cipher Museum",
+      "h1": "Two-Square Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/typex.html",
+      "status": 200,
+      "title": "Typex — The Cipher Museum",
+      "h1": "Typex",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/ua-8295.html",
+      "status": 200,
+      "title": "UA-8295: A Changed Cipher Behind the Same Interface — The Cipher Museum",
+      "h1": "UA-8295: A Changed Cipher Behind the Same Interface",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/venona.html",
+      "status": 200,
+      "title": "VENONA Project — The Cipher Museum",
+      "h1": "VENONA Project",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/vernam.html",
+      "status": 200,
+      "title": "Vernam Cipher — The Cipher Museum",
+      "h1": "Vernam Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/vic.html",
+      "status": 200,
+      "title": "VIC Cipher — The Cipher Museum",
+      "h1": "VIC Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/vietnamese-underground.html",
+      "status": 200,
+      "title": "Vietnamese Underground Codes — The Cipher Museum",
+      "h1": "Vietnamese Underground Codes",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/vigenere.html",
+      "status": 200,
+      "title": "Vigenère Cipher — The Cipher Museum",
+      "h1": "Vigenère Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/voynich.html",
+      "status": 200,
+      "title": "The Voynich Manuscript (c. 1404–1438) — The Cipher Museum",
+      "h1": "The Voynich Manuscript",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/wadsworth-cipher.html",
+      "status": 200,
+      "title": "Wadsworth Cipher — The Cipher Museum",
+      "h1": "Wadsworth Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/wallis-ciphers.html",
+      "status": 200,
+      "title": "Wallis Ciphers (John Wallis & the English Civil War · 1640s) — The Cipher Museum",
+      "h1": "Wallis Ciphers John Wallis & the English Civil War · 1640s",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/wheatstone.html",
+      "status": 200,
+      "title": "Wheatstone Cryptograph (A clock-face polyalphabetic · 1867) — The Cipher Museum",
+      "h1": "Wheatstone Cryptograph A clock-face polyalphabetic · 1867",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/yardley.html",
+      "status": 200,
+      "title": "Herbert Yardley — The Cipher Museum",
+      "h1": "Herbert Yardley",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/zero-knowledge-proofs.html",
+      "status": 200,
+      "title": "Zero-Knowledge Proofs — The Cipher Museum",
+      "h1": "Zero-Knowledge Proofs",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/zimmermann.html",
+      "status": 200,
+      "title": "Zimmermann Telegram (German codes 0075 / 13040 · 1917) — The Cipher Museum",
+      "h1": "Zimmermann Telegram German codes 0075 / 13040 · 1917",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/zodiac.html",
+      "status": 200,
+      "title": "Zodiac Cipher — The Cipher Museum",
+      "h1": "Zodiac Cipher",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "community/index.html",
+      "status": 200,
+      "title": "Community Codebreaks — The Cipher Museum",
+      "h1": "Community Codebreaks",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "comparison.html",
+      "status": 200,
+      "title": "Cipher Comparison — The Cipher Museum",
+      "h1": "Cipher Comparison Table",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "cryptanalysis.html",
+      "status": 200,
+      "title": "Cryptanalysis Techniques — The Cipher Museum",
+      "h1": "Cryptanalysis Techniques",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "embed.html",
+      "status": 200,
+      "title": "Cipher Demo — The Cipher Museum",
+      "h1": "Interactive Cipher Demo",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "further-reading.html",
+      "status": 200,
+      "title": "Further Reading — The Cipher Museum",
+      "h1": "Further Reading",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "glossary.html",
+      "status": 200,
+      "title": "Glossary — The Cipher Museum",
+      "h1": "Cryptography Glossary",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/closest-vector.html",
+      "status": 200,
+      "title": "The Closest Vector Problem · Hall of Foundations",
+      "h1": "Finding thenearest corner",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/elliptic-curves-real.html",
+      "status": 200,
+      "title": "Elliptic Curves over ℝ · Hall of Foundations",
+      "h1": "Adding pointson a curve",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/entropy.html",
+      "status": 200,
+      "title": "Information & Entropy · Hall of Foundations",
+      "h1": "Counting whatyou don't know",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/euler-fermat.html",
+      "status": 200,
+      "title": "Euler & Fermat · Hall of Foundations",
+      "h1": "Why RSAundoes itself",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/finite-fields.html",
+      "status": 200,
+      "title": "Finite Fields · Hall of Foundations",
+      "h1": "When the curveshatters",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/group-theory.html",
+      "status": 200,
+      "title": "Group Theory · Hall of Foundations",
+      "h1": "The vocabularyeverything shares",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/index.html",
+      "status": 200,
+      "title": "Hall of Foundations · Cipher Museum",
+      "h1": "The ground yourkeys stand on",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/interpolation.html",
+      "status": 200,
+      "title": "Polynomial Interpolation · Hall of Foundations",
+      "h1": "Points thatlock a curve",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/lattices-svp.html",
+      "status": 200,
+      "title": "Lattices & the SVP · Hall of Foundations",
+      "h1": "A grid thathides its shortcut",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/learning-with-errors.html",
+      "status": 200,
+      "title": "Learning With Errors · Hall of Foundations",
+      "h1": "The secret hiddenby a little noise",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/modular-arithmetic.html",
+      "status": 200,
+      "title": "Modular Arithmetic · Hall of Foundations",
+      "h1": "Arithmetic ona clock",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/modularity-exhibit.html",
+      "status": 200,
+      "title": "The Ground Beneath the Curve · Cipher Museum",
+      "h1": "The ground beneaththe curve",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/one-way-function.html",
+      "status": 200,
+      "title": "The One-Way Function · Hall of Foundations",
+      "h1": "Easy one way,hard the other",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/pairings.html",
+      "status": 200,
+      "title": "Bilinear Pairings · Hall of Foundations",
+      "h1": "Multiplying theunmultipliable",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/polynomial-rings.html",
+      "status": 200,
+      "title": "Polynomial Rings · Hall of Foundations",
+      "h1": "Numbers thatare polynomials",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/prime-number-theorem.html",
+      "status": 200,
+      "title": "The Prime Number Theorem · Hall of Foundations",
+      "h1": "How to find aprime in the dark",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/random-oracle.html",
+      "status": 200,
+      "title": "The Random Oracle · Hall of Foundations",
+      "h1": "The oracle thatcan't be predicted",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/reduction.html",
+      "status": 200,
+      "title": "Reduction & Proof · Hall of Foundations",
+      "h1": "Standing on aborrowed difficulty",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/ancient.html",
+      "status": 200,
+      "title": "Hall I: World Origins of Cryptography — The Cipher Museum",
+      "h1": "World Origins of Cryptography",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/civil-war.html",
+      "status": 200,
+      "title": "Hall VI: Civil War Gallery — The Cipher Museum",
+      "h1": "The American Civil War Gallery",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/codebreakers.html",
+      "status": 200,
+      "title": "Hall X: Hall of Codebreakers — The Cipher Museum",
+      "h1": "Hall of Codebreakers",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/culture.html",
+      "status": 200,
+      "title": "Hall XIII: Cipher Culture — The Cipher Museum",
+      "h1": "Cipher Culture",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/machines.html",
+      "status": 200,
+      "title": "Hall VII: Mechanical Cipher Machines — The Cipher Museum",
+      "h1": "Mechanical Cipher Machines",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/military.html",
+      "status": 200,
+      "title": "Hall V: Military & Spy Ciphers — The Cipher Museum",
+      "h1": "Military & Spy Ciphers",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/modern-crypto.html",
+      "status": 200,
+      "title": "Hall XI: Modern Cryptography — The Cipher Museum",
+      "h1": "Modern Cryptography",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/polyalphabetic.html",
+      "status": 200,
+      "title": "Hall III: The Polyalphabetic Revolution — The Cipher Museum",
+      "h1": "The Polyalphabetic Revolution",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/puzzle.html",
+      "status": 200,
+      "title": "Hall VIII: Puzzle & Novelty Ciphers — The Cipher Museum",
+      "h1": "Puzzle & Novelty Ciphers",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/substitution.html",
+      "status": 200,
+      "title": "Hall II: Classical Substitution — The Cipher Museum",
+      "h1": "Classical Substitution",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/transposition.html",
+      "status": 200,
+      "title": "Hall IV: Transposition & Fractionation — The Cipher Museum",
+      "h1": "Transposition & Fractionation",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/unbreakable.html",
+      "status": 200,
+      "title": "Hall IX: The Unbreakable — The Cipher Museum",
+      "h1": "The Unbreakable",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "halls/unsolved.html",
+      "status": 200,
+      "title": "Hall XII: Unsolved Ciphers — The Cipher Museum",
+      "h1": "Unsolved Ciphers",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "title": "The Cipher Museum — Interactive History of Encryption",
+      "h1": "Explore the History of Encryption",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "lab/decipherment-cases.html",
+      "status": 200,
+      "title": "How a Decipherment Becomes Evidence — The Cipher Museum",
+      "h1": "How a Decipherment Becomes Evidence",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "lab/evidence-workbench.html",
+      "status": 200,
+      "title": "Evidence Workbench — The Cipher Museum",
+      "h1": "Evidence Workbench",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "lab/modern-attack-evidence.html",
+      "status": 200,
+      "title": "What an Attack Result Actually Shows — The Cipher Museum",
+      "h1": "What an Attack Result Actually Shows",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "lab/workbench.html",
+      "status": 200,
+      "title": "Codebreaker's Workbench — The Cipher Museum",
+      "h1": "Codebreaker's Workbench",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "learn.html",
+      "status": 200,
+      "title": "Learn — The Cipher Museum",
+      "h1": "How Ciphers Work",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "modern.html",
+      "status": 200,
+      "title": "Modern Cryptography — The Cipher Museum",
+      "h1": "Modern Cryptography",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "museum-map.html",
+      "status": 200,
+      "title": "Museum Map — The Cipher Museum",
+      "h1": "Museum Map",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "my-path.html",
+      "status": 200,
+      "title": "My Cryptographer's Path — The Cipher Museum",
+      "h1": "My Cryptographer's Path",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "offline.html",
+      "status": 200,
+      "title": "Exhibit unavailable offline — The Cipher Museum",
+      "h1": "This exhibit is not available offline",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "popular-culture-survey.html",
+      "status": 200,
+      "title": "Popular Culture Survey — The Cipher Museum",
+      "h1": "Popular Culture Survey",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "public/reports/benchmark-baselines.html",
+      "status": 200,
+      "title": "Cipher Corpus Statistics and Evaluation Status",
+      "h1": "Cipher Corpus Statistics and Evaluation Status",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "search.html",
+      "status": 200,
+      "title": "Search — The Cipher Museum",
+      "h1": "Search the Museum",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "teaching.html",
+      "status": 200,
+      "title": "Corpus Teaching Guide — The Cipher Museum",
+      "h1": "Teaching & Overview",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "timeline.html",
+      "status": 200,
+      "title": "Timeline — The Cipher Museum",
+      "h1": "History of Encryption",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "tours/index.html",
+      "status": 200,
+      "title": "Guided Tours — The Cipher Museum",
+      "h1": "Guided Tours",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "tours/tour.html",
+      "status": 200,
+      "title": "The Mathematics of Secrecy — The Cipher Museum",
+      "h1": "The Mathematics of Secrecy",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "errors": []
+    }
+  ],
+  "failures": [],
+  "reference_followup": {
+    "pages": [
+      "glossary.html",
+      "modern.html",
+      "timeline.html"
+    ],
+    "failures": []
+  },
+  "validation": {
+    "full_npm_test": "passed after third checkpoint edits",
+    "html_lint": "214 pages passed",
+    "claim_guards": 17,
+    "retired_claim_mutations_rejected": 17,
+    "timeline_mutations_rejected": 2,
+    "artifact_cards_retained": 155,
+    "search_entries_retained": 204
+  }
+}

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Red Army Faction One-Time Pad — The Cipher Museum</title>
+  <title>RAF–Stasi Records and an OTP Teaching Model — The Cipher Museum</title>
   <meta name="description" content="RAF–Stasi contacts are documented, but this exhibit does not establish a specific RAF one-time-pad system. The interactive is a generic arithmetic illustration.">
-  <meta property="og:title" content="Red Army Faction One-Time Pad — The Cipher Museum">
+  <meta property="og:title" content="RAF–Stasi Records and an OTP Teaching Model — The Cipher Museum">
   <meta property="og:description" content="RAF–Stasi contacts are documented, but this exhibit does not establish a specific RAF one-time-pad system. The interactive is a generic arithmetic illustration.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/red-army-faction.html">
@@ -14,7 +14,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Red Army Faction One-Time Pad — The Cipher Museum">
+  <meta name="twitter:title" content="RAF–Stasi Records and an OTP Teaching Model — The Cipher Museum">
   <meta name="twitter:description" content="RAF–Stasi contacts are documented, but this exhibit does not establish a specific RAF one-time-pad system. The interactive is a generic arithmetic illustration.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
@@ -52,23 +52,23 @@
   <div class="breadcrumb">
     <a href="../index.html">Entrance</a><span>&rsaquo;</span>
     <a href="../halls/military.html">Hall V: Military &amp; Spy Ciphers</a><span>&rsaquo;</span>
-    Red Army Faction One-Time Pad
+    RAF–Stasi Records and an OTP Teaching Model
   </div>
   <div class="page-meta">
     <span class="page-num">Hall V · Military Ciphers</span>
     <span class="badge era-coldwar">Cold War · 1970–1998</span>
   </div>
-  <h1 class="page-title">Red Army Faction One-Time Pad</h1>
+  <h1 class="page-title">RAF–Stasi Records and an OTP Teaching Model</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--educational" href="../museum-map.html#trust-labels" title="A didactic construction for learning cryptographic concepts, not for security." aria-label="Trust label: Educational. A didactic construction for learning cryptographic concepts, not for security."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></svg><span class="trust-label__text">Educational</span></a></div>
-  <p class="page-tagline">KGB-supplied cryptographic material used by the West German urban guerrilla network — how the Stasi became the perfect clandestine infrastructure provider.</p>
-  <p class="exhibit-status-note">Illustrative book-cipher model; not a reconstruction of an authenticated RAF key or message.</p>
+  <p class="page-tagline">Documented organisational contacts do not identify a particular cipher. The letter-pad demonstration is separate from the archival record.</p>
+  <p class="exhibit-status-note">Illustrative letter-pad arithmetic; not a reconstruction of an authenticated RAF key or message.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Organization</span><span class="fact-value">Red Army Faction (RAF), West Germany</span></div>
     <div class="fact"><span class="fact-label">Era</span><span class="fact-value">1970–1998</span></div>
-    <div class="fact"><span class="fact-label">Supply Chain</span><span class="fact-value">East German Stasi / KGB</span></div>
-    <div class="fact"><span class="fact-label">Cipher</span><span class="fact-value">One-Time Pad (Soviet standard field format)</span></div>
-    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Communications evidence, no pads recovered</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">State sponsor infrastructure dramatically elevates non-state actor crypto capabilities</span></div>
+    <div class="fact"><span class="fact-label">Documented context</span><span class="fact-value">RAF–Stasi contacts</span></div>
+    <div class="fact"><span class="fact-label">Cipher</span><span class="fact-value">Generic letter-pad teaching model</span></div>
+    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">No authenticated RAF cryptosystem identified here</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Separate organisational evidence from cryptographic evidence</span></div>
   </div>
 </div>
 <div class="demo-section" data-cipher="raf-otp"></div>
@@ -83,12 +83,12 @@
       <div class="panel-body"><p><strong>Evidence limit:</strong> This exhibit has no identified intercepted-message series, recovered RAF pad or technical manual supporting claims of hundreds of unreadable transmissions or a particular KGB-supplied key kit. Those claims are therefore not presented as established history.</p></div>
     </div>
     <div class="panel">
-      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">The KGB Field OTP Format</span></div>
-      <div class="panel-body"><p>The widget illustrates digitwise addition modulo 10 without carry. This operation is not “Fibonacci addition,” and the widget is not a reconstruction of an authenticated RAF communication procedure. A real one-time pad would need independent random secret key digits, sufficient length and no reuse.</p></div>
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">The Letter-Pad Teaching Model</span></div>
+      <div class="panel-body"><p>The widget maps A–Z to 0–25 and adds letters modulo 26. It is not a decimal field-pad reconstruction. A user-supplied key must cover the message; a blank key requests letters generated using the browser’s cryptographic random API and displays them with the result. A real one-time pad requires an independent, uniformly random secret key used only once. A displayed key is not secret, and this browser demonstration does not establish historical RAF use.</p></div>
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">The Stasi Files Exposure</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Archive exposure post-reunification</div><div class="attack-diff">Complexity: Metadata attack — cipher itself not broken</div><p class="attack-desc">Stasi records became important evidence after German reunification. Archival proof of an organisational relationship and recovery of a cryptographic system are distinct findings; missing key material alone cannot prove that a specific one-time pad was used.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Archive exposure post-reunification</div><div class="attack-diff">Archival evidence is distinct from a cryptanalytic attack</div><p class="attack-desc">Stasi records became important evidence after German reunification. Archival proof of an organisational relationship and recovery of a cryptographic system are distinct findings; missing key material alone cannot prove that a specific one-time pad was used.</p></div></div>
     </div>
   </div>
   <div class="exhibit-side">
@@ -97,11 +97,13 @@
         <span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-swords"/></svg></span><span class="panel-title" style="color:var(--gold);">Quick Facts</span>
       </div>
       <div class="panel-body">
-        <table class="cipher-table"><tbody><tr><td>Organization</td><td>Red Army Faction (RAF), West Germany</td></tr><tr><td>Era</td><td>1970–1998</td></tr><tr><td>Supply Chain</td><td>East German Stasi / KGB</td></tr><tr><td>Cipher</td><td>One-Time Pad (Soviet standard field format)</td></tr><tr><td>Status</td><td>Communications evidence, no pads recovered</td></tr><tr><td>Modern Lesson</td><td>State sponsor infrastructure dramatically elevates non-state actor crypto capabilities</td></tr></tbody></table>
+        <table class="cipher-table"><tbody><tr><td>Organization</td><td>Red Army Faction (RAF), West Germany</td></tr><tr><td>Era</td><td>1970–1998</td></tr><tr><td>Documented context</td><td>RAF–Stasi contacts</td></tr><tr><td>Cipher</td><td>Generic letter-pad teaching model</td></tr><tr><td>Status</td><td>No authenticated RAF cryptosystem identified here</td></tr><tr><td>Modern Lesson</td><td>Separate organisational evidence from cryptographic evidence</td></tr></tbody></table>
       </div>
     </div>
   </div>
 </div>
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Bundesarchiv, <a href="https://www.bundesarchiv.de/nachricht/die-raf-und-die-stasi-anarcho-terroristische-kraefte/">“Die RAF und die Stasi: Anarcho-terroristische Kräfte”</a> (20 September 2017), documents contacts and the sheltering and monitoring of former RAF members. It does not identify the cipher used by this interactive.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

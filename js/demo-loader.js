@@ -135,7 +135,7 @@
       inputs: [{ type: 'textarea', id: 'keyword', label: 'Reference Text', value: 'We the People of the United States in Order to form a more perfect Union establish Justice insure domestic Tranquility provide for the common defence', placeholder: 'Reference text…' }]
     },
     stager: {
-      label: 'Route Cipher (Stager)', engine: 'stager', defaultMsg: 'WE ARE DISCOVERED FLEE AT ONCE',
+      label: 'Letter-Route Teaching Model — Compare Stager’s Word Routes', engine: 'stager', defaultMsg: 'WE ARE DISCOVERED FLEE AT ONCE',
       inputs: [{ type: 'range', id: 'shift', label: 'Columns', min: 2, max: 10, value: 5 }]
     },
     vic: {
@@ -372,7 +372,7 @@
       inputs: [{ type: 'text', id: 'keyword', label: 'Nomenclator Key', value: 'WALLIS', placeholder: 'WALLIS' }]
     },
     'raf-otp': {
-      label: 'One-Time Pad Teaching Model — Not an Authenticated RAF System', engine: 'otp',
+      label: 'Letter-Pad Teaching Model — Not an Authenticated RAF System', engine: 'otp',
       defaultMsg: 'OPERATION READY', inputs: [
         { type: 'text', id: 'keyword', label: 'Pad (leave blank for random)', value: '', placeholder: 'OTP key material…' }
       ]
@@ -390,7 +390,7 @@
     'latin-american-codebooks': {
       label: 'Invented Commercial Codebook Illustration', engine: 'commercialCode',
       defaultMsg: 'CARGO ARRIVED BUENOSAIRES',
-      inputs: [{ type: 'text', id: 'keyword', label: 'Codebook (informational only)', value: 'COMERCIAL', placeholder: 'C\u00f3digo Comercial Mexicano…' }]
+      inputs: [{ type: 'text', id: 'keyword', label: 'Codebook (informational only)', value: 'COMERCIAL', placeholder: 'Invented vocabulary' }]
     },
     'diana-cryptosystem': {
       label: 'Diana Cryptosystem (US Special Forces OTP, 1960s–)', engine: 'diana',
@@ -416,7 +416,7 @@
     'vietnamese-underground': {
       label: 'Illustrative Substitution — No Specific Operational Attribution', engine: 'monoalphabetic',
       defaultMsg: 'ADVANCE TO POSITIONS',
-      inputs: [{ type: 'text', id: 'keyword', label: 'Cell Key', value: 'GIAIPHONG', placeholder: 'Key word\u2026' }]
+      inputs: [{ type: 'text', id: 'keyword', label: 'Teaching Keyword', value: 'GIAIPHONG', placeholder: 'Key word\u2026' }]
     }
   };
 

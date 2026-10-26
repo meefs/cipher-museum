@@ -138,7 +138,7 @@
         <span class="badge era-19c">1890s · France</span>
       </div>
       <div class="card-name">Bazeries Cipher</div>
-      <p class="card-desc">Bazeries cylinder cipher — Etienne Bazeries' 1891 wheel cipher with 20 alphabet disks, an evolution later adopted by the US Army as the M-94 in 1922.</p>
+      <p class="card-desc">Bazeries is associated with both a cipher cylinder and hand-cipher procedures. This exhibit uses a labelled substitution-and-reversal model; it is not the cylinder.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span><span class="badge badge-hard">Hard to Break</span></div>
         <span class="card-arrow">→</span>
@@ -151,12 +151,12 @@
         <span class="badge era-coldwar">Cold War · 1950s</span>
       </div>
       <div class="card-name">VIC Cipher</div>
-      <p class="card-desc">VIC cipher (1953) — Reino Häyhänen's KGB hand cipher: straddling checkerboard, double transposition, date-driven keystream. Exposed in 1957 after his defection, not broken cryptanalytically.</p>
+      <p class="card-desc">The Hollow Nickel message became readable with information from Häyhänen’s 1957 defection. The exhibit distinguishes historical VIC from its simplified browser model.</p>
       <div style="font-family:var(--fm);font-size:.75rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.8;letter-spacing:.06em;">
         <span style="color:var(--tx3);">Checkerboard → chain addition → double transposition</span>
       </div>
       <div class="card-foot">
-        <div class="card-badges"><span class="trust-label trust-label--historical trust-label--sm" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise.">Historical Only</span><span class="badge badge-hard">Hardest Ever Used</span></div>
+        <div class="card-badges"><span class="trust-label trust-label--historical trust-label--sm" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise.">Historical Only</span><span class="badge badge-hard">Historical Recovery</span></div>
         <span class="card-arrow">→</span>
       </div>
     </a>
@@ -181,7 +181,7 @@
     <a href="../ciphers/straddling-checkerboard.html" class="cipher-card">
       <div class="card-head">
         <span class="card-num">Exhibit 45</span>
-        <span class="badge era-19c">Russian Nihilists · ~1880s</span>
+        <span class="badge era-19c">Soviet Hand Systems</span>
       </div>
       <div class="card-name">Straddling Checkerboard</div>
       <p class="card-desc">Straddling Checkerboard (1930s) — the Soviet variable-length digit substitution: common letters get one digit, rare letters two. The substitution layer of VIC.</p>
@@ -215,7 +215,7 @@
       <div class="panel-body"><p>The VIC cipher's straddling checkerboard assigns shorter codes to common letters (like Huffman coding) while also obscuring the alphabet mapping. This dual purpose — compression and encryption — is a sophisticated design insight that modern protocols use separately.</p></div>
     </div>
     <div class="panel">
-      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">Human Factors Always Win</span></div>
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">Operational Disclosure and Cryptanalysis</span></div>
       <div class="panel-body"><p>VIC’s full key procedure became known through a defection. That differs from recovering a key by cryptanalysis. Operational compromise can expose a system even when a particular mathematical attack has not been demonstrated.</p></div>
     </div>
   </div>
@@ -233,7 +233,7 @@
               <th style="padding:.65rem .5rem;color:var(--gold);font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase;font-size:.6rem;">System</th>
               <th style="padding:.65rem .5rem;color:var(--gold);font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase;font-size:.6rem;">Primary Use</th>
               <th style="padding:.65rem .5rem;color:var(--gold);font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase;font-size:.6rem;">Field Speed</th>
-              <th style="padding:.65rem .5rem;color:var(--gold);font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase;font-size:.6rem;">Cryptanalytic Resistance</th>
+              <th style="padding:.65rem .5rem;color:var(--gold);font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase;font-size:.6rem;">Attack considerations</th>
               <th style="padding:.65rem .5rem;color:var(--gold);font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase;font-size:.6rem;">Operational Failure Mode</th>
             </tr>
           </thead>
@@ -249,14 +249,14 @@
               <td style="padding:.6rem .5rem;"><a href="../ciphers/adfgx.html">ADFGX</a> / <a href="../ciphers/adfgvx.html">ADFGVX</a></td>
               <td style="padding:.6rem .5rem;">WWI operational traffic</td>
               <td style="padding:.6rem .5rem;">Fast once drilled</td>
-              <td style="padding:.6rem .5rem;">High for its day</td>
+              <td style="padding:.6rem .5rem;">Traffic and key procedures matter</td>
               <td style="padding:.6rem .5rem;">Message volume + reused structure enabled Painvin's break</td>
             </tr>
             <tr style="border-bottom:1px solid var(--s4);">
               <td style="padding:.6rem .5rem;"><a href="../ciphers/bazeries.html">Bazeries</a></td>
               <td style="padding:.6rem .5rem;">Officer-level secure correspondence</td>
               <td style="padding:.6rem .5rem;">Slow in field conditions</td>
-              <td style="padding:.6rem .5rem;">Moderate-High</td>
+              <td style="padding:.6rem .5rem;">Depends on the particular procedure</td>
               <td style="padding:.6rem .5rem;">Complex procedure encourages operator shortcuts</td>
             </tr>
             <tr style="border-bottom:1px solid var(--s4);">
@@ -264,14 +264,14 @@
               <td style="padding:.6rem .5rem;">Long-form clandestine dispatches</td>
               <td style="padding:.6rem .5rem;">Slow</td>
               <td style="padding:.6rem .5rem;">Variable</td>
-              <td style="padding:.6rem .5rem;">Compromise of shared edition collapses secrecy</td>
+              <td style="padding:.6rem .5rem;">Known edition and indexing conventions can expose a book code</td>
             </tr>
             <tr>
               <td style="padding:.6rem .5rem;"><a href="../ciphers/vic.html">VIC</a></td>
               <td style="padding:.6rem .5rem;">Cold War espionage bursts</td>
               <td style="padding:.6rem .5rem;">Slow but disciplined</td>
-              <td style="padding:.6rem .5rem;">Very High</td>
-              <td style="padding:.6rem .5rem;">Human compromise (defection, capture), not pure crypto break</td>
+              <td style="padding:.6rem .5rem;">Historical case, not a quantified security level</td>
+              <td style="padding:.6rem .5rem;">Defector information enabled the documented message recovery</td>
             </tr>
           </tbody>
         </table>

@@ -64,10 +64,10 @@
   <p class="exhibit-status-note">Historical systems combine code groups, letter substitutions, homophones and nulls; evidence varies by key and traffic.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Italian city-state diplomacy, 14th–15th c.</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1400s onward (Mantua, Venice, the Vatican)</span></div>
-    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Alphabet substitution + 1,000–2,000 entry codebook of words and names</span></div>
-    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Black Chambers (Vienna, Paris, London) c. 1700–1850 by sheer intercept volume</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Hybrid systems with mixed-granularity tokens still need uniform statistical hardness</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Late 1300s onward; changing diplomatic systems</span></div>
+    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Substitution alphabet plus a code list; sizes varied</span></div>
+    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Context, traffic patterns and sometimes captured keys</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Combining methods does not by itself establish security</span></div>
   </div>
 </div>
 
@@ -84,12 +84,12 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The earliest surviving nomenclator dates to the Mantua chancery in 1401. The Vatican's nomenclators from the 1500s ran to several thousand entries. By the time the Rossignols designed the Great Cipher in the mid-1600s, nomenclators were standard issue across Europe. They remained in use into the early telegraphic era — the diplomatic codebook that appears in 1860s telegrams is essentially a printed industrial-era nomenclator. Black Chambers — government cryptanalytic offices in Vienna, Paris, and London — built their reputation on slowly reconstructing nomenclator codebooks from intercepted traffic.</p></div>
+      <div class="panel-body"><p>Kahn describes Gabrieli di Lavinde’s 1379 collection of keys combining letter substitutions with short word and name lists. Mantua’s 1401 key is a distinct landmark in Western homophonic substitution, not the beginning of nomenclators. Later diplomatic keys varied greatly in size and structure; Black Chambers reconstructed some of them from traffic and context.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>A typical 18th-century nomenclator has three parts: <strong>(1)</strong> a substitution alphabet mapping each letter to one or more cipher symbols (often digits 01–99), <strong>(2)</strong> a vocabulary list of perhaps 1,500 common words and names mapped to higher numbers, and <strong>(3)</strong> a list of <em>nulls</em> — symbols that mean &lsquo;ignore me&rsquo; — sprinkled in to break frequency. Encoding switches granularity mid-message: <em>The</em> ENVOY <em>arrived in</em> VIENNA might come out as <code>23 1402 41 17 1899</code>.</p></div>
+      <div class="panel-body"><p>A teaching example can combine three parts: <strong>(1)</strong> a substitution alphabet mapping each letter to one or more cipher symbols (often digits 01–99), <strong>(2)</strong> a vocabulary list of perhaps 1,500 common words and names mapped to higher numbers, and <strong>(3)</strong> a list of <em>nulls</em> — symbols that mean &lsquo;ignore me&rsquo; — sprinkled in to break frequency. The following invented entries illustrate changing granularity: <em>The</em> ENVOY <em>arrived in</em> VIENNA might come out as <code>23 1402 41 17 1899</code>.</p></div>
     </div>
 
     <div class="panel">
@@ -97,7 +97,7 @@
       <div class="panel-body">
         <div class="attack-panel">
           <div class="attack-name">Black-Chamber Reconstruction</div>
-          <div class="attack-diff">Complexity: Years of work per codebook</div>
+          <div class="attack-diff">Complexity: Effort varies by key and available evidence</div>
           <p class="attack-desc">Substitution entries may yield to letter and word patterns, while code groups often need repeated contexts and external historical evidence. Success varies by system and available traffic. No general claim that a Black Chamber broke every replacement key within months is established here.</p>
         </div>
       </div>
@@ -109,9 +109,9 @@
         <table class="cipher-table">
           <thead><tr><th>Concept from Nomenclator</th><th>Modern Evolution</th></tr></thead>
           <tbody>
-            <tr><td>Mixed-granularity tokens</td><td>Modern compression-then-encrypt schemes have the same problem: a long token leaks more than a short one</td></tr>
-            <tr><td>Codebooks are operational poison</td><td>Distributing and updating codebooks is what eventually killed nomenclators — a problem modern key management still inherits</td></tr>
-            <tr><td>Statistical hardness must be uniform</td><td>Any easy-to-break component (the letter alphabet) opens the rest</td></tr>
+            <tr><td>Mixed-granularity tokens</td><td>Compare length leakage in compressed encrypted traffic; this is a different construction and attack model</td></tr>
+            <tr><td>Codebooks require distribution and replacement</td><td>Shared code material creates operational costs; modern key management also needs controlled distribution and replacement</td></tr>
+            <tr><td>Partial recovery can aid further analysis</td><td>Letter substitution can provide clues to code groups; it does not automatically reveal every entry</td></tr>
           </tbody>
         </table>
       </div>
@@ -121,7 +121,7 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-swords"/></svg></span><span class="panel-title">Break This Cipher</span></div>
       <div class="panel-body">
         <p style="margin-bottom:1rem;color:var(--tx2);">Ciphertext: <code>60 70 23 09 12 12 90 81 01 20 92</code></p>
-        <p style="color:var(--tx3);font-size:.9rem;">Hint: some values are full codebook entries, not single letters. Think diplomatic traffic.</p>
+        <p style="color:var(--tx3);font-size:.9rem;">Invented teaching key: some values represent words. The ciphertext alone does not specify a unique historical codebook.</p>
         <button class="btn btn-secondary" style="width:100%;margin-top:.75rem;font-size:.7rem;" data-reveal-next>Reveal Answer</button>
         <div style="display:none;margin-top:1rem;padding:1rem;border:1px solid var(--gold-b);border-radius:var(--r);background:var(--gold-glow);">
           <strong>Plaintext:</strong> THE KING WILL ATTACK PARIS AT DAWN
@@ -141,16 +141,18 @@
             <tr><td>Era</td><td>Renaissance · 1400s–1800s</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
             <tr><td>Origin</td><td>Italian city-state diplomacy, 14th–15th c.</td></tr>
-            <tr><td>Year</td><td>1400s onward (Mantua, Venice, the Vatican)</td></tr>
-            <tr><td>Key Type</td><td>Alphabet substitution + 1,000–2,000 entry codebook of words and names</td></tr>
-            <tr><td>Broken By</td><td>Black Chambers (Vienna, Paris, London) c. 1700–1850 by sheer intercept volume</td></tr>
-            <tr><td>Modern Lesson</td><td>Hybrid systems with mixed-granularity tokens still need uniform statistical hardness</td></tr>
+            <tr><td>Year</td><td>Late 1300s onward; changing diplomatic systems</td></tr>
+            <tr><td>Key Type</td><td>Substitution alphabet plus a code list; sizes varied</td></tr>
+            <tr><td>Broken By</td><td>Context, traffic patterns and sometimes captured keys</td></tr>
+            <tr><td>Modern Lesson</td><td>Combining methods does not by itself establish security</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 3, “The Rise of the West,” on Lavinde’s 1379 keys and the Mantua 1401 homophonic alphabet. The displayed numerical example is invented.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>

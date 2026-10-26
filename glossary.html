@@ -135,7 +135,7 @@
 <div class="gl-term">
         <h3 class="gl-word">Block Cipher</h3>
         <span class="gl-origin">Modern Cryptography</span>
-        <p class="gl-def">A cipher that operates on fixed-size groups (blocks) of bits. AES uses 128-bit blocks. The same plaintext block always produces the same ciphertext block under the same key — unless a <em>mode of operation</em> like CBC or GCM is used to introduce variation.</p>
+        <p class="gl-def">A cipher that operates on fixed-size groups (blocks) of bits. AES uses 128-bit blocks. For each key, the primitive is a deterministic permutation of blocks. Modes such as CBC and GCM construct message-encryption schemes around that primitive, using additional inputs such as IVs or nonces; they do not change the underlying permutation.</p>
         <span class="gl-see">See also: <a href="#gl-S">Stream Cipher</a>, <a href="#gl-M">Mode of Operation</a></span>
       </div>
 
@@ -153,7 +153,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Cipher</h3>
         <span class="gl-origin">Arabic: sifr (zero) · Latin: cifra</span>
-        <p class="gl-def">An algorithm for performing encryption or decryption — a system of rules for transforming readable text (plaintext) into an unreadable form (ciphertext) and back. Differs from a <em>code</em>, which replaces entire words or phrases rather than individual letters.</p>
+        <p class="gl-def">An algorithm for performing encryption or decryption — a system of rules for transforming readable text (plaintext) into an unreadable form (ciphertext) and back. In historical terminology, codebooks often replace words or phrases. A cipher is not limited to individual letters: modern schemes operate on bits or bytes.</p>
       </div>
 
       <div class="gl-term">
@@ -202,7 +202,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Diffusion</h3>
         <span class="gl-origin">Claude Shannon · 1949</span>
-        <p class="gl-def">The property that spreads the influence of each plaintext bit across many ciphertext bits. Changing one letter of input should change many letters of output. Transposition and mixing operations (MixColumns in AES) provide diffusion. Paired with <em>confusion</em>, the two concepts underpin all modern encryption.</p>
+        <p class="gl-def">Shannon’s design idea of spreading plaintext statistical structure across the ciphertext. In modern block ciphers, mixing such as AES MixColumns helps spread dependencies. A permutation alone only moves positions; it does not make one changed symbol affect many output symbols. Confusion and diffusion are design concepts, not proofs of security.</p>
         <span class="gl-see">See also: <a href="#gl-C">Confusion</a>, <a href="#gl-A">Avalanche Effect</a></span>
       </div>
 
@@ -225,7 +225,7 @@
 <div class="gl-term">
         <h3 class="gl-word">Encryption</h3>
         <span class="gl-origin">Core Concept</span>
-        <p class="gl-def">The process of converting plaintext into ciphertext using a cipher and a key. The result is unintelligible without the corresponding decryption key. Encryption protects <em>confidentiality</em> — one of the three pillars of information security (CIA triad).</p>
+        <p class="gl-def">The process of converting plaintext into ciphertext using a cipher and a key. Its intended security is confidentiality under a stated attack model; weak schemes can still be broken. Encryption protects <em>confidentiality</em> — one of the three pillars of information security (CIA triad).</p>
       </div>
 
       <div class="gl-term">
@@ -247,7 +247,7 @@
 <div class="gl-term">
         <h3 class="gl-word">Fractionation</h3>
         <span class="gl-origin">19th Century · Delastelle</span>
-        <p class="gl-def">A technique that breaks each plaintext letter into multiple components (e.g., coordinates on a grid), manipulates the components separately, then recombines them. Used in Bifid, Trifid, and ADFGVX ciphers. The ancestor of modern bit-level diffusion.</p>
+        <p class="gl-def">A technique that breaks each plaintext letter into multiple components (e.g., coordinates on a grid), manipulates the components separately, then recombines them. Used in Bifid, Trifid, and ADFGVX ciphers. It provides a useful comparison with modern diffusion, without establishing a direct design lineage.</p>
       </div>
 
       <div class="gl-term">
@@ -378,7 +378,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Nomenclator</h3>
         <span class="gl-origin">Renaissance · 15th–18th Century</span>
-        <p class="gl-def">A hybrid system combining a simple substitution alphabet with a codebook of common words and names. Used extensively in diplomatic correspondence for centuries. More secure than pure substitution but still vulnerable to frequency analysis of the substitution portion.</p>
+        <p class="gl-def">A hybrid system combining a simple substitution alphabet with a codebook of common words and names. Used extensively in diplomatic correspondence for centuries. Security varies with the key, code list and traffic. Substitution analysis can expose useful clues without automatically reconstructing the whole vocabulary.</p>
       </div>
     </div>
 
@@ -406,21 +406,21 @@
       <div class="gl-term">
         <h3 class="gl-word">Plaintext</h3>
         <span class="gl-origin">Core Concept</span>
-        <p class="gl-def">The original, readable message before encryption. Denoted P or M in formulas. The goal of encryption is to protect plaintext from unauthorized readers. The goal of cryptanalysis is to recover it.</p>
+        <p class="gl-def">The original data before encryption, whether text or other information. Denoted P or M in formulas. The goal of encryption is to protect plaintext from unauthorized readers. The goal of cryptanalysis is to recover it.</p>
         <span class="gl-see">See also: <a href="#gl-C">Ciphertext</a></span>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Polyalphabetic Cipher</h3>
         <span class="gl-origin">Leon Battista Alberti · 1467</span>
-        <p class="gl-def">A cipher that uses multiple substitution alphabets, switching between them according to a key. The Vigenère cipher is the classic example: each key letter selects a different Caesar shift. This disrupts single-letter frequency analysis, but patterns at the key-length interval can still be detected (Kasiski/Friedman).</p>
+        <p class="gl-def">A cipher that uses multiple substitution alphabets, switching between them according to a key. The Vigenère cipher is the classic example: each key letter selects a different Caesar shift. For repeating-key constructions, periodic patterns may support Kasiski or coincidence analysis. Not every polyalphabetic construction has a fixed repeating keyword.</p>
         <span class="gl-see">See also: <a href="#gl-M">Monoalphabetic Cipher</a></span>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Polybius Square</h3>
         <span class="gl-origin">Polybius · ~150 BC</span>
-        <p class="gl-def">A 5×5 grid containing 25 letters (I and J share a cell) used to convert letters into two-digit coordinates. The foundation of many fractionation ciphers (Bifid, Trifid, ADFGX, Nihilist) where coordinates are manipulated separately before recombination.</p>
+        <p class="gl-def">A modern Latin-alphabet version uses a 5×5 grid with I/J sharing a cell. Polybius’s ancient account describes arranging the Greek alphabet on five tablets for coordinate signaling. The foundation of many fractionation ciphers (Bifid, Trifid, ADFGX, Nihilist) where coordinates are manipulated separately before recombination.</p>
       </div>
 
             <div class="gl-term">
@@ -442,7 +442,7 @@
             <div class="gl-term">
         <h3 class="gl-word">Random Oracle</h3>
         <span class="gl-origin">Modern Cryptography</span>
-        <p class="gl-def">An idealized hash function that answers every new query with perfect randomness and every repeat consistently. Security proofs "in the random-oracle model" treat real hashes like SHA-256 as this ideal; the Fiat–Shamir transform uses it to turn interactive proofs into signatures. Interactive: <a href="hall-of-foundations/random-oracle.html">The Random Oracle (§154)</a>.</p>
+        <p class="gl-def">An ideal function that assigns independent uniform outputs to distinct inputs and answers repeated queries consistently. Some proofs assume access to this oracle. Replacing it with a concrete hash is an additional design step, not a proof that SHA-256 is an oracle. Fiat–Shamir can transform suitable interactive protocols into noninteractive proofs or signatures under specified assumptions. Interactive: <a href="hall-of-foundations/random-oracle.html">The Random Oracle (§154)</a>.</p>
       </div>
 <div class="gl-term">
         <h3 class="gl-word">Rotor</h3>
@@ -453,7 +453,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Round</h3>
         <span class="gl-origin">Modern Block Ciphers</span>
-        <p class="gl-def">One complete iteration of a cipher's internal transformation. AES uses 10, 12, or 14 rounds depending on key size. Each AES round applies SubBytes, ShiftRows, MixColumns, and AddRoundKey — except the final round, which skips MixColumns. More rounds = more security, more computation.</p>
+        <p class="gl-def">One complete iteration of a cipher's internal transformation. AES uses 10, 12, or 14 rounds depending on key size. Each AES round applies SubBytes, ShiftRows, MixColumns, and AddRoundKey — except the final round, which skips MixColumns. More rounds usually cost more computation; their security effect depends on the construction and attack. Repeating an operation does not automatically strengthen it.</p>
       </div>
     </div>
 
@@ -498,8 +498,8 @@
 
       <div class="gl-term">
         <h3 class="gl-word">Symmetric Encryption</h3>
-        <span class="gl-origin">All classical ciphers · Modern: AES</span>
-        <p class="gl-def">A system where the same key is used for both encryption and decryption. All classical ciphers are symmetric. Modern examples: AES, ChaCha20. The key must be shared securely between parties — the fundamental <em>key distribution problem</em> that asymmetric cryptography was invented to solve.</p>
+        <span class="gl-origin">Secret-key cryptography · Modern: AES</span>
+        <p class="gl-def">A system where the same key is used for both encryption and decryption. Many historical keyed systems are symmetric. Unkeyed encodings displayed in the museum are not secret-key encryption. Modern examples: AES, ChaCha20. The key must be shared securely between parties — the fundamental <em>key distribution problem</em> that asymmetric cryptography was invented to solve.</p>
       </div>
     </div>
 
@@ -509,7 +509,7 @@
 
       <div class="gl-term">
         <h3 class="gl-word">Tabula Recta</h3>
-        <span class="gl-origin">Johannes Trithemius · 1508</span>
+        <span class="gl-origin">Johannes Trithemius · published 1518</span>
         <p class="gl-def">A 26×26 grid where each row is the alphabet shifted by one position. The foundational tool for Vigenère-type ciphers: find the plaintext letter's column, the key letter's row, and the intersection is the ciphertext letter. Also called a <em>Vigenère square</em>.</p>
       </div>
 
@@ -527,7 +527,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Vigenère Cipher</h3>
         <span class="gl-origin">Giovan Battista Bellaso · 1553 (misattributed to Vigenère)</span>
-        <p class="gl-def">A polyalphabetic substitution cipher using a repeating keyword. Each key letter selects a different Caesar shift. Called <em>"le chiffre indéchiffrable"</em> for 300 years until Babbage (~1854) and Kasiski (1863) independently broke it by exploiting the repeating key pattern.</p>
+        <p class="gl-def">A polyalphabetic substitution cipher using a repeating keyword. Each key letter selects a different Caesar shift. The repeating-key form is associated with Babbage’s mid-nineteenth-century work and Kasiski’s published 1863 method. A claim of three centuries of universal unbreakability obscures earlier variants, attacks and operational differences.</p>
       </div>
     </div>
 

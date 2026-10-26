@@ -87,7 +87,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Hagelin's family company — Cryptoteknik in Stockholm — had been producing pin-and-lug machines since the 1920s. When Germany invaded Norway in 1940, Hagelin escaped to the United States with the C-38 design rolled up under his arm. The US Signal Corps bought it, mass-produced it as the M-209, and shipped 140,000 units to the front lines. The cipher was known to be vulnerable to skilled cryptanalysis (German Army cryptanalysts broke many M-209 messages), so it was used only for tactical traffic — operational orders meant to be obsolete within hours of being intercepted.</p></div>
+      <div class="panel-body"><p>Hagelin’s cipher-machine business developed the C-series before the war. The US-produced M-209, associated with the C-38 family, became a widely used portable tactical machine. It offered practical field operation without electricity, but published cryptanalysis shows why its mechanical complexity should not be mistaken for modern security.</p></div>
     </div>
 
     <div class="panel">
@@ -97,7 +97,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Known-Plaintext Attack</div><div class="attack-diff">Complexity: Hard (in the field) · Moderate (with computers)</div><p class="attack-desc">If an attacker knows or guesses the plaintext of a message (a stereotyped opening, known place name, time stamp), the resulting key stream constrains the lug settings. German cryptanalysts in WWII broke many M-209 messages this way, though it took hours per message.</p></div><div class="attack-panel"><div class="attack-name">Statistical Lug Recovery</div><div class="attack-diff">Complexity: Moderate (with sufficient ciphertext)</div><p class="attack-desc">Because the key is a sum of binary signals modulo 26, certain shift values are over- or under-represented. With enough ciphertext, a statistical attack on the key distribution recovers the lug count for each wheel.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Known-Plaintext Attack</div><div class="attack-diff">Work depends on message length, pin settings and lug overlap</div><p class="attack-desc">Known or accurately guessed plaintext exposes the displacement sequence modulo 26 and constrains pin and lug settings. Published attacks exploit this structure, but their cost and success depend on available text and key restrictions. A fixed “hours per message” claim should not be applied to arbitrary historical traffic.</p></div><div class="attack-panel"><div class="attack-name">Statistical Lug Recovery</div><div class="attack-diff">Statistical search under specified key and traffic conditions</div><p class="attack-desc">Each lug bar contributes one unit if at least one of the pins selected by its lugs is effective. If both selected pins are effective, that bar still contributes only one unit. The total is therefore a sum of bar-level OR results, not simply a separate lug count times each wheel’s pin bit. Lug overlaps affect the distribution and the difficulty of reconstruction; statistics can guide search without guaranteeing unique recovery.</p></div></div>
     </div>
 
     <div class="panel">
@@ -146,6 +146,8 @@
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>George Lasry, <em>A Methodology for the Cryptanalysis of Classical Ciphers with Search Metaheuristics</em> (2018), Chapter 7, especially §7.2.1, “Functional Description,” p. 114, on bar engagement and the Beaufort transformation. The joint wheel-position period is distinct from the period of a particular output sequence.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>

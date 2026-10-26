@@ -1222,7 +1222,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "See the exhibit’s documented attacks and limitations.",
-      "modernLesson": "Cryptography arose independently across world cultures"
+      "modernLesson": "Secret writing appears in different cultural traditions"
     },
     "kerckhoffs": {
       "name": "Kerckhoffs's Principle",
@@ -1329,7 +1329,7 @@
         "description": "A didactic construction for learning cryptographic concepts, not for security."
       },
       "securityFailure": "Commercial codebook illustration; specific regional military use requires archival evidence.",
-      "modernLesson": "Efficiency and secrecy drove code adoption as much as military need"
+      "modernLesson": "Economics can influence communications design"
     },
     "leo-marks": {
       "name": "Leo Marks",
@@ -1603,7 +1603,7 @@
       "family": "Substitution",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
-      "keyType": "Alphabet substitution + 1,000–2,000 entry codebook of words and names",
+      "keyType": "Substitution alphabet plus a code list; sizes varied",
       "keyIdea": "Nomenclator (1400s) — The 400-year diplomatic compromise: a small substitution alphabet plus a large code dictionary. Hall II of The Cipher Museum.",
       "trust": {
         "key": "broken",
@@ -1611,7 +1611,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Historical systems combine code groups, letter substitutions, homophones and nulls; evidence varies by key and traffic.",
-      "modernLesson": "Hybrid systems with mixed-granularity tokens still need uniform statistical hardness"
+      "modernLesson": "Combining methods does not by itself establish security"
     },
     "null-cipher": {
       "name": "Null Cipher Concealment by selective reading · ancient → modern",
@@ -1780,7 +1780,7 @@
       "modernLesson": "Permutation layers in block ciphers"
     },
     "red-army-faction": {
-      "name": "Red Army Faction One-Time Pad",
+      "name": "RAF–Stasi Records and an OTP Teaching Model",
       "hall": "V",
       "era": "Cold War · 1970–1998",
       "family": "Military and Field Ciphers",
@@ -1793,8 +1793,8 @@
         "text": "Educational",
         "description": "A didactic construction for learning cryptographic concepts, not for security."
       },
-      "securityFailure": "Illustrative book-cipher model; not a reconstruction of an authenticated RAF key or message.",
-      "modernLesson": "State sponsor infrastructure dramatically elevates non-state actor crypto capabilities"
+      "securityFailure": "Illustrative letter-pad arithmetic; not a reconstruction of an authenticated RAF key or message.",
+      "modernLesson": "Separate organisational evidence from cryptographic evidence"
     },
     "red-type-a": {
       "name": "Red (Type A)",
@@ -2071,7 +2071,7 @@
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "See the exhibit’s documented attacks and limitations.",
-      "modernLesson": "Hand-deniable crypto for high-risk environments"
+      "modernLesson": "Manual stream-cipher design and its limitations"
     },
     "somerton-man": {
       "name": "Somerton Man Code",

@@ -86,7 +86,7 @@
     {"number":82,"path":"ciphers/che-guevara.html","label":"historical","note":"Historical checkerboard-plus-pad system; the widget compares a condensed VIC model, not Guevara’s historical pad system.","collection":"cipher-history","interactive":true},
     {"number":83,"path":"ciphers/diana-cryptosystem.html","label":"historical","collection":"cipher-history","interactive":true},
     {"number":84,"path":"ciphers/vietnamese-underground.html","label":"educational","note":"Illustrative concealment and cipher models; specific operational attribution is not established here.","collection":"cipher-history","interactive":true},
-    {"number":85,"path":"ciphers/red-army-faction.html","label":"educational","collection":"cipher-history","interactive":true,"note":"Illustrative book-cipher model; not a reconstruction of an authenticated RAF key or message."},
+    {"number":85,"path":"ciphers/red-army-faction.html","label":"educational","collection":"cipher-history","interactive":true,"note":"Illustrative letter-pad arithmetic; not a reconstruction of an authenticated RAF key or message."},
     {"number":86,"path":"ciphers/null-cipher.html","label":"historical","note":"Weak (concealment, not encryption)","collection":"cipher-history","interactive":true},
     {"number":87,"path":"ciphers/chinese-telegraph.html","label":null,"note":"Public codebook (super-enciphered when secret)","collection":"cipher-history","interactive":true},
     {"number":88,"path":"ciphers/morse.html","label":null,"note":"Encoding, not encryption","collection":"cipher-history","interactive":true},

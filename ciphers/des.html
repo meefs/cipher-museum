@@ -81,7 +81,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>IBM's Horst Feistel led the design of <em>Lucifer</em> in the early 1970s. NBS (now NIST) issued an open call for a standard cipher; IBM submitted a hardened Lucifer derivative; NSA participated in the review; the resulting DES design used a 56-bit effective key and strengthened S-boxes. Cryptographers cried foul over the key-length cut and the unexplained S-box changes &mdash; until 1991, when Biham and Shamir showed the NSA's S-boxes were specifically hardened against differential cryptanalysis, a technique IBM and NSA both knew about and the public did not.</p></div>
+      <div class="panel-body"><p>IBM developed DES from its earlier cipher research, with technical advice from NSA, and NBS standardised it in 1977. Biham and Shamir’s public differential cryptanalysis prompted renewed examination of its design. In 1994, IBM designer Don Coppersmith published S-box and permutation criteria that had been chosen to resist such attacks. His account establishes IBM’s earlier knowledge and design role; the S-boxes should not be attributed simply to NSA.</p></div>
     </div>
 
     <div class="panel">
@@ -134,6 +134,8 @@
 <section class="panel" aria-labelledby="primary-sources"><div class="panel-body"><h2 id="primary-sources">Primary Sources</h2><p><a href="https://csrc.nist.gov/News/2023/nist-to-withdraw-sp-800-67-rev-2">NIST withdrawal notice for TDEA (2023; effective 1 January 2024)</a>.</p></div></section>
 
 <section class="panel"><div class="panel-body"><h2>Conditional-linear analysis: a dated research result</h2><p>Biham and Perle’s 2018 study selects data to increase linear bias. One reported operating point uses about 2<sup>41.9</sup> known plaintexts and analysis work at 85% success. This is conditional-linear analysis, distinct from differential–linear composition. <a href="../lab/modern-attack-evidence.html#des">Read the experimental scope, work accounting and primary source</a>.</p></div></section>
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Don Coppersmith, <a href="https://doi.org/10.1147/rd.383.0243">“The Data Encryption Standard (DES) and its strength against attacks”</a>, <em>IBM Journal of Research and Development</em> 38(3), May 1994, pp. 243–250, especially the introductory account of the IBM team and previously unpublished design criteria.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

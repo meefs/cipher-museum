@@ -8,7 +8,8 @@
       "sha256": "9a4e525eaae1c31a6b1a08bfdb9064f57bdd98a5739863d972b3a1bd6ea8cd16",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Static text read; Caesar phrase verify."
+      "notes": "Static text read; Caesar phrase verify.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "challenges.html",
@@ -17,7 +18,8 @@
       "sha256": "0caf117354c9580d8ba407257383768f21eeb23a547715050849c57d75f08104",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Static text read; ten dynamic challenge explanations pending. Inline content now read. Corrections and final verification pending where noted."
+      "notes": "Static text read; ten dynamic challenge explanations pending. Inline content now read. Corrections and final verification pending where noted.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "cipher-corpus.html",
@@ -26,7 +28,8 @@
       "sha256": "5bcda2a6c12d22498a2984525d05291f2121f56a4f61d6b15cc5eba0d02405f3",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Thoroughv0.6/v0.8 distinction and historicalprovenancelimits. Checkrecordcounts85types88engines,104sample,41historical,7languages againstmanifest. Noaccuracyclaimed."
+      "notes": "Full prose read. Thoroughv0.6/v0.8 distinction and historicalprovenancelimits. Checkrecordcounts85types88engines,104sample,41historical,7languages againstmanifest. Noaccuracyclaimed.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "cipher-detective.html",
@@ -35,7 +38,8 @@
       "sha256": "431b81b3b6a6f3e801c0c7bd4a1bfd700b06955fa80061f9eb340988ca02d773",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. SourcesSweigartchapterhrefnoebooklink removebutretainfulltitle. ~60charactersheuristicnotstrictboundary. Case/transcriptiondetails verifycurrentJS; earlyinsufficientmessageisplaceholder. Modelscope/scorevsproofgood."
+      "notes": "Full prose read. SourcesSweigartchapterhrefnoebooklink removebutretainfulltitle. ~60charactersheuristicnotstrictboundary. Case/transcriptiondetails verifycurrentJS; earlyinsufficientmessageisplaceholder. Modelscope/scorevsproofgood.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "cipher-flow.html",
@@ -44,7 +48,8 @@
       "sha256": "03837965b44de5f7c67393664746202966f8cac656ccbc6bb76c8733f0282e3f",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Static text read; dynamic decision tree pending; not production recommendations. Inline content now read. Corrections and final verification pending where noted."
+      "notes": "Static text read; dynamic decision tree pending; not production recommendations. Inline content now read. Corrections and final verification pending where noted.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/adfgvx.html",
@@ -53,7 +58,8 @@
       "sha256": "0a0e10e2747454bbeac279d18ec56174a4d81db38636d1fdc44de0889aaf217e",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Header/quickfacts48hours contradicts nuanced body source. Session keys unique guarantee too strong. Grid coordinate example correct by inspection. Need Painvin source and independent full vector."
+      "notes": "Full prose read. Header/quickfacts48hours contradicts nuanced body source. Session keys unique guarantee too strong. Grid coordinate example correct by inspection. Need Painvin source and independent full vector.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/adfgx.html",
@@ -62,7 +68,8 @@
       "sha256": "59fd5e1c8a731ab0f0a7f896a1f9f70686789056c169d51ba3b5d5add014cc5c",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Headline one Frenchman contradicts attribution to other analysts; differential frequency label suggests modern method. Diagram H FF etc incomplete square cannot verify. AES MixColumns not merely permutation/final round exception; all modern ciphers bit alphabet too broad. Historical offensive effect qualify."
+      "notes": "Full prose read. Headline one Frenchman contradicts attribution to other analysts; differential frequency label suggests modern method. Diagram H FF etc incomplete square cannot verify. AES MixColumns not merely permutation/final round exception; all modern ciphers bit alphabet too broad. Historical offensive effect qualify.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/aeneas-tacticus.html",
@@ -73,7 +80,8 @@
       "sources": [
         "POLYBIUS-10"
       ],
-      "notes": "Polybius10.44–45 source supports preset-message water clock; removed overbroad earliest military-communications treatise claim."
+      "notes": "Polybius10.44–45 source supports preset-message water clock; removed overbroad earliest military-communications treatise claim.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/aes.html",
@@ -82,7 +90,8 @@
       "sha256": "a63d81ccf5a2724c633bfef8df40c931a02121ff8b96f5f07524d0080c1c9e89",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Main AES details consistent; qualify RSA related-card claim and verify current CNSA/Signal sources. Prior source checks must be re-established for this audit."
+      "notes": "Full prose read. Main AES details consistent; qualify RSA related-card claim and verify current CNSA/Signal sources. Prior source checks must be re-established for this audit.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/affine.html",
@@ -91,7 +100,8 @@
       "sha256": "13a536a920803ac9098dc6348d62da5398e0f4d85e8aadd878700c842005d279",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "HAC p.239 Example7.49 confirms formula and inverse. gcd enumeration gives12 multipliers and312 keys. Single E count does not uniquely recover a and b; universal microseconds/afternoon estimates unsupported."
+      "notes": "HAC p.239 Example7.49 confirms formula and inverse. gcd enumeration gives12 multipliers and312 keys. Single E count does not uniquely recover a and b; universal microseconds/afternoon estimates unsupported.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/agnes-driscoll.html",
@@ -102,7 +112,8 @@
       "sources": [
         "PARKER-1994"
       ],
-      "notes": "Corrected Pearl Harbor Revisited author to FrederickD.Parker1994; removed full-book link. Remaining biographical claims still pending."
+      "notes": "Corrected Pearl Harbor Revisited author to FrederickD.Parker1994; removed full-book link. Remaining biographical claims still pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/alberti-disk.html",
@@ -111,7 +122,8 @@
       "sha256": "302279cb50cefbb21e2636291ea1096e6b120973f71a4ca67055e6e254f8ac55",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Kahn PDF171–175 supports disk description and1466/1467dating. Qualified direct lineage/priority claims; diagram and literal rings remain to inspect; existing regular-step toy caveat needs runtime review."
+      "notes": "Kahn PDF171–175 supports disk description and1466/1467dating. Qualified direct lineage/priority claims; diagram and literal rings remain to inspect; existing regular-step toy caveat needs runtime review.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/amharic-ge-ez-ciphers.html",
@@ -120,7 +132,8 @@
       "sha256": "205feb7272cd1efb49a9a44d6f365389557a5b0cb30d6e9a72a11a058c8bd2bc",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Clearunverifiedmodelboundary; HMMLcollectionisnotcipherprovenanceasstated. NeedruntimecheckactualLatininputvsselectedEthiopicinventory. No identifiedsourceforhistoricalcipher; shouldretaineducationalstatus."
+      "notes": "Clearunverifiedmodelboundary; HMMLcollectionisnotcipherprovenanceasstated. NeedruntimecheckactualLatininputvsselectedEthiopicinventory. No identifiedsourceforhistoricalcipher; shouldretaineducationalstatus.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/amsco.html",
@@ -129,7 +142,8 @@
       "sha256": "805dee560e933d51741a254b35aecc67af1129992f08cd057f323227add70110",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Page thoroughly distinguishes ACA rule from historical deployment. Worked even-width ABDCEF example follows stated alternating row/column convention. Full57-letter ACA vector and source sheet need direct comparison; tests currently pass."
+      "notes": "Page thoroughly distinguishes ACA rule from historical deployment. Worked even-width ABDCEF example follows stated alternating row/column convention. Full57-letter ACA vector and source sheet need direct comparison; tests currently pass.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/arabic-nomenclators.html",
@@ -138,7 +152,8 @@
       "sha256": "35015ad27228d2749da47b6894d286b106ec3ff300ecfe4c2b195ae6564e4366",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Removed polynomial-any-language headline and directEuropeanlineage claim; model versus identifiedhistoricalkey distinction retained. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Removed polynomial-any-language headline and directEuropeanlineage claim; model versus identifiedhistoricalkey distinction retained. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/argenti.html",
@@ -147,7 +162,8 @@
       "sha256": "ed541e677f601c2211afad1b0529867eaed54e94114e3a9ea022625d8016b218",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Header200year everychancery copied contradictsbody. SidebarMatteo/nephewMarcello wrong vsGiovanniBattista/nephewMatteo header. ECB/AEAD analogy not homophone theorem. Needverifiedmanuscripttitle/service dates,full Kahncredit."
+      "notes": "Full prose read. Header200year everychancery copied contradictsbody. SidebarMatteo/nephewMarcello wrong vsGiovanniBattista/nephewMatteo header. ECB/AEAD analogy not homophone theorem. Needverifiedmanuscripttitle/service dates,full Kahncredit.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/arnold-andre.html",
@@ -156,7 +172,8 @@
       "sha256": "1e9554759e526a4812296537c770f881748e97b3b267d3f727ff6b47f0bf27d9",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Read Kahn on successiveBlackstone/dictionary schemes; removed two-volumeconstantkey, inventedcourierandkeycaptureimplications. Modernletterfallback remains labelled. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Read Kahn on successiveBlackstone/dictionary schemes; removed two-volumeconstantkey, inventedcourierandkeycaptureimplications. Modernletterfallback remains labelled. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/atbash.html",
@@ -165,7 +182,8 @@
       "sha256": "a99fd16894003024682419fbf9d855a0b05d8ac41476695b78b09f2110cc7194",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Kahn PDF pp.113–114 supports Hebrew reversal and Jeremiah identifications; Latin example independently correct. ROT13 related-card calls a shift a reflection; change wording. Biblical dating and modern analogy require bounded wording."
+      "notes": "Kahn PDF pp.113–114 supports Hebrew reversal and Jeremiah identifications; Latin example independently correct. ROT13 related-card calls a shift a reflection; change wording. Biblical dating and modern analogy require bounded wording.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/autokey.html",
@@ -174,7 +192,8 @@
       "sha256": "febbdd2b5334cbd923938b1802dd7b716b440694c75b925854e90687c56843da",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Independently reproduced QUEENLY/AUTOKEYREVEAL vector. Removed unsupported polynomial whole-attack complexity and IC-as-autokey-solver implication. Cited Holden§5.3must retrieve/read; historical first-name spelling and Friedman attribution still pending."
+      "notes": "Independently reproduced QUEENLY/AUTOKEYREVEAL vector. Removed unsupported polynomial whole-attack complexity and IC-as-autokey-solver implication. Cited Holden§5.3must retrieve/read; historical first-name spelling and Friedman attribution still pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/babington.html",
@@ -183,7 +202,8 @@
       "sha256": "9d01bd3548ec9a06b59ac948a34caab5fa92a367f9c8fbd28a49ea8606c54300",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Model64tokens correctly qualified inbody butmetadata keycount/keyspace andcaption exactlyoriginal contradict. Firstforgedciphertextclaim unsupported. Challenge invented intercepteddispatch label. Checkoriginalkey/token semantics, dates BL/TNA."
+      "notes": "Full prose read. Model64tokens correctly qualified inbody butmetadata keycount/keyspace andcaption exactlyoriginal contradict. Firstforgedciphertextclaim unsupported. Challenge invented intercepteddispatch label. Checkoriginalkey/token semantics, dates BL/TNA.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/bach-motif.html",
@@ -192,7 +212,8 @@
       "sha256": "73a6760a0e83a5590fb5c01df4e63dc58867977a44134174e84b3c7554469cdb",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. BACHGermanpitchmappingcorrect, eightnote-namepitchclassesnot7different. Finalfugueunfinishedcausationqualified. ModernDTmotifunsourced/removeifnocite, Brahms/Webernuseverify. Autographprimarycanconfirmthirdsubject."
+      "notes": "Full prose read. BACHGermanpitchmappingcorrect, eightnote-namepitchclassesnot7different. Finalfugueunfinishedcausationqualified. ModernDTmotifunsourced/removeifnocite, Brahms/Webernuseverify. Autographprimarycanconfirmthirdsubject.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/bacon.html",
@@ -201,7 +222,8 @@
       "sha256": "2c3b75e3dc56ea0cac52fcda4ed68244ef82fe7f1cafe6590ff1b70690dcda82",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Kahn PDF pp.1085–1088 confirms1605allusion/1623description and24-letter alphabet. Demo25-letter variant appropriately named, but Z code shown BBAAA contradicts25-letter index24=BBAAA? correct. Direct ancestry to all computing unsubstantiated; 350-year comparison conflicts with other dates. Need typeface visual check."
+      "notes": "Kahn PDF pp.1085–1088 confirms1605allusion/1623description and24-letter alphabet. Demo25-letter variant appropriately named, but Z code shown BBAAA contradicts25-letter index24=BBAAA? correct. Direct ancestry to all computing unsubstantiated; 350-year comparison conflicts with other dates. Need typeface visual check.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/bazeries.html",
@@ -213,7 +235,8 @@
         "ACA-BAZERIES",
         "KAHN-1996"
       ],
-      "notes": "Actual browser engine is not ACA Bazeries. Documented exact limited model and historical hand procedure separately; engine/corpus unchanged."
+      "notes": "Actual browser engine is not ACA Bazeries. Documented exact limited model and historical hand procedure separately; engine/corpus unchanged.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/beale.html",
@@ -224,7 +247,8 @@
       "sources": [
         "KAHN-1996"
       ],
-      "notes": "Hammer’s support for genuine cipher distinguished from Gillogly’s dissent. B1/B3 no accepted solution; no inference of genuine treasure. Full Gillogly PDF inaccessible, so no new detailed attribution to its contents."
+      "notes": "Hammer’s support for genuine cipher distinguished from Gillogly’s dissent. B1/B3 no accepted solution; no inference of genuine treasure. Full Gillogly PDF inaccessible, so no new detailed attribution to its contents.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/beaufort.html",
@@ -233,7 +257,8 @@
       "sha256": "f348986765d35f7fea764f58bdc254ac394c885f184ff6fd96c4f22b12eec002",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "HAC p.241 Example7.54 confirms K−P and involution; SECRET/HELLOW vector independently correct. Kahn PDF261–262 supports1857posthumous card, not naval adoption. Corrected algorithm-involution and guaranteed period/recovery language; removed blanket nonce/no-repeated-values assertion."
+      "notes": "HAC p.241 Example7.54 confirms K−P and involution; SECRET/HELLOW vector independently correct. Kahn PDF261–262 supports1857posthumous card, not naval adoption. Corrected algorithm-involution and guaranteed period/recovery language; removed blanket nonce/no-repeated-values assertion.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/beurling.html",
@@ -242,7 +267,8 @@
       "sha256": "fe2df29623a8eebea54320dacd6605ad5e63257cab85a3c499d7447554a72b95",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Wellqualified teamassistance and structuralvsdailykey. Birthdeath/IAS1954confirminstitutional; verifyFRA account andspecificT52variant."
+      "notes": "Full prose read. Wellqualified teamassistance and structuralvsdailykey. Birthdeath/IAS1954confirminstitutional; verifyFRA account andspecificT52variant.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/bible-code.html",
@@ -254,7 +280,8 @@
         "MCKAY-1999",
         "MCKAY-MOBY"
       ],
-      "notes": "Separated WRR statistical experiment, War and Peace selection example and Drosnin/Moby-Dick counterexamples. Removed guaranteed-match and uniform-control claims. Rendered dynamic expectation and final full-page review pending."
+      "notes": "Separated WRR statistical experiment, War and Peace selection example and Drosnin/Moby-Dick counterexamples. Removed guaranteed-match and uniform-control claims. Rendered dynamic expectation and final full-page review pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/bifid.html",
@@ -263,7 +290,8 @@
       "sha256": "8857993e2b71ddb5ddf545d80ce005621c0e1e89435ccae466941d57e4804c0f",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Gaines ChapterXXII PDF322–324 and Kahn PDF312 support coordinate procedure and period dependence. HELLO/HKNFO arithmetic matches shown zero-index square. Date1901not established; original-era key naming/diffusion caution. AES S-box not key-dependent."
+      "notes": "Gaines ChapterXXII PDF322–324 and Kahn PDF312 support coordinate procedure and period dependence. HELLO/HKNFO arithmetic matches shown zero-index square. Date1901not established; original-era key naming/diffusion caution. AES S-box not key-dependent.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/bill-tutte.html",
@@ -272,7 +300,8 @@
       "sha256": "920e89d38e02073248deeb728943b3a1706a8f2c6437a3b292c225bee5b2d409",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Corrected identical-message claim, Tiltman-to-Tutte chain, Kitchener death location, electronic Robinson counting and specialised Colossus scope. Independently checked12wheelproduct. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Corrected identical-message claim, Tiltman-to-Tutte chain, Kitchener death location, electronic Robinson counting and specialised Colossus scope. Independently checked12wheelproduct. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/bletchley-park.html",
@@ -281,7 +310,8 @@
       "sha256": "43eee71b5008f87d3a05c99eaf7a3ae3d5592ec2dc9dfd2e4e33261af6c1bb9e",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "August1939arrival, combinedsite/outstationcount, Polishcontribution and Testery/Newmanry distinctions; removed unsupported directsecrecyorder and Knoxpostwarrecognition claim. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "August1939arrival, combinedsite/outstationcount, Polishcontribution and Testery/Newmanry distinctions; removed unsupported directsecrecyorder and Knoxpostwarrecognition claim. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/bombe.html",
@@ -290,7 +320,8 @@
       "sha256": "f1240b6ca0abdcac5edc3f7d75a57cf376d686691eb53634da7bf2da8cfb0306",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Full page read. Bounded static exhibit distinguishes crib filtering, candidate stops, Polish predecessor, Enigma/Lorenz and electromechanical/general-purpose. Verify March/August1940 against TNMOC primary account."
+      "notes": "Full page read. Bounded static exhibit distinguishes crib filtering, candidate stops, Polish predecessor, Enigma/Lorenz and electromechanical/general-purpose. Verify March/August1940 against TNMOC primary account.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/book-cipher.html",
@@ -299,7 +330,8 @@
       "sha256": "6020d34530c806656faa073dba8622c18cf3abea2da76b134c4520d97a28359d",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Sidebar incorrectly names Ward solver despite body caveat. Unbounded search label contradicts body. Invented lookup challenge lacks shared book. Earliest origins claim needs Kahn; couriered books not same principle as public-key agreement."
+      "notes": "Full prose read. Sidebar incorrectly names Ward solver despite body caveat. Unbounded search label contradicts body. Invented lookup challenge lacks shared book. Earliest origins claim needs Kahn; couriered books not same principle as public-key agreement.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/cabinet-noir.html",
@@ -308,7 +340,8 @@
       "sha256": "6cb00e500e4f3566a2db8781372b471b8ceb2aeabb69e2cfd5e9c458d48fd5f6",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Removedsingleinstitutionallineage,firstEuropeanprofessionalsandallmailclaims; Réalmont1628 and1844institutions distinguished. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Removedsingleinstitutionallineage,firstEuropeanprofessionalsandallmailclaims; Réalmont1628 and1844institutions distinguished. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/caesar.html",
@@ -317,7 +350,8 @@
       "sha256": "84b4e45801a41cf38033b72b9d2fbcbd5b9b2ae7060f15a4bae0b0729d972300",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Formula and 25 nonidentity keys agree with HAC §7.3.2. Headline invention date and Caesar-to-AES lineage/zero-confusion claims need qualification; repeated summary fields still stronger than detailed caveat. Primary Suetonius check pending."
+      "notes": "Formula and 25 nonidentity keys agree with HAC §7.3.2. Headline invention date and Caesar-to-AES lineage/zero-confusion claims need qualification; repeated summary fields still stronger than detailed caveat. Primary Suetonius check pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/cardano-autokey.html",
@@ -326,7 +360,8 @@
       "sha256": "2bdf20a0bbd910fcd2aac7f1a3c9e9b4352293da1fc2839d38b682026fda6e17",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Independently reproduced MEETMEATMIDNIGHT/Q vector and26-seed bound. Replaced effective-message-length key claim with26secret choices; qualified model/guaranteed-recognition language. Holden§5.3historical distinction still needs direct read."
+      "notes": "Independently reproduced MEETMEATMIDNIGHT/Q vector and26-seed bound. Replaced effective-message-length key claim with26secret choices; qualified model/guaranteed-recognition language. Holden§5.3historical distinction still needs direct read.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/cardano-grille.html",
@@ -335,7 +370,8 @@
       "sha256": "81d2ccd5cfae96ff11254f638e4f9886d505865c2de794ed3d25b1ff85cc3844",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Defaultsevenholemask count480700 checked; capturelimitedtosamekey/convention; fixedgrille versus turninggrille and steganography versus confidentiality clarified. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Defaultsevenholemask count480700 checked; capturelimitedtosamekey/convention; fixedgrille versus turninggrille and steganography versus confidentiality clarified. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/chaocipher.html",
@@ -344,7 +380,8 @@
       "sha256": "761b1dbee2cfb4ac0f1e938f0f6b960577968c6ad4b309e26be5f603b12b6a0e",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read.1953-2010notnearlycentury, 1918-1960not50years. Noonewouldlicense/Friedmanrefused undocumented. ChaCha20blocknotperbyteupdating; Kerckhoffsnotprovedbyonecase. Wheelprocedureindependentvectorcheck needed.2016attackconditionswellqualified."
+      "notes": "Full prose read.1953-2010notnearlycentury, 1918-1960not50years. Noonewouldlicense/Friedmanrefused undocumented. ChaCha20blocknotperbyteupdating; Kerckhoffsnotprovedbyonecase. Wheelprocedureindependentvectorcheck needed.2016attackconditionswellqualified.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/che-guevara.html",
@@ -353,7 +390,8 @@
       "sha256": "bfc589bd1be98eeedc093dde34e36dffb4bff57ba6860b3e1689bc734e736387",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Clear comparison widget vs actual checkerboard-pad distinction. Era1956-67 and capture chronology need sources; public State memo and CrypTool reconstruction verify. Correct secret independent uniform digits condition."
+      "notes": "Full prose read. Clear comparison widget vs actual checkerboard-pad distinction. Era1956-67 and capture chronology need sources; public State memo and CrypTool reconstruction verify. Correct secret independent uniform digits condition.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/chinese-telegraph.html",
@@ -362,7 +400,8 @@
       "sha256": "91eed4e9bc6e6b3e70f91725ee1d91e9e2b7a85aa59efb29d6584ac62e513468",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Digitwisemod10 historicalexample versusbrowsermod10000withcarries distinguished; HongKongdocumentfield sourcedwithoutallpassportclaim. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Digitwisemod10 historicalexample versusbrowsermod10000withcarries distinguished; HongKongdocumentfield sourcedwithoutallpassportclaim. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/cicada-3301.html",
@@ -373,7 +412,8 @@
       "sources": [
         "CICADA-STATUS"
       ],
-      "notes": "Corrected Liber Primus two-set status using dated community account, no organizer identity claim."
+      "notes": "Corrected Liber Primus two-set status using dated community account, no organizer identity claim.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/colossus.html",
@@ -382,7 +422,8 @@
       "sha256": "e5d1e8b3287f1e6720f8660ba186e91d9c9c3f95c1a68796f8c6fd1e0a9511e5",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Full page read. Prior-turn source images actually inspected and formula matched General Report on Tunny §§23A–C. Synthetic planted statistic,1,271settings,39null maxima and model limits explicit; existing budget/arithmetic tests passed in current run. Need current rendered experiment check before final verification."
+      "notes": "Full page read. Prior-turn source images actually inspected and formula matched General Report on Tunny §§23A–C. Synthetic planted statistic,1,271settings,39null maxima and model limits explicit; existing budget/arithmetic tests passed in current run. Need current rendered experiment check before final verification.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/columnar.html",
@@ -391,7 +432,8 @@
       "sha256": "8d82aa96042b0f683109512166a2366bb156a030ac40567e69829deec4d20e4a",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Removed unsupported single19thcenturyorigin and universaldeployment claims; ShiftRows comparison replacesMixColumns label. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Removed unsupported single19thcenturyorigin and universaldeployment claims; ShiftRows comparison replacesMixColumns label. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/commercial-codebooks.html",
@@ -403,7 +445,8 @@
         "KAHN-1996",
         "RFC7541"
       ],
-      "notes": "Read tariff/codeword history in Kahn Ch22; distinguished variable historic forms from the20-consonant museum model. 200000 model combinations versus231525 with21 consonants. HPACK length-based leakage corrected."
+      "notes": "Read tariff/codeword history in Kahn Ch22; distinguished variable historic forms from the20-consonant museum model. 200000 model combinations versus231525 with21 consonants. HPACK length-based leakage corrected.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/confederate-vigenere.html",
@@ -412,7 +455,8 @@
       "sha256": "877cfce09a63ef97077e05bf353da3b456f668e2ed700673752551544199755f",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Kasiski1863 publication not Confederateoperationalbreak; IC1910s cannotdescribe CivilWarprocedure. Phrase lengthsManchesterBluff15,MyOldKentuckyHome17,CompleteVictory15,ComeRetribution15 verify. ManchesterVicksburg1863not1862. Allkeywords/allmessages/systematicallyread unsupported. AESkey-lengthattack analogyincorrect."
+      "notes": "Full prose read. Kasiski1863 publication not Confederateoperationalbreak; IC1910s cannotdescribe CivilWarprocedure. Phrase lengthsManchesterBluff15,MyOldKentuckyHome17,CompleteVictory15,ComeRetribution15 verify. ManchesterVicksburg1863not1862. Allkeywords/allmessages/systematicallyread unsupported. AESkey-lengthattack analogyincorrect.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/copiale.html",
@@ -424,16 +468,20 @@
         "COPIALE-2011",
         "COPIALE-2012"
       ],
-      "notes": "Private ownership and manuscript dating checked against visually read p.315; dated owner inscription is not creation date. Refined comparison statements."
+      "notes": "Private ownership and manuscript dating checked against visually read p.315; dated owner inscription is not creation date. Refined comparison statements.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/culper-ring.html",
       "title": "Culper Ring / Tallmadge Code (Washington’s spy ring codebook · 1779) — The Cipher Museum",
       "words": 1015,
       "sha256": "abb10a0f3a4f55a2cb55c6e764a6c269bf563e415cf00f9ea1e8a7d1abef2243",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Strongclaimsnevercompromised/only4copyholders/secondmostsecret unverified. AnnaStrongrole needs documentaryqualification. Sentinelsinvented vs same trickTallmadge contradiction. 763entries14illegible vs globalno-spy assertion needsvisualfullscan. Code486peopleverify. Code355wordnotidentifiedperson clear."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "CULPER-TRANSCRIPTION"
+      ],
+      "notes": "Corrected typeset transcription versus facsimile; removed unsupported exhaustive readership/legibility claims and exact distribution list. Historical alphabet fallback differs from800-series widget conventions. Numerical example now uses verified178enemy. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/da-vinci-code.html",
@@ -442,7 +490,8 @@
       "sha256": "690f1b0d530986c5c72b59417f54416d4a1f7e68d907b55de25cfcac00071b4c",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. NCMvisitsdoublingstillassertedunsupported despiteearlierpurgedenrollments. Singlemostinfluential,80Mspecificcurrent/copies→readerswrong. Fibonacciantecipatesmodernnumericcipherfalse. Novelaccuratelymirrorscryptanalysisoversimplifies. Sourcebookartclaimspecificchecks."
+      "notes": "Full prose read. NCMvisitsdoublingstillassertedunsupported despiteearlierpurgedenrollments. Singlemostinfluential,80Mspecificcurrent/copies→readerswrong. Fibonacciantecipatesmodernnumericcipherfalse. Novelaccuratelymirrorscryptanalysisoversimplifies. Sourcebookartclaimspecificchecks.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/dagapeyeff.html",
@@ -451,7 +500,8 @@
       "sha256": "803594a448ce3c85dbfd36dbee83bfc4bf23cae0034f9148e1ea1c262d47c6f4",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Nonuniformdigitsnotstrongproofrealcipher; Polybiusdoesnotnecessarilyshownonuniformoutput. Authorforgot/secondeditionremovedneedsdocumentarysource. UnicitydistanceapproxnotprovenmanyEnglishkeys395digits. Earlydigitexcerpt130verify source. OUP1939bibliographycheck."
+      "notes": "Full prose read. Nonuniformdigitsnotstrongproofrealcipher; Polybiusdoesnotnecessarilyshownonuniformoutput. Authorforgot/secondeditionremovedneedsdocumentarysource. UnicitydistanceapproxnotprovenmanyEnglishkeys395digits. Earlydigitexcerpt130verify source. OUP1939bibliographycheck.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/dancing-men.html",
@@ -460,16 +510,20 @@
       "sha256": "3a4964e457180fca54235b7ab1ad6fb3bf76ecd30ef3cf8118dd60785bc00ad9",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. FirstwideaudienceclaimcontradictsPoe1843. Any>50lettersbreakminutes andeverymonoalphabeticbreakalwaysfalse. Entirelyconsistentpublishedillustrations requiresverifyoriginaledition variants. NoallEdwardianlearned/directmodernlineage. Actualstoryavailablepublicdomain primary."
+      "notes": "Full prose read. FirstwideaudienceclaimcontradictsPoe1843. Any>50lettersbreakminutes andeverymonoalphabeticbreakalwaysfalse. Entirelyconsistentpublishedillustrations requiresverifyoriginaledition variants. NoallEdwardianlearned/directmodernlineage. Actualstoryavailablepublicdomain primary.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/des.html",
       "title": "DES (Data Encryption Standard) — The Cipher Museum",
       "words": 661,
       "sha256": "ca734c284d3f703a8a6bc85709ac7c126f678369e9f5e0682bdb3e90d703d32a",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. DES historical attribution of S-box design solely to NSA and 1991 disclosure needs correction against IBM Coppersmith account. DES/AES same open competition model overstates historical similarity. Verify conditional-linear figures against cited paper."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "COPPERSMITH-1994"
+      ],
+      "notes": "IBM S-box role and1994criteria disclosure corrected; full paper attack not replicated. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/diana-cryptosystem.html",
@@ -481,7 +535,8 @@
         "RIJMENANTS-DIANA",
         "SHANNON-1949"
       ],
-      "notes": "Public table versus secret pad distinguished; 126 unordered triples and all676 reciprocal pairs independently verified. Exact deployment dates and Boak-volume passage still require checking."
+      "notes": "Public table versus secret pad distinguished; 126 unordered triples and all676 reciprocal pairs independently verified. Exact deployment dates and Boak-volume passage still require checking.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/dictionary-code.html",
@@ -492,7 +547,8 @@
       "sources": [
         "KAHN-1996"
       ],
-      "notes": "Kahn’s Davis146.L.20 example retained. Invented diagram no longer attributed to a1857 Primary-School dictionary; unsupported edition-mismatch anecdote removed."
+      "notes": "Kahn’s Davis146.L.20 example retained. Invented diagram no longer attributed to a1857 Primary-School dictionary; unsupported edition-mismatch anecdote removed.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/diffie-hellman.html",
@@ -501,7 +557,8 @@
       "sha256": "6d06a3588f0badef42af017c912693e6956c1fbb308793cb41f303585038a61b",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. OTP related card wrongly implies DH makes information-theoretic OTP bootstrap practical. Always authenticated overclaim; 1969-1974 discovery wording and Merkle attribution need precision. Verify current deployment and toy arithmetic."
+      "notes": "Full prose read. OTP related card wrongly implies DH makes information-theoretic OTP bootstrap practical. Always authenticated overclaim; 1969-1974 discovery wording and Merkle attribution need precision. Verify current deployment and toy arithmetic.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/dilly-knox.html",
@@ -510,7 +567,8 @@
       "sha256": "19bdc89f856e194dbfbb4494c05e4c8309aa2c0619f336180d644a15eb9c9322",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Headline now matches commercial-derived attack versus military-wiring reconstruction distinction; qualified team and mentoring claims. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Headline now matches commercial-derived attack versus military-wiring reconstruction distinction; qualified team and mentoring claims. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/dorabella.html",
@@ -519,7 +577,8 @@
       "sha256": "e7ff64c39b4e306c3bd3461208400f537c0cfed93406e9dc2f0ee7f2fc62925f",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read.87ciphertextlength disputed87vs87? Countoriginalincludingdot.24possiblevsusedsymbols distinction. Flatfreqdoesnotruleoutsimplemonoalphabeticshortsample. Universalinsufficiency/EnglishflatICundefined andmanynear-solutionsneedexperiment. PersonalDoraage23vsborn1874July1897yes. NeedElgarrecord/primarynotebooks."
+      "notes": "Full prose read.87ciphertextlength disputed87vs87? Countoriginalincludingdot.24possiblevsusedsymbols distinction. Flatfreqdoesnotruleoutsimplemonoalphabeticshortsample. Universalinsufficiency/EnglishflatICundefined andmanynear-solutionsneedexperiment. PersonalDoraage23vsborn1874July1897yes. NeedElgarrecord/primarynotebooks.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/double-playfair.html",
@@ -528,7 +587,8 @@
       "sha256": "8a94f2afcb6a469fceb59aef7cf3dcebf5dddd8f5cd8f5b7b3cf3b2af9ae0d69",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Clear edition-specific authentic procedure and source vectors; verify primary manual cited pp3-6 and tests. No evident prose contradiction. Modern Truppenschluessel attacks explicitly excluded from this engine."
+      "notes": "Full prose read. Clear edition-specific authentic procedure and source vectors; verify primary manual cited pp3-6 and tests. No evident prose contradiction. Modern Truppenschluessel attacks explicitly excluded from this engine.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/double-transposition.html",
@@ -537,7 +597,8 @@
       "sha256": "7f8747d20f6dc8a1243e618d0caa51651fbfa394ae1580ec32227083b2a0a7d0",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Separated historicaluse frominvention; key-paircount versus distinctpermutations, instance-dependent searchlimits. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Separated historicaluse frominvention; key-paircount versus distinctpermutations, instance-dependent searchlimits. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/dunin.html",
@@ -546,7 +607,8 @@
       "sha256": "f65a0985992dfe57ece353d3d8fffd412aa10666e19b3a7ae12e4e242da45bc2",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. MostlikelysolveK4subjectiveprediction; born1958 likelyDec29correctbutverifyauthor. CriticalKryptosK1-3solved1999 ignoresNSA1992Stein1998; K42025archivalplaintextdiscovery nuance needed. Multiplepapers/firstverifiedfactsunsupported. Needcredit CodebreakingwithSchmeh2020. CurrentK4primaryauctionsearchidentified."
+      "notes": "Full prose read. MostlikelysolveK4subjectiveprediction; born1958 likelyDec29correctbutverifyauthor. CriticalKryptosK1-3solved1999 ignoresNSA1992Stein1998; K42025archivalplaintextdiscovery nuance needed. Multiplepapers/firstverifiedfactsunsupported. Needcredit CodebreakingwithSchmeh2020. CurrentK4primaryauctionsearchidentified.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/ecdsa.html",
@@ -555,7 +617,8 @@
       "sha256": "6d8a45d1411f1ddc3746fdb8f86f4b33608649887dfb9a7a4f654511953b52b2",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Where-used paragraph contradicts BIP340 caveat: not every Bitcoin transaction ECDSA, EC certificate does not guarantee every resumed handshake has signature. Padlock almost-certain claim unsupported. Rests-on wording should distinguish ECDLP necessity from complete scheme security. Verify toy curve point count, modular nonce derivation, primary standards."
+      "notes": "Full prose read. Where-used paragraph contradicts BIP340 caveat: not every Bitcoin transaction ECDSA, EC certificate does not guarantee every resumed handshake has signature. Padlock almost-certain claim unsupported. Rests-on wording should distinguish ECDLP necessity from complete scheme security. Verify toy curve point count, modular nonce derivation, primary standards.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/egyptian-substitution.html",
@@ -566,7 +629,8 @@
       "sources": [
         "KAHN-1996"
       ],
-      "notes": "Kahn Ch2 opening checked: unusual spelling is not evidence of a modern secret-key cipher; revised headlines/metadata and direct-lineage claim."
+      "notes": "Kahn Ch2 opening checked: unusual spelling is not evidence of a modern secret-key cipher; revised headlines/metadata and direct-lineage claim.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/elizebeth-friedman.html",
@@ -575,7 +639,8 @@
       "sha256": "ef2f5f564f2aed8ecad9cdd18932a7f1c6f0ad44c1e44e77716dbb27485ce50a",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Header/sidebarstill600codebooks explicitlyremovedbody. Keybreakdate1940-42narrowsworkunsourced; education1915likelywrong1915graduationverify. Need CoastGuard/NSAprimary. FullFagonebookcredit and avoidbiographycounterfactual."
+      "notes": "Full prose read. Header/sidebarstill600codebooks explicitlyremovedbody. Keybreakdate1940-42narrowsworkunsourced; education1915likelywrong1915graduationverify. Need CoastGuard/NSAprimary. FullFagonebookcredit and avoidbiographycounterfactual.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/enigma.html",
@@ -584,7 +649,8 @@
       "sha256": "b8e180658926456fb43d5985a15f0c96ef3762c0509f3f67488d45ff1ca99dd5",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full page read. Worked vector needs independent engine trace; typewritten tape claim wrong for lampboard Enigma I. Rotor stepping prose is odometer-like despite correct double-step widget; never same letter same output twice is false. Polish chronology, exact efficiency gain, 75% reading, operational claims and wartime impact need primary checks. Missing plugboard/rings are clear search limits. Modern reciprocal ciphers and DH assertions overbroad."
+      "notes": "Full page read. Worked vector needs independent engine trace; typewritten tape claim wrong for lampboard Enigma I. Rotor stepping prose is odometer-like despite correct double-step widget; never same letter same output twice is false. Polish chronology, exact efficiency gain, 75% reading, operational claims and wartime impact need primary checks. Missing plugboard/rings are clear search limits. Modern reciprocal ciphers and DH assertions overbroad.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/fialka.html",
@@ -593,7 +659,8 @@
       "sha256": "50b89067dc4e15e7c3c403ac955f03c3aae2c0ca217ce12b270969153c7ee0ef",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Full page read.30contact/26lettertoy and selfencipherment caveats good. Statusalloperationalno-publicbreak must boundedsource/date. Dailycard vs persessionkey analogy not equivalent. KL7answerFialka chronology misleading sinceKL7earlier."
+      "notes": "Full page read.30contact/26lettertoy and selfencipherment caveats good. Statusalloperationalno-publicbreak must boundedsource/date. Dailycard vs persessionkey analogy not equivalent. KL7answerFialka chronology misleading sinceKL7earlier.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/field-hollers.html",
@@ -602,7 +669,8 @@
       "sha256": "3b8937fa83079cb12100f55728aa43c191876e52fa9b4016118937cee8ef75c4",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Clear1928firstpublicationandunknownearlieruse; metadata1619-1865specificmethodgeneralized. VerifyNPS provenance notclaimpostwarcomposition certain if firstpublicationonly. Widgetmodernclearlylabeled."
+      "notes": "Full prose read. Clear1928firstpublicationandunknownearlieruse; metadata1619-1865specificmethodgeneralized. VerifyNPS provenance notclaimpostwarcomposition certain if firstpublicationonly. Widgetmodernclearlylabeled.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/four-square.html",
@@ -611,7 +679,8 @@
       "sha256": "87d15474830bfd2f325bb9ee9239e995ac2a9a7e3c18624aa45d8e119383b61a",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Pairwise rectangle mapping coherent. Need primary Delastelle1902attribution and never-military evidence. Several-hundred-character/seconds/global-solver-convergence guarantees unsupported. Single-letter frequency flattening not guaranteed; blocksize and edge-case analogy overstated."
+      "notes": "Pairwise rectangle mapping coherent. Need primary Delastelle1902attribution and never-military evidence. Several-hundred-character/seconds/global-solver-convergence guarantees unsupported. Single-letter frequency flattening not guaranteed; blocksize and edge-case analogy overstated.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/fractionated-morse.html",
@@ -620,7 +689,8 @@
       "sha256": "0a592fec9557bb228b274e458183da84a71e3f5777de4b85bc225b4194dea165",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "ACA26usabletriples verified; xxxexcluded; browserdiscardsspacesandpunctuation explicitlydistinguished. Unsupported1880sdate removed. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "ACA26usabletriples verified; xxxexcluded; browserdiscardsspacesandpunctuation explicitlydistinguished. Unsupported1880sdate removed. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/freemason-pigpen.html",
@@ -629,7 +699,8 @@
       "sha256": "32ee8cd9aa266f64071f271d074857d81eebefc94aa94d532d0dd0a3e4bcdd69",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "1730standardisation,Hellfire andunsupportedmedia claims removed; four-wedgewidget differsfromfullpigpenvariant. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "1730standardisation,Hellfire andunsupportedmedia claims removed; four-wedgewidget differsfromfullpigpenvariant. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/gchq-trio.html",
@@ -638,7 +709,8 @@
       "sha256": "69137c18d18a0477127c81b57576f1012d80c73f6f28d288ca6f5d0d2c3ea6f4",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Corrected CB versusCMG,1970–1974range, proposal versusimplementation and unsupported universalacknowledgement. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Corrected CB versusCMG,1970–1974range, proposal versusimplementation and unsupported universalacknowledgement. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/geheimschreiber.html",
@@ -649,7 +721,8 @@
       "sources": [
         "T52-ARTIFACT"
       ],
-      "notes": "Removed all-model irregular stepping and split-role assertions. Variant control detail still needs manual-level verification."
+      "notes": "Removed all-model irregular stepping and split-role assertions. Variant control detail still needs manual-level verification.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/gold-bug.html",
@@ -660,7 +733,8 @@
       "sources": [
         "POE-BRIGHAM-1943"
       ],
-      "notes": "Corrected 1839–1840 Alexander’s Weekly Messenger versus1841 Graham’s chronology; removed universal success, influence and readership claims. Original203-symbol story transcription still needs independent count."
+      "notes": "Corrected 1839–1840 Alexander’s Weekly Messenger versus1841 Graham’s chronology; removed universal success, influence and readership claims. Original203-symbol story transcription still needs independent count.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/gravity-falls.html",
@@ -669,7 +743,8 @@
       "sha256": "d801859304555c99b3b36de9d7082b48aa18e18096932e70d5b15c35988ed9da",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Demonstrably8-14/hundredsthousandslearned/noeducationstudy remove. FirstmassparticipatoryeventfalsePoeBeast. Season1rotationactuallystagesandcombinedciphers verifyepisodecredits; WIDDLElocationverifyprimary. Advanceproofsunsupported."
+      "notes": "Full prose read. Demonstrably8-14/hundredsthousandslearned/noeducationstudy remove. FirstmassparticipatoryeventfalsePoeBeast. Season1rotationactuallystagesandcombinedciphers verifyepisodecredits; WIDDLElocationverifyprimary. Advanceproofsunsupported.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/great-cipher.html",
@@ -678,7 +753,8 @@
       "sha256": "95b1c7158064f6197e15d21638b8b910e0fed6d1c0bcf1e932cae2d85b8230c7",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read.1626bothfather/son and1690s datesconflate. Mostcritical delete previous vs following historicalrule uncertain. Model values702891 exceed587butcanlabelsparse explicitly. Three-year/200year allattackers trapped narrative unsupported; minutes hillclimb claim noexperiment. Historical longest-matchprocedureinvented; date/firstcryptanalyst/capture unsupported. Ironmaskdirectquote requires originaldecoded evidence."
+      "notes": "Full prose read.1626bothfather/son and1690s datesconflate. Mostcritical delete previous vs following historicalrule uncertain. Model values702891 exceed587butcanlabelsparse explicitly. Three-year/200year allattackers trapped narrative unsupported; minutes hillclimb claim noexperiment. Historical longest-matchprocedureinvented; date/firstcryptanalyst/capture unsupported. Ironmaskdirectquote requires originaldecoded evidence.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/gronsfeld.html",
@@ -687,7 +763,8 @@
       "sha256": "d705c5290b5bd3b11ca40fbd44b42f967de34e160ec135f7f160adb05b37df98",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Kahn PDF315 documents CountGronsfeld attribution, numeric shifts,1892Bazeries case. Corrected contradictory first names to bounded traditional attribution. Numeric-vector DUXBHN... reviewed; unsupported soldier-memory advantage removed. Date~1650still requires qualification/source."
+      "notes": "Kahn PDF315 documents CountGronsfeld attribution, numeric shifts,1892Bazeries case. Corrected contradictory first names to bounded traditional attribution. Numeric-vector DUXBHN... reviewed; unsupported soldier-memory advantage removed. Date~1650still requires qualification/source.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/hagelin-c36.html",
@@ -696,7 +773,8 @@
       "sha256": "ffc0a8396a7143ae2f26c01ece95cb9b4d8447d2d2c9439347b1525dd39bf4c1",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Full page read. C36/C52/Rubicon distinctions careful; verify Greenough1999 exact scope and machine relation. C=(K−P) withKdefinedshift differs M209displacedbarvalue25offset, explainconvention. Source links include primaryreports/technicalartifact evidence."
+      "notes": "Full page read. C36/C52/Rubicon distinctions careful; verify Greenough1999 exact scope and machine relation. C=(K−P) withKdefinedshift differs M209displacedbarvalue25offset, explainconvention. Source links include primaryreports/technicalartifact evidence.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/hill.html",
@@ -705,7 +783,8 @@
       "sha256": "bbcf031f542375addc4b7e1b262790ef6557ace90e336fde78ea3e7691ab228b",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "RemovedunsourceddirectAESinfluence/priorityanddeployment; algebraicattackconditions retained; nonlinearityclaim narrowed. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "RemovedunsourceddirectAESinfluence/priorityanddeployment; algebraicattackconditions retained; nonlinearityclaim narrowed. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/histiaeus-tattoo.html",
@@ -716,7 +795,8 @@
       "sources": [
         "HERODOTUS-5-35"
       ],
-      "notes": "Herodotus5.35 checked; removed earliest-use, invented inspection scene, guarantee of unsearched-channel secrecy and anachronistic Aeneas attribution."
+      "notes": "Herodotus5.35 checked; removed earliest-use, invented inspection scene, guarantee of unsearched-channel secrecy and anachronistic Aeneas attribution.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/homophonic.html",
@@ -725,7 +805,8 @@
       "sha256": "78c512cd250542a3522ca8e3c20678f75256d5562483d328c32156cdb71c7c6c",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "HAC p.240 supports random choice/proportional symbol sets and residual statistics; given E/T/Z example is not uniform (2.54%,4.55%,0.07% per symbol). Kahn PDF pp.148–149 supports Mantua1401 and explicitly does not establish transmission from al-Kindi. Modern uniform-output and IV guarantees need correction."
+      "notes": "HAC p.240 supports random choice/proportional symbol sets and residual statistics; given E/T/Z example is not uniform (2.54%,4.55%,0.07% per symbol). Kahn PDF pp.148–149 supports Mantua1401 and explicitly does not establish transmission from al-Kindi. Modern uniform-output and IV guarantees need correction.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/ira-ciphers.html",
@@ -734,7 +815,8 @@
       "sha256": "4da4e51982259b1dea2a1a125e9391fd3d8f16bbc856d7a23829c65002726ff8",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Claimed59lettercryptogramdisplayonly51? countindependently. Entirelyadequate1926unsupported andfrequencyuselessoverstatesclassification. Timingminutesandattackparameters needGilloglyprimary. Bookfulltitle DecodingtheIRA andauthorcredits."
+      "notes": "Full prose read. Claimed59lettercryptogramdisplayonly51? countindependently. Entirelyadequate1926unsupported andfrequencyuselessoverstatesclassification. Timingminutesandattackparameters needGilloglyprimary. Bookfulltitle DecodingtheIRA andauthorcredits.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/jefferson-disk.html",
@@ -743,16 +825,18 @@
       "sha256": "84da74d66fcf3e17727885431c0bc255de2cdd096a497f7310eda40a397da194",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full page read. Body distinguishes proposed36diskJefferson and25diskM94; sidebar still25disks for Jefferson and max25message contradicts multi-block. Date1795approx vs exact. Birthday-attack analogy false; everyAESkey256bits wrong."
+      "notes": "Full page read. Body distinguishes proposed36diskJefferson and25diskM94; sidebar still25disks for Jefferson and max25message contradicts multi-block. Date1795approx vs exact. Birthday-attack analogy false; everyAESkey256bits wrong.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/jn-25.html",
       "title": "JN-25 (Japanese Naval Code) - The Cipher Museum",
       "words": 527,
       "sha256": "4efd4af33316cba1994f8595e354c40369b42715efab1639e7762b32644e80b6",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Clear noncarrying decimal arithmetic. Miniature codebook requiresverify implementation consistent and arbitrarygroupsnot historical. Must peel additive before any statistics tooabsolute; coveragescale dependsedition. AF deception causalclaimneedsNavyrecord, codebookmodenot metadata-vs-payload."
+      "notes": "Removed claim additives must be fully stripped before any usefulstatistics; AF report contributedtoassessment, notsoledeploymentcause; codebookeditionsvaried. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/joan-clarke.html",
@@ -761,7 +845,8 @@
       "sha256": "9ef7425d983a0f3067f414aa16bb4d87c27b1fce8f3754a9a0d729591d1c1f68",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Corrected MBE1946 against Gazette, Banburismus practitioner attribution, blackout scope and formal retirement versus later clerical work. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Corrected MBE1946 against Gazette, Banburismus practitioner attribution, blackout scope and formal retirement versus later clerical work. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/kahn.html",
@@ -770,16 +855,20 @@
       "sha256": "0c10ce8a5ba1e3a4308135e532bd30a8ba87c3dd23330dbd2cf2f5c45e1ad5f0",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Firstcomplete/allhistory/perfectaccuracy overstated, revised1996scopeverifybookpreface. OxfordDPhilvsD.Litt? likelyDPhil1974verify. NSAinduction1999not2009? verify. Sourcecreditsfulltitle."
+      "notes": "Full prose read. Firstcomplete/allhistory/perfectaccuracy overstated, revised1996scopeverifybookpreface. OxfordDPhilvsD.Litt? likelyDPhil1974verify. NSAinduction1999not2009? verify. Sourcecreditsfulltitle.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/kama-sutra.html",
       "title": "Kama Sutra Cipher (Mlecchita Vikalpa) — The Cipher Museum",
       "words": 402,
       "sha256": "83d8a6093ec77f078b71c1fb50332dc4c3bf3d0f98aaa92fff6ef14cafe2da2a",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Bodycarefullydistinguisheslatercommentary/model; globaloriginparagraph assertsindependentorigins/pairedloveletters/scytaleasfact despitecaveats. Needprimarytextandcommentarydate; pairwiseinvolutionmathematicallycorrect."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Headers andglobaloriginparagraph nowmatch evidence-limitbody; modernLatinpairingnotprovenancetoancientloveletters. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/kerckhoffs.html",
@@ -788,16 +877,20 @@
       "sha256": "604db268a1a7a4265b53fde72ed66f56f56f39527435464e84ca8c492b06b6e6",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Requirement3appliestokey; publishedscrutiny notguarantee; AESselection2000versusstandard2001. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Requirement3appliestokey; publishedscrutiny notguarantee; AESselection2000versusstandard2001. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/kl-7.html",
       "title": "KL-7 ADONIS (NATO eight-rotor machine · 1952) — The Cipher Museum",
       "words": 678,
       "sha256": "2cea1c5966f2ef48ca7493cad9146dd4ec844662cd1d296b1953a38d1390ecc0",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Full page read.8rotors,stationaryfourth,36contacts/reentry described with primarymanual link. NATOeverything/mostdamaging/entireperiodnear-realtime and25,000by1965 claims need evidence.1952–1983 service range andWalker specifickeysystems require distinctions."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "WALKER-FBI"
+      ],
+      "notes": "Removed all-NATO/all-period near-real-time claims; distinguishes machine history from broad Walker case. No public-break claim limited to consulted evidence. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/kryha.html",
@@ -808,7 +901,8 @@
       "sources": [
         "KRYHA-CALLIMAHOS"
       ],
-      "notes": "Four analysts, source-specific attack duration, no universal easy recovery guarantee."
+      "notes": "Four analysts, source-specific attack duration, no universal easy recovery guarantee.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/krypto-arg.html",
@@ -817,7 +911,8 @@
       "sha256": "5be817c267dfc0497c8f88c56a32ec7b420d768754a784ab59153cd8e7571676",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Removed unsupported specific game/cipher assignments and recruitment lineage. Caesar and Vigenère worked values independently calculated; repaired Bacon mixed-case carrier. Final rendered review pending."
+      "notes": "Removed unsupported specific game/cipher assignments and recruitment lineage. Caesar and Vigenère worked values independently calculated; repaired Bacon mixed-case carrier. Final rendered review pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/kryptos.html",
@@ -826,7 +921,8 @@
       "sha256": "be3fedf06b0431f8b0f45e176ff16e572aa5c6780e459a51ef254e15286529f0",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read including related cards. HeaderK4unsolvedmust match2025archivalplaintext vs publiccryptanalysis. Cribs4+9+6+5=24correct. SHA/encodingscope notallunknown. K2missingS correction andclaimCarterK2needsprimary. JulySept2025articlemetadataandauctionpriceverifyactualrecord. No comparative strongerHillconjecture/wholecommunityclockassumptions withoutsource. Remove productRound3references."
+      "notes": "Full prose read including related cards. HeaderK4unsolvedmust match2025archivalplaintext vs publiccryptanalysis. Cribs4+9+6+5=24correct. SHA/encodingscope notallunknown. K2missingS correction andclaimCarterK2needsprimary. JulySept2025articlemetadataandauctionpriceverifyactualrecord. No comparative strongerHillconjecture/wholecommunityclockassumptions withoutsource. Remove productRound3references.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/lasry.html",
@@ -835,16 +931,20 @@
       "sha256": "a262e9920ec94e8685d01b7a6c929869b4072190726d8ba1fb2c8bb1727d13ac",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Born1966 likelywrong1960? primaryauthorbiographyverify. Z340partialcontributionsrelatedcard contradictsbody. MCMC exacttechnique attributionneeds dissertation. Fifteenyearrelative date avoid; degree date/titlefromlocaldissertation."
+      "notes": "Full prose read. Born1966 likelywrong1960? primaryauthorbiographyverify. Z340partialcontributionsrelatedcard contradictsbody. MCMC exacttechnique attributionneeds dissertation. Fifteenyearrelative date avoid; degree date/titlefromlocaldissertation.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/latin-american-codebooks.html",
       "title": "Latin American Telegraphic Codebooks — The Cipher Museum",
       "words": 397,
       "sha256": "42df0ba29d28ae9ad42a4661515b7ecf8a23f7afca1214332d7c1427a2706d0f",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Bodyexplicitlyillustration/unidentifiededition; headline10digitcompressionparagraphs andnamededitions inmetadataunverified. Purposeconfidentialitynotinherent; modernsourcesbookcatalogarchivesneeded."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Removed inventednamededitions andten-digitparagraphheadline; noidentifiededitionrepresented. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/leo-marks.html",
@@ -853,7 +953,8 @@
       "sha256": "454f867bf232d119a1d59551eadaa3a25867f9712811a673c134ec02dfcfe328",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Goodmemoirqualification andOTP length. Role1942-45startheadversusjoinedverify; poemRuth/dateSzabo primarymemoir. BAFTAlegacyunsupportedaward andNullcipherstegcousinpoemcode misleading."
+      "notes": "Full prose read. Goodmemoirqualification andOTP length. Role1942-45startheadversusjoinedverify; poemRuth/dateSzabo primarymemoir. BAFTAlegacyunsupportedaward andNullcipherstegcousinpoemcode misleading.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/lorenz.html",
@@ -862,7 +963,8 @@
       "sha256": "7bb930645589c47ffa330f78bd29f48ba744fbacf22ddc0ddc5f9d6e6d51bb34",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full page read. Main Tiltman/Tutte/Flowers distinction good. Joint-wheel/output-period caveat contradicted by ~1.6e19period/effectivelyinfinite example and neverrepeats statement. WEPattack and GCMforgery not bit-for-bit identical to depth confidentiality equation. Strategic users and Enigma-onlyhumanerror comparisons too broad. Check worked ITA2 order/impulse convention against Tunny."
+      "notes": "Full page read. Main Tiltman/Tutte/Flowers distinction good. Joint-wheel/output-period caveat contradicted by ~1.6e19period/effectivelyinfinite example and neverrepeats statement. WEPattack and GCMforgery not bit-for-bit identical to depth confidentiality equation. Strategic users and Enigma-onlyhumanerror comparisons too broad. Check worked ITA2 order/impulse convention against Tunny.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/m-94.html",
@@ -871,16 +973,20 @@
       "sha256": "aca67de5d87e5e453755316ea497e4b8bdaa35f89031c5b1acc405a3f9c0f11e",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full page read. Says25rows despite26letters=26rows,25alternatives; uniqueEnglishrow notguaranteed. Independentdevelopment body conflicts prototypebecameM94 link. Aluminium/brass claim source; Armyretirement notallbranches. Attackconditions and sessionkeygeneralization too broad."
+      "notes": "Full page read. Says25rows despite26letters=26rows,25alternatives; uniqueEnglishrow notguaranteed. Independentdevelopment body conflicts prototypebecameM94 link. Aluminium/brass claim source; Armyretirement notallbranches. Attackconditions and sessionkeygeneralization too broad.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/m209.html",
       "title": "M-209 (Hagelin C-38) — The Cipher Museum",
       "words": 730,
       "sha256": "d72baa0de11a2f6929bbc433ce232fd40ba721d88a284ba362e438633f88be75",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Full page read. Reciprocal25−P+K and wheel product101405850 correct. Lug bar is OR of selected active arms, not simply independentbinarysum; numberlugrecovery guarantee too strong. Strongtactical statusconflicts Broken label unless period-specific. Deployment, weight,production,1940escape narrative need primary."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "LASRY-2018"
+      ],
+      "notes": "Corrected bar-level OR versus independent wheel-lug sum; statistical attack not guaranteed recovery. Removed specific hours-per-message and unsupported escape narrative. Production and adoption numbers still need final primary verification. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/mary-stuart-castelnau-letters.html",
@@ -889,7 +995,8 @@
       "sha256": "de9011a4b1d9abc09e90675b598287afd788c9b231f39045aa2fdca9d0463c9f",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Metadata saysMarylettersbutcorpus54+2+1includesNau; header57lettersidentifiedokay. Clearhypothesischanges,manualrefinement,publicationyear. Check inventorillustration/publication bibliographicmetadata and paper sections. Noobviousnewcontradictions exceptcaptionallMary andallSheffield location qualify."
+      "notes": "Full prose read. Metadata saysMarylettersbutcorpus54+2+1includesNau; header57lettersidentifiedokay. Clearhypothesischanges,manualrefinement,publicationyear. Check inventorillustration/publication bibliographicmetadata and paper sections. Noobviousnewcontradictions exceptcaptionallMary andallSheffield location qualify.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/mavis-batey.html",
@@ -898,7 +1005,8 @@
       "sha256": "a06d7b0c62cc4699285c0079205df023dbd193045165116ae932b8c492a4ad1a",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. McKayfirstfullyrevealedwomen2000signoresearlierwork. Education/recruitmentandMBEprimary. Matapan ships/dateandCunninghamgolfanecdote source; bodyappropriateteam/intelligencelimits."
+      "notes": "Full prose read. McKayfirstfullyrevealedwomen2000signoresearlierwork. Education/recruitmentandMBEprimary. Matapan ships/dateandCunninghamgolfanecdote source; bodyappropriateteam/intelligencelimits.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/mccormick.html",
@@ -907,7 +1015,8 @@
       "sha256": "bd1685f538682cc2130f8b10c96b0c1dc019dd3643893caf88a4a3e1c22e263e",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. NoacceptedpublicinterpretationverifyFBIcurrent. FBIagencyfullcontextnotestablished, barelyliterateframinggratuitous. RelatedOTPwhypersonalresistfalse. Loadedfragmentneedsfacsimiletranscriptionlabel."
+      "notes": "Full prose read. NoacceptedpublicinterpretationverifyFBIcurrent. FBIagencyfullcontextnotestablished, barelyliterateframinggratuitous. RelatedOTPwhypersonalresistfalse. Loadedfragmentneedsfacsimiletranscriptionlabel.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/microdot.html",
@@ -916,7 +1025,8 @@
       "sha256": "dcfc1cba07db2f7790fb354499c4241b106a9720f93d948e6160ed04c53355d7",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read.1941firstdiscoveredworldwideunsupported; Hoover1946publicationlikely1946ReadersDigestverify. Enlargeallmailrequiredfalse; limitedwork. Microdotnotencryptgood; publicencodingdemo distinct."
+      "notes": "Full prose read.1941firstdiscoveredworldwideunsupported; Hoover1946publicationlikely1946ReadersDigestverify. Enlargeallmailrequiredfalse; limitedwork. Microdotnotencryptgood; publicencodingdemo distinct.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/mit-mystery-hunt.html",
@@ -927,7 +1037,8 @@
       "sources": [
         "MIT-HUNT-2015"
       ],
-      "notes": "Removed longest/largest/annual universal counts; retained source-dated2015 figures. Original museum meta exercise labelled."
+      "notes": "Removed longest/largest/annual universal counts; retained source-dated2015 figures. Original museum meta exercise labelled.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/monoalphabetic.html",
@@ -936,7 +1047,8 @@
       "sha256": "e51a230f928bb0457c2363c94f5e1fc33f02b78166cc7805028983748cd8ebd6",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "HAC pp.239–240 supports permutation/frequency discussion; zero-security slogan, universal statistical fingerprint and S-box frequency-analysis claims overstate. 800/850 dates presented as exact origin/break need qualification."
+      "notes": "HAC pp.239–240 supports permutation/frequency discussion; zero-security slogan, universal statistical fingerprint and S-box frequency-analysis claims overstate. 800/850 dates presented as exact origin/break need qualification.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/morse.html",
@@ -945,7 +1057,8 @@
       "sha256": "58f11993bc3b182a0a956bccf39e5417d84cd1f24ffc266d25654fa7ea3a11e5",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "1844eventlabelcorrected; fractionalMorsetriples and Navajospokencodereferences corrected. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "1844eventlabelcorrected; fractionalMorsetriples and Navajospokencodereferences corrected. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/myszkowski.html",
@@ -954,7 +1067,8 @@
       "sha256": "00e7e20b881332d3b6ff6f1cf6b8d12ac5393fdf937de13c5da43e9a7295f77f",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "TOMATO ranks and occupied grid/check output coherent. Strongest primary link is1902bookBnFcatalog plusACArule; verify direct. Existing demo limits/no-padding/integrity warning appropriate. Book reference retained by title and author; full-ebook link removed."
+      "notes": "TOMATO ranks and occupied grid/check output coherent. Strongest primary link is1902bookBnFcatalog plusACArule; verify direct. Existing demo limits/no-padding/integrity warning appropriate. Book reference retained by title and author; full-ebook link removed.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/national-treasure.html",
@@ -965,7 +1079,8 @@
       "sources": [
         "NATIONAL-TREASURE-2004"
       ],
-      "notes": "Film transcript supports Silence Dogood reference text and Trinity Church setting. Widget explicitly separate Pigpen exercise. Historical references still need final whole-page review."
+      "notes": "Film transcript supports Silence Dogood reference text and Trinity Church setting. Widget explicitly separate Pigpen exercise. Historical references still need final whole-page review.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/navajo-code-talkers.html",
@@ -974,7 +1089,8 @@
       "sha256": "58f8b51563db528fcdc107017446de79ba43b12cdb722bb8f8145ae750a6a20c",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. KeytypeNaturalLanguage overlooksactualcode.420exactcounts andfirst29allGuadalcanal doubtful. TablewordmatchesNavy1945dictionaryverify; codeGUAMcorrectunderlistedmapping.95%nearimpossibleunsupported quantitative score; quickfactsNeverunqualified. PostwarJapaneseaccounts and17Comanchevsdeployed14verify. Mainhistoricalvsmoderncaveatgood."
+      "notes": "Full prose read. KeytypeNaturalLanguage overlooksactualcode.420exactcounts andfirst29allGuadalcanal doubtful. TablewordmatchesNavy1945dictionaryverify; codeGUAMcorrectunderlistedmapping.95%nearimpossibleunsupported quantitative score; quickfactsNeverunqualified. PostwarJapaneseaccounts and17Comanchevsdeployed14verify. Mainhistoricalvsmoderncaveatgood.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/nema.html",
@@ -983,7 +1099,8 @@
       "sha256": "c5992aff593add68080d7bddb840a5362e7583fe02e50e3953897b1b98ccf0a8",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Full page read. Fixed wiring, training/military distinctions,1947instructions and17,576stateperiod notkeyspace clearlybounded. Need actual primary manual/vector comparison. Existing tests pass but no fresh full historical verification."
+      "notes": "Full page read. Fixed wiring, training/military distinctions,1947instructions and17,576stateperiod notkeyspace clearlybounded. Need actual primary manual/vector comparison. Existing tests pass but no fresh full historical verification.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/nfc-deployment.html",
@@ -992,7 +1109,8 @@
       "sha256": "e7188ec33a4ffdbb39079434be0eba5c26dd9c756870f788304b5be5195c857f",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Model/config/access distinction clear. Reverify version1.1paper revision/Aug28 and777daysection17 original; avoidcurrentclaim beyondversion. Priorreport sourceinspection exists butfreshscope independent check."
+      "notes": "Full prose read. Model/config/access distinction clear. Reverify version1.1paper revision/Aug28 and777daysection17 original; avoidcurrentclaim beyondversion. Priorreport sourceinspection exists butfreshscope independent check.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/nihilist.html",
@@ -1001,16 +1119,20 @@
       "sha256": "7a6a33e05a4778e3a30aebe316b2193a40cd36e75d285dc9492154b0e864a9e4",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "QualifiedRussianinventorship; identifiedNihilisttranspositionasdistinctconstruction; removedfalseuniversalAESsubkeyclaims. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "QualifiedRussianinventorship; identifiedNihilisttranspositionasdistinctconstruction; removedfalseuniversalAESsubkeyclaims. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/nomenclator.html",
       "title": "Nomenclator — The Cipher Museum",
       "words": 578,
       "sha256": "1cc23837f091044d480b4648213b2ba804b9add3218ed7331c9b4950e6eacdd8",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Earliest1401 conflicts Kahn1379Gabrieli nomenclator likely; verify. Arbitrary1500entries and allVaticanseveralthousand generalized. Unsourced invented token mappings require explicit teaching label. Compression/encryption same long-token leak false; any alphabet break opens rest tooabsolute. GreatCipher200year card questionable."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "1379Lavinde versus1401Mantua distinction; invented entries labelled; no automatic complete-codebook recovery or direct compression-security equivalence. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/null-cipher.html",
@@ -1019,7 +1141,8 @@
       "sha256": "ff07a2a6bedf41d5707f87c4e527f59177e460b3c4c0190808e4356e6a793993",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "RemovedunsupportedBaconposition-ruleandBletchleycensorclaims; concealmentnotsecurityguarantee. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "RemovedunsupportedBaconposition-ruleandBletchleycensorclaims; concealmentnotsecurityguarantee. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/one-time-pad.html",
@@ -1028,16 +1151,20 @@
       "sha256": "a2eabe7ea4e187e2421907a9ea51355abd9b2e0be64d0f9bfddfe1c5b5fce1e0",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Fixedexamplekeys explicitlyillustrative; guaranteeversuspracticalbreak distinction; VENONAdecimalUSArmyorigin versusbinaryanalogy. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Fixedexamplekeys explicitlyillustrative; guaranteeversuspracticalbreak distinction; VENONAdecimalUSArmyorigin versusbinaryanalogy. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/patterson-jefferson-cipher.html",
       "title": "Patterson's Cipher for Jefferson (1801, solved 2007) — The Cipher Museum",
       "words": 1972,
       "sha256": "a566aa4f139c3b433d2ec570f4d9128e5dd1b54e98f8d54adb5fd7a03b4fae4b",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Publication July-Aug2009 conflicts97(2)MarchApril. Relatedcardlayeredfourtimes contradictsthreeproceduralsteps and dynamics nothillclimb. Jeffersonstronger designunsupported. KeyfollowsletterandLivingston sourcecheck. Smithline scoreexamples and recoveredkey verifyprimary."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "SMITHLINE-2009-METADATA"
+      ],
+      "notes": "March–April issue corrected; elapsedcenturies notcontinuouswork; no claim allmodernalgorithmspublished. Fullarticle verification remains pending. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/phaistos-disc.html",
@@ -1046,7 +1173,8 @@
       "sha256": "bffc87b1b9c47610abfbb7457060fcea3d14128ddd981eef3c65d61752bb6f56",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Widgettoo-smallfortruedeciphermentcontradictsnoimpossibilitybody.45types241tokens61groupsverifymuseumobject/standardtranscription; readingdirectionplausiblenotcertain. RosettaWhatdeciphermentrequires notalwaysbilingual."
+      "notes": "Full prose read. Widgettoo-smallfortruedeciphermentcontradictsnoimpossibilitybody.45types241tokens61groupsverifymuseumobject/standardtranscription; readingdirectionplausiblenotcertain. RosettaWhatdeciphermentrequires notalwaysbilingual.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/pigpen.html",
@@ -1055,7 +1183,8 @@
       "sha256": "761dd652f87f0ba87fe6b5a0d33dec001ffdb12d13bc88711c9f8f49178d36aa",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Leeson1794source checked; Washingtonpersonaluse removed; drawnS–Zvariant disclosed; publiclookupversussecretsubstitution. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Leeson1794source checked; Washingtonpersonaluse removed; drawnS–Zvariant disclosed; publiclookupversussecretsubstitution. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/playfair.html",
@@ -1064,7 +1193,8 @@
       "sha256": "c8b4c10ddc917338fd825bc1033caad8f2e2d7a354bc02e27ba17a56d840aad3",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Single-letterstatistics not universallyerased; knownpaircaninvolveuptofourdistinctletters, cribsremainhypotheses. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Single-letterstatistics not universallyerased; knownpaircaninvolveuptofourdistinctletters, cribsremainhypotheses. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/polybius.html",
@@ -1073,7 +1203,8 @@
       "sha256": "c29e247948ffedaa65c355bd9713aa50512b1e9791cb6c2085d41d1349f2d959",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Public-gridlookup distinguished from secret-grid frequencyanalysis infactsandbody; ancientGreeksource reread. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Public-gridlookup distinguished from secret-grid frequencyanalysis infactsandbody; ancientGreeksource reread. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/porta.html",
@@ -1082,7 +1213,8 @@
       "sha256": "8b3a3be05007b8f5ee7c357b2f51723001ac5fb963d74b69fc3546721cd8f0af",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "HAC polyalphabetic principles and page-defined reciprocal mapping reviewed. Corrected diagram claim every row A↔N (true onlyAB) and self-inverse/symmetric equivalence. Need Kahn historical table pages and actual UI/table check."
+      "notes": "HAC polyalphabetic principles and page-defined reciprocal mapping reviewed. Corrected diagram claim every row A↔N (true onlyAB) and self-inverse/symmetric equivalence. Need Kahn historical table pages and actual UI/table check.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/purple.html",
@@ -1091,7 +1223,8 @@
       "sha256": "133cb94b2eee4d1acf092549408444566e7a360dac0232549028ac0ab37b9e63",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full page read. Detailed sixes/twenties and toy caveats conflict with header vowel/consonant labels and body ciphertext-only claim despite known plaintext discussion. 1937deployed vs1939adoption inconsistent. Keyspace/settings-count calculation needs technical source and equivalence caveat. MAGIC limits appropriately stated."
+      "notes": "Full page read. Detailed sixes/twenties and toy caveats conflict with header vowel/consonant labels and body ciphertext-only claim despite known plaintext discussion. 1937deployed vs1939adoption inconsistent. Keyspace/settings-count calculation needs technical source and equivalence caveat. MAGIC limits appropriately stated.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/rail-fence.html",
@@ -1100,16 +1233,20 @@
       "sha256": "3ef4d9fa33dd9a78768a2f14fd3941f6dc056d3691fad76634437f952de0a2ba",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Unsupported1800sdate andguaranteedsecondsrecovery removed; modelboundedrailcount explained. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Unsupported1800sdate andguaranteedsecondsrecovery removed; modelboundedrailcount explained. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/red-army-faction.html",
       "title": "Red Army Faction One-Time Pad — The Cipher Museum",
       "words": 372,
       "sha256": "51444a3aca6270209526e9bb341fb89961451fd8b930ed6ac1a8267df4588508",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. HeaderKGBsuppliedOTPstillassertsclaimbodyrejects; metadataCipherOTP/authenticnoevidence. Trustlabelbookciphermodelvsbodydecimalwidget conflicts actualengine needinspect. Renameexhibitevidencelimit and removeattributionuntilauthenticatedsource."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "RAF-BUNDESARCHIV"
+      ],
+      "notes": "Headline, facts, trust note and body now consistently identify a teaching model. Runtime actually adds A–Z modulo26, not decimalmod10 or a bookcipher. Source documents relationships, not a recovered RAFpad. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/red-type-a.html",
@@ -1118,7 +1255,8 @@
       "sha256": "9106fbfd48ae67fa05979a8170d3e9e0f4edd44b7bd7cfcefbc52134cfa53fd4",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full page read. Header incorrectly says stepping-switch while body correctly says rotating half-rotor. Vowel/consonant model vs historical sixes/twenties needs consistent framing. Key schedules need not themselves have independent entropy; deterministic schedules common."
+      "notes": "Full page read. Header incorrectly says stepping-switch while body correctly says rotating half-rotor. Vowel/consonant model vs historical sixes/twenties needs consistent framing. Key schedules need not themselves have independent entropy; deterministic schedules common.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/rochefort.html",
@@ -1127,7 +1265,8 @@
       "sha256": "403d20995b41cd89798b2524b27751cb82a1e800720a73465e17a6d087d8b4eb",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Critical commandstartafterPearlHarbor wrong NSAearly1941. SolemanwonMidway/endedJapanoffensivecapabilityoverclaim. Specificmotivesreassignmentnotfactwithoutsource. NeedteamLaytonHolmesFinnegan and watermessageprotocolprimary. NSA biographyfound."
+      "notes": "Full prose read. Critical commandstartafterPearlHarbor wrong NSAearly1941. SolemanwonMidway/endedJapanoffensivecapabilityoverclaim. Specificmotivesreassignmentnotfactwithoutsource. NeedteamLaytonHolmesFinnegan and watermessageprotocolprimary. NSA biographyfound.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/rosetta-stone.html",
@@ -1136,7 +1275,8 @@
       "sha256": "605f337f9e857afc591ac6b24407ff0cc1a0214c16d8fb895fc5e46dcf33933c",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Two-language/three-script bodycorrect butwidget calledTrilingual. BritishMuseumprimarycheckpending196BCE1799/1802/1822claims. Knownplaintext mostpowerful blanketclaim unsupported; decipherment gradualsidebarDecoded1822oversimplified."
+      "notes": "Two-language/three-script bodycorrect butwidget calledTrilingual. BritishMuseumprimarycheckpending196BCE1799/1802/1822claims. Knownplaintext mostpowerful blanketclaim unsupported; decipherment gradualsidebarDecoded1822oversimplified.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/rot13.html",
@@ -1145,7 +1285,8 @@
       "sha256": "ac34020013345d7b806c9f53ef5cfdb3810f3751ce18136096351e501600034c",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "HELLO/URYYB involution independently correct. No-inventor and most-newsreaders claims lack evidence; ~1983 attribution requires archival source. ROT47 is a public mapping, not literal immediate inspection."
+      "notes": "HELLO/URYYB involution independently correct. No-inventor and most-newsreaders claims lack evidence; ~1983 attribution requires archival source. ROT47 is a public mapping, not literal immediate inspection.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/rs44.html",
@@ -1154,7 +1295,8 @@
       "sha256": "5ac8a2702bb7b9bbff12a90d482ccf44e4522e36fcb65fd85e0420286e9f647e",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Clear edition/addendum/October exclusion, source vectors and artificial preprocessing limits. Independently verify source manual figures and Friedreports before finalchecked status."
+      "notes": "Full prose read. Clear edition/addendum/October exclusion, source vectors and artificial preprocessing limits. Independently verify source manual figures and Friedreports before finalchecked status.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/rsa.html",
@@ -1163,7 +1305,8 @@
       "sha256": "23664369b3547f402d628c0b129fec4f2d02c4493244a0ef5a4af21ba84baa64",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Headline first practical public-key scheme needs qualification against earlier schemes; body correctly distinguishes signature from encryption and inversion from factoring. Check arithmetic and current usage primary sources."
+      "notes": "Full prose read. Headline first practical public-key scheme needs qualification against earlier schemes; body correctly distinguishes signature from encryption and inversion from factoring. Check arithmetic and current usage primary sources.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/running-key.html",
@@ -1172,7 +1315,8 @@
       "sha256": "d7444ee0b3d1f0649e1d4d47d01f79233d208f89ec35523969bb986997dfa985",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Unsupported1850sdate removed; modernkeystreamreuseisusagecondition notgeneratedguarantee. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Unsupported1850sdate removed; modernkeystreamreuseisusagecondition notgeneratedguarantee. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/sator-square.html",
@@ -1181,7 +1325,8 @@
       "sha256": "f658b9e72276b82219a97294dadcaadf06a8a27a95c799418224bd6359e861ef",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. EveryelementanagramsPaterNosterheadlinewrongscope; fullsquare2arms+2A2O correct. UIliteralunicode. EarliestPompeii andinterpretationneedsarchaeologicalprimary. Baconhiddenacrosticnotbiliteral."
+      "notes": "Full prose read. EveryelementanagramsPaterNosterheadlinewrongscope; fullsquare2arms+2A2O correct. UIliteralunicode. EarliestPompeii andinterpretationneedsarchaeologicalprimary. Baconhiddenacrosticnotbiliteral.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/scytale.html",
@@ -1190,7 +1335,8 @@
       "sha256": "0d1d673d7bb78ac1ca15653840271b1dee88c76e8fffee1ba8fa0b52026444f4",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Kahn PDF pp.118–119 gives traditional reading; page also cites revisionist interpretation. Unqualified first-military tagline and ephors paragraph contradict caveat. Only-matching-rod claim ignores analytical recovery. Escaped demo limitation clearly stated; primary sources and original claim mapping pending."
+      "notes": "Kahn PDF pp.118–119 gives traditional reading; page also cites revisionist interpretation. Unqualified first-military tagline and ephors paragraph contradict caveat. Only-matching-rod claim ignores analytical recovery. Escaped demo limitation clearly stated; primary sources and original claim mapping pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/sha256.html",
@@ -1199,7 +1345,8 @@
       "sha256": "02b78aaca7dadde21e8af3f9d64dbb29c938dfca2ee4194764ebbf2e8221d98c",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Any-input headline overlooks standard length bound. Related AES-GCM card incorrectly implies SHA-256 inherent; RSA never raw/hash choice too absolute. Main caveats sound pending primary checks."
+      "notes": "Full prose read. Any-input headline overlooks standard length bound. Related AES-GCM card incorrectly implies SHA-256 inherent; RSA never raw/hash choice too absolute. Main caveats sound pending primary checks.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/shamir-secret-sharing.html",
@@ -1208,7 +1355,8 @@
       "sha256": "3681620dcbe3746241dc074e5a9582f2aa32d99f0f2a12c541d78fab540add6a",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Any k-1 learn nothing requires stated independent uniform coefficients/private shares. k-1 fix nothing related-card wrong: points constrain polynomial, not secret distribution. Share size vs n claim needs field-capacity qualification. Lying share always silent only exactly-threshold without consistency/validation. Historical Lagrange1795 attribution verify."
+      "notes": "Full prose read. Any k-1 learn nothing requires stated independent uniform coefficients/private shares. k-1 fix nothing related-card wrong: points constrain polynomial, not secret distribution. Share size vs n claim needs field-capacity qualification. Lying share always silent only exactly-threshold without consistency/validation. Historical Lagrange1795 attribution verify.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/shugborough.html",
@@ -1217,7 +1365,8 @@
       "sha256": "91ea82d9ca931e7b4ee29646f0c2ff5cc9cbf37979f6f2bcfd9b42df51a7a05d",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Officiallyopencipheroverspecifies unknowninscription. Acrostic eightplusDM accuratelyqualified; namecommission/dateverifyNationalTrust."
+      "notes": "Full prose read. Officiallyopencipheroverspecifies unknowninscription. Acrostic eightplusDM accuratelyqualified; namecommission/dateverifyNationalTrust.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/sigaba.html",
@@ -1226,25 +1375,31 @@
       "sha256": "d813b1305358d575eeba0d003d29c8399ab7c7af7408aa661642c0716a88fb1c",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full page read.15rotor bank architecture described; ~2^95effective keyspace contradicts no measured resistance caveat. Need control-bank stepping specifics and 1–4move rule primary. Synthetic challenge has Japanese phrase with no historical provenance stated. Reciprocity/constraint and interservice commentary overbroad."
+      "notes": "Full page read.15rotor bank architecture described; ~2^95effective keyspace contradicts no measured resistance caveat. Need control-bank stepping specifics and 1–4move rule primary. Synthetic challenge has Japanese phrase with no historical provenance stated. Reciprocity/constraint and interservice commentary overbroad.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/sigsaly.html",
       "title": "SIGSALY — The Encrypted Speech System — The Cipher Museum",
       "words": 492,
       "sha256": "34463e53233fdb6d9c4ef7c1f15950deebec1e783f9eeb035ad6062db927485a",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Full page read.50Hz parameter distinction and12terminals caveat good. Shannon-led development, vinyl media, equipment size, A3compromise knowledge/date and locations need primary artifact/source checks. Speech text encoder is teaching illustration, should label explicitly."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "NCM-SIGSALY",
+        "SHANNON-1949"
+      ],
+      "notes": "Removed claimed real speech/PCM/OTP output from deterministic character toy. Browser and independent arithmetic check confirm modulo6publicsequence; not encryption. Bell Laboratories1943source read; longPDFblocked. Terminal count/location list still requires final documentary check. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/slidex.html",
       "title": "Slidex (British WWII tactical code card) — The Cipher Museum",
       "words": 1109,
       "sha256": "a30dce689bb3f1dab90f87c20f5c070440de2b7db13ad73d178e80a5987bcc1d",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Every front-line signaller/never strategic/30minutes/deliberatelyweak anddayssuffice overscope. Fixed vocabulary is not frequency table. Distinct model26x26 nowhere near authenticcodecard: strong disclaimergood but slightlydifferentoutput understatement. Sourcepostwarreports originalneeded."
+      "notes": "Removed fixed30minute/day universalguarantees and every-signallerclaim. Existing secondaryinterrogationreportsummary explicitlyattributed; primaryreport inspection remains pending. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/sodark.html",
@@ -1253,16 +1408,21 @@
       "sha256": "0ac52895005647dc6038cfee2bc1deb54575bacab197a219196b658da34b56b6",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Dated research/accessconditions wellspecified; recheckTable4 and relatedtweakrequirement against paper. No generic claimallHF voicebroken."
+      "notes": "Full prose read. Dated research/accessconditions wellspecified; recheckTable4 and relatedtweakrequirement against paper. No generic claimallHF voicebroken.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/solitaire.html",
       "title": "Solitaire / Pontifex — The Cipher Museum",
       "words": 1077,
       "sha256": "552126a39740764005575e7550b2b39a650e10e5e067f4a88967013ccb3581c9",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Encryption 1-based formula may be off by one relative Schneier vectors; verify actual engine. 54! approximation wrong (about2.31e71 correct yes). Original escaping contradicts field-manual X always filler. Anonymous secondary how-to should replace primary Schneier. Unsupported activist use, main risk, deniability/security advice. Statistical bias cannot generally claim no practical key recovery from all analysis; date verify."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "CROWLEY-SOLITAIRE",
+        "SCHNEIER-SOLITAIRE"
+      ],
+      "notes": "Reviewed original algorithm arithmetic and measured repetition bias. Removed unsupported activist deployment and universal main-threat claims; retained extra browser filler escape distinction. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/somerton-man.html",
@@ -1271,16 +1431,20 @@
       "sha256": "05f325c9ee44d745637e326b8d561ca5599930e53601993ba7b548703010f78e",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. 2022researchproposalversusofficialcareful. CheckcurrentSApoliceannouncement asof2026. Transcription4linesomitscrossedline acceptedvariant mustlabel. Visibleliteralunicodeescape UIlabelfix."
+      "notes": "Full prose read. 2022researchproposalversusofficialcareful. CheckcurrentSApoliceannouncement asof2026. Transcription4linesomitscrossedline acceptedvariant mustlabel. Visibleliteralunicodeescape UIlabelfix.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/stager.html",
       "title": "Stager Cipher — The Cipher Museum",
       "words": 670,
       "sha256": "7ab74992105af7d4247e041429c0d6c7c318a20f1e33f659053632d43afca50c",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Every sensitive/never single broken broadclaims needprimary; modelletterrectangle differshistoricalwordroute muchmorethansmallescape. Actual1862example conflates invented SENDMOREAMMO diagram. NomenclatorPKIlineagefalse. Unbreakablecaption remove; clear source historicalroute andlimitations."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Whole-word historical routes versus individual-letter browser route explicit. Removed every-message/never-broken absolutes, false1862diagram provenance and PKI lineage. KahnCipherNo.4page counts and1863Lincolnexample read. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/station-hypo.html",
@@ -1289,7 +1453,8 @@
       "sha256": "34fbcfb574e47a6d4d6e5dfcc09568432d21d6ab40aa3b4ff59abb7e649400a4",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Removed falsePearlHarborattackdecryptclaim, carrierreplacementabsolute and sole-victorycausation; medalpresentationrecord30May1986. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Removed falsePearlHarborattackdecryptclaim, carrierreplacementabsolute and sole-victorycausation; medalpresentationrecord30May1986. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/straddling-checkerboard.html",
@@ -1298,7 +1463,8 @@
       "sha256": "372d76f8702b1bcc0a7c569f7c2b5b66295ee9a778ffe6bba7ca0156166b47be",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Firstlate1800sclaim anddirectlineagediagram corrected; variableprefixanalogy notidenticalUTF8. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Firstlate1800sclaim anddirectlineagediagram corrected; variableprefixanalogy notidenticalUTF8. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/tap-code.html",
@@ -1307,7 +1473,8 @@
       "sha256": "44e0aaf3fdc5ab288c9a23d28120aaec0a3a7f803adf26aaad535c0a8ae919be",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "USAF JAG School Harris interview description(2020) establishes Harris taught existing code in Vietnam, not invented it. Header1965 contradicts sidebarKorea/~1950s. Grid H23,E15 checks. Abbreviation historical claims require source; modern keyless-secrecy implication wrong."
+      "notes": "USAF JAG School Harris interview description(2020) establishes Harris taught existing code in Vietnam, not invented it. Header1965 contradicts sidebarKorea/~1950s. Grid H23,E15 checks. Abbreviation historical claims require source; modern keyless-secrecy implication wrong.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/trifid.html",
@@ -1316,7 +1483,8 @@
       "sha256": "93992e1174e1b109421f1ad8d122855e6ae4f68adbe2ed02a13e296b69989c37",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Removeddiagramclaimthirdcoordinatealwaysstronger andoutputsizealwayssecurity; AESfinal-roundexception. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Removeddiagramclaimthirdcoordinatealwaysstronger andoutputsizealwayssecurity; AESfinal-roundexception. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/trithemius.html",
@@ -1325,7 +1493,8 @@
       "sha256": "df5e79111beebb6e8281c37b4c5bb9e2d9772010d6fe2e4fb96b24a345b6ca9c",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Kahn PDF175,179–183 supports1462–1516,1518posthumousprinting and BookV table; corrected erroneous opening-tables location. Independently computed STEGANOGRAPHIA progressive vector. Revised guaranteed recovery language."
+      "notes": "Kahn PDF175,179–183 supports1462–1516,1518posthumousprinting and BookV table; corrected erroneous opening-tables location. Independently computed STEGANOGRAPHIA progressive vector. Revised guaranteed recovery language.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/turning-grille.html",
@@ -1334,7 +1503,8 @@
       "sha256": "0af7bfc93e30e0cf21d9dd72eaec8146efbcc89ea60b88a55b6ed275f2e5aa20",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "4x4grid/orbit256count mathematically coherent; historical timeline explicitly has different accounts1915vs1916–17. NeeddirectFriedman/deLeeuwsourcecheck. Xpadding ambiguity correctlynamed."
+      "notes": "4x4grid/orbit256count mathematically coherent; historical timeline explicitly has different accounts1915vs1916–17. NeeddirectFriedman/deLeeuwsourcecheck. Xpadding ambiguity correctlynamed.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/two-square.html",
@@ -1343,7 +1513,8 @@
       "sha256": "1024adc0874b51920f7335da95c89552b6fe3b5546a9c929f450cd4b49c561c1",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "ACAprocedure retained; Delastelle1902attribution not established by citedspecification, nowexplicitlyunknown. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "ACAprocedure retained; Delastelle1902attribution not established by citedspecification, nowexplicitlyunknown. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/typex.html",
@@ -1354,7 +1525,8 @@
       "sources": [
         "TYPEX-ARTIFACT"
       ],
-      "notes": "Corrected commercial-machine origin and country-specific service dates."
+      "notes": "Corrected commercial-machine origin and country-specific service dates.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/ua-8295.html",
@@ -1363,16 +1535,20 @@
       "sha256": "9aac353f176974a3fa25d61e059a804cef00810e3d3f06b3cd5dbeaf6c97ef36",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Clearimplementedvsintent/modelconditions/hardwareallocatedvstotalRAM. Verifypaperrevisiondate/setup20keys/fixedfirstblockandpreprocessing. No browsermodel claimed."
+      "notes": "Full prose read. Clearimplementedvsintent/modelconditions/hardwareallocatedvstotalRAM. Verifypaperrevisiondate/setup20keys/fixedfirstblockandpreprocessing. No browsermodel claimed.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/venona.html",
       "title": "VENONA Project — The Cipher Museum",
       "words": 1343,
       "sha256": "82a15b2dee5b1129dd9da8783b65f1b01f2a8122c4d0e3074c73c63dc8c58fd3",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. 37-year secret heading inconsistent with 1995; unsupported McCarthy-causation paragraph. Cairncross LISZT VENONA codeword/fled/confessed1991 claims require correction. Main depth caveat good; binary panel implies real Soviet messages despite synthetic model. Key production date and codebook recovery chronology verify Benson/Frahm."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "CAIRNCROSS-TNA"
+      ],
+      "notes": "Distinguished1943start,1980projectend,1995release; removed unsupported McCarthy causal narrative. Cairncross1964indexedarchivalaccount replaces1991claim. Earlier technicaldecimal/binaryseparation retained. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/vernam.html",
@@ -1381,7 +1557,8 @@
       "sha256": "528c720355c862853cba033839c043aa81895cb206dee0a4498c1fbc59f65468",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Nonrandom notsynonymouswithbrokenVigenere; pseudorandomcomputationalsecurity distinguished; patentandVENONAarithmeticscope. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Nonrandom notsynonymouswithbrokenVigenere; pseudorandomcomputationalsecurity distinguished; patentandVENONAarithmeticscope. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/vic.html",
@@ -1390,16 +1567,18 @@
       "sha256": "1b25a157c147d7db56e942d4976d835ea6f595474cad91e55ea509268dc1282c",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "FBI1957case recovery distinguished fromallNSAattackclaims; actualbrowsercheckerboard/addition/twoordinarytranspositions distinguished fromhistoricaldisruptedtransposition. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "FBI1957case recovery distinguished fromallNSAattackclaims; actualbrowsercheckerboard/addition/twoordinarytranspositions distinguished fromhistoricaldisruptedtransposition. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/vietnamese-underground.html",
       "title": "Vietnamese Underground Codes — The Cipher Museum",
       "words": 360,
       "sha256": "0cfbbae06417f27dd7abf9085571868db527e7ea25c5c82576cdd33c1b16f92a",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Bodyexplicitlyrejectsuniversalcellprocedurebutheadline/sidebarassertusers,cellkeysandNSAARVNbreak withoutidentifiedtraffic. NeedreadEssentialMattersprimary; exposemodelstatusconsistently."
+      "notes": "Headers andfactboxes nowmatch unverifiedoperationalattribution; widgetkeywordnotclaimedlocalcellkey. EssentialMatterssource stillrequiresfullpassageread. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/vigenere.html",
@@ -1408,7 +1587,8 @@
       "sha256": "219272d8e728484d4091c01277a1340fd417885f2cae36bd2938af14c64b73cd",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "HAC p.241 defines repeating Vigenere; Kahn PDF183 describes Bellaso1553distinct table. Independently reproduced LEMON and COMPLETEVICTORY examples. Removed unsupported real-fragment provenance and uninterrupted300-year security claim; corrected distinct-byte/no-repeat and average-key-search statements. ChaCha primary specification check pending."
+      "notes": "HAC p.241 defines repeating Vigenere; Kahn PDF183 describes Bellaso1553distinct table. Independently reproduced LEMON and COMPLETEVICTORY examples. Removed unsupported real-fragment provenance and uninterrupted300-year security claim; corrected distinct-byte/no-repeat and average-key-search statements. ChaCha primary specification check pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/voynich.html",
@@ -1417,7 +1597,8 @@
       "sha256": "788e20a3b04aadcd800e2d8034deb6602bce5e37539a4d3352e759eb27ae8e28",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Every solutionrefuted/everyknownlanguageentropyclaims overstate finitestudy. INDCPAuniformnoise tablecontradictscaveat. CurrierA/Bnotnecessarily2scribes/keys. Firstprovenance1639vs1637letterreference checkYale; 240pagesfoldouts wording. EVA conventionnotletterviewofactualscript. DImperiotitleandnoebooklink preference. VerifyReddyKnightstudy and researchstatus."
+      "notes": "Full prose read. Every solutionrefuted/everyknownlanguageentropyclaims overstate finitestudy. INDCPAuniformnoise tablecontradictscaveat. CurrierA/Bnotnecessarily2scribes/keys. Firstprovenance1639vs1637letterreference checkYale; 240pagesfoldouts wording. EVA conventionnotletterviewofactualscript. DImperiotitleandnoebooklink preference. VerifyReddyKnightstudy and researchstatus.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/wadsworth-cipher.html",
@@ -1426,7 +1607,8 @@
       "sha256": "d0146c7002f61c923cdec8733ea58ab231f6bc7c4cbd5f0c05a005287884072a",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Removedfrequencyhasnothingtocount andplaintext-independentmovement claims; abstract notfullpaper checked. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Removedfrequencyhasnothingtocount andplaintext-independentmovement claims; abstract notfullpaper checked. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/wallis-ciphers.html",
@@ -1435,7 +1617,8 @@
       "sha256": "7eec6472ec9eca10a609a9364f72b4b7fa3b4d143aad681bfc03c95de347d2e4",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read.1642firstdinner/twohours/NasebyWallisrole disputed likely1643WallisdeniedKingCabinet involvement. FatherofEnglishprofessionalcryptanalysis contradictsPhelippes. Everyregime/continuousunmatched and exactworkflowunsupported. Bodycaptionfewhourspernomenclator overgeneralizes. NeedKahnchapterWallis."
+      "notes": "Full prose read.1642firstdinner/twohours/NasebyWallisrole disputed likely1643WallisdeniedKingCabinet involvement. FatherofEnglishprofessionalcryptanalysis contradictsPhelippes. Everyregime/continuousunmatched and exactworkflowunsupported. Bodycaptionfewhourspernomenclator overgeneralizes. NeedKahnchapterWallis.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/wheatstone.html",
@@ -1444,7 +1627,8 @@
       "sha256": "fa0884bc0477784a2025d399c8c0b55c1a796fa1549b25c62e44548e2a2e3392",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Attacklabel and capture paragraph no longercontradictmessage-dependentunequaldials. KaedingfullPDFunavailable, abstractscope only. Full-page reread, shared-surface propagation and rendered verification remain pending."
+      "notes": "Attacklabel and capture paragraph no longercontradictmessage-dependentunequaldials. KaedingfullPDFunavailable, abstractscope only. Full-page reread, shared-surface propagation and rendered verification remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/yardley.html",
@@ -1453,7 +1637,8 @@
       "sha256": "ace47c3381b3bd530fc25643750533ce91c290f30a93379009afaccfb0c94e6d",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Critical1931bookcaused1929closureimpossible repeatedmetadata. Solefounder/firstAmericanSIGINT false, destroyedfieldfalseSIScontinued. RedPurpledirectresponsetobookoverstates.1933law narrowerthanallpublication claim requiresactualstatute. PearlHarborwarningclaimmisleading."
+      "notes": "Full prose read. Critical1931bookcaused1929closureimpossible repeatedmetadata. Solefounder/firstAmericanSIGINT false, destroyedfieldfalseSIScontinued. RedPurpledirectresponsetobookoverstates.1933law narrowerthanallpublication claim requiresactualstatute. PearlHarborwarningclaimmisleading.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/zero-knowledge-proofs.html",
@@ -1462,7 +1647,8 @@
       "sha256": "94c996eb9b6d4c8cb83e190705a9226fd0ba3cca0f2f886ad50cdded20b78653",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. General completeness can have error; initial always claim too broad. Response masking and secret knowledge claims require model; tiny-group bounded challenge cheating not cryptographic hardness. 2^256 deployments generalization and three rejection historical anecdote need sources. ECDSA card incorrectly equates all Schnorr/EdDSA with toy protocol despite body caveat."
+      "notes": "Full prose read. General completeness can have error; initial always claim too broad. Response masking and secret knowledge claims require model; tiny-group bounded challenge cheating not cryptographic hardness. 2^256 deployments generalization and three rejection historical anecdote need sources. ECDSA card incorrectly equates all Schnorr/EdDSA with toy protocol despite body caveat.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/zimmermann.html",
@@ -1471,7 +1657,8 @@
       "sha256": "21ae5a18113e1a40fc39bf5d142a8b4d63910b24dfaa9819557c8e9126db6c88",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Critical0075additive/superencipherment unsupported, navalSKMHVB conflateddiplomaticbooks. RoutingStockholmBuenosAiresallwordsRoom40 andmonthsdeception wrongscope. Twoencodingsdonotautomaticallyleakboth, causalwarheadline oversimplified. PrimaryNSA45reference needsfullread."
+      "notes": "Full prose read. Critical0075additive/superencipherment unsupported, navalSKMHVB conflateddiplomaticbooks. RoutingStockholmBuenosAiresallwordsRoom40 andmonthsdeception wrongscope. Twoencodingsdonotautomaticallyleakboth, causalwarheadline oversimplified. PrimaryNSA45reference needsfullread.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "ciphers/zodiac.html",
@@ -1482,7 +1669,8 @@
       "sources": [
         "Z340-2024"
       ],
-      "notes": "Primary solution paper checked for attack stages and2020 dates; removed both-Hardens-schoolteachers claim, incorrect Blake role and Playfair unsolved tag. Z408 tail explicitly uncertain."
+      "notes": "Primary solution paper checked for attack stages and2020 dates; removed both-Hardens-schoolteachers claim, incorrect Blake role and Playfair unsolved tag. Z408 tail explicitly uncertain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "community/index.html",
@@ -1491,7 +1679,8 @@
       "sha256": "e1380c2a5811051a1f122ef82aa6b873e975b23398fc26d50446f2b9489f4f3e",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full text read; Dorabella possible versus used glyph counts verify; draft download explicitly not publication."
+      "notes": "Full text read; Dorabella possible versus used glyph counts verify; draft download explicitly not publication.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "comparison.html",
@@ -1502,7 +1691,8 @@
       "sources": [
         "KAHN-1996"
       ],
-      "notes": "Replaced universal Solved classification with open-puzzle coverage; corrected model keys and date labels; 120 rows and both filters exercised in JSDOM. Date inventory and full repeated-surface review still pending."
+      "notes": "Replaced universal Solved classification with open-puzzle coverage; corrected model keys and date labels; 120 rows and both filters exercised in JSDOM. Date inventory and full repeated-surface review still pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "cryptanalysis.html",
@@ -1511,7 +1701,8 @@
       "sha256": "fdabc5b465eadf23e17fe85de8a525bf7f1000891f650cd0c82f12b63f07e048",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Frequencyintroguaranteesrecoverkeycontradictsfooter; ICbounds/samplelabeluniversalfalse. Friedmandate1920verify. KasiskiEuropeancryptocollapsedunsupported. 12casescountactual12yes. KnownHillHILLmatrixdet-11verify, trigramexamplediagramalignment. Conclusionmostfailhumanunmeasured. Purplewiringconsonantsconditionalmapping. FullHoldentitlecredit."
+      "notes": "Full prose read. Frequencyintroguaranteesrecoverkeycontradictsfooter; ICbounds/samplelabeluniversalfalse. Friedmandate1920verify. KasiskiEuropeancryptocollapsedunsupported. 12casescountactual12yes. KnownHillHILLmatrixdet-11verify, trigramexamplediagramalignment. Conclusionmostfailhumanunmeasured. Purplewiringconsonantsconditionalmapping. FullHoldentitlecredit.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "embed.html",
@@ -1520,7 +1711,8 @@
       "sha256": "940566ff22deace31d0201757a90b9eb85a64c6b66dfaf5b11d8d78fdbde33c8",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Static text read; runtime labels pending."
+      "notes": "Static text read; runtime labels pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "further-reading.html",
@@ -1529,16 +1721,24 @@
       "sha256": "ffbf4a9d842dfc3cfd792898843e24943a0e4656db346b3bb1bad711b3362d39",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. DirectonlineebookchapterlinksSweigart/Boneh conflictuserpreference andlastclaimnoebookcopieslinked. FulltitlecreditsneededKahn/Marks/Holden. BonehPDF~900vs0.6actual900? verifyTOCbeforeclaimsTLS13Signal/lattices deeper. KlausCodebreaking2023edvsowned2020. UnsupportedFagoneFBIerasuremotives/Levyallparticipants andsuperlatives. BibliographicISBNeditionmatch checkcatalog."
+      "notes": "Full prose read. DirectonlineebookchapterlinksSweigart/Boneh conflictuserpreference andlastclaimnoebookcopieslinked. FulltitlecreditsneededKahn/Marks/Holden. BonehPDF~900vs0.6actual900? verifyTOCbeforeclaimsTLS13Signal/lattices deeper. KlausCodebreaking2023edvsowned2020. UnsupportedFagoneFBIerasuremotives/Levyallparticipants andsuperlatives. BibliographicISBNeditionmatch checkcatalog.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "glossary.html",
       "title": "Glossary — The Cipher Museum",
       "words": 2991,
       "sha256": "b235d88d3cc3a684eca58b67d6a5fd2daf5fe5daa617b0488f011da537d992b4",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Blockmodeexceptionnotchangeprimitivepermutation; cipherdeflettersvswordsobsolete. Fractionationdirectancestorunsupported. RandomOracleFSnotallproofs/signatures. Roundsmorealwayssecurityfalse; polyalphabeticrepeatingperiodnotall. PolybiusmodernIJ25notGreekorigin. Tabula1518publicationvs1508draftdistinguish. Vigenere300yearclaim. Allclassicalsymmetric ignoresunkeyedencodings. ConfusiondiffusionqualitativeShannoncredit."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "HAC-1997",
+        "KAHN-1996",
+        "POLYBIUS-10",
+        "SHANNON-1949"
+      ],
+      "notes": "Clarified blockprimitiveversusmode, bit/bytecipherdefinition, diffusion, randomoracle, nonperiodicpolyalphabets, nomenclatorlimits, modernPolybiusgrid,1518publication andconditionalroundsecurity. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/closest-vector.html",
@@ -1547,7 +1747,8 @@
       "sha256": "26aa0a6b1d1ddf7d8b147d41a95e623415ea7a2ad030aa5569454b0c6a68cfa9",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Major top/bottom conflict: header CVPwhatKyberactuallyleanson, goodnearorthogonalroundingguarantee, securityisnoise/onlybasisowner decryption versus correct§2and§4. Correct opening andnoisequote to defined2Dorthogonalmodel; arbitraryCVP≠MLKEMassumption. Existing runtime tests pass."
+      "notes": "Major top/bottom conflict: header CVPwhatKyberactuallyleanson, goodnearorthogonalroundingguarantee, securityisnoise/onlybasisowner decryption versus correct§2and§4. Correct opening andnoisequote to defined2Dorthogonalmodel; arbitraryCVP≠MLKEMassumption. Existing runtime tests pass.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/elliptic-curves-real.html",
@@ -1556,7 +1757,8 @@
       "sha256": "8bc940b8910c31cce30ed45c8021d195bb6151b50d953430a4ade08a48bc80f8",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Groupgeometry correct with usualvertical/tangentexceptions. Closing scatter makesDLoghard conflictswithfinitefieldcaveat; dG means repeatedscalar multiplication notonepointaddition. Needcurveprimer/booksource."
+      "notes": "Groupgeometry correct with usualvertical/tangentexceptions. Closing scatter makesDLoghard conflictswithfinitefieldcaveat; dG means repeatedscalar multiplication notonepointaddition. Needcurveprimer/booksource.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/entropy.html",
@@ -1565,7 +1767,8 @@
       "sha256": "d27f6237c2b2ba241aaf3de0255e60845747bd5dce9bdfa659077ecee0972e61",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Mainuniformmodel and securitybits distinction correct; headlines entropyceiling/weakpasswordseconds regardlesscipher, lowentropybrokenbeforealgorithm contradict attack-cost caveat. Vernam1917hardware notnecessarilyOTP. Shannonoriginalreadneeded."
+      "notes": "Mainuniformmodel and securitybits distinction correct; headlines entropyceiling/weakpasswordseconds regardlesscipher, lowentropybrokenbeforealgorithm contradict attack-cost caveat. Vernam1917hardware notnecessarilyOTP. Shannonoriginalreadneeded.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/euler-fermat.html",
@@ -1574,7 +1777,8 @@
       "sha256": "e77ce5f21f5a8cc353b91156790bdeed3653f52e097df2722deaf3e032e5e79d",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Fermat/Euler equations and CRT caveat sound; toy61,53,3233,17,2753 valid. RSA modulus2048 stated as universal rather than example; real implementations also useλ should avoiduniversal. Standardsprimary8017checkpending."
+      "notes": "Fermat/Euler equations and CRT caveat sound; toy61,53,3233,17,2753 valid. RSA modulus2048 stated as universal rather than example; real implementations also useλ should avoiduniversal. Standardsprimary8017checkpending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/finite-fields.html",
@@ -1583,7 +1787,8 @@
       "sha256": "93cd1799e8bc2200b8b934c6702cea8c3740cdabb69484f6e7e8427a3d3ed468",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Main caveat and bottom√grouporderattack correct, but headlinewhereDLogbecomeshard and backwardsearchwholefield survive. NeedverifycountincludesinfinityandSVG/JSlabel. FieldGFpdescription is example not exhaustive; AESinversezeroconvention omission minor."
+      "notes": "Main caveat and bottom√grouporderattack correct, but headlinewhereDLogbecomeshard and backwardsearchwholefield survive. NeedverifycountincludesinfinityandSVG/JSlabel. FieldGFpdescription is example not exhaustive; AESinversezeroconvention omission minor.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/group-theory.html",
@@ -1592,7 +1797,8 @@
       "sha256": "38eb15d637929749ae8af5d2caec527a9b77e6b99a52c153352dc82dba1cf78d",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Order/Lagrange and additivecyclic model sound. Generic allcryptoschemesreadsame rhetoric overbroad. MLDSAassumption paragraph appropriately distinguishesModuleSIS; standardsprimarychecks pending."
+      "notes": "Order/Lagrange and additivecyclic model sound. Generic allcryptoschemesreadsame rhetoric overbroad. MLDSAassumption paragraph appropriately distinguishesModuleSIS; standardsprimarychecks pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/index.html",
@@ -1601,7 +1807,8 @@
       "sha256": "314324199cc978e919facdb720ca52799574df38c95c8efb93cb74a736d9daf9",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Readfull18-cardinventory. CVP LWE Kybercore card andrandomoracleavalanche-as-assumption stillstrongerthanexhibitcaveats. Eulerformula lacksunitcondition incard; interpolation finitefield/realseparationmustbeconsistent."
+      "notes": "Readfull18-cardinventory. CVP LWE Kybercore card andrandomoracleavalanche-as-assumption stillstrongerthanexhibitcaveats. Eulerformula lacksunitcondition incard; interpolation finitefield/realseparationmustbeconsistent.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/interpolation.html",
@@ -1610,7 +1817,8 @@
       "sha256": "b612f6f8cd11e25987725e6406a01ebeb469b6906e7608a9d0bbe6cb90507048",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Distinctnonzero coordinates,degreeatmostk−1,uniformfinitefieldcoefficients andreal-demo caveat sound. Lagrange formula correct; verify runtimeinputconstraints and t-share secrecy with sourceShamir/Boneh."
+      "notes": "Distinctnonzero coordinates,degreeatmostk−1,uniformfinitefieldcoefficients andreal-demo caveat sound. Lagrange formula correct; verify runtimeinputconstraints and t-share secrecy with sourceShamir/Boneh.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/lattices-svp.html",
@@ -1619,7 +1827,8 @@
       "sha256": "10609d3321f219ce2c2f86794c2822e24498020d03839356e81e3d0269086ab0",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Unimodular basis rule and specificmoduleassumptions careful. Securitygap2Dvs500D slogan and threeviewssameproblem overstated despite caveats. Existing math tests pass; sourceSVPreductioncheckpending."
+      "notes": "Unimodular basis rule and specificmoduleassumptions careful. Securitygap2Dvs500D slogan and threeviewssameproblem overstated despite caveats. Existing math tests pass; sourceSVPreductioncheckpending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/learning-with-errors.html",
@@ -1628,7 +1837,8 @@
       "sha256": "57d54287c7eeb83e5fde71d02765a2843358302c6b2c9020134ddb7572e10af4",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Main invertibletoy81secrets and distribution/transform caveats correct. Sliderbound1 returnsvectornothingincommon andconfidentansweralwaysnoise false forsampledzero/errorcancellation. Displaycancellation formula may omitnegative term visually? InspectHTMLstrikethrough. Verify24noiseboundary usingexhaustion. Specificstandardsclaimsneedprimary."
+      "notes": "Main invertibletoy81secrets and distribution/transform caveats correct. Sliderbound1 returnsvectornothingincommon andconfidentansweralwaysnoise false forsampledzero/errorcancellation. Displaycancellation formula may omitnegative term visually? InspectHTMLstrikethrough. Verify24noiseboundary usingexhaustion. Specificstandardsclaimsneedprimary.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/modular-arithmetic.html",
@@ -1637,7 +1847,8 @@
       "sha256": "db46a464807e0d19434b4468afc4abbf3ba518de661160ec2a6f05d040ebebb2",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Detailed subgroup/CDH caveats correct, but significance still says DH requires primitive root covering all nonzero residues. Fix consistency. Primitive-root example p23:2order11,5order22 independently check. RFC7919andBoneh§10.4.2 direct source verification pending."
+      "notes": "Detailed subgroup/CDH caveats correct, but significance still says DH requires primitive root covering all nonzero residues. Fix consistency. Primitive-root example p23:2order11,5order22 independently check. RFC7919andBoneh§10.4.2 direct source verification pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/modularity-exhibit.html",
@@ -1646,7 +1857,8 @@
       "sha256": "e5dded7df932e6802c1bb599cea861b187b94d8c7b56edfefaccd07c8048a8d4",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Main rational/real/finite and modernity caveats correct. Opening honestybox claims ECCstands on modularityworld, conflicts with finalnonecessity. Hardness headline againunqualified. Primary Wiles/Taylor1995,BCDT2001 citation needed; page counts109+20 verify."
+      "notes": "Main rational/real/finite and modernity caveats correct. Opening honestybox claims ECCstands on modularityworld, conflicts with finalnonecessity. Hardness headline againunqualified. Primary Wiles/Taylor1995,BCDT2001 citation needed; page counts109+20 verify.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/one-way-function.html",
@@ -1655,7 +1867,8 @@
       "sha256": "69b93eb7668e05a50afea75c92c65b3906babf8d067e7816c7a161e5b52861de",
       "status": "text reviewed, source checks pending",
       "sources": [],
-      "notes": "Factoringtoy vsfastalgorithms and RSAtrapdoor distinction good. Allpublickeybetheld too sweeping givenbrokenconstructions; correctto specificassumptions. No currently identified equation issue."
+      "notes": "Factoringtoy vsfastalgorithms and RSAtrapdoor distinction good. Allpublickeybetheld too sweeping givenbrokenconstructions; correctto specificassumptions. No currently identified equation issue.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/pairings.html",
@@ -1664,7 +1877,8 @@
       "sha256": "157eabaf35115c7f8f0c70a6d4af421afd554f260be2bebc3927d2b25d9c16d5",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Explicittinyexponentmodel good. Hiddeninputscalars/neverrevealing blanketneedsproblemparameters. Bulletproofs/recursiveHalo distinctions andSTARKquantumexpectation needconditional wording andprimary. Groth16/KZG/BLS distinctions correct inbody."
+      "notes": "Explicittinyexponentmodel good. Hiddeninputscalars/neverrevealing blanketneedsproblemparameters. Bulletproofs/recursiveHalo distinctions andSTARKquantumexpectation needconditional wording andprimary. Groth16/KZG/BLS distinctions correct inbody.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/polynomial-rings.html",
@@ -1673,7 +1887,8 @@
       "sha256": "cd1c1a1b0464dd1b7166e519a17e4600687cda9a13010b8581d5d4526f28d84e",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Negacyclic multiplication specification correct; headline ModuleLWE the realassumptionunderDilithium incomplete vs detailedModuleSIS caveat. PracticalcompressionclaimoverstatedonlywayTLSpossible. Validateactualstandardsringqdegree."
+      "notes": "Negacyclic multiplication specification correct; headline ModuleLWE the realassumptionunderDilithium incomplete vs detailedModuleSIS caveat. PracticalcompressionclaimoverstatedonlywayTLSpossible. Validateactualstandardsringqdegree.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/prime-number-theorem.html",
@@ -1682,7 +1897,8 @@
       "sha256": "e90d96297da416feb632ccdac8fb58c41ee0adab1860dbe1ef2250e4bf63fcc0",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Density approximations1/710 and1/355 appropriate for uniformly sampled1024-bit candidates. Headlineonlyfoundation/loadbearing, everyRSAkey/no routineeven, fitonlyimproves are too categorical. Needtwo primes phrasing; primality distinction sound."
+      "notes": "Density approximations1/710 and1/355 appropriate for uniformly sampled1024-bit candidates. Headlineonlyfoundation/loadbearing, everyRSAkey/no routineeven, fitonlyimproves are too categorical. Needtwo primes phrasing; primality distinction sound.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/random-oracle.html",
@@ -1691,7 +1907,8 @@
       "sha256": "b2c3294b8645f13e6aaf5acf31255ad1f488391655ced70949ef9ba350e9bd09",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "MainFStranscriptbinding/caveats correct but callout hashmessageunforgeablechallenge, modelproofautomatictransfer andbrokenhashfailsavalanche inaccurate. Toy clearlyidentified16bitmixer. Actualchallenge inputsandsecurityconditionalneedsconsistentheadlines."
+      "notes": "MainFStranscriptbinding/caveats correct but callout hashmessageunforgeablechallenge, modelproofautomatictransfer andbrokenhashfailsavalanche inaccurate. Toy clearlyidentified16bitmixer. Actualchallenge inputsandsecurityconditionalneedsconsistentheadlines.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "hall-of-foundations/reduction.html",
@@ -1700,7 +1917,8 @@
       "sha256": "0088b7054be36047395a7a2ae2ade1187f1e52d4dce8d8b0ba52e284077f3971",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Direction andloss caveats correct. Intro callsconditionalclaimstrongerthanprovenhardness inappropriate. Hypotheticalfactorreduction isexplicitlynotRSAequivalence, retain. NeedBonehchapterdirectread."
+      "notes": "Direction andloss caveats correct. Intro callsconditionalclaimstrongerthanprovenhardness inappropriate. Hypotheticalfactorreduction isexplicitlynotRSAequivalence, retain. NeedBonehchapterdirectread.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/ancient.html",
@@ -1709,7 +1927,8 @@
       "sha256": "58b7c874e9e08ba9d83a64cd43fe0da3d0ef3be4f91e576a811de16e69f4b1d0",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Egyptianearliestsubstitutioncardcontradictslede. Caesar58BC/alKindi850breakduplicatewrong; PolybiusRoman26vsGreek24distinguish. Agestrouteclaimsconverge notproventransmission. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending."
+      "notes": "Full prose read. Egyptianearliestsubstitutioncardcontradictslede. Caesar58BC/alKindi850breakduplicatewrong; PolybiusRoman26vsGreek24distinguish. Agestrouteclaimsconverge notproventransmission. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/civil-war.html",
@@ -1718,52 +1937,58 @@
       "sha256": "d2b449059bbc79944e93a2f14af13ba2e32e7248447892f4c7547f61d4d6eeb5",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Vigenereadoptedafter1863contradicts1862; threefieldkeyslist6andsomeunsupported. AllManchesterallmessagesneverUnionbreakoverclaims. Dictionaryedition/page674verify. Stagerphoneticgettieslarge requiresactualsourceinterpretationnotetymology. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending."
+      "notes": "Full prose read. Vigenereadoptedafter1863contradicts1862; threefieldkeyslist6andsomeunsupported. AllManchesterallmessagesneverUnionbreakoverclaims. Dictionaryedition/page674verify. Stagerphoneticgettieslarge requiresactualsourceinterpretationnotetymology. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/codebreakers.html",
       "title": "Hall X: Hall of Codebreakers — The Cipher Museum",
       "words": 2889,
       "sha256": "cd898ec5ed290cd304fb91c0be5051a6cc690a9991c982f0c89fe2699d5b414b",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read includingtail. Bazeries1620sfather+son andlesennemisnumeric mappingverify. Clarkeuninterrupted1977wrong anddeliberateobscurityunsourcedmotives. MarksWOK/LOP/silkconfused. Marycardera1586wrong. HagelinSwedishAmericanverifySwisscitizenship. Purpleintercepts alonenotknownplaintext. Tuttepaperfirstacklate1990wrongprecedence1940sclassifiedpublic1970s?"
+      "notes": "Full prose read includingtail. Bazeries1620sfather+son andlesennemisnumeric mappingverify. Clarkeuninterrupted1977wrong anddeliberateobscurityunsourcedmotives. MarksWOK/LOP/silkconfused. Marycardera1586wrong. HagelinSwedishAmericanverifySwisscitizenship. Purpleintercepts alonenotknownplaintext. Tuttepaperfirstacklate1990wrongprecedence1940sclassifiedpublic1970s? Further shared-summary corrections prepared in third checkpoint; final source/rendered agreement still pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/culture.html",
       "title": "Hall XIII: Cipher Culture — The Cipher Museum",
       "words": 429,
       "sha256": "6b2d0f0203a352a4d3324d3e71158510d410f4bbaab2ce2a6a89f35fbb551bcf",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Mainculturecardmostlysummary otherexhibitcorrectionsmustpropagate. CaesarvsalKindifalsedirectduel. CicadaphysicalbookandMIThuntfixedthree dayqualify."
+      "notes": "Full prose read. Mainculturecardmostlysummary otherexhibitcorrectionsmustpropagate. CaesarvsalKindifalsedirectduel. CicadaphysicalbookandMIThuntfixedthree dayqualify. Further shared-summary corrections prepared in third checkpoint; final source/rendered agreement still pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/machines.html",
       "title": "Hall VII: Mechanical Cipher Machines — The Cipher Museum",
       "words": 863,
       "sha256": "20654270b1bfbc812924b158b247571e2712d56e1873975aa9db6470ee2f77a6",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Redsteppingswitchwrong, JeffersondirectM94adoptionunsupported, M209sixcoprimewrongwheel26andotherseven? calculate. Typexallnop lugboardvariantoverclaim. Machinenotgeneratedintelligencewithoutanalysis; 1467priorityqualified."
+      "notes": "Full prose read. Redsteppingswitchwrong, JeffersondirectM94adoptionunsupported, M209sixcoprimewrongwheel26andotherseven? calculate. Typexallnop lugboardvariantoverclaim. Machinenotgeneratedintelligencewithoutanalysis; 1467priorityqualified. Further shared-summary corrections prepared in third checkpoint; final source/rendered agreement still pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/military.html",
       "title": "Hall V: Military & Spy Ciphers — The Cipher Museum",
       "words": 785,
       "sha256": "45c7bfdcaae2f68bd40ed6e338828fbe7423e696112b2d4bbbe8c5077529eff2",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Bazeriescylinderlinkhandcipherconflation; VICpeak/hardesteverunsupported andmisstages; straddling1880vs1930cardinconsistent. Tacticalhighresistancesratingsunsourced. HeadingsHumanFactorsAlwaysWinfalse."
+      "notes": "Full prose read. Bazeriescylinderlinkhandcipherconflation; VICpeak/hardesteverunsupported andmisstages; straddling1880vs1930cardinconsistent. Tacticalhighresistancesratingsunsourced. HeadingsHumanFactorsAlwaysWinfalse. Further shared-summary corrections prepared in third checkpoint; final source/rendered agreement still pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/modern-crypto.html",
       "title": "Hall XI: Modern Cryptography — The Cipher Museum",
       "words": 631,
       "sha256": "39faa41555382a1a1ddc45566a7401f9a3e00daa3a2c3bdc3f54b05fa2b37c31",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. SHAyear2001wrongvs2002. DHDLPbadgeinsufficientCDH;RSAfactoringnecessaryvscompleteclaim. AESnopracticalattackneedsprimitivefullroundqualification. Eightprimitivecardsvsfiveintrooutdated. Foundationmodularitymathappropriate links."
+      "notes": "Full prose read. SHAyear2001wrongvs2002. DHDLPbadgeinsufficientCDH;RSAfactoringnecessaryvscompleteclaim. AESnopracticalattackneedsprimitivefullroundqualification. Eightprimitivecardsvsfiveintrooutdated. Foundationmodularitymathappropriate links. Further shared-summary corrections prepared in third checkpoint; final source/rendered agreement still pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/polyalphabetic.html",
@@ -1772,16 +1997,18 @@
       "sha256": "def5075167537b2ec66e8eeb6c64b23d6261858d18954b48e336985a4bfdf6e1",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Repeatedstringdistanceonlypotentialmultiple notguarantee. VigenereLEMONkey11charsvs12plaintext12. RunningFROMTHISBOOK11vs12. Nonrepeatingcryptographicallyrandom/sameXORfalse. BeaufortRoyalNavybadgeunsupported. ICkey5~.052notuniversal. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending."
+      "notes": "Full prose read. Repeatedstringdistanceonlypotentialmultiple notguarantee. VigenereLEMONkey11charsvs12plaintext12. RunningFROMTHISBOOK11vs12. Nonrepeatingcryptographicallyrandom/sameXORfalse. BeaufortRoyalNavybadgeunsupported. ICkey5~.052notuniversal. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/puzzle.html",
       "title": "Hall VIII: Puzzle & Novelty Ciphers — The Cipher Museum",
       "words": 493,
       "sha256": "0e66422eec31a7640a9cd66de2abe3a467e5006e6c866a3640ea63e7f234e1d8",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Copiale1730vs1760uncertaindate; Bacon1605full1623. KoreanTapmetadataunsupported. Bibleexactidenticalclaimwrong. Predictsbinarynotdirectlineage."
+      "notes": "Full prose read. Copiale1730vs1760uncertaindate; Bacon1605full1623. KoreanTapmetadataunsupported. Bibleexactidenticalclaimwrong. Predictsbinarynotdirectlineage. Further shared-summary corrections prepared in third checkpoint; final source/rendered agreement still pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/substitution.html",
@@ -1790,7 +2017,8 @@
       "sha256": "d5e4c2ed6a4bbd0bda7b20daaf1d5a5131162994d54dcb3a56aa0848fd3657ca",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Playfairdate1902vs1854 andFourSquare1854vs1902swappedcardera. Babington64modeltokensanddoublethmappingwrongdefault. GreatCiphertrapmodelnoauthenticlabel. SameprincipleAESblocksmustqualify nonlinearwholecipher. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending."
+      "notes": "Full prose read. Playfairdate1902vs1854 andFourSquare1854vs1902swappedcardera. Babington64modeltokensanddoublethmappingwrongdefault. GreatCiphertrapmodelnoauthenticlabel. SameprincipleAESblocksmustqualify nonlinearwholecipher. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/transposition.html",
@@ -1799,7 +2027,8 @@
       "sha256": "b371d5b07de94adf6f5af7b05b6d8c2f455f6097a7af32d38b62533cca2b9e2e",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. RailFenceHELLOWORLD independentcheck;ZEBRAcolread5,3,2,4,1not5,2,1,3,4(ranks). MixColumns=fractionationheadingcontradictsbodydistinction. BifidpairHE21,35=FPcorrectunderIJgrid. Historicaldatesstillneedsource. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending."
+      "notes": "Full prose read. RailFenceHELLOWORLD independentcheck;ZEBRAcolread5,3,2,4,1not5,2,1,3,4(ranks). MixColumns=fractionationheadingcontradictsbodydistinction. BifidpairHE21,35=FPcorrectunderIJgrid. Historicaldatesstillneedsource. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/unbreakable.html",
@@ -1808,16 +2037,18 @@
       "sha256": "edd543abc5298560e2ac52f56091787a064e956309f51ed9ce3d5d2cc36844d5",
       "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Critical perfectsecrecyequalplaintexts/onlyOTPcontradictsdefinitionparagraph. VernambinaryH01000misencodingifA0H7, Q17 offone; labelarbitrarybitsorcorrect. Randompadfixedlabelwrong. AESkeydependentsboxes/4everyround/neverrepeatingfalse. ReadShannonpp679-682and708-709forfix."
+      "notes": "Full prose read. Critical perfectsecrecyequalplaintexts/onlyOTPcontradictsdefinitionparagraph. VernambinaryH01000misencodingifA0H7, Q17 offone; labelarbitrarybitsorcorrect. Randompadfixedlabelwrong. AESkeydependentsboxes/4everyround/neverrepeatingfalse. ReadShannonpp679-682and708-709forfix.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "halls/unsolved.html",
       "title": "Hall XII: Unsolved Ciphers — The Cipher Museum",
       "words": 511,
       "sha256": "ecdcf9bac333eb5cca3bb83d9b4f6b41d8bf1b48496a4dde822f1a00b505b726",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. OpeningquotedVoynich1404creationunsupportedparchmentrange. Fourrouteseveryexhibitcanuseall overclaims. Zodiac13/32carddescribes408/340. Lateststatusesrequireprimarylookup."
+      "notes": "Full prose read. OpeningquotedVoynich1404creationunsupportedparchmentrange. Fourrouteseveryexhibitcanuseall overclaims. Zodiac13/32carddescribes408/340. Lateststatusesrequireprimarylookup. Further shared-summary corrections prepared in third checkpoint; final source/rendered agreement still pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "index.html",
@@ -1826,7 +2057,8 @@
       "sha256": "9852deedb60e8b15f5c3852f5615fa0b592b16f4e7d9bae49f41b72e03ba0528",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read.152cipherhistorycountvs155trackedciphers and172total17foundations countsneedsregistry.3,900yearsencryptionEgyptuncertain. Tickerdatequalificationsinherit. Noanalyticsbackendclaimcheck actualscripts. IntroActIdefinitiveEgyptsubs inappropriate."
+      "notes": "Full prose read.152cipherhistorycountvs155trackedciphers and172total17foundations countsneedsregistry.3,900yearsencryptionEgyptuncertain. Tickerdatequalificationsinherit. Noanalyticsbackendclaimcheck actualscripts. IntroActIdefinitiveEgyptsubs inappropriate.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "lab/decipherment-cases.html",
@@ -1835,7 +2067,8 @@
       "sha256": "c1810b3961ce4260314e67d5ac510516118baf7b5c8857ac960e175516709876",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full text read including reread of Z340 fragment. Source-backed distinction and inventedexamples clear. Z340fixture independentlyvalidate primarypaper."
+      "notes": "Full text read including reread of Z340 fragment. Source-backed distinction and inventedexamples clear. Z340fixture independentlyvalidate primarypaper.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "lab/evidence-workbench.html",
@@ -1844,7 +2077,8 @@
       "sha256": "0375b1b235e1c3350fd44c60a217dd136d0e96a73782a0ef7cb4372bd6ceadd4",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Explicitlimits,models,seeds/provenance good. Numerical2228listedthreebutfourpath22|28invalid8/22 okay actual4? 2|2|2|8,2|22|8,22|2|8 three yes. RealimplementationUIclaimchecktests."
+      "notes": "Full prose read. Explicitlimits,models,seeds/provenance good. Numerical2228listedthreebutfourpath22|28invalid8/22 okay actual4? 2|2|2|8,2|22|8,22|2|8 three yes. RealimplementationUIclaimchecktests.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "lab/modern-attack-evidence.html",
@@ -1853,7 +2087,8 @@
       "sha256": "dd08a5b80a5887be11645e383932a35fe37b77e6321174c8f6aa287e934951d8",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Preservesprimitivevsdeploymentknownkeyinput assumptions, theoreticalvsmeasured. Sourcepaper tablesneedreverify priorlocal source extracts and tests. Plannedlabroadmapmaynowimplementedcheckcurrent repo before wording."
+      "notes": "Full prose read. Preservesprimitivevsdeploymentknownkeyinput assumptions, theoreticalvsmeasured. Sourcepaper tablesneedreverify priorlocal source extracts and tests. Plannedlabroadmapmaynowimplementedcheckcurrent repo before wording.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "lab/workbench.html",
@@ -1862,7 +2097,8 @@
       "sha256": "ff8b4ba221f70d5606f03ed9ae4d262fdd6266c69166ebaedcc57f889585d50b",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Static text read; IC approximate reference clear; engine behavior separate from historical accuracy."
+      "notes": "Static text read; IC approximate reference clear; engine behavior separate from historical accuracy.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "learn.html",
@@ -1871,16 +2107,22 @@
       "sha256": "5c50694d3436b3a005a797ff6a98400c74207e89c5a2c78cb578208618f9124d",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Everycipherteaches/strongermathsbankdirectlineagequestionable. FinalCaesarsameideapowersencryptionneedsqualification. Corecomparisonswellqualified, OTPassumptionsshouldexplicit."
+      "notes": "Full prose read. Everycipherteaches/strongermathsbankdirectlineagequestionable. FinalCaesarsameideapowersencryptionneedsqualification. Corecomparisonswellqualified, OTPassumptionsshouldexplicit.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "modern.html",
       "title": "Modern Cryptography — The Cipher Museum",
       "words": 1494,
       "sha256": "d6e83f371bed315f9dcde356610a365a422971f691e366624fb7818d57c0829c",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Nonrepeatingkeystreamduplicate;DHbasedDLPinsufficientCDH;ECDSAprovesauthorshipvskey;hashanyinput/reversedambiguous. Shamirunconditionalrequiresuniformcoeffs. Caesarzero numericconfusionundefined. UpdatedChaChaoriginalvsIETFclear."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "HAC-1997",
+        "SHANNON-1949"
+      ],
+      "notes": "Qualifiednonrepeatingstreams, CDH, digestinputlimits, signatureattribution, Shamirfinitefield/randomness andnonzerosoundness. Overview no longer callsfiveprimitivescanonical. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "museum-map.html",
@@ -1889,7 +2131,8 @@
       "sha256": "2d654f13e6ad50967d6d47eb7af80b296e46fa88c59446f217c873fb363a237f",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full text read;152+3+17=172 intentional categories. IRA Book Cipher wrongly names transposition; M94/M138A disk/strip distinction. Hall assignments inconsistent with breadcrumbs."
+      "notes": "Full text read;152+3+17=172 intentional categories. IRA Book Cipher wrongly names transposition; M94/M138A disk/strip distinction. Hall assignments inconsistent with breadcrumbs.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "my-path.html",
@@ -1898,7 +2141,8 @@
       "sha256": "448a76d18d971e2453f4871fe33df42712139b57a141ac9d1196915593f02467",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Static text read; dynamic quiz content pending. Inline content now read. Corrections and final verification pending where noted."
+      "notes": "Static text read; dynamic quiz content pending. Inline content now read. Corrections and final verification pending where noted.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "offline.html",
@@ -1907,7 +2151,8 @@
       "sha256": "55e94f9358935a1ea2b7d5f655e226e5f5bfb94b512bbba63a8df21d6ff14331",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full text read; cache availability conditional; verify service worker."
+      "notes": "Full text read; cache availability conditional; verify service worker.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "popular-culture-survey.html",
@@ -1919,7 +2164,8 @@
         "Z340-2024",
         "MIT-HUNT-2015"
       ],
-      "notes": "Corrected medium/period/family classifications and removed unsupported priority and HMM claims. All14 cards render; individual source limitations remain on linked exhibits."
+      "notes": "Corrected medium/period/family classifications and removed unsupported priority and HMM claims. All14 cards render; individual source limitations remain on linked exhibits.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "public/reports/benchmark-baselines.html",
@@ -1928,7 +2174,8 @@
       "sha256": "c3156dc0cdfb99f7a3043c4d19163059ac00edd73179d32527cfbf428a7bced8",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Versionv0.6clear no accuracyclaim andpublicanswers. Comparetotaldifficultycounts/manifest andCipherBankabsence labels needoriginalpaper. Generatedreport editgenerators notonlyoutput."
+      "notes": "Full prose read. Versionv0.6clear no accuracyclaim andpublicanswers. Comparetotaldifficultycounts/manifest andCipherBankabsence labels needoriginalpaper. Generatedreport editgenerators notonlyoutput.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "search.html",
@@ -1937,7 +2184,8 @@
       "sha256": "a90d6982ce9972ffc01a771dfbc4983841c945c2552b128673bba33e344a436b",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Static text read;172 registry count; regenerated index review pending."
+      "notes": "Static text read;172 registry count; regenerated index review pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "teaching.html",
@@ -1946,16 +2194,25 @@
       "sha256": "c02174ad9241b714be192bab0002497bbe6314ba61dace6984d6194e9f082ff1",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Full prose read. Verifyv0.6counts100326/99800/526andclassificationindependentknownanswermodel distinctionsagainsttestoutputandmanifest. Noapparentnewproseerror."
+      "notes": "Full prose read. Verifyv0.6counts100326/99800/526andclassificationindependentknownanswermodel distinctionsagainsttestoutputandmanifest. Noapparentnewproseerror.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "timeline.html",
       "title": "Timeline — The Cipher Museum",
       "words": 3073,
       "sha256": "926e20d1280facaf99bdaa10764a960934ef856337c1d2f95b0b27aa6efa324a",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Manylegacyera labelsconflictcurrentdescriptions: Pigpen1200/1700, Aeneaswheelvswaterclock, Gronsfeld1700/1655, Chinese1871/1881, Trifid1901/1902, Ge ez1400unsupported. DirectM94lineagewrong;6M209coprimewrong;FRA1940wrong. PublickeyEllisnotWilliamson1974. AESselected2000vsstandard2001/5yearcompetition. SnowdenHTTPSnotendtoenduser guarantee. Datafullreview needed chronologicalordering."
+      "status": "corrections prepared; final source and rendered review pending",
+      "sources": [
+        "CTC-NSA",
+        "FBI-HOLLOW-NICKEL",
+        "KAHN-1996",
+        "MORSE-HOUSE",
+        "NIST-AES-DEVELOPMENT",
+        "POLYBIUS-10"
+      ],
+      "notes": "Reconciled82entries; datedeventsordered and7unsupportedoriginsmovedtoundatedsection. CorrectedEgyptsecrecy, Aeneaswaterclock, pigpen1794example, Argenti, Bacon1623, GreatCiphercentury, Gronsfeldtradition, CTC1873, tapcode1965, Bifid/Trifid1902treatise, T52variants/FRAanachronism, GCHQroles, AESselection/standard andHTTPSvsE2E. Remainingprecisedates/primarycitationsneedfinalreview. Final complete reread and shared-surface review remain pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "tours/index.html",
@@ -1964,7 +2221,8 @@
       "sha256": "ebbe54315037cb0dbb49a4b1908f944e93480c0de986a0428565545a37bcc712",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Static text read; tour JSON pending."
+      "notes": "Static text read; tour JSON pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
       "path": "tours/tour.html",
@@ -1973,7 +2231,8 @@
       "sha256": "85245f44df1fab8530717120e10c21228fff5501cefebdc854700079d8a64738",
       "status": "text reviewed; source verification pending",
       "sources": [],
-      "notes": "Static text read; tour notes JSON pending."
+      "notes": "Static text read; tour notes JSON pending.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     }
   ],
   "checkpoint": {

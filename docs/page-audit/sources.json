@@ -42,13 +42,14 @@
       "Chapter 2 opening: Khnumhotep inscription, unusual writing versus secrecy",
       "Chapter 7: Davis dictionary example 146.L.20 and Confederate naval dictionary arrangements",
       "Chapter 22: commercial codeword formats, tariff changes and Bentley 1906",
-      "Chapter 23: Hammer’s interpretation of Beale statistical tests",
       "Chapter5: Arnold correspondence changed from Blackstone to dictionary schemes; no reference-book capture established.",
       "Chapter21, Heterogeneous Impulses: Leeson1794pigpen inscription and Hammer’s Beale interpretation. Earlier working notes misassigned this topic toChapter23; corrected.",
       "Russian cryptography discussion: Nihilist authorship qualified as possible; additive coordinates versus other namesakes.",
       "FirstWorldWarFrance discussion: turninggrilles late1916–early1917 distinct fromCardanofixedgrille.",
       "Chapter8: Kerckhoffs1883publication and operational design conditions.",
-      "Chapter5closing: June1844diplomaticinterception cessation versusOctoberDecypheringBranchdissolution; Austria1848."
+      "Chapter5closing: June1844diplomaticinterception cessation versusOctoberDecypheringBranchdissolution; Austria1848.",
+      "Chapter3: Lavinde1379 code/cipher keys versus Mantua1401 homophones; supplied text lines4658–4708.",
+      "Chapter7: Stager route system and CipherNo.4 growth (12routepages,36codewordpages,1608entries); Lincoln1June1863example; supplied text lines8875–8960."
     ],
     "scope": "Historical secondary account, compared with primary records where available. Converted PDF pagination differs from printed edition; chapter references preferred in visible credits. Its old priority and lineage claims are not adopted without qualification."
   },
@@ -443,5 +444,88 @@
     ],
     "public_source": "https://csrc.nist.gov/Projects/cryptographic-standards-and-guidelines/Archived-Crypto-Projects/AES-Development",
     "scope": "Read developmentchronology:1997start,2October2000selection,November2001FIPS197. Distinguishselectionfromstandardpublication."
+  },
+  "CULPER-TRANSCRIPTION": {
+    "title": "The Culper Code Book",
+    "authors": [
+      "Benjamin Tallmadge; modern transcription edited by Michael Goudket"
+    ],
+    "public_source": "https://raynhamhallmuseum.org/wp-content/uploads/2020/04/Culper-Code-Book.pdf",
+    "scope": "Read editorial introduction, alphabet instructions and numerical entries. This seven-page typeset adaptation explicitly modernises spelling and contains gaps/errors; not an original manuscript facsimile. Confirmed enemy178, lady355, secret596, Washington711, NewYork727. No claim of an exhaustive accurate transcription or 749 legible entries."
+  },
+  "COPPERSMITH-1994": {
+    "title": "The Data Encryption Standard (DES) and its strength against attacks",
+    "authors": [
+      "Don Coppersmith"
+    ],
+    "public_source": "https://doi.org/10.1147/rd.383.0243",
+    "scope": "Read pp.243–244, including author disclaimer, IBM design team, NSA technical advice and decision not to publish differential-cryptanalysis criteria. Paper hosted at simson.net/ref/1994/coppersmith94.pdf. This resolves the false NSA-only S-box/1991-disclosure account; not a full replication of the paper’s attack."
+  },
+  "CROWLEY-SOLITAIRE": {
+    "title": "Problems with Bruce Schneier’s Solitaire",
+    "authors": [
+      "Paul Crowley"
+    ],
+    "public_source": "https://www.ciphergoth.org/crypto/solitaire/",
+    "scope": "Read full short analysis, noninvertible transition and measured consecutive-output repetition near1/22.5. Distinguisher does not establish a general key recovery or absence of other attacks."
+  },
+  "SCHNEIER-SOLITAIRE": {
+    "title": "The Solitaire Encryption Algorithm",
+    "authors": [
+      "Bruce Schneier"
+    ],
+    "public_source": "https://www.schneier.com/academic/solitaire/",
+    "scope": "Read algorithm, keying, sample arithmetic, three vectors and linked analysis. Confirmed A=1 additive formula already correct in museum engine. Browser’s reversible filler escape is an extra convention. Original source’s broad security/operational assurances are not adopted."
+  },
+  "RAF-BUNDESARCHIV": {
+    "title": "Die RAF und die Stasi: Anarcho-terroristische Kräfte",
+    "authors": [
+      "Bundesarchiv"
+    ],
+    "public_source": "https://www.bundesarchiv.de/nachricht/die-raf-und-die-stasi-anarcho-terroristische-kraefte/",
+    "scope": "Read20September2017pressrelease: early1970scontacts; ten former members sheltered1980–83, newidentities and surveillance. It identifies no RAF one-time-pad procedure."
+  },
+  "WALKER-FBI": {
+    "title": "John Anthony Walker Jr.",
+    "authors": [
+      "Federal Bureau of Investigation"
+    ],
+    "public_source": "https://www.fbi.gov/history/cases-and-criminals/john-anthony-walker-jr",
+    "scope": "Read case account: spying1967–1985, network, May1985arrest, stolen cryptographic material. Broad summary does not inventory every machine or prove uninterrupted near-real-time access to all naval traffic."
+  },
+  "NCM-SIGSALY": {
+    "title": "SIGSALY",
+    "authors": [
+      "National Cryptologic Museum"
+    ],
+    "public_source": "https://www.nsa.gov/History/National-Cryptologic-Museum/Exhibits-Artifacts/Exhibit-View/Article/2719206/sigsaly/",
+    "scope": "Read4August2021exhibit description: Bell Laboratories1943,40racks,55tons. Separate longer SIGSALY Story PDF returned403 in both web and direct download; not claimed read. Museum text uses approximate50tons, avoiding mismatched ton-unit precision."
+  },
+  "CAIRNCROSS-TNA": {
+    "title": "Confessions from the Cambridge Five",
+    "authors": [
+      "The National Archives"
+    ],
+    "public_source": "https://www.nationalarchives.gov.uk/explore-the-collection/the-collection-blog/confessions-from-the-cambridge-five/",
+    "scope": "Retrieved indexed source excerpt identifies KV2/4691 and16February1964Ohio interview. Full webpage returned403; not claimed fully read. Used only to replace1991confession claim; archival file itself not examined."
+  },
+  "SMITHLINE-2009-METADATA": {
+    "title": "A Cipher to Thomas Jefferson",
+    "authors": [
+      "Lawren M. Smithline"
+    ],
+    "public_source": "https://www.americanscientist.org/article/a-cipher-to-thomas-jefferson",
+    "scope": "Confirmed publisher-indexed March–April2009,volume97number2 metadata. Full article unavailable in this pass. Corrected contradictory July–August label; do not claim new full-paper verification."
+  },
+  "LASRY-2018": {
+    "title": "A Methodology for the Cryptanalysis of Classical Ciphers with Search Metaheuristics",
+    "authors": [
+      "George Lasry"
+    ],
+    "year": 2018,
+    "passages_read": [
+      "Chapter7, §7.2.1, p.114 / suppliedPDF135: M-209 wheel, bar and lug operation, Beaufort equation."
+    ],
+    "scope": "Verified per-bar OR engagement. The book’s output-period wording is not adopted as an unconditional guarantee; joint wheel positions and generated keystream period are distinct."
   }
 }
