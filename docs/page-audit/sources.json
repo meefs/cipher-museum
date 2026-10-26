@@ -1016,5 +1016,173 @@
       "Read introduction, operation, versions: letter selector, crank and printed tape; about 140,000 manufactured. Historical attack timings depend on depth and conditions."
     ],
     "scope": "Specific claims described above only."
+  },
+  "SIGSALY-NSA-HISTORY": {
+    "title": "The Start of the Digital Revolution: SIGSALY — Secure Digital Voice Communications in World War II",
+    "url": "https://www.nsa.gov/Portals/70/documents/about/cryptologic-heritage/historical-figures-publications/publications/wwii/sigsaly.pdf",
+    "passages_read": [
+      "Read PDF pp.3–10 / printed pp.2–9: 15July1943, twelve terminals, vocoder parameters, noise quantisation, records,40racks/55tons and locations. The earlier Story PDF remains inaccessible; this separate brochure was read."
+    ],
+    "scope": "Only the stated evidence was checked; no full-source certification."
+  },
+  "BEURLING-IAS": {
+    "title": "Arne K. Beurling: institutional appointments",
+    "url": "https://www.ias.edu/scholars/arne-k-beurling",
+    "passages_read": [
+      "Read entire appointments record: member1952–54,faculty1954–73,emeritus1973–86,PhD1933."
+    ],
+    "scope": "Only the stated evidence was checked; no full-source certification."
+  },
+  "BEURLING-FRA-METHOD": {
+    "title": "Hur gjorde Arne Beurling för att forcera G-skrivaren?",
+    "url": "https://www.fra.se/omfra/frashistoria/forceringenavgskrivaren.4.55af049f184e92956c42acb.html",
+    "passages_read": [
+      "Read entire Borelius narrative. Explicit speculative reconstruction written1980s by later participant; letter-shift3 and space5 frequent, parallel traffic, invariants under addition/permutation. Not Beurling’s recorded derivation; embedded diagrams not independently transcribed."
+    ],
+    "scope": "Only the stated evidence was checked; no full-source certification."
+  },
+  "NEMA-CRYPTOMUSEUM": {
+    "title": "NEMA: examined machine, stepping and cipher period",
+    "url": "https://www.cryptomuseum.com/crypto/nema/",
+    "passages_read": [
+      "Introduction and period derivation read: four cipher wheels and moving reflector, five drive wheels, military max17576. Existing demo tested against independent rmsk2/Sullivan vector; no operational break asserted."
+    ],
+    "scope": "Only the stated evidence was checked; no full-source certification."
+  },
+  "C36-CRYPTOMUSEUM": {
+    "title": "Hagelin C-36: examined hardware and variants",
+    "url": "https://www.cryptomuseum.com/crypto/hagelin/c36/index.htm",
+    "passages_read": [
+      "Read introduction, variants and specifications. Five wheels; fixed/movable lug differences. Page has conflicting1930s dates; museum avoids exact invention assertion."
+    ],
+    "scope": "Only the stated evidence was checked; no full-source certification."
+  },
+  "WESSEL-2021": {
+    "title": "The Hagelin Cryptographers C-52 and CX-52",
+    "url": "https://www.cryptomuseum.com/pub/files/BW_C52_CX52.pdf",
+    "passages_read": [
+      "Read pp.1–3 introduction and terminology; updated11Aug2021. Configuration varies within type names; study explicitly does not establish full cryptanalytic security."
+    ],
+    "scope": "Only the stated evidence was checked; no full-source certification."
+  },
+  "GREENOUGH-1999": {
+    "title": "Cryptanalysis of the Hagelin C-52 and Similar Machines: A Known Plaintext Attack",
+    "url": "https://doi.org/10.1080/0161-119991887801",
+    "passages_read": [
+      "Publisher indexed abstract and bibliographic record read; direct page403. Supports stated wheel-subset/order/pin recovery scope. Full paper not read; no empirical data or runtime claim verified."
+    ],
+    "scope": "Only the stated evidence was checked; no full-source certification."
+  },
+  "DRISCOLL-JOHNSON-2015": {
+    "title": "The Neglected Giant: Agnes Meyer Driscoll",
+    "url": "https://www.nsa.gov/portals/75/documents/about/cryptologic-heritage/historical-figures-publications/publications/Personalities/the_neglected_giant_agnes_meyer_driscoll.pdf",
+    "passages_read": [
+      "Kevin Wade Johnson, 2015. Read printed pp.3–4,33–37: education, retirement, death in Fairfax16September1971. No entire-book claim. Short NSA biography differs on enlistment rank; rank omitted."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "ELIZEBETH-NSA-2020": {
+    "title": "Pioneering Codebreaker Elizebeth Friedman Honored by U.S. Coast Guard",
+    "url": "https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/2299166/pioneering-codebreaker-elizebeth-friedman-honored-by-us-coast-guard/",
+    "passages_read": [
+      "Entire short account read: assistant/team context, wartime Navy detail, later public recognition. Coast Guard linked page inaccessible."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "ROCHEFORT-REAGAN": {
+    "title": "Distinguished Service Medal presentation,30May1986",
+    "url": "https://www.reaganlibrary.gov/archives/photo/c35259-01",
+    "passages_read": [
+      "Archive event record read. NSA short biography names wrong medal; retain presidential archive identification."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "ROCHEFORT-WATER-2021": {
+    "title": "Water Shortage",
+    "url": "https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/2644092/water-shortage/",
+    "passages_read": [
+      "Entire article read. Rochefort and Jasper Holmes, FRUMEL22May1942. Avoid universal causal claim about Japanese defeat."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "RS44-MANUAL-1944": {
+    "title": "Schlüsselanleitung zum R.S.44, March1944, with addenda",
+    "url": "https://cryptocellar.org/wmc/schluesselanleitung-zum-rs44.pdf",
+    "passages_read": [
+      "Downloaded original facsimile. Visually read PDF4–6 addenda, printed5–6,11–15,18,20: preprocessing, digit sum, complete77/64-letter examples, wrap rules and grids. Matches independently transcribed tests. Default follows original manual; later short-message addenda are not silently substituted."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "DP-MANUAL-1941": {
+    "title": "Schlüsselanleitung zum Doppelkastenschlüssel, December1941",
+    "url": "https://cryptocellar.org/wmc/schluesselanleitung-dk-1941.pdf",
+    "passages_read": [
+      "Downloaded facsimile; visually read printed3–7. J→II,17-column rows, odd-letter padding, AA→VR→FY and FA→TR→VD, complete54-letter cipher/inverse. Emergency key procedure outside model."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "AMSCO-ACA": {
+    "title": "AMSCO",
+    "url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Amsco.pdf",
+    "passages_read": [
+      "Full single-page example read; 57-letter text,41325 key, alternating rows and columns, one/two initial choices, no padding. Independent engine/UI known answer matches."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "DELEEUW-2018": {
+    "title": "The Solving of a Fleissner Grille during an Exercise by the Royal Netherlands Army in1913",
+    "url": "https://ep.liu.se/ecp/149/012/ecp18149012.pdf",
+    "passages_read": [
+      "Karl de Leeuw. Read pp.49–50,52: precedents, exercise chronology, captain’s reconstruction from military cribs, repeated letters, rotations. Figures not independently reconstructed."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "BENSON-VENONA": {
+    "title": "The VENONA Story",
+    "url": "https://www.nsa.gov/Portals/70/documents/about/cryptologic-heritage/historical-figures-publications/publications/coldwar/venona_story.pdf",
+    "passages_read": [
+      "Robert L. Benson. Read pp.1–3,7,14–17,26–28. February1943 project precedes Hallock trade-message breakthrough; manufacturing duplication described as apparent; codebook recovery separate, partial and often later. Full63-page source not read."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "UKUS-1953": {
+    "title": "UK/US Communications Security Conference1953: Report of the Security Sub-Committee to the Executive Committee",
+    "url": "https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/friedman-documents/panel-committee-board/FOLDER_423/41776079081517.pdf",
+    "passages_read": [
+      "Read opening recommendations and AppendixA printedp.2 (PDF5) SIGTOT offline assessment: key-tape quality checks and physical prevention of reuse. A conditional assessment, not evidence of universally flawless operation. Initial search mislabelled this1947; cover confirms1953."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "5UCO-CRYPTOMUSEUM": {
+    "title": "5-UCO: examined hardware and history",
+    "url": "https://www.cryptomuseum.com/crypto/uk/5uco/",
+    "passages_read": [
+      "Read introduction/history: electronic one-time-tape teleprinter encryption, synchronisation, HF and traffic-flow security. Avoid uncertain acronym expansion and unqualified security claims."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "BATEY-GAZETTE": {
+    "title": "London Gazette, supplement31December1986,p.12",
+    "url": "https://www.thegazette.co.uk/London/issue/50764/supplement/12/data.pdf",
+    "passages_read": [
+      "Honours entry read: Mavis Lilian Batey, MBE, preservation/restoration of historic gardens. Gazette date is1986; honours convention is New Year1987. Removed unsupported death location and academic-reputation superlative."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "MARKS-PUBLISHER": {
+    "title": "The Life That I Have: book description and author biography",
+    "url": "https://profilebooks.com/work/the-life-that-i-have/",
+    "passages_read": [
+      "Read publisher description and biography: Ruth1943, Szabo1944,1920–2001,SOE,PeepingTom,1998memoir. This supports bibliography and poem context; not a complete independent reconstruction of SOE operations."
+    ],
+    "scope": "Only the stated passages and claims were checked."
+  },
+  "DUNIN-AUTOBIOGRAPHY": {
+    "title": "Elonka Dunin: autobiography",
+    "url": "https://elonka.com/autobiography.html",
+    "passages_read": [
+      "Read early-years paragraph: born29December1958,SantaMonica. Self-reported primary biography. Removed dynamic ranking of Voynich on her list."
+    ],
+    "scope": "Only the stated passages and claims were checked."
   }
 }

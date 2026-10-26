@@ -4,16 +4,16 @@ Last updated: 26 October 2026. **Audit in progress; not merged or deployed.**
 
 This is the single progress checklist for the current review. The **67 items are work packages, not 67 pages**. The site inventory contains **214 public HTML pages**. A completed item records only the stated scope, not a guarantee that an entire exhibit is flawless.
 
-**Status: 24 done · 2 drafted · 1 active · 40 to do.**
+**Status: 32 done · 2 drafted · 1 active · 32 to do.**
 
 - **DONE:** the specific work and evidence described in that row are complete.
 - **DRAFT:** edits or checks exist, but the row's remaining review/validation is unfinished.
 - **ACTIVE:** the next item being worked on.
 - **TODO:** open work; source collection may have started.
 
-**Saved work:** [draft PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13). The first four batches are saved at `395266cb88e68ff9ae807d3e38bb5f3282d804ec`, covering corrections to **165 HTML pages**. The latest uncommitted draft brings that to **172 HTML pages**. The fifth-batch complete test suite passes after metadata regeneration. These changes have not been deployed.
+**Saved work:** [draft PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13). Five batches are saved through `62a2691a7b5ca747c1f1e7363fc989301f93ae20`, covering corrections to **172 HTML pages**, with the complete test suite passing at that checkpoint. The sixth checkpoint covers corrections to **174 HTML pages** cumulatively. Its complete `npm test` run passes;18 pages also pass both desktop and mobile browser checks. Release checks remain open.
 
-**Current focus: item 26, SIGSALY installation and equipment claims.** Items 13–20, 22–25 are complete within their stated scopes. Comparison-wide chronology reconciliation (21) and whole-site release remain pending.
+**Current focus: item 34, Kryptos current status.** Items26–33 have completed their stated source and model checks. Comparison chronology (21), whole-site reconciliation and release remain pending.
 
 ## Checklist
 
@@ -44,15 +44,15 @@ This is the single progress checklist for the current review. The **67 items are
 | 23 | DONE | Zimmermann Telegram | Corrected history/model distinction, routes, codebook conflation and causal wording; NSA pp. 44–45 and Page telegram read. New restored-error guard passes; desktop/mobile vectors and visual review pass. See browser-item23.json. |
 | 24 | DONE | Fialka and KL-7 comparisons | Fialka/KL-7 sources and full prose checked. Reversed chronology and session-key analogy corrected; M-125-3M, 30 contacts and 26-letter model distinguished. Desktop/mobile render passes. |
 | 25 | DONE | M-209 dates and production | Kahn and Lasry checked for 1940 trials, production from1942 and roughly140000 units; printed-output operation verified. Exhibit, comparison and timeline aligned; browser render passes. |
-| 26 | ACTIVE | SIGSALY installations and scope | Verify terminal count/location list and equipment claims; keep typed arithmetic distinct from speech encryption. |
-| 27 | TODO | Beurling and T52 history | FRA account read; IAS appointment dates found. Record evidence, verify remaining biography details and qualify variant claims. |
-| 28 | TODO | C-36, NEMA and Geheimschreiber | Check machine-specific mechanisms, dates and operational claims against technical references; avoid transferring claims between variants. |
-| 29 | TODO | RS44, Double Playfair, AMSCO and turning grille | Compare documented procedures and independent vectors with cited source editions and current widgets. |
-| 30 | TODO | Colossus and Tunny final check | Verify remaining historical summaries and run the corrected synthetic statistic experiment in the browser. |
-| 31 | TODO | VENONA, SIGTOT and 5-UCO | Verify operational details against the supplied historical sources; keep decimal field systems separate from binary demonstrations. |
-| 32 | TODO | Driscoll, Elizebeth Friedman and Rochefort | Finish biographical claims and awards; resolve Rochefort's recorded birth-date discrepancy with explicit source scope. |
-| 33 | TODO | Batey, Marks, Dunin and Lasry remaining details | Finish later-life, publication and role checks; do not treat earlier corrections as whole-biography certification. |
-| 34 | TODO | Kryptos current status | Verify 2025 plaintext discovery versus methods, auction/ownership claims, and remove stale editorial notes. |
+| 26 | DONE | SIGSALY installations and scope | NSA SIGSALY history printed pp.2–9 checked:12terminals,initial service15July1943,equipment and locations. Arithmetic remains explicitly a text-only illustration; browser passes. |
+| 27 | DONE | Beurling and T52 history | FRA account and Borelius hypothesis distinguished; IAS member1952–54/facultyfrom1954 corrected. Daily-key teamwork retained; browser passes. |
+| 28 | DONE | C-36, NEMA and Geheimschreiber | C-36 variants and physical alphabet offsets qualified; Greenough abstract-only limit explicit. NEMA wheel/reflector/period and independent vector checked. T52 bit control not transferred between models. |
+| 29 | DONE | RS44, Double Playfair, AMSCO and turning grille | Original RS44 and December1941 DoublePlayfair manual examples visually compared with independent vectors; ACA AMSCO57-letter answer checked; deLeeuw1913 reconstruction pp.49–52 read. UI/inverse/invalid-input tests and browser controls pass. |
+| 30 | DONE | Colossus and Tunny final check | Tunny passages and synthetic statistic limits rechecked;1024-symbol planted-bias and no-bias browser runs pass, with explicit inconclusive result. Mobile result visually inspected; Node independent residual/statistic tests pass. |
+| 31 | DONE | VENONA, SIGTOT and 5-UCO | Benson chronology and codebook/additive distinction checked;1953SIGTOT assessment is conditional,5-UCO acronym/handling claims qualified. Binary widget remains distinguished from Soviet decimal systems. |
+| 32 | DONE | Driscoll, Elizebeth Friedman and Rochefort | Driscoll death in Fairfax and unsupported award corrected; Elizebeth team/recognition scope corrected. Rochefort teamwork,later intelligence service and30May1986medal checked; birth-record discrepancy remains explicit. |
+| 33 | DONE | Batey, Marks, Dunin and Lasry remaining details | Batey MBE checked against Gazette; unsupported death location/reputation removed. Marks publisher bio/poem context read; Dunin self-biography and archive scope checked; Lasry unsupported Zodiac attribution removed. Prior cited memoir/degree scope retained. |
+| 34 | ACTIVE | Kryptos current status | Verify 2025 plaintext discovery versus methods, auction/ownership claims, and remove stale editorial notes. |
 | 35 | TODO | Voynich physical description | Verify leaves/foldouts, word-count convention and parchment dating; do not equate parchment age with ink/writing date. |
 | 36 | TODO | Other unresolved-puzzle status | Reread Somerton, McCormick, Beale and Shugborough for dated evidence and uncertainty; avoid claiming current official resolution. |
 | 37 | TODO | Classical worked examples | Finish independent checks for ADFGX/ADFGVX, Alberti, Chaocipher and other examples flagged in the ledger. |
@@ -108,3 +108,5 @@ The release gate is items 57–67. Existing authorization covers merging and dep
 - **26 October 2026 — item 23 completed:** Zimmermann history corrected; 35 public-claim checks and 35 restored-error controls pass, history/modern review passes 9 checks, and exhibit examples pass 507 assertions. Browser checks pass at 1280px and 390px; mobile model/controls screenshot inspected. A pre-existing test expected the retired wording; its assertion was updated to the stronger model boundary. No release claimed.
 
 - **26 October 2026 — fifth batch:** Closed items13–20,22,24,25. Fourteen pages passed desktop/mobile smoke checks; six widget behaviors exercised, including the author’s Solitaire vector. The intermediate full suite failed on a brittle comparison-test predicate; the predicate was corrected and targeted checks pass. After metadata generation, the fresh complete npm test run passed.
+
+- **26 October 2026 — sixth batch:** Closed items26–33 with source-specific limits. Corrected machine histories, operational claims and biographies; original manual vectors checked. All36browser checks pass across18pages, and Colossus/mobile results were visually inspected. Fresh complete `npm test` passes. Saved as a draft checkpoint; no merge/deployment.

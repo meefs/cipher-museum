@@ -107,13 +107,14 @@
       "path": "ciphers/agnes-driscoll.html",
       "title": "Agnes Meyer Driscoll — The Cipher Museum",
       "words": 673,
-      "sha256": "b853af4604017fb9f9b494cf0e506045c536e47d37ebadc6a7fe238f7524f2b9",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "b58af9b88b32df7f822fdeb4b23585dd0cfe9160866e0fdab24392a1ae5125fd",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
-        "PARKER-1994"
+        "PARKER-1994",
+        "DRISCOLL-JOHNSON-2015"
       ],
-      "notes": "Corrected Pearl Harbor Revisited author to FrederickD.Parker1994; removed full-book link. Remaining biographical claims still pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/alberti-disk.html",
@@ -144,10 +145,12 @@
       "title": "AMSCO Transposition — The Cipher Museum",
       "words": 873,
       "sha256": "805dee560e933d51741a254b35aecc67af1129992f08cd057f323227add70110",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Page thoroughly distinguishes ACA rule from historical deployment. Worked even-width ABDCEF example follows stated alternating row/column convention. Full57-letter ACA vector and source sheet need direct comparison; tests currently pass.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "AMSCO-ACA"
+      ],
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/arabic-nomenclators.html",
@@ -271,11 +274,14 @@
       "path": "ciphers/beurling.html",
       "title": "Arne Beurling — The Cipher Museum",
       "words": 424,
-      "sha256": "fe2df29623a8eebea54320dacd6605ad5e63257cab85a3c499d7447554a72b95",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Wellqualified teamassistance and structuralvsdailykey. Birthdeath/IAS1954confirminstitutional; verifyFRA account andspecificT52variant.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "62402d3deb645b3b913b9f4419e8b1fb33f3c09e06dca5b3619e19ee41b9bfc1",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BEURLING-IAS",
+        "BEURLING-FRA-METHOD"
+      ],
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/bible-code.html",
@@ -434,10 +440,10 @@
       "title": "Colossus — The Cipher Museum",
       "words": 504,
       "sha256": "e5d1e8b3287f1e6720f8660ba186e91d9c9c3f95c1a68796f8c6fd1e0a9511e5",
-      "status": "text reviewed, source checks pending",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [],
-      "notes": "Full page read. Prior-turn source images actually inspected and formula matched General Report on Tunny §§23A–C. Synthetic planted statistic,1,271settings,39null maxima and model limits explicit; existing budget/arithmetic tests passed in current run. Need current rendered experiment check before final verification.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/columnar.html",
@@ -604,10 +610,12 @@
       "title": "Doppelkastenschlüssel — German Double Playfair — The Cipher Museum",
       "words": 985,
       "sha256": "8a94f2afcb6a469fceb59aef7cf3dcebf5dddd8f5cd8f5b7b3cf3b2af9ae0d69",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Clear edition-specific authentic procedure and source vectors; verify primary manual cited pp3-6 and tests. No evident prose contradiction. Modern Truppenschluessel attacks explicitly excluded from this engine.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "DP-MANUAL-1941"
+      ],
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/double-transposition.html",
@@ -623,15 +631,16 @@
       "path": "ciphers/dunin.html",
       "title": "Elonka Dunin — The Cipher Museum",
       "words": 735,
-      "sha256": "3368d0dcb5b5ff2d62275cb7d0904f43ca52d8b8ca21ecf5db20715690889a02",
-      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sha256": "f1a788e71fed04babcc276ea1559274c60fa19753c7de792490c5879b629bfd4",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "CODEBREAKING-2020",
         "DUNIN-KRYPTOS-FAQ",
-        "BEAN-PROJECTS"
+        "BEAN-PROJECTS",
+        "DUNIN-AUTOBIOGRAPHY"
       ],
-      "notes": "Qualified K1–K3 chronology, 2025 K4 archive discovery and 2020 book edition. Removed predictions, prominence/rank claims and unsupported awards. Older FAQ not used for current K4 status.",
-      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/ecdsa.html",
@@ -659,11 +668,13 @@
       "path": "ciphers/elizebeth-friedman.html",
       "title": "Elizebeth Smith Friedman — The Cipher Museum",
       "words": 570,
-      "sha256": "ef2f5f564f2aed8ecad9cdd18932a7f1c6f0ad44c1e44e77716dbb27485ce50a",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Full prose read. Header/sidebarstill600codebooks explicitlyremovedbody. Keybreakdate1940-42narrowsworkunsourced; education1915likelywrong1915graduationverify. Need CoastGuard/NSAprimary. FullFagonebookcredit and avoidbiographycounterfactual.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "df364d273aa21d728aec8f769e3df22450227d12a9b80c33cb848af2bbf00ae6",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "ELIZEBETH-NSA-2020"
+      ],
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/enigma.html",
@@ -745,13 +756,14 @@
       "path": "ciphers/geheimschreiber.html",
       "title": "Geheimschreiber T52 (Sturgeon) (Siemens & Halske teleprinter cipher) — The Cipher Museum",
       "words": 685,
-      "sha256": "52479809bd3f0b40c241f7fada8c49a8e6f55f118bf95b314e132d2fb9ea6439",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "2af7386bcb14caaf93d1cb855196cbd3ce86417f65b002f173f7a4e2068c11c7",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
-        "T52-ARTIFACT"
+        "T52-ARTIFACT",
+        "BEURLING-FRA-METHOD"
       ],
-      "notes": "Removed all-model irregular stepping and split-role assertions. Variant control detail still needs manual-level verification.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/gold-bug.html",
@@ -806,11 +818,15 @@
       "path": "ciphers/hagelin-c36.html",
       "title": "Hagelin C-36 / C-52 Lineage — The Cipher Museum",
       "words": 792,
-      "sha256": "ffc0a8396a7143ae2f26c01ece95cb9b4d8447d2d2c9439347b1525dd39bf4c1",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Full page read. C36/C52/Rubicon distinctions careful; verify Greenough1999 exact scope and machine relation. C=(K−P) withKdefinedshift differs M209displacedbarvalue25offset, explainconvention. Source links include primaryreports/technicalartifact evidence.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "a436a80b1ec1741c3bcdef92c123a8f51587057a85ed5b270540afe991f187a9",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "C36-CRYPTOMUSEUM",
+        "WESSEL-2021",
+        "GREENOUGH-1999"
+      ],
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/hill.html",
@@ -973,13 +989,13 @@
       "path": "ciphers/lasry.html",
       "title": "George Lasry — The Cipher Museum",
       "words": 480,
-      "sha256": "4fc05dd358a23395ebb578ce378033212c3a02d19d8f7c8c61e6be2476c58ac2",
-      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sha256": "49653c8f876595856e03f4f6b1c468fc65dfd53f078d72a040106dc79f026d8c",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "LASRY-2018"
       ],
-      "notes": "Removed unsupported birth year; degree defence 16 October 2017 verified visually, book 2018 separate. Corrected unrelated Z340/Copiale attribution and unverified MCMC claim. Remaining published-analysis list needs final check.",
-      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/latin-american-codebooks.html",
@@ -998,10 +1014,12 @@
       "title": "Leo Marks — The Cipher Museum",
       "words": 494,
       "sha256": "b8805bba5a6cadd6d2d1c7f4d4b9694d98cc25a9485f5ab706ac61cb101b61f3",
-      "status": "corrections prepared; scoped source review recorded; final audit pending",
-      "sources": [],
-      "notes": "Corrected wartime role scope and removed unsupported BAFTA row. Full memoir title credited. Technical pad conditions distinguished from operational security checks; memoir-specific biographical claims not yet verified against the book.",
-      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "MARKS-PUBLISHER"
+      ],
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/lorenz.html",
@@ -1052,14 +1070,15 @@
       "path": "ciphers/mavis-batey.html",
       "title": "Mavis Batey — The Cipher Museum",
       "words": 589,
-      "sha256": "f45c5a3b6920a3437af23c82203f8d1ccdf7bad1a6641efe6e96385042405e1d",
-      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sha256": "18f2a6ec3ad04c2314438765b76016808f635893f8243a0ff47d25ff643385a5",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "BATEY-CHURCHILL",
-        "BATEY-UCL"
+        "BATEY-UCL",
+        "BATEY-GAZETTE"
       ],
-      "notes": "Qualified Matapan contribution and removed unsupported Churchill congratulations and late-recognition generalization. Participant book credited by full title. Remaining later-life details require final source review.",
-      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/mccormick.html",
@@ -1162,10 +1181,12 @@
       "title": "NEMA — Swiss Rotor Machine — The Cipher Museum",
       "words": 706,
       "sha256": "c5992aff593add68080d7bddb840a5362e7583fe02e50e3953897b1b98ccf0a8",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Full page read. Fixed wiring, training/military distinctions,1947instructions and17,576stateperiod notkeyspace clearlybounded. Need actual primary manual/vector comparison. Existing tests pass but no fresh full historical verification.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "NEMA-CRYPTOMUSEUM"
+      ],
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/nfc-deployment.html",
@@ -1332,15 +1353,17 @@
       "path": "ciphers/rochefort.html",
       "title": "Joseph Rochefort — The Cipher Museum",
       "words": 649,
-      "sha256": "403d20995b41cd89798b2524b27751cb82a1e800720a73465e17a6d087d8b4eb",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "b1fdd6cf27cee08abeb147d7c68e8fa8d7280993d9e1695dfb78965ffff01d4d",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "NSA-ROCHEFORT",
         "ROCHEFORT-MEDAL",
-        "ROCHEFORT-VA-2023"
+        "ROCHEFORT-VA-2023",
+        "ROCHEFORT-REAGAN",
+        "ROCHEFORT-WATER-2021"
       ],
-      "notes": "Institutional birth-date discrepancy traced: VA explains 1900 birth versus 1898 recorded eligibility date. Retained 1900. Medal evidence remains separate.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/rosetta-stone.html",
@@ -1367,10 +1390,12 @@
       "title": "Rasterschlüssel 44 (RS44) — The Cipher Museum",
       "words": 1004,
       "sha256": "5ac8a2702bb7b9bbff12a90d482ccf44e4522e36fcb65fd85e0420286e9f647e",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Clear edition/addendum/October exclusion, source vectors and artificial preprocessing limits. Independently verify source manual figures and Friedreports before finalchecked status.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "RS44-MANUAL-1944"
+      ],
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/rsa.html",
@@ -1460,14 +1485,15 @@
       "path": "ciphers/sigsaly.html",
       "title": "SIGSALY — The Encrypted Speech System — The Cipher Museum",
       "words": 492,
-      "sha256": "34463e53233fdb6d9c4ef7c1f15950deebec1e783f9eeb035ad6062db927485a",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "12e0c22d7220323bd2f88a4b49d0de19b9396bbf974bb5a9c9e6d3677a7ec5ab",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "NCM-SIGSALY",
-        "SHANNON-1949"
+        "SHANNON-1949",
+        "SIGSALY-NSA-HISTORY"
       ],
-      "notes": "Removed claimed real speech/PCM/OTP output from deterministic character toy. Browser and independent arithmetic check confirm modulo6publicsequence; not encryption. Bell Laboratories1943source read; longPDFblocked. Terminal count/location list still requires final documentary check. Final complete reread and shared-surface review remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/slidex.html",
@@ -1582,10 +1608,12 @@
       "title": "Fleissner Turning Grille — The Cipher Museum",
       "words": 813,
       "sha256": "0af7bfc93e30e0cf21d9dd72eaec8146efbcc89ea60b88a55b6ed275f2e5aa20",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "4x4grid/orbit256count mathematically coherent; historical timeline explicitly has different accounts1915vs1916–17. NeeddirectFriedman/deLeeuwsourcecheck. Xpadding ambiguity correctlynamed.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "DELEEUW-2018"
+      ],
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/two-square.html",
@@ -1623,13 +1651,16 @@
       "path": "ciphers/venona.html",
       "title": "VENONA Project — The Cipher Museum",
       "words": 1343,
-      "sha256": "82a15b2dee5b1129dd9da8783b65f1b01f2a8122c4d0e3074c73c63dc8c58fd3",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "3c89f0246e93d2776ea9b7e9ccc71a30aac017d049d3a041359591176051bc9c",
+      "status": "bounded sixth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
-        "CAIRNCROSS-TNA"
+        "CAIRNCROSS-TNA",
+        "BENSON-VENONA",
+        "UKUS-1953",
+        "5UCO-CRYPTOMUSEUM"
       ],
-      "notes": "Distinguished1943start,1980projectend,1995release; removed unsupported McCarthy causal narrative. Cairncross1964indexedarchivalaccount replaces1991claim. Earlier technicaldecimal/binaryseparation retained. Final complete reread and shared-surface review remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "See tracker items26–33 and source-specific passages/limits. Historical narrative and teaching-model boundary reviewed; no claim of complete-source or every-fact certification.",
+      "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked."
     },
     {
       "path": "ciphers/vernam.html",
