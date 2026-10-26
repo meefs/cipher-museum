@@ -4,16 +4,16 @@ Last updated: 26 October 2026. **Audit in progress; not merged or deployed.**
 
 This is the single progress checklist for the current review. The **67 items are work packages, not 67 pages**. The site inventory contains **214 public HTML pages**. A completed item records only the stated scope, not a guarantee that an entire exhibit is flawless.
 
-**Status: 32 done · 2 drafted · 1 active · 32 to do.**
+**Status: 36 done · 2 drafted · 1 active · 28 to do.**
 
 - **DONE:** the specific work and evidence described in that row are complete.
 - **DRAFT:** edits or checks exist, but the row's remaining review/validation is unfinished.
 - **ACTIVE:** the next item being worked on.
 - **TODO:** open work; source collection may have started.
 
-**Saved work:** [draft PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13). Five batches are saved through `62a2691a7b5ca747c1f1e7363fc989301f93ae20`, covering corrections to **172 HTML pages**, with the complete test suite passing at that checkpoint. The sixth checkpoint covers corrections to **174 HTML pages** cumulatively. Its complete `npm test` run passes;18 pages also pass both desktop and mobile browser checks. Release checks remain open.
+**Saved work:** [draft PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13). Six batches are saved through `5216b10b628b4774b605a5c4b6422ff6d04ac828`, covering corrections to **174 HTML pages**, with the complete test suite passing at that checkpoint. Seventh-batch puzzle and worked-example changes pass targeted vector and browser checks and a fresh complete `npm test` run.
 
-**Current focus: item 34, Kryptos current status.** Items26–33 have completed their stated source and model checks. Comparison chronology (21), whole-site reconciliation and release remain pending.
+**Current focus: item 38, classical historical consistency.** Items34–37 have completed their stated source and model checks. Comparison chronology (21), whole-site reconciliation and release remain pending.
 
 ## Checklist
 
@@ -52,11 +52,11 @@ This is the single progress checklist for the current review. The **67 items are
 | 31 | DONE | VENONA, SIGTOT and 5-UCO | Benson chronology and codebook/additive distinction checked;1953SIGTOT assessment is conditional,5-UCO acronym/handling claims qualified. Binary widget remains distinguished from Soviet decimal systems. |
 | 32 | DONE | Driscoll, Elizebeth Friedman and Rochefort | Driscoll death in Fairfax and unsupported award corrected; Elizebeth team/recognition scope corrected. Rochefort teamwork,later intelligence service and30May1986medal checked; birth-record discrepancy remains explicit. |
 | 33 | DONE | Batey, Marks, Dunin and Lasry remaining details | Batey MBE checked against Gazette; unsupported death location/reputation removed. Marks publisher bio/poem context read; Dunin self-biography and archive scope checked; Lasry unsupported Zodiac attribution removed. Prior cited memoir/degree scope retained. |
-| 34 | ACTIVE | Kryptos current status | Verify 2025 plaintext discovery versus methods, auction/ownership claims, and remove stale editorial notes. |
-| 35 | TODO | Voynich physical description | Verify leaves/foldouts, word-count convention and parchment dating; do not equate parchment age with ink/writing date. |
-| 36 | TODO | Other unresolved-puzzle status | Reread Somerton, McCormick, Beale and Shugborough for dated evidence and uncertainty; avoid claiming current official resolution. |
-| 37 | TODO | Classical worked examples | Finish independent checks for ADFGX/ADFGVX, Alberti, Chaocipher and other examples flagged in the ledger. |
-| 38 | TODO | Classical historical consistency | Close remaining attribution, origin-date and deployment questions; qualify or remove claims lacking adequate evidence. |
+| 34 | DONE | Kryptos current status | K4 archival discovery,20November2025sale,June2026stewardship and verifier distinguished from public cryptanalysis. Source access limits explicit; CIA transcript independently counted869/865/4. Desktop/mobile controls pass. |
+| 35 | DONE | Voynich physical description | Yale102leaves/foldouts distinguished from page counts; Reddy–Knight37919tokens tied to transcription; Hodgins1404–1438/95.4% parchment range checked. Writing date not inferred. |
+| 36 | DONE | Other unresolved-puzzle status | Reread Somerton,McCormick,Beale,Shugborough. Somerton police statement dated6July2026; McCormick2011appeal not recast as current. Beale treasure/algorithm and Shugborough acrostic remain unproved. Browser controls pass. |
+| 37 | DONE | Classical worked examples | Complete ADFGX/ADFGVX fractionation/transposition examples independently calculated; Alberti rings made consistent; Chaocipher reference checked against published vector before widget seed.515exhibit assertions and20desktop/mobile checks pass; two mobile explanations visually inspected. |
+| 38 | ACTIVE | Classical historical consistency | Close remaining attribution, origin-date and deployment questions; qualify or remove claims lacking adequate evidence. |
 | 39 | TODO | Foundations index and summaries | Reconcile CVP/LWE, random-oracle, Euler unit-condition and other card summaries with the detailed exhibits. |
 | 40 | TODO | Foundations mathematics and interactions | Recheck finite-field/real-model boundaries, noise edge cases, diagrams and input constraints with existing meaningful tests. |
 | 41 | TODO | AES and RSA claims | Verify standards/current-use wording and historic priority; keep primitive security distinct from protocol and implementation security. |
@@ -110,3 +110,5 @@ The release gate is items 57–67. Existing authorization covers merging and dep
 - **26 October 2026 — fifth batch:** Closed items13–20,22,24,25. Fourteen pages passed desktop/mobile smoke checks; six widget behaviors exercised, including the author’s Solitaire vector. The intermediate full suite failed on a brittle comparison-test predicate; the predicate was corrected and targeted checks pass. After metadata generation, the fresh complete npm test run passed.
 
 - **26 October 2026 — sixth batch:** Closed items26–33 with source-specific limits. Corrected machine histories, operational claims and biographies; original manual vectors checked. All36browser checks pass across18pages, and Colossus/mobile results were visually inspected. Fresh complete `npm test` passes. Saved as a draft checkpoint; no merge/deployment.
+
+- **26 October 2026 — seventh batch, items34–37:** Reconciled current puzzle evidence and counting conventions; corrected complete classical examples. Targeted vectors and20browser checks pass. Fresh complete `npm test` passes; no release claimed.

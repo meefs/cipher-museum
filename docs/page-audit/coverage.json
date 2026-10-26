@@ -55,21 +55,25 @@
       "path": "ciphers/adfgvx.html",
       "title": "ADFGVX Cipher — The Cipher Museum",
       "words": 565,
-      "sha256": "0a0e10e2747454bbeac279d18ec56174a4d81db38636d1fdc44de0889aaf217e",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Full prose read. Header/quickfacts48hours contradicts nuanced body source. Session keys unique guarantee too strong. Grid coordinate example correct by inspection. Need Painvin source and independent full vector.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "2f494f685339cc5db5228c9d6b84dae8f12022e1e31f53dd6c557ecf5e529f9b",
+      "status": "bounded seventh-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items34–37: source-specific evidence and limits in sources.json; full reread and explicit examples reviewed. See seventh-pass narrative. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Seventh batch:1280/390page loads without script errors or document overflow; four classical vectors and puzzle controls exercised. See browser-puzzles-seventh.json."
     },
     {
       "path": "ciphers/adfgx.html",
       "title": "ADFGX Cipher — The Cipher Museum",
       "words": 515,
-      "sha256": "59fd5e1c8a731ab0f0a7f896a1f9f70686789056c169d51ba3b5d5add014cc5c",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Full prose read. Headline one Frenchman contradicts attribution to other analysts; differential frequency label suggests modern method. Diagram H FF etc incomplete square cannot verify. AES MixColumns not merely permutation/final round exception; all modern ciphers bit alphabet too broad. Historical offensive effect qualify.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "96cbc41ca4df9585873f04523007a5b1c7a6e2df7ea75a4cfc3b2030bbd97ab8",
+      "status": "bounded seventh-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items34–37: source-specific evidence and limits in sources.json; full reread and explicit examples reviewed. See seventh-pass narrative. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Seventh batch:1280/390page loads without script errors or document overflow; four classical vectors and puzzle controls exercised. See browser-puzzles-seventh.json."
     },
     {
       "path": "ciphers/aeneas-tacticus.html",
@@ -120,11 +124,13 @@
       "path": "ciphers/alberti-disk.html",
       "title": "Alberti Cipher Disk — The Cipher Museum",
       "words": 550,
-      "sha256": "302279cb50cefbb21e2636291ea1096e6b120973f71a4ca67055e6e254f8ac55",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Kahn PDF171–175 supports disk description and1466/1467dating. Qualified direct lineage/priority claims; diagram and literal rings remain to inspect; existing regular-step toy caveat needs runtime review.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "74ce84dc2853db8d1716fe493538dbdd56d5b78bf844f17c0df58a89634a1863",
+      "status": "bounded seventh-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items34–37: source-specific evidence and limits in sources.json; full reread and explicit examples reviewed. See seventh-pass narrative. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Seventh batch:1280/390page loads without script errors or document overflow; four classical vectors and puzzle controls exercised. See browser-puzzles-seventh.json."
     },
     {
       "path": "ciphers/amharic-ge-ez-ciphers.html",
@@ -252,13 +258,13 @@
       "path": "ciphers/beale.html",
       "title": "Beale Ciphers — The Cipher Museum",
       "words": 928,
-      "sha256": "19ac1f55227b7f64f8de9fb65b02a10dc7009990c6ceae447617a519022b103a",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "fff431cc4d74447386746a2752835cb67aa8405bd89c638ddf7967d2026ff677",
+      "status": "bounded seventh-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "KAHN-1996"
       ],
-      "notes": "Hammer’s support for genuine cipher distinguished from Gillogly’s dissent. B1/B3 no accepted solution; no inference of genuine treasure. Full Gillogly PDF inaccessible, so no new detailed attribution to its contents.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "Items34–37: source-specific evidence and limits in sources.json; full reread and explicit examples reviewed. See seventh-pass narrative. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Seventh batch:1280/390page loads without script errors or document overflow; four classical vectors and puzzle controls exercised. See browser-puzzles-seventh.json."
     },
     {
       "path": "ciphers/beaufort.html",
@@ -392,11 +398,13 @@
       "path": "ciphers/chaocipher.html",
       "title": "Chaocipher — The Cipher Museum",
       "words": 646,
-      "sha256": "761b1dbee2cfb4ac0f1e938f0f6b960577968c6ad4b309e26be5f603b12b6a0e",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Full prose read.1953-2010notnearlycentury, 1918-1960not50years. Noonewouldlicense/Friedmanrefused undocumented. ChaCha20blocknotperbyteupdating; Kerckhoffsnotprovedbyonecase. Wheelprocedureindependentvectorcheck needed.2016attackconditionswellqualified.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "620789389603b41b0f530fdc3194e06757db931fc4a6a25bb1452759abc14cc2",
+      "status": "bounded seventh-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "RUBIN-CHAOCIPHER-2010"
+      ],
+      "notes": "Items34–37: source-specific evidence and limits in sources.json; full reread and explicit examples reviewed. See seventh-pass narrative. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Seventh batch:1280/390page loads without script errors or document overflow; four classical vectors and puzzle controls exercised. See browser-puzzles-seventh.json."
     },
     {
       "path": "ciphers/che-guevara.html",
@@ -979,11 +987,21 @@
       "path": "ciphers/kryptos.html",
       "title": "Kryptos — The Cipher Museum",
       "words": 2644,
-      "sha256": "be3fedf06b0431f8b0f45e176ff16e572aa5c6780e459a51ef254e15286529f0",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read including related cards. HeaderK4unsolvedmust match2025archivalplaintext vs publiccryptanalysis. Cribs4+9+6+5=24correct. SHA/encodingscope notallunknown. K2missingS correction andclaimCarterK2needsprimary. JulySept2025articlemetadataandauctionpriceverifyactualrecord. No comparative strongerHillconjecture/wholecommunityclockassumptions withoutsource. Remove productRound3references.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "3779c75e3c9a3374b9b806fb34c1fdf9abff6679147b86ab72305eda9586e790",
+      "status": "bounded seventh-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "CIA-KRYPTOS-INSTALLATION",
+        "DUNIN-K2-2006",
+        "DUNIN-KRYPTOS-FAQ",
+        "PARADIGM-KRYPTOS-2026",
+        "RR-KRYPTOS-DISCOVERY",
+        "RR-KRYPTOS-SALE",
+        "SMITHSONIAN-SANBORN-ACCESS",
+        "BAUER-LINK-MOLLE-2016",
+        "SANBORN-CLOCK-2025"
+      ],
+      "notes": "Items34–37: source-specific evidence and limits in sources.json; full reread and explicit examples reviewed. See seventh-pass narrative. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Seventh batch:1280/390page loads without script errors or document overflow; four classical vectors and puzzle controls exercised. See browser-puzzles-seventh.json."
     },
     {
       "path": "ciphers/lasry.html",
@@ -1085,12 +1103,12 @@
       "title": "McCormick Notes — The Cipher Museum",
       "words": 455,
       "sha256": "daae3fede3d9e8eab834ad86cfa5365105fcb7a452aa4729004c92fe016218bb",
-      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "status": "bounded seventh-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "MCCORMICK-FBI-2011"
       ],
-      "notes": "2011 appeal explicitly dated. Removed literacy and full-context assertions; default sample explicitly illustrative, not authenticated note transcription; normalized bigram limitations stated.",
-      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
+      "notes": "Items34–37: source-specific evidence and limits in sources.json; full reread and explicit examples reviewed. See seventh-pass narrative. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Seventh batch:1280/390page loads without script errors or document overflow; four classical vectors and puzzle controls exercised. See browser-puzzles-seventh.json."
     },
     {
       "path": "ciphers/microdot.html",
@@ -1464,12 +1482,12 @@
       "title": "Shugborough Inscription — The Cipher Museum",
       "words": 407,
       "sha256": "84817fe63ef9b9c8f1ebcd999ad7112d23b55892c1efbd07c02dc0866f15f55a",
-      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "status": "bounded seventh-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "SHUGBOROUGH-NT"
       ],
-      "notes": "Separated monument chronology from undated inscription; removed official-cipher status and proof-by-initials claims. Metadata and comparison dating qualified.",
-      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
+      "notes": "Items34–37: source-specific evidence and limits in sources.json; full reread and explicit examples reviewed. See seventh-pass narrative. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Seventh batch:1280/390page loads without script errors or document overflow; four classical vectors and puzzle controls exercised. See browser-puzzles-seventh.json."
     },
     {
       "path": "ciphers/sigaba.html",
@@ -1535,11 +1553,13 @@
       "path": "ciphers/somerton-man.html",
       "title": "Somerton Man Code — The Cipher Museum",
       "words": 426,
-      "sha256": "4c07f01615fc99eb468f99118e9df0adbe5df25d4074af9365d7a70ba11bfd51",
-      "status": "corrections prepared; scoped source review recorded; final audit pending",
-      "sources": [],
-      "notes": "Proposed 2022 identification distinguished from official confirmation and unexplained writing. Simplified four-line widget explicitly omits the crossed-out line; not a facsimile. No claim of 2026 official resolution.",
-      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
+      "sha256": "59ea21aea419d1183f160d2ab904976d0460e741db336887e59bbebd32b23b47",
+      "status": "bounded seventh-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "SOMERTON-ABC-2026"
+      ],
+      "notes": "Items34–37: source-specific evidence and limits in sources.json; full reread and explicit examples reviewed. See seventh-pass narrative. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Seventh batch:1280/390page loads without script errors or document overflow; four classical vectors and puzzle controls exercised. See browser-puzzles-seventh.json."
     },
     {
       "path": "ciphers/stager.html",
@@ -1706,17 +1726,19 @@
       "path": "ciphers/voynich.html",
       "title": "The Voynich Manuscript (c. 1404–1438) — The Cipher Museum",
       "words": 1377,
-      "sha256": "737e64ea81758edbeb631f612610719c387d132b4e2ed63e3571638db9f4f360",
-      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sha256": "7db56c507c768b0bb2f77dd0dd9de5b5da8a4be08e3be92c7bae949f181a1838",
+      "status": "bounded seventh-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "REDDY-KNIGHT-2011",
         "DIMPERIO-1978",
         "EVA-DESIGN",
         "BAX-2014",
-        "BRISTOL-2019"
+        "BRISTOL-2019",
+        "YALE-MS408-PHYSICAL",
+        "HODGINS-2009"
       ],
-      "notes": "Replaced unsourced frequency graphic with published Table 2; corrected statistical and Currier A/B inferences, historical interpretation accounts and mailing-list peer-review claim. Widget now accurately described as an invented Latin substitution, not EVA glyph rendering. Bibliography credits full monograph title without download link. Remaining physical page/word counts and radiocarbon source details need final review.",
-      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
+      "notes": "Items34–37: source-specific evidence and limits in sources.json; full reread and explicit examples reviewed. See seventh-pass narrative. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Seventh batch:1280/390page loads without script errors or document overflow; four classical vectors and puzzle controls exercised. See browser-puzzles-seventh.json."
     },
     {
       "path": "ciphers/wadsworth-cipher.html",

@@ -109,7 +109,17 @@ G    r  3  c  v  s  5
 V    z  9  7  j  2  w
 X    b  t  i  l  u  8
 
-Same two-step process: substitution → transposition</pre>
+Worked example with this square and column key GERMAN:
+EAT20 → DF DG XD VV AF
+
+G E R M A N
+D F D G X D
+V V A F
+
+Read columns in A E G M N R order:
+X / FV / DV / GF / D / DA
+Ciphertext: XFVDVGFDDA</pre>
+<p>To reproduce this example in the widget, replace its default keys with <code>PH0QG64MEA1YNOFDXKR3CVS5Z97J2WBTILU8,GERMAN</code>. The first part lists this illustrated square in row order; the widget’s default PRIVACY square is different.</p>
       <figure class="figure">
         <svg viewBox="0 0 420 270" style="max-width:420px;width:100%;height:auto;" aria-label="ADFGVX 6 by 6 grid">
           <style>
@@ -181,9 +191,9 @@ Same two-step process: substitution → transposition</pre>
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from ADFGVX Cipher</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>Digits in cipher alphabet</td><td>Modern ciphers operate on bytes (0-255) — all digit values represented</td></tr>
+          <tbody><tr><td>Digits in cipher alphabet</td><td>Digital encryption can protect encodings of letters, digits and other data</td></tr>
 <tr><td>Substitution + transposition combination</td><td>AES SP-network: Substitution-Permutation per round</td></tr>
-<tr><td>Daily key changes</td><td>Session keys: modern protocols generate unique keys per session</td></tr></tbody>
+<tr><td>Daily key changes</td><td>Compare fresh session-key derivation; uniqueness depends on the protocol and its implementation</td></tr></tbody>
         </table>
       </div>
     </div>

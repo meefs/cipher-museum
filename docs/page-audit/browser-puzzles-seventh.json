@@ -1,0 +1,200 @@
+{
+  "items": [
+    34,
+    35,
+    36,
+    37
+  ],
+  "scope": "Local desktop/mobile page and word-table interaction; external resources blocked.",
+  "pages": [
+    {
+      "slug": "kryptos",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "voynich",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "somerton-man",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "mccormick",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "beale",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "shugborough",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "alberti-disk",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "adfgx",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "adfgvx",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "chaocipher",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "kryptos",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "voynich",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "somerton-man",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "mccormick",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "beale",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "shugborough",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "alberti-disk",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "adfgx",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "adfgvx",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "chaocipher",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "failures": [],
+  "interactions": [
+    {
+      "slug": "kryptos",
+      "width": 1280,
+      "check": "Two Morse presets decoded; no audio hardware test"
+    },
+    {
+      "slug": "alberti-disk",
+      "width": 1280,
+      "input": "AAAAABCD",
+      "key": "3",
+      "expected": "YYYYCXDW"
+    },
+    {
+      "slug": "adfgx",
+      "width": 1280,
+      "input": "HELLO",
+      "key": "PRIVACY,GERMAN",
+      "expected": "FFXFFXFXDG"
+    },
+    {
+      "slug": "adfgvx",
+      "width": 1280,
+      "input": "EAT20",
+      "key": "PH0QG64MEA1YNOFDXKR3CVS5Z97J2WBTILU8,GERMAN",
+      "expected": "XFVDVGFDDA"
+    },
+    {
+      "slug": "chaocipher",
+      "width": 1280,
+      "input": "WELLDONEISBETTERTHANWELLSAID",
+      "key": "CHAOCIPHER",
+      "expected": "DSZYOZXXGRZVVUSRQUBYXYJBMZIE"
+    },
+    {
+      "slug": "kryptos",
+      "width": 390,
+      "check": "Two Morse presets decoded; no audio hardware test"
+    },
+    {
+      "slug": "alberti-disk",
+      "width": 390,
+      "input": "AAAAABCD",
+      "key": "3",
+      "expected": "YYYYCXDW"
+    },
+    {
+      "slug": "adfgx",
+      "width": 390,
+      "input": "HELLO",
+      "key": "PRIVACY,GERMAN",
+      "expected": "FFXFFXFXDG"
+    },
+    {
+      "slug": "adfgvx",
+      "width": 390,
+      "input": "EAT20",
+      "key": "PH0QG64MEA1YNOFDXKR3CVS5Z97J2WBTILU8,GERMAN",
+      "expected": "XFVDVGFDDA"
+    },
+    {
+      "slug": "chaocipher",
+      "width": 390,
+      "input": "WELLDONEISBETTERTHANWELLSAID",
+      "key": "CHAOCIPHER",
+      "expected": "DSZYOZXXGRZVVUSRQUBYXYJBMZIE"
+    }
+  ]
+}

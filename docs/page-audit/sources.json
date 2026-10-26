@@ -716,7 +716,8 @@
     ],
     "year": 2011,
     "passages_read": [
-      "§§4.1–4.2, printed pp.80–81, Table 2"
+      "§§4.1–4.2, printed pp.80–81, Table 2",
+      "§2.2: Currier-based transcription,225text-bearing pages,37919word tokens; not a universal manuscript count"
     ],
     "scope": "Sample-dependent word-length and letter prediction results; table reports held-out word types and ten-fold averaging. Does not identify language, scribes or cipher.",
     "url": "https://aclanthology.org/W11-1511/"
@@ -1184,5 +1185,153 @@
       "Read early-years paragraph: born29December1958,SantaMonica. Self-reported primary biography. Removed dynamic ranking of Voynich on her list."
     ],
     "scope": "Only the stated passages and claims were checked."
+  },
+  "PARADIGM-KRYPTOS-2026": {
+    "title": "Project Kryptos",
+    "authors": [
+      "Dan Robinson",
+      "Matt Huang"
+    ],
+    "year": 2026,
+    "url": "https://www.paradigm.xyz/writing/kryptos",
+    "passages_read": [
+      "Indexed primary announcement, dated 06.12.2026 (12 June); ownership, verifier and K5 paragraphs"
+    ],
+    "scope": "Operator account of archive stewardship and verification; no independent audit of implementation. Search index mis-parses displayed US date as December; contemporary June reporting resolves it."
+  },
+  "RR-KRYPTOS-DISCOVERY": {
+    "title": "Kryptos K4: Discovered, Not Solved — Here’s What Actually Happened",
+    "authors": [
+      "RR Auction"
+    ],
+    "year": 2025,
+    "url": "https://content.rrauction.com/kryptos-k4-discovered-not-solved-heres-what-actually-happened/",
+    "passages_read": [
+      "23 October announcement, recovered fragments and method distinction"
+    ],
+    "scope": "Auctioneer is an interested primary participant. Archive discovery is distinct from a reproducible cipher method; blanket closure of all Sanborn papers not inferred."
+  },
+  "RR-KRYPTOS-SALE": {
+    "title": "Jim Sanborn’s Complete Kryptos Archive Sells for $962,500 at Auction",
+    "authors": [
+      "RR Auction"
+    ],
+    "year": 2025,
+    "url": "https://content.rrauction.com/jim-sanborns-complete-kryptos-archive-sells-for-962500-at-auction/",
+    "passages_read": [
+      "21 November announcement: sale closed 20 November; price includes buyer’s premium"
+    ],
+    "scope": "Sale price and contents; anonymous buyer at that date, subsequently identified by Paradigm."
+  },
+  "SMITHSONIAN-SANBORN-ACCESS": {
+    "title": "Jim Sanborn papers: How to Use This Collection",
+    "authors": [
+      "Smithsonian Archives of American Art"
+    ],
+    "year": null,
+    "url": "https://www.aaa.si.edu/collections/jim-sanborn-papers-22298/how-to-use",
+    "passages_read": [
+      "Collection access statement and finding-aid description"
+    ],
+    "scope": "Collection-level research access does not imply every folder is unrestricted; neither does a restricted folder close the entire collection."
+  },
+  "CIA-KRYPTOS-INSTALLATION": {
+    "title": "Kryptos Sculpture",
+    "authors": [
+      "Central Intelligence Agency"
+    ],
+    "year": null,
+    "url": "https://www.cia.gov/legacy/headquarters/kryptos-sculpture/",
+    "passages_read": [
+      "Installation description, Artist section and complete Panel 1 text transcription"
+    ],
+    "scope": "Transcript independently counted: 869 characters, 865 letters, four question marks. Installation count 1735 quoted as CIA figure. Outdated K4 status and Vigenere priority not adopted."
+  },
+  "DUNIN-K2-2006": {
+    "title": "Kryptos Part 2 Was Wrong",
+    "authors": [
+      "Elonka Dunin",
+      "Kryptos Group"
+    ],
+    "year": 2006,
+    "url": "https://elonka.com/kryptos/CorrectedK2Announcement.html",
+    "passages_read": [
+      "19 April announcement and corrected ciphertext procedure"
+    ],
+    "scope": "Documents WESTIDBYROWS to WESTXLAYERTWO correction; does not prove a K4 theory."
+  },
+  "BAUER-LINK-MOLLE-2016": {
+    "title": "James Sanborn’s Kryptos and the matrix encryption conjecture",
+    "authors": [
+      "Craig Bauer",
+      "Gregory Link",
+      "Dante Molle"
+    ],
+    "year": 2016,
+    "url": "https://doi.org/10.1080/01611194.2016.1141556",
+    "passages_read": [
+      "Bibliographic record and abstract only; Cryptologia 40(6),541–552"
+    ],
+    "scope": "Full paper inaccessible in this pass. Record supports attribution of a matrix-encryption conjecture, not a solved method or new attack-detail claim."
+  },
+  "YALE-MS408-PHYSICAL": {
+    "title": "Beinecke MS 408 catalogue",
+    "authors": [
+      "Yale University Library"
+    ],
+    "year": null,
+    "url": "https://pre1600ms.beinecke.library.yale.edu/docs/pre1600.ms408.htm",
+    "passages_read": [
+      "Physical description: parchment,102leaves,foldouts"
+    ],
+    "scope": "Physical extent distinct from unfolded page surfaces; obsolete catalogue dating and provenance statements not adopted."
+  },
+  "HODGINS-2009": {
+    "title": "Dating Results for Voynich Manuscript Parchment Leaves 8, 26, 47 and 68",
+    "authors": [
+      "Greg Hodgins"
+    ],
+    "year": 2009,
+    "url": "https://www.voynich.nu/papers/Carbon_GH_2009.pdf",
+    "passages_read": [
+      "17 February letter, pp.1–3, extracted Figure7 range"
+    ],
+    "scope": "Primary laboratory report gives combined calibrated 1404–1438 range at95.4%. Dates animal material, not ink. Text extraction read; no claim of visually examining the PDF. Apparent leaf-number inconsistency in procedural prose not imported."
+  },
+  "SOMERTON-ABC-2026": {
+    "title": "SA Police report to coroner into Somerton Man case complete ‘very soon’",
+    "authors": [
+      "Eugene Boisvert"
+    ],
+    "year": 2026,
+    "url": "https://www.abc.net.au/news/2026-07-06/sa-police-report-coroner-into-somerton-man-case-very-soon/106869302",
+    "passages_read": [
+      "6 July report, police spokesperson statement and Abbott attribution"
+    ],
+    "scope": "News report quotes police investigation ongoing. Abbott’s expected timeline is not an official deadline or finding; identity research does not decipher the notes."
+  },
+  "RUBIN-CHAOCIPHER-2010": {
+    "title": "Chaocipher Revealed: The Algorithm",
+    "authors": [
+      "Moshe Rubin"
+    ],
+    "year": 2010,
+    "url": "https://www.chaocipher.com/ActualChaocipher/Chaocipher-Revealed-Algorithm.pdf",
+    "passages_read": [
+      "pp.1–5: two alphabets, rotations, permutations and worked example"
+    ],
+    "scope": "Independent string-based calculation reproduces published OAHQHCNYNXTSZJRRHJBYHQKSOUJY vector; applying those rules to widget seed reproduces DSZYOZXXGRZVVUSRQUBYXYJBMZIE. Museum seed is a restricted setup. Abstract’s Silent Years date not adopted."
+  },
+  "SANBORN-CLOCK-2025": {
+    "title": "The CIA Has Been Home to an Unsolved Puzzle for 35 Years. Its Creator Just Released the Final Clues.",
+    "authors": [
+      "Darren Orf"
+    ],
+    "year": 2025,
+    "url": "https://www.popularmechanics.com/science/math/a69447312/kryptos-puzzle-clues/",
+    "passages_read": [
+      "19 November report, reproduced passage from Sanborn’s open letter identifying World Clock"
+    ],
+    "scope": "Secondary report quoting the creator’s statement; linked original DocumentCloud scan returned403. No claim that the full original letter was inspected."
   }
 }
