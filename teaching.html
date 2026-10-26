@@ -48,6 +48,17 @@
         <li>Demonstrate solver benchmarking and reproducibility</li>
       </ul>
 
+      <section id="columnar-classroom" aria-labelledby="columnar-classroom-title">
+        <h2 id="columnar-classroom-title">A small repeatable columnar experiment</h2>
+        <p>Compare direct scoring and staged initialization with the <a href="ciphers/columnar.html#advanced-search">existing columnar search</a>. The classroom runner uses four synthetic known-answer messages, three fixed seeds and two variants: 24 runs, including failures. It records exact plaintext and exact key recovery separately, preprocessing and total evaluations, elapsed time, settings and source-file hashes.</p>
+        <p>In a repository checkout with Node.js, run:</p>
+        <pre style="white-space:pre-wrap;overflow-wrap:anywhere;"><code>node scripts/columnar-classroom.js &gt; columnar-classroom-results.json
+node scripts/columnar-classroom.js --check</code></pre>
+        <p><a href="public/teaching/columnar-classroom.md">Open the classroom worksheet</a> · <a href="public/teaching/columnar-classroom-fixtures.json">Inspect the fixed fixtures</a> · <a href="scripts/columnar-classroom.js">Inspect the runner</a></p>
+        <p>Keep unsuccessful and preprocessing-exhausted runs in the denominator. Repeated seeds on one message are dependent; these tiny-sample counts are not general recovery probabilities. Equal score-evaluation budgets are not equal CPU time. Exact replay excludes elapsed milliseconds.</p>
+        <p>Reading: George Lasry, <cite>A Methodology for the Cryptanalysis of Classical Ciphers with Search Metaheuristics</cite> (2018 published thesis), §4.7, printed pp. 59–60 / PDF pp. 80–81, and §5.3, printed pp. 67–75 and 79–80 / PDF pp. 88–96 and 100–101. This exercise adopts the comparison method, not the thesis’s recovery rates.</p>
+      </section>
+
       <h2>For Tool Builders</h2>
       <ul>
         <li>Test solvers on a reproducible, versioned benchmark</li>

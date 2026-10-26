@@ -123,6 +123,20 @@
     </div>
   </section>
 
+  <section class="exhibit" id="why-abort">
+    <div class="step-head"><span class="step-num">&#167;4</span><h2>Why abort a signature attempt?</h2></div>
+    <p>ML-DSA forms a response shaped like <em>z = y + c&middot;s</em>: a random mask plus a secret-dependent shift. Unlike uniform masking around a finite group, a mask drawn from a bounded interval has edges. Publishing a response near an edge can reveal information about that shift.</p>
+    <p><strong>A scalar example.</strong> Choose the integer mask <em>y</em> uniformly from &minus;4 through 4, and let the shift <em>t</em> be &minus;1, 0 or 1. The response is <em>z = y + t</em>. These are inclusive integer ranges:</p>
+    <ul>
+      <li>For <em>t = &minus;1</em>, responses range from &minus;5 through 3.</li>
+      <li>For <em>t = 0</em>, responses range from &minus;4 through 4.</li>
+      <li>For <em>t = 1</em>, responses range from &minus;3 through 5.</li>
+    </ul>
+    <p>Seeing <em>z = 5</em> identifies <em>t = 1</em>. Instead, discard the attempt unless <em>&minus;3 &le; z &le; 3</em>, then resample the mask. For every allowed shift, exactly seven of the nine masks survive. Conditional on acceptance, each of the seven responses has probability 1/7, independent of the shift. The common interior removes this edge information.</p>
+    <p>This illustrates one reason for Fiat&ndash;Shamir <em>with aborts</em>. Actual ML-DSA operates on polynomial vectors, imposes a strict response-norm bound and performs further rejection checks. The scalar example is not its signing algorithm or a security proof. Compare the <a href="../ciphers/zero-knowledge-proofs.html">Schnorr identification example</a>, where masking uses modular arithmetic.</p>
+    <p>Explore the existing <a href="https://systemslibrarian.github.io/crypto-lab-dilithium-reject/">Dilithium Reject lab</a>: &ldquo;Why Each Check Exists&rdquo; explains the bounds, and &ldquo;Watch the Loop&rdquo; shows signing attempts. Retry histograms alone do not demonstrate exploitable secret leakage.</p>
+  </section>
+
   <section class="exhibit">
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
@@ -132,7 +146,7 @@
     <p class="aside">Related: <a href="one-way-function.html" style="color:var(--vermilion)">One-Way Functions</a> (pre-image resistance in general), <a href="reduction.html" style="color:var(--vermilion)">Reduction &amp; Proof</a> (what a proof in this model claims).</p>
   </section>
 
-  <p class="aside"><strong>Sources and scope:</strong> <a href="https://www.rfc-editor.org/rfc/rfc8235.html">RFC 8235 (2017)</a>; NIST <a href="https://csrc.nist.gov/pubs/fips/204/final">FIPS 204</a> and <a href="https://csrc.nist.gov/pubs/fips/205/final">FIPS 205</a> (2024). The interactive 16-bit mixer is an illustration, not a cryptographic hash.</p>
+  <p class="aside"><strong>Sources and scope:</strong> Alfred Menezes, <em>A Gentle Introduction to Lattice-Based Cryptography</em>, version 3.3, September 16, 2026, &sect;7.1.4, Issue #5, pp.73&ndash;74; <a href="https://www.rfc-editor.org/rfc/rfc8235.html">RFC 8235 (2017)</a>; NIST <a href="https://csrc.nist.gov/pubs/fips/204/final">FIPS 204</a>, Algorithm 7, and <a href="https://csrc.nist.gov/pubs/fips/205/final">FIPS 205</a> (2024). The interval example is conceptual; the interactive 16-bit mixer is an illustration, not a cryptographic hash.</p>
   </main>
 
 

@@ -4,7 +4,7 @@
   "provenance": "Original synthetic evaluation prose written for this implementation on 2026-10-26, after the existing language-model tables were frozen. These texts are evaluation inputs only, never used to build or tune the models. Small convenience sample, not representative historical traffic.",
   "models": {
     "quadgrams": "fb400ca9c2debbcee8c33b153567db38c79a07b0d0df0034be12ffe768d3b0bc",
-    "browser": "50e0e589e7d89f2ce5d7e199fdd66b6979d2cb387017089c03c288b9c94e72b9",
+    "browser": "7c5e01f81df9885c9150841509d32c0d4408f034e7795e9986117c7cd317b483",
     "holdout": "604f932655f456714580656b72c464f8c5bc304e6b2ded03c8df3c0ba8a2ad32"
   },
   "scope": "Equal score-evaluation budgets, not equal CPU time. Counts include initial scoring, restarts, stage changes, adjacency preprocessing and hybrid polishing. HC/SA/SA+HC use matched random-swap kernels; this is not a claim about every implementation. No model training or parameter tuning occurs in this script. All failures are retained. Repeated seeds on the same text are dependent.",

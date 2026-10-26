@@ -167,6 +167,21 @@
     <p>The connection is geometric intuition: lattice attacks can turn noisy equations into decoding or short-vector problems. Concrete attacks include primal, dual and hybrid approaches; it is inaccurate to say they all solve exactly this two-dimensional closest-point task. See the LWE exhibit for the public equations and message-cancellation model.</p>
   </section>
 
+  <section class="exhibit" id="lwe-lattice">
+    <div class="step-head"><span class="step-num">&#167;5</span><h2>Where the lattice hides in LWE</h2></div>
+    <p>Take a prime modulus <em>q</em> and an <em>m &times; n</em> matrix <em>A</em> with column rank <em>n</em> over the finite field F<sub>q</sub>, where <em>m &gt; n</em>. Collect every integer vector that reduces modulo <em>q</em> to a column combination of <em>A</em>:</p>
+    <p class="eq">L<sub>A</sub> = { y &isin; Z<sup>m</sup> : y &equiv; Az (mod q), z &isin; Z<sup>n</sup> }</p>
+    <p>This is a full-rank integer lattice of volume <em>q<sup>m&minus;n</sup></em>. For noisy equations <em>b &equiv; As + e (mod q)</em>, choose integer representatives of <em>b</em> and the small error <em>e</em>. Then <em>y = b &minus; e</em> belongs to the lattice and lies close to <em>b</em>. Finding that point allows recovery of <em>s</em> modulo <em>q</em> by solving the noiseless equations. Bounded-distance decoding adds a promise: the nearby lattice point is unique.</p>
+    <h3>A rectangular example you can check</h3>
+    <p>Let <em>q = 5</em>, <em>m = 2</em>, <em>n = 1</em> and let <em>A</em> be the column vector <em>(1, 2)</em>. Here the lattice consists of integer points <em>(u, v)</em> satisfying <em>v &equiv; 2u (mod 5)</em>. A basis is <em>(1, 2), (0, 5)</em>, with determinant 5.</p>
+    <p>Choose <em>s = 1</em> and <em>e = (1, 0)</em>. The observed vector is <em>b = (2, 2)</em>. Its nearby lattice point is <em>y = b &minus; e = (1, 2)</em>, at distance 1; solving <em>As &equiv; y (mod 5)</em> gives <em>s = 1</em>.</p>
+    <p><strong>Why unique?</strong> No nonzero lattice vector has squared length below 5, and <em>(1, 2)</em> has squared length 5. The lattice's minimum spacing is therefore &radic;5. Since <em>1 &lt; &radic;5/2</em>, no second lattice point can be as close to <em>b</em>. This tiny instance is easy to enumerate; it is not a hardness demonstration.</p>
+    <p><strong>A tie control.</strong> Move the target to <em>(1/2, 1)</em>, halfway between <em>(0, 0)</em> and <em>(1, 2)</em>. Both points are nearest, at distance <em>&radic;5/2</em>. The uniqueness promise has now failed. Being near some lattice point is not enough to identify one unambiguously.</p>
+    <p>The <a href="learning-with-errors.html">square invertible LWE toy</a> uses a different model: its ordinary L<sub>A</sub> is all of Z<sup>n</sup>, so this lattice alone does not express its small-secret constraint. The rectangular example supplies one bridge to primal lattice attacks, not a description of every attack or of Module-LWE's parameters.</p>
+    <p>Continue with the existing <a href="https://systemslibrarian.github.io/crypto-lab-lattice-gentle/">Lattice Gentle lab</a> for noisy-equation residuals and basis exercises, or <a href="https://systemslibrarian.github.io/crypto-lab-lattice-builder/">Lattice Builder</a> for geometry and an ML-KEM exchange. Their small geometric models remain distinct from the standard's security assumptions.</p>
+    <p class="aside"><strong>Source:</strong> Alfred Menezes, <em>A Gentle Introduction to Lattice-Based Cryptography</em>, version 3.3, September 16, 2026, &sect;4.3, Definition 4.15 and Theorem 4.16, pp.35&ndash;36; &sect;4.4.1, pp.37&ndash;38. The numerical example is worked here for teaching.</p>
+  </section>
+
   <section class="exhibit">
     <div class="connect">
       <div class="flag">Where this touches your keys</div>

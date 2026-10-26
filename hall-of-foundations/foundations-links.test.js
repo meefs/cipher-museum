@@ -3,7 +3,8 @@
    Guards the Hall's link topology.
 
    The wing is an integrated layer of the Cipher Museum. Onward navigation
-   remains inside the museum; explicit primary-source citations are allowed.
+   remains inside the museum; explicit primary-source citations and reviewed
+   page-specific follow-up labs are allowed.
    Source additions require review of this exact URL allowlist, not a broad
    permission for any external destination or sister-project launcher.
 
@@ -34,13 +35,30 @@ function hrefs(file) {
   return out;
 }
 
-// ---- 1. external links must be reviewed primary-source citations ----
-// Sister projects in particular: the Hall must not become a launcher for them.
+// ---- 1. external links must have a reviewed purpose and exact destination ----
+// The ebook follow-up authorizes these existing labs instead of duplicate
+// Museum engines. Each exception is tied to its explanatory Museum page.
+var FOLLOW_UP_LABS = {
+  "entropy.html": new Set([
+    "https://systemslibrarian.github.io/crypto-lab-good-randomness/",
+    "https://systemslibrarian.github.io/crypto-lab-noise-to-numbers/"
+  ]),
+  "random-oracle.html": new Set(["https://systemslibrarian.github.io/crypto-lab-dilithium-reject/"]),
+  "learning-with-errors.html": new Set(["https://systemslibrarian.github.io/crypto-lab-kem-trap/"]),
+  "closest-vector.html": new Set([
+    "https://systemslibrarian.github.io/crypto-lab-lattice-gentle/",
+    "https://systemslibrarian.github.io/crypto-lab-lattice-builder/"
+  ])
+};
+function reviewedLab(page, url) {
+  return !!FOLLOW_UP_LABS[page] && FOLLOW_UP_LABS[page].has(url);
+}
+// Other sister-project destinations remain prohibited.
 var FOREIGN = /crypto-lab|systemslibrarian\.dev|systemslibrarian\.github\.io/i;
 pages.forEach(function (p) {
-  var bad = hrefs(path.join(DIR, p)).filter(function (h) { return FOREIGN.test(h); });
+  var bad = hrefs(path.join(DIR, p)).filter(function (h) { return FOREIGN.test(h) && !reviewedLab(p, h); });
   assert(bad.length === 0,
-    p + " links to a sister project (must stay inside the museum): " + bad.join(", "));
+    p + " links to an unreviewed sister project: " + bad.join(", "));
 });
 
 // Exact primary-source destinations reviewed during the accuracy audit.
@@ -61,11 +79,11 @@ var PRIMARY_SOURCES = new Set([
   "https://crypto.stanford.edu/~dabo/pubs/papers/weilsigs.pdf",
   "https://eprint.iacr.org/2016/260"
 ]);
-// Canonical self-references and reviewed citations are the only exceptions.
+// Canonical self-references, reviewed citations and page-specific labs only.
 pages.forEach(function (p) {
   var bad = hrefs(path.join(DIR, p)).filter(function (h) {
     if (!/^https?:\/\//i.test(h)) return false;
-    return h.indexOf("https://ciphermuseum.com/") !== 0 && !PRIMARY_SOURCES.has(h); // canonical / og:url / og:image
+    return h.indexOf("https://ciphermuseum.com/") !== 0 && !PRIMARY_SOURCES.has(h) && !reviewedLab(p, h); // canonical / og:url / og:image
   });
   assert(bad.length === 0,
     p + " has an off-site absolute link: " + bad.join(", "));

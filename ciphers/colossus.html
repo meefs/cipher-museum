@@ -59,7 +59,36 @@
 <div class="exhibit-layout"><div class="exhibit-main">
 <div class="cipher-significance"><h2>Why This Matters</h2><p>Colossus helped attack Lorenz teleprinter traffic, known at Bletchley Park as Tunny. Tommy Flowers and his team built it at the Post Office Research Station. The first machine was working at Bletchley Park in February 1944.</p></div>
 <section class="panel"><div class="panel-body"><h2>How the Search Worked</h2><p>Punched paper tape supplied ciphertext. Electronic logic evaluated combinations of tape data and generated wheel patterns, while counters accumulated statistical scores. This accelerated the search for Lorenz chi-wheel settings. Colossus supported a larger cryptanalytic process; it did not automatically turn arbitrary intercepted traffic into readable messages.</p></div></section>
-<section class="panel ebook-experiment"><div class="panel-body"><h2>Try a Two-Wheel Chi-Setting Search</h2>
+<section class="panel" aria-labelledby="clock-condition-count"><div class="panel-body">
+<h2 id="clock-condition-count">Tape Clock → Condition → Count</h2>
+<p>Colossus read intercepted ciphertext from a continuous paper-tape loop. Sprocket holes supplied the timing signals for counting and electronic wheel movement. The wheel patterns were generated electronically, replacing the second synchronized tape used by Heath Robinson. At about 5,000 tape characters per second, the reader supplied many observations for each statistical trial; that figure is not 5,000 keys or completed trials per second.</p>
+<ol>
+  <li><strong>Clock:</strong> a tape timing pulse presents the next character and coordinates the electronic pattern.</li>
+  <li><strong>Condition:</strong> configured logic combines selected tape and wheel signals.</li>
+  <li><strong>Count:</strong> a counter increments when that condition is satisfied.</li>
+  <li><strong>Select:</strong> at the end of the count, a configured “set total” can select scores for printing.</li>
+</ol>
+<p>The original worked example below isolates one counter. Let A and B be two selected binary inputs to the logic, and count positions where <code>A XOR B = 0</code>. The six positions and their values are invented teaching data, not historical traffic or a full Colossus simulation.</p>
+<p class="ebook-table-hint">Swipe or scroll the table horizontally to see every column. Keyboard: focus the table area and use the arrow keys.</p>
+<div class="ebook-table-scroll" tabindex="0" role="region" aria-label="Colossus worked counter example">
+<table class="cipher-table" id="colossus-count-example">
+  <caption>One fixed setting: count equal input bits</caption>
+  <thead><tr><th scope="col">Position</th><th scope="col">A</th><th scope="col">B</th><th scope="col">A XOR B</th><th scope="col">Running count</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">1</th><td>0</td><td>0</td><td>0</td><td>1</td></tr>
+    <tr><th scope="row">2</th><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+    <tr><th scope="row">3</th><td>1</td><td>1</td><td>0</td><td>2</td></tr>
+    <tr><th scope="row">4</th><td>0</td><td>1</td><td>1</td><td>2</td></tr>
+    <tr><th scope="row">5</th><td>0</td><td>0</td><td>0</td><td>3</td></tr>
+    <tr><th scope="row">6</th><td>1</td><td>1</td><td>0</td><td>4</td></tr>
+  </tbody>
+</table>
+</div>
+<p id="colossus-threshold-example"><strong>Final score: 4.</strong> In “exceeds set total” mode, a set total of 3 selects this score for printing; a set total of 4 does not. Other selection modes were available. A slower reading of the same positions at the same setting would still count 4: speed changes elapsed time, not the logical result. A selected score is evidence to investigate, not a recovered plaintext.</p>
+<p>The machine had five separate counters, allowing several conditions to be counted together subject to shared stepping and spanning controls. This example shows only one condition. The <a href="#chi-setting-search">existing two-wheel experiment below</a> illustrates statistical comparison across candidate settings; the <a href="bill-tutte.html#tunny-three-tasks">three-task history</a> separates setting from structural inference and wheel-pattern recovery.</p>
+<p class="source-note">Sources: I. J. Good, Donald Michie and Geoffrey Timms, <cite>General Report on Tunny: With Emphasis on Statistical Methods</cite> (1945), §53B, printed pp. 333–334 / collected PDF pp. 327–328, and §53F–G, printed pp. 337–338 / collected PDF pp. 331–332; Paul Gannon, <cite>Colossus: Bletchley Park’s Greatest Secret</cite> (Atlantic Books, 2014 edition), chapter 15, “Inventing the Electronic Computing Machine,” converted PDF pp. 153–156, especially pp. 154, 156. Gannon’s converted PDF numbering is not verified print pagination. The six-position table is an original teaching example based on these mechanisms.</p>
+</div></section>
+<section class="panel ebook-experiment"><div class="panel-body"><h2 id="chi-setting-search">Try a Two-Wheel Chi-Setting Search</h2>
 <p>Given known chi-wheel patterns, search their initial settings. Here D = Z XOR chi, and delta means XOR of adjacent symbols. Count dots (zeroes) in delta D1 XOR delta D2, equivalently delta Z1 XOR delta Z2 XOR delta chi1 XOR delta chi2. Impulses 1 and 2 are the two low bits in this five-bit representation. All 41 × 31 = 1,271 candidate settings are counted.</p>
 <p>This is synthetic five-bit traffic with an explicitly planted residual statistic: the parity of D1 XOR D2 changes with probability 0.30 before added noise. The known wheel patterns are synthetic. It illustrates the historical two-impulse counting condition; it does not emulate German language, psi/motor wheels, Colossus hardware or full Tunny decryption.</p>
 <div class="demo-controls"><label for="chi-length">Tape length</label><select id="chi-length"><option>64</option><option>256</option><option selected>1024</option><option>4096</option></select>
@@ -67,7 +96,7 @@
 <button id="chi-run" type="button">Search settings</button></div>
 <div id="chi-results" aria-live="polite"><p>Run the search, then compare a short tape or the no-bias control. A high score alone does not identify a plaintext.</p></div>
 <p>The displayed sigma is a single-setting score. Selecting the best of 1,271 settings changes its interpretation; the experiment compares that maximum against maxima from 39 seeded independent uniform-symbol null tapes. The null assumes independent five-bit symbols and is not a historical traffic model. Short or noisy traffic can be inconclusive. Finding wheel settings, recovering unknown wheel patterns, and recovering plaintext are separate problems.</p>
-<p>Source: I. J. Good, Donald Michie and Geoffrey Timms, <cite>General Report on Tunny</cite> (1945), §§23A–C, printed pp. 78–80 / collected PDF pp. 81–83; Colossus machinery in §§53A–D, printed pp. 333–335 / collected PDF pp. 327–329. Formula and notation checked against the page images.</p>
+<p>Source: I. J. Good, Donald Michie and Geoffrey Timms, <cite>General Report on Tunny: With Emphasis on Statistical Methods</cite> (1945), §§23A–C, printed pp. 78–80 / collected PDF pp. 81–83; Colossus machinery in §§53A–D, printed pp. 333–335 / collected PDF pp. 327–329. Formula and notation checked against the page images.</p>
 </div></section>
 <section class="panel"><div class="panel-body"><h2>Historical Context and Limits</h2><p>Bill Tutte reconstructed the cipher’s logical structure, enabling later machine-assisted methods. Colossus was programmable through controls and connections, but was neither a stored-program computer nor a general-purpose machine. Its role concerned Lorenz, not Enigma. The National Museum of Computing houses a working reconstruction.</p></div></section>
 </div><aside class="exhibit-side"><section class="panel"><div class="panel-body"><h2>Quick Facts</h2>

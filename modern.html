@@ -221,6 +221,30 @@
     </div>
   </div>
 
+  <section class="panel" id="replay-freshness" aria-labelledby="replay-heading">
+    <div class="panel-body">
+      <h2 id="replay-heading">A valid tag can belong to an old message</h2>
+      <p>Suppose A carries counter 1 and B carries counter 2. Each tag covers the counter and message under the same session key. An observer records both. Compare a receiver that remembers only the last token with one that accepts a valid tag only when its counter exceeds the highest accepted counter, initially 0.</p>
+      <p class="ebook-table-hint">Swipe or scroll the table horizontally to see every column. Keyboard: focus the table area and use the arrow keys.</p>
+<div class="ebook-table-scroll" tabindex="0" role="region" aria-label="Replay and receiver-state comparison">
+<table class="cipher-table" id="replay-example">
+        <caption>Deliver A, B, then A again; authenticate before updating state</caption>
+        <thead><tr><th scope="col">Delivery</th><th scope="col">Tag check</th><th scope="col">Last-token-only rule</th><th scope="col">Increasing-counter rule</th></tr></thead>
+        <tbody>
+          <tr><td>A (1)</td><td>Valid</td><td>Accept</td><td>Accept; highest = 1</td></tr>
+          <tr><td>B (2)</td><td>Valid</td><td>Accept</td><td>Accept; highest = 2</td></tr>
+          <tr><td>A (1), replayed</td><td>Valid</td><td>Accept</td><td>Reject; highest = 2</td></tr>
+          <tr><td>A changed to counter 3; old tag</td><td>Invalid</td><td>Reject</td><td>Reject; highest = 2</td></tr>
+          <tr><td>Forget receiver state, keep key; replay A (1)</td><td>Valid</td><td>Accept</td><td>Accept; highest = 1</td></tr>
+        </tbody>
+      </table>
+</div>
+      <p>The A/B/A sequence defeats last-token-only checking. Resetting state under the unchanged key defeats the counter rule too. Rejected packets must not advance the accepted counter. This simplified rule rejects out-of-order messages; transports that allow reordering need a defined replay window and session lifecycle, including counter exhaustion. Replaying recorded ciphertext does not require encrypting a new message with a reused nonce: sender nonce uniqueness and receiver freshness are separate requirements.</p>
+      <p>Try the existing <a href="https://systemslibrarian.github.io/crypto-lab-fte/">Crypto Lab: Regex Veil</a>, in its <strong>Freshness</strong> section: open authenticated fragments twice, then reset the used-counter window. It is a local protocol teaching model, not a deployed transport.</p>
+      <p class="source-note">Sources: Ross Anderson, <em>Security Engineering: A Guide to Building Dependable Distributed Systems</em>, third edition (2020), §4.3, printed pp. 122–124 (PDF pp. 169–171); David Wong, <em>Real-World Cryptography</em> (2021 edition), §3.3.3, PDF pp. 140–143 in the reflowed edition, which has no printed pagination. The table is a museum teaching example.</p>
+    </div>
+  </section>
+
   <div class="callout callout-mystery">
     <span class="callout-icon">🎓</span>
     <div class="callout-body"><p><strong>The museum's final lesson:</strong> Many historical systems failed through structural weaknesses, key reuse, or operational mistakes; others are obsolete or unresolved. A correctly used one-time pad retains perfect secrecy. Modern cryptography adds computational security and public-key methods, while still depending on sound key management, and extends into protocols, signatures, and proofs.</p></div>

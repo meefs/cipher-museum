@@ -1,0 +1,76 @@
+{
+  "checked_at": "2026-10-26T22:36:36.051846+00:00",
+  "scope": "Availability of newly added links to existing Crypto Lab sites; not a fresh runtime or source audit of those labs.",
+  "links": [
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-aes-anatomy/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-aes-anatomy/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-biham-lens/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-biham-lens/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-context-ward/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-context-ward/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-dilithium-reject/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-dilithium-reject/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-fte/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-fte/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-good-randomness/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-good-randomness/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-kdf-chain/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-kdf-chain/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-kem-trap/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-kem-trap/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-lattice-builder/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-lattice-builder/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-lattice-gentle/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-lattice-gentle/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-masked-core/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-masked-core/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-matsui-line/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-matsui-line/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-noise-to-numbers/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-noise-to-numbers/"
+    },
+    {
+      "url": "https://systemslibrarian.github.io/crypto-lab-power-trace/",
+      "status": 200,
+      "resolved_url": "https://systemslibrarian.github.io/crypto-lab-power-trace/"
+    }
+  ]
+}

@@ -207,15 +207,16 @@ ${fence(JSON.stringify(notes, null, 2), 'json')}
   dom.window.close();
 }
 
-const extras = ['js/artifact-cards-data.min.js', 'js/artifact-cards.js', 'js/breadcrumbs.js', 'js/footer.js', 'js/ui-delegates.js', 'js/research-worker.js', 'js/research-language-model.js', 'sw.js', 'js/learning-path.js'];
+const extras = ['js/artifact-cards-data.min.js', 'js/artifact-cards.js', 'js/breadcrumbs.js', 'js/footer.js', 'js/ui-delegates.js', 'js/research-worker.js', 'js/research-language-model.js', 'sw.js', 'js/learning-path.js', 'scripts/columnar-classroom.js'];
 extras.forEach(f => scriptFiles.add(f));
 const scriptRecords = [...scriptFiles].sort().map(served => {
   read(served);
   const readable = served.replace('.min.js', '.js');
   const code = read(readable);
   const dormant = readable === 'js/learning-path.js';
-  return { served, readable, served_sha256: inputs.get(served).sha256, readable_sha256: hash(code), dormant,
-    block: sanitize(`## JavaScript — ${readable}\n\n${dormant ? '**Dormant repository content:** no live HTML reference was found in this snapshot. Do not attribute these quizzes to a currently displayed page.' : 'Supporting source for public page behavior; presence of code does not prove that every branch was exercised.'}\n\nAny ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.\n\n- Served/distributed path: \`${served}\`\n- Served SHA-256: \`${inputs.get(served).sha256}\`\n- Readable-source SHA-256: \`${hash(code)}\`\n\n${fence(code, 'javascript')}`) };
+  const classroomCli = readable === 'scripts/columnar-classroom.js';
+  return { served, readable, served_sha256: inputs.get(served).sha256, readable_sha256: hash(code), dormant, classroom_cli: classroomCli,
+    block: sanitize(`## JavaScript — ${readable}\n\n${classroomCli ? '**Classroom command-line tool:** runs with Node.js in a repository checkout; it is not a browser demo. The linked worksheet and fixed fixtures are included separately.' : dormant ? '**Dormant repository content:** no live HTML reference was found in this snapshot. Do not attribute these quizzes to a currently displayed page.' : 'Supporting source for public page behavior; presence of code does not prove that every branch was exercised.'}\n\nAny ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.\n\n- Served/distributed path: \`${served}\`\n- Served SHA-256: \`${inputs.get(served).sha256}\`\n- Readable-source SHA-256: \`${hash(code)}\`\n\n${fence(code, 'javascript')}`) };
 });
 
 const jsonFiles = [
@@ -225,7 +226,7 @@ const jsonFiles = [
   'data/exhibit-trust.json', 'data/trust-labels.json', 'data/release-identifiers.json', 'data/corpus-v0.8-supplement-replay-audit.json',
   'corpus/engine-manifest.json', 'public/corpus/stats.json', 'public/corpus/v0.8/stats.json',
   'public/corpus/v0.8/cipher-corpus.schema.json', 'public/corpus/v0.8/supplements-manifest.json',
-  'public/reports/benchmark-baselines.json', 'data/research/v1/exercises.json', 'data/research/v1/evaluation.json', 'manifest.webmanifest'
+  'public/reports/benchmark-baselines.json', 'data/research/v1/exercises.json', 'data/research/v1/evaluation.json', 'manifest.webmanifest', 'public/teaching/columnar-classroom-fixtures.json'
 ];
 const dataRecords = jsonFiles.map(file => {
   const content = read(file); JSON.parse(content);
@@ -259,7 +260,7 @@ This snapshot brings together **${records.length} public HTML pages**, **${scrip
 
 ## What is included
 
-Complete static body text, including hidden panels, captions, tables, examples, controls and inline SVG geometry; descriptive metadata; image/tooltip/accessibility text; each page's inline scripts; readable shared JavaScript (with hashes of served minified versions); tour and challenge data; all 104 corpus-browser sample records; search/artifact-card text; research scoring model; benchmark/count/schema evidence; page review notes and the complete prior source register. This includes duplicates deliberately: the same claim may differ between a page, a card and a search description.
+Complete static body text, including hidden panels, captions, tables, examples, controls and inline SVG geometry; descriptive metadata; image/tooltip/accessibility text; each page's inline scripts; readable shared JavaScript (with hashes of served minified versions); tour and challenge data; all 104 corpus-browser sample records; search/artifact-card text; research scoring model; benchmark/count/schema evidence; page review notes and the complete prior source register; the columnar classroom worksheet, its fixed fixtures and its Node.js runner. This includes duplicates deliberately: the same claim may differ between a page, a card and a search description.
 
 ## Limits the reviewer must preserve
 
@@ -294,6 +295,9 @@ function supportParts(records, prefix, label) {
 }
 supportParts(scriptRecords, '13', 'javascript');
 supportParts(dataRecords, '14', 'data');
+const worksheetFile = 'public/teaching/columnar-classroom.md';
+const worksheet = read(worksheetFile);
+part('15-classroom-worksheet.md', 'Columnar classroom worksheet', sanitize(`Source: \`${worksheetFile}\`. SHA-256: \`${hash(worksheet)}\`. Its Node.js runner and fixed JSON fixtures are in the preceding appendices.\n\n${worksheet}`));
 put('CIPHER_MUSEUM_AUDIT.md', scope + '\n\n' + pieces.map(p => p.text).join('\n\n---\n\n'));
 put('README.md', `# Cipher Museum audit export\n\nA self-contained reading pack for an AI or human reviewer without repository access.\n\n- **Start with [CIPHER_MUSEUM_AUDIT.md](CIPHER_MUSEUM_AUDIT.md)**: all ${records.length} pages, inline scripts, source register and supporting JavaScript/data in one file.\n- [CIPHER_MUSEUM_AUDIT_PACK.zip](CIPHER_MUSEUM_AUDIT_PACK.zip): download the master document, all smaller parts, prompt and manifest together.\n- [REVIEW_PROMPT.md](REVIEW_PROMPT.md): ready-to-use independent review instructions.\n- [parts/](parts/): the same page and appendix content in smaller files for context/upload limits. Upload the prompt and README first, then page parts in order; supply the source register and relevant code/data parts with each batch.\n- [manifest.json](manifest.json): all page IDs, original source hashes, supporting-file inventory and export checksums.\n\n${scope.slice(scope.indexOf('## What is included'), scope.indexOf('# Independent Cipher Museum audit instructions'))}\n\n## Snapshot and regeneration\n\nSource commit: \`${commit}\` (${stamp}). This is a frozen snapshot, not an automatically current view of the website. If pages change, regenerate deliberately.\n\nWith repository access and dependencies installed:\n\n\`\`\`sh\nnode scripts/export-audit-document.js --ref HEAD\nnode scripts/export-audit-document.js --check\npython3 scripts/package-audit-document.py\npython3 scripts/package-audit-document.py --check\n\`\`\`\n\nThe exporter reads committed files, checks every public HTML page against the coverage inventory, rejects stale page hashes, preserves every nonempty body text node outside scripts/styles, includes script bodies separately, and checks output checksums. These checks prove export coverage, not factual truth. Update the source review ledger honestly before exporting a later content revision. The --check command uses the recorded source commit and also reports source drift in the current checkout.\n\n## Parts\n\n${pieces.map(p => `- [${p.name}](parts/${p.name}): ${p.title}`).join('\n')}\n`);
 

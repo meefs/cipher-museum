@@ -16,6 +16,16 @@
 <link rel="canonical" href="https://ciphermuseum.com/hall-of-foundations/entropy.html">
 <link rel="stylesheet" href="../css/museum.css">
 <link rel="stylesheet" href="foundations.css">
+<style>
+.entropy-table { width:100%; border-collapse:collapse; margin:16px 0 24px; font-size:.9rem; }
+.entropy-table caption { text-align:left; color:var(--gold-lt); margin-bottom:8px; font-weight:600; }
+.entropy-table th, .entropy-table td { padding:10px 8px; border-bottom:1px solid var(--rule); text-align:left; vertical-align:top; overflow-wrap:anywhere; }
+.entropy-table th { color:var(--tx); }
+.entropy-table td { color:var(--ink-soft); }
+.entropy-table-wrap { overflow-x:auto; }
+.entropy-table-wrap:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+@media (max-width:480px) { .entropy-table { font-size:.8rem; } .entropy-table th, .entropy-table td { padding:8px 5px; } }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -116,8 +126,69 @@
     </div>
   </section>
 
+  <section class="exhibit" id="entropy-rate">
+    <div class="step-head"><span class="step-num">§3</span><h2>A flat histogram can hide a pattern</h2></div>
+    <p>Write A–Z in order 100 times. Each letter occurs 100 times, yet the next letter is completely predictable. The <a href="../lab/workbench.html">workbench</a> reports an index of coincidence (IC) rounded to <strong>0.0381</strong>. The exact value is 26 × 100 × 99 / (2600 × 2599). Rearranging those same letters preserves the histogram and IC. Neither statistic measures their order.</p>
+    <p>To discuss entropy, specify a source distribution. In the cyclic source below, choose one of the 26 starting letters uniformly <em>once</em>, then continue around the alphabet forever. Compare that with choosing a fresh independent uniform letter at every position. Here n is a positive block length.</p>
+    <div class="entropy-table-wrap" tabindex="0" role="region" aria-label="Source dependence comparison">
+      <table class="entropy-table" id="entropy-rate-table">
+        <caption>Uniform single-letter distributions, different sequence uncertainty</caption>
+        <thead><tr><th scope="col">Declared source</th><th scope="col">One position</th><th scope="col">Whole n-letter block</th><th scope="col">Entropy rate</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">One random cyclic phase</th><td>log₂ 26 ≈ 4.7004 bits</td><td>log₂ 26 bits: only 26 possible blocks</td><td>0 bits per letter in the limit</td></tr>
+          <tr><th scope="row">Independent uniform letters</th><td>log₂ 26 ≈ 4.7004 bits</td><td>n log₂ 26 bits: 26ⁿ possible blocks</td><td>log₂ 26 bits per letter</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Entropy rate is the limiting block entropy divided by block length. For the cyclic source, 4.7004/n tends to zero: learning the first letter determines the rest. These are properties of the declared sources, not entropy estimates for a particular observed string.</p>
+    <p class="aside">Robert M. Gray, <em>Entropy and Information Theory</em>, corrected first edition, 26 June 2023 (original 1990), §2.2, printed pp.18–20, and §2.6, printed p.42. The alphabet/IC comparison is our worked application of the distinction between marginal and sequence entropy. Continue with Crypto Lab’s <a href="https://systemslibrarian.github.io/crypto-lab-good-randomness/">Good Randomness</a> for deeper randomness experiments.</p>
+  </section>
+
+  <section class="exhibit" id="first-guess">
+    <div class="step-head"><span class="step-num">§4</span><h2>Average uncertainty versus the first guess</h2></div>
+    <p>Shannon entropy averages surprise across outcomes. Min-entropy asks about the most likely outcome: <strong>H<sub>min</sub> = −log₂(P<sub>best</sub>)</strong>, where P<sub>best</sub> is the success probability of the best single guess. Neither specifies the cost of testing a guess.</p>
+    <p>Consider an n-bit source that outputs the all-zero string with probability a, and otherwise draws a uniform n-bit string. The uniform branch can also produce zeros, so P<sub>best</sub> = a + (1−a)/2ⁿ. Each other string has probability q = (1−a)/2ⁿ. Its exact Shannon entropy is −P<sub>best</sub> log₂ P<sub>best</sub> − (2ⁿ−1)q log₂ q, with 0 log₂ 0 treated as zero.</p>
+    <div class="entropy-table-wrap" tabindex="0" role="region" aria-label="First guess and entropy comparison">
+      <table class="entropy-table" id="first-guess-table">
+        <caption>Two declared 256-bit sources</caption>
+        <thead><tr><th scope="col">Source</th><th scope="col">Shannon entropy</th><th scope="col">Best first guess</th><th scope="col">Min-entropy</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Uniform (a = 0)</th><td>256 bits</td><td>Success 2⁻²⁵⁶</td><td>256 bits</td></tr>
+          <tr><th scope="row">Mixture (a = 1/2)</th><td>Approximately 129 bits</td><td>Guess all zeros: success 1/2 + 2⁻²⁵⁷</td><td>Approximately 1 bit</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The mixture has substantial average uncertainty, yet one guess succeeds about half the time. This is a constructed distribution, not a measured password population; 2 raised to the Shannon entropy is not a “guesses required” formula. Deterministic hashing cannot manufacture missing source entropy.</p>
+    <p class="aside">Adapted from Salil P. Vadhan, <em>Pseudorandomness</em>, <em>Foundations and Trends in Theoretical Computer Science</em> 7(1–3), volume dated 2011, copyright 2012, §6.1.2, printed pp.171–172 (Definition 6.7 and Lemma 6.8). Vadhan uses a .99/.01 mixture; the half-and-half values here are our teaching preset. Crypto Lab’s <a href="https://systemslibrarian.github.io/crypto-lab-noise-to-numbers/">Noise to Numbers</a> offers a deeper exploration of randomness sources.</p>
+  </section>
+
+  <section class="exhibit" id="privacy-amplification">
+    <div class="step-head"><span class="step-num">§5</span><h2>A shorter secret after partial leakage</h2></div>
+    <p>Alice and Bob share two independent fair bits X₁ and X₂. An observer learns one bit and which position it came from; choose that position independently and fairly. Alice and Bob do not know which position leaked. Their shared output K = X₁ XOR X₂ is still a fair secret bit under this specific leakage model.</p>
+    <div class="entropy-table-wrap" tabindex="0" role="region" aria-label="Privacy amplification worked outcomes">
+      <table class="entropy-table" id="privacy-outcomes">
+        <caption>All eight equally likely outcomes (probability 1/8 each)</caption>
+        <thead><tr><th scope="col">X₁X₂</th><th scope="col">Revealed position</th><th scope="col">Observed bit</th><th scope="col">K = parity</th></tr></thead>
+        <tbody>
+          <tr><td>00</td><td>1</td><td>0</td><td>0</td></tr>
+          <tr><td>00</td><td>2</td><td>0</td><td>0</td></tr>
+          <tr><td>01</td><td>1</td><td>0</td><td>1</td></tr>
+          <tr><td>01</td><td>2</td><td>1</td><td>1</td></tr>
+          <tr><td>10</td><td>1</td><td>1</td><td>1</td></tr>
+          <tr><td>10</td><td>2</td><td>0</td><td>1</td></tr>
+          <tr><td>11</td><td>1</td><td>1</td><td>0</td></tr>
+          <tr><td>11</td><td>2</td><td>1</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Group rows by what the observer knows: (position, observed bit). Every group contains one K = 0 and one K = 1. Thus K is uniform and independent of that observation. For example, seeing position 1 equal to 0 leaves 00 and 01 equally likely, giving opposite parities.</p>
+    <p><strong>Negative control: leak parity instead.</strong> If the observer learns X₁ XOR X₂, the proposed output K is completely known: their first guess succeeds with probability 1. XOR does not remove arbitrary leakage.</p>
+    <p>Privacy amplification aims to obtain a shorter, almost-uniform secret independent of the observer’s side information and the public extractor choice. The guarantees depend on the joint source/leakage model and remaining uncertainty. This fixed table enumerates a model; it generates no operational secret keys.</p>
+    <p class="aside">Himanshu Tyagi and Shun Watanabe, <em>Information-theoretic Cryptography</em>, Cambridge University Press, 2023, §7.3, printed p.124, Example 7.9 and Definition 7.10; pp.125–127 develop conditional min-entropy and Theorem 7.13. The leaked-parity control is our contrasting example. See also the <a href="../glossary.html#gl-X">XOR glossary entry</a>.</p>
+  </section>
+
   <section class="exhibit">
-    <div class="step-head"><span class="step-num">§3</span><h2>The one-time pad's perfect secret</h2></div>
+    <div class="step-head"><span class="step-num">§6</span><h2>The one-time pad's perfect secret</h2></div>
     <p>A pad chosen uniformly and independently of the message, kept secret, as long as the message and used once provides perfect secrecy for fixed-length messages. Entropy is part of that argument, but a high-entropy string that is public or related to the message is not a secure pad.</p>
     <div class="pull">
       Perfect secrecy exists. It just costs one bit of true randomness for every

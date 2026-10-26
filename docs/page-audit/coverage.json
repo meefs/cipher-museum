@@ -81,10 +81,13 @@
     {
       "path": "cipher-detective.html",
       "title": "Cipher Detective — The Cipher Museum",
-      "words": 796,
-      "sha256": "427cfc8eb09e4a82a3dc2c6636c593bcba67072de0c15c00c07a84f7984bafc6",
-      "status": "bounded review and local release validation complete",
-      "sources": [],
+      "words": 898,
+      "sha256": "0c63f1a92df29f6b913afbd15b1fba643ab3a34399096361f699f213c2465294",
+      "status": "ebook follow-up implementation and local validation complete",
+      "sources": [
+        "LASRY-2018",
+        "SWEIGART-2018"
+      ],
       "notes": "Root reread page and dynamic Detective behavior; IC references are not universal bounds, repeated fragments are hypotheses, and scores are not proof of cipher identification. Full source credits retained without ebook links.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
       "final_prose_review": {
@@ -101,7 +104,18 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-01"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "cipher-flow.html",
@@ -216,13 +230,15 @@
     {
       "path": "ciphers/aes.html",
       "title": "AES (Advanced Encryption Standard) — The Cipher Museum",
-      "words": 661,
-      "sha256": "4e71d55e901d9eb7f37eafe6a841bdaa1a94f363140052f6f4655ffcdc8fafcb",
-      "status": "bounded review and local release validation complete",
+      "words": 1051,
+      "sha256": "12fee221244c92509002becdc09f7000adf8c1eb461b4d8088039090596f0d66",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "NIST-AES-DEVELOPMENT",
         "SIGNAL-RATCHET-REV4",
-        "NSA-CNSA-2025"
+        "NSA-CNSA-2025",
+        "DAEMEN-RIJMEN-2020",
+        "MANGARD-OSWALD-POPP-2007"
       ],
       "notes": "Final exhibit_final_read consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/exhibit-final-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -241,10 +257,23 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "CNSA official indexed table supports AES256classification use; direct PDF403, no full-document review. Signal specification is not an inventory of every deployed client."
-      ]
+      ],
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-06",
+          "EBR-20",
+          "EBR-21"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "ciphers/affine.html",
@@ -789,12 +818,14 @@
     {
       "path": "ciphers/bill-tutte.html",
       "title": "Bill Tutte — The Cipher Museum",
-      "words": 1007,
-      "sha256": "e4458af507b886572bf058c7b235cedb5b965b121081212b2cbe51d8d0344bcb",
-      "status": "bounded review and local release validation complete",
+      "words": 1168,
+      "sha256": "7c3ee6feae98526a5a3980416d9f4888a1822887d2278c86fafaeaccb3fafd79",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "TNMOC-TUNNY",
-        "TUTTE-GCHQ"
+        "TUTTE-GCHQ",
+        "TUNNY-1945",
+        "GANNON-2014"
       ],
       "notes": "Corrected identical-message claim, Tiltman-to-Tutte chain, Kitchener death location, electronic Robinson counting and specialised Colossus scope. Independently checked12wheelproduct. Final public-prose consistency reread completed by exhibit_final_read; source and runtime limits remain separate.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -813,7 +844,18 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-05"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "ciphers/bletchley-park.html",
@@ -1130,11 +1172,13 @@
     {
       "path": "ciphers/colossus.html",
       "title": "Colossus — The Cipher Museum",
-      "words": 504,
-      "sha256": "e5d1e8b3287f1e6720f8660ba186e91d9c9c3f95c1a68796f8c6fd1e0a9511e5",
-      "status": "bounded review and local release validation complete",
+      "words": 891,
+      "sha256": "12f97888209a625a92e34af42b6b0ce0e92aebe1fea1161979edbc2acece39a5",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
-        "TNMOC-TUNNY"
+        "TNMOC-TUNNY",
+        "TUNNY-1945",
+        "GANNON-2014"
       ],
       "notes": "Final exhibit_final_read consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/exhibit-final-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
       "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked.",
@@ -1153,17 +1197,29 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-19"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "ciphers/columnar.html",
       "title": "Columnar Transposition — The Cipher Museum",
-      "words": 1148,
-      "sha256": "321e1e433ea1767b0864555027a4670b05e168ca7d54db41c069eb8055b80269",
-      "status": "bounded review and local release validation complete",
+      "words": 1174,
+      "sha256": "07d9490edf3d4cff5448979ae77c8841d8c345a68a9db4233925aab8d53c6e21",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "GAINES-1956",
-        "HOLDEN-2017"
+        "HOLDEN-2017",
+        "LASRY-2018"
       ],
       "notes": "Removed unsupported single19thcenturyorigin and universaldeployment claims; ShiftRows comparison replacesMixColumns label. Final public-prose consistency reread completed by exhibit_final_read; source and runtime limits remain separate.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -1182,7 +1238,18 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-10"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "ciphers/commercial-codebooks.html",
@@ -1381,11 +1448,12 @@
     {
       "path": "ciphers/des.html",
       "title": "DES (Data Encryption Standard) — The Cipher Museum",
-      "words": 661,
-      "sha256": "58b6a815e87e0a7b0c61eb47f9188d4dfe14f0253c014a0caff045e007a219b2",
-      "status": "bounded review and local release validation complete",
+      "words": 880,
+      "sha256": "bdd4bb74cf26f94c4a5ad6664d1e3822bd118be050cbd0147cdf4f47126f04e1",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
-        "COPPERSMITH-1994"
+        "COPPERSMITH-1994",
+        "BIHAM-SHAMIR-1993-2009"
       ],
       "notes": "IBM S-box role and1994criteria disclosure corrected; full paper attack not replicated. Final public-prose consistency reread completed by exhibit_final_read; source and runtime limits remain separate.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -1404,7 +1472,19 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-07",
+          "EBR-08"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "ciphers/diana-cryptosystem.html",
@@ -1473,12 +1553,13 @@
     {
       "path": "ciphers/diffie-hellman.html",
       "title": "Diffie-Hellman Key Exchange — The Cipher Museum",
-      "words": 865,
-      "sha256": "e1c50c726c578387177fb2ca1e8e407765fc2cbb184ef85d8c8c9695dd40117c",
-      "status": "bounded review and local release validation complete",
+      "words": 1083,
+      "sha256": "3ae1be5c51ac24f2ac14e1ae2b164966d1f51f80102ec51926bfcf8295c860ed",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "LOGJAM-2015",
-        "BONEH-SHOUP-2023"
+        "BONEH-SHOUP-2023",
+        "WONG-2021"
       ],
       "notes": "Final exhibit_final_read consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/exhibit-final-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -1497,7 +1578,18 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-15"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "ciphers/dilly-knox.html",
@@ -2609,11 +2701,12 @@
     {
       "path": "ciphers/lorenz.html",
       "title": "Lorenz Cipher — The Cipher Museum",
-      "words": 1485,
-      "sha256": "aaf51b8df1e000e4f9a90be70a03cc18c4551333de859adb9af73ba3f5acb139",
-      "status": "bounded review and local release validation complete",
+      "words": 1723,
+      "sha256": "db274be3d557cb0a7a7bd975a829a51ebbd5b86d245d96f1f4371cc063bdc091",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
-        "TNMOC-TUNNY"
+        "TNMOC-TUNNY",
+        "TUNNY-1945"
       ],
       "notes": "Final body/table/SVG/sidebar read reconciled Tiltman recovery, Tutte/team inference and later Colossus; wheel-state product is not an unconditional output period. Removed universal computing/LFSR lineage and unchanged WEP/GCM attack claims.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -2632,11 +2725,23 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "generated_card_review": {
         "reader": "root",
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
         "scope": "Root removed stale UA8295technical override; separated HallIX grouping from OTP classification for Enigma/Lorenz/Solitaire/Vernam; qualified SHA256length and Shamirconditions. Generator corrections are not a new historical-source verification."
+      },
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-03",
+          "EBR-04"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
       }
     },
     {
@@ -3661,10 +3766,12 @@
     {
       "path": "ciphers/sha256.html",
       "title": "SHA-256 — The Cipher Museum",
-      "words": 718,
-      "sha256": "e2a61ad3c7e6742cbe0abf05f01ce6bb6126d54a31545812f26f87bd1f6467a1",
-      "status": "bounded review and local release validation complete",
-      "sources": [],
+      "words": 969,
+      "sha256": "cb1eeac3e05f9b6c89c8a9f845b83732c422579a70e2a1079914293be70f05c4",
+      "status": "ebook follow-up implementation and local validation complete",
+      "sources": [
+        "WONG-2021"
+      ],
       "notes": "Final corpus_utilities consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/final-s-z-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
       "final_prose_review": {
@@ -3682,11 +3789,22 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "generated_card_review": {
         "reader": "root",
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
         "scope": "Root removed stale UA8295technical override; separated HallIX grouping from OTP classification for Enigma/Lorenz/Solitaire/Vernam; qualified SHA256length and Shamirconditions. Generator corrections are not a new historical-source verification."
+      },
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-14"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
       }
     },
     {
@@ -4668,15 +4786,16 @@
     {
       "path": "cryptanalysis.html",
       "title": "Cryptanalysis Techniques — The Cipher Museum",
-      "words": 2050,
-      "sha256": "be97a48cfa12b8824fc684c18181f95233b2ac4a5ec950b0aa0484e57ad4c6ea",
-      "status": "bounded review and local release validation complete",
+      "words": 2232,
+      "sha256": "7741435385b5b835f3942c51c7244f630d7c229b0881c0b0b70afe9ad8a89e57",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "HOLDEN-2017",
         "HAC-1997",
         "SHANNON-1949",
         "BENSON-VENONA",
-        "COPPERSMITH-1994"
+        "COPPERSMITH-1994",
+        "LASRY-2018"
       ],
       "notes": "Complete static/SVG/dynamic explanation review. Frequency and IC overclaims removed; Kasiski final-substring and annealing current-state acceptance bugs corrected; candidate HTML escaped. Playground 137/137, IC 0/1 and short-input checks, Kasiski endpoint, additive known answer and independent seeded annealing trace passed.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -4695,7 +4814,18 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-09"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "embed.html",
@@ -4793,12 +4923,13 @@
     {
       "path": "hall-of-foundations/closest-vector.html",
       "title": "The Closest Vector Problem · Hall of Foundations",
-      "words": 808,
-      "sha256": "bc7938332b7b7e2f814e7d40b94eab82fde022d992d10507c0b53b59ab668a06",
-      "status": "bounded review and local release validation complete",
+      "words": 1201,
+      "sha256": "a64e353495a3f32410d0b776f688dd2f9294661f2d9d525fe4ce370f30837645",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "BONEH-SHOUP-2023",
-        "FIPS-203-204"
+        "FIPS-203-204",
+        "MENEZES-LATTICES-2026"
       ],
       "notes": "Root reread complete foundation page and teaching-model explanations; assumptions, examples and real-versus-finite-field or toy-versus-production boundaries reconciled. Earlier protocol/foundation tests remain bounded evidence, not independent proof verification.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -4816,7 +4947,18 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-18"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "hall-of-foundations/elliptic-curves-real.html",
@@ -4848,11 +4990,14 @@
     {
       "path": "hall-of-foundations/entropy.html",
       "title": "Information & Entropy · Hall of Foundations",
-      "words": 479,
-      "sha256": "01b324649ac456e2674ae96944c1f1fd0a7edc3a58a922cec490fb3fb0f45e05",
-      "status": "bounded review and local release validation complete",
+      "words": 1219,
+      "sha256": "8177bf619c350287e1f2984f08ef3e28c18dc24842ed804819831a43381f4a65",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
-        "BONEH-SHOUP-2023"
+        "BONEH-SHOUP-2023",
+        "GRAY-1990-CORRECTED-2023",
+        "VADHAN-2012",
+        "TYAGI-WATANABE-2023"
       ],
       "notes": "Root reread complete foundation page and teaching-model explanations; assumptions, examples and real-versus-finite-field or toy-versus-production boundaries reconciled. Earlier protocol/foundation tests remain bounded evidence, not independent proof verification.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -4870,7 +5015,20 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-02",
+          "EBR-11",
+          "EBR-12"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "hall-of-foundations/euler-fermat.html",
@@ -5039,12 +5197,13 @@
     {
       "path": "hall-of-foundations/learning-with-errors.html",
       "title": "Learning With Errors · Hall of Foundations",
-      "words": 1097,
-      "sha256": "d7c6a6e00d410ca67d5f984f73970d4e98e82cda6b06b872afbbdd3fa82b5fec",
-      "status": "bounded review and local release validation complete",
+      "words": 1398,
+      "sha256": "ce67bdc0d5d3c4fcd25fc1ae7f4a4025577996efc7ab48020d049a9e2cb0cb74",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "BONEH-SHOUP-2023",
-        "FIPS-203-204"
+        "FIPS-203-204",
+        "MENEZES-LATTICES-2026"
       ],
       "notes": "Root reread complete foundation page and teaching-model explanations; assumptions, examples and real-versus-finite-field or toy-versus-production boundaries reconciled. Earlier protocol/foundation tests remain bounded evidence, not independent proof verification.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -5062,7 +5221,19 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-17",
+          "EBR-18"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "hall-of-foundations/modular-arithmetic.html",
@@ -5233,11 +5404,13 @@
     {
       "path": "hall-of-foundations/random-oracle.html",
       "title": "The Random Oracle · Hall of Foundations",
-      "words": 539,
-      "sha256": "a287ee8dd7878853c2002b33744e085a7238fdc563e1f280579373e873753701",
-      "status": "bounded review and local release validation complete",
+      "words": 829,
+      "sha256": "ef9ac80c64a6ff45b28a1e41383d4cac8091b543d0fab5fb85851626159d2511",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
-        "BONEH-SHOUP-2023"
+        "BONEH-SHOUP-2023",
+        "MENEZES-LATTICES-2026",
+        "FIPS-203-204"
       ],
       "notes": "Root reread complete foundation page and teaching-model explanations; assumptions, examples and real-versus-finite-field or toy-versus-production boundaries reconciled. Earlier protocol/foundation tests remain bounded evidence, not independent proof verification.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -5255,7 +5428,18 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-16"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "hall-of-foundations/reduction.html",
@@ -5708,13 +5892,15 @@
     {
       "path": "lab/modern-attack-evidence.html",
       "title": "What an Attack Result Actually Shows — The Cipher Museum",
-      "words": 504,
-      "sha256": "b8c3e8c60a70836f999853ccc8e9545190e52c6b32a6d0c3abe6e873eb0fa4fb",
-      "status": "bounded review and local release validation complete",
+      "words": 1045,
+      "sha256": "14bc65124bbe165aba374b7b90e2ddb0c5e78e561075af3528906ccd5e57fb21",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "GPU-SEARCH-2025",
         "GEA-FAULTS-2026",
-        "CONDITIONAL-DES-2018"
+        "CONDITIONAL-DES-2018",
+        "BIHAM-SHAMIR-1993-2009",
+        "MANGARD-OSWALD-POPP-2007"
       ],
       "notes": "Research-case review checked KASUMI-64 repeated-key deployment versus independent 128-bit search, TEA3 target, GEA abstract-level controlled-fault result and corrected journal status, and conditional DES candidate-count experiments versus full key searches. Exact conditions and source-access limits retained.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -5733,18 +5919,32 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "GEA full PDF returned403; abstract/institutional record supports publication and controlled experiment only. GPU extrapolation, collection costs and TMTO preprocessing remain distinct from measured rates. Conditional-DES79runs did not execute79full key searches."
-      ]
+      ],
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-08",
+          "EBR-20"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "lab/workbench.html",
       "title": "Codebreaker's Workbench — The Cipher Museum",
-      "words": 86,
-      "sha256": "ff8b4ba221f70d5606f03ed9ae4d262fdd6266c69166ebaedcc57f889585d50b",
-      "status": "bounded review and local release validation complete",
-      "sources": [],
+      "words": 114,
+      "sha256": "dc2633d4aff2872330a05c5d7d3306f2685489976069c8b66e4afef58699f848",
+      "status": "ebook follow-up implementation and local validation complete",
+      "sources": [
+        "GRAY-1990-CORRECTED-2023"
+      ],
       "notes": "Root reread workbench prose and controls. IC values are approximate references; engine correctness and historical procedure/provenance are separate questions.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
       "final_prose_review": {
@@ -5761,18 +5961,31 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-02"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "learn.html",
       "title": "Learn — The Cipher Museum",
-      "words": 475,
-      "sha256": "eef8a77546deaad56db30632a2c3ee164bfcc9c0cca448fd52a49f83888bdb8e",
-      "status": "bounded review and local release validation complete",
+      "words": 579,
+      "sha256": "447c41722da733924e63cacd416c543cdafe2ff99241b594671a8258831a9ba4",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "HOLDEN-2017",
         "HAC-1997",
-        "SHANNON-1949"
+        "SHANNON-1949",
+        "ANDERSON-2020",
+        "WONG-2021"
       ],
       "notes": "Complete learning summaries and metadata reread. Direct classical-to-AES lineage removed; OTP uniformity, independence, secrecy and nonreuse stated; conceptual comparisons distinguished from historical transmission.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -5791,18 +6004,33 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-13",
+          "EBR-14",
+          "EBR-15"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "modern.html",
       "title": "Modern Cryptography — The Cipher Museum",
-      "words": 1494,
-      "sha256": "acc2b978998b2bcb0fa7998d5da80e8a39264ad89021cfb3088d60d3be178048",
-      "status": "bounded review and local release validation complete",
+      "words": 1799,
+      "sha256": "3c8ab175bb7e546a744cfc2d9c41da36479d7cf034c9762f519db53fef13e534",
+      "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "BONEH-SHOUP-2023",
         "HAC-1997",
-        "SHANNON-1949"
+        "SHANNON-1949",
+        "ANDERSON-2020",
+        "WONG-2021"
       ],
       "notes": "Root reread full modern overview. Stream reuse, CDH, hash limits, signature attribution, finite-field sharing assumptions and proof soundness remain bounded to their models.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -5820,7 +6048,18 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-13"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "museum-map.html",
@@ -5983,10 +6222,12 @@
     {
       "path": "teaching.html",
       "title": "Corpus Teaching Guide — The Cipher Museum",
-      "words": 376,
-      "sha256": "39cd0346e91abb62615553662cff8f2172e4ca0c72ec203ff76384fe2abbb888",
-      "status": "bounded review and local release validation complete",
-      "sources": [],
+      "words": 548,
+      "sha256": "3bc03cae8cc696e9ee1537f269796eacd17eea4a1ac033b0cadb3a04b15b5ab0",
+      "status": "ebook follow-up implementation and local validation complete",
+      "sources": [
+        "LASRY-2018"
+      ],
       "notes": "Navigation initialization repaired and checked; v0.8 schema/verification links and known-answer terminology aligned. Dataset counts checked against complete shipped records; historical provenance remains separate.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
       "final_prose_review": {
@@ -6004,7 +6245,18 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "ebook_followup": {
+        "items": [
+          "EBR-10"
+        ],
+        "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+        "status": "implemented; locally verified",
+        "implementation_record": "docs/ebook-followup/implementation.json",
+        "browser_evidence": "docs/ebook-followup/browser.json",
+        "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+        "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      }
     },
     {
       "path": "timeline.html",
@@ -6108,5 +6360,14 @@
     "release_commit": "bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4",
     "release_workflow": "https://github.com/systemslibrarian/cipher-museum/actions/runs/40401756569",
     "live_verification": "docs/page-audit/live-verification.json"
+  },
+  "ebook_followup": {
+    "baseline": "f49d57da96778ee460035b04e00b811323f6e6cd",
+    "items": 21,
+    "changed_html_pages": 19,
+    "sources_used": 13,
+    "source_register_entries": 160,
+    "evidence": "docs/ebook-followup/implementation.json",
+    "scope": "All21 authorized Cipher Museum recommendations; existing Crypto Lab demos linked, not recreated. Selected passages in13 works, not whole-book certification."
   }
 }

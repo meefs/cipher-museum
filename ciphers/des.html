@@ -89,6 +89,22 @@
       <div class="panel-body"><p>DES is a 16-round Feistel network. The 64-bit plaintext is split into two 32-bit halves L and R. Each round computes <code>L<sub>i+1</sub> = R<sub>i</sub></code> and <code>R<sub>i+1</sub> = L<sub>i</sub> &oplus; F(R<sub>i</sub>, K<sub>i</sub>)</code>. The round function F expands R to 48 bits, XORs the round subkey, passes the result through eight 6-to-4-bit S-boxes (the heart of DES's non-linearity), and applies a final permutation. Sixteen rounds of this with sixteen subkeys derived from the 56-bit master key produce a reversible block cipher. Its 56-bit key is too small to withstand modern exhaustive search.</p></div>
     </div>
 
+    <section class="panel" aria-labelledby="s1-differential"><div class="panel-body">
+      <h2 id="s1-differential">A differential through one S-box</h2>
+      <p>XORing the same subkey into two inputs leaves their difference unchanged: <code>(x XOR k) XOR (x′ XOR k) = x XOR x′</code>. The nonlinear S-box then produces some output differences more often than others. For DES S1 and input difference <code>34</code>, enumerate all 64 possible six-bit inputs:</p>
+      <table class="cipher-table" id="s1-ddt" style="min-width:0"><caption>Selected S1 difference-distribution entries; differences are hexadecimal</caption><thead><tr><th scope="col">Output difference</th><th scope="col">Count out of 64</th><th scope="col">Probability</th></tr></thead><tbody>
+        <tr><td>02</td><td>16</td><td>1/4</td></tr><tr><td>04</td><td>2</td><td>1/32</td></tr><tr><td>00</td><td>0</td><td>0</td></tr><tr><td>09</td><td>0</td><td>0</td></tr>
+      </tbody></table>
+      <p>Now suppose a teaching example exposes the inputs <em>before</em> the subkey XOR and the S1 output difference. Keep each six-bit candidate <var>k</var> for which <code>S1(x XOR k) XOR S1(x′ XOR k)</code> matches that observation. All values below are hexadecimal:</p>
+      <table class="cipher-table" id="s1-key-filter" style="min-width:0"><caption>Filtering the 64 possible S1 subkeys</caption><thead><tr><th scope="col">Inputs</th><th scope="col">Output XOR</th><th scope="col">Surviving subkeys</th></tr></thead><tbody>
+        <tr><td>01, 35</td><td>0D</td><td>07, 11, 17, 1D, 23, 25, 29, 33</td></tr>
+        <tr><td>21, 15</td><td>03</td><td>00, 14, 17, 20, 23, 34</td></tr>
+      </tbody></table>
+      <p>The intersection is <strong><code>{17, 23}</code></strong>, so these observations do not identify a unique subkey. Both pairs use input difference <code>34</code>; a suitable observation with a different difference is needed to distinguish these survivors. This component example assumes exposed intermediate information, not ordinary intercepted DES ciphertexts or full-DES key recovery.</p>
+      <p><a href="https://systemslibrarian.github.io/crypto-lab-biham-lens/">Explore difference tables and bounded attacks in Biham Lens</a>. Its exercises are separate from the <a href="../lab/modern-attack-evidence.html#des-differential">historic full-DES differential attack and its resource requirements</a>.</p>
+      <p class="source-note">Eli Biham and Adi Shamir, <em>Differential Cryptanalysis of the Data Encryption Standard</em> (1993), §3.2, Examples 3.4–3.7. Numbered pp. 15–22, especially pp. 18–20, refer to the authors’ repaginated 7 December 2009 recompilation.</p>
+    </div></section>
+
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
       <div class="panel-body"><p>In 1998 the EFF's Deep Crack machine recovered a DES key in about 56 hours. Differential and linear cryptanalysis also showed important theoretical weaknesses, although their data requirements limit their practical use. Triple-DES extended DES's useful life, but retained its small 64-bit block size. NIST withdrew SP 800-67 Rev. 2 on 1 January 2024: TDEA is disallowed for applying new protection, while processing already protected data remains permitted. This is a NIST transition rule, not a claim that every banking deployment ended on that date.</p></div>

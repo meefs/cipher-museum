@@ -10,12 +10,10 @@
      - Top ~80 English bigram log probabilities (Mayzner-revisited)
      - Top ~200 English trigram log probabilities
      - Bonus credit for ~120 most-common English words found
-     - Floor penalty for n-grams not in the table (calibrated so
-       hill-climbing escapes local minima on short text)
+     - Fixed floor penalty for n-grams not in the table
 
-   Total embedded weight: roughly 6 KB before gzip — small enough
-   to ship inline with the page and large enough to break
-   substitution ciphers in well under a second.
+   This ranking heuristic is not a calibrated language detector or
+   a probability of authentic plaintext recovery.
    ================================================================ */
 'use strict';
 
@@ -123,8 +121,8 @@
     for (k in TRIGRAM_FREQ) if (Object.prototype.hasOwnProperty.call(TRIGRAM_FREQ, k)) TRIGRAM_LOG[k] = Math.log(TRIGRAM_FREQ[k] / 100);
   }());
 
-  /* Floor penalties — calibrated empirically so hill climbing
-     converges on substitution within ~1-3 sec for ~250 chars. */
+  /* Fixed penalties for unseen n-grams; these do not establish
+     recovery rates, timing guarantees or language probabilities. */
   var BIGRAM_FLOOR  = Math.log(0.01 / 100);  /* unseen bigram  ≈ -9.2 */
   var TRIGRAM_FLOOR = Math.log(0.005 / 100); /* unseen trigram ≈ -9.9 */
 
@@ -186,22 +184,17 @@
     return trigramScore(text) + 0.4 * bigramScore(text) + wordBonus(text);
   }
 
-  /* ── Confidence tier ─────────────────────────────────────────
-     Convert raw fitness per character into a human label.
-     These thresholds were picked by running the solver against
-     known plaintexts vs. noise; they are calibration constants,
-     not a probability.                                          */
+  /* Compatibility API: return presentation labels, never probabilities.
+     The 60-letter display guard is a teaching convention, not a measured
+     minimum. It does not change fitness or the solver's candidate ranking. */
   function confidenceLabel(fitnessVal, textLen) {
-    /* Calibrated against real English plaintext vs random ciphertext
-       with the embedded n-gram tables above. Per-char fitness for
-       real English typically ranges -7 to -10.5; gibberish -12 or
-       worse. The boundary sits near -11.5.                        */
-    var perChar = (textLen > 0) ? (fitnessVal / textLen) : -Infinity;
-    if (perChar > -8.5)  return { tier: 'very-likely',  label: 'Very likely English' };
-    if (perChar > -9.8)  return { tier: 'likely',       label: 'Likely English' };
-    if (perChar > -10.7) return { tier: 'possible',     label: 'Possibly English (partial fit)' };
-    if (perChar > -11.6) return { tier: 'unlikely',     label: 'Unlikely English (weak fit)' };
-    return                      { tier: 'inconclusive', label: 'Inconclusive — does not look like English' };
+    if (!Number.isFinite(fitnessVal) || textLen < 3) {
+      return { tier: 'inconclusive', label: 'Insufficient n-gram evidence' };
+    }
+    if (textLen < 60) {
+      return { tier: 'inconclusive', label: 'Short sample — model fit not interpreted' };
+    }
+    return { tier: 'possible', label: 'Uncalibrated model fit' };
   }
 
   /* ── Export ──────────────────────────────────────────────────── */

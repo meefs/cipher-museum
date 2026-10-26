@@ -1,8 +1,8 @@
 # Ebook review: further Cipher Museum recommendations
 
-Reviewed 26 October 2026. **21 proposed work packages: five corrections and 16 teaching enhancements. None of these 21 has been implemented by this review.**
+Reviewed 26 October 2026. **All 21 work packages are now implemented and locally verified: five corrections and 16 teaching enhancements.** See the [implementation record](EBOOK_IMPLEMENTATION_PROGRESS.md) for delivered scope, checks and existing Crypto Lab reuse. The assessment and source locations below are retained as the original rationale.
 
-The strongest next step is to correct three Lorenz/Tutte historical statements and two analysis-result labels. The remaining work would make existing explanations more useful: show what an attack assumes, what a statistic measures, and where an educational model stops. Several topics already have substantial Crypto Lab demonstrations; the Museum should explain and link to those demonstrations instead of building duplicate engines.
+The implemented corrections address three Lorenz/Tutte historical statements and two analysis-result labels. The teaching additions make existing explanations more useful: show what an attack assumes, what a statistic measures, and where an educational model stops. Several topics already have substantial Crypto Lab demonstrations; the Museum now explains and links to those demonstrations.
 
 This report follows substantive reading of selected passages in **13 books, monographs or historical reports** from the supplied Crypto-Lab/eBooks collection. It is not a cover-to-cover review of those works or of every file in the folder. The fresh inventory covered the ebook root and eight immediate subject folders; nested source collections were not exhaustively traversed. Filenames and tables of contents alone were not treated as evidence. The three new root uploads—*Power Analysis Attacks*, the second edition of *The Design of Rijndael*, and the author recompilation of *Differential Cryptanalysis of the Data Encryption Standard*—were included.
 
@@ -14,9 +14,9 @@ Book credits use title, author, edition/date and verified section/page locators.
 
 ## Work list
 
-Status is **Proposed** for every row. P1 means correct misleading existing output or prose; P2 means add explanatory depth. Some P2 work is especially valuable but does not repair an established factual error. EBR-02 includes an optional entropy-rate extension after its wording fix.
+Every row is **Implemented; locally verified**. The linked implementation record gives the delivered format and checks. P1 means correct misleading existing output or prose; P2 means add explanatory depth. Some P2 work is especially valuable but does not repair an established factual error. EBR-02 includes an optional entropy-rate extension after its wording fix.
 
-| ID | Priority / kind | Proposed change | Main Museum location | Book evidence |
+| ID | Priority / kind | Change | Main Museum location | Book evidence |
 |---|---|---|---|---|
 | [EBR-01](#ebr-01) | P1 / Correction | Correct Auto-Solve language labels | Detective / language model | Lasry; Sweigart |
 | [EBR-02](#ebr-02) | P1 / Correction | Qualify workbench IC conclusions | Workbench; entropy | Gray |
@@ -40,7 +40,7 @@ Status is **Proposed** for every row. P1 means correct misleading existing outpu
 | [EBR-20](#ebr-20) | P2 / Enhancement | Explain implementation leakage conditions | AES; attack evidence | Mangard, Oswald and Popp |
 | [EBR-21](#ebr-21) | P2 / Enhancement | Connect masking to joint leakage | AES; sharing; entropy | Mangard, Oswald and Popp |
 
-## Suggested order and reuse
+## Original priorities and existing-lab reuse
 
 1. **Correct existing statements:** EBR-01–05. Capture the current failure or disputed wording, make the bounded change, and verify its visible result.
 2. **Add small, high-value explanations:** EBR-11, 13–15 and 20. These can start as short worked examples rather than large simulators.
@@ -79,13 +79,13 @@ These are recommendations for Museum content and its connections to Crypto Lab. 
 
 Title/version pages were checked. Relevant historical scans, equations and tables were visually checked where OCR could change the finding. *Cryptography Engineering* was inspected only in its front matter and is not counted as supporting reading. Weierud, Beyne/Rijmen, Takagi, Thaler and other unneeded titles are not claimed as read in this pass. No books or scans are republished with this report.
 
-## Detailed recommendations
+## Detailed recommendations — original assessment
 
 <a id="ebr-01"></a>
 
 ### EBR-01 — Correct Auto-Solve language labels
 
-**Status: Proposed · P1 · Correction.**
+**Status: Implemented; locally verified · P1 · Correction.**
 
 **Current page and quotation:** `cipher-detective.html`, Auto-Solve introduction, lines 463–467: “Run every applicable solver against this ciphertext and rank the results by how English-like each candidate plaintext is.” `js/detective/lang-model.js:200` returns the exact public label **“Very likely English”** whenever fitness per letter exceeds -8.5. `js/detective/detective.js:327` calls the table column **“Confidence”**, and lines 310–317 render the same label on the best candidate. `js/detective/solvers.js:469` permits inputs of four letters or more.
 
@@ -110,7 +110,7 @@ The four-letter case is structural, not a lucky counterexample. Four letters con
 
 ### EBR-02 — Qualify workbench IC conclusions
 
-**Status: Proposed · P1 · Correction.**
+**Status: Implemented; locally verified · P1 · Correction.**
 
 **Current evidence:** `lab/workbench.html:417–423`, `updateFreq()`, emits “Suggests polyalphabetic with short key” for `0.04 < IC <= 0.06` and “Flat distribution — polyalphabetic or random” for `IC <= 0.04`. The latter is a disjunction that omits simple deterministic sequences. `hall-of-foundations/entropy.html:71–93` illustrates only a single biased coin; no public HTML currently mentions “entropy rate” (repository-wide public-HTML search, excluding docs, tests, tmp and node_modules).
 
@@ -128,7 +128,7 @@ The four-letter case is structural, not a lucky counterexample. Four letters con
 
 ### EBR-03 — Correct the Lorenz signal path
 
-**Status: Proposed · P1 · Correction.**
+**Status: Implemented; locally verified · P1 · Correction.**
 
 Current ciphers/lorenz.html:98 says: “Lorenz was a fully automatic teleprinter attachment — messages fed in on paper tape, encrypted output punched automatically.” The comparison table at line 184 says: “Inline teleprinter attachment — paper tape in, encrypted tape out, fully automatic”.
 
@@ -142,7 +142,7 @@ Current ciphers/lorenz.html:98 says: “Lorenz was a fully automatic teleprinter
 
 ### EBR-04 — Qualify Lorenz wheel-setting reuse
 
-**Status: Proposed · P1 · Correction.**
+**Status: Implemented; locally verified · P1 · Correction.**
 
 Current ciphers/lorenz.html:187 says: “Reusing a wheel setting collapses two messages into a depth (P_A ⊕ P_B)”. The page covers SZ40/42 broadly, although its simulator is properly bounded as a “pedagogical model of the SZ40’s structure” at line 170.
 
@@ -160,7 +160,7 @@ Current ciphers/lorenz.html:187 says: “Reusing a wheel setting collapses two m
 
 ### EBR-05 — Separate Tutte’s inference from Turingery
 
-**Status: Proposed · P1 · Correction.**
+**Status: Implemented; locally verified · P1 · Correction.**
 
 Current ciphers/bill-tutte.html:103 says: “When Tutte was given Tiltman’s recovered key, he performed a statistical attack called "wheel breaking": by XOR-differencing successive characters of the recovered keystream, he could identify statistical biases introduced by the Chi-wheel keystream. Working with the Research Section through early 1942, he inferred the wheel structure and sizes…”
 
@@ -178,7 +178,7 @@ Paul Gannon, *Colossus: Bletchley Park’s Greatest Secret* (Atlantic Books, 201
 
 ### EBR-06 — Explain AES wide-trail diffusion
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Existing-lab reuse.** AES Anatomy already contains four-round trail limits and an integral lesson. Keep the Museum panel short and link to that existing depth; this report does not propose a second AES engine.
 
@@ -194,7 +194,7 @@ Paul Gannon, *Colossus: Bletchley Park’s Greatest Secret* (Atlantic Books, 201
 
 ### EBR-07 — Show DES S-box differential filtering
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Existing-lab reuse.** Biham Lens already teaches DDTs and differential methods in other bounded constructions. Use the DES S1 example as a small Museum-specific worked example and link the broader lab rather than rebuilding its engine.
 
@@ -212,7 +212,7 @@ The XOR key disappears from the input difference, but the nonlinear S-box has a 
 
 ### EBR-08 — Separate DES attack resource measures
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Existing-lab reuse.** Link the differential-method explanation to Biham Lens. Do not present its existing toy/reduced constructions, or Matsui Line’s separate composition lesson, as execution of this historical full-DES attack.
 
@@ -230,7 +230,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-09 — Show all 26 Caesar scores
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current page and quotation:** `cryptanalysis.html:422`: “Watch a small Caesar-key search score candidate shifts against English frequencies.” At lines 869–877 and 933–938 the objective is the mean of the reference frequency assigned to each candidate letter: `s += ENG_FREQ[...]` followed by `return s / clean.length;`. The visible search trace does not explain that objective or compare the visited result with all 26 shifts.
 
@@ -246,7 +246,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-10 — Make columnar comparisons repeatable
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current page and quotation:** `ciphers/columnar.html`, advanced search controls: “Change one option at a time to compare searches with the same seed and budget.” `js/columnar-search-ui.js` displays **“Best candidate (unverified)”** and **“Equal evaluation counts are not equal CPU time. Scores do not certify a decryption or uniqueness.”** `teaching.html:48` says **“Demonstrate solver benchmarking and reproducibility.”** These qualifications and seed/budget controls are already useful. The current UI returns one outcome; there is no batch success report across seeds and known-answer messages.
 
@@ -262,7 +262,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-11 — Compare entropy with first-guess success
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current evidence:** `hall-of-foundations/entropy.html:67` says “Shannon entropy measures average uncertainty. Min-entropy, guessing distributions and the cost of each trial are also relevant to attacks.” The only interactive models below it are a binary Shannon-entropy curve (§1) and uniformly selected character bars (§2). `glossary.html:234` mentions min-entropy but supplies neither a numerical example nor a guessing calculation. Public-HTML search found min-entropy only in these two prose passages.
 
@@ -278,7 +278,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-12 — Explain privacy amplification and its limits
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current evidence:** `glossary.html:541` correctly says “XOR with an independent uniform bit produces a uniform output; XOR alone does not create randomness from arbitrary inputs.” `hall-of-foundations/entropy.html:119–126` moves directly from uniform-source key length to the OTP and its randomness cost. Public-HTML searches for “privacy amplification”, “leftover hash”, “seeded extractor” and “conditional min-entropy” returned no lesson. The existing OTP tampering exercise is about integrity; it does not address extracting a shorter secret from partially exposed randomness.
 
@@ -294,7 +294,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-13 — Separate authenticity from freshness
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current location/evidence.** `ciphers/aes.html:78` says, “the mode of operation, authentication, nonce handling and key management matter too.” Its security section at line 93 covers nonce reuse, authentication and implementation failures. The reviewed AES page, `modern.html`, `learn.html` and five tour JSON files contain no replay/receiver-state exercise. This is a bounded absence: `halls/military.html:286` already mentions “freshness checks,” so the proposal must not claim the entire site omits freshness.
 
@@ -308,7 +308,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-14 — Demonstrate ambiguous hash inputs
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current location/evidence.** `ciphers/sha256.html:78` explains collision resistance; line 88 explains compression and idealized work factors; line 93 explains length extension and HMAC. None of these sections explains that different field tuples can become the same byte string before hashing. There is no `data-cipher` demo placeholder on this page. `ciphers/zero-knowledge-proofs.html:135` already says, “Domain separation and unambiguous encodings matter.” The new addition would demonstrate that existing principle in the general hash exhibit, rather than add another unsupported warning.
 
@@ -322,7 +322,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-15 — Explain purpose-separated HKDF outputs
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current location/evidence.** `ciphers/diffie-hellman.html:142` accurately says, “Protocols feed DH outputs through a key derivation function; this exhibit shows the underlying shared-value arithmetic.” `ciphers/sha256.html:153` mentions HKDF in its DH related card; `modern.html:80` and line 139 mention KDFs. The DH page explains shared-value arithmetic and toy parameters but has no Extract/Expand, role-label or output-length example. `tours/mathematics.json` ends at `modern.html` with the note “Number theory, elliptic curves, and computational hardness assumptions.” Thus this proposal fills the next-step gap; it does not claim the current pages wrongly use raw DH as a production key.
 
@@ -336,7 +336,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-16 — Explain why ML-DSA aborts
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current evidence:** `hall-of-foundations/random-oracle.html:130` says: “ML-DSA uses SHAKE-based hashing and a construction often described as Fiat–Shamir with aborts.” It distinguishes constructions correctly, but neither this page's prose nor its inline interaction explains the abort condition. The polynomial-rings page explains multiplication and names the relevant assumptions; the zero-knowledge exhibit already covers Schnorr simulation and transcript binding. Repeating those lessons would add little.
 
@@ -350,7 +350,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-17 — Explain KEM reencryption and implicit rejection
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current evidence:** `hall-of-foundations/learning-with-errors.html:203` says: “ML-KEM is a key-encapsulation mechanism with compression, a Fujisaki–Okamoto transform for chosen-ciphertext security, and rejection steps this page has no equivalent of.” `modern.html:214` correctly labels ML-KEM as key encapsulation. Neither passage shows the public ciphertext/secret shared-key outputs or explains the rejection mechanism. This is an acknowledged omission, not a misleading assertion that the current one-bit demo implements ML-KEM.
 
@@ -364,7 +364,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-18 — Connect noisy equations to a q-ary lattice
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current evidence:** `hall-of-foundations/closest-vector.html:167` says: “The connection is geometric intuition: lattice attacks can turn noisy equations into decoding or short-vector problems.” It correctly names primal, dual and hybrid attacks and rejects equating them with the displayed two-dimensional task. The LWE page's opening (`:59`) explicitly samples square invertible matrices modulo 97. No current foundation passage constructs the integer lattice associated with a rectangular LWE system or states the unique-nearby-point promise.
 
@@ -378,7 +378,7 @@ Numbered p. 84 / PDF p. 90 explains the base schedule: `2^35` structures contain
 
 ### EBR-19 — Show Colossus clock, condition and count
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 Current ciphers/colossus.html:61 says: “Punched paper tape supplied ciphertext. Electronic logic evaluated combinations of tape data and generated wheel patterns, while counters accumulated statistical scores.” Its synthetic experiment correctly states at line 64 that it does not emulate Colossus hardware.
 
@@ -392,7 +392,7 @@ Current ciphers/colossus.html:61 says: “Punched paper tape supplied ciphertext
 
 ### EBR-20 — Explain implementation leakage conditions
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current evidence.** `ciphers/aes.html:93` already distinguishes secure AES from cache/timing leakage and protocol mistakes; `modern.html:216` mentions implementation attacks. `lab/modern-attack-evidence.html` already separates GPU search, faults and conditional-linear results. Those statements are useful and should remain. The missing connection in these inspected Museum sections is an explanation of how repeated physical measurements and a leakage model produce a key hypothesis.
 
@@ -408,7 +408,7 @@ Keep correlation/rank separate from recovery confirmed against a known answer. N
 
 ### EBR-21 — Connect masking to joint leakage
 
-**Status: Proposed · P2 · Enhancement.**
+**Status: Implemented; locally verified · P2 · Enhancement.**
 
 **Current evidence.** The Museum’s AES implementation caveat, entropy exhibit and secret-sharing material provide pieces of the explanation but no joint-leakage example in the inspected sections. The Crypto Lab catalog already describes [Masked Core](https://systemslibrarian.github.io/crypto-lab-masked-core/) with Boolean masks and first- versus second-order centered-product analysis. This is a Museum bridge to that existing experiment, not a request to duplicate it.
 
@@ -429,14 +429,14 @@ Thus the marginal means can stay unchanged while the joint statistic depends on 
 
 ## Verification boundaries and source cautions
 
-- **Reproduced now:** the Auto-Solve four-letter scoring defect; repeated-alphabet IC; the cited DES S1 DDT/key-filter examples; simple ambiguous-encoding and HKDF prefix fixtures; and the complete byte-mask covariance enumeration. These are research checks, not tests of newly implemented website features. No site implementation changed in this review.
+- **Reproduced now:** the Auto-Solve four-letter scoring defect; repeated-alphabet IC; the cited DES S1 DDT/key-filter examples; simple ambiguous-encoding and HKDF prefix fixtures; and the complete byte-mask covariance enumeration. These are research checks, not tests of newly implemented website features. These reproductions were completed during the recommendation phase; the later implementation and its tests are recorded separately.
 - **Source-backed findings:** the Lorenz and Tutte corrections were checked against the relevant *General Report on Tunny* scans, with Gannon used for historical context. The books’ individual claims were not assumed infallible: Gannon’s converted p.95 contains an arithmetic slip (`574 = 14 × 41`), and Wong’s supplied figure 8.7/8.8 references/captions need reconciliation. Neither slip is imported into a recommendation.
 - **PQC standards:** the relevant FIPS 203 and FIPS 204 publication pages and algorithm passages were consulted. FIPS 203 Algorithm 18 confirms deterministic implicit rejection; FIPS 204 Algorithm 7 gives the stricter accepted-response norm. The publication pages flag potential errata, but their linked spreadsheets could not be retrieved in this pass. Their contents are therefore unverified. Before implementing a standards-aligned exercise, inspect those errata rather than treating this conceptual review as conformance validation. Official publication pages: [FIPS 203](https://csrc.nist.gov/pubs/fips/203/final), [FIPS 204](https://csrc.nist.gov/pubs/fips/204/final).
 - **Reading and coverage:** passages and exact locations are recorded above; no entire-book reading or renewed review of every Museum statement is claimed. The existing source register and frozen 214-page export retain their original scope. No new SIGSALY correction or current-quantum-security correction was established by the selected reading.
-- **Implementation evidence is future work:** acceptance checks in each item specify what must pass if that item is implemented. They are not claims that the proposed UI, experiment or benchmark already exists or passed. Source excerpts support the lesson; they do not substitute for testing actual code.
+- **Implementation evidence:** the acceptance checks below preserve the original proposed criteria. The implementation record identifies the delivered static/linked format, the two extended Museum teaching activities and the checks actually performed. Optional widget requirements do not imply that duplicate Crypto Lab engines were built. Source excerpts support the lesson; they do not substitute for testing actual code.
 
 ## Maintaining this list
 
-Use the stable EBR identifiers in follow-up commits or pull requests. Move an item from **Proposed** to **Implemented** only with the changed files and acceptance evidence; record **Verified** separately after checking the rendered result. A reasoned **Deferred** decision should name its dependency or limited value. Do not merge these 21 proposed packages into the completed 67-item denominator.
+Use the stable EBR identifiers in follow-up commits or pull requests. Move an item from **Proposed** to **Implemented** only with the changed files and acceptance evidence; record **Verified** separately after checking the rendered result. A reasoned **Deferred** decision should name its dependency or limited value. These 21 completed packages remain separate from the earlier 67-item denominator.
 
 The [214-page audit export](README.md) remains the independent-review snapshot. This recommendations report is a separate dated supplement and is not included retroactively inside its frozen ZIP.

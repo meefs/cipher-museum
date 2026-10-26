@@ -210,6 +210,20 @@
     </p>
   </section>
 
+  <section class="exhibit" id="from-pke-to-kem">
+    <div class="step-head"><span class="step-num">&#167;5</span><h2>From an encrypted bit to a shared key</h2></div>
+    <p>A key-encapsulation mechanism establishes a shared secret for later symmetric cryptography. Its three operations have different inputs and outputs:</p>
+    <ol>
+      <li><strong>Key generation:</strong> the recipient creates a public encapsulation key and a private decapsulation key.</li>
+      <li><strong>Encapsulation:</strong> using an authentic copy of that public key, the sender produces a secret shared key <em>K</em> and a public ciphertext <em>c</em>. Only the ciphertext is sent.</li>
+      <li><strong>Decapsulation:</strong> the recipient uses the private key and ciphertext to recover the shared key. Receiving key-shaped bytes alone does not authenticate the sender or confirm that both parties agree.</li>
+    </ol>
+    <p>In ML-KEM's Fujisaki&ndash;Okamoto construction, decapsulation decrypts a candidate message, derives a candidate key and encryption randomness, then <strong>reencrypts</strong> that message. It compares the regenerated ciphertext with the received one. A match selects the candidate key; a mismatch selects the fallback <em>J(z &#8741; c)</em>, derived from a private value <em>z</em> stored in the decapsulation key and the received ciphertext.</p>
+    <p>This is <strong>implicit rejection</strong>: the internal consistency failure still yields key bytes. The fallback is deterministic for the same private key and ciphertext, not fresh randomness drawn on each failure. The real interface does not return the internal rejection flag. A malformed ciphertext length fails a separate input check before this branch. Correct protocol integration must handle such errors and provide the authentication or key confirmation its application requires.</p>
+    <p>Step through the existing <a href="https://systemslibrarian.github.io/crypto-lab-kem-trap/">KEM Trap lab</a> for reencryption, implicit rejection and caller mistakes. Its separate shortened-comparison example is a schematic implementation bug, not a break of correct ML-KEM. This explanation adds no standard-compatible algorithm to the one-bit demo above.</p>
+    <p class="aside">For the geometric connection behind the equations, see the <a href="closest-vector.html#lwe-lattice">worked rectangular LWE lattice example</a>. It uses a different matrix shape from this page's square, small-secret toy.</p>
+  </section>
+
   <section class="exhibit">
     <div class="connect">
       <div class="flag">Where this touches your keys</div>
@@ -224,7 +238,7 @@
       Tested logic in <code>lwe-math.js</code>.</p>
   </section>
 
-  <p class="aside"><strong>Sources and scope:</strong> <a href="https://csrc.nist.gov/pubs/fips/203/final">FIPS 203 (ML-KEM, 2024)</a> and <a href="https://csrc.nist.gov/pubs/fips/204/final">FIPS 204 (ML-DSA, 2024)</a>. This scalar, uniform-error toy is not either standard.</p>
+  <p class="aside"><strong>Sources and scope:</strong> Alfred Menezes, <em>A Gentle Introduction to Lattice-Based Cryptography</em>, version 3.3, September 16, 2026, &sect;6.4, pp.64&ndash;66, Algorithm 6.12; NIST <a href="https://csrc.nist.gov/pubs/fips/203/final">FIPS 203 (ML-KEM, 2024)</a>, Algorithms 16&ndash;21, and <a href="https://csrc.nist.gov/pubs/fips/204/final">FIPS 204 (ML-DSA, 2024)</a>. The KEM explanation is conceptual. This scalar, uniform-error toy is not either standard.</p>
   </main>
 
 

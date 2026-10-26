@@ -120,7 +120,8 @@
       <div style="margin-top:1.2rem">
         <div class="wb-label">Index of Coincidence</div>
         <div class="ic-val" id="icVal">—</div>
-        <div class="ic-hint" id="icHint"></div>
+        <div class="ic-hint" id="icHint" aria-live="polite"></div>
+        <p class="ic-hint">IC counts matching letter pairs; it ignores their order. It does not identify a cipher or prove randomness. <a href="../hall-of-foundations/entropy.html#entropy-rate">See a balanced, predictable counterexample.</a></p>
       </div>
     </div>
 
@@ -414,12 +415,13 @@
     var freqs = r.counts.map(function(c){ return r.total ? (c/r.total*100) : 0; });
     renderBars('freqBars','freqLabels', freqs);
     var ic = calcIC(r.counts, r.total);
-    document.getElementById('icVal').textContent = r.total > 0 ? ic.toFixed(4) : '—';
-    var hint = '';
-    if(r.total >= 20){
-      if(ic > 0.06) hint = 'Consistent with monoalphabetic / natural language';
-      else if(ic > 0.04) hint = 'Suggests polyalphabetic with short key';
-      else hint = 'Flat distribution — polyalphabetic or random';
+    document.getElementById('icVal').textContent = r.total >= 2 ? ic.toFixed(4) : '—';
+    var hint = 'At least two A–Z letters are needed for a matching-pair proportion.';
+    if(r.total >= 2){
+      if(r.total < 20) hint = 'Short sample: the observed coincidence proportion is sensitive to each letter.';
+      else if(ic > 0.06) hint = 'Higher observed coincidence: more repeated-letter pairs than the uniform-letter reference (1/26 ≈ 0.0385).';
+      else if(ic > 0.04) hint = 'Observed coincidence is above the uniform-letter reference (1/26 ≈ 0.0385).';
+      else hint = 'Low observed coincidence: compatible with many sources, including balanced deterministic text.';
     }
     document.getElementById('icHint').textContent = hint;
   }

@@ -1,0 +1,83 @@
+{
+  "id": "museum-columnar-classroom-v1",
+  "version": 1,
+  "provenance": "Original synthetic classroom messages. The short complete fixture is independently hand-checkable as rows ATTA / CKAT / DAWN, reading columns 3,1,4,2. Orders in this JSON are zero-based ciphertext readout orders. No historical provenance or population representativeness is claimed.",
+  "seeds": [
+    7,
+    19,
+    41
+  ],
+  "budget": 1000,
+  "restarts": 2,
+  "fixtures": [
+    {
+      "id": "short-complete",
+      "plaintext": "ATTACKATDAWN",
+      "ciphertext": "TAWACDATNTKA",
+      "order": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "width": 4,
+      "length": 12,
+      "remainder": 0
+    },
+    {
+      "id": "courier-incomplete",
+      "plaintext": "THECOURIERLEFTTHEMESSAGEBESIDETHEBRIDGE",
+      "ciphertext": "CETEEDBEHREEASHDORTSBERTULHSETIEIFMGIEG",
+      "order": [
+        3,
+        1,
+        4,
+        0,
+        2
+      ],
+      "width": 5,
+      "length": 39,
+      "remainder": 4
+    },
+    {
+      "id": "reading-complete",
+      "plaintext": "THEMUSEUMKEEPSORIGINALMESSAGESANDASKSVISITORSTOCOMPAREEVIDENCEBEFOREACCEPTINGANA",
+      "ciphertext": "EOMAIOEBCNEEIASOPERITMISDIOIFPURENSCVEEAMENGKRANENSSLSVTEECAHKGSATMDOTUPAESSRCAG",
+      "order": [
+        6,
+        2,
+        0,
+        7,
+        3,
+        5,
+        1,
+        4
+      ],
+      "width": 8,
+      "length": 80,
+      "remainder": 0
+    },
+    {
+      "id": "long-key-incomplete",
+      "plaintext": "WEWILLREADTHEORIGINALMESSAGECAREFULLYANDRECORDTHEKEYANDTHESOURCEBEFOREMAKINGANYCLAIMABOUTS",
+      "ciphertext": "DMUDEEAWRGNECNOEAEOTOCWESYEUKAHSLHOAMLIAENENSIIEDYEGUTELTSMIEOAAKRIBALFRHRLLGCRABATRNRCDFY",
+      "order": [
+        9,
+        2,
+        7,
+        0,
+        11,
+        5,
+        3,
+        10,
+        1,
+        8,
+        4,
+        6
+      ],
+      "width": 12,
+      "length": 90,
+      "remainder": 6
+    }
+  ]
+}

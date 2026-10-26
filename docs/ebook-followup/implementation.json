@@ -1,0 +1,352 @@
+{
+  "baseline": "f49d57da96778ee460035b04e00b811323f6e6cd",
+  "scope": "All 21 authorized Cipher Museum recommendations; existing Crypto Lab demos linked, not recreated. Selected passages in13 works, not whole-book certification.",
+  "items": [
+    {
+      "id": "EBR-01",
+      "title": "Correct Auto-Solve language labels",
+      "kind": "correction",
+      "status": "implemented; locally verified",
+      "files": [
+        "cipher-detective.html",
+        "js/detective/lang-model.js",
+        "js/detective/detective.js"
+      ],
+      "public_path": "cipher-detective.html",
+      "change": "Replaced language-confidence claims with unverified model-fit notes, a short-sample guard and inspectable score components. Fitness and solver rankings are unchanged.",
+      "sources": [
+        "LASRY-2018",
+        "SWEIGART-2018"
+      ],
+      "validation": "Actual model/renderer regression; four-letter example; fixed baseline scores; mobile result and keyboard table checks."
+    },
+    {
+      "id": "EBR-02",
+      "title": "Qualify workbench IC conclusions",
+      "kind": "correction",
+      "status": "implemented; locally verified",
+      "files": [
+        "lab/workbench.html",
+        "hall-of-foundations/entropy.html"
+      ],
+      "public_path": "lab/workbench.html",
+      "change": "Qualified every IC band as an observed statistic, with low-sample behavior and a worked cyclic-source entropy-rate comparison.",
+      "sources": [
+        "GRAY-1990-CORRECTED-2023"
+      ],
+      "validation": "Live repeated-alphabet IC0.0381, permutation and small-input controls; exact cyclic-source enumeration."
+    },
+    {
+      "id": "EBR-03",
+      "title": "Correct the Lorenz signal path",
+      "kind": "correction",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/lorenz.html"
+      ],
+      "public_path": "ciphers/lorenz.html#lorenz-signal-path",
+      "change": "Corrected keyboard/plaintext-tape, cipher attachment, radio ciphertext and receiving plaintext path.",
+      "sources": [
+        "TUNNY-1945"
+      ],
+      "validation": "Primary facsimile passage and visible flow checked; retained Lorenz regression tests."
+    },
+    {
+      "id": "EBR-04",
+      "title": "Qualify Lorenz wheel-setting reuse",
+      "kind": "correction",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/lorenz.html"
+      ],
+      "public_path": "ciphers/lorenz.html#lorenz-feedback",
+      "change": "Conditioned depth cancellation on equal keystreams and explained later plaintext-feedback exceptions.",
+      "sources": [
+        "TUNNY-1945"
+      ],
+      "validation": "Reuse algebra and historical configuration boundary reviewed; existing depth experiment tests pass."
+    },
+    {
+      "id": "EBR-05",
+      "title": "Separate Tutte’s inference from Turingery",
+      "kind": "correction",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/bill-tutte.html"
+      ],
+      "public_path": "ciphers/bill-tutte.html#tunny-three-tasks",
+      "change": "Separated structural inference, Turingery pin-pattern recovery and statistical message setting.",
+      "sources": [
+        "TUNNY-1945",
+        "GANNON-2014"
+      ],
+      "validation": "Three-task chronology cross-checked against report/book passages; narrow table accessible by scrolling."
+    },
+    {
+      "id": "EBR-06",
+      "title": "Explain AES wide-trail diffusion",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/aes.html"
+      ],
+      "public_path": "ciphers/aes.html#wide-trail",
+      "change": "Explained branch number, dispersion and the individual four-round trail bound; linked AES Anatomy.",
+      "sources": [
+        "DAEMEN-RIJMEN-2020"
+      ],
+      "validation": "All 69 nonempty MixColumns minors and ShiftRows dispersion independently checked; trail/proof boundaries reviewed."
+    },
+    {
+      "id": "EBR-07",
+      "title": "Show DES S-box differential filtering",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/des.html"
+      ],
+      "public_path": "ciphers/des.html#s1-differential",
+      "change": "Added exact static DES S1 differential/key-filter examples and linked Biham Lens.",
+      "sources": [
+        "BIHAM-SHAMIR-1993-2009"
+      ],
+      "validation": "Independent full S1 DDT enumeration and two-observation intersection {17,23}; exposed-component boundary retained."
+    },
+    {
+      "id": "EBR-08",
+      "title": "Separate DES attack resource measures",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/des.html",
+        "lab/modern-attack-evidence.html"
+      ],
+      "public_path": "lab/modern-attack-evidence.html#des-differential",
+      "change": "Separated historical DES collection, retained data, analysis work and access variants.",
+      "sources": [
+        "BIHAM-SHAMIR-1993-2009"
+      ],
+      "validation": "Displayed exponents, phase labels, structure arithmetic and probabilistic/access caveats checked."
+    },
+    {
+      "id": "EBR-09",
+      "title": "Show all 26 Caesar scores",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "cryptanalysis.html"
+      ],
+      "public_path": "cryptanalysis.html",
+      "change": "Extended existing Caesar lessons with all 26 scores, evaluated path, stopping point, score optimum and supplied-answer markers.",
+      "sources": [
+        "LASRY-2018"
+      ],
+      "validation": "Independent score table; actual run/edit/restore/empty-input controls; escaped input; desktop/mobile checks."
+    },
+    {
+      "id": "EBR-10",
+      "title": "Make columnar comparisons repeatable",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/columnar.html",
+        "teaching.html",
+        "scripts/columnar-classroom.js",
+        "public/teaching/columnar-classroom.md",
+        "public/teaching/columnar-classroom-fixtures.json"
+      ],
+      "public_path": "teaching.html#columnar-classroom",
+      "change": "Added a24-run classroom experiment/worksheet reusing the existing solver, retaining failures and full receipts.",
+      "sources": [
+        "LASRY-2018"
+      ],
+      "validation": "Independent fixture preparation; exact replay excluding timing; budget/failure denominators; distinct key/plaintext recovery."
+    },
+    {
+      "id": "EBR-11",
+      "title": "Compare entropy with first-guess success",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "hall-of-foundations/entropy.html"
+      ],
+      "public_path": "hall-of-foundations/entropy.html#first-guess",
+      "change": "Added the 256-bit mixture comparison: about129 Shannon bits versus aboutone min-entropy bit and half-success first guess.",
+      "sources": [
+        "VADHAN-2012"
+      ],
+      "validation": "Exact small-distribution enumeration and endpoints; large preset independently calculated."
+    },
+    {
+      "id": "EBR-12",
+      "title": "Explain privacy amplification and its limits",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "hall-of-foundations/entropy.html"
+      ],
+      "public_path": "hall-of-foundations/entropy.html#privacy-amplification",
+      "change": "Added eight-row partial-leakage/XOR example and a parity-leakage failing control.",
+      "sources": [
+        "TYAGI-WATANABE-2023"
+      ],
+      "validation": "Every displayed row checked; conditional parity independence and failing control enumerated."
+    },
+    {
+      "id": "EBR-13",
+      "title": "Separate authenticity from freshness",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "modern.html",
+        "learn.html"
+      ],
+      "public_path": "modern.html#replay-freshness",
+      "change": "Added valid-tag/freshness A/B/A, tampered-counter and receiver-reset worked cases; linked Regex Veil.",
+      "sources": [
+        "ANDERSON-2020",
+        "WONG-2021"
+      ],
+      "validation": "Independent real HMAC and receiver-state calculation for every row; ordered-delivery limits explicit."
+    },
+    {
+      "id": "EBR-14",
+      "title": "Demonstrate ambiguous hash inputs",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/sha256.html",
+        "learn.html"
+      ],
+      "public_path": "ciphers/sha256.html#structured-hashing",
+      "change": "Added ambiguous tuple bytes and specified UTF-8 byte-length encoding; linked Context Ward.",
+      "sources": [
+        "WONG-2021"
+      ],
+      "validation": "Exact bytes/digests, empty/separator/non-ASCII inputs and malformed decoding checked; no false collision claim."
+    },
+    {
+      "id": "EBR-15",
+      "title": "Explain purpose-separated HKDF outputs",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/diffie-hellman.html",
+        "learn.html"
+      ],
+      "public_path": "ciphers/diffie-hellman.html#key-derivation",
+      "change": "Added exact HKDF Extract/Expand fixtures, direction labels and prefix comparison; linked KDF Chain.",
+      "sources": [
+        "WONG-2021"
+      ],
+      "validation": "PRK/output recomputed independently using HMAC and Node/OpenSSL HKDF; all bytes visible on mobile."
+    },
+    {
+      "id": "EBR-16",
+      "title": "Explain why ML-DSA aborts",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "hall-of-foundations/random-oracle.html"
+      ],
+      "public_path": "hall-of-foundations/random-oracle.html#why-abort",
+      "change": "Added bounded-mask/common-interior example and linked Dilithium Reject.",
+      "sources": [
+        "MENEZES-LATTICES-2026",
+        "FIPS-203-204"
+      ],
+      "validation": "All small mask/shift outcomes and rejected-edge control enumerated; no standard signer or security proof claimed."
+    },
+    {
+      "id": "EBR-17",
+      "title": "Explain KEM reencryption and implicit rejection",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "hall-of-foundations/learning-with-errors.html"
+      ],
+      "public_path": "hall-of-foundations/learning-with-errors.html#from-pke-to-kem",
+      "change": "Explained KEM outputs, reencryption, deterministic implicit rejection and separate size validation; linked KEM Trap.",
+      "sources": [
+        "MENEZES-LATTICES-2026",
+        "FIPS-203-204"
+      ],
+      "validation": "Conceptual text compared with verified source algorithms; existing toy remains explicitly nonstandard."
+    },
+    {
+      "id": "EBR-18",
+      "title": "Connect noisy equations to a q-ary lattice",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "hall-of-foundations/closest-vector.html",
+        "hall-of-foundations/learning-with-errors.html"
+      ],
+      "public_path": "hall-of-foundations/closest-vector.html#lwe-lattice",
+      "change": "Added prime-modulus, finite-field-rank q-ary construction and tiny rectangular example; linked existing lattice labs.",
+      "sources": [
+        "MENEZES-LATTICES-2026"
+      ],
+      "validation": "Lattice membership, determinant, minimum distance, unique recovery, tie and representative-change checks."
+    },
+    {
+      "id": "EBR-19",
+      "title": "Show Colossus clock, condition and count",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/colossus.html"
+      ],
+      "public_path": "ciphers/colossus.html#clock-condition-count",
+      "change": "Added clock/condition/count/threshold explanation with an original six-position static example.",
+      "sources": [
+        "TUNNY-1945",
+        "GANNON-2014"
+      ],
+      "validation": "Hand-countable XOR/count table and strict threshold boundary; historical tape-rate units kept distinct."
+    },
+    {
+      "id": "EBR-20",
+      "title": "Explain implementation leakage conditions",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/aes.html",
+        "lab/modern-attack-evidence.html"
+      ],
+      "public_path": "lab/modern-attack-evidence.html#power-leakage",
+      "change": "Explained passive power-model conditions versus faults and linked existing Power Trace.",
+      "sources": [
+        "MANGARD-OSWALD-POPP-2007"
+      ],
+      "validation": "Model/physical-evidence boundary reviewed; existing planned measured-trace work not duplicated."
+    },
+    {
+      "id": "EBR-21",
+      "title": "Connect masking to joint leakage",
+      "kind": "enhancement",
+      "status": "implemented; locally verified",
+      "files": [
+        "ciphers/aes.html"
+      ],
+      "public_path": "ciphers/aes.html#masking",
+      "change": "Added exact marginal/joint leakage illustration and linked existing Masked Core.",
+      "sources": [
+        "MANGARD-OSWALD-POPP-2007"
+      ],
+      "validation": "All 65,536 byte/mask pairs checked, including full marginal histograms and covariance identity."
+    }
+  ],
+  "validation": {
+    "test_suites": 67,
+    "local_suite_record": "The full67-suite run passed66 and caught the cache hash changing during the final mobile CSS fix. After rebuilding, the cache suite and affected behavior/mobile suites passed. Final CI reruns the complete release checks.",
+    "html_pages_linted": 214,
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_loads": 38,
+    "browser_control_checks": 8,
+    "lab_destinations": 14,
+    "lab_link_evidence": "docs/ebook-followup/lab-link-check.json",
+    "source_register_entries": 160,
+    "publication": "GitHub CI and Pages deployment are separate release gates; local success does not presume their result."
+  }
+}

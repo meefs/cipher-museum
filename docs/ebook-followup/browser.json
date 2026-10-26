@@ -1,0 +1,377 @@
+{
+  "scope": "Local Chromium changed-page loads and new-control checks at desktop/mobile widths; external requests blocked. Static examples also have independent arithmetic tests. No full factual certification.",
+  "viewports": [
+    1280,
+    390
+  ],
+  "source_sha256": {
+    "cipher-detective.html": "0c63f1a92df29f6b913afbd15b1fba643ab3a34399096361f699f213c2465294",
+    "ciphers/aes.html": "12fee221244c92509002becdc09f7000adf8c1eb461b4d8088039090596f0d66",
+    "ciphers/bill-tutte.html": "7c3ee6feae98526a5a3980416d9f4888a1822887d2278c86fafaeaccb3fafd79",
+    "ciphers/colossus.html": "12f97888209a625a92e34af42b6b0ce0e92aebe1fea1161979edbc2acece39a5",
+    "ciphers/columnar.html": "07d9490edf3d4cff5448979ae77c8841d8c345a68a9db4233925aab8d53c6e21",
+    "ciphers/des.html": "bdd4bb74cf26f94c4a5ad6664d1e3822bd118be050cbd0147cdf4f47126f04e1",
+    "ciphers/diffie-hellman.html": "3ae1be5c51ac24f2ac14e1ae2b164966d1f51f80102ec51926bfcf8295c860ed",
+    "ciphers/lorenz.html": "db274be3d557cb0a7a7bd975a829a51ebbd5b86d245d96f1f4371cc063bdc091",
+    "ciphers/sha256.html": "cb1eeac3e05f9b6c89c8a9f845b83732c422579a70e2a1079914293be70f05c4",
+    "cryptanalysis.html": "7741435385b5b835f3942c51c7244f630d7c229b0881c0b0b70afe9ad8a89e57",
+    "hall-of-foundations/closest-vector.html": "a64e353495a3f32410d0b776f688dd2f9294661f2d9d525fe4ce370f30837645",
+    "hall-of-foundations/entropy.html": "8177bf619c350287e1f2984f08ef3e28c18dc24842ed804819831a43381f4a65",
+    "hall-of-foundations/learning-with-errors.html": "ce67bdc0d5d3c4fcd25fc1ae7f4a4025577996efc7ab48020d049a9e2cb0cb74",
+    "hall-of-foundations/random-oracle.html": "ef9ac80c64a6ff45b28a1e41383d4cac8091b543d0fab5fb85851626159d2511",
+    "lab/modern-attack-evidence.html": "14bc65124bbe165aba374b7b90e2ddb0c5e78e561075af3528906ccd5e57fb21",
+    "lab/workbench.html": "dc2633d4aff2872330a05c5d7d3306f2685489976069c8b66e4afef58699f848",
+    "learn.html": "447c41722da733924e63cacd416c543cdafe2ff99241b594671a8258831a9ba4",
+    "modern.html": "3c8ab175bb7e546a744cfc2d9c41da36479d7cf034c9762f519db53fef13e534",
+    "teaching.html": "3bc03cae8cc696e9ee1537f269796eacd17eea4a1ac033b0cadb3a04b15b5ab0"
+  },
+  "pages": [
+    {
+      "file": "cipher-detective.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Cipher Detective — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "cipher-detective.html",
+      "width": 390,
+      "status": 200,
+      "title": "Cipher Detective — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "ciphers/aes.html",
+      "width": 1280,
+      "status": 200,
+      "title": "AES (Advanced Encryption Standard) — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/aes.html",
+      "width": 390,
+      "status": 200,
+      "title": "AES (Advanced Encryption Standard) — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "ciphers/bill-tutte.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Bill Tutte — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/bill-tutte.html",
+      "width": 390,
+      "status": 200,
+      "title": "Bill Tutte — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "ciphers/colossus.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Colossus — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/colossus.html",
+      "width": 390,
+      "status": 200,
+      "title": "Colossus — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "ciphers/columnar.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Columnar Transposition — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/columnar.html",
+      "width": 390,
+      "status": 200,
+      "title": "Columnar Transposition — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "ciphers/des.html",
+      "width": 1280,
+      "status": 200,
+      "title": "DES (Data Encryption Standard) — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/des.html",
+      "width": 390,
+      "status": 200,
+      "title": "DES (Data Encryption Standard) — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "ciphers/diffie-hellman.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Diffie-Hellman Key Exchange — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/diffie-hellman.html",
+      "width": 390,
+      "status": 200,
+      "title": "Diffie-Hellman Key Exchange — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "ciphers/lorenz.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Lorenz Cipher — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/lorenz.html",
+      "width": 390,
+      "status": 200,
+      "title": "Lorenz Cipher — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "ciphers/sha256.html",
+      "width": 1280,
+      "status": 200,
+      "title": "SHA-256 — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "ciphers/sha256.html",
+      "width": 390,
+      "status": 200,
+      "title": "SHA-256 — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "cryptanalysis.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Cryptanalysis Techniques — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "cryptanalysis.html",
+      "width": 390,
+      "status": 200,
+      "title": "Cryptanalysis Techniques — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/closest-vector.html",
+      "width": 1280,
+      "status": 200,
+      "title": "The Closest Vector Problem · Hall of Foundations",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/closest-vector.html",
+      "width": 390,
+      "status": 200,
+      "title": "The Closest Vector Problem · Hall of Foundations",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/entropy.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Information & Entropy · Hall of Foundations",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/entropy.html",
+      "width": 390,
+      "status": 200,
+      "title": "Information & Entropy · Hall of Foundations",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/learning-with-errors.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Learning With Errors · Hall of Foundations",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/learning-with-errors.html",
+      "width": 390,
+      "status": 200,
+      "title": "Learning With Errors · Hall of Foundations",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/random-oracle.html",
+      "width": 1280,
+      "status": 200,
+      "title": "The Random Oracle · Hall of Foundations",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "hall-of-foundations/random-oracle.html",
+      "width": 390,
+      "status": 200,
+      "title": "The Random Oracle · Hall of Foundations",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "lab/modern-attack-evidence.html",
+      "width": 1280,
+      "status": 200,
+      "title": "What an Attack Result Actually Shows — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "lab/modern-attack-evidence.html",
+      "width": 390,
+      "status": 200,
+      "title": "What an Attack Result Actually Shows — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "lab/workbench.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Codebreaker's Workbench — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "lab/workbench.html",
+      "width": 390,
+      "status": 200,
+      "title": "Codebreaker's Workbench — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "learn.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Learn — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "learn.html",
+      "width": 390,
+      "status": 200,
+      "title": "Learn — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "modern.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Modern Cryptography — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "modern.html",
+      "width": 390,
+      "status": 200,
+      "title": "Modern Cryptography — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "teaching.html",
+      "width": 1280,
+      "status": 200,
+      "title": "Corpus Teaching Guide — The Cipher Museum",
+      "scrollWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "teaching.html",
+      "width": 390,
+      "status": 200,
+      "title": "Corpus Teaching Guide — The Cipher Museum",
+      "scrollWidth": 390,
+      "errors": []
+    }
+  ],
+  "controls": [
+    {
+      "page": "lab/workbench.html",
+      "width": 1280,
+      "check": "Repeated alphabet retains IC0.0381 with bounded source description."
+    },
+    {
+      "page": "cipher-detective.html",
+      "width": 1280,
+      "check": "Actual four-letter Auto-Solve renders unverified/short-sample result and inspectable score components."
+    },
+    {
+      "page": "cryptanalysis.html",
+      "width": 1280,
+      "check": "hill 26-score table, completed search, known-answer/edited-input distinction, restore control."
+    },
+    {
+      "page": "cryptanalysis.html",
+      "width": 1280,
+      "check": "anneal 26-score table, completed search, known-answer/edited-input distinction, restore control."
+    },
+    {
+      "page": "lab/workbench.html",
+      "width": 390,
+      "check": "Repeated alphabet retains IC0.0381 with bounded source description."
+    },
+    {
+      "page": "cipher-detective.html",
+      "width": 390,
+      "check": "Actual four-letter Auto-Solve renders unverified/short-sample result and inspectable score components."
+    },
+    {
+      "page": "cryptanalysis.html",
+      "width": 390,
+      "check": "hill 26-score table, completed search, known-answer/edited-input distinction, restore control."
+    },
+    {
+      "page": "cryptanalysis.html",
+      "width": 390,
+      "check": "anneal 26-score table, completed search, known-answer/edited-input distinction, restore control."
+    }
+  ],
+  "failures": []
+}

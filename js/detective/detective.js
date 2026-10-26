@@ -312,7 +312,7 @@
 
     var html = '<div class="autosolve-best">' +
       '<div class="autosolve-best-header">' +
-        '<h3 class="autosolve-best-method">Best candidate: ' + esc(best.method) + '</h3>' +
+        '<h3 class="autosolve-best-method">Best-scoring candidate (unverified): ' + esc(best.method) + '</h3>' +
         '<span class="conf-badge conf-badge--' + esc(conf.tier) + '">' + esc(conf.label) + '</span>' +
       '</div>' +
       '<p class="autosolve-best-key"><strong>Key:</strong> ' + esc(best.key) + '</p>' +
@@ -320,11 +320,26 @@
       '<a class="autosolve-cta" href="lab/workbench.html#ct=' + encodedCt + '">Refine in the Workbench \u2192</a>' +
       '</div>';
 
+    html += '<p class="autosolve-runtime">Unverified: the score ranks candidates under this embedded English model. It is not a language probability, a proof of the original message, or an authentication check. Short samples, names, other languages and repeated fragments can mislead. The 60-letter display guard is a teaching convention, not a reliability threshold.</p>';
+    var model = global.DetectiveLangModel;
+    if (model) {
+      var letters = (best.plaintext || '').toUpperCase().replace(/[^A-Z]/g, '').length;
+      function displayScore(value) { return Number.isFinite(value) ? value.toFixed(3) : 'not available'; }
+      html += '<details><summary>Inspect this candidate’s model score</summary><p>' + letters + ' letters; ' + Math.max(0, letters - 1) + ' overlapping bigrams; ' + Math.max(0, letters - 2) + ' overlapping trigrams.</p>' +
+        '<p>Trigram sum ' + displayScore(model.trigramScore(best.plaintext)) +
+        ' + 0.4 × bigram sum ' + displayScore(model.bigramScore(best.plaintext)) +
+        ' + word bonus ' + displayScore(model.wordBonus(best.plaintext)) +
+        ' = total ' + displayScore(model.fitness(best.plaintext)) +
+        '. Per letter: ' + displayScore(letters ? model.fitness(best.plaintext) / letters : -Infinity) +
+        '. Higher is preferred by the search; these are heuristic units.</p></details>';
+    }
+
     if (result.attempts.length > 1) {
       html += '<div class="autosolve-others">' +
         '<p class="autosolve-others-title">Other candidates considered</p>' +
+        '<div class="autosolve-table-scroll" role="region" tabindex="0" aria-label="Other candidate results; scroll horizontally">' +
         '<table class="autosolve-others-table">' +
-        '<thead><tr><th>Method</th><th>Per-char fit</th><th>Confidence</th><th>Plaintext start</th></tr></thead>' +
+        '<thead><tr><th>Method</th><th>Per-char fit</th><th>Model-fit note</th><th>Plaintext start</th></tr></thead>' +
         '<tbody>';
       for (var i = 1; i < result.attempts.length; i++) {
         var a = result.attempts[i];
@@ -337,7 +352,7 @@
           '<td class="ao-plain">' + esc(preview) + (a.plaintext && a.plaintext.length > 60 ? '\u2026' : '') + '</td>' +
         '</tr>';
       }
-      html += '</tbody></table></div>';
+      html += '</tbody></table></div></div>';
     }
 
     html += '<p class="autosolve-runtime">Search completed in ' + result.runtimeMs + ' ms.</p>';

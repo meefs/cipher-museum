@@ -88,6 +88,28 @@
       <div class="panel-body"><p>The input is padded so its length is congruent to 448 mod 512, then a 64-bit length is appended. The padded message is split into 512-bit blocks. Each block is processed by the <em>compression function</em>, which mixes the block into a 256-bit internal state through 64 rounds of bitwise operations: rotations, XORs, AND/OR/NOT, modular addition, and round constants derived from the cube roots of the first 64 primes. After the last block the internal state is the hash output.</p><p>Two security goals are preimage resistance (finding an input for a specified digest) and collision resistance (finding any two distinct inputs with the same digest). Generic classical work factors for an ideal 256-bit hash are about 2<sup>256</sup> and 2<sup>128</sup> respectively. These are search-model estimates, not a guarantee that a guessable password takes that much work to recover.</p></div>
     </div>
 
+    <section class="panel" id="structured-hashing" aria-labelledby="encoding-heading">
+      <div class="panel-body">
+        <h2 id="encoding-heading">Hash bytes, preserve field boundaries</h2>
+        <p>The tuples <code>["ab", "c"]</code> and <code>["a", "bc"]</code> both become <code>abc</code> when their fields are simply joined. Both hash inputs are the same bytes, <code>61 62 63</code> in hexadecimal. Their equal digest is an encoding ambiguity, <strong>not a collision attack on SHA-256</strong>.</p>
+        <p>For this two-field teaching format, encode each field as its four-byte unsigned big-endian UTF-8 byte length followed by its UTF-8 bytes. A receiver checks each length and recovers exactly two fields, rejecting truncation or extra data. Lengths count bytes: <code>é</code> encodes as <code>c3 a9</code>, so its length is 2.</p>
+        <p class="ebook-table-hint">Swipe or scroll the table horizontally to see every column. Keyboard: focus the table area and use the arrow keys.</p>
+<div class="ebook-table-scroll" tabindex="0" role="region" aria-label="Structured hash input comparison">
+<table class="cipher-table" id="tuple-example">
+          <caption>Unambiguous encoding for two UTF-8 fields (hexadecimal)</caption>
+          <thead><tr><th scope="col">Fields</th><th scope="col">Length-prefixed bytes</th></tr></thead>
+          <tbody>
+            <tr><td><code>["ab", "c"]</code></td><td><code>00 00 00 02 61 62 00 00 00 01 63</code></td></tr>
+            <tr><td><code>["a", "bc"]</code></td><td><code>00 00 00 01 61 00 00 00 02 62 63</code></td></tr>
+          </tbody>
+        </table>
+</div>
+        <p>These encoded messages have different SHA-256 digests. Encoding removes this field-boundary ambiguity; it does not make hash collisions mathematically impossible. A complete protocol also defines field types, context and allowed representations. TupleHash is a standardized tuple-hashing construction based on cSHAKE, distinct from SHA-256 and from this teaching encoding.</p>
+        <p>Inspect an existing application in <a href="https://systemslibrarian.github.io/crypto-lab-context-ward/">Crypto Lab: Context Ward</a>: switch to <strong>Full lab</strong> to examine length-prefixed leaf bytes and sealed fields. Its fixed teaching keys and scripted agent are not a production security guarantee.</p>
+        <p class="source-note">Source: David Wong, <em>Real-World Cryptography</em> (2021 edition), §2.5.4, “Avoid ambiguous hashing with TupleHash,” PDF pp. 120–123 in the reflowed edition, which has no printed pagination. The two-field byte example is a museum adaptation.</p>
+      </div>
+    </section>
+
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
       <div class="panel-body"><p>No practical collision attack is known against full SHA-256. Its Merkle&ndash;Damg&aring;rd structure permits length extension: from H(secret &#x2016; data) and its length, an attacker can derive a digest for an extended message without learning the secret. Therefore that construction is not a safe message authentication code. Use an appropriate keyed construction such as HMAC-SHA-256; changing to an unkeyed SHA-3 hash does not itself provide authentication. Idealized Grover search reduces the generic preimage query exponent, but does not give an inexpensive real-world attack or settle every post-quantum application.</p></div>
