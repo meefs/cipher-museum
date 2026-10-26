@@ -10,6 +10,8 @@ The Cipher Museum is part digital exhibit, part cipher playground, and part code
 
 **[Live Museum →](https://ciphermuseum.com)**
 
+**[Independent audit document — all 214 pages](audit/README.md)** — a downloadable snapshot with complete page text, examples, source notes, supporting scripts/data, and an AI review prompt. Available as one document or smaller review parts; no repository access is needed to read the exported files.
+
 [![DOI](https://zenodo.org/badge/1182903273.svg)](https://doi.org/10.5281/zenodo.23298940)
 [![Cipher Corpus dataset v0.6 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23297920.svg)](https://doi.org/10.5281/zenodo.23297920)
 

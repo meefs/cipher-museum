@@ -1,5 +1,11 @@
 # Documentation
 
+## Independent content review
+
+- [Complete 214-page audit export](../audit/README.md) — one self-contained Markdown document, smaller upload parts, a source register, and independent-review instructions.
+- [Page-by-page accuracy audit](PAGE_BY_PAGE_ACCURACY_AUDIT.md) — prior review scope, corrections, and evidence limits.
+- [67-item progress tracker](ACCURACY_REVIEW_PROGRESS.md) — completed bounded work packages from the prior audit.
+
 ## Software release
 
 - [Software Publishing](SOFTWARE_PUBLISHING.md) — version choice, Zenodo/GitHub metadata, archive scope, and release procedure
