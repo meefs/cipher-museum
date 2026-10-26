@@ -315,8 +315,7 @@
 
       case 'vigKeyLength':
         if (cs !== 'alpha') return { ok: false, reason: 'Vigenère key-length analysis requires alphabetic text.' };
-        if (n < 50)         return { ok: false, reason: 'Need at least 50 letters for reliable key-length estimation.' };
-        if (ioc > 0.063)    return { ok: false, reason: 'IoC is high — text looks monoalphabetic, not polyalphabetic.' };
+        if (n < 50)         return { ok: false, reason: 'This teaching tool requires at least 50 letters; that threshold does not guarantee reliable estimation.' };
         return { ok: true };
 
       case 'substFreq':

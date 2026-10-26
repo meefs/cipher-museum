@@ -146,14 +146,14 @@
         <span class="badge era-modern">1999 · Schneier</span>
       </div>
       <div class="card-name">Solitaire / Pontifex</div>
-      <p class="card-desc">Solitaire / Pontifex (1999) — Bruce Schneier's hand cipher driven by a 54-card deck (written for Cryptonomicon). Crowley showed a ~1/22.5 keystream bias.</p>
+      <p class="card-desc">Bruce Schneier’s 54-card Solitaire cipher (1999) was designed for Neal Stephenson’s novel <em>Cryptonomicon</em> (1999 edition). Crowley measured a bias in consecutive keystream outputs; this is a study exhibit, not a security recommendation.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">Key: deck order · Output: 1–26 per card draw</span><br>
         <span style="color:var(--tx3);">Bias: 1/22.5 vs 1/26 ideal (Crowley 1999)</span>
       </div>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--historical trust-label--sm" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise.">Historical Only</span>
-          <span class="badge" style="background:rgba(90,200,160,.1);color:var(--green);border:1px solid rgba(90,200,160,.3);">No Practical Break</span>
+          <span class="badge" style="background:rgba(90,200,160,.1);color:var(--green);border:1px solid rgba(90,200,160,.3);">Statistical Weakness</span>
           <span class="badge era-modern">Cryptonomicon</span>
         </div>
         <span class="card-arrow">→</span>
@@ -243,7 +243,7 @@
         </thead>
         <tbody>
           <tr><td>Caesar / Substitution</td><td>Frequency analysis — letter mapping preserved</td><td>Repeated substitution, diffusion and key mixing</td><td>AES SubBytes</td></tr>
-          <tr><td>Monoalphabetic</td><td>26! keys but all have same statistical signature</td><td>Fixed public S-box combined with round-key addition</td><td>AES with round keys</td></tr>
+          <tr><td>Monoalphabetic</td><td>26! keys but relabel the same frequency counts</td><td>Fixed public S-box combined with round-key addition</td><td>AES with round keys</td></tr>
           <tr><td>Polyalphabetic / Vigenère</td><td>Repeating key creates detectable periodicity</td><td>Pseudorandom keystreams with unique nonce/counter inputs under a key; output bytes can repeat</td><td>ChaCha20, AES-CTR</td></tr>
           <tr><td>Transposition</td><td>Letters preserved, just rearranged — anagram attacks work</td><td>Substitution and linear diffusion across rounds</td><td>AES ShiftRows + MixColumns</td></tr>
           <tr><td>Playfair / Hill (block)</td><td>Small blocks leak digraph statistics; linear algebra solvable</td><td>128-bit blocks, non-linear operations, key mixing</td><td>AES (128-bit block)</td></tr>

@@ -62,21 +62,21 @@
 
 <div class="section">
 
-  <div class="section-head"><span class="section-eyebrow">The Complete Journey</span><h2 class="section-title">Classical → Modern: What Each Failure Taught</h2></div>
+  <div class="section-head"><span class="section-eyebrow">The Complete Journey</span><h2 class="section-title">Classical → Modern: Compare Historical Weaknesses with Modern Design</h2></div>
 
   <div class="panel modern-table-wrap" style="margin-bottom:3rem;">
     <div class="panel-body" style="padding:0;overflow-x:auto;-webkit-overflow-scrolling:touch">
       <table class="cipher-table">
-        <thead><tr><th>Classical Cipher Type</th><th>Fatal Weakness</th><th>Modern Solution</th><th>Modern Example</th></tr></thead>
+        <thead><tr><th>Classical Cipher Type</th><th>Historical Limitation</th><th>Modern Solution</th><th>Modern Example</th></tr></thead>
         <tbody>
           <tr><td>Caesar / Monoalphabetic</td><td>Frequency analysis — letter mapping preserved</td><td>Nonlinear substitution combined with diffusion and key mixing</td><td>AES SubBytes</td></tr>
           <tr><td>Homophonic Substitution</td><td>One-to-many substitution can retain language and structural clues</td><td>Computational security under a defined attack model</td><td>AES in an appropriate authenticated mode</td></tr>
           <tr><td>Polyalphabetic / Vigenère</td><td>Repeating key creates detectable periodicity</td><td>Pseudorandom keystreams with per-key nonce uniqueness and counter limits</td><td>ChaCha20, AES-GCM</td></tr>
-          <tr><td>Transposition (Rail Fence, Columnar)</td><td>Letters preserved — anagram attacks work</td><td>Nonlinear substitution combined with diffusion and key mixing</td><td>AES ShiftRows + MixColumns</td></tr>
+          <tr><td>Transposition (Rail Fence, Columnar)</td><td>Letter counts preserved; language and ordering clues can help analysis</td><td>Nonlinear substitution combined with diffusion and key mixing</td><td>AES ShiftRows + MixColumns</td></tr>
           <tr><td>Playfair / Hill (block)</td><td>Small blocks leak digraph statistics; linear algebra solvable</td><td>128-bit blocks, non-linear operations, round keys</td><td>AES (128-bit block)</td></tr>
           <tr><td>Fractionation (Bifid, ADFGVX)</td><td>Coordinate mixing insufficient with static key square</td><td>Multiple rounds of mixing with key-derived round keys</td><td>AES 10–14 rounds</td></tr>
           <tr><td>Layered classical systems</td><td>Substitution + transposition — each layer still attackable</td><td>Multiple designed rounds; security depends on the whole construction</td><td>AES, Camellia, SM4</td></tr>
-          <tr><td>Rotor machines (Enigma, Lorenz)</td><td>Physical key distribution; operator errors; structural flaws</td><td>Authenticated public-key methods help establish shared secrets</td><td>RSA, Diffie-Hellman, ECDH</td></tr>
+          <tr><td>Machine ciphers (Enigma, Lorenz)</td><td>Physical key distribution; operator errors; structural flaws</td><td>Authenticated public-key methods help establish shared secrets</td><td>RSA, Diffie-Hellman, ECDH</td></tr>
           <tr><td>One-Time Pad</td><td>Impractical key management — reuse is catastrophic</td><td>Computationally secure with short key; KDFs for key derivation</td><td>AES-256, X25519 key exchange</td></tr>
         </tbody>
       </table>
@@ -105,7 +105,7 @@
     </div>
     <div class="mc">
       <div class="mc-name">Transposition (Rail Fence, Columnar)</div>
-      <div class="mc-row"><span class="mc-label">Weakness</span><span class="mc-val">Letters preserved — anagram attacks work</span></div>
+      <div class="mc-row"><span class="mc-label">Weakness</span><span class="mc-val">Letter counts preserved; language and ordering clues can help analysis</span></div>
       <div class="mc-row"><span class="mc-label">Solution</span><span class="mc-val">Nonlinear substitution combined with diffusion and key mixing</span></div>
       <div class="mc-row"><span class="mc-label">Example</span><span class="mc-val">AES ShiftRows + MixColumns</span></div>
     </div>
@@ -128,7 +128,7 @@
       <div class="mc-row"><span class="mc-label">Example</span><span class="mc-val">AES, Camellia, SM4</span></div>
     </div>
     <div class="mc">
-      <div class="mc-name">Rotor machines (Enigma, Lorenz)</div>
+      <div class="mc-name">Machine ciphers (Enigma, Lorenz)</div>
       <div class="mc-row"><span class="mc-label">Weakness</span><span class="mc-val">Physical key distribution; operator errors; structural flaws</span></div>
       <div class="mc-row"><span class="mc-label">Solution</span><span class="mc-val">Authenticated public-key methods help establish shared secrets</span></div>
       <div class="mc-row"><span class="mc-label">Example</span><span class="mc-val">RSA, Diffie-Hellman, ECDH</span></div>
@@ -174,7 +174,7 @@
   <div style="margin-bottom:2.5rem;">
     <div style="font-family:var(--fm);font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--s4);">🔐 Ciphers — Plaintext → Ciphertext → Plaintext</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;">
-      <a href="ciphers/aes.html" class="panel" style="text-decoration:none;color:inherit;display:block;"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-diamond"/></svg></span><span class="panel-title">AES-256 (Symmetric) <span style="color:var(--gold);font-size:.7rem;">→ exhibit</span></span></div><div class="panel-body"><p>128-bit blocks, 256-bit key, 14 rounds. 2²⁵⁶ possible keys with no known practical attack. Protects everything from HTTPS to full-disk encryption.</p>
+      <a href="ciphers/aes.html" class="panel" style="text-decoration:none;color:inherit;display:block;"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-diamond"/></svg></span><span class="panel-title">AES-256 (Symmetric) <span style="color:var(--gold);font-size:.7rem;">→ exhibit</span></span></div><div class="panel-body"><p>128-bit blocks, 256-bit key, 14 rounds. 2²⁵⁶ possible keys; no practical key-recovery attack is known against correctly used full-round AES. Protocol, mode and implementation failures remain separate risks.</p>
       </div></a>
       <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-globe"/></svg></span><span class="panel-title">ChaCha20 (Stream Cipher)</span></div><div class="panel-body"><p>Designed by Daniel Bernstein. Original ChaCha uses a 64-bit nonce and 64-bit block counter. IETF ChaCha20 (RFC 8439) uses a 256-bit key, 96-bit nonce, and 32-bit block counter. Both XOR plaintext with a deterministic pseudorandom keystream: never reuse a nonce under the same key, and never let the block counter wrap. <a href="https://cr.yp.to/chacha/chacha-20080128.pdf" target="_blank" rel="noopener noreferrer">Original specification</a>; <a href="https://www.rfc-editor.org/rfc/rfc8439.html#section-2.3" target="_blank" rel="noopener noreferrer">RFC 8439 §§2.3, 4</a> and <a href="https://www.rfc-editor.org/errata/rfc8439" target="_blank" rel="noopener noreferrer">errata</a>.</p></div></div>
     </div>
@@ -202,7 +202,7 @@
   <div style="margin-bottom:2.5rem;">
     <div style="font-family:var(--fm);font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--s4);">#️⃣ Hash Functions — One-Way Fingerprints</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;">
-      <a href="ciphers/sha256.html" class="panel" style="text-decoration:none;color:inherit;display:block;"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-lock"/></svg></span><span class="panel-title">SHA-256 (Hash Function) <span style="color:var(--gold);font-size:.7rem;">→ exhibit</span></span></div><div class="panel-body"><p>Produces a fixed 256-bit digest of a message shorter than 2⁶⁴ bits. Preimage resistance means finding an input for a chosen digest should be computationally difficult; low-entropy inputs can still be guessed. Generic collision search takes roughly 2¹²⁸ work, rather than having a proven exact lower bound. Used in digital signatures, certificate verification, blockchain. <em>Not a cipher — it cannot be reversed.</em></p>
+      <a href="ciphers/sha256.html" class="panel" style="text-decoration:none;color:inherit;display:block;"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-lock"/></svg></span><span class="panel-title">SHA-256 (Hash Function) <span style="color:var(--gold);font-size:.7rem;">→ exhibit</span></span></div><div class="panel-body"><p>Produces a fixed 256-bit digest of a message shorter than 2⁶⁴ bits. Preimage resistance means finding an input for a chosen digest should be computationally difficult; low-entropy inputs can still be guessed. Generic collision search takes roughly 2¹²⁸ work, rather than having a proven exact lower bound. Used in digital signatures, certificate verification, blockchain. <em>A hash is not a reversible encryption scheme; guessed inputs can still be tested.</em></p>
       </div></a>
     </div>
   </div>
@@ -237,7 +237,7 @@
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-book"/></svg></span><span class="panel-title">The Code Book</span></div>
-      <div class="panel-body"><p>Simon Singh’s <em>The Code Book</em> traces the history of cryptography from ancient Egypt to quantum computing. The definitive popular introduction to the field.</p></div>
+      <div class="panel-body"><p>Simon Singh’s <em>The Code Book</em> traces the history of cryptography from ancient Egypt to quantum computing. A popular historical introduction, first published in 1999.</p></div>
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-signal"/></svg></span><span class="panel-title">Cryptography I (Stanford)</span></div>

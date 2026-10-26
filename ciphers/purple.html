@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Purple (Type 97) — The Cipher Museum</title>
-  <meta name="description" content="Purple machine (1939) — Japan's Type 97 stepping-switch cipher for diplomatic traffic. Broken on 20 September 1940 by Frank Rowlett and the US Army SIS team.">
+  <meta name="description" content="Purple was Japan’s Type 97 diplomatic stepping-switch cipher. Grotjan’s 20 September 1940 breakthrough helped the US Army SIS team reconstruct it.">
   <meta property="og:title" content="Purple (Type 97) — The Cipher Museum">
-  <meta property="og:description" content="Purple machine (1939) — Japan's Type 97 stepping-switch cipher for diplomatic traffic. Broken on 20 September 1940 by Frank Rowlett and the US Army SIS team.">
+  <meta property="og:description" content="Purple was Japan’s Type 97 diplomatic stepping-switch cipher. Grotjan’s 20 September 1940 breakthrough helped the US Army SIS team reconstruct it.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/purple.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Purple (Type 97) — The Cipher Museum">
-  <meta name="twitter:description" content="Purple machine (1939) — Japan's Type 97 stepping-switch cipher for diplomatic traffic. Broken on 20 September 1940 by Frank Rowlett and the US Army SIS team.">
+  <meta name="twitter:description" content="Purple was Japan’s Type 97 diplomatic stepping-switch cipher. Grotjan’s 20 September 1940 breakthrough helped the US Army SIS team reconstruct it.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/purple.html">
@@ -123,7 +123,7 @@
         <div class="attack-panel">
           <div class="attack-name">Pattern Recognition (Grotjan's Insight)</div>
           <div class="attack-diff">Complexity: The single break · Genevieve Grotjan · 20 September 1940</div>
-          <p class="attack-desc">On a worksheet aligning intercept plaintext-ciphertext pairs across repeated daily keys, Grotjan identified a recurring relationship in the consonant alphabet — the alignment that revealed how the consonant bank's stepping switches were wired. Rowlett later called it "one of the great breaks of the war."</p>
+          <p class="attack-desc">On a worksheet aligning intercept plaintext-ciphertext pairs across repeated daily keys, Grotjan identified a recurring relationship in the twenties — an important step toward reconstructing that bank’s stepping switches. Rowlett later called it "one of the great breaks of the war."</p>
         </div>
         <div class="callout callout-warn">
           <span class="callout-icon">⚠️</span>
@@ -141,9 +141,9 @@
           <thead><tr><th>Concept from Purple</th><th>Modern Evolution</th></tr></thead>
           <tbody>
             <tr><td>Stepping-switch keystream</td><td>Linear feedback shift register (LFSR) stream ciphers</td></tr>
-            <tr><td>Per-character-class subcipher</td><td>Cautionary anti-pattern — modern ciphers treat all bits uniformly</td></tr>
+            <tr><td>Per-character-class subcipher</td><td>Cautionary anti-pattern — analyse the complete construction for exploitable partitions</td></tr>
             <tr><td>Daily key-sheet rotation</td><td>Modern key rotation policies (TLS session keys, signal protocol ratchets)</td></tr>
-            <tr><td>Reconstruction from traffic alone</td><td>Modern side-channel and known-ciphertext attack research</td></tr>
+            <tr><td>Reconstruction from traffic alone</td><td>Reconstructing a design from traffic is distinct from measuring physical side-channel leakage</td></tr>
           </tbody>
         </table>
         <div class="callout callout-info" style="margin-top:1rem;">

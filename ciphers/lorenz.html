@@ -73,7 +73,7 @@
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1940</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">12-wheel teleprinter cipher (Vernam-based)</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Tiltman: depth (1941) · Tutte: structure (1942) · Colossus: wheel settings (1944)</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Computational cryptanalysis → birth of modern computing</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Cryptanalysis and early programmable electronic computing</span></div>
   </div>
 </div>
 
@@ -174,20 +174,20 @@ The output is deterministic; wheel states and keystream symbols can repeat</pre>
     </div>
 
     <div class="panel">
-      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-diamond"/></svg></span><span class="panel-title">Enigma vs Lorenz — what changed when Enigma was no longer enough</span></div>
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-diamond"/></svg></span><span class="panel-title">Enigma and Lorenz — different communication roles</span></div>
       <div class="panel-body">
         <p style="margin-top:0;">Both ran in parallel through the war, and both lived in the same Bletchley campus. They are the same family of problem solved with very different ambitions — and they failed for very different reasons.</p>
         <table class="cipher-table">
           <thead><tr><th></th><th style="color:var(--gold);">Enigma (1923 / field)</th><th style="color:var(--gold);">Lorenz SZ40/42 (1940 / strategic)</th></tr></thead>
           <tbody>
-            <tr><td><strong>Who used it</strong></td><td>Army, Navy, Luftwaffe — every front-line unit</td><td>OKW &harr; Hitler &amp; senior commanders only</td></tr>
+            <tr><td><strong>Who used it</strong></td><td>German armed services; configurations varied</td><td>German high-command teleprinter networks</td></tr>
             <tr><td><strong>Operator model</strong></td><td>Hand-typed, lamp-board readout, telegraph the result</td><td>Inline teleprinter attachment — paper tape in, encrypted tape out, fully automatic</td></tr>
             <tr><td><strong>Cipher primitive</strong></td><td>Polyalphabetic substitution via 3–4 stepping rotors + reflector + plugboard</td><td>Vernam XOR of 5-bit Baudot characters with a 12-wheel pseudo-random keystream</td></tr>
             <tr><td><strong>Key space</strong></td><td>≈ 1.6 × 10<sup>20</sup> (with plugboard)</td><td>Irregular stepping and wheel patterns determine the output cycle; this is not a keyspace estimate or a one-time pad</td></tr>
             <tr><td><strong>Fatal weakness</strong></td><td>Reflector → no letter encrypts to itself → cribs eliminate placements</td><td>Reusing a wheel setting collapses two messages into a depth (P<sub>A</sub> ⊕ P<sub>B</sub>)</td></tr>
             <tr><td><strong>What broke it</strong></td><td>Cribs + electromechanical Bombe (Turing, Welchman, 1940)</td><td>Tiltman's manual depth recovery (1941) + Tutte's structure inference (1942) + Colossus wheel-setting (1944)</td></tr>
-            <tr><td><strong>What it built</strong></td><td>Cryptanalysis as an industrial discipline — 10 000 staff, daily key recovery</td><td>Programmable electronics — Colossus showed how electronic logic could accelerate statistical searches</td></tr>
-            <tr><td><strong>Modern echo</strong></td><td>Side-channel and operational security still beat strong primitives</td><td>Nonce reuse on AES-GCM, IV collisions on WEP — the depth attack, unchanged</td></tr>
+            <tr><td><strong>What it built</strong></td><td>Large cryptanalytic teams with access varying by network and period</td><td>Programmable electronics — Colossus showed how electronic logic could accelerate statistical searches</td></tr>
+            <tr><td><strong>Modern echo</strong></td><td>Side-channel and operational security still beat strong primitives</td><td>Keystream reuse exposes plaintext relations; GCM and WEP have additional attack details</td></tr>
           </tbody>
         </table>
         <p style="font-size:.95rem;color:var(--tx3);margin:1rem 0 0;font-style:italic;">Enigma and Lorenz were attacked through combinations of mathematical structure, traffic, operating practices and intelligence. Neither story is adequately explained by operator error alone.</p>
@@ -246,9 +246,9 @@ The output is deterministic; wheel states and keystream symbols can repeat</pre>
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from Lorenz Cipher</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>Wheel-based keystream generator</td><td>Linear Feedback Shift Registers (LFSRs): the direct descendant of rotor-based keystreams</td></tr>
-<tr><td>XOR teleprinter encryption</td><td>Vernam cipher: XOR is the foundation of all stream cipher design</td></tr>
-<tr><td>Breaking it built Colossus</td><td>The needs of cryptanalysis drove the invention of programmable computing</td></tr>
+          <tbody><tr><td>Wheel-based keystream generator</td><td>Compare electronic keystream generators; mechanical wheels do not establish a direct design lineage</td></tr>
+<tr><td>XOR teleprinter encryption</td><td>Binary stream constructions often combine plaintext and keystream with XOR</td></tr>
+<tr><td>Breaking it built Colossus</td><td>Colossus demonstrated programmable electronic processing for a specific cryptanalytic task</td></tr>
 <tr><td>Depth attack on reused settings</td><td>Keystream reuse can expose a relation between plaintexts; authentication failures require separate analysis</td></tr></tbody>
         </table>
       </div>
@@ -276,7 +276,7 @@ Step 2 — XOR with ψ stream:
 After each character:
   • All 5 χ wheels advance one position
   • Motor wheels decide whether ψ wheels step
-    (irregular motion = extra security)
+    (irregular motion changes the keystream structure)
 
 Output period depends on wheel patterns and stepping rules.
 A product of wheel lengths is not a demonstrated keystream period.</pre></div>
@@ -286,9 +286,9 @@ A product of wheel lengths is not a demonstrated keystream period.</pre></div>
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-columns"/></svg></span><span class="panel-title">Related Exhibits</span></div>
       <div class="panel-body">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem;">
-          <li><a href="enigma.html" style="color:var(--gold);text-decoration:underline;">Enigma Machine</a> — The field-level rotor cipher Lorenz outranked</li>
+          <li><a href="enigma.html" style="color:var(--gold);text-decoration:underline;">Enigma Machine</a> — A rotor cipher serving different communication roles</li>
           <li><a href="one-time-pad.html" style="color:var(--gold);text-decoration:underline;">One-Time Pad</a> — Lorenz used XOR like a OTP but with a periodic key</li>
-          <li><a href="vic.html" style="color:var(--gold);text-decoration:underline;">VIC Cipher</a> — Cold War hand cipher that resisted machine analysis</li>
+          <li><a href="vic.html" style="color:var(--gold);text-decoration:underline;">VIC Cipher</a> — Cold War hand cipher with layered operations</li>
         </ul>
       </div>
     </div>

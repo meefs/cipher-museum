@@ -183,15 +183,15 @@
     var ioc  = stats.ioc;
     var chi0 = stats.chi0;
     if (ioc >= 0.060 && chi0 < 80) {
-      return 'Distribution matches English. Consistent with a transposition cipher (letters rearranged but unchanged) or near-unencrypted text.';
+      return 'The distribution is close to this English reference. Rearrangement is one possible explanation; the score does not identify the cipher.';
     }
     if (ioc >= 0.060 && chi0 >= 80) {
-      return 'Distribution is English-shaped but offset. Consistent with simple substitution (Caesar, Atbash, monoalphabetic) — one alphabet has replaced another.';
+      return 'The frequency shape is compatible with a substituted English sample. Other languages, sample effects and other transformations remain possible.';
     }
     if (ioc >= 0.040) {
-      return 'Distribution is flatter than English. Consistent with polyalphabetic substitution (Vigenère family) or a cipher with a moderate-length repeating key.';
+      return 'IoC is below a common English benchmark. This can occur with polyalphabetic substitution, but does not establish the cipher or its key length.';
     }
-    return 'Distribution is very flat, close to random. Consistent with a long-key polyalphabetic cipher, one-time pad, or modern encryption.';
+    return 'Low IoC alone cannot establish randomness, a long key, an OTP or modern encryption. Inspect the source and other evidence.';
   }
 
   function renderFreqChart(stats) {

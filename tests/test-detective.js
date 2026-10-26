@@ -208,9 +208,9 @@ console.log('\n━━━ §2  DetectiveScoring unit tests ━━━\n');
     // Short text: confidence capped
     const shortStats = A.run('ABCDEFGHIJKLMNOPQRSTUVWXY');
     const shortRanked = S.rank(shortStats);
-    const strongConfs = ['Very likely', 'Likely'];
+    const strongConfs = ['Strongest fit', 'Similar fit'];
     const hasStrong = shortRanked.suspects.some(s => strongConfs.includes(s.confidenceLabel));
-    ok('short text: no "Very likely" or "Likely" confidence', !hasStrong,
+    ok('short text: no strongest/similar fit label', !hasStrong,
        `found: ${shortRanked.suspects.map(s => s.confidence).join(',')}`);
   }
 }

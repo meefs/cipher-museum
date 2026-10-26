@@ -7,7 +7,7 @@
     {
       "href": "../hall-of-foundations/modular-arithmetic.html",
       "label": "Modular Arithmetic",
-      "note": "Start with the clock: Z/nZ, primitive roots, and the cyclic group Diffie–Hellman lives inside (§143)."
+      "note": "Clock arithmetic, powers modulo a prime and cyclic subgroups introduce finite-field Diffie–Hellman; a primitive root alone does not establish secure parameters (§143)."
     },
     {
       "href": "../hall-of-foundations/group-theory.html",
@@ -27,7 +27,7 @@
     {
       "href": "../hall-of-foundations/euler-fermat.html",
       "label": "Euler & Fermat",
-      "note": "The theorem that makes RSA decryption undo encryption. Watch a message round-trip (§145)."
+      "note": "Euler and Fermat explain modular exponentiation; the Chinese Remainder Theorem extends the RSA round-trip argument to messages not coprime to the modulus (§145)."
     },
     {
       "href": "../hall-of-foundations/elliptic-curves-real.html",
@@ -72,12 +72,12 @@
     {
       "href": "../hall-of-foundations/learning-with-errors.html",
       "label": "Learning With Errors",
-      "note": "t = As + e: solve for the secret, then switch the noise on and watch exact algebra fail (§157)."
+      "note": "In the toy system t = As + e, noise disrupts direct recovery of the secret by exact elimination. This small example remains easy to attack (§157)."
     },
     {
       "href": "../hall-of-foundations/polynomial-rings.html",
       "label": "Polynomial Rings",
-      "note": "R_q = Z_q[X]/(X^n+1): the structured lattice inside ML-KEM and ML-DSA (§153)."
+      "note": "Polynomial arithmetic modulo X^n+1 supplies structure used in ML-KEM and ML-DSA; their parameters and security assumptions differ (§153)."
     },
     {
       "href": "../hall-of-foundations/interpolation.html",

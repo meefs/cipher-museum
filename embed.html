@@ -33,12 +33,13 @@
   // same demo-loader that renders exhibit-page demos.
   (function () {
     'use strict';
-    var m = /[?&]cipher=([A-Za-z]{1,40})(?:&|$)/.exec(location.search);
+    var cipher = new URLSearchParams(location.search).get('cipher') || '';
+    var valid = /^[A-Za-z][A-Za-z0-9]{0,39}$/.test(cipher);
     var el = document.getElementById('embed-demo');
-    if (m) {
-      el.setAttribute('data-cipher', m[1]);
-      document.getElementById('embed-title').textContent = 'Interactive Demo — ' + m[1];
-      document.title = m[1] + ' Demo — The Cipher Museum';
+    if (valid) {
+      el.setAttribute('data-cipher', cipher);
+      document.getElementById('embed-title').textContent = 'Interactive Demo — ' + cipher;
+      document.title = cipher + ' Demo — The Cipher Museum';
     } else {
       el.innerHTML = '<p class="embed-error">No cipher specified. Use embed.html?cipher=caesar (or vigenere, playfair, railFence…)</p>';
     }
@@ -46,7 +47,7 @@
     window.addEventListener('load', function () {
       setTimeout(function () {
         if (el.hasAttribute('data-cipher') && !el.querySelector('input, select, textarea, button')) {
-          el.innerHTML = '<p class="embed-error">Unknown cipher "' + el.getAttribute('data-cipher').replace(/[^A-Za-z]/g, '') + '". Check the demo name on its exhibit page.</p>';
+          el.innerHTML = '<p class="embed-error">Unknown cipher "' + el.getAttribute('data-cipher').replace(/[^A-Za-z0-9]/g, '') + '". Check the demo name on its exhibit page.</p>';
         }
       }, 400);
     });

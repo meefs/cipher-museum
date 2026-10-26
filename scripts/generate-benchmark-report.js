@@ -15,7 +15,7 @@ const CORPUS_DIR = path.join(__dirname, '../public/corpus');
 const REPORTS_DIR = path.join(__dirname, '../public/reports');
 if (!fs.existsSync(REPORTS_DIR)) fs.mkdirSync(REPORTS_DIR, { recursive: true });
 
-const TODAY = '2026-10-22';
+const TODAY = '2026-10-26';
 
 // Load corpus
 const lines = fs.readFileSync(path.join(CORPUS_DIR, 'all.jsonl'), 'utf8').split('\n').filter(Boolean);
@@ -42,7 +42,8 @@ const plaintextSymbolLength = value => Array.from(
 // Per-cipher stats
 const cipherStats = Object.entries(byCipherType).map(([type, recs]) => {
   const difficulties = groupBy(recs, 'difficulty');
-  const diff = Object.keys(difficulties)[0] || 'unknown';
+  const difficultyLabels = Object.keys(difficulties);
+  const diff = difficultyLabels.length === 1 ? difficultyLabels[0] : 'mixed';
   const baseline = SOLVER_BASELINES[diff] || {};
   const avgLen = Math.round(recs.reduce((sum, record) => sum + plaintextSymbolLength(record.plaintext), 0) / recs.length);
   const languages = [...new Set(recs.map(r => r.language))];
@@ -51,8 +52,9 @@ const cipherStats = Object.entries(byCipherType).map(([type, recs]) => {
     cipher_type: type,
     cipher_family: recs[0].cipher_family,
     difficulty: diff,
+    difficulty_distribution: Object.fromEntries(Object.entries(difficulties).map(([label, rows]) => [label, rows.length])),
     record_count: recs.length,
-    public_count: (difficulties['public'] || recs.filter(r => r.split === 'public')).length,
+    public_count: recs.filter(r => r.split === 'public').length,
     blind_count: recs.filter(r => r.split === 'blind').length,
     avg_plaintext_symbols: avgLen,
     languages,
@@ -97,7 +99,7 @@ const report = {
       authors: 'Li et al.',
       year: 2025,
       url: 'https://arxiv.org/pdf/2504.19093',
-      note: 'Foundational benchmark establishing LLM cryptanalysis evaluation methodology'
+      note: 'Related LLM decryption benchmark; its records and evaluation methods differ from this corpus'
     }
   },
   summary: {
@@ -129,7 +131,7 @@ const report = {
   benchmark_splits: {
     public: {
       count: (bySplit.public || []).length,
-      description: '70% of records — available for training and development evaluation',
+      description: 'Public split label — available for training and development evaluation',
       note: 'Do not train and evaluate on the same split'
     },
     blind: {
@@ -139,16 +141,9 @@ const report = {
     }
   },
   comparison_with_cipherbank: {
-    cipherbank: { records: 2358, cipher_types: 9, historical: false, live_infrastructure: false, blind_splits: false },
-    cipher_corpus: {
-      records: records.length,
-      cipher_types: Object.keys(byCipherType).length,
-      historical: records.filter(r => r.source_type === 'historical').length,
-      live_infrastructure: true,
-      blind_splits: true,
-      multilingual: Object.keys(byLanguage).length > 1,
-    },
-    note: 'Cipher Corpus extends the CipherBank methodology to a broader cipher set with historical records and live benchmark infrastructure.'
+    cipherbank: { records: 2358, cipher_types: 9 },
+    cipher_corpus: { records: records.length, cipher_types: Object.keys(byCipherType).length },
+    note: 'These are collection counts, not comparable accuracy results. The collections use different records and evaluation methods.'
   }
 };
 
@@ -210,6 +205,7 @@ const html = `<!DOCTYPE html>
     <div class="stat-box"><div class="stat-num">${report.summary.historical_records}</div><div class="stat-label">Records Labeled Historical</div></div>
   </div>
 
+  <p>This report inventories the published v0.6 archive. The <a href="../../cipher-corpus.html#corrected-corpus">corrected v0.8 dataset</a> has separate versioned statistics and verification notes.</p>
   <h2>Evaluation Status</h2>
   <p><strong>No solver accuracy has been measured for this report.</strong> Earlier human, automated-solver and LLM percentages were unsupported estimates, not benchmark results, and have been removed. Difficulty labels are curriculum metadata, not calibrated success probabilities.</p>
   <p>The downloadable “blind” split is public and includes answers. It is not confidential held-out data. Records labeled historical include teaching adaptations; the legacy verified flag does not establish source authenticity. See <a href="../corpus/README.md">dataset scope and errata</a>.</p>
@@ -220,17 +216,19 @@ const html = `<!DOCTYPE html>
   </table>
 
   <h2>Per-Cipher Statistics (Top 50 by Record Count)</h2>
+  <p>“Mixed” means records of that cipher type carry more than one difficulty label. The JSON report includes each difficulty distribution.</p>
   <table>
     <thead><tr><th>Cipher Type</th><th>Family</th><th>Difficulty</th><th>Records</th><th>Avg plaintext symbols</th></tr></thead>
     <tbody>${htmlRows}</tbody>
   </table>
 
-  <h2>Comparison with CipherBank</h2>
+  <h2>Collection Sizes</h2>
+  <p>These counts describe different collections and evaluation methods; they do not compare solver accuracy or historical authenticity.</p>
   <table>
-    <thead><tr><th>Benchmark</th><th>Records</th><th>Algorithms</th><th>Historical</th><th>Blind Splits</th><th>Multilingual</th></tr></thead>
+    <thead><tr><th>Collection</th><th>Records</th><th>Cipher-type labels</th></tr></thead>
     <tbody>
-      <tr><td><a href="https://arxiv.org/pdf/2504.19093" target="_blank" rel="noopener noreferrer">CipherBank (Li et al., 2025)</a></td><td>2,358</td><td>9</td><td>No</td><td>No</td><td>No</td></tr>
-      <tr><td><strong><a href="../../cipher-corpus.html">Cipher Corpus v0.6</a></strong></td><td><strong>${report.summary.total_records.toLocaleString()}</strong></td><td><strong>${report.summary.cipher_types}</strong></td><td><strong>Yes (${report.summary.historical_records})</strong></td><td><strong>Public labels (${report.summary.blind_split})</strong></td><td><strong>Yes (${report.summary.languages.length} langs)</strong></td></tr>
+      <tr><td><a href="https://arxiv.org/pdf/2504.19093" target="_blank" rel="noopener noreferrer">CipherBank (Li et al., 2025)</a></td><td>2,358</td><td>9</td></tr>
+      <tr><td><a href="../../cipher-corpus.html">Cipher Corpus v0.6</a></td><td>${report.summary.total_records.toLocaleString()}</td><td>${report.summary.cipher_types}</td></tr>
     </tbody>
   </table>
 

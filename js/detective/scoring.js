@@ -51,11 +51,11 @@
 
       case 'caesar':
         if (ioc >= 0.060) {
-          score += 3; forEv.push('IoC ' + ioc.toFixed(4) + ' is in the English range — single-alphabet cipher');
+          score += 3; forEv.push('IoC ' + ioc.toFixed(4) + ' is near a common English benchmark; compatible with a single-alphabet cipher');
         } else if (ioc >= 0.054) {
           score += 1; forEv.push('IoC ' + ioc.toFixed(4) + ' is somewhat elevated');
         } else {
-          againstEv.push('IoC ' + ioc.toFixed(4) + ' is too low for a single-alphabet cipher');
+          againstEv.push('IoC ' + ioc.toFixed(4) + ' is below the English benchmark; this does not exclude a single-alphabet cipher');
         }
         if (bsr.chi < 40) {
           score += 6; forEv.push('Shift ' + bsr.shift + ' gives chi-square ' + bsr.chi.toFixed(1) + ' — very strong match to English letter frequencies');
@@ -75,13 +75,13 @@
 
       case 'simple-sub':
         if (ioc >= 0.060) {
-          score += 3; forEv.push('IoC ' + ioc.toFixed(4) + ' matches natural-language range — single-alphabet cipher');
+          score += 3; forEv.push('IoC ' + ioc.toFixed(4) + ' is compatible with an English-language single-alphabet hypothesis');
         } else {
-          againstEv.push('IoC ' + ioc.toFixed(4) + ' — too low for a single-alphabet cipher');
+          againstEv.push('IoC ' + ioc.toFixed(4) + ' — below a common English benchmark, but not an exclusion');
         }
         /* If no single shift explains the frequencies, the alphabet is scrambled. */
         if (bsr.chi >= 120) {
-          score += 3; forEv.push('Chi-square remains high (' + bsr.chi.toFixed(1) + ') at every shift — alphabet scrambled, not just offset');
+          score += 3; forEv.push('Chi-square remains high (' + bsr.chi.toFixed(1) + ') at every shift — no tested shift fits the English model well');
         } else if (bsr.chi >= 60) {
           score += 1;
         } else {
@@ -93,16 +93,16 @@
           score += 1; forEv.push(dg.district + ' distinct letters observed');
         }
         if (charset === 'alpha') { score += 1; forEv.push('Letters-only ciphertext'); }
-        if (ioc < 0.050) { score -= 3; againstEv.push('IoC too low — likely polyalphabetic, not monoalphabetic'); }
+        if (ioc < 0.050) { score -= 3; againstEv.push('Low IoC weakens this English-language heuristic; monoalphabetic substitution remains possible'); }
         break;
 
       case 'vigenere':
         if (ioc >= 0.040 && ioc <= 0.062) {
-          score += 3; forEv.push('IoC ' + ioc.toFixed(4) + ' lies between random (0.038) and English (0.067) — the polyalphabetic range');
+          score += 3; forEv.push('IoC ' + ioc.toFixed(4) + ' lies between random (0.038) and English (0.067) — compatible with some polyalphabetic samples, not a diagnostic interval');
         } else if (ioc > 0.062) {
-          againstEv.push('IoC ' + ioc.toFixed(4) + ' is too high for polyalphabetic — single-alphabet more likely');
+          againstEv.push('IoC ' + ioc.toFixed(4) + ' is above this heuristic range; polyalphabetic encryption can also produce high IoC');
         } else {
-          againstEv.push('IoC ' + ioc.toFixed(4) + ' very low — key may be near-OTP length');
+          againstEv.push('IoC ' + ioc.toFixed(4) + ' is low; key length cannot be determined from this alone');
         }
         if (kasiski.length > 0) {
           var topK = kasiski[0];
@@ -124,12 +124,12 @@
         if (ioc >= 0.060) {
           score += 3; forEv.push('IoC ' + ioc.toFixed(4) + ' at English level — transposition preserves letter frequencies exactly');
         } else {
-          againstEv.push('IoC ' + ioc.toFixed(4) + ' — transposition cannot lower IoC below ~0.060');
+          againstEv.push('IoC ' + ioc.toFixed(4) + ' — below a common English benchmark. Transposition preserves the input’s IoC, whatever its value');
         }
         if (chi0 < 50) {
-          score += 5; forEv.push('Chi-square ' + chi0.toFixed(1) + ' — distribution nearly identical to English; no substitution occurred');
+          score += 5; forEv.push('Chi-square ' + chi0.toFixed(1) + ' — close fit to this English frequency model; it does not establish the transformation');
         } else if (chi0 < 100) {
-          score += 3; forEv.push('Chi-square ' + chi0.toFixed(1) + ' — close to English frequencies (rearranged, not substituted)');
+          score += 3; forEv.push('Chi-square ' + chi0.toFixed(1) + ' — close to English frequencies, compatible with rearrangement');
         } else if (chi0 < 160) {
           score += 1; forEv.push('Chi-square ' + chi0.toFixed(1) + ' — moderately English-like');
         } else {
@@ -139,7 +139,7 @@
         if (bsr.chi < chi0 - 50) {
           againstEv.push('Shifting reduces chi-square — substitution likely occurred alongside any rearrangement');
         }
-        if (ioc < 0.055) { score -= 3; againstEv.push('IoC too low — pure transposition preserves IoC'); }
+        if (ioc < 0.055) { score -= 3; againstEv.push('Low IoC under this English heuristic; pure transposition still preserves that exact input value'); }
         break;
 
       case 'playfair':
@@ -168,12 +168,11 @@
         if (charset === 'adfgvx') {
           score += 9; forEv.push('Every letter is A, D, F, G, V, or X — the ADFGVX fractionation alphabet (German WWI, June 1918)');
         } else if (charset === 'adfgx') {
-          score += 7; forEv.push('Every letter is A, D, F, G, or X — ADFGX variant (German WWI, February–June 1918)');
+          score += 7; forEv.push('Every letter is A, D, F, G, or X — ADFGX variant (German WWI, March–May 1918)');
         } else {
           againstEv.push('Ciphertext contains letters outside the ADFGVX set');
           score -= 3;
         }
-        if (ioc < 0.055) { score += 1; forEv.push('Low IoC (' + ioc.toFixed(4) + ') expected after the columnar transposition step'); }
         break;
 
       case 'morse':
@@ -201,7 +200,7 @@
 
       case 'otp':
         if (ioc >= 0.034 && ioc <= 0.044) {
-          score += 5; forEv.push('IoC ' + ioc.toFixed(4) + ' ≈ 0.038 — statistically indistinguishable from random; consistent with OTP or very long Vigenère key');
+          score += 5; forEv.push('IoC ' + ioc.toFixed(4) + ' ≈ 0.038, the uniform A–Z expectation. This statistic alone cannot establish randomness or identify a cipher');
         } else if (ioc > 0.044 && ioc <= 0.054) {
           score += 2; forEv.push('IoC ' + ioc.toFixed(4) + ' approaching random — could be a very long key');
         } else if (ioc > 0.060) {
@@ -211,10 +210,10 @@
         if (kasiski.length === 0 || kasiski[0].count <= 2) {
           score += 1; forEv.push('No significant repeated trigrams — consistent with a unique key');
         } else {
-          againstEv.push('Repeated trigrams found — genuine OTP produces none');
+          againstEv.push('Repeated trigrams found; random output, including a genuine OTP, can contain repetitions by chance');
         }
         if (charset === 'alpha' && dg.district >= 24) {
-          score += 1; forEv.push('All 26 letters appear — full-alphabet random distribution');
+          score += 1; forEv.push('Many distinct letters appear; this alone does not establish randomness');
         }
         break;
 
@@ -228,8 +227,8 @@
           score += 1; forEv.push(dg.district + ' distinct letters — close to the 25-letter Polybius constraint');
         }
         if (charset === 'alpha') { score += 1; forEv.push('Letters only'); }
-        if (n >= 40) { score += 1; forEv.push(n + ' characters — sufficient for fractionated cipher detection'); }
-        if (ioc > 0.065) { score -= 1; againstEv.push('IoC too high for a fractionated cipher'); }
+        if (n >= 40) { score += 1; forEv.push(n + ' characters available for these heuristic comparisons; no detection guarantee'); }
+        if (ioc > 0.065) { score -= 1; againstEv.push('IoC above this heuristic range; fractionated ciphers are not excluded'); }
         break;
     }
 
@@ -246,8 +245,8 @@
       if (pct >= 0.05) return 'Unlikely';
       return 'Inconclusive';
     }
-    if (pct >= 0.85) return 'Very likely';
-    if (pct >= 0.55) return 'Likely';
+    if (pct >= 0.85) return 'Strongest fit';
+    if (pct >= 0.55) return 'Similar fit';
     if (pct >= 0.25) return 'Possible';
     if (pct >= 0.08) return 'Unlikely';
     return 'Inconclusive';
@@ -255,8 +254,8 @@
 
   function labelClass(label) {
     return ({
-      'Very likely':  'conf-very-likely',
-      'Likely':       'conf-likely',
+      'Strongest fit': 'conf-very-likely',
+      'Similar fit':  'conf-likely',
       'Possible':     'conf-possible',
       'Unlikely':     'conf-unlikely',
       'Inconclusive': 'conf-inconclusive'
@@ -274,11 +273,11 @@
     if (ioc >= 0.065) {
       sentences.push('The Index of Coincidence is ' + ioc.toFixed(4) + ', close to the English benchmark of ~0.067. The letter distribution looks like natural English — consistent with a cipher that substitutes or rearranges whole letters without mixing alphabets.');
     } else if (ioc >= 0.050) {
-      sentences.push('The Index of Coincidence is ' + ioc.toFixed(4) + ' — between the English benchmark (~0.067) and the random baseline (~0.038). This intermediate value is the classical fingerprint of polyalphabetic substitution, where multiple shifted alphabets flatten the distribution.');
+      sentences.push('The Index of Coincidence is ' + ioc.toFixed(4) + ' — between the English benchmark (~0.067) and the random baseline (~0.038). Some polyalphabetic samples fall here, but plaintext statistics, key and sample length affect the result.');
     } else if (ioc >= 0.036) {
-      sentences.push('The Index of Coincidence is ' + ioc.toFixed(4) + ', approaching the random baseline of ~0.038. The letter distribution is nearly uniform — characteristic of a polyalphabetic cipher with a long key, a one-time pad, or modern encryption.');
+      sentences.push('The Index of Coincidence is ' + ioc.toFixed(4) + ', approaching the random baseline of ~0.038. This value alone does not identify a long key, an OTP or modern encryption, or establish a uniform distribution.');
     } else {
-      sentences.push('The Index of Coincidence is ' + ioc.toFixed(4) + ', at or below the theoretical random minimum. This text may not be a classical alphabetic cipher, or the character set differs from standard A–Z.');
+      sentences.push('The Index of Coincidence is ' + ioc.toFixed(4) + ', below the uniform A–Z expectation, which is not a minimum for finite samples. Sample composition and length matter.');
     }
 
     /* Chi-square / best shift reading */
@@ -322,15 +321,15 @@
       link: 'cryptanalysis.html', linkText: 'Kasiski Examination →'
     },
     'transposition': {
-      text: 'Letter frequencies match English but the order is scrambled. Try anagram-solving on short recognisable fragments first, then open the Codebreaker\'s Workbench and run hill-climbing against columnar transposition.',
-      link: 'lab/workbench.html', linkText: 'Codebreaker\'s Workbench →'
+      text: 'Letter frequencies match English but the order is scrambled. Try anagram-solving on short recognisable fragments first, then open the seeded columnar search to compare candidate widths and keys.',
+      link: 'ciphers/columnar.html#advanced-search', linkText: 'Columnar search →'
     },
     'playfair': {
       text: 'The digraph evidence points to Playfair. Decryption requires recovering the 5×5 key square — typically via digraph frequency analysis and known-plaintext attack. Read the Playfair exhibit for the method.',
       link: 'ciphers/playfair.html', linkText: 'Playfair Cipher →'
     },
     'adfgvx': {
-      text: 'The ADFGVX character-set signature is unmistakable. This is a two-stage cipher: Polybius-square substitution followed by columnar transposition. Read the exhibit for the historical decryption approach.',
+      text: 'The character set is compatible with ADFGX or ADFGVX, but does not prove either identification. This is a two-stage cipher: Polybius-square substitution followed by columnar transposition. Read the exhibit for the historical decryption approach.',
       link: 'ciphers/adfgvx.html', linkText: 'ADFGVX Cipher →'
     },
     'morse': {
@@ -342,7 +341,7 @@
       link: 'ciphers/book-cipher.html', linkText: 'Book Cipher →'
     },
     'otp': {
-      text: 'The distribution looks statistically random. If this is genuine ciphertext from a modern algorithm (AES, ChaCha20, RSA), there is no classical cryptanalysis path forward — classical techniques assume non-random structure. If it is an extremely long Vigenère key, the same conclusion holds.',
+      text: 'These letter-based statistics do not identify a modern cipher or prove secrecy. A long repeating key is not automatically an OTP. Establish the source, representation, key handling and available evidence before choosing an attack.',
       link: null, linkText: null
     },
     'bifid': {
@@ -366,17 +365,17 @@
     var top = suspects && suspects[0];
     var n   = stats ? stats.n : 0;
 
-    labels.push({ key: 'edu',   text: 'Educational demo',           title: 'This tool is for learning cryptanalysis. Results are probabilistic, not definitive.' });
-    labels.push({ key: 'prob',  text: 'Detection is probabilistic', title: 'Statistical analysis suggests likely cipher families; it cannot guarantee identification.' });
+    labels.push({ key: 'edu',   text: 'Educational demo',           title: 'This tool is for learning cryptanalysis. Results are heuristic rankings, not calibrated probabilities or definitive identifications.' });
+    labels.push({ key: 'prob',  text: 'Relative heuristic fit', title: 'Labels compare hand-scored candidates; they are not measured probabilities and cannot guarantee identification.' });
 
     if (top && top.era === 'classical') {
       labels.push({ key: 'class', text: 'Classical cipher',   title: 'The top suspect is a classical (pre-modern) cipher family.' });
     }
     if (!top || top.id !== 'otp') {
-      labels.push({ key: 'nomod', text: 'Not modern encryption', title: 'Classical ciphers are not computationally secure. Do not use them to protect sensitive data.' });
+      labels.push({ key: 'nomod', text: 'Classical model suggested', title: 'Classical ciphers are not computationally secure. Do not use them to protect sensitive data.' });
     }
     if (n < 200) {
-      labels.push({ key: 'short', text: 'More text improves reliability', title: 'Samples under 200 characters give statistical tests less signal. A longer sample will sharpen confidence.' });
+      labels.push({ key: 'short', text: 'More text improves reliability', title: 'Samples under 200 characters give statistical tests less signal. A longer representative sample may help; it cannot guarantee identification.' });
     }
     return labels;
   }

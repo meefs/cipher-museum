@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diana Cryptosystem — The Cipher Museum</title>
-  <meta name="description" content="The US Army Special Forces one-time pad field system (1960s–1990s) — trigraph-based OTP cards issued to Green Berets in Vietnam.">
+  <meta name="description" content="DIANA uses a reciprocal trigraph table to combine message and pad letters. This exhibit verifies the conversion method while leaving exact service dates and deployments unestablished.">
   <meta property="og:title" content="Diana Cryptosystem — The Cipher Museum">
-  <meta property="og:description" content="The US Army Special Forces one-time pad field system (1960s–1990s) — trigraph-based OTP cards issued to Green Berets in Vietnam.">
+  <meta property="og:description" content="DIANA uses a reciprocal trigraph table to combine message and pad letters. This exhibit verifies the conversion method while leaving exact service dates and deployments unestablished.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/diana-cryptosystem.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Diana Cryptosystem — The Cipher Museum">
-  <meta name="twitter:description" content="The US Army Special Forces one-time pad field system (1960s–1990s) — trigraph-based OTP cards issued to Green Berets in Vietnam.">
+  <meta name="twitter:description" content="DIANA uses a reciprocal trigraph table to combine message and pad letters. This exhibit verifies the conversion method while leaving exact service dates and deployments unestablished.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/diana-cryptosystem.html">
@@ -56,14 +56,14 @@
   </div>
   <div class="page-meta">
     <span class="page-num">Hall V · Military Ciphers</span>
-    <span class="badge era-coldwar">Cold War · 1960s–1990s</span>
+    <span class="badge era-coldwar">Historical letter-pad system</span>
   </div>
   <h1 class="page-title">Diana Cryptosystem</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--historical" href="../museum-map.html#trust-labels" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise." aria-label="Trust label: Historical Only. Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h11v12a2 2 0 0 0 2 2H6a3 3 0 0 1-3-3V7z"/><path d="M16 5a2 2 0 0 1 2 2v8h3a0 0 0 0 1 0 0v2a2 2 0 0 1-2 2"/></svg><span class="trust-label__text">Historical Only</span></a></div>
-  <p class="page-tagline">The US Army Special Forces trigraph one-time pad system, used from the Vietnam War through the Gulf War.</p>
+  <p class="page-tagline">A reciprocal trigraph table for letter pads; the public lookup card and secret key material serve different roles.</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">US Army Special Forces / NSA</span></div>
-    <div class="fact"><span class="fact-label">Era</span><span class="fact-value">~1960–1995</span></div>
+    <div class="fact"><span class="fact-label">Method</span><span class="fact-value">Reciprocal letter-pad conversion</span></div>
+    <div class="fact"><span class="fact-label">Era</span><span class="fact-value">Exact service dates not established here</span></div>
     <div class="fact"><span class="fact-label">Family</span><span class="fact-value">One-Time Pad (trigraphic variant)</span></div>
     <div class="fact"><span class="fact-label">Key Material</span><span class="fact-value">Secret random-letter pad plus a public trigraph lookup card</span></div>
     <div class="fact"><span class="fact-label">Trust</span><span class="fact-value"><span class="trust-label trust-label--historical trust-label--sm" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise.">Historical Only</span></span></div>
@@ -75,18 +75,18 @@
   <div class="exhibit-main">
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The Diana Cryptosystem is the US Army Special Forces implementation of the one-time pad, designed for field use under combat conditions. Issued to Green Berets operating in Vietnam, Laos, and Cambodia, it paired booklets of random key letters with a pocket Tri-Graph card: for each plaintext letter and its pad letter, the card gives the cipher letter — and because every trigram of plaintext, key, and cipher letters sums to 25 modulo 26, the very same lookup decrypts. Pad pages were burned after use. When used correctly the system is mathematically unbreakable, and NSA's declassified COMSEC history names DIANA as its most-used letter pad format.</p>
+      <p>DIANA illustrates the separation between a public conversion rule and a secret one-time pad. A trigraph table combines a message letter with a pad letter to obtain the ciphertext letter. Its reciprocal rule lets the same table recover the message. The table can be public; confidentiality depends on independent, uniformly random secret key material used only once.</p>
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>DIANA was the NSA's standard letter one-time pad, described in the agency's declassified <em>History of U.S. Communications Security</em> (the Boak lectures, 1973) as "the oldest type still in substantial use" and, with its numeric sibling CALYPSO, "still the most used one-time pads" — later joined by the faster ORION and MEDEA formats. US Special Forces operating in denied territory needed a cipher light enough to destroy quickly under ambush conditions: printed pad booklets small enough to burn page by page replaced bulky teletype key tape, and a pocket Tri-Graph conversion card did the arithmetic.</p>
-      <p style="margin-top:1rem;font-size:.85rem;color:var(--tx2);">Sources: NSA, <em>A History of U.S. Communications Security: The David G. Boak Lectures, Volume I</em> (1973, decl. 2015), pp. 22–25 · D. Rijmenants, <a href="https://rijmenants.blogspot.com/2017/10/a-fast-reciprocal-one-time-pad-table.html">"DIANA — A Fast Reciprocal One Time Pad Table"</a> · <a href="http://www.sfrvn.net/c1/diana.asp">Special Forces in Vietnam — Commo Security</a>.</p></div>
+      <div class="panel-body"><p><strong>Historical evidence scope:</strong> the source verified for this exhibit explains the DIANA table and its operation. It does not establish precise introduction or retirement dates, a continuous Vietnam-to-Gulf-War service history, or particular theater deployments. Those historical claims are not asserted here.</p>
+      <p style="margin-top:1rem;font-size:.85rem;color:var(--tx2);">Source for the conversion method: Dirk Rijmenants, <a href="https://rijmenants.blogspot.com/2017/10/a-fast-reciprocal-one-time-pad-table.html">“DIANA — A Fast Reciprocal One Time Pad Table”</a> (12 October 2017).</p></div>
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
       <div class="panel-body"><p>Each pad page carries lines of random key letters, used once and destroyed. The DIANA rule is that plaintext, key, and cipher letters of every position sum to 25 modulo 26 (with A=0 … Z=25): <strong>C = 25 − P − K (mod 26)</strong>. That makes the system doubly reciprocal — the same Tri-Graph table both encrypts and decrypts, and any two letters of the trigram give the third — so an operator who memorized the 126 trigram combinations could work without the card at all.</p>
         <pre style="background:var(--s3);border:1px solid var(--s4);border-radius:var(--r);padding:1.25rem;font-family:var(--fm);font-size:.8rem;color:var(--tx2);line-height:1.8;overflow-x:auto;margin-top:1rem;">
-Worked example (Special Forces radio operator's account):
+Worked arithmetic example (not evidence of a particular deployment):
 
 Pad key:    GORWY WETFR COYET
 Plaintext:  ATTAC KATDA WNXYZ
@@ -117,7 +117,7 @@ Decryption is the same lookup: T with key G → 25−19−6 = 0 = A</pre>
         <span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-swords"/></svg></span><span class="panel-title" style="color:var(--gold);">Quick Facts</span>
       </div>
       <div class="panel-body">
-        <table class="cipher-table"><tbody><tr><td>Origin</td><td>US Army Special Forces / NSA</td></tr><tr><td>Era</td><td>~1960–1995</td></tr><tr><td>Family</td><td>One-Time Pad (trigraphic variant)</td></tr><tr><td>Key Material</td><td>Secret random-letter pad plus a public trigraph lookup card</td></tr><tr><td>Trust</td><td><span class="trust-label trust-label--historical trust-label--sm" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise.">Historical Only</span></td></tr><tr><td>Modern Lesson</td><td>Correct OTP use is unbreakable; logistics often fail before the math</td></tr></tbody></table>
+        <table class="cipher-table"><tbody><tr><td>Method</td><td>Reciprocal letter-pad conversion</td></tr><tr><td>Era</td><td>Exact service dates not established here</td></tr><tr><td>Family</td><td>One-Time Pad (trigraphic variant)</td></tr><tr><td>Key Material</td><td>Secret random-letter pad plus a public trigraph lookup card</td></tr><tr><td>Trust</td><td><span class="trust-label trust-label--historical trust-label--sm" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise.">Historical Only</span></td></tr><tr><td>Modern Lesson</td><td>Correct OTP use is unbreakable; logistics often fail before the math</td></tr></tbody></table>
       </div>
     </div>
   </div>

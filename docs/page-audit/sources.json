@@ -227,7 +227,11 @@
     "author": "Dirk Rijmenants",
     "year": 2017,
     "url": "https://rijmenants.blogspot.com/2017/10/a-fast-reciprocal-one-time-pad-table.html",
-    "scope": "Read table mechanism and 126 unordered triples; independently enumerated all 676 input pairs and verified reciprocity. Public conversion table is separate from secret pad."
+    "scope": "Author’s technical explanation of the DIANA reciprocal table, separate from the secret random letter pad. Supports the conversion mechanism and 126 unordered trigrams, not precise service years, a continuous Vietnam-to-Gulf-War deployment period, specific theater issuance, origin attribution or Boak pp.22–25. No local Boak primary text was available in this review. Removed the unsupported date ranges, deployment assertions, quoted Boak-history claims and unverified page locator from the exhibit; added a visible historical scope boundary. The worked arithmetic is not used as evidence of a deployment.",
+    "passages_read": [
+      "Table construction, encryption/decryption example, reciprocal trigrams and complete 126-trigram list; reread on the author’s 12 October 2017 article.",
+      "Earlier audit independently enumerated all 676 input pairs and checked reciprocity; this final gap review verifies the article’s technical explanation without treating it as deployment evidence."
+    ]
   },
   "RFC7541": {
     "title": "HPACK: Header Compression for HTTP/2",
@@ -798,10 +802,12 @@
     "year": 2026,
     "revision": "1.1, 28 August 2026",
     "passages_read": [
-      "Abstract and revision note on ePrint",
-      "Author-repository PDF: §4 pp.3–4; §12.1 p.16; §17 p.26; Appendix D changelog"
+      "Abstract and revision note on ePrint; author-repository revision 1.1 PDF title page, dated 28 August 2026.",
+      "Previously inspected §4, PDF pp.3–4, and Appendix D changelog; final review inspected §12.1–12.3 passages on PDF p.16: command-injection protection with enforced CMAC, reader-timing-dependent relayed tearing of genuine WRITE commands, writable key pages and shared-key assumptions.",
+      "§14 introduction and opening §14.2–14.3, PDF p.19: a few NTAG 223 DNA StatusDetect samples, no NTAG 224 DNA samples; NTAG 224 interpretations explicitly preliminary; key-write lock conditions and SUN mirror configuration.",
+      "§17, PDF p.26: theoretical single-tag attack with unlocked pages and a legitimate reader; average 2^27 first-segment attempts, about 777 days at two attempts/second; later recovery stages and five-million-write endurance experiment."
     ],
-    "scope": "Relay targets authenticated tag state. CMAC and tearing conditions differ. The 777-day estimate is only the first 28-bit segment at two attempts/sec; subsequent phases and EEPROM endurance remain conditions. Verified SHA-256 of author-hosted revision: 6bcd3786f7823798f76f7610d8a9906104272d7a14b00508a36ca3076c1f875a. Remaining configuration-specific sections still require final detailed read.",
+    "scope": "Primary preprint, not evidence of peer review. Relay targets the authenticated tag state, not necessarily reader acceptance. Enforced Ultralight AES CMAC protects unauthorized command injection; relayed tearing interrupts genuine writes and remains conditional on reader timing and writable storage. Added the explicit NTAG 224 sample limitation rather than presenting documentation-based interpretations as measurements. The 777-day figure covers only the first 28-bit segment; the endurance experiment did not complete that stage. Genuine, counterfeit and configuration-specific results must remain separate. Verified author-hosted revision SHA-256: 6bcd3786f7823798f76f7610d8a9906104272d7a14b00508a36ca3076c1f875a. The listed passages, not every device-specific claim in the paper, define this review’s evidence scope.",
     "url": "https://eprint.iacr.org/2026/100"
   },
   "SODARK-2021": {
@@ -811,9 +817,11 @@
     ],
     "year": 2021,
     "passages_read": [
-      "§3.5–§4 and Table 4, pp.48–50 (German National Library journal copy)"
+      "§3.3–3.5, journal pp.43–48 / PDF pp.8–13: data metric, two-related-tweak oracle construction, passive ALE three-word-frame collection model, and extension to eight rounds.",
+      "§3.6 and Table 4, journal pp.48–49 / PDF pp.13–14: chosen-ciphertext access and reported data/time at the table’s 50% success point.",
+      "§4 and §5 opening, journal pp.49–50 / PDF pp.14–15: C/CUDA implementations on six Nvidia GPUs, full-keyspace brute-force comparison, eight-round practical result and separate sixteen-round future work."
     ],
-    "scope": "Verified displayed Table 4: eight rounds, six Nvidia GPUs, related tweaks, 50% success point, 2^12.7 known tuples or 2^8 chosen-ciphertext tuples and 42 minutes. Full-keyspace brute-force reference about five days. This does not establish a sixteen-round attack. No additional exhibit change needed for those statements.",
+    "scope": "Peer-reviewed IACR ToSC 2021(3), pp.36–53. Table 4 reports eight-round GPU known-plaintext data 2^12.7 and chosen-ciphertext data 2^8, each 42 minutes at its stated 50% success point; §4 identifies six Nvidia GPUs and about five days for the reference full-keyspace search. The small known-plaintext count uses generated data for two suitable related tweaks in an oracle model. §3.4 instead estimates about 2^21.9 passively intercepted three-word ALE frames, retained by the §3.5 eight-round extension; collection time is additional. Added that visible distinction. Table 4 is quoted as the table result without silently reconciling its data accounting with §3.6’s pair/tuple discussion. No corresponding break of sixteen-round 3G variants or blanket HF voice-encryption break is demonstrated.",
     "url": "https://doi.org/10.46586/tosc.v2021.i3.36-53"
   },
   "NAVAJO-NARA-2001": {
@@ -1432,5 +1440,81 @@
     "year": 2025,
     "url": "https://media.defense.gov/2025/May/30/2003728741/-1/-1/0/CSA_CNSA_2.0_ALGORITHMS.PDF",
     "scope": "Official indexed table confirms AES 256-bit keys for all classification levels. Direct PDF returned403; no full-document verification claimed."
+  },
+  "UA8295-2026": {
+    "title": "Forensic Cryptanalysis of the Backdoored UA-8295 Message Terminal",
+    "authors": [
+      "Stijn Maatje",
+      "Marc Stevens"
+    ],
+    "year": 2026,
+    "revision": "ePrint record: last of two revisions, 22 September 2026",
+    "url": "https://eprint.iacr.org/2026/1309",
+    "passages_read": [
+      "Complete accessible ePrint abstract: forensic study of UA-8295 backdoor design and intended attacks; proposed methodology based on the Backdoor Conjecture.",
+      "ePrint publication metadata and revision history: preprint; received 23 June 2026, last revision 22 September 2026."
+    ],
+    "scope": "Primary abstract and metadata only. Full PDF retrieval returned HTTP 403; no full-paper or experiment-table verification is claimed. The exhibit now confines itself to the verified research question and methodology, distinguishing inference about intended attacks from observation of designer decisions. Removed unsupported detailed original/replacement cipher history, ROM checksums and interface comparisons, nonce claims, named attack procedures, 20-key sample count, Xeon Gold 6248/1.5 TB hardware and 3 MiB memory figures, and purported full-PDF locators. This source remains a preprint, not established peer-reviewed publication."
+  },
+  "GEA-FAULTS-2026": {
+    "title": "Practical Differential Fault Attacks on the GPRS Standard Ciphers",
+    "authors": [
+      "Zhengting Li",
+      "Lin Ding",
+      "An Wang",
+      "Haotong Xu",
+      "Zheng Liu",
+      "Zheng Wu",
+      "Xinhai Wang",
+      "Jiang Wan"
+    ],
+    "year": 2026,
+    "url": "https://doi.org/10.1109/TDSC.2026.3671957",
+    "urls": [
+      "https://eprint.iacr.org/2026/1806",
+      "https://pure.bit.edu.cn/en/publications/practical-differential-fault-attacks-on-the-gprs-standard-ciphers/"
+    ],
+    "passages_read": [
+      "Complete accessible ePrint abstract and publication metadata: random fault model for GEA-1/GEA-2, validation by simulating whole attacks on ChipWhisperer Lite, reported completion within sixteen minutes on a common laptop.",
+      "Beijing Institute of Technology institutional abstract and bibliographic record: peer-reviewed journal article, IEEE Transactions on Dependable and Secure Computing 23(3), pp.7129–7142, 1 May 2026, DOI 10.1109/TDSC.2026.3671957.",
+      "ePrint publication information identifies the deposit as published elsewhere, minor revision, with the same IEEE DOI."
+    ],
+    "scope": "Corrected preprint-only characterization: the institutional record identifies a peer-reviewed journal article, with ePrint hosting a minor revision. Full PDF returned HTTP 403, so the review supports the abstract-level random-fault/ChipWhisperer experiment and publication status, not detailed same-key/IV reinitialization, single-bit internal-state, voltage-glitch or GEA-2M claims. Those details were removed or visibly bounded. A controlled fault-model result is not passive interception or proof of an attack on arbitrary commercial phones; inducing the required faults remains a separate implementation condition."
+  },
+  "GPU-SEARCH-2025": {
+    "title": "GPU Assisted Brute Force Cryptanalysis of GPRS, GSM, RFID, and TETRA",
+    "authors": [
+      "Cihangir Tezcan",
+      "Gregor Leander"
+    ],
+    "year": 2025,
+    "url": "https://doi.org/10.46586/tosc.v2025.i1.309-327",
+    "urls": [
+      "https://research.sabanciuniv.edu/id/eprint/51583/1/GPU%20Assisted.pdf"
+    ],
+    "passages_read": [
+      "Institutional full-text PDF abstract and §1, PDF pp.1–2: KASUMI deployment concatenates the same 64-bit key twice; targets include SPECK-96 and TEA3.",
+      "KASUMI implementation and Table 5, PDF pp.10–11: different kernels and measurements for TMTO table creation versus exhaustive key search.",
+      "TEA3 Table 7, TMTO Table 8, §5 and §6 excerpts, PDF pp.14–17: measured throughput, preprocessing/resources/success, projected full-search costs and impractical SPECK-96 brute force."
+    ],
+    "scope": "Peer-reviewed IACR ToSC 2025(1), pp.309–327; institutional full text available. The effective repeated-key KASUMI-64 deployment is not independent 128-bit KASUMI key search, and this paper’s TETRA target is TEA3 rather than TEA1. Measured RTX 4090 throughput is distinct from extrapolated exhaustive-search time and TMTO preprocessing, memory and success probability. Dated resource/cost assumptions are not current cloud-price quotations. Existing bounded exhibit claims retained; added institutional full-text access."
+  },
+  "CONDITIONAL-DES-2018": {
+    "title": "Conditional Linear Cryptanalysis – Cryptanalysis of DES with Less Than 2^42 Complexity",
+    "authors": [
+      "Eli Biham",
+      "Stav Perle"
+    ],
+    "year": 2018,
+    "url": "https://doi.org/10.46586/tosc.v2018.i3.215-264",
+    "urls": [
+      "https://tosc.iacr.org/index.php/ToSC/article/download/7302/6476"
+    ],
+    "passages_read": [
+      "Journal full-text PDF abstract, introduction and Tables 1–2, PDF pp.1–6: conditioning linear approximations, discarded data and larger bias; Table 1 gives separate 2^41.90 data and time quantities at 85% success in the known-plaintext model.",
+      "§4.7, PDF pp.30–31: test implementation replaces the key-search steps with counting candidate keys preceding the correct key.",
+      "§4.7.1, PDF p.34: 79 full-DES data/analysis runs; data collection on 48 threads, counting phase on one thread, and additional time required if actual full key recovery were performed."
+    ],
+    "scope": "Peer-reviewed IACR ToSC 2018(3), pp.215–264. Full journal PDF obtained and relevant passages inspected. The operating point is a conditional-linear known-plaintext result, not differential–linear composition, ciphertext-only recovery or a universal laptop timing claim. Experiments validate statistics and candidate-key counts; they do not demonstrate 79 completed full key searches. Updated exhibit wording and precise section/page locators to preserve that distinction."
   }
 }

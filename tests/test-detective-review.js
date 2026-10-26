@@ -66,8 +66,19 @@ async function main() {
   const html = fs.readFileSync(path.join(root, 'cipher-detective.html'), 'utf8');
   const dom = new JSDOM(html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ''), { runScripts: 'outside-only', url: 'https://ciphermuseum.com/cipher-detective.html' });
   const w = dom.window, d = w.document;
-  for (const file of ['analyses.js', 'attacks.js', 'workspaces.js']) w.eval(fs.readFileSync(path.join(root, 'js/detective', file), 'utf8'));
+  for (const file of ['analyses.js', 'scoring.js', 'attacks.js', 'workspaces.js']) w.eval(fs.readFileSync(path.join(root, 'js/detective', file), 'utf8'));
   await new Promise(resolve => w.addEventListener('load', resolve));
+  // Finite samples can have IoC zero, including after a transposition.
+  const distinct = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const zeroStats = w.DetectiveAnalyses.run(distinct.split('').reverse().join(''));
+  assert.equal(zeroStats.ioc, 0);
+  assert.match(w.DetectiveScoring.rank(zeroStats).caseNotes, /not a minimum/);
+  // An all-A plaintext encrypted under the nonconstant repeating key AB.
+  const highStats = w.DetectiveAnalyses.run('AB'.repeat(60));
+  assert.ok(highStats.ioc > 0.4);
+  assert.equal(w.DetectiveAttacks.isApplicable('vigKeyLength', highStats).ok, true);
+  assert.ok(w.DetectiveScoring.rank(highStats).realityLabels.some(x => /not measured probabilities/.test(x.title)));
+
   function click(id) { d.getElementById(id).click(); }
   function change(id, value) { const node = d.getElementById(id); node.value = value; node.dispatchEvent(new w.Event('change', { bubbles: true })); }
   assert.equal(d.querySelectorAll('#manual-key input[type=text]').length, 26);

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cipher Flow Explorer — The Cipher Museum</title>
-  <meta name="description" content="Interactive decision tree to find the right historical cipher for your needs. Navigate trade-offs from Caesar to One-Time Pad.">
+  <meta name="description" content="Choose a learning route through historical ciphers, cryptanalysis and mathematical ideas. These exhibits are not security recommendations.">
   <meta property="og:title" content="Cipher Flow Explorer — The Cipher Museum">
-  <meta property="og:description" content="Interactive decision tree to find the right historical cipher for your needs.">
+  <meta property="og:description" content="Choose a learning route through historical ciphers and mathematical ideas.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/cipher-flow.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -156,9 +156,9 @@
       {name:'Vigenère Cipher',icon:'🔑',trade:'A repeating keyword selects multiple shifts; period detection can separate the text into Caesar streams.', href:'ciphers/vigenere.html'}
     ]},
     serious_short: { path:[
-      {name:'Vigenère Cipher',icon:'🔑',trade:'Polyalphabetic: masks letter frequencies. Broken by Kasiski (1863) via repeating key detection.', href:'ciphers/vigenere.html'},
+      {name:'Vigenère Cipher',icon:'🔑',trade:'Repeating-key substitution obscures simple frequencies; Babbage and Kasiski developed nineteenth-century attacks on its periodic structure.', href:'ciphers/vigenere.html'},
       {name:'Playfair Cipher',icon:'⬡',trade:'Encrypts digrams — disrupts single-letter frequencies. Still breakable with enough text.', href:'ciphers/playfair.html'},
-      {name:'Bifid Cipher',icon:'📐',trade:'Fractionation mixes coordinates across positions — stronger diffusion than Playfair.', href:'ciphers/bifid.html'},
+      {name:'Bifid Cipher',icon:'📐',trade:'Fractionation rearranges coordinates across a selected period. Compare the mechanism with Playfair without treating that comparison as a security ranking.', href:'ciphers/bifid.html'},
       {name:'VIC Cipher',icon:'🕵',trade:'Cold War hand system combining a checkerboard, key derivation and two transpositions. Historical difficulty is not a proof of security.', href:'ciphers/vic.html', final:true}
     ]},
     classical_med: { path:[
@@ -200,12 +200,12 @@
       {name:'Lorenz SZ42',icon:'⚡',trade:'Twelve-wheel teleprinter system. Manual analysis came first; Colossus later accelerated statistical key-setting work.', href:'ciphers/lorenz.html', final:true}
     ]},
     field_path: { path:[
-      {name:'Tap Code',icon:'✊',trade:'5×5 Polybius grid tapped on walls. Used by Vietnam POWs — security through necessity, not math.', href:'ciphers/tap-code.html'},
+      {name:'Tap Code',icon:'✊',trade:'A 5×5 grid tapped as row and column counts. It enabled prisoner communication without providing cryptographic secrecy.', href:'ciphers/tap-code.html'},
       {name:'Rail Fence',icon:'🔀',trade:'Zigzag transposition with minimal equipment. Low security but fast.', href:'ciphers/rail-fence.html'},
       {name:'Stager Cipher',icon:'📡',trade:'Union telegraph cipher: route transposition + code words. No Confederate cryptanalytic break is documented in the account used here.', href:'ciphers/stager.html', final:true}
     ]},
     unsolved_culture: { path:[
-      {name:'Voynich Manuscript',icon:'📜',trade:'Long-lived unsolved script: strongest example of linguistic uncertainty plus cipher speculation.', href:'ciphers/voynich.html'},
+      {name:'Voynich Manuscript',icon:'📜',trade:'An undeciphered script whose language and encoding, if any, remain uncertain.', href:'ciphers/voynich.html'},
       {name:'Kryptos K4',icon:'🗿',trade:'K1–K3 have public solutions. K4 plaintext was recovered from archival papers in 2025; that is distinct from a public cryptanalytic solution.', href:'ciphers/kryptos.html'},
       {name:'Cipher Culture Hall',icon:'🎭',trade:'See how classical ciphers migrate into fiction, ARGs, and collaborative puzzle communities.', href:'halls/culture.html', final:true}
     ]}

@@ -34,6 +34,20 @@
     'https://www.gutenberg.org/ebooks/31958': { work: 'Tunturikoski', related: 'https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Aeneas_Tacticus/E*.html' },
     'https://www.gutenberg.org/ebooks/7012': { work: "Mistral's Mes Origines" }
   };
+  // A source credit is not permission to turn an ebook copy into navigation.
+  // Keep archival provenance intact, and allow primary papers/manuals (including
+  // PDFs); suppress known book-text hosts and ebook file formats at render time.
+  function isEbookDestination(url) {
+    const host = url.hostname.toLowerCase();
+    const pathname = url.pathname.toLowerCase();
+    return /(^|\.)(gutenberg\.org|books\.google\.[a-z.]+|openlibrary\.org|annas-archive\.[a-z]+|libgen\.[a-z]+)$/.test(host) ||
+      /\.(?:epub|mobi|azw3?)(?:$|\/)/.test(pathname) ||
+      (host === 'inventwithpython.com' && /^\/cracking(?:\/|$)/.test(pathname)) ||
+      (host === 'crypto.stanford.edu' && pathname.includes('/cryptobook')) ||
+      (host === 'shoup.net' && /^\/pg(?:\/|$)/.test(pathname)) ||
+      (/^(?:www\.)?(?:cacr|math)\.uwaterloo\.ca$/.test(host) && /\/hac(?:\/|$)/.test(pathname)) ||
+      (host === 'tekniskkulturarv.dk' && /^\/book\//.test(pathname));
+  }
   function sourceLink(rec) {
     const original = rec.source_url || (rec.source_provenance && rec.source_provenance.url);
     const erratum = rec.citation_erratum;
@@ -47,7 +61,9 @@
     if (destination) {
       try {
         const url = new URL(destination);
-        if (/^https?:$/.test(url.protocol)) {
+        if (/^https?:$/.test(url.protocol) && isEbookDestination(url)) {
+          link = '<p>Book source credited in the record metadata; no ebook link is provided.</p>';
+        } else if (/^https?:$/.test(url.protocol)) {
           link = '<a href="' + esc(url.href) + '" target="_blank" rel="noopener noreferrer">' +
             (replacement || mistaken ? 'Related verified resource' : 'Dataset source citation') + '</a>';
         }

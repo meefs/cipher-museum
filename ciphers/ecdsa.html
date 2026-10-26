@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ECDSA &mdash; The Cipher Museum</title>
-  <meta name="description" content="ECDSA (1992) — signing with elliptic curves, and the one-line mistake that handed Sony's PlayStation 3 master key to the world.">
+  <meta name="description" content="ECDSA signs messages using elliptic curves. Reusing a secret nonce across distinct message hashes can expose the signing key, as the PlayStation 3 episode illustrates.">
   <meta property="og:title" content="ECDSA &mdash; The Cipher Museum">
-  <meta property="og:description" content="ECDSA (1992) — signing with elliptic curves, and the one-line mistake that handed Sony's PlayStation 3 master key to the world.">
+  <meta property="og:description" content="ECDSA signs messages using elliptic curves. Reusing a secret nonce across distinct message hashes can expose the signing key, as the PlayStation 3 episode illustrates.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/ecdsa.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ECDSA &mdash; The Cipher Museum">
-  <meta name="twitter:description" content="ECDSA (1992) — signing with elliptic curves, and the one-line mistake that handed Sony's PlayStation 3 master key to the world.">
+  <meta name="twitter:description" content="ECDSA signs messages using elliptic curves. Reusing a secret nonce across distinct message hashes can expose the signing key, as the PlayStation 3 episode illustrates.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/ecdsa.html">
@@ -60,7 +60,7 @@
   </div>
   <h1 class="page-title">ECDSA</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--secure" href="../museum-map.html#trust-labels" title="Still considered secure when used correctly with modern key handling." aria-label="Trust label: Secure (Modern). Still considered secure when used correctly with modern key handling."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span class="trust-label__text">Secure (Modern)</span></a></div>
-  <p class="page-tagline">A signature scheme built on elliptic curves &mdash; and the one-line mistake that handed Sony's PlayStation 3 master key to the world.</p>
+  <p class="page-tagline">A signature scheme built on elliptic curves, with nonce handling essential to protecting the signing key.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Scott Vanstone, 1992; standardised as ANSI X9.62 (1999) and FIPS 186</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1992</span></div>
@@ -90,7 +90,7 @@
         <p>Fix a curve, a base point <em>G</em> on it, and the number <em>n</em> of points <em>G</em> generates. A private key is a number <em>d</em>; the matching public key is the point <em>Q</em> = <em>dG</em>. Recovering <em>d</em> from <em>Q</em> means solving the elliptic-curve discrete logarithm problem, for which no practical classical attack is known on properly chosen large groups.</p>
         <p>To sign a message hash <em>h</em>, pick a one-time random number <em>k</em> &mdash; the <strong>nonce</strong> &mdash; and compute:</p>
         <p style="font-family:ui-monospace,monospace;background:var(--bg2,rgba(255,255,255,.04));padding:12px 16px;border-radius:6px;overflow-x:auto;">R = kG &nbsp;&middot;&nbsp; r = R<sub>x</sub> mod n &nbsp;&middot;&nbsp; s = k<sup>&minus;1</sup>(h + rd) mod n</p>
-        <p>The signature is the pair (<em>r</em>, <em>s</em>). A verifier who has only <em>Q</em>, <em>h</em> and the signature recomputes a point from them and checks that its x-coordinate comes back to <em>r</em>. The private key never appears in the check &mdash; that asymmetry is the whole point.</p>
+        <p>The signature is the pair (<em>r</em>, <em>s</em>). A verifier who has only <em>Q</em>, <em>h</em> and the signature recomputes a point from them and reduces its x-coordinate modulo <em>n</em> and compares the result with <em>r</em>. The private key never appears in the check &mdash; that asymmetry is the whole point.</p>
       </div>
     </div>
 
@@ -122,6 +122,7 @@
       <div class="panel-body">
         <p>The nonce <em>k</em> must be secret. Reusing it with <strong>distinct message-hash values modulo <em>n</em></strong> is dangerous: the two signature equations then share an unknown. Subtract them and <em>k</em> falls out; substitute back and the private key follows. No lattice, no supercomputer &mdash; secondary-school algebra:</p>
         <p style="font-family:ui-monospace,monospace;background:var(--bg2,rgba(255,255,255,.04));padding:12px 16px;border-radius:6px;overflow-x:auto;">k = (h&#8321; &minus; h&#8322;) / (s&#8321; &minus; s&#8322;) &nbsp;&nbsp;then&nbsp;&nbsp; d = (s&#8321;k &minus; h&#8321;) / r</p>
+        <p>All arithmetic in these recovery formulas is modulo <em>n</em>; division means multiplication by a modular inverse.</p>
         <p>In December 2010 fail0verflow demonstrated that reused ECDSA nonces exposed PlayStation 3 signing keys. The example shows why secrecy of the long-term key is not enough: the per-signature nonce must be generated and handled correctly. Deterministic nonce generation, as specified by RFC 6979, is one established way to avoid relying on fresh randomness for each signature; it does not remove other implementation risks.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin:18px 0;">
           <label style="display:flex;flex-direction:column;gap:4px;font-size:.85rem;">first message h&#8321;

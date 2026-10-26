@@ -4,16 +4,16 @@ Last updated: 26 October 2026. **Audit in progress; not merged or deployed.**
 
 This is the single progress checklist for the current review. The **67 items are work packages, not 67 pages**. The site inventory contains **214 public HTML pages**. A completed item records only the stated scope, not a guarantee that an entire exhibit is flawless.
 
-**Status: 42 done · 1 drafted · 1 active · 23 to do.**
+**Status: 65 done · 1 active · 1 to do.**
 
 - **DONE:** the specific work and evidence described in that row are complete.
 - **DRAFT:** edits or checks exist, but the row's remaining review/validation is unfinished.
 - **ACTIVE:** the next item being worked on.
 - **TODO:** open work; source collection may have started.
 
-**Saved work:** [draft PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13). Seven batches are saved through `5b7aa9db8788fcafbd1a0ba33a566c48a4934a93`, with a complete test-suite pass. Eighth-batch targeted tests and68desktop/mobile checks pass; complete test run passed all other suites and identified three generated-asset/citation gates. Rebuilding assets and adding the two reviewed primary-source URLs repaired those gates; all three targeted reruns pass. A fresh full-suite release run remains required.
+**Saved work:** [PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13), with eight checkpoints saved through `3b516ae331db4fe86b7f7e5fde559076a5db08e6`. The final parallel-review release checkpoint is saved in the same PR, with complete local validation.
 
-**Current focus: item43, NFC paper detail.** Items21,38–42 have completed their stated source/model checks. Whole-site reconciliation and release remain pending.
+**Current focus: items66–67, merge/deployment and live verification.** All65content/integration work packages are complete within their recorded evidence limits. Fresh full tests, HTML/link/release checks,428browser page checks and12changed-control checks pass. Nothing has merged or deployed yet.
 
 ## Checklist
 
@@ -61,30 +61,30 @@ This is the single progress checklist for the current review. The **67 items are
 | 40 | DONE | Foundations mathematics and interactions| Complete foundation tests pass, including153interaction checks. Independently enumerated194LWE boundary cases and103-point ECDSA group. Corrected duplicated cancellation term, zero-error possibility and finite-field/real distinction; mobile/desktop checks pass. |
 | 41 | DONE | AES and RSA claims| AES/RSA full prose reread; standards, CNSA indexed evidence and Signal rev4 scope recorded. Historical priority and encoding/protocol boundaries qualified. Protocol tests and browser pass. |
 | 42 | DONE | DH, ECDSA and zero-knowledge pages| DH export downgrade separated from larger-group estimates; ECDSA nonce/hash/group conditions and ZK transcript limits checked.37math+34page tests pass; browser nonce-recovery example succeeds at both widths. |
-| 43 | ACTIVE | NFC paper detail check | Read remaining relevant sections of the locally available author PDF; verify configurations and attack assumptions beyond the first-phase timing correction. |
-| 44 | TODO | SoDark paper detail check | Complete table-to-exhibit comparison; retain measured hardware, data and round-count conditions. |
-| 45 | TODO | UA-8295 full-evidence boundary | Obtain/read full paper if accessible; otherwise visibly limit claims to what can be verified and document inaccessible details. |
-| 46 | TODO | Modern attack evidence overview | Recheck KASUMI, TEA3 and GEA attack conditions and distinguish theoretical work, measurements and browser simulations. |
-| 47 | TODO | Cryptanalysis teaching page | Remove recovery guarantees, universal IC bounds and unsupported causal claims; verify examples and terminology. |
-| 48 | TODO | Glossary final consistency | Reread definitions after corrections; check that simplified definitions retain necessary conditions. |
-| 49 | TODO | Homepage and Learn narrative | Distinguish unusual Egyptian writing from demonstrated secrecy; verify counts and avoid unsupported direct-lineage claims. |
-| 50 | DRAFT | Museum map and collection categories | M-94 disks versus M-138-A strips and Geʼez labels edited; finish hall/breadcrumb and 152+3+17 category checks. |
-| 51 | TODO | All thirteen hall summaries | Compare every summary, badge, date and example against corrected exhibits; remove residual contradictions. |
-| 52 | TODO | Tours and tour JSON | Read and reconcile all tour narratives and links with final exhibit wording. |
-| 53 | TODO | Learning paths, quiz and flow explorer | Check dynamic explanations, recommendations and route logic; keep teaching models distinct from production guidance. |
-| 54 | TODO | Culture survey and related cards | Verify all fourteen cards and related-exhibit descriptions against the corrected cultural pages. |
-| 55 | TODO | Corpus, teaching and benchmark counts | Verify record/type/engine/language counts against manifests; change generators when generated reports need correction. |
-| 56 | TODO | Utility pages and offline behavior | Verify 404 phrase, search, embed labels and conditional offline availability against actual runtime behavior. |
-| 57 | TODO | Final full-page reread | Reread every final page including sidebars, metadata, examples and related cards; resolve or visibly bound remaining claims. |
-| 58 | TODO | Final coverage ledger reconciliation | Replace stale working notes with checked claims, sources, limits and current file hashes for all 214 pages. |
-| 59 | TODO | Bibliographic completeness | Use full book titles, correct authors and supplied edition/year; include verified chapter/page references where available. |
-| 60 | TODO | Final no-ebook-link sweep | Check public HTML, dynamically rendered references, generated data and reading pages for direct ebook URLs. |
-| 61 | TODO | Regenerate derived site data | Rebuild counts, trust labels, search, artifact cards and required minified assets; inspect semantic changes. |
-| 62 | TODO | Full tests and HTML/link checks | Run complete npm test and appropriate lint/link checks after edits stop; resolve failures rather than marking partial runs complete. |
-| 63 | TODO | Demonstrate regression guards | Restore retired mistakes in controlled test inputs and confirm guards reject them; retain independent arithmetic/vector checks. |
-| 64 | TODO | Final browser and visual review | Repeat whole-site smoke checks; inspect changed desktop/mobile layouts and exercise affected controls with explicit failure reporting. |
-| 65 | TODO | Review final changes and save checkpoint | Inspect full diff, reconcile documentation and PR description, and ensure every intended file is committed without scratch/dependency files. |
-| 66 | TODO | Merge and deploy | Use existing user authorization only after release checks pass; record merged commit and deployment result. |
+| 43 | DONE | NFC paper detail check | NFC revision1.1 §§12.1,14,17 checked: genuine-WRITE tearing conditions, NTAG223 sample/NTAG224 limitation, and777-day first-segment estimate distinguished. |
+| 44 | DONE | SoDark paper detail check | SoDark §3.4–3.5 and Table4 checked: oracle tuples versus passive ALE frames, six-GPU measurements,50% success and eight-round scope retained. |
+| 45 | DONE | UA-8295 full-evidence boundary | Full PDF inaccessible. Removed unverified cipher/firmware/timing details; exhibit and trust registry explicitly limit verification to the primary abstract and publication record. |
+| 46 | DONE | Modern attack evidence overview | GPU full primary paper separates64-bit repeated-key target, throughput and extrapolation. GEA published status/abstract limit corrected; conditional-DES full paper distinguishes candidate counts from full key search. |
+| 47 | DONE | Cryptanalysis teaching page | Complete prose/inline-demo review. IC and Kasiski limits corrected; terminal repeat included; annealing uses current-state score; candidate HTML escaped.137playground checks and independent seeded acceptance trace pass. |
+| 48 | DONE | Glossary final consistency | Definitions reread and corrected: cribs, cryptanalytic goals, CBC, confusion, polynomial rings and classical constructions retain their required conditions. |
+| 49 | DONE | Homepage and Learn narrative | Egypt secrecy/lineage and summary claims qualified. Counts checked; Bacon25-letter widget labelled, Polybius coordinates restricted to1–5. |
+| 50 | DONE | Museum map and collection categories | All map rows and breadcrumbs reconciled. Editorial152+3+17 partition distinguished from registry categories; M-94 disk, Geʼez chronology and research-case labels corrected. |
+| 51 | DONE | All thirteen hall summaries | All13hall summaries/cards read and cross-checked against115target exhibits and17foundation targets; residual date, attribution and security claims corrected. |
+| 52 | DONE | Tours and tour JSON | Five tours and all51stops read. Notes match model boundaries; progress survives unavailable/malformed browser storage. Targeted tour tests pass. |
+| 53 | DONE | Learning paths, quiz and flow explorer | Actual my-path/learning-path quiz implementation reviewed;11curated destinations distinguished from13halls. All12flow routes/resets and quiz integration checks pass. |
+| 54 | DONE | Culture survey and related cards | All14culture cards and filter logic reread; medium/date labels and audience claims corrected. Alphabetical exhibit rereads include all related cards. |
+| 55 | DONE | Corpus, teaching and benchmark counts | Complete shipped datasets independently counted: v0.6=100326/85types/9languages; v0.8=100313/85types/7languages;88engines. All85report rows checked; mixed difficulty and unsupported comparison claims corrected. |
+| 56 | DONE | Utility pages and offline behavior | 404decoded independently; nested paths repaired. Seven real-bundle embed cases, search, teaching navigation and conditional offline tests pass; storage/cache limitations explicit. |
+| 57 | DONE | Final full-page reread | All214final public pages reread across six reviewers and root, including metadata, examples, sidebars and related cards. Remaining source-access limits retained; unsupported DIANA deployment dates and Boak locator removed. |
+| 58 | DONE | Final coverage ledger reconciliation | All214rows reconciled with actual readers, scoped source IDs/limits, current SHA-256 and final browser results; no unread pages remain. |
+| 59 | DONE | Bibliographic completeness | Shared and page-specific book credits expanded/corrected; edition metadata checked. Citations record only consulted passages, not whole-book verification. |
+| 60 | DONE | Final no-ebook-link sweep | Public anchors/shared bibliography and38corpus data files swept. Ten ebook destinations blocked in rendered-card tests; four primary/catalogue controls preserved. Frozen provenance metadata retained, without live ebook links. |
+| 61 | DONE | Regenerate derived site data | Counts/trust/search/155artifact cards/minified assets rebuilt. Corrected stale UAtechnical overrides, DIANAmetadata and non-OTP family classifications; semantic output reviewed. |
+| 62 | DONE | Full tests and HTML/link checks | Fresh complete npm test:63suites passed after all content/metadata edits. HTMLHint214pages,6501local links and release metadata pass. Earlier stale-index integration failure resolved. |
+| 63 | DONE | Demonstrate regression guards | 35public-claim guards reject35deliberately restored errors. Engine mutation/complexity canaries and independent arithmetic/vector checks pass; Detective high-IC counterexample retained. |
+| 64 | DONE | Final browser and visual review | 428/428page checks and12/12changed-control checks pass at1280/390px. Six selected layouts visually inspected; evidence in browser-final*.json. |
+| 65 | DONE | Review final changes and save checkpoint | Final changes independently reviewed,214-row ledger/hashes reconciled, report/PR rewritten and release checkpoint saved in PR13. Scratch files and dependencies excluded. |
+| 66 | ACTIVE | Merge and deploy | Use existing user authorization only after release checks pass; record merged commit and deployment result. |
 | 67 | TODO | Verify live release and publish links | Confirm deployed commit and representative changed pages on ciphermuseum.com; mark release complete only after verification. |
 
 ## How progress will be recorded
@@ -114,3 +114,7 @@ The release gate is items 57–67. Existing authorization covers merging and dep
 - **26 October 2026 — seventh batch, items34–37:** Reconciled current puzzle evidence and counting conventions; corrected complete classical examples. Targeted vectors and20browser checks pass. Fresh complete `npm test` passes; no release claimed.
 
 - **26 October 2026 — eighth batch, items21,38–42:** Closed remaining classical chronology and foundations/protocol scopes.68desktop/mobile checks pass.194independent LWE cases and103-point curve count agree. Full release review remains open.
+
+- **26 October 2026 — parallel final review:** Six agents completed bounded exhibit, research, teaching, navigation, corpus and bibliography reviews. Root integrated all214page rereads, independent implementation review, source limits and additional generated-card corrections.60of67work packages are complete; final release gates remain open.
+
+- **26 October 2026 — release checkpoint:**65/67complete. Fresh63-suite run,214-page HTML lint and6501local links pass.428page-load checks and12changed-control checks pass; selected layouts visually inspected. Final hashes and source limits reconciled; merge/deployment pending.

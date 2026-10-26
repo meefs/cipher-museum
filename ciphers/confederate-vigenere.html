@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confederate Vigenère — The Cipher Museum</title>
-    <meta name="description" content="Confederate Vigenère (1861-1865) — the brass cipher disk used by Confederate officers, broken in 1863 once the three repeating field keys were recovered.">
+    <meta name="description" content="Confederate forces used repeating-key Vigenère ciphers during the Civil War. Union analysts read particular dispatches using language clues and recovered keys.">
   <meta property="og:title" content="Confederate Vigenère — The Cipher Museum">
-  <meta property="og:description" content="Confederate Vigenère (1861-1865) — the brass cipher disk used by Confederate officers, broken in 1863 once the three repeating field keys were recovered.">
+  <meta property="og:description" content="Confederate forces used repeating-key Vigenère ciphers during the Civil War. Union analysts read particular dispatches using language clues and recovered keys.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/confederate-vigenere.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Confederate Vigenère — The Cipher Museum">
-  <meta name="twitter:description" content="Confederate Vigenère (1861-1865) — the brass cipher disk used by Confederate officers, broken in 1863 once the three repeating field keys were recovered.">
+  <meta name="twitter:description" content="Confederate forces used repeating-key Vigenère ciphers during the Civil War. Union analysts read particular dispatches using language clues and recovered keys.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/confederate-vigenere.html">
@@ -138,11 +138,11 @@ All Vigenère: C = (P + K) mod 26</pre>
     <circle cx="0" cy="70" r="3" fill="#5A90C8"/><text x="10" y="74" font-size="8" fill="#5A90C8">1863 My Old Kentucky Home</text>
     <circle cx="0" cy="100" r="3" fill="#C9A84C"/><text x="10" y="104" font-size="8" fill="#C9A84C">1864 Complete Victory</text>
     <circle cx="0" cy="130" r="3" fill="#C85A5A"/><text x="10" y="134" font-size="8" fill="#C85A5A">1865 Come Retribution</text>
-    <text x="10" y="168" font-size="8" fill="#706878">All broken by Union</text>
-    <text x="10" y="180" font-size="8" fill="#706878">cryptanalysts</text>
+    <text x="10" y="168" font-size="8" fill="#706878">Documented wartime</text>
+    <text x="10" y="180" font-size="8" fill="#706878">keywords</text>
   </g>
 </svg>
-<figcaption class="figure-caption">Brass cipher disks used standard Vigenère with long keyword phrases — all systematically broken by Union codebreakers</figcaption>
+<figcaption class="figure-caption">Cipher disks and tables implemented repeating-key Vigenère; Union analysts solved particular intercepted dispatches</figcaption>
 </figure></div>
     </div>
 
@@ -157,8 +157,8 @@ All Vigenère: C = (P + K) mod 26</pre>
         <table class="cipher-table">
           <thead><tr><th>Concept from Confederate Vigenère</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Known keywords used for months</td><td>Key rotation: modern protocols change session keys frequently</td></tr>
-<tr><td>Same key across all departments</td><td>Key compartmentalization: different systems use different keys</td></tr>
-<tr><td>Keyword length = 15 (too short)</td><td>AES-256: 256-bit keys prevent key-length attacks</td></tr></tbody>
+<tr><td>Sharing a key among multiple correspondents</td><td>Key compartmentalization: different systems use different keys</td></tr>
+<tr><td>Repeating natural-language keyword</td><td>Modern algorithms do not cycle a raw keyword through the plaintext</td></tr></tbody>
         </table>
       </div>
     </div>

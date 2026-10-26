@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-26",
+  "baseline": "15efc4402155a35a1b455c9fcb5ba0f507e96d6e",
+  "public_html_pages": 214,
+  "changed_html_pages": 200,
+  "browser_page_checks": 428,
+  "browser_control_checks": 12,
+  "visual_review": {
+    "status": "passed",
+    "inspected": [
+      "cryptanalysis.html mobile Kasiski panel",
+      "cipher-detective.html mobile period tool",
+      "ciphers/ua-8295.html mobile heading and scope note",
+      "public/reports/benchmark-baselines.html desktop table",
+      "further-reading.html mobile reading trails",
+      "hall-of-foundations/learning-with-errors.html mobile formula"
+    ]
+  },
+  "source_records": 148,
+  "full_test_suite": "passed after final metadata generation",
+  "html_lint": "214 files passed",
+  "release_metadata": "passed",
+  "regression_guards": {
+    "public_claims": 35,
+    "restored_error_controls": 35,
+    "independent_high_IC_Vigenere_counterexample": "passed",
+    "engine_mutation_and_complexity_canaries": "passed in integration run"
+  },
+  "merge": "pending",
+  "deployment": "pending",
+  "limitations": [
+    "Browser external requests blocked; no external-link availability certification.",
+    "Source coverage is passage-specific; bibliography does not establish whole-book reading.",
+    "Frozen corpus provenance metadata retained; rendered ebook destinations suppressed."
+  ],
+  "local_links": "6501 links across214 pages passed",
+  "reviewed_change_save": "final PR13 checkpoint",
+  "npm_test_suites": 63
+}

@@ -67,26 +67,26 @@
     <div class="fact"><span class="fact-label">Discovered</span><span class="fact-value">1799, Rashid (Rosetta), by French soldiers</span></div>
     <div class="fact"><span class="fact-label">Scripts</span><span class="fact-value">Hieroglyphic, Demotic, Ancient Greek</span></div>
     <div class="fact"><span class="fact-label">Deciphered by</span><span class="fact-value">Jean-François Champollion (1822), building on Thomas Young</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">A known plaintext is the most powerful cryptanalytic asset there is</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Parallel texts can constrain a proposed decipherment</span></div>
   </div>
 </div>
 
 <div class="demo-section" data-cipher="rosetta-stone">
-  <h2>Trilingual Viewer</h2>
-  <p style="opacity:.85;">Toggle between the three scripts to see how Champollion lined up the cartouche of "Ptolemy" across them. Track B exhibit — visualization rather than encryption.</p>
+  <h2>Three-Script Viewer</h2>
+  <p style="opacity:.85;">Compare the roles of the three scripts. These descriptions are teaching summaries, not facsimiles or a reconstruction of Champollion’s working notes. Track B exhibit — visualization rather than encryption.</p>
   <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap;">
     <button type="button" id="btn-h" data-fn="encode" data-arg="hiero" style="padding:.5rem 1rem;background:var(--gold-glow);border:1px solid var(--gold-b);color:var(--gold);border-radius:6px;cursor:pointer;font-weight:600;">Hieroglyphic</button>
     <button type="button" id="btn-d" data-fn="encode" data-arg="demotic" style="padding:.5rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;cursor:pointer;font-weight:600;">Demotic</button>
     <button type="button" id="btn-g" data-fn="encode" data-arg="greek" style="padding:.5rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;cursor:pointer;font-weight:600;">Greek</button>
   </div>
-  <label for="input" style="display:block;margin-top:1rem;opacity:.7;font-size:.85rem;">Cartouche shown (fixed sample): "PTOLEMY"</label>
+  <label for="input" style="display:block;margin-top:1rem;opacity:.7;font-size:.85rem;">Comparison topic: the royal name Ptolemy</label>
   <input type="hidden" id="input" value="PTOLEMY">
   <div id="output" style="margin-top:1rem;padding:1rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);border-radius:6px;font-size:1.5rem;line-height:1.6;min-height:6rem;"></div>
   <script>
     (function () {
       var SAMPLES = {
-        hiero:   '𓊪 𓏏 𓍯 𓃭 𓐝 𓇋 𓋴   "PTOLMYS" — read by Champollion 1822',
-        demotic: 'ⲡⲧⲟⲗⲙⲏⲥ — Egyptian cursive, the everyday script of Ptolemaic Egypt',
+        hiero:   'Hieroglyphic: Egyptian in a formal monumental script. Royal names in cartouches helped establish phonetic values.',
+        demotic: 'Demotic: Egyptian in a cursive script. No glyph facsimile is reproduced in this viewer.',
         greek:   'ΠΤΟΛΕΜΑΙΟΣ — Greek, the language of the Ptolemaic court'
       };
       window.encode = function (which) {
@@ -141,8 +141,8 @@
             <tr><td>Hall</td><td>I · World Origins</td></tr>
             <tr><td>Issued</td><td>196 BCE</td></tr>
             <tr><td>Found</td><td>1799 CE</td></tr>
-            <tr><td>Decoded</td><td>1822 CE</td></tr>
-            <tr><td>Decoder</td><td>J.-F. Champollion</td></tr>
+            <tr><td>Major breakthrough</td><td>1822 CE</td></tr>
+            <tr><td>Key contributors</td><td>Young and Champollion</td></tr>
             <tr><td>Method</td><td>Two languages, three scripts</td></tr>
             <tr><td>Modern echo</td><td>Bletchley cribs vs Enigma</td></tr>
             <tr><td>Track</td><td>B (visualization)</td></tr>

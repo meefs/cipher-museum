@@ -12,7 +12,7 @@
     {
       "href": "../ciphers/monoalphabetic.html",
       "label": "Monoalphabetic Sub.",
-      "note": "26! possible alphabet permutations; language statistics can still reveal a sufficiently long message."
+      "note": "26! possible alphabet permutations; language statistics can guide candidate searches but do not guarantee unique recovery."
     },
     {
       "href": "../ciphers/homophonic.html",
@@ -47,7 +47,7 @@
     {
       "href": "../lab/workbench.html",
       "label": "Codebreaker's Workbench",
-      "note": "Put your skills to work — analyze real ciphertext with live tools."
+      "note": "Explore ciphertext with live analytical tools. Scores and candidates require interpretation; successful recovery is not guaranteed."
     }
   ]
 }

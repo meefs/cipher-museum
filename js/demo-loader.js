@@ -620,7 +620,7 @@
   const SOURCES = {
     caesar: [
       { text: "Suetonius, <em>The Twelve Caesars</em>, \"Divus Iulius\" §56 — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Caesar_cipher" },
-      { text: "Singh, Simon. <em>The Code Book</em>, ch. 1", url: "https://simonsingh.net/books/the-code-book/" },
+      { text: "Simon Singh, <em>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</em> (1999; Anchor paperback, 2000), ch. 1", url: "https://simonsingh.net/books/the-code-book/" },
       { text: "Practical Cryptography — Caesar Cipher", url: "https://practicalcryptography.com/ciphers/caesar-cipher/" }
     ],
     polybius: [
@@ -633,7 +633,7 @@
     ],
     monoalphabetic: [
       { text: "Al-Kindi, <em>A Manuscript on Deciphering Cryptographic Messages</em> (~850 AD) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Al-Kindi" },
-      { text: "Singh, Simon. <em>The Code Book</em>, ch. 1", url: "https://simonsingh.net/books/the-code-book/" },
+      { text: "Simon Singh, <em>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</em> (1999; Anchor paperback, 2000), ch. 1", url: "https://simonsingh.net/books/the-code-book/" },
       { text: "Practical Cryptography — Simple Substitution", url: "https://practicalcryptography.com/ciphers/simple-substitution-cipher/" }
     ],
     homophonic: [
@@ -642,7 +642,7 @@
     ],
     babington: [
       { text: "Pollen, John Hungerford. <em>Mary Queen of Scots and the Babington Plot</em> (Scottish History Society, 1922)" },
-      { text: "Singh, Simon. <em>The Code Book</em>, ch. 1 — \"The Cipher of Mary Queen of Scots\"", url: "https://simonsingh.net/books/the-code-book/" },
+      { text: "Simon Singh, <em>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</em> (1999; Anchor paperback, 2000), ch. 1 — \"The Cipher of Mary Queen of Scots\"", url: "https://simonsingh.net/books/the-code-book/" },
       { text: "David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996)." },
       { text: "British Library — Digitised manuscripts and archives (collection portal)", url: "https://www.bl.uk/collection/digitised-manuscripts-archives" }
     ],
@@ -667,7 +667,7 @@
     vigenere: [
       { text: "Vigenère, Blaise de. <em>Traicté des chiffres</em> (1586) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher" },
       { text: "Kasiski, Friedrich. <em>Die Geheimschriften und die Dechiffrirkunst</em> (1863) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Kasiski_examination" },
-      { text: "Singh, Simon. <em>The Code Book</em>, ch. 2", url: "https://simonsingh.net/books/the-code-book/" }
+      { text: "Simon Singh, <em>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</em> (1999; Anchor paperback, 2000), ch. 2", url: "https://simonsingh.net/books/the-code-book/" }
     ],
     beaufort: [
       { text: "Beaufort, Sir Francis. <em>Cipher system</em> (1857) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Beaufort_cipher" },
@@ -696,11 +696,11 @@
     ],
     bacon: [
       { text: "Bacon, Francis. <em>De Augmentis Scientiarum</em> (1623) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Bacon%27s_cipher" },
-      { text: "Singh, Simon. <em>The Code Book</em>, ch. 1", url: "https://simonsingh.net/books/the-code-book/" }
+      { text: "Simon Singh, <em>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</em> (1999; Anchor paperback, 2000), ch. 1", url: "https://simonsingh.net/books/the-code-book/" }
     ],
     tapCode: [
       { text: "David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996)." },
-      { text: "Stockdale, Jim. <em>In Love and War</em> — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Tap_code" }
+      { text: "Jim and Sybil Stockdale, <em>In Love and War: The Story of a Family’s Ordeal and Sacrifice During the Vietnam Years</em> (1984) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Tap_code" }
     ],
     pigpen: [
       { text: "David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996)." }
@@ -745,13 +745,13 @@
       { text: "David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996)." }
     ],
     enigma: [
-      { text: "Hodges, Andrew. <em>Alan Turing: The Enigma</em>", url: "https://www.turing.org.uk/book/" },
-      { text: "Singh, Simon. <em>The Code Book</em>, ch. 4–6", url: "https://simonsingh.net/books/the-code-book/" },
-      { text: "Kahn, David. <em>Seizing the Enigma</em> (revised edition, 2012)", url: "https://www.usni.org/press/books/seizing-enigma" }
+      { text: "Andrew Hodges, <em>Alan Turing: The Enigma</em> (1983; centenary edition, 2014)", url: "https://www.turing.org.uk/book/" },
+      { text: "Simon Singh, <em>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</em> (1999; Anchor paperback, 2000), ch. 4–6", url: "https://simonsingh.net/books/the-code-book/" },
+      { text: "David Kahn, <em>Seizing the Enigma: The Race to Break the German U-Boat Codes, 1939–1945</em> (revised edition, 2012)", url: "https://www.usni.org/press/books/seizing-enigma" }
     ],
     lorenz: [
-      { text: "Jack Copeland, <em>Colossus: The Secrets of Bletchley Park</em> — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Lorenz_cipher" },
-      { text: "Singh, Simon. <em>The Code Book</em>, ch. 6", url: "https://simonsingh.net/books/the-code-book/" }
+      { text: "B. Jack Copeland (ed.), <em>Colossus: The Secrets of Bletchley Park’s Codebreaking Computers</em> (2006) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Lorenz_cipher" },
+      { text: "Simon Singh, <em>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</em> (1999; Anchor paperback, 2000), ch. 6", url: "https://simonsingh.net/books/the-code-book/" }
     ],
     dictionaryCode: [
       { text: "David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996)." }
@@ -767,12 +767,12 @@
       { text: "Shannon, Claude. \"Communication Theory of Secrecy Systems\" (1949) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/One-time_pad" }
     ],
     "navajo-code-talkers": [
-      { text: "Meadows, William C. <em>The Comanche Code Talkers of World War II</em> — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Code_talker" },
+      { text: "William C. Meadows, <em>The Comanche Code Talkers of World War II</em> (2002) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Code_talker" },
       { text: "National Museum of the American Indian — <em>Native Words, Native Warriors</em>: Code Talking", url: "https://americanindian.si.edu/nk360/code-talkers/code-talking/" }
     ],
     zodiac: [
       { text: "Oranchak, David et al. \"Cracking the Zodiac 340-Character Cipher\" (2020) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Zodiac_Killer#Communications" },
-      { text: "Singh, Simon. <em>The Code Book</em>, ch. 8", url: "https://simonsingh.net/books/the-code-book/" }
+      { text: "Simon Singh, <em>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</em> (1999; Anchor paperback, 2000), ch. 8", url: "https://simonsingh.net/books/the-code-book/" }
     ],
     autokey: [
       { text: "Vigenère, Blaise de. <em>Traicté des chiffres</em> (1586) — autokey variant — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Autokey_cipher" },
@@ -781,7 +781,7 @@
     ],
     nomenclator: [
       { text: "David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996)." },
-      { text: "Singh, Simon. <em>The Code Book</em>, ch. 1", url: "https://simonsingh.net/books/the-code-book/" }
+      { text: "Simon Singh, <em>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</em> (1999; Anchor paperback, 2000), ch. 1", url: "https://simonsingh.net/books/the-code-book/" }
     ],
     bookCipher: [
       { text: "Ward, James B. <em>The Beale Papers</em> (1885) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Beale_ciphers" },
@@ -797,8 +797,8 @@
     ],
     jn25: [
       { text: "David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996)." },
-      { text: "Carlson, Elliot. <em>Joe Rochefort's War</em> (2011)", url: "https://www.usni.org/press/books/joe-rocheforts-war" },
-      { text: "Parshall & Tully, <em>Shattered Sword</em> (Midway and the AF deception) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Battle_of_Midway" }
+      { text: "Elliot Carlson, <em>Joe Rochefort's War: The Odyssey of the Codebreaker Who Outwitted Yamamoto at Midway</em> (2011)", url: "https://www.usni.org/press/books/joe-rocheforts-war" },
+      { text: "Jonathan Parshall and Anthony Tully, <em>Shattered Sword: The Untold Story of the Battle of Midway</em> (2005) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Battle_of_Midway" }
     ],
     redTypeA: [
       { text: "Rowlett, Frank. <em>The Story of Magic</em> (1998; library catalog record)", url: "https://ci.nii.ac.jp/ncid/BA54201586" },
@@ -847,12 +847,12 @@
     ],
     kl7: [
       { text: "Crypto Museum — KL-7 (TSEC/KL-7 ADONIS)", url: "https://www.cryptomuseum.com/crypto/usa/kl7/" },
-      { text: "NSA Cryptologic Heritage — KL-7 retirement (1968)", url: "https://www.nsa.gov/History/Cryptologic-History/" },
+      { text: "NSA Cryptologic History — general history portal", url: "https://www.nsa.gov/History/Cryptologic-History/" },
       { text: "Wikipedia — KL-7", url: "https://en.wikipedia.org/wiki/KL-7" }
     ],
     geheimschreiber: [
       { text: "Crypto Museum — Siemens &amp; Halske T52 Geheimschreiber", url: "https://www.cryptomuseum.com/crypto/siemens/t52/" },
-      { text: "Beckman, Bengt. <em>Codebreakers: Arne Beurling and the Swedish Crypto Program</em> — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Arne_Beurling" },
+      { text: "Bengt Beckman, <em>Codebreakers: Arne Beurling and the Swedish Crypto Program during World War II</em> (English edition, 2002) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Arne_Beurling" },
       { text: "Wikipedia — Siemens and Halske T52 / \"Sturgeon\" / Fish (cryptography)", url: "https://en.wikipedia.org/wiki/Siemens_and_Halske_T52" }
     ],
     kryha: [
@@ -867,14 +867,14 @@
     ],
     chineseTelegraph: [
       { text: "Wikipedia — Chinese telegraph code", url: "https://en.wikipedia.org/wiki/Chinese_telegraph_code" },
-      { text: "Mullaney, Thomas S. <em>The Chinese Typewriter: A History</em> — covers the 1881 codebook", url: "https://mitpress.mit.edu/9780262536103/the-chinese-typewriter/" },
+      { text: "Thomas S. Mullaney, <em>The Chinese Typewriter: A History</em> (2017; paperback, 2018)", url: "https://mitpress.mit.edu/9780262536103/the-chinese-typewriter/" },
       { text: "Columbia University Libraries — Chinese Telegraphic Codebooks and Cryptography (collection overview, 2019)", url: "https://blogs.library.columbia.edu/rbml/2019/10/09/chinese-telegraphic-codebooks-and-cryptography/" }
     ],
     zimmermann: [
       { text: "NSA Center for Cryptologic History — The Zimmermann Telegram", url: "https://www.nsa.gov/Helpful-Links/NSA-FOIA/Declassification-Transparency-Initiatives/Historical-Releases/" },
       { text: "Tuchman, Barbara W. <em>The Zimmermann Telegram</em> (1985 edition; first published 1958)", url: "https://www.penguinrandomhouse.com/books/180859/the-zimmermann-telegram-by-barbara-w-tuchman/" },
       { text: "National Archives — Zimmermann Telegram (decoded text)", url: "https://www.archives.gov/education/lessons/zimmermann" },
-      { text: "Boghardt, Thomas. <em>The Zimmermann Telegram: Intelligence, Diplomacy, and America's Entry into WWI</em>", url: "https://www.usni.org/press/books/zimmermann-telegram" }
+      { text: "Thomas Boghardt, <em>The Zimmermann Telegram: Intelligence, Diplomacy, and America’s Entry into World War I</em> (2012)", url: "https://www.usni.org/press/books/zimmermann-telegram" }
     ],
     slidex: [
       { text: "Crypto Museum — Slidex", url: "https://www.cryptomuseum.com/crypto/uk/slidex/" },
@@ -882,10 +882,10 @@
       { text: "GCHQ — History articles and resources", url: "https://www.gchq.gov.uk/section/advice-guidance/all-topics?topics=History" }
     ],
     commercialCode: [
-      { text: "McKenna, Edward L. <em>Code-Books and the Telegraph</em> — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Commercial_code_(communications)" },
+      { text: "Wikipedia — Commercial code (communications), general overview", url: "https://en.wikipedia.org/wiki/Commercial_code_(communications)" },
       { text: "Bentley's Complete Phrase Code (1906)" },
       { text: "ABC Telegraphic Code, 5th edition (1901)" },
-      { text: "Standage, Tom. <em>The Victorian Internet</em> (cultural context)", url: "https://www.bloomsbury.com/us/victorian-internet-9781635573961/" }
+      { text: "Tom Standage, <em>The Victorian Internet: The Remarkable Story of the Telegraph and the Nineteenth Century’s On-Line Pioneers</em> (1998), cultural context." }
     ],
     culperRing: [
       { text: "Rose, Alexander. <em>Washington’s Spies: The Story of America’s First Spy Ring</em> (2007 paperback; first published 2006)", url: "https://www.penguinrandomhouse.com/books/157145/washingtons-spies-by-alexander-rose/" },
@@ -937,7 +937,7 @@
     ],
     "latin-american-codebooks": [
       { text: "<em>Código Comercial Mexicano</em> (Mexican commercial telegraph code)", url: "https://www.bnm.unam.mx/" },
-      { text: "ABC Telegraphic Code, 6th ed. (1920; DTU library catalog)", url: "https://tekniskkulturarv.dk/book/37f3ce38-b439-40e9-95b7-004972d51ae4" },
+      { text: "<em>ABC Universal Commercial Telegraphic Code</em>, 6th edition (1920)." },
       { text: "Bentley, E.L. <em>Bentley’s Complete Phrase Code</em> (1906)" }
     ],
     "diana-cryptosystem": [

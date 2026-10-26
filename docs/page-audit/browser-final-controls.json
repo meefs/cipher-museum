@@ -1,0 +1,66 @@
+{
+  "scope": "Changed controls in local Chromium at desktop and mobile widths, with external requests blocked.",
+  "checks": [
+    {
+      "width": 1280,
+      "page": "cryptanalysis.html",
+      "result": "IC one-letter undefined, observed1/0, terminal Kasiski repeat at18 found"
+    },
+    {
+      "width": 1280,
+      "page": "cipher-detective.html",
+      "result": "High-IC Vigenere counterexample retains period tool; relative heuristic labels visible"
+    },
+    {
+      "width": 1280,
+      "page": "embed.html?cipher=rot13",
+      "result": "Numeric cipher ID creates working controls and output"
+    },
+    {
+      "width": 1280,
+      "page": "embed.html?cipher=m209",
+      "result": "Numeric cipher ID creates working controls and output"
+    },
+    {
+      "width": 1280,
+      "page": "ciphers/rosetta-stone.html",
+      "result": "All three script-description toggles produce distinct nonempty output"
+    },
+    {
+      "width": 1280,
+      "page": "popular-culture-survey.html",
+      "result": "All14cards, music1, film/2010s+Tenet1 filters verified"
+    },
+    {
+      "width": 390,
+      "page": "cryptanalysis.html",
+      "result": "IC one-letter undefined, observed1/0, terminal Kasiski repeat at18 found"
+    },
+    {
+      "width": 390,
+      "page": "cipher-detective.html",
+      "result": "High-IC Vigenere counterexample retains period tool; relative heuristic labels visible"
+    },
+    {
+      "width": 390,
+      "page": "embed.html?cipher=rot13",
+      "result": "Numeric cipher ID creates working controls and output"
+    },
+    {
+      "width": 390,
+      "page": "embed.html?cipher=m209",
+      "result": "Numeric cipher ID creates working controls and output"
+    },
+    {
+      "width": 390,
+      "page": "ciphers/rosetta-stone.html",
+      "result": "All three script-description toggles produce distinct nonempty output"
+    },
+    {
+      "width": 390,
+      "page": "popular-culture-survey.html",
+      "result": "All14cards, music1, film/2010s+Tenet1 filters verified"
+    }
+  ],
+  "failures": []
+}

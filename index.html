@@ -66,13 +66,13 @@
     <a href="ciphers/caesar.html" class="ticker-item"><span class="ticker-dot">◆</span>Caesar Cipher · 58 BC</a>
     <a href="ciphers/aeneas-tacticus.html" class="ticker-item"><span class="ticker-dot">◆</span>Aeneas Tacticus · ~360 BC</a>
     <a href="ciphers/alberti-disk.html" class="ticker-item"><span class="ticker-dot">◆</span>Alberti Disk · 1467</a>
-    <a href="ciphers/vigenere.html" class="ticker-item"><span class="ticker-dot">◆</span>Vigenère · 1553</a>
+    <a href="ciphers/vigenere.html" class="ticker-item"><span class="ticker-dot">◆</span>Bellaso repeating-key method · 1553</a>
     <a href="ciphers/argenti.html" class="ticker-item"><span class="ticker-dot">◆</span>Argenti Family Cipher · 1591</a>
     <a href="ciphers/babington.html" class="ticker-item"><span class="ticker-dot">◆</span>Babington Plot · 1586</a>
     <a href="ciphers/bacon.html" class="ticker-item"><span class="ticker-dot">◆</span>Bacon's Cipher · 1605</a>
-    <a href="ciphers/great-cipher.html" class="ticker-item"><span class="ticker-dot">◆</span>Great Cipher · 1626</a>
+    <a href="ciphers/great-cipher.html" class="ticker-item"><span class="ticker-dot">◆</span>Great Cipher · 17th century</a>
     <a href="ciphers/wallis-ciphers.html" class="ticker-item"><span class="ticker-dot">◆</span>Wallis Ciphers · 1643</a>
-    <a href="ciphers/copiale.html" class="ticker-item"><span class="ticker-dot">◆</span>Copiale · ~1760s</a>
+    <a href="ciphers/copiale.html" class="ticker-item"><span class="ticker-dot">◆</span>Copiale · c. 1760–1780</a>
     <a href="ciphers/jefferson-disk.html" class="ticker-item"><span class="ticker-dot">◆</span>Jefferson Disk · 1795</a>
     <a href="ciphers/culper-ring.html" class="ticker-item"><span class="ticker-dot">◆</span>Culper Ring · 1779</a>
     <a href="ciphers/playfair.html" class="ticker-item"><span class="ticker-dot">◆</span>Playfair · 1854</a>
@@ -85,7 +85,7 @@
     <a href="ciphers/purple.html" class="ticker-item"><span class="ticker-dot">◆</span>Purple (Type 97) · 1939</a>
     <a href="ciphers/lorenz.html" class="ticker-item"><span class="ticker-dot">◆</span>Lorenz Cipher · 1940</a>
     <a href="ciphers/geheimschreiber.html" class="ticker-item"><span class="ticker-dot">◆</span>Geheimschreiber · 1940</a>
-    <a href="ciphers/m209.html" class="ticker-item"><span class="ticker-dot">◆</span>M-209 · 1940</a>
+    <a href="ciphers/m209.html" class="ticker-item"><span class="ticker-dot">◆</span>M-209 · production 1942</a>
     <a href="ciphers/navajo-code-talkers.html" class="ticker-item"><span class="ticker-dot">◆</span>Navajo Code Talkers · 1942</a>
     <a href="ciphers/fialka.html" class="ticker-item"><span class="ticker-dot">◆</span>Fialka · 1956</a>
     <a href="ciphers/vic.html" class="ticker-item"><span class="ticker-dot">◆</span>VIC Cipher · 1953</a>
@@ -107,7 +107,7 @@
   <div class="hero-ring"></div>
   <div class="hero-ring"></div>
   <div class="hero-content fade-up">
-    <div class="hero-eyebrow">Est. c. 1900 BC — Present Day</div>
+    <div class="hero-eyebrow">History: c. 1900 BC — Present Day</div>
     <h1 class="hero-wordmark">Explore the History of Encryption</h1>
     <p class="hero-sub">172 exhibits, 13 halls plus the Foundations Annex, and 3,900+ years of cryptography, codebreaking, and secure communication — all in one place.</p>
     <div class="hero-stats">
@@ -142,7 +142,7 @@
     <a href="learn.html" class="path-card path-card--learn">
       <div class="path-card-icon" aria-hidden="true"><svg class="icon" width="40" height="40"><use href="images/icons.svg#i-book"/></svg></div>
       <h3 class="path-card-title">Learn How Ciphers Work</h3>
-      <p class="path-card-desc">Substitution, transposition, and the ideas that became modern encryption.</p>
+      <p class="path-card-desc">Substitution, transposition, and comparisons with modern encryption.</p>
       <span class="path-card-cta">Start Learning →</span>
     </a>
 
@@ -185,7 +185,7 @@
               <option value="affine">Affine (a=5, b=8)</option>
               <option value="railfence">Rail Fence</option>
               <option value="polybius">Polybius Square</option>
-              <option value="bacon">Bacon's Cipher</option>
+              <option value="bacon">Bacon-style (25-letter variant)</option>
             </select>
           </div>
           <div id="pg-key-wrap" style="flex:1;min-width:120px;display:none;">
@@ -230,7 +230,7 @@
       <div class="era-card-body">
         <h3 class="era-card-title">Act I · Ancient World to Paper Systems</h3>
         <span class="era-card-date">c. 1900 BC – 1900</span>
-        <p class="era-card-desc">From Egyptian substitution and early classical systems to Vigenère's "indecipherable cipher" — centuries of hand methods ultimately challenged by analysis.</p>
+        <p class="era-card-desc">From unusual writing in Khnumhotep II’s tomb—not evidence of secret communication—to classical substitution, transposition and repeating-key systems.</p>
       </div>
       <span class="era-card-arrow">→</span>
     </a>
@@ -417,7 +417,7 @@
       },
       dec: function(t){
         var grid='ABCDEFGHIKLMNOPQRSTUVWXYZ';
-        return t.replace(/(\d)(\d)/g,function(_,r,c){
+        return t.replace(/([1-5])([1-5])/g,function(_,r,c){
           var idx=(parseInt(r)-1)*5+(parseInt(c)-1);
           return (idx>=0&&idx<25)?grid[idx]:'';
         });

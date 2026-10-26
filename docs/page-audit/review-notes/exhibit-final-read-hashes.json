@@ -1,0 +1,414 @@
+{
+  "scope": "Final bounded static-prose and metadata reread, a through g, inclusive",
+  "read_count": 68,
+  "files": [
+    {
+      "path": "ciphers/adfgvx.html",
+      "sha256": "2f494f685339cc5db5228c9d6b84dae8f12022e1e31f53dd6c557ecf5e529f9b",
+      "initial_read_extract_sha256": "4285399829e4337bdbfa703a2664a709676e676e057a03b4ff03f75dc8413324",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/adfgx.html",
+      "sha256": "96cbc41ca4df9585873f04523007a5b1c7a6e2df7ea75a4cfc3b2030bbd97ab8",
+      "initial_read_extract_sha256": "251d4bc907e631af2978dfc3d08a4b9a0a7e78b19c21e0f3b292909a404b5815",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/aeneas-tacticus.html",
+      "sha256": "e648620f2e0aa15ef9e2aed3fff1e8c6f63e912c593fde9a4f8666e2b9c31d9a",
+      "initial_read_extract_sha256": "856482f33f9a752f1165563579a7b991bbd0f7414460338176c0cb0e3d27eef8",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/aes.html",
+      "sha256": "4e71d55e901d9eb7f37eafe6a841bdaa1a94f363140052f6f4655ffcdc8fafcb",
+      "initial_read_extract_sha256": "226aae416ea1a2a79d378a4fb20113653fdb670828b857c88968c094f8b79047",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/affine.html",
+      "sha256": "51bbc57270b7b4dc99b3b2dde4438b0daa5366c818c4ff99b56f7e7bc6438b63",
+      "initial_read_extract_sha256": "46732974ab3efbace1bd1814f3002c1a6a27ea2b15a23ebec16f6369e2606cff",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/agnes-driscoll.html",
+      "sha256": "b58af9b88b32df7f822fdeb4b23585dd0cfe9160866e0fdab24392a1ae5125fd",
+      "initial_read_extract_sha256": "ea7ef0d3ceab139d1605ad69df104a7e1c3ededa2b3804c08375d9cb4ad21b28",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/alberti-disk.html",
+      "sha256": "74ce84dc2853db8d1716fe493538dbdd56d5b78bf844f17c0df58a89634a1863",
+      "initial_read_extract_sha256": "3348c5b83adb6a189243f3723999f9355177610f83e35d5e5372d3f722e9ae5f",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/amharic-ge-ez-ciphers.html",
+      "sha256": "de0009623d13c31d47e54d12acb520de70c60da88c2bbae054dbe575297f6314",
+      "initial_read_extract_sha256": "367a7d9e4a842416ff28b622d4c2318889f032dfd217fe5016d7c40b187132b9",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/amsco.html",
+      "sha256": "805dee560e933d51741a254b35aecc67af1129992f08cd057f323227add70110",
+      "initial_read_extract_sha256": "6ddb4ab74ac5329c95c71a9bb0cb3a2a51669928c8ab54125690289bea12d0ab",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/arabic-nomenclators.html",
+      "sha256": "2f28025acc05a8e0f81409baedc440b9fddb75dfd81e5ef0e14e3b437e877c48",
+      "initial_read_extract_sha256": "f86563c7bc4e237daf935dbed92a2818fa19dda76d426c2951c507ed713561b8",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/argenti.html",
+      "sha256": "89b41c65bbc16ea1bb59b8f71619560b9153abf1c1aae65c8a09e4b0aa605df4",
+      "initial_read_extract_sha256": "6265f4a12b16adbe7a830f07af111c0aca9051aaba09e4dabd400acafdbabe45",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/arnold-andre.html",
+      "sha256": "afc2263a6a09a18e6f70ec1cccbaadcca04adbdfc7f9f333a695b99063aaf8e8",
+      "initial_read_extract_sha256": "b78e34617a98981a526177e78e880a4477fcb764d414ce8008cb1fd7acd105af",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/atbash.html",
+      "sha256": "2122549c626a3e6b88dae837843a30144d230419abb522d7330e5f2c664f8b7a",
+      "initial_read_extract_sha256": "af4587ecd0fda20cb5c36462bad93f1c7a8efa1e15bcf9b4f77852ac6a0eefd6",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/autokey.html",
+      "sha256": "c17de47b470c5e2f183e601138d6b6f9135bc6c3fcf8661338fb748ec12c99fa",
+      "initial_read_extract_sha256": "83fb1cb697e3222bd542474dbdffd47de13be7501fdf07d7b6691e22e99b5691",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/babington.html",
+      "sha256": "3a6febc8f1db2ba7e40f4ba987331ed9320732b81336d513c34e23723de270f3",
+      "initial_read_extract_sha256": "c940428eaab3022fb3e61e648c5016c2774bd0af88c9b54bef5f218bbcd3aa56",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/bach-motif.html",
+      "sha256": "77ab21b6ee6a21eef3055abe20fdfbf17f0e8d1e83d91db08076f1e3cc85c768",
+      "initial_read_extract_sha256": "3ffac1f7c9ec5b82cc864ca0faea23d1ca9c485da1ad827343863c6c9119bc98",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/bacon.html",
+      "sha256": "c7b3454743bf082112808f625f39b86ea01b8b0e2154c74a870f5be241f8b854",
+      "initial_read_extract_sha256": "f23cda8e30d9138d9a66d7faddea1efbc39e6d67bf905491304cb6f541937908",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/bazeries.html",
+      "sha256": "2739c8fb92489e4aee3dcc70b661255521471e9ecaa66819d0432d185ea85580",
+      "initial_read_extract_sha256": "d68aa1709d57e5fadaab181aa39a57e84e99d3107fdc83ed927a8b8945f763f0",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/beale.html",
+      "sha256": "fff431cc4d74447386746a2752835cb67aa8405bd89c638ddf7967d2026ff677",
+      "initial_read_extract_sha256": "30d1390b48cd05a4a51959448d969092a2fc5017e0239aa0a5f471660a8c56b5",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/beaufort.html",
+      "sha256": "7b871f40a8d27f41715f09e2405327f642e91e8c0f19b540a70606af04dfb20a",
+      "initial_read_extract_sha256": "3f60fa5b8e37b94380de362becaf6d21f6bbf75be990525f23f9bd5f05c5968d",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/beurling.html",
+      "sha256": "62402d3deb645b3b913b9f4419e8b1fb33f3c09e06dca5b3619e19ee41b9bfc1",
+      "initial_read_extract_sha256": "c2940261f984c987bac8a6908b354e1272784b713ed043429f0178dc61c1fc13",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/bible-code.html",
+      "sha256": "e9b502a1e503de034a3e5e0fc9fd51ab15880949e16a3402c0948445599e5100",
+      "initial_read_extract_sha256": "d04ecf1bab369dd1f5665305749676776b359961abc88e476f0b7eae9697e1ad",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/bifid.html",
+      "sha256": "5cf12b9e3f0470f5ab2aee647d906e73f93ddbff6c423cb8fa086097f84767ce",
+      "initial_read_extract_sha256": "c1da5b771214323bd9b2e3a451c910422f4950ee657e33357433a732fc7e8613",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/bill-tutte.html",
+      "sha256": "e4458af507b886572bf058c7b235cedb5b965b121081212b2cbe51d8d0344bcb",
+      "initial_read_extract_sha256": "ede1b131ccc0ab590e92957ada133813d4e4ccce9d9ef0700bd9ea3304dee720",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/bletchley-park.html",
+      "sha256": "8de0af5388d3ca4e25d132f66376b4762af025edf67140eba52004f02687a7cd",
+      "initial_read_extract_sha256": "ce140500310e1a813628cf77a6e5d5e01872865db7447f1ebe06e0f3349e4656",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/bombe.html",
+      "sha256": "f1240b6ca0abdcac5edc3f7d75a57cf376d686691eb53634da7bf2da8cfb0306",
+      "initial_read_extract_sha256": "87da3807c232d9494421157d3956ecac17cbc025e37563b64b82e372a6437295",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/book-cipher.html",
+      "sha256": "a448bb0e8404372c59d77a8cef000036715927b1f57c8d442525796a392e643d",
+      "initial_read_extract_sha256": "0531f6898941f76ef0a67f59454cf22e2790b5179cca30ad9926d1364eaba758",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/cabinet-noir.html",
+      "sha256": "a089b7eb8e611f7e109372c2f11d75e5ea917dfa1144febf1bb2f96fadbbce70",
+      "initial_read_extract_sha256": "4337108482cee9c7db1e866375c824c0f58746bb7442fe462ebbeb0693083f5f",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/caesar.html",
+      "sha256": "813730fa2937975e13f1233d28826c4a9d022206ea872c80fe1fde90fc045718",
+      "initial_read_extract_sha256": "3c8f2097b17b0b7fbf9ab752ce597734db15766cae1decf482eff236e7483aa3",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/cardano-autokey.html",
+      "sha256": "1615a2b65231bc057bbe08be0a3ca8732dad2b73775e5151ff39d10de19e6089",
+      "initial_read_extract_sha256": "08c605cf86906e5a9b4264239bbeda74760277812c3216373e19bd80cdb3eedf",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/cardano-grille.html",
+      "sha256": "9ffaade174bdb8fc07b6af88c15ef34b65f82f77ea5e94a17a55f73a627cecec",
+      "initial_read_extract_sha256": "b9633ee7f7764cbd1ee12fda9d17c4c59719aa2d810e508a2bd1f74f341885dc",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/chaocipher.html",
+      "sha256": "620789389603b41b0f530fdc3194e06757db931fc4a6a25bb1452759abc14cc2",
+      "initial_read_extract_sha256": "f3be49d3593981c5a7074266c8220ec73aa9a35f18d8584064c415f426a714ec",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/che-guevara.html",
+      "sha256": "bfc589bd1be98eeedc093dde34e36dffb4bff57ba6860b3e1689bc734e736387",
+      "initial_read_extract_sha256": "4a45f25d22d0f6c493ee4aa99bc3d57bdbe8b49f40918b32da5674ba203c06cb",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/chinese-telegraph.html",
+      "sha256": "0dd0812cd701507a075cc1d535b1202e64f569e1c8e6ddbc8b29a319e125da03",
+      "initial_read_extract_sha256": "2b7c05c116059363505026a19fcc00c9a0e15d79d42d1d8d15c8a421ea417d80",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/cicada-3301.html",
+      "sha256": "9fe1831d804d5289c573b3a075b0cc108d567c021bb5bad9d4f9d3ee2b5882be",
+      "initial_read_extract_sha256": "df550e544102cccd7f38d3974a60a50fbc53d32b7d30394ab7f77b5d51ed25bb",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/colossus.html",
+      "sha256": "e5d1e8b3287f1e6720f8660ba186e91d9c9c3f95c1a68796f8c6fd1e0a9511e5",
+      "initial_read_extract_sha256": "3096bf4ceab72faffe47c034c08a85d83c41a443a590dd9d9febdd12eca2df01",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/columnar.html",
+      "sha256": "321e1e433ea1767b0864555027a4670b05e168ca7d54db41c069eb8055b80269",
+      "initial_read_extract_sha256": "7c6821857156d4338ac0b2f9d9865ec0193124b79ab031cfd812455310b43116",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/commercial-codebooks.html",
+      "sha256": "2d2e9661ccb1b5029c57fde52435eadb9e2f28c29440af5a838d6d44965faf20",
+      "initial_read_extract_sha256": "4aded9d13672dae6a164d77741713c6b5f922d956c4af015f2e5d6ee8cd7737a",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/confederate-vigenere.html",
+      "sha256": "14d562dd511c5ffbcebbb9f1232a1db8c7a7a74d4ceac6e0f635bb6496b7793b",
+      "initial_read_extract_sha256": "bfd02f86413c7f7bcd27458108a57ebeaeaa6e3f2217665d533960ee3de4cbf2",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/copiale.html",
+      "sha256": "16f6df519522f4c657c5cdc662d946073154155d708beca78b4f3276c5fc78a7",
+      "initial_read_extract_sha256": "1d4ed12c89fba77c66eca7f6da224353f28e61a1c3c5684612edc06f7d461f5e",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/culper-ring.html",
+      "sha256": "a256b9c8fbcebe0d7881ba12725bd8da50084a8de13cbafd2ff06d53506a278a",
+      "initial_read_extract_sha256": "2da6d9a1c35012d7879872a6677cd1a56bbd9b1cba37ae5139971bcb4e9fe3e8",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/da-vinci-code.html",
+      "sha256": "8f5f8215bb2e05852b7e99200dc4ccf8bfb80cf4351b14b98a4cbc2d92a95341",
+      "initial_read_extract_sha256": "886cedf4a627cdd4f4916f320b81be1f78594a8de6992e34844cc8c1a329eb4c",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/dagapeyeff.html",
+      "sha256": "db471bab3b55ad41c2b7f49012dfbe2bc2d732da5a55fbdad6b5b79cf92ee1a4",
+      "initial_read_extract_sha256": "678513501348f24a0f0f93fee53bc11bd9fc10e209c665ef3d9d3898515ed901",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/dancing-men.html",
+      "sha256": "c93a03dce365fdc5156b03840e042e3332e55f6236e34a5c0ee628c8d724588b",
+      "initial_read_extract_sha256": "92190522e46aa94fd639f84ef50460dd16671cc0b784b8e5a96cac01cd1b07e2",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/des.html",
+      "sha256": "58b6a815e87e0a7b0c61eb47f9188d4dfe14f0253c014a0caff045e007a219b2",
+      "initial_read_extract_sha256": "a65e36acabf286245937d5f1da33864cd9de9e4a3cc8937033fbcaeaa0d76ce4",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/diana-cryptosystem.html",
+      "sha256": "ad213955580bd1cb83e86a871af4d5882cf99e5d61bec0a84a5ff68a1ad1f01c",
+      "initial_read_extract_sha256": "6360bb7fdab00c2aa60bc54913b7e5d9e428fceb6f55830884c2f7eda06e48fc",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/dictionary-code.html",
+      "sha256": "fec105c338f97738f8d7b88b26669dbcf4ef64c6addd3bd85782dfaf4990236a",
+      "initial_read_extract_sha256": "3e0966e715229f05d9854ceabbb655b1f7853a85de82c3158f24e78ebf5268d4",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/diffie-hellman.html",
+      "sha256": "e1c50c726c578387177fb2ca1e8e407765fc2cbb184ef85d8c8c9695dd40117c",
+      "initial_read_extract_sha256": "8a6bbc7bb1013f42fa87d0d33233a720624dd937bb26783baa1c97b7739bb35b",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/dilly-knox.html",
+      "sha256": "ca384a731b84f9ec8df0fcbafcab8316e46b470925aa672319a8fb0dfbbec4a9",
+      "initial_read_extract_sha256": "bc1505ca0574dd3d04b79fc1c452dcc13626c739e88f34d0e0ebb650d95cbc17",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/dorabella.html",
+      "sha256": "3b9998cdea2c89bb3dfe86ebfacd13498d82d2325363b1bd9259fafd8bfd5013",
+      "initial_read_extract_sha256": "01e6a6685a3c95deafa01cad68a55ffb1fb9968df3a3609526355fb8aa855939",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/double-playfair.html",
+      "sha256": "8a94f2afcb6a469fceb59aef7cf3dcebf5dddd8f5cd8f5b7b3cf3b2af9ae0d69",
+      "initial_read_extract_sha256": "93e68d2b421cf3a7d17a749840a50a85141556d005265bf9deb4d8a84eb73b0f",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/double-transposition.html",
+      "sha256": "1dbbb842861213fe4bea74a01c11794d5c8b4eef82563a774053dab6d833ec79",
+      "initial_read_extract_sha256": "bc8c1daee0136ec1f2ec3fed1daf589d190c207dd7272dc25d543e0b833e4508",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/dunin.html",
+      "sha256": "f1a788e71fed04babcc276ea1559274c60fa19753c7de792490c5879b629bfd4",
+      "initial_read_extract_sha256": "d869156d9944adb061ff5b02eadb89b283c9a57056fcb87cee80e6b8883107c2",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/ecdsa.html",
+      "sha256": "c313882bea1bec958a94b1c0a1bfca96e366083b907a877058020dc5dfd6daf7",
+      "initial_read_extract_sha256": "379f144259f8a0c9cb03126a75ab7222e3b6b4ccfab1386210a398540f54dca5",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/egyptian-substitution.html",
+      "sha256": "a7ca9023fb6f43acd9a3dc565526cd69477fe453ae5f62340187b82d5d1f9da2",
+      "initial_read_extract_sha256": "f579ba1b36b0b8d9d85bce1f325263394b1d34fe17f7648380dc8f683db05655",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/elizebeth-friedman.html",
+      "sha256": "df364d273aa21d728aec8f769e3df22450227d12a9b80c33cb848af2bbf00ae6",
+      "initial_read_extract_sha256": "222033939fc25ef75c10ae34501198ea7bc2ca8301c79bd92bb59609f4d5976d",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/enigma.html",
+      "sha256": "fcb5ca7fb9176cc03153a92557aaeef2a9b586b74b1f0b2b9ad786b7a07ba210",
+      "initial_read_extract_sha256": "5a9d469de0a5ea026adc5a9dae05e7461f477b1da63e80e55c4d9174c2f9de1f",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/fialka.html",
+      "sha256": "b52c16f696b371d2d8414131fefb75318d026164a95c66e8694b587e2134455f",
+      "initial_read_extract_sha256": "d47fafa26d16988128e4bcf36306a5674eb4e1c5d6316eb53733ddf06c05c55f",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/field-hollers.html",
+      "sha256": "1df2d83ef0898ec6a80f355e94cdb1ce7ed4ad247b2249219d80e3a76f5c5409",
+      "initial_read_extract_sha256": "f6e37feeb9801f0d4727ba046b0fe35ee797f27318be6f9d72b2a6357924fcb1",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/four-square.html",
+      "sha256": "0fda25831b56dc44b56e5ee0ed51d5c15d7ae0942fa2ac65bd300c941b3dbe3b",
+      "initial_read_extract_sha256": "3004fc0650243777fd3fe9ab4a89da4b3d48d748917b1269269f2e2f4d13add6",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/fractionated-morse.html",
+      "sha256": "028371c5f2b1b1f1ee745c2a38cbd00031bead0bd1456724d08007a91f2df5ae",
+      "initial_read_extract_sha256": "535e451e4004dc0617ea17fe25cb778cdbf980ae00ffa34f3502a263880d763d",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/freemason-pigpen.html",
+      "sha256": "0c051fc26bd6ce696653e92724d85d7edfa9261b0e957fada33bba5bb03a5246",
+      "initial_read_extract_sha256": "ca4ffc9c612996bd89f81c7d763fd21b7c89972512680afd997a80901cca99d1",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/gchq-trio.html",
+      "sha256": "f2fc3b8f50e47f8ea8057a987809fa9d6eaeedadaf305dfa3e6b2d8aa857165b",
+      "initial_read_extract_sha256": "65e84e09670f5bef1110c9f08cf55b20038070d5aab7465ccbec44a859bdb9a0",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/geheimschreiber.html",
+      "sha256": "eabfd0dc97bc1b4ba73c2d79d515369ddaa64c41238d9b1abcb74d0c8dda7a4e",
+      "initial_read_extract_sha256": "e296f1466243c00a7d90c0c9b5ccb6298cec05256a771d0d81b30255e45f4e07",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/gold-bug.html",
+      "sha256": "202b0dfb71781b922c71099c40f57955cf50af00365e97af7dd387c3181a69c6",
+      "initial_read_extract_sha256": "569270a6adf64867be575a8ab5ed4e664071c08cfc9877ba0824c8b734da9d51",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/gravity-falls.html",
+      "sha256": "389c3c537a5d5205a488b5c1ac306c09d8bcf1b484d08703bba075bc6445edf2",
+      "initial_read_extract_sha256": "132ad0b316cb2c30f80ca005f37db2619fcb4fc21988be6c26b1aec58a05fb1e",
+      "extracted_text_changed_in_pass": false
+    },
+    {
+      "path": "ciphers/great-cipher.html",
+      "sha256": "00bd1d220c4e61fe2ac464a6281d431387836f4f0b7f591099e6a78ef9fe2c90",
+      "initial_read_extract_sha256": "de9e35ff18fe694a9a7170b142147eada8e35a906f78debf87fdfd678e982f10",
+      "extracted_text_changed_in_pass": true
+    },
+    {
+      "path": "ciphers/gronsfeld.html",
+      "sha256": "2d8da1fd65bc4a5b11367bdfd444b7613d95b7037338d81b6397e23d220072ab",
+      "initial_read_extract_sha256": "89c3925407aaf597554c3a6790f68c186d145788d53c53692042d717c14a3395",
+      "extracted_text_changed_in_pass": true
+    }
+  ]
+}

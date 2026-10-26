@@ -94,14 +94,14 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><pre>Step 1: Straddling checkerboard
+      <div class="panel-body"><p>The steps and diagram below describe the simplified browser model, not the historical disrupted-transposition procedure.</p><pre>Step 1: Straddling checkerboard
         High-frequency letters get 1-digit codes
         All others get 2-digit codes
         E=3, T=6, A=0, etc.
 
-Step 2: Chain addition key derivation
-        From a song lyric/date, derive
-        extended numeric keystream
+Step 2: Teaching-model keyed addition
+        From the keyword, derive a digit
+        stream and add it modulo ten
 
 Step 3: First transposition
         Apply columnar transposition
@@ -118,8 +118,8 @@ Result: Compact numeric ciphertext</pre>
   <text x="15" y="18" font-size="9" fill="#5AC8A0">1. STRADDLING CHECKERBOARD</text>
   <text x="15" y="32" font-size="8" fill="#B8B0A0">E=3 T=6 A=0 → freq letters: 1 digit | rare: 2 digits = compression</text>
   <rect x="5" y="48" width="370" height="35" fill="rgba(201,168,76,.06)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-  <text x="15" y="62" font-size="9" fill="#C9A84C">2. CHAIN ADDITION KEY</text>
-  <text x="15" y="76" font-size="8" fill="#B8B0A0">Song lyric + date → pseudo-random numeric keystream via chain addition</text>
+  <text x="15" y="62" font-size="9" fill="#C9A84C">2. TEACHING-MODEL KEYED ADDITION</text>
+  <text x="15" y="76" font-size="8" fill="#B8B0A0">Demo keyword → derived digit stream, added modulo ten</text>
   <rect x="5" y="92" width="370" height="35" fill="rgba(90,144,200,.06)" stroke="rgba(90,144,200,.2)" stroke-width="1"/>
   <text x="15" y="106" font-size="9" fill="#5A90C8">3. FIRST COLUMNAR TRANSPOSITION</text>
   <text x="15" y="120" font-size="8" fill="#B8B0A0">Reorder columns by derived key → scramble digit positions</text>

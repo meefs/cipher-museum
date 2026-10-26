@@ -76,7 +76,7 @@
   <div class="breadcrumb"><a href="index.html">Museum</a><span>›</span>Glossary</div>
   <span class="page-eyebrow">Reference Guide</span>
   <h1 class="page-title">Cryptography Glossary</h1>
-  <p class="page-tagline">Every term a codebreaker needs to know</p>
+  <p class="page-tagline">Selected terms for exploring cryptography</p>
 </div>
 
 <div class="section">
@@ -166,20 +166,20 @@
       <div class="gl-term">
         <h3 class="gl-word">Confusion</h3>
         <span class="gl-origin">Claude Shannon · 1949</span>
-        <p class="gl-def">The property that makes the relationship between the key and ciphertext as complex as possible. Each bit of ciphertext should depend on many bits of the key. Substitution operations (S-boxes in AES) provide confusion. Paired with <em>diffusion</em>, it forms the foundation of modern cipher design.</p>
+        <p class="gl-def">Shannon’s design idea of making the relationship between ciphertext statistics and the key difficult to exploit. Nonlinear substitutions such as AES S-boxes contribute to confusion. Paired with <em>diffusion</em>, this is a design principle, not a numerical security measure or proof.</p>
         <span class="gl-see">See also: <a href="#gl-D">Diffusion</a></span>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Crib</h3>
         <span class="gl-origin">Bletchley Park · WWII</span>
-        <p class="gl-def">A known or guessed piece of plaintext used to help break a cipher. At Bletchley Park, weather report formats ("WETTER") and standard military phrases ("HEIL HITLER") served as cribs against Enigma. Modern equivalent: <em>known-plaintext attack</em>.</p>
+        <p class="gl-def">A known or guessed piece of plaintext used to help analyze a cipher. Predictable weather-report language supplied cribs against Enigma. A guessed crib must be tested; a <em>known-plaintext attack</em> instead assumes that matching plaintext and ciphertext are already available.</p>
       </div>
 
       <div class="gl-term">
         <h3 class="gl-word">Cryptanalysis</h3>
         <span class="gl-origin">Greek: kryptós (hidden) + analysis</span>
-        <p class="gl-def">The study of breaking ciphers — recovering plaintext or keys without authorized access. Techniques range from frequency analysis (850 AD) to differential cryptanalysis (1990) to side-channel attacks. The discipline that keeps cryptography honest.</p>
+        <p class="gl-def">The study of attacks on cryptographic security goals, including recovering plaintext or keys, forging authentication, and finding hash collisions. Methods include frequency analysis, differential cryptanalysis and side-channel analysis; not every successful attack recovers a full message or key.</p>
       </div>
 
       <div class="gl-term">
@@ -349,7 +349,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Mode of Operation</h3>
         <span class="gl-origin">Modern Block Ciphers</span>
-        <p class="gl-def">A method for applying a block cipher to messages longer than one block. ECB (Electronic Codebook) encrypts each block independently — insecure because identical blocks produce identical ciphertext. CBC (Cipher Block Chaining) XORs each block with the previous ciphertext block. GCM provides both encryption and authentication.</p>
+        <p class="gl-def">A method for applying a block cipher to messages longer than one block. ECB (Electronic Codebook) encrypts each block independently — insecure because identical blocks produce identical ciphertext. CBC (Cipher Block Chaining) XORs each plaintext block with the previous ciphertext block before encryption, using an IV for the first block. GCM provides authenticated encryption when its nonce and usage requirements are met.</p>
       </div>
 
             <div class="gl-term">
@@ -406,7 +406,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Plaintext</h3>
         <span class="gl-origin">Core Concept</span>
-        <p class="gl-def">The original data before encryption, whether text or other information. Denoted P or M in formulas. The goal of encryption is to protect plaintext from unauthorized readers. The goal of cryptanalysis is to recover it.</p>
+        <p class="gl-def">The original data before encryption, whether text or other information. Denoted P or M in formulas. The goal of encryption is to protect plaintext from unauthorized readers. Recovering plaintext is one possible goal of cryptanalysis.</p>
         <span class="gl-see">See also: <a href="#gl-C">Ciphertext</a></span>
       </div>
 
@@ -420,13 +420,13 @@
       <div class="gl-term">
         <h3 class="gl-word">Polybius Square</h3>
         <span class="gl-origin">Polybius · ~150 BC</span>
-        <p class="gl-def">A modern Latin-alphabet version uses a 5×5 grid with I/J sharing a cell. Polybius’s ancient account describes arranging the Greek alphabet on five tablets for coordinate signaling. The foundation of many fractionation ciphers (Bifid, Trifid, ADFGX, Nihilist) where coordinates are manipulated separately before recombination.</p>
+        <p class="gl-def">A modern Latin-alphabet version uses a 5×5 grid with I/J sharing a cell. Polybius’s ancient account describes arranging the Greek alphabet on five tablets for coordinate signaling. Bifid and ADFGX use square coordinates in fractionation. Trifid uses three coordinates from a cube; the additive Nihilist cipher instead adds numerical coordinate pairs.</p>
       </div>
 
             <div class="gl-term">
         <h3 class="gl-word">Polynomial Ring</h3>
         <span class="gl-origin">Post-Quantum Cryptography</span>
-        <p class="gl-def">Arithmetic on polynomials whose coefficients wrap mod q and whose powers wrap at Xⁿ = −1: the ring R_q = ℤ_q[X]/(Xⁿ+1). This is the structured lattice inside ML-KEM and ML-DSA, where nearly all their computation happens. Interactive: <a href="hall-of-foundations/polynomial-rings.html">Polynomial Rings (§153)</a>.</p>
+        <p class="gl-def">A ring of polynomials with coefficient addition and multiplication. ML-KEM and ML-DSA use a particular quotient ring, R_q = ℤ_q[X]/(Xⁿ+1): coefficients are reduced modulo q and Xⁿ is replaced by −1. Their module operations use vectors and matrices over this ring. Interactive: <a href="hall-of-foundations/polynomial-rings.html">Polynomial Rings (§153)</a>.</p>
       </div>
 <div class="gl-term">
         <h3 class="gl-word">Public Key</h3>
@@ -464,7 +464,7 @@
       <div class="gl-term">
         <h3 class="gl-word">S-box (Substitution Box)</h3>
         <span class="gl-origin">Modern Block Ciphers</span>
-        <p class="gl-def">A lookup table that performs nonlinear substitution in block ciphers. In AES, each byte of state is replaced via a 256-entry S-box derived from finite field inversion. The S-box provides <em>confusion</em> — the nonlinearity that makes the cipher resistant to linear and differential cryptanalysis.</p>
+        <p class="gl-def">A lookup table that performs nonlinear substitution in block ciphers. In AES, each byte of state is replaced via a 256-entry S-box derived from finite field inversion. Its nonlinear structure contributes to <em>confusion</em>. Resistance to linear and differential attacks depends on the complete cipher, including its diffusion and round count.</p>
       </div>
 
             <div class="gl-term">
@@ -493,7 +493,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Substitution Cipher</h3>
         <span class="gl-origin">Ancient</span>
-        <p class="gl-def">Any cipher that replaces each element of the plaintext with another element. Monoalphabetic substitution uses one mapping; polyalphabetic uses multiple. Homophonic maps each letter to several possible symbols. The oldest and most intuitive class of ciphers.</p>
+        <p class="gl-def">Any cipher that replaces each element of the plaintext with another element. Monoalphabetic substitution uses one mapping; polyalphabetic uses multiple. Homophonic maps each letter to several possible symbols. Substitution may act on individual symbols or on larger blocks.</p>
       </div>
 
       <div class="gl-term">
@@ -510,7 +510,7 @@
       <div class="gl-term">
         <h3 class="gl-word">Tabula Recta</h3>
         <span class="gl-origin">Johannes Trithemius · published 1518</span>
-        <p class="gl-def">A 26×26 grid where each row is the alphabet shifted by one position. The foundational tool for Vigenère-type ciphers: find the plaintext letter's column, the key letter's row, and the intersection is the ciphertext letter. Also called a <em>Vigenère square</em>.</p>
+        <p class="gl-def">In the modern A–Z version, a 26×26 grid where each successive row is shifted by one position. The foundational tool for Vigenère-type ciphers: find the plaintext letter's column, the key letter's row, and the intersection is the ciphertext letter. Also called a <em>Vigenère square</em>.</p>
       </div>
 
       <div class="gl-term">
@@ -545,6 +545,7 @@
   </div>
 </div>
 
+<section class="section"><h2>Reading</h2><p>Alfred J. Menezes, Paul C. van Oorschot and Scott A. Vanstone, <em>Handbook of Applied Cryptography</em> (1997 edition), chapters 1 and 7; Joshua Holden, <em>The Mathematics of Secrets: Cryptography from Caesar Ciphers to Digital Encryption</em> (2017 edition), chapters 2 and 4–5; Claude E. Shannon, “Communication Theory of Secrecy Systems” (1949), §§10 and 23. Modern implementation requirements depend on the relevant protocol or standard.</p></section>
 </main>
 
 <footer></footer>

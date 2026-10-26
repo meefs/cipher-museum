@@ -30,7 +30,7 @@
 </header>
 <main id="main-content" tabindex="-1">
   <h1>Cipher Corpus Statistics and Evaluation Status</h1>
-  <p style="color:var(--fg-muted,#bfa76a)">Generated 2026-10-22 · v0.6 · <a href="/public/reports/benchmark-baselines.json">Download JSON</a></p>
+  <p style="color:var(--fg-muted,#bfa76a)">Generated 2026-10-26 · v0.6 · <a href="/public/reports/benchmark-baselines.json">Download JSON</a></p>
 
   <div>
     <div class="stat-box"><div class="stat-num">100,326</div><div class="stat-label">Total Records</div></div>
@@ -40,6 +40,7 @@
     <div class="stat-box"><div class="stat-num">54</div><div class="stat-label">Records Labeled Historical</div></div>
   </div>
 
+  <p>This report inventories the published v0.6 archive. The <a href="../../cipher-corpus.html#corrected-corpus">corrected v0.8 dataset</a> has separate versioned statistics and verification notes.</p>
   <h2>Evaluation Status</h2>
   <p><strong>No solver accuracy has been measured for this report.</strong> Earlier human, automated-solver and LLM percentages were unsupported estimates, not benchmark results, and have been removed. Difficulty labels are curriculum metadata, not calibrated success probabilities.</p>
   <p>The downloadable “blind” split is public and includes answers. It is not confidential held-out data. Records labeled historical include teaching adaptations; the legacy verified flag does not establish source authenticity. See <a href="../corpus/README.md">dataset scope and errata</a>.</p>
@@ -50,6 +51,7 @@
   </table>
 
   <h2>Per-Cipher Statistics (Top 50 by Record Count)</h2>
+  <p>“Mixed” means records of that cipher type carry more than one difficulty label. The JSON report includes each difficulty distribution.</p>
   <table>
     <thead><tr><th>Cipher Type</th><th>Family</th><th>Difficulty</th><th>Records</th><th>Avg plaintext symbols</th></tr></thead>
     <tbody><tr>
@@ -62,7 +64,7 @@
 <tr>
     <td>vigenere</td>
     <td>polyalphabetic</td>
-    <td class="diff-intermediate">intermediate</td>
+    <td class="diff-mixed">mixed</td>
     <td>4979</td>
     <td>58</td>
   </tr>
@@ -118,7 +120,7 @@
 <tr>
     <td>alberti_disk</td>
     <td>disk</td>
-    <td class="diff-expert">expert</td>
+    <td class="diff-mixed">mixed</td>
     <td>2141</td>
     <td>63</td>
   </tr>
@@ -167,7 +169,7 @@
 <tr>
     <td>diana</td>
     <td>polyalphabetic</td>
-    <td class="diff-intermediate">intermediate</td>
+    <td class="diff-mixed">mixed</td>
     <td>1681</td>
     <td>62</td>
   </tr>
@@ -244,7 +246,7 @@
 <tr>
     <td>stager_route</td>
     <td>transposition</td>
-    <td class="diff-expert">expert</td>
+    <td class="diff-mixed">mixed</td>
     <td>1282</td>
     <td>59</td>
   </tr>
@@ -328,7 +330,7 @@
 <tr>
     <td>vic</td>
     <td>substitution</td>
-    <td class="diff-advanced">advanced</td>
+    <td class="diff-mixed">mixed</td>
     <td>1074</td>
     <td>56</td>
   </tr>
@@ -363,7 +365,7 @@
 <tr>
     <td>copiale</td>
     <td>substitution</td>
-    <td class="diff-advanced">advanced</td>
+    <td class="diff-mixed">mixed</td>
     <td>871</td>
     <td>61</td>
   </tr>
@@ -404,12 +406,13 @@
   </tr></tbody>
   </table>
 
-  <h2>Comparison with CipherBank</h2>
+  <h2>Collection Sizes</h2>
+  <p>These counts describe different collections and evaluation methods; they do not compare solver accuracy or historical authenticity.</p>
   <table>
-    <thead><tr><th>Benchmark</th><th>Records</th><th>Algorithms</th><th>Historical</th><th>Blind Splits</th><th>Multilingual</th></tr></thead>
+    <thead><tr><th>Collection</th><th>Records</th><th>Cipher-type labels</th></tr></thead>
     <tbody>
-      <tr><td><a href="https://arxiv.org/pdf/2504.19093" target="_blank" rel="noopener noreferrer">CipherBank (Li et al., 2025)</a></td><td>2,358</td><td>9</td><td>No</td><td>No</td><td>No</td></tr>
-      <tr><td><strong><a href="../../cipher-corpus.html">Cipher Corpus v0.6</a></strong></td><td><strong>100,326</strong></td><td><strong>85</strong></td><td><strong>Yes (54)</strong></td><td><strong>Public labels (30194)</strong></td><td><strong>Yes (9 langs)</strong></td></tr>
+      <tr><td><a href="https://arxiv.org/pdf/2504.19093" target="_blank" rel="noopener noreferrer">CipherBank (Li et al., 2025)</a></td><td>2,358</td><td>9</td></tr>
+      <tr><td><a href="../../cipher-corpus.html">Cipher Corpus v0.6</a></td><td>100,326</td><td>85</td></tr>
     </tbody>
   </table>
 

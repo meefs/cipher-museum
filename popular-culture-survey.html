@@ -104,13 +104,13 @@
     { title:'Poe, The Gold-Bug', medium:'literature', family:'substitution', period:'1843-1903', href:'ciphers/gold-bug.html', note:'Poe’s 1843 short story presents substitution decipherment through Legrand’s explanation of counts, patterns and likely words.' },
     { title:'Conan Doyle, Dancing Men', medium:'literature', family:'substitution', period:'1843-1903', href:'ciphers/dancing-men.html', note:'A cryptographic plot solved by pattern frequency and word shape — Holmes decodes by recognising E and common short words.' },
     { title:'Doyle, The Gloria Scott', medium:'literature', family:'concealment', period:'1843-1903', href:'ciphers/null-cipher.html', note:'Holmes breaks a null cipher hidden in a letter — every third word carries the real message, illustrated in the Null Cipher exhibit.' },
-    { title:'The Da Vinci Code', medium:'literature', family:'multi-stage', period:'2000s', href:'ciphers/da-vinci-code.html', note:'Layered clue progression using simple substitutions and symbolic puzzles; popularised cryptographic thinking for millions of readers.' },
+    { title:'The Da Vinci Code', medium:'literature', family:'multi-stage', period:'2000s', href:'ciphers/da-vinci-code.html', note:'Layered clue progression using substitutions and symbolic puzzles; the exhibit distinguishes fictional effects from the underlying cipher techniques.' },
     { title:'National Treasure', medium:'film', family:'multi-stage', period:'2000s', href:'ciphers/national-treasure.html', note:'Adventure-film chain of historical clue extraction and decoding; cipher literacy presented as heroic problem-solving.' },
     { title:'Gravity Falls Credits Ciphers', medium:'television', family:'substitution', period:'2010s', href:'ciphers/gravity-falls.html', note:'Broadcast audience puzzle loop built on Caesar/Atbash/A1Z26 variants; viewers can try the clues themselves.' },
     { title:'Cicada 3301', medium:'internet', family:'multi-stage', period:'2010s', href:'ciphers/cicada-3301.html', note:'Internet-scale collaborative cryptography and steganography hunt spanning three years and multiple continents.' },
     { title:'MIT Mystery Hunt', medium:'puzzle hunt', family:'multi-stage', period:'1980s', href:'ciphers/mit-mystery-hunt.html', note:'Annual team puzzle ecosystem featuring recurring cipher families; over 40 years of collaborative code-solving tradition.' },
     { title:'ARG puzzle practices', medium:'internet', family:'multi-stage', period:'multiple periods', href:'ciphers/krypto-arg.html', note:'ARG-era integration of text ciphers and media-layer clues; community collaborative decryption as social event.' },
-    { title:'The BACH Motif', medium:'music', family:'substitution', period:'before 1800', href:'ciphers/bach-motif.html', note:'Bach embedded B-A-C-H (German note names) as a musical cipher signature in his own contrapuntal compositions.' },
+    { title:'The BACH Motif', medium:'music', family:'substitution', period:'before 1800', href:'ciphers/bach-motif.html', note:'B-A-C-H uses German note names as a musical signature; the exhibit identifies its appearance in The Art of Fugue.' },
     { title:'Kryptos (Sanborn sculpture)', medium:'art', family:'multi-stage', period:'1990s', href:'ciphers/kryptos.html', note:'CIA headquarters sculpture bearing an 869-character ciphertext (865 letters plus four question marks) — K1–K3 publicly solved; K4 plaintext recovered from archival papers in 2025, distinct from a public cryptanalytic solution.' },
     { title:'Zodiac Killer Ciphers', medium:'historical document', family:'multi-stage', period:'1960s', href:'ciphers/zodiac.html', note:'Z408 solved in 1969; Z340 finally cracked in 2020 by an international team using candidate transpositions and homophonic-substitution search with language scoring.' },
     { title:'Sator Square in Tenet (2020)', medium:'film', family:'wordplay', period:'2010s', href:'ciphers/sator-square.html', note:'Ancient Latin word square revived in pop culture — notably in the film Tenet — as a symbol of palindromic mystery.' },
@@ -139,7 +139,7 @@
       var card = document.createElement('article');
       card.className = 'survey-card';
       card.innerHTML =
-        '<div class="survey-meta">' + item.medium + ' · ' + item.period + '</div>' +
+        '<div class="survey-meta">' + item.medium + ' · ' + (item.period === '2010s' ? '2010s+' : item.period) + '</div>' +
         '<h3>' + item.title + '</h3>' +
         '<p style="margin:0 0 .75rem;line-height:1.65;color:var(--tx2);">' + item.note + '</p>' +
         '<a href="' + item.href + '" class="view-all-link">Open exhibit →</a>';
