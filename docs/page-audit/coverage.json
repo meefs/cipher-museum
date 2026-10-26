@@ -129,11 +129,15 @@
       "path": "ciphers/amharic-ge-ez-ciphers.html",
       "title": "Geʼez Script and a Substitution Model — The Cipher Museum",
       "words": 423,
-      "sha256": "205feb7272cd1efb49a9a44d6f365389557a5b0cb30d6e9a72a11a058c8bd2bc",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Clearunverifiedmodelboundary; HMMLcollectionisnotcipherprovenanceasstated. NeedruntimecheckactualLatininputvsselectedEthiopicinventory. No identifiedsourceforhistoricalcipher; shouldretaineducationalstatus.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "de0009623d13c31d47e54d12acb520de70c60da88c2bbae054dbe575297f6314",
+      "status": "bounded source/prose review complete; final site audit pending",
+      "sources": [
+        "HMML-ETHIOPIA",
+        "UNICODE-ETHIOPIC"
+      ],
+      "notes": "Latin teaching permutation separated from manuscript heritage; source and prose review complete for item13. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/amsco.html",
@@ -169,11 +173,14 @@
       "path": "ciphers/arnold-andre.html",
       "title": "Arnold–André Book Cipher (Blackstone’s Commentaries · 1779–1780) — The Cipher Museum",
       "words": 849,
-      "sha256": "1e9554759e526a4812296537c770f881748e97b3b267d3f727ff6b47f0bf27d9",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Read Kahn on successiveBlackstone/dictionary schemes; removed two-volumeconstantkey, inventedcourierandkeycaptureimplications. Modernletterfallback remains labelled. Full-page reread, shared-surface propagation and rendered verification remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "7fdf4abdb1034aa831d487e710b64c584fc465753d7e5ec4620163210da38eb1",
+      "status": "bounded source/prose review complete; final site audit pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "June1779 correspondence; full prose reread, capture/cryptanalysis distinction and legal wording corrected. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/atbash.html",
@@ -319,8 +326,10 @@
       "words": 303,
       "sha256": "f1240b6ca0abdcac5edc3f7d75a57cf376d686691eb53634da7bf2da8cfb0306",
       "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Full page read. Bounded static exhibit distinguishes crib filtering, candidate stops, Polish predecessor, Enigma/Lorenz and electromechanical/general-purpose. Verify March/August1940 against TNMOC primary account.",
+      "sources": [
+        "TNMOC-BOMBE"
+      ],
+      "notes": "TNMOC confirms March 1940 Victory and August 1940 Agnes. Existing distinction retained; machine is candidate filter, not an automatic complete decipherment.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
@@ -397,11 +406,16 @@
       "path": "ciphers/chinese-telegraph.html",
       "title": "Chinese Telegraph Code (Standard Telegraph Codebook · 1881) — The Cipher Museum",
       "words": 657,
-      "sha256": "91eed4e9bc6e6b3e70f91725ee1d91e9e2b7a85aa59efb29d6584ac62e513468",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Digitwisemod10 historicalexample versusbrowsermod10000withcarries distinguished; HongKongdocumentfield sourcedwithoutallpassportclaim. Full-page reread, shared-surface propagation and rendered verification remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "0dd0812cd701507a075cc1d535b1202e64f569e1c8e6ddbc8b29a319e125da03",
+      "status": "bounded source/prose review complete; final site audit pending",
+      "sources": [
+        "CTC-JHU",
+        "CTC-NSA",
+        "HK-IDENTITY-PARTICULARS"
+      ],
+      "notes": "Encoding, editions,1881revision and additive arithmetic distinguished; invented widget remains explicit. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/cicada-3301.html",
@@ -665,21 +679,27 @@
       "path": "ciphers/fialka.html",
       "title": "Fialka M-125 (Soviet 10-rotor machine · 1956) — The Cipher Museum",
       "words": 585,
-      "sha256": "50b89067dc4e15e7c3c403ac955f03c3aae2c0ca217ce12b270969153c7ee0ef",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Full page read.30contact/26lettertoy and selfencipherment caveats good. Statusalloperationalno-publicbreak must boundedsource/date. Dailycard vs persessionkey analogy not equivalent. KL7answerFialka chronology misleading sinceKL7earlier.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "2ddbb31ae346095162a352f6f4488ba1e34ccf7aa5c042e6e6849e4fea27a395",
+      "status": "bounded source/prose review complete; final site audit pending",
+      "sources": [
+        "CRYPTOMUSEUM-FIALKA"
+      ],
+      "notes": "Full prose/model distinctions checked; backwards chronology and session-key analogy corrected. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/field-hollers.html",
       "title": "Field Hollers and Coding Songs — The Cipher Museum",
       "words": 486,
-      "sha256": "3b8937fa83079cb12100f55728aa43c191876e52fa9b4016118937cee8ef75c4",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Clear1928firstpublicationandunknownearlieruse; metadata1619-1865specificmethodgeneralized. VerifyNPS provenance notclaimpostwarcomposition certain if firstpublicationonly. Widgetmodernclearlylabeled.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "1df2d83ef0898ec6a80f355e94cdb1ce7ed4ad247b2249219d80e3a76f5c5409",
+      "status": "bounded source/prose review complete; final site audit pending",
+      "sources": [
+        "FIELD-HOLLERS-NPS"
+      ],
+      "notes": "Contextual oral traditions and later Drinking Gourd evidence distinguished from an invented vowel/consonant annotator. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/four-square.html",
@@ -737,23 +757,30 @@
       "path": "ciphers/gold-bug.html",
       "title": "Poe's Gold-Bug Cipher — The Cipher Museum",
       "words": 627,
-      "sha256": "23a51d76b0d93dbd8e25fedf3b95e6a297fcaf3732c93368f9dcdd51e5c87e6d",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "077a07d50b4f3e389aa9197b9d34e76ec8ff199edcbe9572d3a5ed5146239a4a",
+      "status": "bounded source/prose review complete; final site audit pending",
       "sources": [
-        "POE-BRIGHAM-1943"
+        "POE-BRIGHAM-1943",
+        "POE-GOLD-BUG-1843"
       ],
-      "notes": "Corrected 1839–1840 Alexander’s Weekly Messenger versus1841 Graham’s chronology; removed universal success, influence and readership claims. Original203-symbol story transcription still needs independent count.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "203-symbol1843 text and selected steps checked; browser rendered. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/gravity-falls.html",
       "title": "Gravity Falls Cipher System — The Cipher Museum",
       "words": 581,
-      "sha256": "d801859304555c99b3b36de9d7082b48aa18e18096932e70d5b15c35988ed9da",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Demonstrably8-14/hundredsthousandslearned/noeducationstudy remove. FirstmassparticipatoryeventfalsePoeBeast. Season1rotationactuallystagesandcombinedciphers verifyepisodecredits; WIDDLElocationverifyprimary. Advanceproofsunsupported.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "389c3c537a5d5205a488b5c1ac306c09d8bcf1b484d08703bba075bc6445edf2",
+      "status": "bounded source/prose review complete; final site audit pending",
+      "sources": [
+        "GRAVITY-D23",
+        "GRAVITY-HIRSCH-2021",
+        "GRAVITY-JOURNAL-PUBLISHER"
+      ],
+      "notes": "Creator interviews support audience engagement, not quantified learning outcomes; Caesar-only widget made explicit. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/great-cipher.html",
@@ -900,13 +927,15 @@
       "path": "ciphers/kl-7.html",
       "title": "KL-7 ADONIS (NATO eight-rotor machine · 1952) — The Cipher Museum",
       "words": 678,
-      "sha256": "2cea1c5966f2ef48ca7493cad9146dd4ec844662cd1d296b1953a38d1390ecc0",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "4bac32e5cd72995daa8438b5003556a54db425e4f5a3c8c956c7ef999bfccab4",
+      "status": "bounded source/prose review complete; final site audit pending",
       "sources": [
-        "WALKER-FBI"
+        "WALKER-FBI",
+        "CRYPTOMUSEUM-KL7"
       ],
-      "notes": "Removed all-NATO/all-period near-real-time claims; distinguishes machine history from broad Walker case. No public-break claim limited to consulted evidence. Final complete reread and shared-surface review remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "Full prose reread; 1952 introduction and eight/seven wheel distinction checked; no public-break statement is an evidence limitation. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/kryha.html",
@@ -998,13 +1027,16 @@
       "path": "ciphers/m209.html",
       "title": "M-209 (Hagelin C-38) — The Cipher Museum",
       "words": 730,
-      "sha256": "d72baa0de11a2f6929bbc433ce232fd40ba721d88a284ba362e438633f88be75",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "499ac2a091d3416b9f50ed029bf0e7d4b50299ece04ef6e9f1c0a27c8e038360",
+      "status": "bounded source/prose review complete; final site audit pending",
       "sources": [
-        "LASRY-2018"
+        "LASRY-2018",
+        "KAHN-1996",
+        "CRYPTOMUSEUM-M209"
       ],
-      "notes": "Corrected bar-level OR versus independent wheel-lug sum; statistical attack not guaranteed recovery. Removed specific hours-per-message and unsupported escape narrative. Production and adoption numbers still need final primary verification. Final complete reread and shared-surface review remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "Full prose reread; 1940 trials versus1942 production,roughly140000 machines and crank/printed output checked. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/mary-stuart-castelnau-letters.html",
@@ -1045,11 +1077,14 @@
       "path": "ciphers/microdot.html",
       "title": "Microdot Steganography — The Cipher Museum",
       "words": 469,
-      "sha256": "dcfc1cba07db2f7790fb354499c4241b106a9720f93d948e6160ed04c53355d7",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read.1941firstdiscoveredworldwideunsupported; Hoover1946publicationlikely1946ReadersDigestverify. Enlargeallmailrequiredfalse; limitedwork. Microdotnotencryptgood; publicencodingdemo distinct.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "b5c9cd425a6c456f3f7374ef9076d2ab2dc5a7261cad852dfbca347fcf5eead5",
+      "status": "bounded source/prose review complete; final site audit pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "August1941 envelope and earlier microphotography checked; detection separated from cryptanalysis. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/mit-mystery-hunt.html",
@@ -1109,11 +1144,18 @@
       "path": "ciphers/navajo-code-talkers.html",
       "title": "Navajo Code Talkers — The Cipher Museum",
       "words": 898,
-      "sha256": "58f8b51563db528fcdc107017446de79ba43b12cdb722bb8f8145ae750a6a20c",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. KeytypeNaturalLanguage overlooksactualcode.420exactcounts andfirst29allGuadalcanal doubtful. TablewordmatchesNavy1945dictionaryverify; codeGUAMcorrectunderlistedmapping.95%nearimpossibleunsupported quantitative score; quickfactsNeverunqualified. PostwarJapaneseaccounts and17Comanchevsdeployed14verify. Mainhistoricalvsmoderncaveatgood.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "3f66fe2d5407e87e313eba853948bffca8be7ee406171c6e1f59117c22db9094",
+      "status": "bounded source/prose review complete; final site audit pending",
+      "sources": [
+        "NAVAJO-NARA-2001",
+        "NAVAJO-LOC",
+        "NAVAJO-NATION",
+        "NAVAJO-CIA-ALPHABET",
+        "COMANCHE-ARMY"
+      ],
+      "notes": "People counts, developer/deployment distinction, military vocabulary and spelling code checked; no numerical security rating. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/nema.html",
@@ -1292,8 +1334,12 @@
       "words": 649,
       "sha256": "403d20995b41cd89798b2524b27751cb82a1e800720a73465e17a6d087d8b4eb",
       "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Full prose read. Critical commandstartafterPearlHarbor wrong NSAearly1941. SolemanwonMidway/endedJapanoffensivecapabilityoverclaim. Specificmotivesreassignmentnotfactwithoutsource. NeedteamLaytonHolmesFinnegan and watermessageprotocolprimary. NSA biographyfound.",
+      "sources": [
+        "NSA-ROCHEFORT",
+        "ROCHEFORT-MEDAL",
+        "ROCHEFORT-VA-2023"
+      ],
+      "notes": "Institutional birth-date discrepancy traced: VA explains 1900 birth versus 1898 recorded eligibility date. Retained 1900. Medal evidence remains separate.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
@@ -1449,14 +1495,15 @@
       "path": "ciphers/solitaire.html",
       "title": "Solitaire / Pontifex — The Cipher Museum",
       "words": 1077,
-      "sha256": "552126a39740764005575e7550b2b39a650e10e5e067f4a88967013ccb3581c9",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "bae7ef2f8a90ce78713768c457ca4afdc4601796a9d38e316b8dc81dabf81235",
+      "status": "bounded source/prose review complete; final site audit pending",
       "sources": [
         "CROWLEY-SOLITAIRE",
         "SCHNEIER-SOLITAIRE"
       ],
-      "notes": "Reviewed original algorithm arithmetic and measured repetition bias. Removed unsupported activist deployment and universal main-threat claims; retained extra browser filler escape distinction. Final complete reread and shared-surface review remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "Full prose and actual visualizer reread; original author vector and inverse pass. Visualizer adds no padding; engine escapes and pads. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/somerton-man.html",
@@ -1644,11 +1691,15 @@
       "path": "ciphers/wadsworth-cipher.html",
       "title": "Wadsworth Cipher — The Cipher Museum",
       "words": 1810,
-      "sha256": "d0146c7002f61c923cdec8733ea58ab231f6bc7c4cbd5f0c05a005287884072a",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Removedfrequencyhasnothingtocount andplaintext-independentmovement claims; abstract notfullpaper checked. Full-page reread, shared-surface propagation and rendered verification remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "002aadc2b775fee66188b68ab5118c41a7dcb86c16370ca6ced6ddb1047bf459",
+      "status": "bounded source/prose review complete; final site audit pending",
+      "sources": [
+        "KAEDING-2020",
+        "WADSWORTH-FRIEDMAN"
+      ],
+      "notes": "Full prose reread; device/date checked against Friedman; operation not established; Kaeding full paper inaccessible. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/wallis-ciphers.html",
@@ -1666,11 +1717,14 @@
       "path": "ciphers/wheatstone.html",
       "title": "Wheatstone Cryptograph (A clock-face polyalphabetic · 1867) — The Cipher Museum",
       "words": 558,
-      "sha256": "fa0884bc0477784a2025d399c8c0b55c1a796fa1549b25c62e44548e2a2e3392",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Attacklabel and capture paragraph no longercontradictmessage-dependentunequaldials. KaedingfullPDFunavailable, abstractscope only. Full-page reread, shared-surface propagation and rendered verification remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "74d55b239d24525a271ffb79e295b925f57f537db0fc4d97f192f3813dedd9ae",
+      "status": "bounded source/prose review complete; final site audit pending",
+      "sources": [
+        "KAEDING-2020"
+      ],
+      "notes": "Full prose reread; equal-dial model explicit; abstract-only attack boundary visible. Final site-wide reread and release checks remain.",
+      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
+      "browser_followup": "Desktop1280/mobile390 loaded without errors or horizontal overflow; see browser-culture-fifth.json for interaction scope."
     },
     {
       "path": "ciphers/yardley.html",
@@ -1697,9 +1751,13 @@
       "title": "Zimmermann Telegram (German codes 0075 / 13040 · 1917) — The Cipher Museum",
       "words": 783,
       "sha256": "21ae5a18113e1a40fc39bf5d142a8b4d63910b24dfaa9819557c8e9126db6c88",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Critical0075additive/superencipherment unsupported, navalSKMHVB conflateddiplomaticbooks. RoutingStockholmBuenosAiresallwordsRoom40 andmonthsdeception wrongscope. Twoencodingsdonotautomaticallyleakboth, causalwarheadline oversimplified. PrimaryNSA45reference needsfullread.",
+      "status": "scoped correction and source review complete; whole-site release pending",
+      "sources": [
+        "ZIMMERMANN-NSA",
+        "ZIMMERMANN-PAGE-1917",
+        "ZIMMERMANN-NARA-2016"
+      ],
+      "notes": "Corrected historical codebook versus additive teaching-model contradiction, unsupported routing/deception timeline, naval-codebook conflation and causal overstatement. NSA p.44 visually read and pp.43–45 text read; contemporary Page telegram compared. Model contains126 entries/123 distinct words. Three independent encode/decode vectors checked in browser at two widths.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {

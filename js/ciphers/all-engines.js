@@ -3978,14 +3978,8 @@ cipherMuseumGlobal.CipherEngines = (() => {
     };
   })();
 
-  // Ethiopian Ge\u02bcez Monastic Cipher (~14th\u201319th c.).
-  // Cipher tradition preserved in Ethiopian Orthodox monasteries to protect
-  // esoteric and liturgical texts. Demo: keyed monoalphabetic substitution
-  // over the Latin alphabet (the actual Ge\u02bcez systems substituted within
-  // the Ge\u02bcez syllabary, but the underlying mechanism is the same \u2014 a
-  // permutation of the script\u2019s ordered glyph table). The key seeds a
-  // shuffled cipher alphabet; the page\u2019s prose explains the syllabary
-  // layer.
+  // Invented keyword-seeded Latin-letter substitution teaching model.
+  // Legacy engine name retained; no Geʼez monastic-cipher provenance established.
   const geezMonastic = (() => {
     function buildMap(key) {
       const seed = clean(key) || 'GEEZ';

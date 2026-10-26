@@ -337,9 +337,10 @@
       inputs: [{ type: 'text', id: 'keyword', label: 'Additive Key (numeric, 0–9999)', value: '0', placeholder: 'e.g. 1234' }]
     },
     'zimmermann': {
-      label: 'Zimmermann Telegram (Code 0075 / 13040 simulation)', engine: 'zimmermann',
+      label: 'Codebook and Additive Teaching Model', engine: 'zimmermann',
+      note: 'An invented word table with optional additive arithmetic. This does not reconstruct diplomatic codes 0075 or 13040, which were used on successive transmission legs.',
       defaultMsg: 'WAR WITH MEXICO STOP',
-      inputs: [{ type: 'text', id: 'keyword', label: 'Additive Key (numeric)', value: '0', placeholder: 'e.g. 13040' }]
+      inputs: [{ type: 'text', id: 'keyword', label: 'Teaching-model additive (0–99999)', value: '0', placeholder: 'e.g. 12345' }]
     },
     'slidex': {
       label: 'Slidex (British WWII tactical bigram card)', engine: 'slidex',

@@ -15,6 +15,38 @@ function visible(html) {
   return s;
 }
 const checks = [
+  ['ciphers/zimmermann.html', s => {
+    assert.match(s, /successive transmission legs, not an additive layer/);
+    assert.match(s, /teaching choice, not a reconstruction/);
+    assert.match(s, /24 February 1917/);
+    assert.doesNotMatch(s, /Stockholm and Buenos Aires|months-long deception|SKM and HVB|resulting digit string was super-enciphered|pulled the United States into/);
+  }, 'The resulting digit string was super-enciphered by an additive key.'],
+  ['ciphers/amharic-ge-ez-ciphers.html', s => {
+    assert.match(s, /26 Latin letters A–Z/);
+    assert.match(s, /educational construction/);
+    assert.doesNotMatch(s, /substitution model using Ethiopic script|documented monastic cipher/);
+  }, 'A modern substitution model using Ethiopic script.'],
+  ['ciphers/gravity-falls.html', s => {
+    assert.match(s, /only Caesar \+3/);
+    assert.match(s, /Alex Hirsch interviewed by Rafael Motamayor/);
+    assert.doesNotMatch(s, /Demonstrably taught|hundreds of thousands|first mass-participatory|children 8–14/);
+  }, 'Demonstrably taught substitution cipher concepts to children 8–14.'],
+  ['ciphers/navajo-code-talkers.html', s => {
+    assert.match(s, /375–420/);
+    assert.match(s, /spelling alphabet/);
+    assert.match(s, /not proof of mathematical secrecy/);
+    assert.doesNotMatch(s, /95%|first 29 Navajo Code Talkers at Guadalcanal|Why It Was Never Broken/);
+  }, 'Security rating: 95%'],
+  ['ciphers/microdot.html', s => {
+    assert.match(s, /August 1941/);
+    assert.match(s, /Paris in 1870/);
+    assert.doesNotMatch(s, /discovered.*magazine|First discovered1941/);
+  }, 'The FBI discovered microdots in Sebold’s magazine.'],
+  ['ciphers/field-hollers.html', s => {
+    assert.match(s, /1928/);
+    assert.match(s, /modern/);
+    assert.doesNotMatch(s, /1619–1865|universally understood secret code/);
+  }, 'A universally understood secret code.'],
   ['ciphers/wallis-ciphers.html', s => {
     assert.match(s, /1643/);
     assert.doesNotMatch(s, /In late 1642|two hours|Naseby/);

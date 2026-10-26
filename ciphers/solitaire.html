@@ -79,7 +79,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Bruce Schneier designed Solitaire in 1999 for Neal Stephenson's novel Cryptonomicon, where it appears under the name "Pontifex". The goal: a cipher that an agent could carry in a hostile country with nothing more incriminating than a deck of playing cards. Strong enough to resist amateur attack, simple enough to operate by hand. Subsequent analysis revealed minor statistical biases, so it is not recommended for production use today, but it remains an important demonstration that strong-ish encryption can be done with no electronics at all.</p>
+      <p>Bruce Schneier designed Solitaire in 1999 for Neal Stephenson's novel Cryptonomicon, where it appears under the name "Pontifex". The goal: a cipher that an agent could carry in a hostile country with nothing more incriminating than a deck of playing cards. Strong enough to resist amateur attack, simple enough to operate by hand. Subsequent analysis found statistical biases. The exhibit uses Solitaire to study manual state updates and keystreams, not to recommend it for protecting communications.</p>
     </div>
 
     <div class="panel">
@@ -100,7 +100,7 @@
         <div class="callout callout-info">
           <span class="callout-icon">ℹ️</span>
           <div class="callout-body">
-            <p><strong>About this demo:</strong> To guarantee that Decrypt exactly restores your original message, this demo reversibly escapes the letters X, Q, and Z (as ZA, ZB, ZC) before enciphering, so padding and filler X can never be confused with a real letter. Messages containing X, Q, or Z therefore produce slightly different ciphertext than a strictly classical Solitaire would. Encryption pads to a multiple of five letters with X, per Schneier's specification.</p>
+            <p><strong>About this demo:</strong> To distinguish letters from padding in the normalised A–Z message, this demo reversibly escapes the letters X, Q, and Z (as ZA, ZB, ZC) before enciphering, so padding and filler X can never be confused with a real letter. Messages containing X, Q, or Z therefore produce slightly different ciphertext than a strictly classical Solitaire would. Encryption pads to a multiple of five letters with X, per Schneier's specification.</p>
           </div>
         </div>
       </div>
@@ -159,13 +159,13 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">Historical Operating Conventions</span></div>
       <div class="panel-body">
-        <p style="font-size:.9rem;color:var(--tx2);margin-bottom:.6rem;">Distilled from <a href="https://steemit.com/steemiteducation/@shai-hulud/solitaire-encryption-low-tech-high-security-a-how-to" target="_blank" rel="noopener">@shai-hulud's Solitaire how-to</a> and Schneier's original spec — the conventions that make a hand-cipher actually survive contact with the real world.</p>
+        <p style="font-size:.9rem;color:var(--tx2);margin-bottom:.6rem;">Practice conventions drawn from Schneier’s specification and the cited walkthrough. They explain manual operation; they do not establish modern security.</p>
         <table class="cipher-table">
           <thead><tr><th style="width:32%;">Convention</th><th>Why it matters</th></tr></thead>
           <tbody>
             <tr>
               <td><strong>X-pad to multiples of 5</strong></td>
-              <td>Pad the plaintext with <code>X</code> until its length is a multiple of 5. Trailing X padding is ambiguous unless a convention resolves it. The engine demo uses an additional reversible escape; the deck visualizer follows the ordinary padding convention.</td>
+              <td>Pad the plaintext with <code>X</code> until its length is a multiple of 5. Trailing X padding is ambiguous unless a convention resolves it. The engine demo uses an additional reversible escape and pads automatically. The deck visualizer processes exactly the normalised letters you enter; add any desired X padding yourself.</td>
             </tr>
             <tr>
               <td><strong>Group output in 5-letter blocks</strong></td>

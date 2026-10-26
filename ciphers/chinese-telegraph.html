@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chinese Telegraph Code (Standard Telegraph Codebook · 1881) — The Cipher Museum</title>
-  <meta name="description" content="The 1881 Chinese Telegraph Code mapped 7,000+ Chinese characters to 4-digit code groups so they could ride the same Morse-style telegraph network as the Latin alphabet — and was super-enciphered for diplomatic and military traffic in the 20th century.">
+  <meta name="description" content="Chinese telegraph codebooks map characters to four-digit groups. Public character encoding differs from additional encipherment used to protect some diplomatic and military messages.">
   <meta property="og:title" content="Chinese Telegraph Code (Standard Telegraph Codebook · 1881) — The Cipher Museum">
-  <meta property="og:description" content="The 1881 Chinese Telegraph Code mapped 7,000+ Chinese characters to 4-digit code groups so they could ride the same Morse-style telegraph network as the Latin alphabet — and was super-enciphered for diplomatic and military traffic in the 20th century.">
+  <meta property="og:description" content="Chinese telegraph codebooks map characters to four-digit groups. Public character encoding differs from additional encipherment used to protect some diplomatic and military messages.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/chinese-telegraph.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chinese Telegraph Code (Standard Telegraph Codebook · 1881) — The Cipher Museum">
-  <meta name="twitter:description" content="The 1881 Chinese Telegraph Code mapped 7,000+ Chinese characters to 4-digit code groups so they could ride the same Morse-style telegraph network as the Latin alphabet — and was super-enciphered for diplomatic and military traffic in the 20th century.">
+  <meta name="twitter:description" content="Chinese telegraph codebooks map characters to four-digit groups. Public character encoding differs from additional encipherment used to protect some diplomatic and military messages.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/chinese-telegraph.html">
@@ -60,14 +60,14 @@
     <span class="badge era-modern">Late Qing → PRC · 1881–1980s</span>
   </div>
   <h1 class="page-title">Chinese Telegraph Code <span style="opacity:.6;font-weight:400;">Standard Telegraph Codebook · 1881</span></h1>
-  <p class="page-tagline">Seven thousand Chinese characters, four digits each — the codebook that put Chinese onto the global telegraph and onto every signals analyst’s desk.</p>
+  <p class="page-tagline">Four-digit character codes connected Chinese writing to telegraph networks; confidentiality required an additional protection layer.</p>
   <p class="exhibit-status-note">Public codebook (super-enciphered when secret)</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Septime Auguste Viguier, French harbour-master, Shanghai</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">First codebook 1871; standard edition 1881</span></div>
-    <div class="fact"><span class="fact-label">Mapping</span><span class="fact-value">4-digit code group per Chinese character (~7,000 entries in a 9,999-group space)</span></div>
+    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Early European contributors; later Chinese revisions</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1870s development; Zheng Guanying revision 1881</span></div>
+    <div class="fact"><span class="fact-label">Mapping</span><span class="fact-value">Four-digit groups for characters included in the applicable edition</span></div>
     <div class="fact"><span class="fact-label">Use</span><span class="fact-value">Civil telegraphy publicly; diplomatic / military traffic super-enciphered</span></div>
-    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Still used today as a transliteration index for legal names</span></div>
+    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Documented administrative use: Hong Kong identity-card particulars</span></div>
   </div>
 </div>
 
@@ -78,12 +78,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>By the 1860s telegraphy was knitting the world together — except for the Chinese-speaking world, whose script could not be sent over a wire designed for Latin letters. In 1871 Septime Auguste Viguier, a French harbour-master in Shanghai, published the first systematic telegraph code for Chinese: every character received a unique 4-digit number. The 1881 standard edition by Zheng Guanying expanded it to over 7,000 characters and became the basis for every Chinese telegraph code that followed.</p><p style="margin-top:1rem;">Chinese Commercial Code numbers also have administrative uses. Hong Kong’s Immigration Department lists a name in Chinese commercial code, where applicable, among identity-card particulars. This is a specific documented use, not evidence that every mainland passport or Taiwanese registration carries the same code field.</p>
+      <p>The Sheridan Libraries’ account of <em>Dian bao xin bian</em> (1909) describes an earlier Danish contribution, refinement in Shanghai in 1872, and Zheng Guanying’s revision in 1881. Chinese telegraph codebooks assign four-digit numbers to the characters included in their tables, allowing messages in Chinese to travel through telegraph networks. These are character encodings, not secret encryption by themselves. Successive editions and regional variants do not necessarily give every character the same number; the sender and receiver must use compatible tables. Chinese Commercial Code numbers also have administrative uses. Hong Kong’s Immigration Department lists a name in Chinese commercial code, where applicable, among identity-card particulars. This is a specific documented use, not evidence that every mainland passport or Taiwanese registration carries the same code field.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>The codebook is a giant lookup table. Each Chinese character maps to a fixed 4-digit number (0001–9999); the operator transmits the digits as Morse code. The receiver looks up each 4-digit group in their copy of the same codebook and recovers the character.</p><p style="margin-top:1rem;">For confidentiality, some systems superenciphered the numeric codegroups. NSA’s account of Viguier’s 1873 proposal describes adding a key number digit by digit modulo 10, without carries. A codebook plus an additive is a broad design pattern also found in other systems; it does not mean all such systems used identical arithmetic, group sizes or key procedures.</p><p style="margin-top:1rem;">The demo uses an invented A–Z table and adds the same numeric input to each four-digit group modulo 10,000, with carries. This is a deliberately small teaching model. It differs from the digitwise historical example and is neither a transcription of a Chinese codebook nor a one-time-pad system.</p></div>
+      <div class="panel-body"><p>The codebook is a giant lookup table. Each included character maps to a four-digit number in the selected table; the operator transmits the digits as Morse code. The receiver looks up each 4-digit group in their copy of the same codebook and recovers the character.</p><p style="margin-top:1rem;">For confidentiality, some systems superenciphered the numeric codegroups. NSA’s account of Viguier’s 1873 proposal describes adding a key number digit by digit modulo 10, without carries. A codebook plus an additive is a broad design pattern also found in other systems; it does not mean all such systems used identical arithmetic, group sizes or key procedures.</p><p style="margin-top:1rem;">The demo uses an invented A–Z table and adds the same numeric input to each four-digit group modulo 10,000, with carries. This is a deliberately small teaching model. It differs from the digitwise historical example and is neither a transcription of a Chinese codebook nor a one-time-pad system.</p></div>
     </div>
 
     <div class="panel">
@@ -93,7 +93,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
-      <div class="panel-body"><table class="cipher-table"><thead><tr><th>CTC lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Codebook + additive = the workhorse military system of the 20th c.</td><td>Compare layers of representation and protection; a block cipher is not a public codebook</td></tr><tr><td>Codebook ID numbers persist in identity systems</td><td>Unicode codepoints are the same idea, with cryptographic neutrality</td></tr><tr><td>Adapting a script to a hostile transport</td><td>Punycode / IDN encoding for non-ASCII domain names</td></tr><tr><td>Reused additive material exposes relations</td><td>AES-GCM and ChaCha20-Poly1305 require nonce uniqueness under a key</td></tr></tbody></table></div>
+      <div class="panel-body"><table class="cipher-table"><thead><tr><th>CTC lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Codebook plus separate encipherment</td><td>Compare layers of representation and protection; a block cipher is not a public codebook</td></tr><tr><td>Codebook ID numbers persist in identity systems</td><td>Unicode also assigns numeric identifiers; neither system supplies secrecy by itself</td></tr><tr><td>Adapting a script to a hostile transport</td><td>Punycode / IDN encoding for non-ASCII domain names</td></tr><tr><td>Reused additive material exposes relations</td><td>AES-GCM and ChaCha20-Poly1305 require nonce uniqueness under a key</td></tr></tbody></table></div>
     </div>
 
   </div>
@@ -105,11 +105,11 @@
       <div class="panel-body">
         <table class="cipher-table">
           <tbody>
-            <tr><td>Origin</td><td>Septime Auguste Viguier, French harbour-master, Shanghai</td></tr>
-            <tr><td>Year</td><td>First codebook 1871; standard edition 1881</td></tr>
-            <tr><td>Mapping</td><td>4-digit code group per Chinese character (~7,000 entries in a 9,999-group space)</td></tr>
+            <tr><td>Origin</td><td>Early European contributors; later Chinese revisions</td></tr>
+            <tr><td>Year</td><td>1870s development; Zheng Guanying revision 1881</td></tr>
+            <tr><td>Mapping</td><td>Four-digit groups for characters included in the applicable edition</td></tr>
             <tr><td>Use</td><td>Civil telegraphy publicly; diplomatic / military traffic super-enciphered</td></tr>
-            <tr><td>Status</td><td>Still used today as a transliteration index for legal names</td></tr>
+            <tr><td>Status</td><td>Documented administrative use: Hong Kong identity-card particulars</td></tr>
           </tbody>
         </table>
       </div>
@@ -149,7 +149,7 @@
     <span class="hall-nav-dir">Next &rarr;</span>
     <span class="hall-nav-name">Latin American Telegraphic Codebooks</span>
   </a>
-</div></main>
+</div><section class="panel"><div class="panel-body"><h2>Encoding and Edition Sources</h2><p>Johns Hopkins Sheridan Libraries, <a href="https://www.library.jhu.edu/give/sponsor-a-book/morse-code-in-chinese/">“Morse Code in Chinese”</a>, collection description of <em>Dian bao xin bian</em> (1909); Unicode Standard Annex #38, <a href="https://www.unicode.org/reports/tr38/#kMainlandTelegraph">telegraph-code mapping properties</a>. These support edition-specific character encoding, not the museum’s invented Latin lookup table.</p></div></section></main>
 
 <footer></footer>
 <script src="../js/trust-labels.js"></script>

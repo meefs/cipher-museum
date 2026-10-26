@@ -111,7 +111,8 @@ for (const [a,b] of [['rs44','turning-grille'],['rs44','columnar'],['rs44','mysz
     const rows = [...d.querySelectorAll('#cipher-tbody tr')];
     const amsco = rows.find(row => row.querySelector('a').getAttribute('href') === 'ciphers/amsco.html');
     assert.match(amsco.textContent, /AMSCO.*Undated specification/);
-    const undated = row => /Undated specification|Date not established/.test(row.cells[2].textContent);
+    const undatedHrefs = new Set([...read('comparison.html').matchAll(/href:'([^']+)'[^\n]*?year:null/g)].map(m => m[1]));
+    const undated = row => undatedHrefs.has(row.querySelector('a').getAttribute('href'));
     const firstUndated = rows.findIndex(undated);
     assert(firstUndated > 0);
     assert(rows.slice(firstUndated).every(undated), 'All undated entries sort after dated entries in either direction');

@@ -111,7 +111,7 @@
     {"number":107,"path":"ciphers/phaistos-disc.html","label":null,"note":"Undeciphered script","collection":"cipher-history","interactive":true},
     {"number":108,"path":"ciphers/venona.html","label":"broken","note":"Partial break (key reuse exploit)","collection":"cipher-history","interactive":true},
     {"number":109,"path":"ciphers/sigsaly.html","label":"historical","collection":"cipher-history","interactive":true},
-    {"number":110,"path":"ciphers/microdot.html","label":"historical","note":"Physical discovery — the FBI photographically enlarged suspicious punctuation","collection":"cipher-history","interactive":true},
+    {"number":110,"path":"ciphers/microdot.html","label":"historical","note":"Physical concealment can be discovered by inspection and magnification","collection":"cipher-history","interactive":true},
     {"number":111,"path":"ciphers/bletchley-park.html","label":null,"collection":"cipher-history","interactive":true},
     {"number":112,"path":"ciphers/cabinet-noir.html","label":null,"collection":"cipher-history","interactive":true},
     {"number":113,"path":"ciphers/kerckhoffs.html","label":null,"note":"Principle (not a cipher)","collection":"cipher-history","interactive":true},

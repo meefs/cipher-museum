@@ -47,7 +47,7 @@ test('Zimmermann metadata describes successive transmission legs', () => {
     assert.match(description, /0075 to Washington, then re-encoded in 13040 for Mexico/);
     assert.doesNotMatch(description, /two-stage|3DES|Triple DES/i);
   }
-  assert.match(d.body.textContent, /educational codebook model, not a reconstruction/);
+  assert.match(d.body.textContent, /teaching choice, not a reconstruction/);
   assert.match(html, /the_zimmermann_telegram\.pdf/);
   dom.window.close();
 });

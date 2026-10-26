@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T18:57:17.517Z",
+  "generatedAt": "2026-10-26T19:34:50.016Z",
   "totalExhibits": 155,
   "cards": {
     "adfgvx": {
@@ -118,18 +118,18 @@
       "name": "Geʼez Script and a Substitution Model",
       "hall": "I",
       "era": "East Africa · teaching model",
-      "family": "Ancient and Foundational Ciphers",
-      "region": "Global",
-      "usedBy": "See the exhibit for historical participants and source evidence",
-      "keyType": "Varies by system",
-      "keyIdea": "A modern substitution model using Ethiopic script, with an explicit distinction between documented manuscript heritage and unverified cipher attribution.",
+      "family": "Modern substitution teaching model",
+      "region": "Ethiopian and Eritrean manuscript context",
+      "usedBy": "Museum learners; no historical cipher deployment established",
+      "keyType": "Keyword-seeded permutation of Latin A–Z",
+      "keyIdea": "Explore Geʼez manuscript heritage alongside a modern Latin-letter substitution exercise, with no historical cipher attribution claimed for the model.",
       "trust": {
         "key": "educational",
         "text": "Educational",
         "description": "A didactic construction for learning cryptographic concepts, not for security."
       },
       "securityFailure": "Illustrative Latin-letter substitution model; no identified manuscript authenticates this as a particular Geʽez monastic cipher.",
-      "modernLesson": "Large syllabic alphabets complicate frequency analysis"
+      "modernLesson": "An unfamiliar writing system is not itself a cipher"
     },
     "amsco": {
       "name": "AMSCO Transposition",
@@ -360,12 +360,12 @@
     "bifid": {
       "name": "Bifid Cipher",
       "hall": "IV",
-      "era": "1901",
+      "era": "1902",
       "family": "Transposition",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "5×5 keyword square",
-      "keyIdea": "Bifid cipher (1901) — Felix Delastelle's fractionation cipher that splits Polybius coordinates, transposes them across a period, and recombines.",
+      "keyIdea": "Bifid cipher (1902) — Felix Delastelle's fractionation cipher that splits Polybius coordinates, transposes them across a period, and recombines.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -536,7 +536,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "The 1881 Chinese Telegraph Code mapped 7,000+ Chinese characters to 4-digit code groups so they could ride the same Morse-style telegraph network as the Latin alphabet — and was super-enciphered for diplomatic and military traffic in the 20th century.",
+      "keyIdea": "Chinese telegraph codebooks map characters to four-digit groups. Public character encoding differs from additional encipherment used to protect some diplomatic and military messages.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -916,20 +916,20 @@
     "field-hollers": {
       "name": "Field Hollers and Coding Songs",
       "hall": "XIII",
-      "era": "Americas · 1619–1865",
-      "family": "Ciphers in Culture",
-      "region": "Global",
-      "usedBy": "See the exhibit for historical participants and source evidence",
-      "keyType": "Varies by system",
+      "era": "African American oral traditions",
+      "family": "Oral traditions and contextual communication",
+      "region": "United States",
+      "usedBy": "Historical African American communities; widget is modern",
+      "keyType": "No authenticated fixed cipher reconstructed",
       "keyIdea": "Song, shared meaning, and covert communication: documented traditions, disputed Drinking Gourd claims, and a clearly labeled modern annotation exercise.",
       "trust": null,
       "securityFailure": null,
-      "modernLesson": "Steganography hides existence of message; cryptography hides content"
+      "modernLesson": "Concealing a message and encrypting its content are different aims"
     },
     "four-square": {
       "name": "Four-Square Cipher",
       "hall": "II",
-      "era": "Late 19th Century · ~1902",
+      "era": "Early 20th Century · 1902 publication",
       "family": "Substitution",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
@@ -1020,14 +1020,14 @@
       "name": "Gravity Falls Cipher System",
       "hall": "XIII",
       "era": "Animation · 2012–2016",
-      "family": "Ciphers in Culture",
+      "family": "Fictional puzzles using classical ciphers",
       "region": "Global",
-      "usedBy": "See the exhibit for historical participants and source evidence",
-      "keyType": "Varies by system",
+      "usedBy": "Series creators and puzzle-solving viewers",
+      "keyType": "Varies by puzzle; this widget uses Caesar +3",
       "keyIdea": "Gravity Falls used classical ciphers and visual clues across its episodes and associated puzzles, inviting viewers to decode messages.",
       "trust": null,
       "securityFailure": null,
-      "modernLesson": "Security depends on design quality, key management, and implementation."
+      "modernLesson": "Record the text, clues and method; a plausible reading must fit the puzzle."
     },
     "great-cipher": {
       "name": "The Great Cipher",
@@ -1382,19 +1382,19 @@
     "m209": {
       "name": "M-209 (Hagelin C-38)",
       "hall": "VII",
-      "era": "World War II · 1940",
+      "era": "World War II · 1942 production",
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "6 pinwheels (lengths 26, 25, 23, 21, 19, 17) + 27 lug bars",
-      "keyIdea": "M-209 cipher machine (1940) — the US Army's portable Hagelin C-38 with six co-prime pin-wheels and a 27-bar lug cage. Broken in the field in WWII.",
+      "keyIdea": "M-209 cipher machine (US production from 1942) — the US Army's portable Hagelin C-38 with six co-prime pin-wheels and a 27-bar lug cage. Broken in the field in WWII.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Strong (tactical)",
-      "modernLesson": "Mechanical key streams need long periods"
+      "modernLesson": "Long periods alone do not ensure security"
     },
     "mary-stuart-castelnau-letters": {
       "name": "Mary Queen of Scots — The Castelnau Letters",
@@ -1446,18 +1446,18 @@
     "microdot": {
       "name": "Microdot Steganography",
       "hall": "V",
-      "era": "Modern · 1941–1980s",
-      "family": "Military and Field Ciphers",
+      "era": "Twentieth-century espionage",
+      "family": "Photographic steganography",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
-      "keyType": "Varies by system",
+      "keyType": "Physical concealment; any content encryption is separate",
       "keyIdea": "Microdots conceal miniature photographic images in ordinary carriers. The browser demonstration is a visual metaphor, not optical microphotography or encryption.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Physical discovery — the FBI photographically enlarged suspicious punctuation",
+      "securityFailure": "Physical concealment can be discovered by inspection and magnification",
       "modernLesson": "Steganography hides the message; cryptography hides the content"
     },
     "mit-mystery-hunt": {
@@ -1537,10 +1537,10 @@
       "name": "Navajo Code Talkers",
       "hall": "VII",
       "era": "WWII · 1942–1945",
-      "family": "Mechanical and Rotor Machines",
-      "region": "Global",
-      "usedBy": "See the exhibit for historical participants and source evidence",
-      "keyType": "Natural language (Navajo)",
+      "family": "Military vocabulary and spelling code",
+      "region": "Pacific theatre, World War II",
+      "usedBy": "Navajo Marines trained as Code Talkers",
+      "keyType": "Military vocabulary and spelling code built from Navajo",
       "keyIdea": "Navajo code talkers used a specialized military vocabulary and spelling alphabet during World War II. Their language and the constructed code were distinct layers.",
       "trust": {
         "key": "historical",
@@ -1548,7 +1548,7 @@
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Never publicly broken in wartime service; a historical military code.",
-      "modernLesson": "Security through complexity · pre-shared keys"
+      "modernLesson": "Specialised shared code, training and operational context"
     },
     "nema": {
       "name": "NEMA — Swiss Rotor Machine",

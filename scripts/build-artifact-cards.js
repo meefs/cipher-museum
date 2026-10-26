@@ -96,6 +96,30 @@ function main(check = false) {
   // key agreement, a hash, a signature, a sharing scheme and a proof system
   // all protect something without encrypting anything.
   const OVERRIDES = {
+    'amharic-ge-ez-ciphers': {
+      family: 'Modern substitution teaching model', region: 'Ethiopian and Eritrean manuscript context',
+      usedBy: 'Museum learners; no historical cipher deployment established',
+      keyType: 'Keyword-seeded permutation of Latin A–Z'
+    },
+    'navajo-code-talkers': {
+      family: 'Military vocabulary and spelling code', region: 'Pacific theatre, World War II',
+      usedBy: 'Navajo Marines trained as Code Talkers'
+    },
+    'microdot': {
+      family: 'Photographic steganography',
+      keyType: 'Physical concealment; any content encryption is separate'
+    },
+    'field-hollers': {
+      family: 'Oral traditions and contextual communication', region: 'United States',
+      keyType: 'No authenticated fixed cipher reconstructed',
+      usedBy: 'Historical African American communities; widget is modern'
+    },
+    'gravity-falls': {
+      family: 'Fictional puzzles using classical ciphers',
+      usedBy: 'Series creators and puzzle-solving viewers',
+      keyType: 'Varies by puzzle; this widget uses Caesar +3',
+      modernLesson: 'Record the text, clues and method; a plausible reading must fit the puzzle.'
+    },
     'ua-8295': {
       family: 'Firmware forensics', region: 'Finland / Netherlands',
       usedBy: 'Nokia DA-8520 / USFA UA-8295 terminal users',

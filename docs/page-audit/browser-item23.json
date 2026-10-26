@@ -1,0 +1,23 @@
+{
+  "item": 23,
+  "scope": "Local desktop/mobile page and word-table interaction; external resources blocked.",
+  "pages": [
+    {
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "failures": [],
+  "interactions": [
+    "Both widths: default independent table-index vector",
+    "Additive 12345: independent arithmetic vector",
+    "Decrypt recovers normalised test message",
+    "Visible teaching-model note"
+  ]
+}

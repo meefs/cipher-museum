@@ -50,7 +50,9 @@
       "Chapter5closing: June1844diplomaticinterception cessation versusOctoberDecypheringBranchdissolution; Austria1848.",
       "Chapter3: Lavinde1379 code/cipher keys versus Mantua1401 homophones; supplied text lines4658–4708.",
       "Chapter7: Stager route system and CipherNo.4 growth (12routepages,36codewordpages,1608entries); Lincoln1June1863example; supplied text lines8875–8960.",
-      "Chapter 5: Wallis first 1643 interception, subsequent three-month problem, later varying attack times and succession; chapter 21: Dorabella discussion"
+      "Chapter 5: Wallis first 1643 interception, subsequent three-month problem, later varying attack times and succession; chapter 21: Dorabella discussion",
+      "Microdot discussion, supplied text lines 21367–21435 and 21590–21642: August 1941 FBI envelope account, separate Sebold investigation and earlier 1870 Paris microphotography. Chapter 5 text line7468 confirms Arnold coded message 18 June 1779.",
+      "Hagelin discussion, supplied text lines17385–17465: 1940 US trials/negotiations, production from1942, over140000 M-209 machines; C-36 French orders distinct."
     ],
     "scope": "Historical secondary account, compared with primary records where available. Converted PDF pagination differs from printed edition; chapter references preferred in visible credits. Its old priority and lineage claims are not adopted without qualification."
   },
@@ -526,7 +528,8 @@
     "year": 2018,
     "passages_read": [
       "Chapter7, §7.2.1, p.114 / suppliedPDF135: M-209 wheel, bar and lug operation, Beaufort equation.",
-      "Title/copyright/degree page visually inspected: University of Kassel Dr. rer. nat., defence 16 October 2017, publication 2018"
+      "Title/copyright/degree page visually inspected: University of Kassel Dr. rer. nat., defence 16 October 2017, publication 2018",
+      "Chapter7 §7.1, supplied text7013–7038: approximately140000 M-209 machines."
     ],
     "scope": "Verified per-bar OR engagement. The book’s output-period wording is not adopted as an unconditional guarantee; joint wheel positions and generated keystream period are distinct."
   },
@@ -809,5 +812,209 @@
     ],
     "scope": "Verified displayed Table 4: eight rounds, six Nvidia GPUs, related tweaks, 50% success point, 2^12.7 known tuples or 2^8 chosen-ciphertext tuples and 42 minutes. Full-keyspace brute-force reference about five days. This does not establish a sixteen-round attack. No additional exhibit change needed for those statements.",
     "url": "https://doi.org/10.46586/tosc.v2021.i3.36-53"
+  },
+  "NAVAJO-NARA-2001": {
+    "title": "Semper Fidelis, Code Talkers",
+    "url": "https://www.archives.gov/publications/prologue/2001/winter/navajo-code-talkers.html",
+    "passages_read": [
+      "Introduction, development, alphabet and operational reports: estimated 375–420, initial 211 terms, vocabulary/training difficulties. Not a mathematical secrecy proof."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "NAVAJO-LOC": {
+    "title": "Navajo Code Talkers: A Guide to Resources",
+    "url": "https://guides.loc.gov/navajo-code-talkers",
+    "passages_read": [
+      "Introduction read: first 29 developers, some at later Guadalcanal, specialized terms and spelling alphabet, declassification and recognition."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "NAVAJO-NATION": {
+    "title": "Navajo Nation: History, Navajo Code Talkers",
+    "url": "https://www.navajo-nsn.gov/History",
+    "passages_read": [
+      "Code Talkers section read; supports attribution of Howard Connor quotation. Other broad claims on the page are not adopted."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "NAVAJO-CIA-ALPHABET": {
+    "title": "Navajo Code Talkers and the Unbreakable Code",
+    "url": "https://www.cia.gov/stories/story/navajo-code-talkers-and-the-unbreakable-code/",
+    "passages_read": [
+      "Alphabet section reproduces 15 June 1945 dictionary; inspected displayed A/G/I/M/O/U/W variants and GUAM exercise. Does not support a numerical security rating. Navy original host returned 502."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "COMANCHE-ARMY": {
+    "title": "Comanche language helped win World War II",
+    "url": "https://www.army.mil/article/178195/comanche_language_helped_win_world_war_ii",
+    "passages_read": [
+      "Recruitment and deployment paragraphs read: 17 initially recruited, later personnel changes. Exact landing count not adopted because accounts differ."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "FIELD-HOLLERS-NPS": {
+    "title": "The North Star: A Guide to Freedom",
+    "url": "https://www.nps.gov/articles/drinkinggourd.htm",
+    "passages_read": [
+      "Julie West historical discussion read, including postwar song context and 1928 publication. No authenticated fixed field-holler cipher is inferred."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "GRAVITY-D23": {
+    "title": "Gravity Falls: Solving its Final Mystery",
+    "url": "https://d23.com/gravity-falls-solving-its-final-mystery/",
+    "passages_read": [
+      "2016 creator interview: series dates, codes, audience response. Not an educational-impact study."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "GRAVITY-HIRSCH-2021": {
+    "title": "Alex Hirsch interview with Rafael Motamayor",
+    "url": "https://www.inverse.com/entertainment/gravity-falls-season-3-video-game-alex-hirsch-interview",
+    "passages_read": [
+      "29 March 2021 interview, code creation and season-two response to fans. No numerical learning impact inferred."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "GRAVITY-JOURNAL-PUBLISHER": {
+    "title": "Gravity Falls: Journal 3 — publisher record",
+    "url": "https://books.disney.com/book/gravity-falls-journal-3/",
+    "passages_read": [
+      "Publisher description and release metadata read: 26 July 2016; 288-page journal combining series and new material. Public exhibit uses plain title credit, not ebook link."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "ROCHEFORT-VA-2023": {
+    "title": "VeteranOfTheDay Navy Veteran Joseph Rochefort",
+    "url": "https://news.va.gov/117885/veteranoftheday-navy-joseph-rochefort/",
+    "passages_read": [
+      "Birth paragraph explains 1900 versus recorded 1898. This is an institutional retrospective relying on a secondary biography, not a birth certificate; the exhibit’s 1900 is retained. Medal wording here is not adopted."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "TNMOC-BOMBE": {
+    "title": "The Turing-Welchman Bombe",
+    "url": "https://www.tnmoc.org/bombe",
+    "passages_read": [
+      "Victory entered work 14 March 1940; Agnes August 1940. Current exhibit distinction confirmed. The source’s erroneous 1920s Polish cryptanalysis wording is not adopted."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "UNICODE-UNIHAN": {
+    "title": "Unicode Standard Annex #38: Unicode Han Database",
+    "url": "https://www.unicode.org/reports/tr38/",
+    "passages_read": [
+      "kMainlandTelegraph property definition read: four-digit PRC mapping. Separate Taiwan property identified. This validates encoding structure, not historical priority."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "M209-SPY-MUSEUM": {
+    "title": "M-209 Cipher Machine",
+    "url": "https://www.spymuseum.org/exhibition-experiences/about-the-collection/collection-highlights/m-209-cipher-machine/",
+    "passages_read": [
+      "Collection record read: hand-operated Hagelin machine for US Army; circa-1943 artifact. Does not establish total production or exact adoption year."
+    ],
+    "scope": "Limited to the passages described; no full-source certification."
+  },
+  "POE-GOLD-BUG-1843": {
+    "title": "The Gold-Bug",
+    "authors": [
+      "Edgar Allan Poe"
+    ],
+    "year": 1843,
+    "edition": "Dollar Newspaper, June 1843",
+    "passages_read": [
+      "Poe Society critical transcription of the 1843 second installment: 203-symbol cryptogram and selected decipherment steps. Later forty-one/twenty-one revision changes plaintext length."
+    ],
+    "scope": "Public-domain literary text, not evidence of a real treasure. Public exhibit uses title credit without full-story download link."
+  },
+  "ZIMMERMANN-NSA": {
+    "title": "The Zimmermann Telegram",
+    "authors": [
+      "National Security Agency"
+    ],
+    "passages_read": [
+      "Printed pp. 43–45; p.44 image visually inspected because OCR is poor. Diplomatic 0075 intercept and more extensively reconstructed 13040 onward version, Mexican copy and source protection."
+    ],
+    "url": "https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/cryptologic-quarterly/the_zimmermann_telegram.pdf",
+    "scope": "Historical account and translated investigation. Does not support additive encipherment in the actual telegram or equating diplomatic books with SKM/HVB."
+  },
+  "ZIMMERMANN-PAGE-1917": {
+    "title": "Ambassador Page to the Secretary of State, telegram 5747",
+    "year": 1917,
+    "passages_read": [
+      "24 February 1917 telegram text, including the proposed alliance and contemporary account of copies purchased in Mexico."
+    ],
+    "url": "https://history.state.gov/historicaldocuments/frus1917Supp01v01/d158",
+    "scope": "Contemporary diplomatic report; account of intelligence sourcing reflects what Britain disclosed, not the entire interception history."
+  },
+  "ZIMMERMANN-NARA-2016": {
+    "title": "The Zimmermann Telegram",
+    "authors": [
+      "Jay Bellamy"
+    ],
+    "year": 2016,
+    "url": "https://www.archives.gov/publications/prologue/2016/winter/zimmermann-telegram",
+    "passages_read": [
+      "Opening and events leading to American entry; intercepted telegram contributed alongside other causes."
+    ],
+    "scope": "Archival retrospective, not evidence that the telegram alone caused war."
+  },
+  "HMML-ETHIOPIA": {
+    "title": "HMML Global Operations: Ethiopia",
+    "url": "https://hmml.org/about/global-operations/ethiopia/",
+    "passages_read": [
+      "Read collection and language descriptions. Evidence of manuscript heritage, not of the invented substitution model."
+    ],
+    "scope": "Specific claims described above only."
+  },
+  "UNICODE-ETHIOPIC": {
+    "title": "The Unicode Standard, Chapter 19, §19.1 Ethiopic",
+    "url": "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-19/",
+    "passages_read": [
+      "Read script description and consonant/vowel matrix. The browser model operates on Latin letters, not these characters."
+    ],
+    "scope": "Specific claims described above only."
+  },
+  "CTC-JHU": {
+    "title": "Morse Code in Chinese",
+    "url": "https://www.library.jhu.edu/give/sponsor-a-book/morse-code-in-chinese/",
+    "passages_read": [
+      "Read collection account of Dian bao xin bian (1909): earlier Danish contribution, Shanghai refinement in 1872 and Zheng Guanying revision in 1881."
+    ],
+    "scope": "Specific claims described above only."
+  },
+  "WADSWORTH-FRIEDMAN": {
+    "title": "Friedman Collection, Folder 515: Wadsworth cipher apparatus",
+    "url": "https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/friedman-documents/patent-equipment/FOLDER_515/41788379082740.pdf",
+    "passages_read": [
+      "Read PDF pp.1–2 and 7–8: 1817 device description; uncertain operational use; 1949 Hamden return correspondence."
+    ],
+    "scope": "Specific claims described above only."
+  },
+  "CRYPTOMUSEUM-FIALKA": {
+    "title": "M-125 Fialka: examined machines and variants",
+    "url": "https://www.cryptomuseum.com/crypto/fialka/",
+    "passages_read": [
+      "Read introduction and models: 1956, ten 30-contact wheels, opposite movement, country configurations, punched-card substitution, M-125-3M 1965. No conclusion about unknown classified cryptanalysis."
+    ],
+    "scope": "Specific claims described above only."
+  },
+  "CRYPTOMUSEUM-KL7": {
+    "title": "TSEC/KL-7 ADONIS, POLLUX",
+    "url": "https://www.cryptomuseum.com/crypto/usa/kl7/",
+    "passages_read": [
+      "Read introduction, examined-machine operation and procedures: 1952 introduction, eight wheels/seven moving, re-entry, phased withdrawal. Do not adopt contradictory page declassification dates."
+    ],
+    "scope": "Specific claims described above only."
+  },
+  "CRYPTOMUSEUM-M209": {
+    "title": "M-209 / CSP-1500: examined machine",
+    "url": "https://www.cryptomuseum.com/crypto/hagelin/m209/",
+    "passages_read": [
+      "Read introduction, operation, versions: letter selector, crank and printed tape; about 140,000 manufactured. Historical attack timings depend on depth and conditions."
+    ],
+    "scope": "Specific claims described above only."
   }
 }
