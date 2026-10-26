@@ -57,8 +57,7 @@
     <div class="kicker">What "Provably Secure" Actually Claims</div>
     <h1>Standing on a<br><em>borrowed</em> difficulty</h1>
     <p class="standfirst">
-      Cryptographers rarely prove a scheme is hard to break. They prove something
-      subtler and stronger: that breaking it would let you solve a problem
+      Cryptographers rarely prove a scheme is hard to break. They prove a conditional implication: that breaking it would let you solve a problem
       everyone already believes is hard. Security is borrowed from a difficulty
       we trust — and the loan is made by a <em>reduction</em>.
     </p>
@@ -83,8 +82,7 @@
       <div class="lab-hint">
         Read it as a machine: feed a hard factoring instance in, wrap it as a
         fake scheme challenge, let the hypothetical breaker crack it, and read
-        the factors back out. If the breaker is fast, factoring is fast — a
-        contradiction.
+        the factors back out. If the reduction is efficient enough, a sufficiently fast breaker would contradict the specified factoring-hardness assumption.
       </div>
     </div>
   </section>

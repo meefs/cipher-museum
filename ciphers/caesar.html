@@ -118,7 +118,7 @@
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Shift (1–25)</span></div>
     <div class="fact"><span class="fact-label">Keyspace</span><span class="fact-value">25 possible keys</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Exhaustive search or language analysis; no specific ancient break claimed</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">S-boxes in AES</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Substitution and exhaustive key search</span></div>
   </div>
 </div>
 
@@ -211,7 +211,7 @@ Example (shift = 3):
         <div class="attack-panel">
           <div class="attack-name">Brute Force</div>
           <div class="attack-diff">Complexity: Trivial · Keyspace: 25</div>
-          <p class="attack-desc">The entire keyspace is just 25 shifts. A human can test all 25 by hand in minutes. A computer does it in microseconds. This is the simplest form of exhaustive key search — a technique that scales to modern ciphers but requires vastly more computation.</p>
+          <p class="attack-desc">The entire keyspace is just 25 shifts. There are only 25 nonidentity shifts to test. Recognizing the intended plaintext can still require context. This is the simplest form of exhaustive key search — a technique that scales to modern ciphers but requires vastly more computation.</p>
         </div>
         <div class="callout callout-danger" style="margin-top:1rem;">
           <span class="callout-icon">⚠️</span>

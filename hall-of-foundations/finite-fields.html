@@ -59,8 +59,7 @@
     <p class="standfirst">
       The elliptic curve you saw drawn as a smooth loop doesn't live on paper
       when it does real work. It lives over a finite field — a world with only
-      finitely many numbers, where the curve becomes a scatter of dots. This is
-      where the discrete logarithm becomes hard.
+      finitely many numbers, where the curve becomes a scatter of dots. Suitable large finite-field groups can support hard discrete-log problems; the tiny groups here do not.
     </p>
   </div>
 
@@ -159,8 +158,7 @@
         field</span> of 256 elements whose members are polynomials, added
         bitwise and multiplied modulo a fixed irreducible polynomial. Same
         guarantee &#8212; every nonzero element has an inverse &#8212; reached by
-        different construction, and the S-box takes that inverse and then
-        applies an affine map on top. The polynomial machinery is next door in
+        different construction, and the S-box maps zero to zero for the inversion step, takes the multiplicative inverse for every nonzero input, and then applies an affine map. The polynomial machinery is next door in
         <a href="polynomial-rings.html">Polynomial Rings</a>.
       </p>
     </div>

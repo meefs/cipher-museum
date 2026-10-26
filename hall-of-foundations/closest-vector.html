@@ -108,7 +108,7 @@
     <div class="eq">t = a&#183;b&#8321; + b&#183;b&#8322; &nbsp;&#8594;&nbsp; round(a), round(b) &nbsp;&#8594;&nbsp; nearest corner?</div>
     <ul class="ladder">
       <li><span class="rung">Good basis<span>the trapdoor</span></span><span class="gloss">Orthogonal vectors in this preset. Coordinate rounding gives a nearest lattice point.</span></li>
-      <li><span class="rung">Bad basis<span>what an attacker gets</span></span><span class="gloss">Long, skewed vectors for the same lattice. Rounding misfires on most targets &#8212; for many targets.</span></li>
+      <li><span class="rung">Bad basis<span>what an attacker gets</span></span><span class="gloss">Long, skewed vectors for the same lattice. Coordinate rounding can return a point that is not nearest.</span></li>
     </ul>
   </section>
 
@@ -127,8 +127,8 @@
         </label>
         <label>basis
           <select id="lweBasis">
-            <option value="good">good (secret)</option>
-            <option value="bad">bad (public)</option>
+            <option value="good">orthogonal preset</option>
+            <option value="bad">skewed preset</option>
           </select>
         </label>
         <button id="resample">New sample</button>
@@ -139,7 +139,7 @@
         message). The <span style="color:var(--vermilion)">vermilion dot</span>
         is the published ciphertext = point + noise. Decryption succeeds when
         rounding returns the ink dot &#8212; a <span style="color:var(--teal)">teal
-        ring</span>. As &#963; grows, the good basis holds far longer than the bad one.
+        ring</span>. For a given sample, the presets can produce different rounding results. Neither preset turns this two-dimensional example into secure encryption.
       </div>
     </div>
 
@@ -173,10 +173,10 @@
       <h3>Why the owner can still get in</h3>
       <p>This exhibit shows how decoding can recover a point from a bounded perturbation. Real encryption balances correctness and resistance to attacks using a complete parameter set. Signatures have different correctness conditions; a decryption noise budget is not a universal description of lattice cryptography.</p>
     </div>
-    <p class="aside"><b>Three views of one problem.</b>
-      <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> is the geometry — why the secret stays hidden.
-      <a href="closest-vector.html" style="color:var(--vermilion)">§152</a> is the decoding — why its owner still gets in.
-      <a href="learning-with-errors.html" style="color:var(--vermilion)">§157</a> is the algebra — what the keys are actually made of.
+    <p class="aside"><b>Three related teaching models.</b>
+      <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> introduces lattice geometry.
+      <a href="closest-vector.html" style="color:var(--vermilion)">§152</a> illustrates geometric decoding.
+      <a href="learning-with-errors.html" style="color:var(--vermilion)">§157</a> shows a tiny noisy-equation model and distinguishes it from standardized keys.
       Also related: <a href="reduction.html" style="color:var(--vermilion)">Reduction &amp; Proof</a>, for what "reduces to this problem" claims.</p>
   </section>
 

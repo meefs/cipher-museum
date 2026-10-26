@@ -102,8 +102,7 @@
     <p>In two dimensions efficient reduction algorithms find a shortest vector. In high dimensions, known algorithms for many relevant exact or approximation problems can be expensive. Cryptographic security still depends on the instance distribution, approximation target and parameters, not simply on a large dimension.</p>
     <div class="eq">SVP: given a basis, find the shortest nonzero lattice vector</div>
     <div class="pull">
-      The security gap is the distance between eyeballing it in 2D and searching
-      for it in 500D.
+      A two-dimensional picture motivates the problem; concrete security estimates require a specified distribution, dimension and approximation target.
     </div>
   </section>
 
@@ -113,10 +112,10 @@
       <h3>The lattice-based standards connect here</h3>
       <p>ML-KEM and ML-DSA use specific module-lattice assumptions, including Module-LWE and, for signatures, Module-SIS-related assumptions. Their keys contain short secret vectors and structured public equations rather than a generic hidden good basis. The picture offers geometric intuition; it is not a proof that breaking either standard is equivalent to solving arbitrary exact SVP.</p>
     </div>
-    <p class="aside"><b>Three views of one problem.</b>
-      <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> is the geometry — why the secret stays hidden.
-      <a href="closest-vector.html" style="color:var(--vermilion)">§152</a> is the decoding — why its owner still gets in.
-      <a href="learning-with-errors.html" style="color:var(--vermilion)">§157</a> is the algebra — what the keys are actually made of.
+    <p class="aside"><b>Three related teaching models.</b>
+      <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> introduces lattice geometry.
+      <a href="closest-vector.html" style="color:var(--vermilion)">§152</a> illustrates geometric decoding.
+      <a href="learning-with-errors.html" style="color:var(--vermilion)">§157</a> shows a tiny noisy-equation model and distinguishes it from standardized keys.
       Read them in that order.</p>
   </section>
 

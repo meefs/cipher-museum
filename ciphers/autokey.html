@@ -63,7 +63,7 @@
   <p class="page-tagline">Vigenère's self-extending key — the message becomes its own key.</p>
   <p class="exhibit-status-note">Crib propagation and language-scored searches; ordinary repeating-key Kasiski analysis does not apply directly.</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Blaise de Vigenère (1586), refining Belaso/Cardano</span></div>
+    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Blaise de Vigenère (1586), refining Bellaso/Cardano</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1586</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Short keyword, then plaintext itself extends the key</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Crib propagation and statistical analysis</span></div>
@@ -79,7 +79,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Plaintext autokey extends a primer with the message itself. It avoids cycling a short keyword at a fixed period, but letters and passages can still repeat. This changes the attack surface rather than proving 350 years of field security. Joshua Holden’s <a href="../further-reading.html#holden"><em>The Mathematics of Secrets</em></a> (2017), §5.3, distinguishes several historical self-keying constructions.</p>
+      <p>Plaintext autokey extends a primer with the message itself. It avoids cycling a short keyword at a fixed period, but letters and passages can still repeat. This changes the attack surface rather than proving 350 years of field security. Joshua Holden’s <a href="../further-reading.html#holden"><em>The Mathematics of Secrets: Cryptography from Caesar Ciphers to Digital Encryption</em></a> (2017), §5.3, distinguishes several historical self-keying constructions.</p>
     </div>
 
     <div class="panel">
@@ -96,7 +96,7 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
       <div class="panel-body">
         <div class="attack-panel">
-          <div class="attack-name">Friedman's Autokey Attack</div>
+          <div class="attack-name">Crib Propagation</div>
           <div class="attack-diff">Crib propagation is straightforward; finding a correct crib or primer can require substantial search</div>
           <p class="attack-desc">The extended key is related to the plaintext and is not independent random material. A guessed plaintext letter reveals a later key letter, allowing the guess to propagate at a distance equal to the primer length. Crib testing and language scoring can exploit this structure; there is no universal guarantee of recovery within a specified number of trials.</p>
         </div>
@@ -111,7 +111,7 @@
           <tbody>
             <tr><td>Self-extending key</td><td>CFB feeds ciphertext back through a keyed block cipher; that is distinct from appending bare plaintext as a keystream</td></tr>
             <tr><td>Plaintext feedback</td><td>Language structure in the appended plaintext supplies statistical clues; a repeating-key period test is not a general autokey solver</td></tr>
-            <tr><td>&lsquo;Don't reuse keys&rsquo; isn't enough</td><td>If your &lsquo;key' has natural-language structure you've leaked it</td></tr>
+            <tr><td>&lsquo;Don't reuse keys&rsquo; isn't enough</td><td>Natural-language key material can expose exploitable statistical structure</td></tr>
           </tbody>
         </table>
       </div>
@@ -141,7 +141,7 @@
           <tbody>
             <tr><td>Era</td><td>Renaissance · 1586</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
-            <tr><td>Origin</td><td>Blaise de Vigenère (1586), refining Belaso/Cardano</td></tr>
+            <tr><td>Origin</td><td>Blaise de Vigenère (1586), refining Bellaso/Cardano</td></tr>
             <tr><td>Year</td><td>1586</td></tr>
             <tr><td>Key Type</td><td>Short keyword, then plaintext itself extends the key</td></tr>
             <tr><td>Broken By</td><td>Crib propagation and statistical analysis</td></tr>

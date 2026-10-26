@@ -229,12 +229,12 @@ REQUIRED.forEach(function (row) {
 });
 
 // ================= the three-view arc stays consistent =================
-// §147, §152 and §157 teach one problem through three lenses. Each must carry
+// §147, §152 and §157 teach related but distinct models. Each must carry
 // the shared note, or a visitor landing on one sees a fragment of the argument.
 ["lattices-svp.html", "closest-vector.html", "learning-with-errors.html"].forEach(function (f) {
   var t = readViews(path.join(DIR, f)).text;
-  assert(/Three views of one problem/.test(t),
-    f + " carries the shared three-view note");
+  assert(/Three related teaching models/.test(t),
+    f + " distinguishes the related teaching models");
   ["147", "152", "157"].forEach(function (n) {
     assert(t.indexOf("§" + n) !== -1, f + " links the arc to §" + n);
   });

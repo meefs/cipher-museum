@@ -52,7 +52,8 @@
       "Chapter7: Stager route system and CipherNo.4 growth (12routepages,36codewordpages,1608entries); Lincoln1June1863example; supplied text lines8875–8960.",
       "Chapter 5: Wallis first 1643 interception, subsequent three-month problem, later varying attack times and succession; chapter 21: Dorabella discussion",
       "Microdot discussion, supplied text lines 21367–21435 and 21590–21642: August 1941 FBI envelope account, separate Sebold investigation and earlier 1870 Paris microphotography. Chapter 5 text line7468 confirms Arnold coded message 18 June 1779.",
-      "Hagelin discussion, supplied text lines17385–17465: 1940 US trials/negotiations, production from1942, over140000 M-209 machines; C-36 French orders distinct."
+      "Hagelin discussion, supplied text lines17385–17465: 1940 US trials/negotiations, production from1942, over140000 M-209 machines; C-36 French orders distinct.",
+      "Gronsfeld travel account and Schott1659 reference; Porta1563 context; Jefferson/Patterson correspondence and wheel contrast."
     ],
     "scope": "Historical secondary account, compared with primary records where available. Converted PDF pagination differs from printed edition; chapter references preferred in visible credits. Its old priority and lineage claims are not adopted without qualification."
   },
@@ -111,7 +112,8 @@
     "edition": "Version0.6, January2023",
     "passages_read": [
       "§19.1, printed pp.756–757,760: Schnorr identification, Theorem19.1 and honest-verifier zero knowledge",
-      "§10.4.2: CDH and DL distinction"
+      "§10.4.2: CDH and DL distinction",
+      "§10.4.2 pp.407–408: CDH versus discrete log; §22.1.1–22.1.2 pp.927–929: finite-field secret sharing, independent uniform coefficients and threshold secrecy."
     ],
     "scope": "Proof assumptions and challenge strategy are not an unconditional bound on all attacks."
   },
@@ -518,7 +520,7 @@
       "Lawren M. Smithline"
     ],
     "public_source": "https://www.americanscientist.org/article/a-cipher-to-thomas-jefferson",
-    "scope": "Confirmed publisher-indexed March–April2009,volume97number2 metadata. Full article unavailable in this pass. Corrected contradictory July–August label; do not claim new full-paper verification."
+    "scope": "Confirmed publisher-indexed March–April2009,volume97number2 metadata. Full article unavailable in this pass. Corrected contradictory July–August label; do not claim new full-paper verification. Eighth pass removes unverified precise scoring and row-22 reconstruction; public access boundary added. Independent historical details now grounded in Weber and Tomokiyo."
   },
   "LASRY-2018": {
     "title": "A Methodology for the Cryptanalysis of Classical Ciphers with Search Metaheuristics",
@@ -1333,5 +1335,102 @@
       "19 November report, reproduced passage from Sanborn’s open letter identifying World Clock"
     ],
     "scope": "Secondary report quoting the creator’s statement; linked original DocumentCloud scan returned403. No claim that the full original letter was inspected."
+  },
+  "WEBER-2013": {
+    "title": "Masked Dispatches: Cryptograms and Cryptology in American History, 1775–1900",
+    "authors": [
+      "Ralph E. Weber"
+    ],
+    "year": 2013,
+    "edition": "Third edition",
+    "passages_read": [
+      "Chapter 9, printed pp.55–61, including quoted December 1801 instructions and March–April 1802 correspondence."
+    ],
+    "scope": "Supports original nine-line limit, nulls and later keyword modifications. Does not describe the 2007 attack. Chronology of forwarding to Livingston differs from the dated letter reproduced by Tomokiyo; no exact forwarding date asserted in exhibit."
+  },
+  "TOMOKIYO-PATTERSON": {
+    "title": "Patterson’s Cipher for Jefferson — Challenge Solved After 200 Years",
+    "authors": [
+      "Satoshi Tomokiyo"
+    ],
+    "year": 2009,
+    "updated": "26 November 2017",
+    "url": "https://cryptiana.web.fc2.com/code/jeffers4.htm",
+    "passages_read": [
+      "Complete article, retrieved directly after search-reader 503; original-letter transcriptions and reconstructed key."
+    ],
+    "scope": "Published reconstruction and quotations. Seven-pair key agrees with displayed key. Full Smithline article still unavailable; precise attack scoring table removed. Three-row teaching illustration independently corrected."
+  },
+  "LOGJAM-2015": {
+    "title": "Imperfect Forward Secrecy: How Diffie-Hellman Fails in Practice",
+    "authors": [
+      "David Adrian and coauthors"
+    ],
+    "year": 2015,
+    "url": "https://weakdh.org/imperfect-forward-secrecy-ccs15.pdf",
+    "passages_read": [
+      "Abstract and introduction, printed pp.1–2."
+    ],
+    "scope": "Distinguishes active TLS downgrade to 512-bit export groups from estimated larger-group precomputation. Not a universal break of DH."
+  },
+  "SIGNAL-RATCHET-REV4": {
+    "title": "The Double Ratchet Algorithm",
+    "authors": [
+      "Trevor Perrin",
+      "Moxie Marlinspike",
+      "Rolfe Schmidt"
+    ],
+    "revision": "4, 4 November 2025",
+    "url": "https://signal.org/docs/specifications/doubleratchet/",
+    "passages_read": [
+      "§7.2 recommendations and §8 security considerations."
+    ],
+    "scope": "CBC/HMAC or SIV recommendation; AES-256-CBC concrete construction. Not an inventory of every deployed client."
+  },
+  "RFC8017": {
+    "title": "PKCS #1: RSA Cryptography Specifications Version 2.2",
+    "year": 2016,
+    "url": "https://www.rfc-editor.org/rfc/rfc8017.html",
+    "passages_read": [
+      "§§3.1–3.2 key definitions; prior protocol-source review retained."
+    ],
+    "scope": "RSA supports two or more primes, uses lambda(n), and requires scheme-specific encoding. Textbook demonstration is not production encryption."
+  },
+  "RFC8235": {
+    "title": "Schnorr Non-interactive Zero-Knowledge Proof",
+    "year": 2017,
+    "url": "https://www.rfc-editor.org/rfc/rfc8235.html",
+    "passages_read": [
+      "Protocol definitions and transcript hashing/validation requirements."
+    ],
+    "scope": "Informational specification. Toy browser challenges are not a production Fiat–Shamir implementation."
+  },
+  "MODULARITY-PAPERS": {
+    "title": "Modular elliptic curves and Fermat’s Last Theorem; Ring-theoretic properties of certain Hecke algebras; On the Modularity of Elliptic Curves over Q: Wild 3-adic Exercises",
+    "authors": [
+      "Andrew Wiles",
+      "Richard Taylor",
+      "Christophe Breuil",
+      "Brian Conrad",
+      "Fred Diamond"
+    ],
+    "passages_read": [
+      "1995 Annals publisher metadata: pp.443–551 and553–572; BCDT author manuscript opening Theorem A and 2001 JAMS publication metadata."
+    ],
+    "scope": "Checks attribution, semistable/general distinction, page counts and theorem statement. Full proofs not independently verified.",
+    "urls": [
+      "https://annals.math.princeton.edu/1995/141-3/p01",
+      "https://annals.math.princeton.edu/1995/141-3/p02",
+      "https://virtualmath1.stanford.edu/~rltaylor/st.pdf"
+    ]
+  },
+  "NSA-CNSA-2025": {
+    "title": "Commercial National Security Algorithm Suite 2.0",
+    "authors": [
+      "National Security Agency"
+    ],
+    "year": 2025,
+    "url": "https://media.defense.gov/2025/May/30/2003728741/-1/-1/0/CSA_CNSA_2.0_ALGORITHMS.PDF",
+    "scope": "Official indexed table confirms AES 256-bit keys for all classification levels. Direct PDF returned403; no full-document verification claimed."
   }
 }

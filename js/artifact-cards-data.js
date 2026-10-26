@@ -457,7 +457,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Exhaustive shift search; frequency evidence helps rank candidates.",
-      "modernLesson": "S-boxes in AES"
+      "modernLesson": "Substitution and exhaustive key search"
     },
     "cardano-autokey": {
       "name": "Cardano Autokey 1550 historical idea · modern comparison model",

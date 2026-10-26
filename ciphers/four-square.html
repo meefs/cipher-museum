@@ -79,12 +79,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Félix Delastelle invented several fractionation ciphers (Bifid, Trifid, Four-square). The Four-square is his digraphic cousin to Playfair: encrypt letters two at a time, but use two keyed alphabets instead of one. It avoids Playfair's "same row / same column / same letter" edge cases and the needed insertion of X between doubled letters.</p>
+      <p>Félix Delastelle developed Bifid and Trifid fractionation and the Four-square digram substitution. The Four-square is his digraphic cousin to Playfair: encrypt letters two at a time, but use two keyed alphabets instead of one. It avoids Playfair's "same row / same column / same letter" edge cases and the needed insertion of X between doubled letters.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Published in his 1902 book Traité Élémentaire de Cryptographie, the Four-square joined the Bifid and Trifid in Delastelle's portfolio of methods built on the Polybius square. Though never adopted by a major military, it was used by amateur cipher clubs through the 20th century and remains a popular puzzle.</p></div>
+      <div class="panel-body"><p>Published in his 1902 book Traité Élémentaire de Cryptographie, the Four-square joined the Bifid and Trifid in Delastelle's portfolio of methods built on the Polybius square. The modern procedure is documented by cipher organisations and teaching implementations; this exhibit does not establish a complete military-use history.</p></div>
     </div>
 
     <div class="panel">
@@ -114,9 +114,9 @@
         <table class="cipher-table">
           <thead><tr><th>Concept from Four-Square Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody>
-            <tr><td>Digram-level encryption</td><td>AES operates on 128-bit blocks — same idea, more bits</td></tr>
-            <tr><td>Multiple keyed tables</td><td>Modern S-box design uses multiple tabulated nonlinear maps</td></tr>
-            <tr><td>Avoiding edge cases (same-row/col)</td><td>AES MixColumns provides clean, edge-case-free diffusion</td></tr>
+            <tr><td>Digram-level encryption</td><td>AES transforms 128-bit blocks through multiple rounds; its security is not a direct scaling of this digram table</td></tr>
+            <tr><td>Multiple keyed tables</td><td>AES uses a fixed nonlinear byte substitution as one operation within a larger keyed construction</td></tr>
+            <tr><td>Avoiding edge cases (same-row/col)</td><td>Block-cipher designs specify complete round rules; avoiding special cases alone does not establish security</td></tr>
           </tbody>
         </table>
       </div>

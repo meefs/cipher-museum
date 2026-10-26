@@ -91,11 +91,15 @@
       "path": "ciphers/aes.html",
       "title": "AES (Advanced Encryption Standard) — The Cipher Museum",
       "words": 661,
-      "sha256": "a63d81ccf5a2724c633bfef8df40c931a02121ff8b96f5f07524d0080c1c9e89",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Main AES details consistent; qualify RSA related-card claim and verify current CNSA/Signal sources. Prior source checks must be re-established for this audit.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "a62aa7393b114c36dbab61c2f2be7ec18081cfbb0a28411066c9543ca882b247",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "NIST-AES-DEVELOPMENT",
+        "SIGNAL-RATCHET-REV4",
+        "NSA-CNSA-2025"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/affine.html",
@@ -205,11 +209,13 @@
       "path": "ciphers/autokey.html",
       "title": "Autokey — The Cipher Museum",
       "words": 522,
-      "sha256": "febbdd2b5334cbd923938b1802dd7b716b440694c75b925854e90687c56843da",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Independently reproduced QUEENLY/AUTOKEYREVEAL vector. Removed unsupported polynomial whole-attack complexity and IC-as-autokey-solver implication. Cited Holden§5.3must retrieve/read; historical first-name spelling and Friedman attribution still pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "c17de47b470c5e2f183e601138d6b6f9135bc6c3fcf8661338fb748ec12c99fa",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/babington.html",
@@ -368,21 +374,25 @@
       "path": "ciphers/caesar.html",
       "title": "Caesar Cipher — The Cipher Museum",
       "words": 929,
-      "sha256": "84b4e45801a41cf38033b72b9d2fbcbd5b9b2ae7060f15a4bae0b0729d972300",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Formula and 25 nonidentity keys agree with HAC §7.3.2. Headline invention date and Caesar-to-AES lineage/zero-confusion claims need qualification; repeated summary fields still stronger than detailed caveat. Primary Suetonius check pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "813730fa2937975e13f1233d28826c4a9d022206ea872c80fe1fde90fc045718",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/cardano-autokey.html",
       "title": "Cardano and Autokey — Historical Idea, Modern Model — The Cipher Museum",
       "words": 573,
-      "sha256": "2bdf20a0bbd910fcd2aac7f1a3c9e9b4352293da1fc2839d38b682026fda6e17",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Independently reproduced MEETMEATMIDNIGHT/Q vector and26-seed bound. Replaced effective-message-length key claim with26secret choices; qualified model/guaranteed-recognition language. Holden§5.3historical distinction still needs direct read.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "1615a2b65231bc057bbe08be0a3ca8732dad2b73775e5151ff39d10de19e6089",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/cardano-grille.html",
@@ -584,11 +594,14 @@
       "path": "ciphers/diffie-hellman.html",
       "title": "Diffie-Hellman Key Exchange — The Cipher Museum",
       "words": 865,
-      "sha256": "6d06a3588f0badef42af017c912693e6956c1fbb308793cb41f303585038a61b",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Full prose read. OTP related card wrongly implies DH makes information-theoretic OTP bootstrap practical. Always authenticated overclaim; 1969-1974 discovery wording and Merkle attribution need precision. Verify current deployment and toy arithmetic.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "bcfadd891ccee7625b04f3ac827ebfcbea9733a5e579c327cb4a64b778cc5d9f",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "LOGJAM-2015",
+        "BONEH-SHOUP-2023"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/dilly-knox.html",
@@ -654,11 +667,13 @@
       "path": "ciphers/ecdsa.html",
       "title": "ECDSA — The Cipher Museum",
       "words": 1178,
-      "sha256": "6d8a45d1411f1ddc3746fdb8f86f4b33608649887dfb9a7a4f654511953b52b2",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Full prose read. Where-used paragraph contradicts BIP340 caveat: not every Bitcoin transaction ECDSA, EC certificate does not guarantee every resumed handshake has signature. Padlock almost-certain claim unsupported. Rests-on wording should distinguish ECDLP necessity from complete scheme security. Verify toy curve point count, modular nonce derivation, primary standards.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "287e3dad6bf7609b32f9fb4398401260cf382cfe2108584c49a5835976d1f444",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/egyptian-substitution.html",
@@ -724,11 +739,13 @@
       "path": "ciphers/four-square.html",
       "title": "Four-Square Cipher — The Cipher Museum",
       "words": 528,
-      "sha256": "87d15474830bfd2f325bb9ee9239e995ac2a9a7e3c18624aa45d8e119383b61a",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Pairwise rectangle mapping coherent. Need primary Delastelle1902attribution and never-military evidence. Several-hundred-character/seconds/global-solver-convergence guarantees unsupported. Single-letter frequency flattening not guaranteed; blocksize and edge-case analogy overstated.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "0fda25831b56dc44b56e5ee0ed51d5c15d7ae0942fa2ac65bd300c941b3dbe3b",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/fractionated-morse.html",
@@ -816,11 +833,13 @@
       "path": "ciphers/gronsfeld.html",
       "title": "Gronsfeld Cipher — The Cipher Museum",
       "words": 476,
-      "sha256": "d705c5290b5bd3b11ca40fbd44b42f967de34e160ec135f7f160adb05b37df98",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Kahn PDF315 documents CountGronsfeld attribution, numeric shifts,1892Bazeries case. Corrected contradictory first names to bounded traditional attribution. Numeric-vector DUXBHN... reviewed; unsupported soldier-memory advantage removed. Date~1650still requires qualification/source.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "4a6421adb0d931f13914c04ee044b71cceadf663e1e110f74063a8d4b0595a2d",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/hagelin-c36.html",
@@ -1264,13 +1283,15 @@
       "path": "ciphers/patterson-jefferson-cipher.html",
       "title": "Patterson's Cipher for Jefferson (1801, solved 2007) — The Cipher Museum",
       "words": 1972,
-      "sha256": "a566aa4f139c3b433d2ec570f4d9128e5dd1b54e98f8d54adb5fd7a03b4fae4b",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "8b1d2af5523b7f6b414d7fd7aea7d9c7c53508beacd636297f419c977f7a5a49",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
-        "SMITHLINE-2009-METADATA"
+        "SMITHLINE-2009-METADATA",
+        "WEBER-2013",
+        "TOMOKIYO-PATTERSON"
       ],
-      "notes": "March–April issue corrected; elapsedcenturies notcontinuouswork; no claim allmodernalgorithmspublished. Fullarticle verification remains pending. Final complete reread and shared-surface review remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/phaistos-disc.html",
@@ -1397,11 +1418,13 @@
       "path": "ciphers/rot13.html",
       "title": "ROT13 — The Cipher Museum",
       "words": 401,
-      "sha256": "ac34020013345d7b806c9f53ef5cfdb3810f3751ce18136096351e501600034c",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "HELLO/URYYB involution independently correct. No-inventor and most-newsreaders claims lack evidence; ~1983 attribution requires archival source. ROT47 is a public mapping, not literal immediate inspection.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "d8a08335df3f0db87238e3b1218e101d825f13fcb87002af47aa0155d1ef48c2",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/rs44.html",
@@ -1419,11 +1442,13 @@
       "path": "ciphers/rsa.html",
       "title": "RSA — The Cipher Museum",
       "words": 708,
-      "sha256": "23664369b3547f402d628c0b129fec4f2d02c4493244a0ef5a4af21ba84baa64",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Headline first practical public-key scheme needs qualification against earlier schemes; body correctly distinguishes signature from encryption and inversion from factoring. Check arithmetic and current usage primary sources.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "350281f512626c72fc200d4a29d3ee4700b22b207db8a60a6563b779fcd521e1",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "RFC8017"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/running-key.html",
@@ -1451,11 +1476,13 @@
       "path": "ciphers/scytale.html",
       "title": "Scytale — The Cipher Museum",
       "words": 809,
-      "sha256": "0d1d673d7bb78ac1ca15653840271b1dee88c76e8fffee1ba8fa0b52026444f4",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Kahn PDF pp.118–119 gives traditional reading; page also cites revisionist interpretation. Unqualified first-military tagline and ephors paragraph contradict caveat. Only-matching-rod claim ignores analytical recovery. Escaped demo limitation clearly stated; primary sources and original claim mapping pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "e8f029b40a726a563c92014e287ac33fcf970f648398e479bed2850008d8564f",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/sha256.html",
@@ -1517,11 +1544,13 @@
       "path": "ciphers/slidex.html",
       "title": "Slidex (British WWII tactical code card) — The Cipher Museum",
       "words": 1109,
-      "sha256": "a30dce689bb3f1dab90f87c20f5c070440de2b7db13ad73d178e80a5987bcc1d",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Removed fixed30minute/day universalguarantees and every-signallerclaim. Existing secondaryinterrogationreportsummary explicitlyattributed; primaryreport inspection remains pending. Final complete reread and shared-surface review remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "205b61228ed931530feac06a99bc22b63f32b95901238d1308c1cf6fd54f180b",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/sodark.html",
@@ -1793,11 +1822,14 @@
       "path": "ciphers/zero-knowledge-proofs.html",
       "title": "Zero-Knowledge Proofs — The Cipher Museum",
       "words": 1186,
-      "sha256": "94c996eb9b6d4c8cb83e190705a9226fd0ba3cca0f2f886ad50cdded20b78653",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Full prose read. General completeness can have error; initial always claim too broad. Response masking and secret knowledge claims require model; tiny-group bounded challenge cheating not cryptographic hardness. 2^256 deployments generalization and three rejection historical anecdote need sources. ECDSA card incorrectly equates all Schnorr/EdDSA with toy protocol despite body caveat.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "4eb70643acf9b20df9c9287b53688e67787e42481b367d3c685778ff33f1aa6f",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "RFC8235",
+        "BONEH-SHOUP-2023"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "ciphers/zimmermann.html",
@@ -1839,13 +1871,13 @@
       "path": "comparison.html",
       "title": "Cipher Comparison — The Cipher Museum",
       "words": 145,
-      "sha256": "139411f42bea61f2103e19119cc7acaff121218d691a0ee0b74c6b1fc74b9181",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "9c11a0189b7ab991827488af384889501c5cf643718fa6514a0dd3536bd606a6",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "KAHN-1996"
       ],
-      "notes": "Replaced universal Solved classification with open-puzzle coverage; corrected model keys and date labels; 120 rows and both filters exercised in JSDOM. Date inventory and full repeated-surface review still pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "cryptanalysis.html",
@@ -1897,71 +1929,92 @@
       "path": "hall-of-foundations/closest-vector.html",
       "title": "The Closest Vector Problem · Hall of Foundations",
       "words": 808,
-      "sha256": "26aa0a6b1d1ddf7d8b147d41a95e623415ea7a2ad030aa5569454b0c6a68cfa9",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Major top/bottom conflict: header CVPwhatKyberactuallyleanson, goodnearorthogonalroundingguarantee, securityisnoise/onlybasisowner decryption versus correct§2and§4. Correct opening andnoisequote to defined2Dorthogonalmodel; arbitraryCVP≠MLKEMassumption. Existing runtime tests pass.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "bc7938332b7b7e2f814e7d40b94eab82fde022d992d10507c0b53b59ab668a06",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/elliptic-curves-real.html",
       "title": "Elliptic Curves over ℝ · Hall of Foundations",
       "words": 417,
-      "sha256": "8bc940b8910c31cce30ed45c8021d195bb6151b50d953430a4ade08a48bc80f8",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Groupgeometry correct with usualvertical/tangentexceptions. Closing scatter makesDLoghard conflictswithfinitefieldcaveat; dG means repeatedscalar multiplication notonepointaddition. Needcurveprimer/booksource.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "a2ee8a14f899ecf4877cd4f8abe85e1b311336aa34b7c9934384b5de121682d1",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/entropy.html",
       "title": "Information & Entropy · Hall of Foundations",
       "words": 479,
-      "sha256": "d27f6237c2b2ba241aaf3de0255e60845747bd5dce9bdfa659077ecee0972e61",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Mainuniformmodel and securitybits distinction correct; headlines entropyceiling/weakpasswordseconds regardlesscipher, lowentropybrokenbeforealgorithm contradict attack-cost caveat. Vernam1917hardware notnecessarilyOTP. Shannonoriginalreadneeded.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "01b324649ac456e2674ae96944c1f1fd0a7edc3a58a922cec490fb3fb0f45e05",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/euler-fermat.html",
       "title": "Euler & Fermat · Hall of Foundations",
       "words": 484,
-      "sha256": "e77ce5f21f5a8cc353b91156790bdeed3653f52e097df2722deaf3e032e5e79d",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Fermat/Euler equations and CRT caveat sound; toy61,53,3233,17,2753 valid. RSA modulus2048 stated as universal rather than example; real implementations also useλ should avoiduniversal. Standardsprimary8017checkpending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "b50988adbf0498eb9025d7f5cb0c20c5db0e375f305d6ee228f5494cbe7465d3",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/finite-fields.html",
       "title": "Finite Fields · Hall of Foundations",
       "words": 626,
-      "sha256": "93cd1799e8bc2200b8b934c6702cea8c3740cdabb69484f6e7e8427a3d3ed468",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Main caveat and bottom√grouporderattack correct, but headlinewhereDLogbecomeshard and backwardsearchwholefield survive. NeedverifycountincludesinfinityandSVG/JSlabel. FieldGFpdescription is example not exhaustive; AESinversezeroconvention omission minor.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "d86469cd9152640d590487672f227caccc29601014a8e0d68b90c9bb32f5b67f",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/group-theory.html",
       "title": "Group Theory · Hall of Foundations",
       "words": 387,
-      "sha256": "38eb15d637929749ae8af5d2caec527a9b77e6b99a52c153352dc82dba1cf78d",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Order/Lagrange and additivecyclic model sound. Generic allcryptoschemesreadsame rhetoric overbroad. MLDSAassumption paragraph appropriately distinguishesModuleSIS; standardsprimarychecks pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "e8883b3d18ab3d75b3619eaad4080155367ceff300226f8fc7dc90e59bda67b1",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/index.html",
       "title": "Hall of Foundations · Cipher Museum",
       "words": 594,
-      "sha256": "314324199cc978e919facdb720ca52799574df38c95c8efb93cb74a736d9daf9",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Readfull18-cardinventory. CVP LWE Kybercore card andrandomoracleavalanche-as-assumption stillstrongerthanexhibitcaveats. Eulerformula lacksunitcondition incard; interpolation finitefield/realseparationmustbeconsistent.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "e19f97cb43c9bf1fda10b90e12faf31a2ade71ebbfb250d47a3f894c48a5ee3f",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/interpolation.html",
@@ -1977,21 +2030,27 @@
       "path": "hall-of-foundations/lattices-svp.html",
       "title": "Lattices & the SVP · Hall of Foundations",
       "words": 402,
-      "sha256": "10609d3321f219ce2c2f86794c2822e24498020d03839356e81e3d0269086ab0",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Unimodular basis rule and specificmoduleassumptions careful. Securitygap2Dvs500D slogan and threeviewssameproblem overstated despite caveats. Existing math tests pass; sourceSVPreductioncheckpending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "968512cc7e7768c000db576a50857734350bc2587e5b89ce228a086835d65c32",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/learning-with-errors.html",
       "title": "Learning With Errors · Hall of Foundations",
       "words": 1097,
-      "sha256": "57d54287c7eeb83e5fde71d02765a2843358302c6b2c9020134ddb7572e10af4",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Main invertibletoy81secrets and distribution/transform caveats correct. Sliderbound1 returnsvectornothingincommon andconfidentansweralwaysnoise false forsampledzero/errorcancellation. Displaycancellation formula may omitnegative term visually? InspectHTMLstrikethrough. Verify24noiseboundary usingexhaustion. Specificstandardsclaimsneedprimary.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "d7c6a6e00d410ca67d5f984f73970d4e98e82cda6b06b872afbbdd3fa82b5fec",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/modular-arithmetic.html",
@@ -2007,71 +2066,91 @@
       "path": "hall-of-foundations/modularity-exhibit.html",
       "title": "The Ground Beneath the Curve · Cipher Museum",
       "words": 861,
-      "sha256": "e5dded7df932e6802c1bb599cea861b187b94d8c7b56edfefaccd07c8048a8d4",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Main rational/real/finite and modernity caveats correct. Opening honestybox claims ECCstands on modularityworld, conflicts with finalnonecessity. Hardness headline againunqualified. Primary Wiles/Taylor1995,BCDT2001 citation needed; page counts109+20 verify.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "a5f7781d0bb337d794e5f54de6580cf98e568ebb9ebd9b9e04764c0e83874ce2",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "MODULARITY-PAPERS"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/one-way-function.html",
       "title": "The One-Way Function · Hall of Foundations",
       "words": 387,
-      "sha256": "69b93eb7668e05a50afea75c92c65b3906babf8d067e7816c7a161e5b52861de",
-      "status": "text reviewed, source checks pending",
-      "sources": [],
-      "notes": "Factoringtoy vsfastalgorithms and RSAtrapdoor distinction good. Allpublickeybetheld too sweeping givenbrokenconstructions; correctto specificassumptions. No currently identified equation issue.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "c390985186a041d8bcf2e71b62e3c5b20573acc6ebb90a929d7346668dd77616",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/pairings.html",
       "title": "Bilinear Pairings · Hall of Foundations",
       "words": 563,
-      "sha256": "157eabaf35115c7f8f0c70a6d4af421afd554f260be2bebc3927d2b25d9c16d5",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Explicittinyexponentmodel good. Hiddeninputscalars/neverrevealing blanketneedsproblemparameters. Bulletproofs/recursiveHalo distinctions andSTARKquantumexpectation needconditional wording andprimary. Groth16/KZG/BLS distinctions correct inbody.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "ff011c6dafacd0aae447efb28d00dc53da17b7b2c14731854f70fe5cacd1522f",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/polynomial-rings.html",
       "title": "Polynomial Rings · Hall of Foundations",
       "words": 495,
-      "sha256": "cd1c1a1b0464dd1b7166e519a17e4600687cda9a13010b8581d5d4526f28d84e",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Negacyclic multiplication specification correct; headline ModuleLWE the realassumptionunderDilithium incomplete vs detailedModuleSIS caveat. PracticalcompressionclaimoverstatedonlywayTLSpossible. Validateactualstandardsringqdegree.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "bd7f9996c029399923d90a98dae4bde85f3c75ed5510b69cd554c44720df0a54",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/prime-number-theorem.html",
       "title": "The Prime Number Theorem · Hall of Foundations",
       "words": 460,
-      "sha256": "e90d96297da416feb632ccdac8fb58c41ee0adab1860dbe1ef2250e4bf63fcc0",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Density approximations1/710 and1/355 appropriate for uniformly sampled1024-bit candidates. Headlineonlyfoundation/loadbearing, everyRSAkey/no routineeven, fitonlyimproves are too categorical. Needtwo primes phrasing; primality distinction sound.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "2797488fbb58c6f9a202ea6fc42e78c796107c8a73c43aa5460812834e6edbf0",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/random-oracle.html",
       "title": "The Random Oracle · Hall of Foundations",
       "words": 539,
-      "sha256": "b2c3294b8645f13e6aaf5acf31255ad1f488391655ced70949ef9ba350e9bd09",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "MainFStranscriptbinding/caveats correct but callout hashmessageunforgeablechallenge, modelproofautomatictransfer andbrokenhashfailsavalanche inaccurate. Toy clearlyidentified16bitmixer. Actualchallenge inputsandsecurityconditionalneedsconsistentheadlines.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "a287ee8dd7878853c2002b33744e085a7238fdc563e1f280579373e873753701",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "hall-of-foundations/reduction.html",
       "title": "Reduction & Proof · Hall of Foundations",
       "words": 479,
-      "sha256": "0088b7054be36047395a7a2ae2ade1187f1e52d4dce8d8b0ba52e284077f3971",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Direction andloss caveats correct. Intro callsconditionalclaimstrongerthanprovenhardness inappropriate. Hypotheticalfactorreduction isexplicitlynotRSAequivalence, retain. NeedBonehchapterdirectread.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "a43cc1d51433c0bca9f6c4697e9fe9b9aa5d0a28bc64977d96d1f84f9e6732a0",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
+      "sources": [
+        "BONEH-SHOUP-2023",
+        "FIPS-203-204"
+      ],
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "halls/ancient.html",
@@ -2354,8 +2433,8 @@
       "path": "timeline.html",
       "title": "Timeline — The Cipher Museum",
       "words": 3073,
-      "sha256": "926e20d1280facaf99bdaa10764a960934ef856337c1d2f95b0b27aa6efa324a",
-      "status": "corrections prepared; final source and rendered review pending",
+      "sha256": "0a78f226bd689d2518e78f54bca4f917b376823de7459fb456203bd2654db68e",
+      "status": "bounded eighth-batch source/model review complete; final whole-site reconciliation pending",
       "sources": [
         "CTC-NSA",
         "FBI-HOLLOW-NICKEL",
@@ -2364,8 +2443,8 @@
         "NIST-AES-DEVELOPMENT",
         "POLYBIUS-10"
       ],
-      "notes": "Reconciled82entries; datedeventsordered and7unsupportedoriginsmovedtoundatedsection. CorrectedEgyptsecrecy, Aeneaswaterclock, pigpen1794example, Argenti, Bacon1623, GreatCiphercentury, Gronsfeldtradition, CTC1873, tapcode1965, Bifid/Trifid1902treatise, T52variants/FRAanachronism, GCHQroles, AESselection/standard andHTTPSvsE2E. Remainingprecisedates/primarycitationsneedfinalreview. Final complete reread and shared-surface review remain pending.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "Items21,38–42: full prose and model summaries reread; unsupported chronology and security implications qualified. Exact source scopes in sources.json; mathematics and protocol tests pass. Final shared-surface reconciliation remains.",
+      "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json."
     },
     {
       "path": "tours/index.html",

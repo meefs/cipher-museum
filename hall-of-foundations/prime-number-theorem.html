@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Why RSA can find a 2048-bit prime in moments — the Prime Number Theorem at work.">
+<meta name="description" content="Prime density helps estimate candidate-search effort in RSA key generation; it does not prove primality or a fixed runtime.">
 <title>The Prime Number Theorem · Hall of Foundations</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0a0a0f">
 <meta property="og:title" content="The Prime Number Theorem — The Cipher Museum">
-<meta property="og:description" content="Why RSA can find a 2048-bit prime in moments — the Prime Number Theorem at work.">
+<meta property="og:description" content="Prime density helps estimate candidate-search effort in RSA key generation; it does not prove primality or a fixed runtime.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ciphermuseum.com/hall-of-foundations/prime-number-theorem.html">
 <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -96,10 +96,8 @@
   <section class="exhibit">
     <div class="step-head"><span class="step-num">§2</span><h2>The keygen coin-flip</h2></div>
     <p>
-      Here's the payoff. To make a 2048-bit RSA modulus you need a random
-      1024-bit prime. The theorem says a random 1024-bit <em>integer</em> is
-      prime with probability about 1⁄ln(2¹⁰²⁴) ≈ 1⁄710. But no keygen routine
-      tests even numbers, and discarding half the candidates doubles your odds:
+      For a common two-prime 2048-bit RSA modulus, key generation selects two suitable primes of roughly 1024 bits each and checks the product’s size. The theorem says a random 1024-bit <em>integer</em> is
+      prime with probability about 1⁄ln(2¹⁰²⁴) ≈ 1⁄710. Restricting this sampling model to odd candidates approximately doubles the density:
       roughly <strong>1 in 355 odd candidates</strong> is prime. Sieve out small
       factors like 3 and 5 first and the rate improves again. So you test a few
       hundred candidates with a fast primality check, and finish with an expected runtime that depends on the implementation and hardware.

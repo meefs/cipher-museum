@@ -65,7 +65,7 @@
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Scott Vanstone, 1992; standardised as ANSI X9.62 (1999) and FIPS 186</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1992</span></div>
     <div class="fact"><span class="fact-label">Type</span><span class="fact-value">Digital signature algorithm &mdash; <strong>not a cipher</strong> (verifies a signature against a key, encrypts nothing)</span></div>
-    <div class="fact"><span class="fact-label">Rests on</span><span class="fact-value">The elliptic-curve discrete logarithm problem</span></div>
+    <div class="fact"><span class="fact-label">Rests on</span><span class="fact-value">Scheme-specific assumptions; solving ECDLP breaks key secrecy</span></div>
     <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Signs TLS certificates, Bitcoin and Ethereum transactions, and software updates</span></div>
   </div>
 </div>
@@ -76,7 +76,7 @@
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
       <p>Encryption protects confidentiality. A digital signature lets a verifier check a message against a public key. Certificates, authorization rules and context connect that key to a domain, person or permitted action. ECDSA is used for many certificates, software signatures and cryptocurrency transactions, although those ecosystems also use other signature schemes.</p>
-      <p>It is also the museum's clearest case of a scheme whose mathematics is sound and whose <em>implementations</em> have failed repeatedly. Nonce mistakes are a particularly revealing example; secure implementation also requires careful arithmetic, validation and side-channel protection.</p>
+      <p>It is also the museum's clearest case of the difference between a mathematical signature construction and implementation failures. Nonce mistakes are a particularly revealing example; secure implementation also requires careful arithmetic, validation and side-channel protection.</p>
     </div>
 
     <div class="panel">
@@ -143,7 +143,7 @@
         <p>No practical classical attack is known against properly parameterised ECDSA with suitable curves and hashes. Implementations can fail through nonce reuse, weak randomness, faults, or side-channel leakage. <strong>Partial nonce leakage can enable key recovery</strong>, but success depends on the amount and structure of leakage, measurement noise and the number of signatures available; it is not an unconditional result for any leaked bit.</p>
         <p><strong>Deterministic ECDSA</strong> derives the nonce from the private key and message hash, removing dependence on fresh signing randomness. With the same inputs it produces the same signature. It does <strong>not guarantee collision-free nonces</strong> for different messages, and it does not remove side-channel or fault risks. Correct randomised ECDSA is also possible; secure key generation still needs suitable randomness.</p>
         <p class="source-note">Source: <a href="https://www.rfc-editor.org/rfc/rfc6979.html#section-4" target="_blank" rel="noopener noreferrer">RFC 6979 (August 2013), §§1, 3.2 and 4</a>, an Informational RFC. Its deterministic nonce procedure retains implementation-security requirements. This exhibit uses visitor-selected toy nonces and does not implement RFC 6979.</p>
-        <p>Like all discrete-logarithm cryptography, ECDSA falls to a sufficiently large quantum computer running Shor's algorithm. ML-DSA is one standardized post-quantum signature option and uses module-lattice assumptions &mdash; the reason that shift works is set out in the <a href="../hall-of-foundations/learning-with-errors.html">Learning With Errors</a> exhibit.</p>
+        <p>Like all discrete-logarithm cryptography, ECDSA falls to a sufficiently large quantum computer running Shor's algorithm. ML-DSA is one standardized post-quantum signature option and uses module-lattice assumptions &mdash; the <a href="../hall-of-foundations/learning-with-errors.html">Learning With Errors</a> exhibit introduces one relevant family of assumptions, not a proof of the complete signature scheme.</p>
       </div>
     </div>
 
@@ -184,7 +184,7 @@
     <a href="../hall-of-foundations/finite-fields.html" class="related-card">
       <span class="related-card__number">&sect;142 &middot; Foundations</span>
       <span class="related-card__name">Finite Fields</span>
-      <span class="related-card__tag">Why this works: the smooth curve shatters into a scatter of points, and the discrete log gets hard</span>
+      <span class="related-card__tag">Finite-field curve arithmetic; visual disorder alone does not establish hardness</span>
     </a>
     <a href="../hall-of-foundations/group-theory.html" class="related-card">
       <span class="related-card__number">&sect;149 &middot; Foundations</span>
@@ -194,7 +194,7 @@
     <a href="../ciphers/sha256.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">SHA-256</span>
-      <span class="related-card__tag">ECDSA signs the hash of a message, never the message itself</span>
+      <span class="related-card__tag">ECDSA processes a specified integer derived from the message hash</span>
     </a>
     <a href="zero-knowledge-proofs.html" class="related-card">
       <span class="related-card__number">Related</span>

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T19:34:50.016Z",
+  "generatedAt": "2026-10-26T20:27:14.030Z",
   "totalExhibits": 155,
   "cards": {
     "adfgvx": {
@@ -458,7 +458,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Exhaustive shift search; frequency evidence helps rank candidates.",
-      "modernLesson": "S-boxes in AES"
+      "modernLesson": "Substitution and exhaustive key search"
     },
     "cardano-autokey": {
       "name": "Cardano Autokey 1550 historical idea · modern comparison model",

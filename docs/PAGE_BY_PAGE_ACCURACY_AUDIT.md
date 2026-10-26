@@ -34,3 +34,16 @@ Classical examples were calculated independently of the museum engines: ADFGX HE
 Validation:515exhibit assertions pass;10pages at1280and390pixels load without script errors or document overflow. Four revised cipher examples run in the browser; McCormick pair-count and Shugborough invalid-input controls pass. Alberti and ADFGX mobile explanation screenshots were actually visually inspected. Long aligned examples retain intentional internal horizontal scrolling. Whole-site reread and release verification remain open.
 
 Seventh checkpoint: after metadata generation, the fresh complete `npm test` run passes. K1 keyed-alphabet arithmetic independently reproduces the complete63-letter opening ciphertext using PALIMPSEST; the display now labels indices unambiguously.
+
+
+## Eighth pass: chronology, foundations and protocol boundaries
+
+Closed tracker21,38–42. Reread the remaining classical pages, all18foundation pages and five modern protocol exhibits. Corrected ambiguous dates and unsupported historical negatives; distinguished substitution, fractionation and structural analogies. Patterson’s December1801 nine-line limit does not describe all later correspondence: Weber’s third-edition chapter9 reproduces a ten-letter keyword variation. Removed the unverified exact attack-score table, retained a visible full-article access limit, and corrected the three-row INCONGRESSJULYFOURTH illustration. Tomokiyo’s reconstruction confirms the displayed seven-pair key.
+
+Foundation summaries now agree with detailed model boundaries. Visual scattering does not prove hardness; random-oracle proofs do not automatically transfer to a real hash. The LWE cancellation display now includes both copies of the cancelled term. Zero error remains possible under a nonzero sampling bound. Prime density is not a runtime guarantee, and a common2048-bit RSA modulus uses two roughly1024-bit primes. Pairing algebra does not by itself supply privacy. Modularity sources distinguish the1995semistable result from the2001general theorem; no full proof verification is claimed.
+
+AES/RSA wording distinguishes primitive properties from encoding, protocol and implementation. Signal rev4§7.2 was read; NSA’s official indexed AES256 table was available but its PDF returned403. Logjam’s demonstrated512-bit downgrade is separated from larger-group precomputation estimates. ECDSA and Schnorr conditions retain subgroup, message-hash, nonce and transcript limits.
+
+Validation: full targeted foundations suite,153interaction checks,37protocol-math and34protocol-page checks pass. An independent194-case LWE rounding enumeration and103-point toy-curve count agree.68desktop/mobile browser checks across34pages pass, including LWE sampling and ECDSA key-recovery controls. These are bounded content/model checks, not a certification of every fact or a deployment.
+
+Eighth checkpoint validation: complete run passed all suites except bundle freshness, service-worker version and exact citation allowlist. Rebuilt the generated bundle/cache version and added the two reviewed Annals URLs; all three targeted reruns pass. Final complete release run remains pending.

@@ -130,7 +130,7 @@
       finite field to build keys on.
     </p>
     <div class="pull">
-      A shape becomes a group, and a group becomes a fortress.
+      The group law supplies arithmetic. Security requires suitable finite-field parameters and a complete protocol.
     </div>
   </section>
 
@@ -140,8 +140,7 @@
       <h3>Two doors from here</h3>
       <p>
         Follow this into <a href="finite-fields.html">Finite Fields</a> to watch
-        the smooth curve shatter into the scatter that makes the discrete log
-        hard — the security payoff. Or follow it up into
+        the corresponding arithmetic over a finite field. A scatter plot alone does not demonstrate discrete-log hardness. Or follow it up into
         <a href="modularity-exhibit.html">The Ground Beneath the Curve</a> to
         meet the deep number theory of <strong>why these curves are so
         astonishingly well-behaved</strong>.
@@ -150,8 +149,7 @@
     <p class="aside">Applied in:
       <a href="../ciphers/ecdsa.html" style="color:var(--vermilion)">ECDSA</a> —
       this same chord-and-tangent group law, moved to a finite field, signing TLS
-      certificates and blockchain transactions. The point addition you just drew
-      by hand is what <em>dG</em> means.</p>
+      certificates and blockchain transactions. The expression dG means scalar multiplication: repeated group addition, computed efficiently using methods such as doubling and addition.</p>
   </section>
 
   </main>

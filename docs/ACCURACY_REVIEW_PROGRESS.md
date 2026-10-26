@@ -4,16 +4,16 @@ Last updated: 26 October 2026. **Audit in progress; not merged or deployed.**
 
 This is the single progress checklist for the current review. The **67 items are work packages, not 67 pages**. The site inventory contains **214 public HTML pages**. A completed item records only the stated scope, not a guarantee that an entire exhibit is flawless.
 
-**Status: 36 done · 2 drafted · 1 active · 28 to do.**
+**Status: 42 done · 1 drafted · 1 active · 23 to do.**
 
 - **DONE:** the specific work and evidence described in that row are complete.
 - **DRAFT:** edits or checks exist, but the row's remaining review/validation is unfinished.
 - **ACTIVE:** the next item being worked on.
 - **TODO:** open work; source collection may have started.
 
-**Saved work:** [draft PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13). Six batches are saved through `5216b10b628b4774b605a5c4b6422ff6d04ac828`, covering corrections to **174 HTML pages**, with the complete test suite passing at that checkpoint. Seventh-batch puzzle and worked-example changes pass targeted vector and browser checks and a fresh complete `npm test` run.
+**Saved work:** [draft PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13). Seven batches are saved through `5b7aa9db8788fcafbd1a0ba33a566c48a4934a93`, with a complete test-suite pass. Eighth-batch targeted tests and68desktop/mobile checks pass; complete test run passed all other suites and identified three generated-asset/citation gates. Rebuilding assets and adding the two reviewed primary-source URLs repaired those gates; all three targeted reruns pass. A fresh full-suite release run remains required.
 
-**Current focus: item 38, classical historical consistency.** Items34–37 have completed their stated source and model checks. Comparison chronology (21), whole-site reconciliation and release remain pending.
+**Current focus: item43, NFC paper detail.** Items21,38–42 have completed their stated source/model checks. Whole-site reconciliation and release remain pending.
 
 ## Checklist
 
@@ -39,7 +39,7 @@ This is the single progress checklist for the current review. The **67 items are
 | 18 | DONE | Chinese Telegraph Code provenance | JHU collection account and Unicode mapping properties checked alongside NSA and Hong Kong sources. 1870s development/1881 revision and edition-specific mappings clarified; invented widget remains explicit. |
 | 19 | DONE | Solitaire operating guidance | Published FOO/fifteen-A vector and inverse pass in the visualizer at both widths. Reread exposed a padding mismatch: visualizer now correctly says it processes entered letters without automatic padding. |
 | 20 | DONE | Wadsworth and Wheatstone limits | Wadsworth prose reread against Friedman description and correspondence. Wheatstone mechanism/model boundary reread; Kaeding abstract-only evidence limit made visible. Desktop/mobile checks pass. |
-| 21 | DRAFT | Two-Square and other comparison dates | Two-Square origin made undated; check the entire table against exhibit and timeline dates. |
+| 21 | DONE | Two-Square and other comparison dates| All120comparison rows read; uncertain dates labeled as ranges, context or undated. Bacon1605/1623, Morse1844demonstration, Argenti succession and ROT13popularisation distinguished. Shared teaching-key labels aligned; browser pass. |
 | 22 | DONE | Regression checks for cultural claims | 35 public-claim guards and 35 restored-error controls pass. Manual-cipher UI tests pass after replacing a brittle wording-based undated-row test with date-data classification. |
 | 23 | DONE | Zimmermann Telegram | Corrected history/model distinction, routes, codebook conflation and causal wording; NSA pp. 44–45 and Page telegram read. New restored-error guard passes; desktop/mobile vectors and visual review pass. See browser-item23.json. |
 | 24 | DONE | Fialka and KL-7 comparisons | Fialka/KL-7 sources and full prose checked. Reversed chronology and session-key analogy corrected; M-125-3M, 30 contacts and 26-letter model distinguished. Desktop/mobile render passes. |
@@ -56,12 +56,12 @@ This is the single progress checklist for the current review. The **67 items are
 | 35 | DONE | Voynich physical description | Yale102leaves/foldouts distinguished from page counts; Reddy–Knight37919tokens tied to transcription; Hodgins1404–1438/95.4% parchment range checked. Writing date not inferred. |
 | 36 | DONE | Other unresolved-puzzle status | Reread Somerton,McCormick,Beale,Shugborough. Somerton police statement dated6July2026; McCormick2011appeal not recast as current. Beale treasure/algorithm and Shugborough acrostic remain unproved. Browser controls pass. |
 | 37 | DONE | Classical worked examples | Complete ADFGX/ADFGVX fractionation/transposition examples independently calculated; Alberti rings made consistent; Chaocipher reference checked against published vector before widget seed.515exhibit assertions and20desktop/mobile checks pass; two mobile explanations visually inspected. |
-| 38 | ACTIVE | Classical historical consistency | Close remaining attribution, origin-date and deployment questions; qualify or remove claims lacking adequate evidence. |
-| 39 | TODO | Foundations index and summaries | Reconcile CVP/LWE, random-oracle, Euler unit-condition and other card summaries with the detailed exhibits. |
-| 40 | TODO | Foundations mathematics and interactions | Recheck finite-field/real-model boundaries, noise edge cases, diagrams and input constraints with existing meaningful tests. |
-| 41 | TODO | AES and RSA claims | Verify standards/current-use wording and historic priority; keep primitive security distinct from protocol and implementation security. |
-| 42 | TODO | DH, ECDSA and zero-knowledge pages | Check subgroup, nonce, soundness and deployment qualifications; verify worked examples and related cards. |
-| 43 | TODO | NFC paper detail check | Read remaining relevant sections of the locally available author PDF; verify configurations and attack assumptions beyond the first-phase timing correction. |
+| 38 | DONE | Classical historical consistency| Remaining classical prose reread against Kahn, Holden and available archival reconstructions. Removed unsupported attribution/deployment guarantees. Weber chapter9 verifies original and later Patterson variants; inaccessible full attack detail explicitly bounded; three-row example independently corrected. |
+| 39 | DONE | Foundations index and summaries| All18foundation pages and index reread. Card summaries distinguish related models, Euler unit condition, scalar multiplication, visual scatter and cryptographic assumptions. |
+| 40 | DONE | Foundations mathematics and interactions| Complete foundation tests pass, including153interaction checks. Independently enumerated194LWE boundary cases and103-point ECDSA group. Corrected duplicated cancellation term, zero-error possibility and finite-field/real distinction; mobile/desktop checks pass. |
+| 41 | DONE | AES and RSA claims| AES/RSA full prose reread; standards, CNSA indexed evidence and Signal rev4 scope recorded. Historical priority and encoding/protocol boundaries qualified. Protocol tests and browser pass. |
+| 42 | DONE | DH, ECDSA and zero-knowledge pages| DH export downgrade separated from larger-group estimates; ECDSA nonce/hash/group conditions and ZK transcript limits checked.37math+34page tests pass; browser nonce-recovery example succeeds at both widths. |
+| 43 | ACTIVE | NFC paper detail check | Read remaining relevant sections of the locally available author PDF; verify configurations and attack assumptions beyond the first-phase timing correction. |
 | 44 | TODO | SoDark paper detail check | Complete table-to-exhibit comparison; retain measured hardware, data and round-count conditions. |
 | 45 | TODO | UA-8295 full-evidence boundary | Obtain/read full paper if accessible; otherwise visibly limit claims to what can be verified and document inaccessible details. |
 | 46 | TODO | Modern attack evidence overview | Recheck KASUMI, TEA3 and GEA attack conditions and distinguish theoretical work, measurements and browser simulations. |
@@ -112,3 +112,5 @@ The release gate is items 57–67. Existing authorization covers merging and dep
 - **26 October 2026 — sixth batch:** Closed items26–33 with source-specific limits. Corrected machine histories, operational claims and biographies; original manual vectors checked. All36browser checks pass across18pages, and Colossus/mobile results were visually inspected. Fresh complete `npm test` passes. Saved as a draft checkpoint; no merge/deployment.
 
 - **26 October 2026 — seventh batch, items34–37:** Reconciled current puzzle evidence and counting conventions; corrected complete classical examples. Targeted vectors and20browser checks pass. Fresh complete `npm test` passes; no release claimed.
+
+- **26 October 2026 — eighth batch, items21,38–42:** Closed remaining classical chronology and foundations/protocol scopes.68desktop/mobile checks pass.194independent LWE cases and103-point curve count agree. Full release review remains open.
