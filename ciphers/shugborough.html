@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shugborough Inscription — The Cipher Museum</title>
-  <meta name="description" content="An 18th-century English garden monument bearing the cryptic letters O · U · O · S · V · A · V · V — debated for 250 years and never definitively cracked.">
+  <meta name="description" content="An eighteenth-century garden monument with eight unexplained letters, O · U · O · S · V · A · V · V, and D · M below.">
   <meta property="og:title" content="Shugborough Inscription — The Cipher Museum">
-  <meta property="og:description" content="An 18th-century English garden monument bearing the cryptic letters O · U · O · S · V · A · V · V — debated for 250 years and never definitively cracked.">
+  <meta property="og:description" content="An eighteenth-century garden monument with eight unexplained letters, O · U · O · S · V · A · V · V, and D · M below.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/shugborough.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Shugborough Inscription — The Cipher Museum">
-  <meta name="twitter:description" content="An 18th-century English garden monument bearing the cryptic letters O · U · O · S · V · A · V · V — debated for 250 years and never definitively cracked.">
+  <meta name="twitter:description" content="An eighteenth-century garden monument with eight unexplained letters, O · U · O · S · V · A · V · V, and D · M below.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/shugborough.html">
@@ -57,15 +57,15 @@
   </div>
   <div class="page-meta">
     <span class="page-num">Hall XII · Unsolved</span>
-    <span class="badge era-modern">Georgian England · ~1748–1763</span>
+    <span class="badge era-modern">Georgian England · mid-18th century</span>
   </div>
   <h1 class="page-title">Shugborough Inscription</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--historical" href="../museum-map.html#trust-labels" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise." aria-label="Trust label: Historical Only. Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h11v12a2 2 0 0 0 2 2H6a3 3 0 0 1-3-3V7z"/><path d="M16 5a2 2 0 0 1 2 2v8h3a0 0 0 0 1 0 0v2a2 2 0 0 1-2 2"/></svg><span class="trust-label__text">Historical Only</span></a></div>
-  <p class="page-tagline">An 18th-century English garden monument bearing the cryptic letters O · U · O · S · V · A · V · V — debated for 250 years and never definitively cracked.</p>
-  <p class="exhibit-status-note">Unsolved monument inscription</p>
+  <p class="page-tagline">An eighteenth-century garden monument with eight unexplained letters, O · U · O · S · V · A · V · V, and D · M below.</p>
+  <p class="exhibit-status-note">Unresolved inscription; an encoding method is not established</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Region</span><span class="fact-value">Shugborough Hall, Staffordshire, England</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Inscription added by 1763</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Mid-18th-century monument; inscription date uncertain</span></div>
     <div class="fact"><span class="fact-label">Commissioned by</span><span class="fact-value">Thomas Anson, MP, of Shugborough</span></div>
     <div class="fact"><span class="fact-label">Track</span><span class="fact-value">B (acrostic test bench)</span></div>
   </div>
@@ -73,7 +73,7 @@
 
 <div class="demo-section" data-cipher="shugborough">
   <h2>Interactive Exhibit</h2>
-  <p style="opacity:.85;">Type a Latin or English phrase whose word initials you think match <strong>O U O S V A V V</strong>. The widget will check the first letter of each word against the inscription. Track B — many interpretations are <em>consistent</em>; none have been <em>proven</em>.</p>
+  <p style="opacity:.85;">Type a Latin or English phrase whose word initials you think match <strong>O U O S V A V V</strong>. The widget will check the first letter of each word against the inscription. Track B — many interpretations are <em>consistent</em>; a match alone does not <em>prove</em> an interpretation.</p>
   <label for="input" style="display:block;margin-top:1rem;font-weight:600;">Your candidate phrase (8 words)</label>
   <input type="text" id="input" value="Optimae Uxoris Optimae Sororis Viduus Amantissimus Vovit Virtutibus" style="width:100%;padding:.6rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;font-family:monospace;">
   <button type="button" data-fn="encode" style="margin-top:.5rem;padding:.5rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;cursor:pointer;">Test acrostic</button>
@@ -97,7 +97,7 @@
         }
         lines.push('');
         lines.push('Match: ' + matches + ' / 8' +
-          (matches === 8 ? '   (consistent \u2014 but unprovable)' :
+          (matches === 8 ? '   (initials match \u2014 not authenticated)' :
            matches >= 5 ? '   (close, but not consistent)' :
                           '   (does not fit the inscription)'));
         out.textContent = lines.join('\n');
@@ -112,12 +112,12 @@
 
     <div class="cipher-significance">
       <h3>Why This Matters</h3>
-      <p>On the side of the Shepherd's Monument at Shugborough Hall, beneath a marble relief of Poussin's painting <em>Et in Arcadia Ego</em> (mirror-reversed), are carved eight letters: <strong>O · U · O · S · V · A · V · V</strong>, framed below by the letters <strong>D · M</strong>. No record survives of what they mean. Theories range from a Latin acrostic memorial for Anson's deceased sister-in-law to claims of a Priory-of-Sion treasure pointer. The cipher remains officially open.</p>
+      <p>On the side of the Shepherd's Monument at Shugborough Hall, beneath a marble relief of Poussin's painting <em>Et in Arcadia Ego</em> (mirror-reversed), are carved eight letters: <strong>O · U · O · S · V · A · V · V</strong>, framed below by the letters <strong>D · M</strong>. Their meaning is unresolved. Calling the inscription a cipher already assumes an encoding process that has not been established. A proposed expansion needs historical evidence beyond matching eight initials.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The monument belongs to the eighteenth-century landscape at Shugborough. Many expansions of its initials have been proposed, including a Latin memorial phrase beginning <em>Optimae Uxoris Optimae Sororis</em>. A matching set of initials does not authenticate an attribution, date or intention; none is treated as established here.</p></div>
+      <div class="panel-body"><p>The monument belongs to the eighteenth-century landscape at Shugborough. The National Trust identifies Peter Scheemakers’s relief and dates the probable addition of columns and entablature to 1763; that date is not a demonstrated date for carving the inscription. Many expansions of its initials have been proposed, including a Latin memorial phrase beginning <em>Optimae Uxoris Optimae Sororis</em>. A matching set of initials does not authenticate an attribution, date or intention; none is treated as established here.</p></div>
     </div>
 
     <div class="panel">
@@ -141,8 +141,8 @@
           <tbody>
             <tr><td>Hall</td><td>Hall XII · Unsolved</td></tr>
             <tr><td>Region</td><td>Shugborough Hall, Staffordshire, England</td></tr>
-            <tr><td>Era</td><td>Georgian England · ~1748–1763</td></tr>
-            <tr><td>Discipline</td><td>Acrostic / unsolved</td></tr>
+            <tr><td>Era</td><td>Georgian England · mid-18th century</td></tr>
+            <tr><td>Discipline</td><td>Unresolved inscription; acrostic hypothesis</td></tr>
             <tr><td>Track</td><td>B (acrostic test bench)</td></tr>
             <tr><td>Modern echo</td><td>Acrostic memorials · monument cryptography</td></tr>
           </tbody>

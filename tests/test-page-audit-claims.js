@@ -15,6 +15,66 @@ function visible(html) {
   return s;
 }
 const checks = [
+  ['ciphers/wallis-ciphers.html', s => {
+    assert.match(s, /1643/);
+    assert.doesNotMatch(s, /In late 1642|two hours|Naseby/);
+  }, 'In late 1642 Wallis broke the cipher in two hours.'],
+  ['ciphers/ira-ciphers.html', s => {
+    assert.match(s, /Richard Bean.*2019/);
+    assert.match(s, /51 surviving letters/);
+    assert.match(s, /BCAFIEHGKDLJ/);
+    assert.match(s, /1923 Vigenère example/);
+    assert.doesNotMatch(s, /send Cooney|Mostly 1926–1927/);
+    assert.doesNotMatch(s, /59-letter|59 letters|Still unsolved|All but one .*now readable/);
+  }, 'Still unsolved: one 59-letter message.'],
+  ['ciphers/kahn.html', s => {
+    assert.match(s, /Hall of Honor,? (?:in )?2020/);
+    assert.doesNotMatch(s, /Hall of Honor (?:1999|2009)|remains comprehensive and accurate/);
+  }, 'NSA Cryptologic Hall of Honor 2009'],
+  ['ciphers/lasry.html', s => {
+    assert.match(s, /16 October 2017/);
+    assert.doesNotMatch(s, /b\. 1966|Born1966|everyone else gave up/);
+  }, 'b. 1966'],
+  ['ciphers/voynich.html', s => {
+    assert.match(s, /40\.02%/);
+    assert.match(s, /invented A–Z substitution/);
+    assert.doesNotMatch(s, /rendered in EVA glyph letters|grammar did not exist/);
+    assert.match(s, /do not establish exactly two scribes/);
+    assert.doesNotMatch(s, /unlike any natural language|modern ciphertext should look like uniform noise|Every published .*has been refuted/);
+  }, 'Modern ciphertext indistinguishability: modern ciphertext should look like uniform noise.'],
+  ['ciphers/dunin.html', s => {
+    assert.match(s, /David Stein’s independent CIA solution in 1998/);
+    assert.match(s, /2025 discovery of K4 plaintext/);
+    assert.doesNotMatch(s, /most likely to solve Kryptos|premier open cryptanalytic challenge/);
+  }, 'The woman most likely to solve Kryptos K4.'],
+  ['ciphers/dorabella.html', s => {
+    assert.match(s, /neither rules out monoalphabetic substitution nor proves/);
+    assert.match(s, /creative composition process/);
+    assert.doesNotMatch(s, /rules out a simple Caesar|permanently underdetermined|statistically insufficient/);
+  }, 'The sample is statistically insufficient.'],
+  ['ciphers/dagapeyeff.html', s => {
+    assert.match(s, /Nonuniform frequencies do not prove/);
+    assert.match(s, /no justified unicity-distance calculation/);
+    assert.doesNotMatch(s, /strongly implying a real cipher|edge where multiple keys can fit|author lost the key/);
+  }, 'The counts are strongly implying a real cipher.'],
+  ['ciphers/phaistos-disc.html', s => {
+    assert.match(s, /Michael Everson’s published Unicode transcription/);
+    assert.match(s, /exclude the marked gap and combining oblique strokes/);
+    assert.doesNotMatch(s, /too small for true decipherment|audit the standard sign counts/);
+  }, 'The corpus is too small for true decipherment.'],
+  ['ciphers/shugborough.html', s => {
+    assert.match(s, /inscription date uncertain/);
+    assert.doesNotMatch(s, /Inscription added by 1763|officially open/);
+  }, 'The inscription was officially open.'],
+  ['ciphers/mccormick.html', s => {
+    assert.match(s, /not an authenticated transcription/);
+    assert.match(s, /FBI’s 2011 appeal/);
+    assert.doesNotMatch(s, /barely-literate|limited literacy|full access to context/);
+  }, 'Investigators had full access to context.'],
+  ['ciphers/sator-square.html', s => {
+    assert.match(s, /whole square’s 25 letters/);
+    assert.doesNotMatch(s, /Every element of the square also rearranges|5\\u00d75/);
+  }, 'Every element of the square also rearranges into PATER NOSTER.'],
   ['timeline.html', s => {
     assert.match(s, /Undated Origins and Teaching Models/);
     assert.match(s, /1623 full description/);
@@ -141,4 +201,52 @@ for (const [file, check, oldError] of checks) {
   assert.equal(dom.window.sigDemo(input), dom.window.sigDemo(input));
   dom.window.close();
 }
+// Independently reproduce Bean's reconstruction, including the documented omissions.
+{
+  const key = 'BCAFIEHGKDLJ';
+  const plain = 'REGELIGNITESCOTLANDSTATESTHEYRAIDEDANDOBTAINEDSOMEOFTHLS';
+  const order = [...key].map((ch, i) => [ch, i]).sort((a,b) => a[0].localeCompare(b[0]));
+  let full = '';
+  for (const [,column] of order) for (let i = column; i < plain.length; i += key.length) full += plain[i];
+  assert.equal(full.length, 56);
+  assert.equal(full[25], 'L');
+  assert.equal(full.slice(-4), 'ETDS');
+  const html = fs.readFileSync(path.join(root, 'ciphers/ira-ciphers.html'), 'utf8');
+  const dom = new JSDOM(html);
+  const displayed = dom.window.document.querySelector('pre').textContent.replace(/\s/g, '');
+  assert.equal(displayed.length, 51);
+  assert.equal(full.slice(0,25) + full.slice(26,-4), displayed);
+  dom.window.close();
+}
 console.log(`page-audit-claims: ${checks.length} page checks and ${checks.length} deliberately regressed examples passed`);
+// Independent transcription counts exercise every Phaistos sign, not just the default.
+{
+  const fixture = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/phaistos-everson.json'), 'utf8'));
+  assert.equal(fixture.A.length, 122);
+  assert.equal(fixture.B.length, 119);
+  const dom = new JSDOM(fs.readFileSync(path.join(root, 'ciphers/phaistos-disc.html'), 'utf8'), { runScripts: 'dangerously' });
+  const d = dom.window.document;
+  for (let n = 1; n <= 45; n++) {
+    d.getElementById('input').value = n;
+    dom.window.encode();
+    const out = d.getElementById('output').textContent;
+    for (const side of ['A', 'B']) assert.ok(out.includes(`Side ${side}: ${fixture[side].filter(x => x === n).length} occurrence`));
+  }
+  for (const bad of ['1.5', '0', '46', '']) {
+    d.getElementById('input').value = bad;
+    dom.window.encode();
+    assert.match(d.getElementById('output').textContent, /Enter a sign number/);
+  }
+  dom.window.close();
+}
+{
+  const dom = new JSDOM(fs.readFileSync(path.join(root, 'ciphers/dagapeyeff.html'), 'utf8'), { runScripts: 'dangerously' });
+  const d = dom.window.document;
+  d.getElementById('input').value = '00 00';
+  dom.window.encode();
+  const out = d.getElementById('output').textContent;
+  assert.match(out, /Overlapping pairs analysed: 3/);
+  assert.match(out, /00\s+× 3/);
+  assert.match(out, /expected count 0\.03/);
+  dom.window.close();
+}

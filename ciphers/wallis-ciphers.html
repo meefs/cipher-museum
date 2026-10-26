@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wallis Ciphers (John Wallis &amp; the English Civil War · 1640s) — The Cipher Museum</title>
-  <meta name="description" content="John Wallis served successive English governments as a cryptanalyst. The interactive illustrates a nomenclator rather than reproducing an authenticated Royalist key.">
+  <meta name="description" content="John Wallis’s seventeenth-century cryptanalysis, with a clearly identified museum nomenclator model. Historical recovery times varied from hours to months.">
   <meta property="og:title" content="Wallis Ciphers (John Wallis &amp; the English Civil War · 1640s) — The Cipher Museum">
-  <meta property="og:description" content="John Wallis served successive English governments as a cryptanalyst. The interactive illustrates a nomenclator rather than reproducing an authenticated Royalist key.">
+  <meta property="og:description" content="John Wallis’s seventeenth-century cryptanalysis, with a clearly identified museum nomenclator model. Historical recovery times varied from hours to months.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/wallis-ciphers.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Wallis Ciphers (John Wallis &amp; the English Civil War · 1640s) — The Cipher Museum">
-  <meta name="twitter:description" content="John Wallis served successive English governments as a cryptanalyst. The interactive illustrates a nomenclator rather than reproducing an authenticated Royalist key.">
+  <meta name="twitter:description" content="John Wallis’s seventeenth-century cryptanalysis, with a clearly identified museum nomenclator model. Historical recovery times varied from hours to months.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/wallis-ciphers.html">
@@ -66,8 +66,8 @@
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Cryptanalyst</span><span class="fact-value">John Wallis (1616–1703), Savilian Professor of Geometry, Oxford</span></div>
     <div class="fact"><span class="fact-label">Targets</span><span class="fact-value">Royalist nomenclators (Charles I, Prince Rupert, the King’s court)</span></div>
-    <div class="fact"><span class="fact-label">Period</span><span class="fact-value">Professional cryptanalyst 1642 – 1703</span></div>
-    <div class="fact"><span class="fact-label">Mechanism</span><span class="fact-value">Nomenclator + 2-digit homophonic alphabet</span></div>
+    <div class="fact"><span class="fact-label">Period</span><span class="fact-value">Cryptanalytic work from the early 1640s to 1703</span></div>
+    <div class="fact"><span class="fact-label">Mechanism</span><span class="fact-value">Historical nomenclators; museum-invented demonstration key</span></div>
     <div class="fact"><span class="fact-label">Patrons</span><span class="fact-value">Parliament, then Cromwell, then Charles II, then James II, then William III</span></div>
   </div>
 </div>
@@ -79,22 +79,22 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>John Wallis (1616–1703) was a Cambridge-trained mathematician, ordained Anglican clergyman, and — from 1649 — Savilian Professor of Geometry at Oxford. He was also one of the founders of the Royal Society. None of this is what made him historically important to cryptography.</p><p style="margin-top:1rem;">In late 1642, at the start of the English Civil War, Wallis was shown a captured Royalist letter by a friend at dinner. He broke it in two hours. Word spread. By 1643 he was Parliament’s house cryptanalyst, reading the King’s correspondence as it was intercepted. After Naseby (1645) the captured King’s cabinet of letters was given to Wallis to decipher; the resulting publication, <em>The King’s Cabinet Opened</em>, devastated Royalist propaganda by exposing Charles I’s secret negotiations with Catholic Ireland.</p><p style="margin-top:1rem;">Wallis kept his post through every regime change. He served Parliament, then Oliver Cromwell, then Charles II at the Restoration (Charles II is said to have grumbled that Wallis had “broken his father’s ciphers” but kept him on anyway), then James II, then William III. He was still actively breaking diplomatic ciphers for the English government when he died at 86. He is the founding figure of professional English state cryptanalysis — the institutional ancestor of the Government Code &amp; Cypher School and ultimately of GCHQ.</p>
+      <p>John Wallis (1616–1703) combined mathematics with cryptanalytic work for successive English governments. David Kahn’s account places his first successful reading in early 1643: a relatively simple substitution that Wallis said he solved in a few hours. A much harder numerical cipher took him about three months. These contrasting cases do not support a universal two-hour recovery time. Wallis became Savilian Professor of Geometry at Oxford in 1649 and continued cryptanalytic work after the Restoration and under William and Mary.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>The Royalist ciphers Wallis attacked were Argenti-pattern nomenclators of the standard 17th-century kind: a small alphabetic substitution table (often with one or two homophones for common letters) plus a longer codebook of person-and-place codes. Royalist operators were also fond of nulls and of inserting the names of their own family members as agreed cover-words.</p><p style="margin-top:1rem;">The demo uses a museum-invented 64-word codebook and homophonic letter encoding with explicit mode markers. It illustrates nomenclator concepts; the numeric assignments and switching procedure are not a transcription of a recovered Royalist key.</p><p style="margin-top:1rem;">Wallis’s attack technique was the standard one of the next two centuries: identify the most-frequent codes, guess the alphabet portion against expected high-frequency English letters, look for repeated <em>codeword</em> patterns that match expected proper nouns (“the King”, “Parliament”, “Oxford”), and bootstrap from there. He was unusually fast at it.</p></div>
+      <div class="panel-body"><p>Wallis worked on substitution ciphers and nomenclators combining letter values with codes for words or names. Their formats varied. The demo uses a museum-invented 64-word codebook, homophonic letters and explicit mode markers; it is not a transcription of a particular Royalist key. Frequency, repeated patterns and context can guide recovery, but a successful attack depends on the material available.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Wallis’s frequency-and-context attack</div><div class="attack-diff">Complexity: A few hours per nomenclator for an experienced analyst</div><p class="attack-desc">Repeated contexts, likely names and partially recovered letter values can help reconstruct codebook entries. A group’s low frequency does not by itself prove it is a person or place, and the existence of Wallis’s work does not establish that Royalists made no counter-cryptanalytic effort.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Operational laxity by the Royalists</div><div class="attack-diff">Complexity: Self-inflicted</div><p class="attack-desc">Royalist agents reused nomenclators across years, mixed plaintext and cipher in the same letter, and sometimes labelled their codebook entries with the person’s actual name in the margin. Captured agents carried codebooks; captured letters carried decryption hints. By 1645 Wallis had a substantial library of broken material.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Wallis’s longevity</div><div class="attack-diff">Complexity: Sixty years of cumulative expertise</div><p class="attack-desc">Because Wallis worked continuously for the English state from 1643 to his death in 1703, he accumulated a body of cryptographic knowledge unmatched in Europe. Continental ciphers he had broken decades earlier were still being modestly evolved by their users. He recorded much of his technique in cipher notes now in the Bodleian Library.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Wallis’s frequency-and-context attack</div><div class="attack-diff">Difficulty varies with the cipher, traffic and available context</div><p class="attack-desc">Repeated contexts, likely names and partially recovered letter values can help reconstruct codebook entries. A group’s low frequency does not by itself prove it is a person or place, and the existence of Wallis’s work does not establish that Royalists made no counter-cryptanalytic effort.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Operational attack opportunities</div><div class="attack-diff">Scope: General lessons, not a claim about every dispatch</div><p class="attack-desc">A captured key, predictable wording or plaintext mixed with ciphertext can help an analyst. Those are general attack opportunities; they are not evidence that every Royalist message shared the same weakness. Specific claims about captured keys or correspondence need a dated document.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Wallis’s longevity</div><div class="attack-diff">Experience: Work across successive governments</div><p class="attack-desc">Wallis’s later correspondence records demanding work on newly encountered ciphers, including weeks spent on difficult cases. His experience helped, but did not guarantee immediate success. He trained his grandson William Blencowe, who assumed cryptanalytic duties after Wallis’s death in 1703.</p></div></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
-      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Wallis lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Concentrated, persistent, well-funded cryptanalysis beats episodic effort</td><td>Modern signals intelligence: NSA, GCHQ — the same institutional pattern, scaled</td></tr><tr><td>Operational discipline matters as much as algorithm choice</td><td>Modern crypto failures are almost always implementation or operational, not algorithmic</td></tr><tr><td>Cumulative knowledge across years compounds the attacker’s advantage</td><td>Why crypto-agility &amp; aggressive deprecation cycles are now standard</td></tr><tr><td>The defender publishes; the attacker doesn’t</td><td>Why open cryptanalysis (NIST competitions, IACR) is so valuable to defenders</td></tr></tbody></table></div>
+      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Wallis lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Sustained analysis can accumulate useful evidence</td><td>Sustained intelligence organizations can preserve methods and accumulated context</td></tr><tr><td>Operational discipline matters as much as algorithm choice</td><td>Implementation, key handling and operational context can defeat otherwise sound designs</td></tr><tr><td>Cumulative knowledge across years compounds the attacker’s advantage</td><td>Changing compromised keys and retiring weak systems limits continued exposure</td></tr><tr><td>Independent scrutiny can expose weaknesses</td><td>Why open cryptanalysis (NIST competitions, IACR) is so valuable to defenders</td></tr></tbody></table></div>
     </div>
 
     <div class="panel">
@@ -102,6 +102,7 @@
       <div class="panel-body"><p>Wallis sits inside the same nomenclator tradition mapped in <em>Cryptiana</em>, especially the archival work on 16th- and 17th-century diplomatic cipher practice. Read him in sequence with <a href="../ciphers/argenti.html">Argenti</a> for the design side and with <a href="../ciphers/arnold-andre.html">Arnold-André</a> for the later book-cipher branch of state secrecy.</p></div>
     </div>
 
+    <div class="panel"><div class="panel-head"><span class="panel-title">Evidence and Reading</span></div><div class="panel-body"><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), chapter 5, Wallis and the English deciphering service. Kahn contrasts Wallis’s easy first substitution with later work lasting days, weeks or months.</p></div></div>
   </div>
   <div class="exhibit-side">
     <div class="panel" style="border-color:var(--gold-b);">
@@ -113,8 +114,8 @@
           <tbody>
             <tr><td>Cryptanalyst</td><td>John Wallis (1616–1703), Savilian Professor of Geometry, Oxford</td></tr>
             <tr><td>Targets</td><td>Royalist nomenclators (Charles I, Prince Rupert, the King’s court)</td></tr>
-            <tr><td>Period</td><td>Professional cryptanalyst 1642 – 1703</td></tr>
-            <tr><td>Mechanism</td><td>Nomenclator + 2-digit homophonic alphabet</td></tr>
+            <tr><td>Period</td><td>Cryptanalytic work from the early 1640s to 1703</td></tr>
+            <tr><td>Mechanism</td><td>Historical nomenclators; museum-invented demonstration key</td></tr>
             <tr><td>Patrons</td><td>Parliament, then Cromwell, then Charles II, then James II, then William III</td></tr>
           </tbody>
         </table>
@@ -129,12 +130,12 @@
     <a href="../ciphers/argenti.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Argenti Family Cipher</span>
-      <span class="related-card__tag">The Italian tradition Wallis grew up attacking</span>
+      <span class="related-card__tag">Compare an Italian nomenclator tradition</span>
     </a>
     <a href="../ciphers/great-cipher.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Great Cipher of Louis XIV</span>
-      <span class="related-card__tag">A contemporary French nomenclator that lasted 200 years longer</span>
+      <span class="related-card__tag">A different seventeenth-century nomenclator</span>
     </a>
     <a href="../ciphers/babington.html" class="related-card">
       <span class="related-card__number">Related</span>
@@ -144,7 +145,7 @@
     <a href="../ciphers/vigenere.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Vigenère Cipher</span>
-      <span class="related-card__tag">The polyalphabetic alternative that chanceries spent 300 years not adopting</span>
+      <span class="related-card__tag">Compare polyalphabetic substitution</span>
     </a>
   </div>
 </section>

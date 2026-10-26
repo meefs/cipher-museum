@@ -60,20 +60,20 @@
   </div>
   <h1 class="page-title">Dorabella Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--historical" href="../museum-map.html#trust-labels" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise." aria-label="Trust label: Historical Only. Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h11v12a2 2 0 0 0 2 2H6a3 3 0 0 1-3-3V7z"/><path d="M16 5a2 2 0 0 1 2 2v8h3a0 0 0 0 1 0 0v2a2 2 0 0 1-2 2"/></svg><span class="trust-label__text">Historical Only</span></a></div>
-  <p class="page-tagline">Edward Elgar's 1897 cryptogram — 87 squiggles that have resisted every attempt since.</p>
-  <p class="exhibit-status-note">Nobody — over 125 years of attempts, no consensus solution</p>
+  <p class="page-tagline">Edward Elgar’s 1897 note to Dora Penny: 87 handwritten symbols, with no generally accepted reading.</p>
+  <p class="exhibit-status-note">No generally accepted reading</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Sir Edward Elgar, composer (1857–1934)</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">14 July 1897</span></div>
-    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Custom 24-symbol alphabet of arcs and orientations</span></div>
-    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Nobody — over 125 years of attempts, no consensus solution</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Tiny ciphertexts (87 chars) don't give cryptanalysis enough statistical signal</span></div>
+    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Three arc counts × eight possible orientations</span></div>
+    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">No generally accepted reading</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Short texts and uncertain transcription make proposed readings harder to verify</span></div>
   </div>
 </div>
 
 <div class="demo-section" data-cipher="dorabella">
   <h2>Symbol Inspector</h2>
-  <p style="opacity:.85;">Explore Dorabella's 24-symbol system by selecting an orientation and arc count. This does not claim a solution; it visualizes the design space that makes short-text cryptanalysis hard.</p>
+  <p style="opacity:.85;">Explore the 24 possible arc-and-orientation classes by selecting an orientation and arc count. This does not claim a solution; it visualizes the design space that makes short-text cryptanalysis hard.</p>
   <div style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:end;margin-top:1rem;">
     <label style="display:flex;flex-direction:column;gap:.35rem;min-width:12rem;">
       <span style="font-weight:600;">Arc count</span>
@@ -98,9 +98,9 @@
     </label>
     <button type="button" id="dora-render" style="padding:.6rem 1rem;background:var(--gold-glow);border:1px solid var(--gold-b);color:var(--gold);border-radius:6px;cursor:pointer;">Render symbol</button>
   </div>
-  <div style="display:grid;grid-template-columns:minmax(12rem,16rem) minmax(0,1fr);gap:1rem;margin-top:1rem;align-items:start;">
-    <svg id="dora-symbol" viewBox="0 0 140 140" role="img" aria-label="Dorabella symbol viewer" style="width:100%;background:rgba(0,0,0,.22);border:1px solid var(--gold-b);border-radius:8px;padding:.5rem;"></svg>
-    <div id="dora-output" style="padding:1rem;background:rgba(0,0,0,.22);border:1px solid var(--gold-b);border-radius:8px;font-family:var(--fm);line-height:1.7;min-height:7rem;"></div>
+  <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem;align-items:start;">
+    <svg id="dora-symbol" viewBox="0 0 140 140" role="img" aria-label="Dorabella symbol viewer" style="width:100%;max-width:16rem;flex:0 1 16rem;background:rgba(0,0,0,.22);border:1px solid var(--gold-b);border-radius:8px;padding:.5rem;"></svg>
+    <div id="dora-output" style="flex:1 1 12rem;min-width:0;white-space:pre-line;padding:1rem;background:rgba(0,0,0,.22);border:1px solid var(--gold-b);border-radius:8px;font-family:var(--fm);line-height:1.7;min-height:7rem;"></div>
   </div>
   <script>
     (function () {
@@ -136,17 +136,17 @@
 
     <div class="cipher-significance">
       <h3>Why This Matters</h3>
-      <p>On 14 July 1897 Edward Elgar enclosed a short cryptogram in a thank-you note to Dora Penny, the 23-year-old daughter of a family friend. It runs three lines, eighty-seven characters, drawn from an alphabet of 24 symbols (arcs of one, two, or three loops, rotated to one of eight angles). Dora could not read it; she said as much in her 1937 memoir. Elgar never gave the answer. Nobody since — professional cryptanalysts, computer hill-climbers, Elgar scholars — has produced a decryption that the cryptanalytic community accepts.</p>
+      <p>Elgar sent the cryptogram to Dora Penny on 14 July 1897. Its three lines are commonly transcribed as 87 symbols. The arc counts and orientations permit 24 symbol classes, but handwritten marks can be ambiguous. A proposed reading must explain the transcription and the decoding rules, not merely produce a plausible sentence.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Elgar was a recreational cryptographer; his notebooks contain an alphabet of the same 24 symbols labelled with letters in a pattern resembling a Polybius-style 3×8 grid. Tony Gaffney, Eric Sams, and others have proposed plausible-but-disputed substitution solutions, often with claims that the plaintext is wordplay or an in-joke between Elgar and Penny. The 87-character length is the fundamental problem: against a homophonic or polyalphabetic substitution it is statistically insufficient, and there is no second cryptogram in the same system to provide depth.</p></div>
+      <div class="panel-body"><p>David Kahn discusses the note in <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), chapter 21. Later proposed readings disagree about its rules and content. Both English text and music have been investigated; neither hypothesis should be treated as established merely because Elgar was a composer.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>The 24 symbols are built from one, two, or three concentric semicircular arcs, each rotatable to one of eight orientations spaced 45° apart (3 × 8 = 24). The natural assumption is a substitution into the 26-letter English alphabet — possibly with two letters merged (I/J or U/V, in 19th-c. fashion). The cryptogram's symbol distribution is roughly flat, which rules out a simple Caesar or unkeyed monoalphabetic. Hill-climbing solvers have produced near-English decryptions, but each differs from the others in ways that suggest the algorithm is finding local maxima rather than the truth.</p></div>
+      <div class="panel-body"><p>This inspector draws stylized semicircular arcs in eight orientations. It does not transcribe the complete manuscript or recover a key. In <em>Dorabella Cipher as Musical Inspiration</em> (2021; arXiv version deposited 2025), Bradley Hauer and colleagues compare transcriptions and use a combined 87-symbol reading. Their musical output is presented as a creative composition process, not an authenticated solution.</p></div>
     </div>
 
     <div class="panel">
@@ -154,8 +154,8 @@
       <div class="panel-body">
         <div class="attack-panel">
           <div class="attack-name">Why It Resists</div>
-          <div class="attack-diff">Complexity: Bounded by 87 characters of ciphertext</div>
-          <p class="attack-desc">Friedman's index of coincidence on the symbol distribution is between English-flat and uniform. Modern simulated-annealing solvers (the same family that cracked Zodiac's Z340 in 2020) routinely produce English-looking output for the Dorabella, but those outputs differ markedly from one run to the next — a signal that the algorithm is fitting noise. Until either a second cryptogram in the same system surfaces or an external constraint pins down the alphabet, the Dorabella may be permanently underdetermined.</p>
+          <div class="attack-diff">Evidence: 87 commonly transcribed symbols</div>
+          <p class="attack-desc">Frequency statistics depend on how the handwritten symbols are transcribed. An 87-symbol sample gives limited evidence, but its length alone neither rules out monoalphabetic substitution nor proves that a unique reading is impossible. A language-model score ranks candidates under a chosen model; it does not authenticate Elgar’s intended message.</p>
         </div>
       </div>
     </div>
@@ -166,9 +166,9 @@
         <table class="cipher-table">
           <thead><tr><th>Concept from Dorabella Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody>
-            <tr><td>Sample size matters</td><td>Modern security analysts care about <em>distinguishing distance</em> partly for this reason — small samples don't give an attacker enough leverage</td></tr>
-            <tr><td>Local maxima are seductive</td><td>When your scoring function is a language model, every local maximum looks like &lsquo;a solution'</td></tr>
-            <tr><td>Without depth, ambiguity wins</td><td>VENONA needed key reuse; Beale 2 needed the right book; Dorabella has neither</td></tr>
+            <tr><td>Sample size matters</td><td>The amount of evidence matters, alongside the cipher assumptions and available context</td></tr>
+            <tr><td>Local maxima are seductive</td><td>A high language-model score needs independent confirmation</td></tr>
+            <tr><td>Context can constrain a reading</td><td>Transcription, language, authorial context and reproducible rules can help discriminate among candidates</td></tr>
           </tbody>
         </table>
       </div>
@@ -187,9 +187,9 @@
             <tr><td>Trust</td><td><span class="trust-label trust-label--historical trust-label--sm" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise.">Historical Only</span></td></tr>
             <tr><td>Origin</td><td>Sir Edward Elgar, composer (1857–1934)</td></tr>
             <tr><td>Year</td><td>14 July 1897</td></tr>
-            <tr><td>Key Type</td><td>Custom 24-symbol alphabet of arcs and orientations</td></tr>
-            <tr><td>Broken By</td><td>Nobody — over 125 years of attempts, no consensus solution</td></tr>
-            <tr><td>Modern Lesson</td><td>Tiny ciphertexts (87 chars) don't give cryptanalysis enough statistical signal</td></tr>
+            <tr><td>Key Type</td><td>Three arc counts × eight possible orientations</td></tr>
+            <tr><td>Broken By</td><td>No generally accepted reading</td></tr>
+            <tr><td>Modern Lesson</td><td>Short texts and uncertain transcription make proposed readings harder to verify</td></tr>
           </tbody>
         </table>
       </div>
@@ -203,12 +203,12 @@
     <a href="../ciphers/voynich.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Voynich Manuscript</span>
-      <span class="related-card__tag">Larger unsolved system, same fundamental problem of underdetermined alphabet</span>
+      <span class="related-card__tag">A different unresolved writing system</span>
     </a>
     <a href="../ciphers/zodiac.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Zodiac Killer Ciphers</span>
-      <span class="related-card__tag">Z340 was solved in 2020 — Dorabella may yield to the same techniques</span>
+      <span class="related-card__tag">Compare a documented 2020 cryptanalytic solution</span>
     </a>
     <a href="../ciphers/kryptos.html" class="related-card">
       <span class="related-card__number">Related</span>
@@ -218,7 +218,7 @@
     <a href="../ciphers/beale.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Beale Ciphers</span>
-      <span class="related-card__tag">Two of three remain unsolved for the same depth-shortage reason</span>
+      <span class="related-card__tag">Compare a disputed story and a published book-key reading</span>
     </a>
   </div>
 </section>

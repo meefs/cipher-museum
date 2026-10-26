@@ -497,11 +497,13 @@
       "path": "ciphers/dagapeyeff.html",
       "title": "D'Agapeyeff Cipher — The Cipher Museum",
       "words": 492,
-      "sha256": "803594a448ce3c85dbfd36dbee83bfc4bf23cae0034f9148e1ea1c262d47c6f4",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Nonuniformdigitsnotstrongproofrealcipher; Polybiusdoesnotnecessarilyshownonuniformoutput. Authorforgot/secondeditionremovedneedsdocumentarysource. UnicitydistanceapproxnotprovenmanyEnglishkeys395digits. Earlydigitexcerpt130verify source. OUP1939bibliographycheck.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "db471bab3b55ad41c2b7f49012dfbe2bc2d732da5a55fbdad6b5b79cf92ee1a4",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "DAGAPEYEFF-HYDE-RUGG"
+      ],
+      "notes": "Verified 130-digit excerpt visually; removed unsupported forgotten-key and unicity-distance certainty. Adjacent overlapping pairs use N−1; tiny input independently tested. Photograph edition is not established.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/dancing-men.html",
@@ -574,11 +576,14 @@
       "path": "ciphers/dorabella.html",
       "title": "Dorabella Cipher — The Cipher Museum",
       "words": 689,
-      "sha256": "e7ff64c39b4e306c3bd3461208400f537c0cfed93406e9dc2f0ee7f2fc62925f",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read.87ciphertextlength disputed87vs87? Countoriginalincludingdot.24possiblevsusedsymbols distinction. Flatfreqdoesnotruleoutsimplemonoalphabeticshortsample. Universalinsufficiency/EnglishflatICundefined andmanynear-solutionsneedexperiment. PersonalDoraage23vsborn1874July1897yes. NeedElgarrecord/primarynotebooks.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "3b9998cdea2c89bb3dfe86ebfacd13498d82d2325363b1bd9259fafd8bfd5013",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "KAHN-1996",
+        "DORABELLA-MUSIC-2025"
+      ],
+      "notes": "Qualified short-sample inference, possible versus observed symbol inventory and creative musical research. Changed complexity claim to evidence length. Browser screenshot exposed cramped 390px inspector; corrected with wrapping layout; 390px screenshot rechecked: readable stacked inspector. Paper publication 2021 distinguished from arXiv deposit 2025.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/double-playfair.html",
@@ -604,11 +609,15 @@
       "path": "ciphers/dunin.html",
       "title": "Elonka Dunin — The Cipher Museum",
       "words": 735,
-      "sha256": "f65a0985992dfe57ece353d3d8fffd412aa10666e19b3a7ae12e4e242da45bc2",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. MostlikelysolveK4subjectiveprediction; born1958 likelyDec29correctbutverifyauthor. CriticalKryptosK1-3solved1999 ignoresNSA1992Stein1998; K42025archivalplaintextdiscovery nuance needed. Multiplepapers/firstverifiedfactsunsupported. Needcredit CodebreakingwithSchmeh2020. CurrentK4primaryauctionsearchidentified.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "3368d0dcb5b5ff2d62275cb7d0904f43ca52d8b8ca21ecf5db20715690889a02",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "CODEBREAKING-2020",
+        "DUNIN-KRYPTOS-FAQ",
+        "BEAN-PROJECTS"
+      ],
+      "notes": "Qualified K1–K3 chronology, 2025 K4 archive discovery and 2020 book edition. Removed predictions, prominence/rank claims and unsupported awards. Older FAQ not used for current K4 status.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/ecdsa.html",
@@ -812,11 +821,15 @@
       "path": "ciphers/ira-ciphers.html",
       "title": "IRA Cipher Traffic (Twomey Papers) — The Cipher Museum",
       "words": 758,
-      "sha256": "4da4e51982259b1dea2a1a125e9391fd3d8f16bbc856d7a23829c65002726ff8",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Claimed59lettercryptogramdisplayonly51? countindependently. Entirelyadequate1926unsupported andfrequencyuselessoverstatesclassification. Timingminutesandattackparameters needGilloglyprimary. Bookfulltitle DecodingtheIRA andauthorcredits.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "b45e1a5e50fa475ecbf30ad9612f912b7d35cee73264fac357301370a333a178",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "CODEBREAKING-2020",
+        "BEAN-IRA-2019",
+        "BEAN-PROJECTS"
+      ],
+      "notes": "Corrected obsolete unsolved/59-letter claim: 51 surviving letters, solved by Bean in 2019. Independently reproduced 56-letter reconstruction, equivalent 12-column order and five omissions. Original keyword is unknown. Reread preceding Vigenère case: 300 documents/1,300 cryptograms supported; removed unverified dispatch quotation and inaccurate all-columnar/date-range claims. The collection includes a 1923 Vigenère example.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/jefferson-disk.html",
@@ -852,11 +865,14 @@
       "path": "ciphers/kahn.html",
       "title": "David Kahn — The Cipher Museum",
       "words": 643,
-      "sha256": "0c10ce8a5ba1e3a4308135e532bd30a8ba87c3dd23330dbd2cf2f5c45e1ad5f0",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Firstcomplete/allhistory/perfectaccuracy overstated, revised1996scopeverifybookpreface. OxfordDPhilvsD.Litt? likelyDPhil1974verify. NSAinduction1999not2009? verify. Sourcecreditsfulltitle.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "1841ba5a4c8d29b6a52f7881e5feeff2ac72c9f9b4c96070017afdb5c0ece6a9",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "KAHN-NSA-HONOR",
+        "KAHN-USNI"
+      ],
+      "notes": "Corrected Hall of Honor to 2020; donation 2010 separate. Oxford doctorate supported. Removed unsupported birthplace/college and comprehensive-history absolutes. Selected works and remaining biography details retain final review.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/kama-sutra.html",
@@ -928,11 +944,13 @@
       "path": "ciphers/lasry.html",
       "title": "George Lasry — The Cipher Museum",
       "words": 480,
-      "sha256": "a262e9920ec94e8685d01b7a6c929869b4072190726d8ba1fb2c8bb1727d13ac",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Born1966 likelywrong1960? primaryauthorbiographyverify. Z340partialcontributionsrelatedcard contradictsbody. MCMC exacttechnique attributionneeds dissertation. Fifteenyearrelative date avoid; degree date/titlefromlocaldissertation.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "4fc05dd358a23395ebb578ce378033212c3a02d19d8f7c8c61e6be2476c58ac2",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "LASRY-2018"
+      ],
+      "notes": "Removed unsupported birth year; degree defence 16 October 2017 verified visually, book 2018 separate. Corrected unrelated Z340/Copiale attribution and unverified MCMC claim. Remaining published-analysis list needs final check.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/latin-american-codebooks.html",
@@ -950,11 +968,11 @@
       "path": "ciphers/leo-marks.html",
       "title": "Leo Marks — The Cipher Museum",
       "words": 494,
-      "sha256": "454f867bf232d119a1d59551eadaa3a25867f9712811a673c134ec02dfcfe328",
-      "status": "text reviewed; source verification pending",
+      "sha256": "b8805bba5a6cadd6d2d1c7f4d4b9694d98cc25a9485f5ab706ac61cb101b61f3",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
       "sources": [],
-      "notes": "Full prose read. Goodmemoirqualification andOTP length. Role1942-45startheadversusjoinedverify; poemRuth/dateSzabo primarymemoir. BAFTAlegacyunsupportedaward andNullcipherstegcousinpoemcode misleading.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "Corrected wartime role scope and removed unsupported BAFTA row. Full memoir title credited. Technical pad conditions distinguished from operational security checks; memoir-specific biographical claims not yet verified against the book.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/lorenz.html",
@@ -1002,21 +1020,26 @@
       "path": "ciphers/mavis-batey.html",
       "title": "Mavis Batey — The Cipher Museum",
       "words": 589,
-      "sha256": "a06d7b0c62cc4699285c0079205df023dbd193045165116ae932b8c492a4ad1a",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. McKayfirstfullyrevealedwomen2000signoresearlierwork. Education/recruitmentandMBEprimary. Matapan ships/dateandCunninghamgolfanecdote source; bodyappropriateteam/intelligencelimits.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "f45c5a3b6920a3437af23c82203f8d1ccdf7bad1a6641efe6e96385042405e1d",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "BATEY-CHURCHILL",
+        "BATEY-UCL"
+      ],
+      "notes": "Qualified Matapan contribution and removed unsupported Churchill congratulations and late-recognition generalization. Participant book credited by full title. Remaining later-life details require final source review.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/mccormick.html",
       "title": "McCormick Notes — The Cipher Museum",
       "words": 455,
-      "sha256": "bd1685f538682cc2130f8b10c96b0c1dc019dd3643893caf88a4a3e1c22e263e",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. NoacceptedpublicinterpretationverifyFBIcurrent. FBIagencyfullcontextnotestablished, barelyliterateframinggratuitous. RelatedOTPwhypersonalresistfalse. Loadedfragmentneedsfacsimiletranscriptionlabel.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "daae3fede3d9e8eab834ad86cfa5365105fcb7a452aa4729004c92fe016218bb",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "MCCORMICK-FBI-2011"
+      ],
+      "notes": "2011 appeal explicitly dated. Removed literacy and full-context assertions; default sample explicitly illustrative, not authenticated note transcription; normalized bigram limitations stated.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/microdot.html",
@@ -1106,11 +1129,13 @@
       "path": "ciphers/nfc-deployment.html",
       "title": "NFC Authentication: When the Tag Stays Unlocked — The Cipher Museum",
       "words": 606,
-      "sha256": "e7188ec33a4ffdbb39079434be0eba5c26dd9c756870f788304b5be5195c857f",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Model/config/access distinction clear. Reverify version1.1paper revision/Aug28 and777daysection17 original; avoidcurrentclaim beyondversion. Priorreport sourceinspection exists butfreshscope independent check.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "4e2a346bc7aba208108cea2780b4dbac3ebb14fa30faa8f0a14b5e980e868f26",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "NFC-2026-REV1.1"
+      ],
+      "notes": "Read revision 1.1 author copy with checksum verification, relay and CMAC conditions, §17 and changelog. Qualified 777 days as first phase only with reader access, unlocked key pages and EEPROM endurance limits. Remaining detailed configuration sections require final read.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/nihilist.html",
@@ -1170,11 +1195,14 @@
       "path": "ciphers/phaistos-disc.html",
       "title": "Phaistos Disc — The Cipher Museum",
       "words": 408,
-      "sha256": "bffc87b1b9c47610abfbb7457060fcea3d14128ddd981eef3c65d61752bb6f56",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Widgettoo-smallfortruedeciphermentcontradictsnoimpossibilitybody.45types241tokens61groupsverifymuseumobject/standardtranscription; readingdirectionplausiblenotcertain. RosettaWhatdeciphermentrequires notalwaysbilingual.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "9fc5e4b7486c2aff91e5fb4fbf09b2c25a1cafaf3f2a1f8acb3e9affe5a36aee",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "EVERSON-PHAISTOS-2011",
+        "PHAISTOS-DIRECTION-2011"
+      ],
+      "notes": "All 45 displayed sign counts independently match published Unicode transcription: A122+B119. Corrected source attribution and gap/stroke convention, unknown-script status and claims of impossibility. Invalid/noninteger input checked. Holding museum full page was inaccessible; indexed result was not treated as a full reading.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/pigpen.html",
@@ -1322,11 +1350,13 @@
       "path": "ciphers/sator-square.html",
       "title": "Sator Square — The Cipher Museum",
       "words": 481,
-      "sha256": "f658b9e72276b82219a97294dadcaadf06a8a27a95c799418224bd6359e861ef",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. EveryelementanagramsPaterNosterheadlinewrongscope; fullsquare2arms+2A2O correct. UIliteralunicode. EarliestPompeii andinterpretationneedsarchaeologicalprimary. Baconhiddenacrosticnotbiliteral.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "d5a2a2e6f5ea82dbc7fad043b6c39261a6926d1f0c9cac004167b56d36903a5e",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "SATOR-POMPEII-2022"
+      ],
+      "notes": "Verified object dating and whole-square PATER NOSTER cross + AAOO inventory. Intent remains a hypothesis; five ASCII-letter input validation and square alignment corrected.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/scytale.html",
@@ -1362,11 +1392,13 @@
       "path": "ciphers/shugborough.html",
       "title": "Shugborough Inscription — The Cipher Museum",
       "words": 407,
-      "sha256": "91ea82d9ca931e7b4ee29646f0c2ff5cc9cbf37979f6f2bcfd9b42df51a7a05d",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Officiallyopencipheroverspecifies unknowninscription. Acrostic eightplusDM accuratelyqualified; namecommission/dateverifyNationalTrust.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "84817fe63ef9b9c8f1ebcd999ad7112d23b55892c1efbd07c02dc0866f15f55a",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "SHUGBOROUGH-NT"
+      ],
+      "notes": "Separated monument chronology from undated inscription; removed official-cipher status and proof-by-initials claims. Metadata and comparison dating qualified.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/sigaba.html",
@@ -1406,9 +1438,11 @@
       "title": "SoDark and Radio Linking — The Cipher Museum",
       "words": 433,
       "sha256": "0ac52895005647dc6038cfee2bc1deb54575bacab197a219196b658da34b56b6",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read. Dated research/accessconditions wellspecified; recheckTable4 and relatedtweakrequirement against paper. No generic claimallHF voicebroken.",
+      "status": "scoped source verification recorded; final audit pending",
+      "sources": [
+        "SODARK-2021"
+      ],
+      "notes": "Rechecked journal Table 4 and accompanying related-tweak/oracle access and six-GPU setup. Existing figures and eight-versus-sixteen-round limits match. No factual change required in this pass; final shared-surface review pending.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
     },
     {
@@ -1428,11 +1462,11 @@
       "path": "ciphers/somerton-man.html",
       "title": "Somerton Man Code — The Cipher Museum",
       "words": 426,
-      "sha256": "05f325c9ee44d745637e326b8d561ca5599930e53601993ba7b548703010f78e",
-      "status": "text reviewed; source verification pending",
+      "sha256": "4c07f01615fc99eb468f99118e9df0adbe5df25d4074af9365d7a70ba11bfd51",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
       "sources": [],
-      "notes": "Full prose read. 2022researchproposalversusofficialcareful. CheckcurrentSApoliceannouncement asof2026. Transcription4linesomitscrossedline acceptedvariant mustlabel. Visibleliteralunicodeescape UIlabelfix.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "notes": "Proposed 2022 identification distinguished from official confirmation and unexplained writing. Simplified four-line widget explicitly omits the crossed-out line; not a facsimile. No claim of 2026 official resolution.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/stager.html",
@@ -1594,11 +1628,17 @@
       "path": "ciphers/voynich.html",
       "title": "The Voynich Manuscript (c. 1404–1438) — The Cipher Museum",
       "words": 1377,
-      "sha256": "788e20a3b04aadcd800e2d8034deb6602bce5e37539a4d3352e759eb27ae8e28",
-      "status": "corrections prepared; final source and rendered review pending",
-      "sources": [],
-      "notes": "Full prose read. Every solutionrefuted/everyknownlanguageentropyclaims overstate finitestudy. INDCPAuniformnoise tablecontradictscaveat. CurrierA/Bnotnecessarily2scribes/keys. Firstprovenance1639vs1637letterreference checkYale; 240pagesfoldouts wording. EVA conventionnotletterviewofactualscript. DImperiotitleandnoebooklink preference. VerifyReddyKnightstudy and researchstatus.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "737e64ea81758edbeb631f612610719c387d132b4e2ed63e3571638db9f4f360",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "REDDY-KNIGHT-2011",
+        "DIMPERIO-1978",
+        "EVA-DESIGN",
+        "BAX-2014",
+        "BRISTOL-2019"
+      ],
+      "notes": "Replaced unsourced frequency graphic with published Table 2; corrected statistical and Currier A/B inferences, historical interpretation accounts and mailing-list peer-review claim. Widget now accurately described as an invented Latin substitution, not EVA glyph rendering. Bibliography credits full monograph title without download link. Remaining physical page/word counts and radiocarbon source details need final review.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/wadsworth-cipher.html",
@@ -1614,11 +1654,13 @@
       "path": "ciphers/wallis-ciphers.html",
       "title": "Wallis Ciphers (John Wallis & the English Civil War · 1640s) — The Cipher Museum",
       "words": 876,
-      "sha256": "7eec6472ec9eca10a609a9364f72b4b7fa3b4d143aad681bfc03c95de347d2e4",
-      "status": "text reviewed; source verification pending",
-      "sources": [],
-      "notes": "Full prose read.1642firstdinner/twohours/NasebyWallisrole disputed likely1643WallisdeniedKingCabinet involvement. FatherofEnglishprofessionalcryptanalysis contradictsPhelippes. Everyregime/continuousunmatched and exactworkflowunsupported. Bodycaptionfewhourspernomenclator overgeneralizes. NeedKahnchapterWallis.",
-      "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification."
+      "sha256": "5fa1ed3b24943d3e6a96b353304553735f08642eae5f67baf3ff94d07d17aa5c",
+      "status": "corrections prepared; scoped source review recorded; final audit pending",
+      "sources": [
+        "KAHN-1996"
+      ],
+      "notes": "Corrected first interception to 1643 and variable solving time; removed unsupported Naseby/two-hour/general-workflow claims, including duplicate body paragraphs found during reread. Demo remains explicitly invented.",
+      "browser_smoke": "Fourth-checkpoint local Chromium follow-up passed; external resources blocked. This does not certify historical claims."
     },
     {
       "path": "ciphers/wheatstone.html",

@@ -166,7 +166,7 @@
       inputs: []
     },
     voynich: {
-      label: 'Voynich Manuscript (Voynichese render)', engine: 'voynich',
+      label: 'Voynich exhibit — invented letter-substitution model', engine: 'voynich',
       defaultMsg: 'HE WHO DECIPHERS THIS WILL BE FAMOUS',
       inputs: []
     },
@@ -646,10 +646,11 @@
       { text: "British Library — Digitised manuscripts and archives (collection portal)", url: "https://www.bl.uk/collection/digitised-manuscripts-archives" }
     ],
     voynich: [
-      { text: "Beinecke MS 408 — Voynich Manuscript full digitization (Yale)", url: "https://collections.library.yale.edu/catalog/2002046" },
-      { text: "Reddy &amp; Knight, \"What we know about the Voynich Manuscript\" (ACL 2011)", url: "https://aclanthology.org/W11-1511/" },
-      { text: "Pelling, Nick. <em>The Curse of the Voynich</em> (2006)", url: "https://ciphermysteries.com/the-voynich-manuscript" },
-      { text: "Kennedy &amp; Churchill. <em>The Voynich Manuscript</em> (Orion, 2004) — related Wikipedia overview", url: "https://en.wikipedia.org/wiki/Voynich_manuscript" }
+      { text: "Mary E. D’Imperio, <em>The Voynich Manuscript: An Elegant Enigma</em> (1978), §§5.1–5.2 and 6.2–6.6." },
+      { text: "Sravana Reddy and Kevin Knight, <em>What We Know About The Voynich Manuscript</em> (2011), §§4.1–4.2 and Table 2.", url: "https://aclanthology.org/W11-1511/" },
+      { text: "René Zandbergen, <em>Transliteration of the Text</em>, including the Landini–Zandbergen EVA design.", url: "https://www.voynich.nu/transcr.html" },
+      { text: "Stephen Bax, <em>A Proposed Partial Decoding of the Voynich Script</em> (2014), abstract and proposed readings.", url: "https://stephenbax.net/?page_id=11" },
+      { text: "University of Bristol, <em>Statement re: Voynich research paper</em> (16 May 2019).", url: "https://www.bristol.ac.uk/news/2019/may/voynich-manuscript.html" }
     ],
     playfair: [
       { text: "David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996)." },
@@ -922,10 +923,16 @@
       { text: "Wikipedia — VIC Cipher", url: "https://en.wikipedia.org/wiki/VIC_cipher" }
     ],
     "ira-ciphers": [
-      { text: "Moloney, Ed. <em>A Secret History of the IRA</em> (updated edition, 2007)", url: "https://www.penguin.co.uk/books/54420/a-secret-history-of-the-ira-by-ed-moloney/9780141028767" },
-      { text: "Smith, M.L.R. <em>Fighting for Ireland?</em> (1995)", url: "https://www.routledge.com/" },
-      { text: "Powell, Jonathan. <em>Great Hatred, Little Room: Making Peace in Northern Ireland</em> (2008)", url: "https://www.bodleyhead.co.uk/" },
-      { text: "Wikipedia — Book cipher (the general technique and its dependence on a shared edition)", url: "https://en.wikipedia.org/wiki/Book_cipher" }
+          {
+                "text": "Tom Mahon and James J. Gillogly, <em>Decoding the IRA</em> (2008)."
+          },
+          {
+                "text": "Elonka Dunin and Klaus Schmeh, <em>Codebreaking: A Practical Guide</em> (Robinson, 2020), the Gillogly and Bean IRA transposition case studies."
+          },
+          {
+                "text": "University of Queensland, “UQ data scientist cracks near century old crypto-code” (23 August 2019), documenting Richard Bean’s solution.",
+                "url": "https://news.uq.edu.au/2019-08-23-uq-data-scientist-cracks-near-century-old-crypto-code"
+          }
     ],
     "latin-american-codebooks": [
       { text: "<em>Código Comercial Mexicano</em> (Mexican commercial telegraph code)", url: "https://www.bnm.unam.mx/" },
@@ -950,15 +957,55 @@
       { text: "National Cryptologic Foundation — Inventors’ Day &amp; the Wadsworth Cipher", url: "https://archive.cryptologicfoundation.org/community/cryptologic-history/cryptologic-history-calendar.html/event/2026/02/11/1770807600/inventors-day-the-wadsworth-cipher/496980" },
       { text: "Kaeding, Thomas. “Automated ciphertext-only attack on the Wheatstone Cryptograph and related devices”, IACR ePrint 2020/1492", url: "https://eprint.iacr.org/2020/1492" }
     ],
-    dagapeyeff: [
-      { text: "D’Agapeyeff, Alexander. <em>Codes and Ciphers</em> (Oxford University Press, 1939) — the challenge cryptogram appears on the last page of the first edition only" },
-      { text: "Pelling, Nick. “The D’Agapeyeff Cipher” — Cipher Mysteries; the computational analysis proposing a 5×5 Polybius substitution followed by a transposition", url: "https://ciphermysteries.com/the-dagapeyeff-cipher" },
-      { text: "Wikipedia — D’Agapeyeff cipher (encyclopaedia overview; no scholarly monograph on this cipher exists)", url: "https://en.wikipedia.org/wiki/D%27Agapeyeff_cipher" }
+    "dagapeyeff": [
+          {
+                "text": "Alexander d’Agapeyeff, <em>Codes and Ciphers</em> (Oxford University Press, 1939). The challenge-page photograph consulted is numbered 158; its edition is not identified by that image."
+          },
+          {
+                "text": "Hyde &amp; Rugg, “The D’Agapeyeff Cipher” — the researchers’ account of their work; a possible error is a hypothesis, not an established defect.",
+                "url": "https://www.hydeandrugg.com/our-research/codes-ciphers/the-dagapeyeff-cipher/"
+          }
     ],
-    dorabella: [
-      { text: "Cipher Mysteries — The Dorabella Cipher (symbol inventory and survey of proposed solutions)", url: "https://ciphermysteries.com/other-ciphers/the-dorabella-cipher" },
-      { text: "The Elgar Society", url: "https://elgarsociety.org/" },
-      { text: "Wikipedia — Dorabella Cipher (encyclopaedia overview; cited here because no peer-reviewed solution exists)", url: "https://en.wikipedia.org/wiki/Dorabella_Cipher" }
+    "dorabella": [
+          {
+                "text": "David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), chapter 21."
+          },
+          {
+                "text": "Bradley Hauer, Colin Choi, Abram Hindle, Scott Smallwood and Grzegorz Kondrak, “Dorabella Cipher as Musical Inspiration” (2025), especially §4.1. Creative musical interpretation, not an authenticated solution.",
+                "url": "https://arxiv.org/abs/2509.17950"
+          }
+    ],
+    "phaistos-disc": [
+          {
+                "text": "Michael Everson, “Phaistos Disc: U+101D0–U+101FF” (2011), corpus transcription. The widget counts the 45 sign classes and excludes the marked gap and combining oblique strokes.",
+                "url": "https://www.evertype.com/standards/csur/phaistos-sample.html"
+          },
+          {
+                "text": "Ireland, “Response to L2/11-126 ‘Phaistos Disc Errata’” (2011), pp. 1–3: writing direction and overlapping impressions.",
+                "url": "https://www.unicode.org/L2/L2011/11166-phaistos-response.pdf"
+          },
+          {
+                "text": "Heraklion Archaeological Museum, “The Phaistos Disc”: holding institution and catalogue description.",
+                "url": "https://www.heraklionmuseum.gr/en/exhibit/the-phaistos-disc/"
+          }
+    ],
+    "shugborough": [
+          {
+                "text": "National Trust Heritage Records, “Shepherd’s Monument, Shugborough Estate”, MNA181338: relief, inscription and architectural dating.",
+                "url": "https://heritagerecords.nationaltrust.org.uk/HBSMR/MonRecord.aspx?skin=printerfriendly&uid=MNA181338"
+          }
+    ],
+    "mccormick": [
+          {
+                "text": "Federal Bureau of Investigation, “Cryptanalysts, Part 2: Help Solve an Open Murder Case” (29 March 2011), <em>The FBI Story 2011</em>, p. 25. Evidence of what the agency reported in 2011, not a new case-status announcement.",
+                "url": "https://www.fbi.gov/file-repository/reports-and-publications/stats-services-publications-fbi-story-fbistory2011.pdf"
+          }
+    ],
+    "sator-square": [
+          {
+                "text": "Archaeological Park of Pompeii, “The Sator Square from the Palestra Grande” (2022), inventory 20565: first-century graffito and archaeological location.",
+                "url": "https://pompeiicommitment.org/en/historiae/il-quadrato-del-sator-dalla-palestra-grande/"
+          }
     ],
     greatCipher: [
       { text: "David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996)." },

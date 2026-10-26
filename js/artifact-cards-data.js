@@ -668,7 +668,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "A 1939 textbook 'cryptogram for the student' that the author himself later admitted he had forgotten how to solve.",
+      "keyIdea": "Alexander d’Agapeyeff’s 1939 numeric challenge: a verified ciphertext excerpt, overlapping-pair analysis and explicit limits on proposed reconstructions.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -778,15 +778,15 @@
       "family": "Unsolved Ciphers",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
-      "keyType": "Custom 24-symbol alphabet of arcs and orientations",
+      "keyType": "Three arc counts × eight possible orientations",
       "keyIdea": "Edward Elgar’s 1897 Dorabella cryptogram contains 87 symbols. No proposed reading has achieved general acceptance.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Nobody — over 125 years of attempts, no consensus solution",
-      "modernLesson": "Tiny ciphertexts (87 chars) don't give cryptanalysis enough statistical signal"
+      "securityFailure": "No generally accepted reading",
+      "modernLesson": "Short texts and uncertain transcription make proposed readings harder to verify"
     },
     "double-playfair": {
       "name": "Doppelkastenschlüssel — German Double Playfair",
@@ -830,7 +830,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Elonka Dunin is a game designer and cryptography author known for documenting unsolved cryptograms and studying Kryptos.",
+      "keyIdea": "Elonka Dunin documents Kryptos and unresolved cryptograms and writes about classical cryptanalysis, including Codebreaking: A Practical Guide with Klaus Schmeh.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1133,18 +1133,18 @@
     "ira-ciphers": {
       "name": "IRA Cipher Traffic",
       "hall": "V",
-      "era": "Ireland · 1926–1928",
+      "era": "Ireland · 1920s",
       "family": "Military and Field Ciphers",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "About 1,300 IRA cryptograms from the papers of chief of staff Moss Twomey, mostly 1926–1927, enciphered by columnar transposition and broken almost in their entirety by Jim Gillogly with hill-climbing software — published as Decoding the IRA (2008).",
+      "keyIdea": "Interwar IRA columnar-transposition traffic studied by Jim Gillogly and Tom Mahon. Richard Bean solved the remaining 51-letter published challenge in 2019.",
       "trust": {
         "key": "broken",
         "text": "Broken",
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
-      "securityFailure": "Jim Gillogly — hill climbing over column orders",
+      "securityFailure": "Jim Gillogly; Richard Bean solved the final published challenge in 2019",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "jefferson-disk": {
@@ -1202,7 +1202,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "David Kahn’s The Codebreakers (1967) brought cryptographic history to a wide audience. The exhibit distinguishes its scholarship, influence and publication controversies.",
+      "keyIdea": "David Kahn (1930–2024), author of The Codebreakers, helped bring cryptologic history to a wide readership. He entered the NSA Cryptologic Hall of Honor in 2020.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1309,7 +1309,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "George Lasry, computational cryptanalyst and co-decipherer of Mary Stuart’s lost letters, published in 2023 with Norbert Biermann and Satoshi Tomokiyo.",
+      "keyIdea": "George Lasry applies computational search to classical ciphers. His work includes a 2017 Kassel dissertation and collaborative decipherment of Mary Stuart’s letters.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1339,7 +1339,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Leo Marks worked to improve SOE field communications, advocating prepared keys and letter one-time pads and writing The Life That I Have.",
+      "keyIdea": "Leo Marks worked on SOE communications security, prepared keying material and letter one-time pads. His memoir recounts the practical problems of agent communications.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1433,13 +1433,13 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Ricky McCormick’s two handwritten notes, released by the FBI in 2011 for public help. Their meaning and writing system remain unresolved.",
+      "keyIdea": "Two handwritten notes found with Ricky McCormick in 1999. The FBI’s 2011 appeal sought contextual evidence and help interpreting their notation.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Undeciphered notes released by the FBI; no accepted public interpretation.",
+      "securityFailure": "The FBI’s 2011 appeal reported the notes unresolved.",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "microdot": {
@@ -1974,18 +1974,18 @@
     "shugborough": {
       "name": "Shugborough Inscription",
       "hall": "XII",
-      "era": "Georgian England · ~1748–1763",
+      "era": "Georgian England · mid-18th century",
       "family": "Unsolved Ciphers",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "An 18th-century English garden monument bearing the cryptic letters O · U · O · S · V · A · V · V — debated for 250 years and never definitively cracked.",
+      "keyIdea": "An eighteenth-century garden monument with eight unexplained letters, O · U · O · S · V · A · V · V, and D · M below.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
-      "securityFailure": "Unsolved monument inscription",
+      "securityFailure": "Unresolved inscription; an encoding method is not established",
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "sigaba": {
@@ -2081,7 +2081,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "The Somerton Man inscription: uncertain letter groups associated with a 1948 death. Researchers proposed Carl Webb’s identity in 2022; the inscription’s meaning remains unconfirmed.",
+      "keyIdea": "The Somerton Man inscription and a simplified transcription experiment. A 2022 genealogical identification proposal is separate from interpreting the letters.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -2349,7 +2349,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "The Voynich manuscript remains undeciphered. Radiocarbon dating concerns its parchment; script, language and interpretation remain unresolved.",
+      "keyIdea": "The Voynich manuscript has an undeciphered script. Parchment dating and sample-dependent text statistics constrain hypotheses without identifying its language or method.",
       "trust": {
         "key": "historical",
         "text": "Historical Only",
@@ -2383,7 +2383,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "John Wallis served successive English governments as a cryptanalyst. The interactive illustrates a nomenclator rather than reproducing an authenticated Royalist key.",
+      "keyIdea": "John Wallis’s seventeenth-century cryptanalysis, with a clearly identified museum nomenclator model. Historical recovery times varied from hours to months.",
       "trust": {
         "key": "broken",
         "text": "Broken",

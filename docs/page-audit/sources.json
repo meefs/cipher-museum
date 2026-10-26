@@ -49,7 +49,8 @@
       "Chapter8: Kerckhoffs1883publication and operational design conditions.",
       "Chapter5closing: June1844diplomaticinterception cessation versusOctoberDecypheringBranchdissolution; Austria1848.",
       "Chapter3: Lavinde1379 code/cipher keys versus Mantua1401 homophones; supplied text lines4658–4708.",
-      "Chapter7: Stager route system and CipherNo.4 growth (12routepages,36codewordpages,1608entries); Lincoln1June1863example; supplied text lines8875–8960."
+      "Chapter7: Stager route system and CipherNo.4 growth (12routepages,36codewordpages,1608entries); Lincoln1June1863example; supplied text lines8875–8960.",
+      "Chapter 5: Wallis first 1643 interception, subsequent three-month problem, later varying attack times and succession; chapter 21: Dorabella discussion"
     ],
     "scope": "Historical secondary account, compared with primary records where available. Converted PDF pagination differs from printed edition; chapter references preferred in visible credits. Its old priority and lineage claims are not adopted without qualification."
   },
@@ -524,8 +525,289 @@
     ],
     "year": 2018,
     "passages_read": [
-      "Chapter7, §7.2.1, p.114 / suppliedPDF135: M-209 wheel, bar and lug operation, Beaufort equation."
+      "Chapter7, §7.2.1, p.114 / suppliedPDF135: M-209 wheel, bar and lug operation, Beaufort equation.",
+      "Title/copyright/degree page visually inspected: University of Kassel Dr. rer. nat., defence 16 October 2017, publication 2018"
     ],
     "scope": "Verified per-bar OR engagement. The book’s output-period wording is not adopted as an unconditional guarantee; joint wheel positions and generated keystream period are distinct."
+  },
+  "CODEBREAKING-2020": {
+    "title": "Codebreaking: A Practical Guide",
+    "authors": [
+      "Elonka Dunin",
+      "Klaus Schmeh"
+    ],
+    "year": 2020,
+    "passages_read": [
+      "Supplied reflow PDF p.9 copyright and edition",
+      "PDF pp.517–523: Jim Gillogly’s solution of IRA transposition cryptograms; Richard Bean’s solution of the last unsolved IRA cryptogram",
+      "PDF pp.513–516: Jim Gillogly’s solution of IRA Vigenère cryptograms, including 4 May 1923 example, GVZKLG/TEAPOT and ampersand convention"
+    ],
+    "scope": "Robinson 2020 edition. Supports the 51-letter surviving text, Bean’s 2019 solution, 56-letter reconstruction with five missing ciphertext letters and an equivalent column order; does not recover the original keyword. The collection also includes Vigenère; 300 documents and 1,300 cryptograms are supported here."
+  },
+  "PHAISTOS-DIRECTION-2011": {
+    "title": "Response to L2/11-126, Proposal to change the directionality of the Phaistos Disc characters",
+    "authors": [
+      "National Standards Authority of Ireland"
+    ],
+    "year": 2011,
+    "passages_read": [
+      "pp.1–3; discussion of stamp overlaps and direction"
+    ],
+    "scope": "Supports physical evidence for rim-to-centre reading; not a language identification.",
+    "url": "https://www.unicode.org/L2/L2011/11166-phaistos-response.pdf"
+  },
+  "DORABELLA-MUSIC-2025": {
+    "title": "Dorabella Cipher as Musical Inspiration",
+    "authors": [
+      "Bradley Hauer",
+      "Colin Choi",
+      "Abram Hindle",
+      "Scott Smallwood",
+      "Grzegorz Kondrak"
+    ],
+    "year": 2021,
+    "passages_read": [
+      "Abstract, §4.1 and transcription figure",
+      "arXiv abstract record: proceedings publication 2021; arXiv deposit 22 September 2025"
+    ],
+    "scope": "Research presents a creative music process, not an authenticated solution. Uses an 87-symbol majority transcription.",
+    "url": "https://arxiv.org/html/2509.17950v1"
+  },
+  "SHUGBOROUGH-NT": {
+    "title": "Shepherd’s Monument, Shugborough Park",
+    "authors": [
+      "National Trust"
+    ],
+    "year": null,
+    "passages_read": [
+      "Complete heritage record MNA181338"
+    ],
+    "scope": "Mid-eighteenth-century monument; columns and entablature probably 1763. Does not date the inscription itself. Its assertion about Latin lacking U was not adopted.",
+    "url": "https://heritagerecords.nationaltrust.org.uk/HBSMR/MonRecord.aspx?skin=printerfriendly&uid=MNA181338"
+  },
+  "SATOR-POMPEII-2022": {
+    "title": "The Sator square from the Large Palaestra",
+    "authors": [
+      "Archaeological Park of Pompeii"
+    ],
+    "year": 2022,
+    "passages_read": [
+      "Object description, inventory 20565, dating and find context"
+    ],
+    "scope": "First-century graffito; historical meaning is separate from the independently checked PATER NOSTER anagram.",
+    "url": "https://pompeiicommitment.org/en/historiae/il-quadrato-del-sator-dalla-palestra-grande/"
+  },
+  "DAGAPEYEFF-HYDE-RUGG": {
+    "title": "The D’Agapeyeff Cipher",
+    "authors": [
+      "Hyde and Rugg"
+    ],
+    "year": null,
+    "passages_read": [
+      "Research account and photographed challenge page, printed p.158"
+    ],
+    "scope": "Photographed page was visually read; edition not established. The first 130 digits match the demo excerpt. A separate worked-example error does not prove the challenge itself erroneous.",
+    "url": "https://www.hydeandrugg.com/our-research/codes-ciphers/the-dagapeyeff-cipher/"
+  },
+  "MCCORMICK-FBI-2011": {
+    "title": "The FBI Story 2011",
+    "authors": [
+      "Federal Bureau of Investigation"
+    ],
+    "year": 2011,
+    "passages_read": [
+      "Printed p.25 / PDF p.28: Help Solve an Open Murder Case, 29 March 2011"
+    ],
+    "scope": "Records the agency’s 2011 appeal and contemporary uncertainty. Does not establish continuing investigation status in 2026 or authenticate the museum’s illustrative widget text.",
+    "url": "https://www.fbi.gov/file-repository/reports-and-publications/stats-services-publications-fbi-story-fbistory2011.pdf"
+  },
+  "KAHN-NSA-HONOR": {
+    "title": "Dr. David Kahn",
+    "authors": [
+      "National Security Agency"
+    ],
+    "year": 2020,
+    "passages_read": [
+      "Complete Hall of Honor entry"
+    ],
+    "scope": "2020 induction distinct from 2010 library donation. No residence-year claim adopted because institutional biographies disagree.",
+    "url": "https://www.nsa.gov/History/Cryptologic-History/Historical-Figures/Historical-Figures-View/Article/2446960/dr-david-kahn/"
+  },
+  "KAHN-USNI": {
+    "title": "David Kahn",
+    "authors": [
+      "U.S. Naval Institute"
+    ],
+    "year": null,
+    "passages_read": [
+      "Author biography"
+    ],
+    "scope": "Oxford doctorate in history; no college affiliation or disputed residence year inferred.",
+    "url": "https://www.usni.org/people/david-kahn"
+  },
+  "BATEY-CHURCHILL": {
+    "title": "Hidden Voices",
+    "authors": [
+      "Churchill Archives Centre"
+    ],
+    "year": null,
+    "passages_read": [
+      "Mavis Batey section, references BTEY 3/2 and BTEY 3/6"
+    ],
+    "scope": "Archive account identifies participant notes and Knox’s poem. The linked original sheets were not separately read in this pass.",
+    "url": "https://www.chuarchivestories.uk/stories/hidden-voices"
+  },
+  "BATEY-UCL": {
+    "title": "Breaking Bletchley: Mavis Batey, student codebreaker",
+    "authors": [
+      "University College London"
+    ],
+    "year": null,
+    "passages_read": [
+      "Institutional biography"
+    ],
+    "scope": "Education, Knox team and Matapan context; dramatic sole-cause claims are not adopted.",
+    "url": "https://www.ucl.ac.uk/about/search-faces-ucl/breaking-bletchley-mavis-batey-student-codebreaker"
+  },
+  "DUNIN-KRYPTOS-FAQ": {
+    "title": "Kryptos FAQ",
+    "authors": [
+      "Elonka Dunin"
+    ],
+    "year": null,
+    "passages_read": [
+      "K1–K3 chronology and discussion of FOIA disclosures"
+    ],
+    "scope": "Useful historical account for CIA 1998, public 1999 and 2013 disclosures; older K4 wording is not used as current status.",
+    "url": "https://elonka.com/kryptos/faq.html"
+  },
+  "BEAN-IRA-2019": {
+    "title": "UQ data scientist cracks near-century-old crypto code",
+    "authors": [
+      "University of Queensland"
+    ],
+    "year": 2019,
+    "passages_read": [
+      "Complete announcement, 23 August 2019, ciphertext and proposed reading"
+    ],
+    "scope": "Contemporary institutional confirmation of Richard Bean’s solution. Exact reconstruction independently checked against Dunin and Schmeh.",
+    "url": "https://news.uq.edu.au/2019-08-23-uq-data-scientist-cracks-near-century-old-crypto-code"
+  },
+  "BEAN-PROJECTS": {
+    "title": "Projects",
+    "authors": [
+      "Richard Bean"
+    ],
+    "year": null,
+    "passages_read": [
+      "IRA codebreaking entry and Kryptos research entry"
+    ],
+    "scope": "Researcher’s own list distinguishes 2019 IRA solution from 2025 archival K4 plaintext discovery.",
+    "url": "https://richardbean.id.au/projects/"
+  },
+  "REDDY-KNIGHT-2011": {
+    "title": "What We Know About The Voynich Manuscript",
+    "authors": [
+      "Sravana Reddy",
+      "Kevin Knight"
+    ],
+    "year": 2011,
+    "passages_read": [
+      "§§4.1–4.2, printed pp.80–81, Table 2"
+    ],
+    "scope": "Sample-dependent word-length and letter prediction results; table reports held-out word types and ten-fold averaging. Does not identify language, scribes or cipher.",
+    "url": "https://aclanthology.org/W11-1511/"
+  },
+  "DIMPERIO-1978": {
+    "title": "The Voynich Manuscript: An Elegant Enigma",
+    "authors": [
+      "Mary E. D’Imperio"
+    ],
+    "year": 1978,
+    "passages_read": [
+      "§§5.1–5.2, printed pp.33–36; §6.2 pp.40–41; §§6.5–6.6 pp.42–43"
+    ],
+    "scope": "Read NSA monograph locally. Historical accounts of Newbold, Feely, study group, Friedman hypothesis and anagram; not evidence that every later proposal is refuted."
+  },
+  "EVA-DESIGN": {
+    "title": "Transliteration of the Text",
+    "authors": [
+      "René Zandbergen"
+    ],
+    "year": null,
+    "passages_read": [
+      "Historic alphabets and Landini–Zandbergen EVA sections"
+    ],
+    "scope": "Designer account distinguishes glyph representation and ligatures from semantic units. The museum’s 26-letter permutation is invented, not an EVA transcription.",
+    "url": "https://www.voynich.nu/transcr.html"
+  },
+  "BAX-2014": {
+    "title": "A Proposed Partial Decoding of the Voynich Script",
+    "authors": [
+      "Stephen Bax"
+    ],
+    "year": 2014,
+    "passages_read": [
+      "Abstract, example readings and concluding discussion"
+    ],
+    "scope": "Ten proposed words and fourteen signs or clusters; a proposed partial reading rather than an established decipherment.",
+    "url": "https://stephenbax.net/?page_id=11"
+  },
+  "BRISTOL-2019": {
+    "title": "Statement re: Voynich research paper",
+    "authors": [
+      "University of Bristol"
+    ],
+    "year": 2019,
+    "passages_read": [
+      "Full statement, 16 May 2019"
+    ],
+    "scope": "The university removed its publicity while seeking validation after scholarly concerns. This is not a statement that the journal paper was retracted.",
+    "url": "https://www.bristol.ac.uk/news/2019/may/voynich-manuscript.html"
+  },
+  "EVERSON-PHAISTOS-2011": {
+    "title": "Phaistos Disc text in Unicode",
+    "authors": [
+      "Michael Everson"
+    ],
+    "year": 2011,
+    "passages_read": [
+      "Complete Unicode transcription, sides A and B; all sign codes counted independently"
+    ],
+    "scope": "A=122, B=119, 241 total sign tokens. Excludes marked gap and combining oblique strokes. The resulting 45-entry frequency table matches the exhibit. Does not establish a decipherment.",
+    "url": "https://www.evertype.com/standards/csur/phaistos-sample.html"
+  },
+  "NFC-2026-REV1.1": {
+    "title": "BREAKMEIFYOUCAN!: Exploiting Keyspace Reduction and Relay Attacks in 3DES and AES-protected NFC Technologies",
+    "authors": [
+      "Nathan Nye",
+      "Philippe Teuwen",
+      "Tiernan Messmer",
+      "Steven Mauch",
+      "Struan Clark",
+      "Zinong Li",
+      "Zachary Weiss",
+      "Lucifer Voeltner"
+    ],
+    "year": 2026,
+    "revision": "1.1, 28 August 2026",
+    "passages_read": [
+      "Abstract and revision note on ePrint",
+      "Author-repository PDF: §4 pp.3–4; §12.1 p.16; §17 p.26; Appendix D changelog"
+    ],
+    "scope": "Relay targets authenticated tag state. CMAC and tearing conditions differ. The 777-day estimate is only the first 28-bit segment at two attempts/sec; subsequent phases and EEPROM endurance remain conditions. Verified SHA-256 of author-hosted revision: 6bcd3786f7823798f76f7610d8a9906104272d7a14b00508a36ca3076c1f875a. Remaining configuration-specific sections still require final detailed read.",
+    "url": "https://eprint.iacr.org/2026/100"
+  },
+  "SODARK-2021": {
+    "title": "Cryptanalysis of the SoDark Cipher for HF Radio Automatic Link Establishment",
+    "authors": [
+      "Marcus Dansarie"
+    ],
+    "year": 2021,
+    "passages_read": [
+      "§3.5–§4 and Table 4, pp.48–50 (German National Library journal copy)"
+    ],
+    "scope": "Verified displayed Table 4: eight rounds, six Nvidia GPUs, related tweaks, 50% success point, 2^12.7 known tuples or 2^8 chosen-ciphertext tuples and 42 minutes. Full-keyspace brute-force reference about five days. This does not establish a sixteen-round attack. No additional exhibit change needed for those statements.",
+    "url": "https://doi.org/10.46586/tosc.v2021.i3.36-53"
   }
 }
