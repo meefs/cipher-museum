@@ -106,7 +106,7 @@
 <tbody>
 <tr>
 <td>GPU known-plaintext attack</td>
-<td>About 2<sup>12.7</sup> plaintext–ciphertext–tweak tuples at the paper’s 50% success point; the attack exploits suitable related tweaks.</td>
+<td>About 2<sup>12.7</sup> plaintext–ciphertext–tweak tuples at the paper’s 50% success point in its oracle model, with tuples generated for two suitable related tweaks.</td>
 <td>42 minutes</td>
 </tr>
 <tr>
@@ -125,12 +125,13 @@
 </section>
 <section>
 <h2>What the result establishes</h2>
+<p>The small tuple count in Table 4 is not the passive interception requirement. For ordinary ALE frames, §3.4 derives about 2<sup>21.9</sup> intercepted three-word frames for a 50% chance of the needed pair; §3.5 carries that data complexity into the eight-round attack. Collection time is additional to the reported computation.</p>
 <p>The implemented attacks undermine the stated linking-protection goals of the eight-round 2G system under their data assumptions. The paper does not demonstrate the same attack against the sixteen-round 3G versions. Nor is this a blanket claim that HF voice encryption has been broken.</p>
 <p>The 24-bit block size, tweak structure, number of rounds and operational protocol all belong in the explanation. A key-length headline alone hides the properties the cryptanalysis actually uses.</p>
 </section>
 <section>
 <h2>Primary source and connections</h2>
-<p>Marcus Dansarie, <a href="https://doi.org/10.46586/tosc.v2021.i3.36-53">“Cryptanalysis of the SoDark Cipher for HF Radio Automatic Link Establishment”</a>, IACR Transactions on Symmetric Cryptology 2021(3), pp. 36–53. Peer-reviewed journal paper. See §3–4 and Table 4, PDF pp. 11–15. <a href="https://github.com/dansarie/SoCracked">Author’s implementation</a>.</p>
+<p>Marcus Dansarie, <a href="https://doi.org/10.46586/tosc.v2021.i3.36-53">“Cryptanalysis of the SoDark Cipher for HF Radio Automatic Link Establishment”</a>, IACR Transactions on Symmetric Cryptology 2021(3), pp. 36–53. Peer-reviewed journal paper. See §3.4–3.6, §4 and Table 4, PDF pp. 8–15, for the oracle/passive distinction and implementation results. <a href="https://github.com/dansarie/SoCracked">Author’s implementation</a>.</p>
 <p>Continue to <a href="nfc-deployment.html">NFC authentication and deployment</a> to compare another gap between primitive-level protection and a system’s actual security goal, or visit <a href="../modern.html">modern cryptography</a>.</p>
 </section>
 <div class="hall-nav">

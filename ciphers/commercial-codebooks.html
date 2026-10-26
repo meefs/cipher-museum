@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Commercial Telegraph Codebooks (ABC, Bentley’s, Lieber’s · 1870s–1930s) — The Cipher Museum</title>
-  <meta name="description" content="Commercial telegraph codebooks (ABC Code, Bentley’s, Lieber’s) were the workhorses of Victorian and Edwardian global business. Each English word or phrase mapped to a 5-letter pronounceable codeword — cheaper, denser, and incidentally a layer of confidentiality.">
+  <meta name="description" content="Commercial telegraph codebooks replaced business phrases with compact code groups. Formats and tariffs varied, and a public codebook did not itself provide secrecy.">
   <meta property="og:title" content="Commercial Telegraph Codebooks (ABC, Bentley’s, Lieber’s · 1870s–1930s) — The Cipher Museum">
-  <meta property="og:description" content="Commercial telegraph codebooks (ABC Code, Bentley’s, Lieber’s) were the workhorses of Victorian and Edwardian global business. Each English word or phrase mapped to a 5-letter pronounceable codeword — cheaper, denser, and incidentally a layer of confidentiality.">
+  <meta property="og:description" content="Commercial telegraph codebooks replaced business phrases with compact code groups. Formats and tariffs varied, and a public codebook did not itself provide secrecy.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/commercial-codebooks.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Commercial Telegraph Codebooks (ABC, Bentley’s, Lieber’s · 1870s–1930s) — The Cipher Museum">
-  <meta name="twitter:description" content="Commercial telegraph codebooks (ABC Code, Bentley’s, Lieber’s) were the workhorses of Victorian and Edwardian global business. Each English word or phrase mapped to a 5-letter pronounceable codeword — cheaper, denser, and incidentally a layer of confidentiality.">
+  <meta name="twitter:description" content="Commercial telegraph codebooks replaced business phrases with compact code groups. Formats and tariffs varied, and a public codebook did not itself provide secrecy.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/commercial-codebooks.html">
@@ -64,8 +64,8 @@
   <p class="exhibit-status-note">Public commercial codebooks reduce telegraph length and ambiguity; they do not inherently provide confidentiality.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Notable codebooks</span><span class="fact-value">ABC Code (1873), Bentley’s (1906), Lieber’s, Western Union</span></div>
-    <div class="fact"><span class="fact-label">Codeword format</span><span class="fact-value">5-letter pronounceable groups (CVCVC)</span></div>
-    <div class="fact"><span class="fact-label">Charged as</span><span class="fact-value">One word per codeword by international telegraph tariff</span></div>
+    <div class="fact"><span class="fact-label">Codeword format</span><span class="fact-value">Varied; five-letter groups became important in the 20th century</span></div>
+    <div class="fact"><span class="fact-label">Charged as</span><span class="fact-value">Dependent on tariff, date and codeword length</span></div>
     <div class="fact"><span class="fact-label">Use</span><span class="fact-value">Civilian commerce, shipping, banking, and insurance</span></div>
     <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Mostly public; private codebooks added a confidentiality layer</span></div>
   </div>
@@ -78,22 +78,22 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>By the late 19th century, transatlantic cable charges ran to several shillings per word. A long business message could cost more than the goods it described. The solution was the commercial codebook: a printed dictionary in which each common English phrase mapped to a single 5-letter codeword. “CONFIRMED SHIPMENT URGENT” became one billable word, not three.</p><p style="margin-top:1rem;">By 1900 dozens of competing codebooks existed. The ABC Code (Clauson-Thue, 1873), Bentley’s Complete Phrase Code (1906), and Lieber’s were the most popular. International telegraph regulations specifically permitted these <em>artificial</em> 5-letter codewords as long as they were pronounceable — hence the consonant-vowel-consonant-vowel-consonant (CVCVC) pattern that became standard.</p><p style="margin-top:1rem;">Private codebooks added a second layer: a firm could rebind a public codebook with shifted entries, or print its own “private code” known only to its branches. This was the closest thing to civilian commercial cryptography in widespread use before the 1970s.</p>
+      <p>Commercial codebooks replaced frequently used business expressions with compact codewords to reduce telegraph charges. Formats and billing rules changed over time. A phrase could become a single code group, but a public book did not thereby provide secrecy.</p><p style="margin-top:1rem;">Commercial codes included ABC, Lieber’s and Bentley’s. Kahn describes the 1903 international rules permitting pronounceable artificial words up to ten letters, and the subsequent combination of two five-letter groups within that allowance. Bentley’s <em>Complete Phrase Code</em> followed in 1906. A universal five-letter CVCVC tariff rule is therefore misleading.</p><p style="margin-top:1rem;">Private codebooks and additional encipherment could obscure the codeword meanings. Their protection depended on access to the book, traffic patterns and the added cipher, not simply on whether a printed volume was labelled private.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>Each codebook is essentially two parallel sorted lists:</p><ul style="margin:0.5rem 0 0 1.5rem;line-height:1.8;"><li>A <strong>plain index</strong> listing every English word or phrase the codebook covers, in alphabetical order, each beside its codeword.</li><li>A <strong>code index</strong> listing every codeword in alphabetical order, each beside its plaintext.</li></ul><p style="margin-top:1rem;">The CVCVC structure (e.g. <code>BAFEK</code>, <code>QILUP</code>) gave 200,000 possible codewords per book — enough for thousands of phrases plus inflections and proper-name placeholders. Codebooks were rated by their <em>checking distance</em>: how many letters had to differ between any two valid codewords, so that single-character telegraph errors would not turn one valid message into another.</p><p style="margin-top:1rem;">The demo above operates on a small fixed wordlist using exactly the CVCVC encoding scheme. Words not in the wordlist fall through to a per-letter codebook so the round-trip stays clean for arbitrary input.</p></div>
+      <div class="panel-body"><p>A two-part codebook can provide two lookup directions; historical layouts varied:</p><ul style="margin:0.5rem 0 0 1.5rem;line-height:1.8;"><li>A <strong>plain index</strong> listing every English word or phrase the codebook covers, in alphabetical order, each beside its codeword.</li><li>A <strong>code index</strong> listing every codeword in alphabetical order, each beside its plaintext.</li></ul><p style="margin-top:1rem;">The museum’s CVCVC pattern uses 20 consonants (excluding Y) and five vowels, allowing 20³ × 5² = 200,000 combinations. If all 21 consonants were allowed, the count would be 231,525. Neither count is the number of entries in a particular historical book. Error-detecting designs restrict the vocabulary so that likely transmission errors are less likely to produce another valid codeword.</p><p style="margin-top:1rem;">The demo above operates on a small fixed wordlist using exactly the CVCVC encoding scheme. Words not in the wordlist fall through to a per-letter codebook so the round-trip stays clean for arbitrary input.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">Where the Confidentiality Came From (and Where It Failed)</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Public codebooks: no confidentiality at all</div><div class="attack-diff">Complexity: Lookup</div><p class="attack-desc">Anyone with a copy of ABC or Bentley’s could read public-codebook traffic. Their job was compression and error-checking, not secrecy.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Private codebooks: tractable for state actors</div><div class="attack-diff">Complexity: Within reach of professional cryptanalytic bureaus</div><p class="attack-desc">A private codebook is a monoalphabetic substitution on the phrase alphabet — enormous in size, but stable. With enough intercepted traffic and known business context (shipping schedules, commodity prices, named correspondents), professional bureaus reconstructed the codebooks. Yardley’s American Black Chamber and the British GC&amp;CS routinely read private commercial codes between the wars.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Codebook + super-encipherment</div><div class="attack-diff">Complexity: Same as JN-25 / 0075-class systems</div><p class="attack-desc">Banks and shipping firms in the 1920s sometimes added a second-layer additive cipher to a private codebook — essentially the architecture of contemporary military codes. The same depth-attack techniques that worked on JN-25 worked here.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Public codebooks: no confidentiality at all</div><div class="attack-diff">Complexity: Lookup</div><p class="attack-desc">Anyone with a copy of ABC or Bentley’s could read public-codebook traffic. Their job was compression and error-checking, not secrecy.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Private codebooks: tractable for state actors</div><div class="attack-diff">Complexity: Within reach of professional cryptanalytic bureaus</div><p class="attack-desc">A fixed one-to-one phrase code preserves repeated groups and can expose relationships between messages. Known business context can help infer entries. The volume and type of traffic, use of alternatives and any super-encipherment affect how much can be recovered; no universal recovery time follows.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Codebook + super-encipherment</div><div class="attack-diff">Security depends on the added cipher and key handling</div><p class="attack-desc">An additional cipher can protect codegroups, but it must be analysed on its own terms. Additive reuse can expose relationships, as in some military code systems. That analogy does not show that every private commercial code used the same construction or had the same weakness.</p></div></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
-      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Codebook lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Compression layer that incidentally also encrypts</td><td>HTTP/2 HPACK and QPACK — compression that leaks plaintext via timing (CRIME, BREACH)</td></tr><tr><td>Pronounceable codewords for telegram tariffs</td><td>BIP-39 mnemonic seed words for Bitcoin wallets</td></tr><tr><td>Checking distance between codewords</td><td>Hamming distance in modern error-correcting codes</td></tr><tr><td>Private codebook = monoalphabetic on the phrase alphabet</td><td>Why “custom secret protocol” almost always loses to standard public protocols</td></tr></tbody></table></div>
+      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Codebook lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Compression and encryption are separate functions</td><td>HPACK (HTTP/2) and QPACK (HTTP/3) compress fields. Shared compression state can create length-based leakage; compression is not encryption</td></tr><tr><td>Pronounceable codewords for telegram tariffs</td><td>BIP-39 mnemonic seed words for Bitcoin wallets</td></tr><tr><td>Checking distance between codewords</td><td>Hamming distance in modern error-correcting codes</td></tr><tr><td>Private codebook = monoalphabetic on the phrase alphabet</td><td>Repeated phrase groups can reveal structure; a large codebook alone does not prove security</td></tr></tbody></table></div>
     </div>
 
   </div>
@@ -106,8 +106,8 @@
         <table class="cipher-table">
           <tbody>
             <tr><td>Notable codebooks</td><td>ABC Code (1873), Bentley’s (1906), Lieber’s, Western Union</td></tr>
-            <tr><td>Codeword format</td><td>5-letter pronounceable groups (CVCVC)</td></tr>
-            <tr><td>Charged as</td><td>One word per codeword by international telegraph tariff</td></tr>
+            <tr><td>Codeword format</td><td>Varied; five-letter groups became important in the 20th century</td></tr>
+            <tr><td>Charged as</td><td>Dependent on tariff, date and codeword length</td></tr>
             <tr><td>Use</td><td>Civilian commerce, shipping, banking, and insurance</td></tr>
             <tr><td>Status</td><td>Mostly public; private codebooks added a confidentiality layer</td></tr>
           </tbody>
@@ -116,6 +116,8 @@
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 22, “Rumrunners, Businessmen, and Makers of Non-secret Codes,” on commercial code formats, tariffs and Bentley. For the modern comparison: <a href="https://www.rfc-editor.org/rfc/rfc7541.html">RFC 7541, §7.1</a>, on length-based leakage and shared HPACK compression state.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
@@ -133,7 +135,7 @@
     <a href="../ciphers/great-cipher.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Great Cipher</span>
-      <span class="related-card__tag">The ancestor of the codebook tradition (Louis XIV)</span>
+      <span class="related-card__tag">Compare an earlier royal nomenclator</span>
     </a>
   </div>
 </section>

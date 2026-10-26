@@ -60,10 +60,7 @@
   </div>
 
   <div class="honesty">
-    <strong>Why this matters.</strong> Diffie–Hellman picks a number <em>g</em>
-    whose powers cycle through <em>every</em> nonzero residue mod a prime. Find
-    such a <span class="term">primitive root</span> and you have a group large
-    and uniform enough to hide a secret exponent in.
+    <strong>Why this matters.</strong> A primitive root generates every nonzero residue modulo a prime, but finite-field Diffie–Hellman can instead use a generator of a large prime-order subgroup. Group order, parameter selection and validation matter; being a primitive root alone does not establish security.
   </div>
 
   <section class="exhibit">
@@ -118,7 +115,7 @@
     <p class="aside">See also: <a href="group-theory.html" style="color:var(--vermilion)">Group Theory</a> for the general structure, and <a href="finite-fields.html" style="color:var(--vermilion)">Finite Fields</a> for the elliptic-curve version.</p>
   </section>
 
-  <p class="aside"><strong>Sources and scope:</strong> <a href="https://www.rfc-editor.org/rfc/rfc7919.html">RFC 7919 (2016)</a>, standardized finite-field DH groups and validation; <a href="https://crypto.stanford.edu/~dabo/cryptobook/">Boneh and Shoup, §10.4.2</a>, CDH and discrete logarithms.</p>
+  <p class="aside"><strong>Sources and scope:</strong> <a href="https://www.rfc-editor.org/rfc/rfc7919.html">RFC 7919 (2016)</a>, standardized finite-field DH groups and validation; Boneh and Shoup, §10.4.2, CDH and discrete logarithms.</p>
   </main>
 
 

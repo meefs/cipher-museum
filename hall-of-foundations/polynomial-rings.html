@@ -69,8 +69,7 @@
     <strong>The missing bridge.</strong> Between the finite-fields exhibit
     (numbers mod q) and the lattice exhibits (geometry) sits this: arithmetic on
     polynomials whose coefficients are numbers mod q, and which themselves wrap
-    modulo X&#8319;+1. Module-LWE &#8212; the real hardness assumption under Kyber and
-    Dilithium &#8212; lives in exactly this ring.
+    modulo X&#8319;+1. ML-KEM’s security is related to Module-LWE. ML-DSA also relies on a short-integer-solution variant, SelfTargetMSIS; the two schemes do not have identical assumptions.
   </div>
 
   <section class="exhibit">
@@ -135,8 +134,7 @@
       A single ring element already packs n numbers. Stack a few of them into a
       <em>module</em> and you have a lattice with enormous dimension but a tiny,
       structured description &#8212; you store a handful of polynomials, not a giant
-      matrix. That compression is the difference between a post-quantum scheme
-      that's a research curiosity and one that fits in a TLS handshake.
+      matrix. Polynomial structure reduces storage and enables efficient arithmetic. It is one engineering approach; other post-quantum families use different structures and size tradeoffs.
     </p>
     <div class="pull">
       The polynomial ring is how you get a thousand-dimensional lattice into a

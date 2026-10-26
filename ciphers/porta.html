@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Porta Cipher — The Cipher Museum</title>
-    <meta name="description" content="Porta cipher (1563) — della Porta's reciprocal polyalphabetic table where each key letter swaps two halves of the alphabet. Falls to Kasiski just like Vigenère.">
+    <meta name="description" content="The Porta cipher uses reciprocal substitutions selected by a repeating key. This exhibit’s 26-letter, 13-row table is a modern adaptation of the historical construction.">
   <meta property="og:title" content="Porta Cipher — The Cipher Museum">
-  <meta property="og:description" content="Porta cipher (1563) — della Porta's reciprocal polyalphabetic table where each key letter swaps two halves of the alphabet. Falls to Kasiski just like Vigenère.">
+  <meta property="og:description" content="The Porta cipher uses reciprocal substitutions selected by a repeating key. This exhibit’s 26-letter, 13-row table is a modern adaptation of the historical construction.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/porta.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Porta Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Porta cipher (1563) — della Porta's reciprocal polyalphabetic table where each key letter swaps two halves of the alphabet. Falls to Kasiski just like Vigenère.">
+  <meta name="twitter:description" content="The Porta cipher uses reciprocal substitutions selected by a repeating key. This exhibit’s 26-letter, 13-row table is a modern adaptation of the historical construction.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/porta.html">
@@ -118,7 +118,7 @@
   <text x="42" y="108" font-size="7" fill="#706878">... (13 rows total, paired letters)</text>
   <!-- Reciprocal note -->
   <rect x="10" y="150" width="360" height="30" fill="rgba(90,200,160,.06)" stroke="rgba(90,200,160,.15)" stroke-width=".5" rx="5"/>
-  <text x="20" y="164" font-size="9" fill="#5AC8A0">★ Each row maps A↔N, B↔O, etc. — swap is symmetric</text>
+  <text x="20" y="164" font-size="9" fill="#5AC8A0">★ The AB row maps A↔N, B↔O; other rows use different pairs</text>
   <text x="20" y="176" font-size="8" fill="#706878">Encrypt(A)=N → Encrypt(N)=A → same operation decrypts!</text>
 </svg>
 <figcaption class="figure-caption">13 rows for 13 key-letter pairs — symmetric swaps make encryption and decryption identical</figcaption>
@@ -135,7 +135,7 @@
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from Porta Cipher</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>13-row reciprocal tableau</td><td>Symmetric cipher operations: same hardware encrypts and decrypts</td></tr>
+          <tbody><tr><td>13-row reciprocal tableau</td><td>Reciprocal substitutions share one operation; symmetric-key encryption in general need not be self-inverse</td></tr>
 <tr><td>Paired key letter lookup</td><td>S-box lookup tables in AES SubBytes step</td></tr>
 <tr><td>Smaller table for field use</td><td>Hardware-optimized cipher implementations</td></tr></tbody>
         </table>

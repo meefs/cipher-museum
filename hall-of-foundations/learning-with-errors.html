@@ -104,9 +104,7 @@
       <div class="lab-hint">
         <span id="errNote">The <b>error bound</b> is the largest value any entry
         of <em>e</em> may take, plus or minus.</span> At <b>0</b> the system is
-        exact and elimination wins. Nudge it to <b>1</b> &#8212; a perturbation of
-        at most one, in a world 97 wide &#8212; and the same elimination returns
-        a vector with nothing in common with the real secret.
+        exact and elimination wins. A bound of <b>1</b> permits small errors, including an all-zero draw. A nonzero error changes the exact solution; some coordinates may still match the secret.
       </div>
       <div class="a11y-fallback">
         <span class="vh" id="lweKb">Keyboard alternative: set the error bound with the slider, then activate Solve. Results are announced in the readout.</span>
@@ -129,8 +127,7 @@
       within a few rows.
     </p>
     <div class="pull">
-      The algorithm never fails, never warns, and never notices. It returns a
-      confident answer that happens to be noise.
+      For this invertible matrix, elimination always solves the displayed equations. With nonzero error modulo q, that exact solution differs from the original secret. A positive sampling bound can still produce an all-zero error vector.
     </div>
     <p>Noise prevents exact elimination from being a general secret-recovery method. Security requires suitable dimensions, distributions and parameters: small error does not automatically make every instance hard. LWE and Module-LWE specify such sampling problems, with Module-LWE using structured modules over polynomial rings.</p>
   </section>
@@ -149,7 +146,7 @@
       Decryption computes <em>v</em> &#8722; <em>s</em>&#183;<em>u</em>. Expand
       both sides and a large term appears twice, with opposite signs:
     </p>
-    <div class="eq">v &#8722; s&#183;u = <s>s&#7488;A&#7488;r</s> + e&#183;r + e&#8322; &#8722; s&#183;e&#8321; + m&#183;&#8970;q/2&#8971; &nbsp;&#8594;&nbsp; <b>m&#183;&#8970;q/2&#8971; + small</b></div>
+    <div class="eq">v &#8722; s&#183;u = <s>s&#7488;A&#7488;r</s> + e&#183;r + e&#8322; &#8722; <s>s&#7488;A&#7488;r</s> &#8722; s&#183;e&#8321; + m&#183;&#8970;q/2&#8971; &nbsp;&#8594;&nbsp; <b>m&#183;&#8970;q/2&#8971; + small</b></div>
     <p>
       The bulk cancels. What survives is the message bit, sitting on top of a
       pile of error terms that were all small to begin with. Round to whichever
@@ -219,10 +216,10 @@
       <h3>The bet the post-quantum standards make</h3>
       <p>ML-KEM uses this broad structured noisy-equation pattern at much larger parameters, with additional operations omitted here. No efficient classical or quantum attack is known for its intended security targets. That expectation is based on cryptanalysis of the specified problems, not a proof that merely adding noise eliminates every exploitable quantum structure.</p>
     </div>
-    <p class="aside"><b>Three views of one problem.</b>
-      <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> is the geometry — why the secret stays hidden.
-      <a href="closest-vector.html" style="color:var(--vermilion)">§152</a> is the decoding — why its owner still gets in.
-      <a href="learning-with-errors.html" style="color:var(--vermilion)">§157</a> is the algebra — what the keys are actually made of.
+    <p class="aside"><b>Three related teaching models.</b>
+      <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> introduces lattice geometry.
+      <a href="closest-vector.html" style="color:var(--vermilion)">§152</a> illustrates geometric decoding.
+      <a href="learning-with-errors.html" style="color:var(--vermilion)">§157</a> shows a tiny noisy-equation model and distinguishes it from standardized keys.
       Next: <a href="polynomial-rings.html" style="color:var(--vermilion)">Polynomial Rings</a>, where these plain vectors become polynomials.
       Tested logic in <code>lwe-math.js</code>.</p>
   </section>

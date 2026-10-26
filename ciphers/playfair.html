@@ -194,7 +194,7 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
-        <p>Charles Wheatstone devised the Playfair cipher in 1854, and Lord Playfair championed it to British officials who were skeptical of more complicated cryptographic systems. Instead of encrypting one letter at a time, Playfair encrypts <em>pairs</em> of letters. That immediately defeats the single-letter frequency analysis that destroyed Caesar and monoalphabetic substitution.</p>
+        <p>Charles Wheatstone devised the Playfair cipher in 1854, and Lord Playfair championed it to British officials who were skeptical of more complicated cryptographic systems. Instead of encrypting one letter at a time, Playfair encrypts <em>pairs</em> of letters. The simple one-letter-to-one-letter frequency correspondence no longer applies; digraph and other language statistics still matter.</p>
         <p style="margin-top:1rem;">The British Army used Playfair operationally in the Second Boer War, and British and Commonwealth forces still used variants in both world wars for field traffic. It was fast enough for humans, stronger than earlier substitution ciphers, and compact enough for a pocket notebook.</p>
       </div>
     </div>
@@ -268,12 +268,12 @@
         <div class="attack-panel">
           <div class="attack-name">Digraph Frequency Analysis</div>
           <div class="attack-diff">Complexity: Moderate</div>
-          <p class="attack-desc">Playfair hides single-letter frequencies, but it does not hide language. Common English pairs like TH, HE, IN, ER, and AN still leave traces in ciphertext digraphs. Once enough traffic is collected, the key square can be reconstructed by testing candidate arrangements against those digraph statistics.</p>
+          <p class="attack-desc">Playfair changes the relationship between plaintext and ciphertext letter frequencies, but it does not erase language structure. Common English pairs like TH, HE, IN, ER, and AN still leave traces in ciphertext digraphs. Once enough traffic is collected, the key square can be reconstructed by testing candidate arrangements against those digraph statistics.</p>
         </div>
         <div class="attack-panel" style="margin-top:1rem;">
           <div class="attack-name">Known Plaintext Attack</div>
           <div class="attack-diff">Complexity: Low with sufficient known pairs</div>
-          <p class="attack-desc">If the attacker knows even a few plaintext-ciphertext pairs, the key square begins to unravel. Each known digraph pair constrains the positions of four letters at once. With stereotyped openings like "DEAR SIR" or "HEADQUARTERS," the necessary cribs are easy to obtain.</p>
+          <p class="attack-desc">If the attacker knows even a few plaintext-ciphertext pairs, the key square begins to unravel. Each known plaintext/ciphertext digraph supplies positional constraints involving up to four distinct letters. With stereotyped openings like "DEAR SIR" or "HEADQUARTERS," an analyst may be able to propose cribs, which still need validation.</p>
         </div>
       </div>
     </div>

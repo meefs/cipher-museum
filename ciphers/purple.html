@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Purple (Type 97) — The Cipher Museum</title>
-  <meta name="description" content="Purple machine (1939) — Japan's Type 97 stepping-switch cipher for diplomatic traffic. Broken on 20 September 1940 by Frank Rowlett and the US Army SIS team.">
+  <meta name="description" content="Purple was Japan’s Type 97 diplomatic stepping-switch cipher. Grotjan’s 20 September 1940 breakthrough helped the US Army SIS team reconstruct it.">
   <meta property="og:title" content="Purple (Type 97) — The Cipher Museum">
-  <meta property="og:description" content="Purple machine (1939) — Japan's Type 97 stepping-switch cipher for diplomatic traffic. Broken on 20 September 1940 by Frank Rowlett and the US Army SIS team.">
+  <meta property="og:description" content="Purple was Japan’s Type 97 diplomatic stepping-switch cipher. Grotjan’s 20 September 1940 breakthrough helped the US Army SIS team reconstruct it.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/purple.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Purple (Type 97) — The Cipher Museum">
-  <meta name="twitter:description" content="Purple machine (1939) — Japan's Type 97 stepping-switch cipher for diplomatic traffic. Broken on 20 September 1940 by Frank Rowlett and the US Army SIS team.">
+  <meta name="twitter:description" content="Purple was Japan’s Type 97 diplomatic stepping-switch cipher. Grotjan’s 20 September 1940 breakthrough helped the US Army SIS team reconstruct it.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/purple.html">
@@ -67,7 +67,7 @@
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Invented</span><span class="fact-value">1937 (Japanese Foreign Ministry)</span></div>
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Navy Technical Research Institute engineers, for the Foreign Ministry</span></div>
-    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Stepping-switch banks (6-vowel + 20-consonant split) plus daily key sheet</span></div>
+    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Stepping-switch banks (sixes/twenties split) plus daily key sheet</span></div>
     <div class="fact"><span class="fact-label">Keyspace</span><span class="fact-value">~9.45×10³² settings (26! plugboard × 6 switch arrangements × 25⁴ starting positions)</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Frank Rowlett, Genevieve Grotjan &amp; the US SIS · 20 September 1940</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Distinct sub-ciphers per character class create exploitable structure</span></div>
@@ -88,7 +88,7 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
         <p>Purple replaced Red for important Japanese diplomatic traffic in 1939. It used telephone-type stepping switches rather than Enigma-style rotors. Its wiring separated six electrical paths from twenty others. With the external alphabet connections, these groups need not correspond to vowels and consonants; “sixes” and “twenties” are the more precise names.</p>
-        <p>William Friedman recruited Frank Rowlett to lead the cryptanalytic attack. The team had no machine, no diagram, and no defector — only ciphertext. For 18 months they hunted patterns in stepping cycles. On the afternoon of September 20, 1940, junior cryptanalyst Genevieve Grotjan brought Rowlett a worksheet with a recurring alignment in the consonant alphabet. Within weeks, the SIS had constructed a working analog of Purple from inference alone.</p>
+        <p>William Friedman recruited Frank Rowlett to lead the cryptanalytic attack. The team reconstructed the machine without possessing its hardware. Intercepts, repeated messages and known or inferred plaintext all helped the analysis. For 18 months they hunted patterns in stepping cycles. On the afternoon of September 20, 1940, junior cryptanalyst Genevieve Grotjan brought Rowlett a worksheet with a recurring alignment in the twenties. Within weeks, the SIS had constructed a working analog of Purple from inference alone.</p>
         <div class="callout callout-info">
           <span class="callout-icon">💡</span>
           <div class="callout-body">
@@ -118,12 +118,12 @@
         <div class="attack-panel">
           <div class="attack-name">Stepping-Switch Cycle Analysis</div>
           <div class="attack-diff">Complexity: Hard · Frank Rowlett, SIS · 1939–1940</div>
-          <p class="attack-desc">Rowlett's team treated the consonant bank's stepping cycle as the leverage point. By tabulating which ciphertext letters appeared in which positions across many intercepts, they reconstructed the stepping behavior without ever observing the hardware. The vowel bank, with only six letters, fell first — providing partial cribs that constrained the larger consonant problem.</p>
+          <p class="attack-desc">Rowlett's team treated the twenties bank's stepping cycle as the leverage point. By tabulating which ciphertext letters appeared in which positions across many intercepts, they reconstructed the stepping behavior without ever observing the hardware. The sixes bank fell first — providing partial cribs that constrained the larger twenties problem.</p>
         </div>
         <div class="attack-panel">
           <div class="attack-name">Pattern Recognition (Grotjan's Insight)</div>
           <div class="attack-diff">Complexity: The single break · Genevieve Grotjan · 20 September 1940</div>
-          <p class="attack-desc">On a worksheet aligning intercept plaintext-ciphertext pairs across repeated daily keys, Grotjan identified a recurring relationship in the consonant alphabet — the alignment that revealed how the consonant bank's stepping switches were wired. Rowlett later called it "one of the great breaks of the war."</p>
+          <p class="attack-desc">On a worksheet aligning intercept plaintext-ciphertext pairs across repeated daily keys, Grotjan identified a recurring relationship in the twenties — an important step toward reconstructing that bank’s stepping switches. Rowlett later called it "one of the great breaks of the war."</p>
         </div>
         <div class="callout callout-warn">
           <span class="callout-icon">⚠️</span>
@@ -141,9 +141,9 @@
           <thead><tr><th>Concept from Purple</th><th>Modern Evolution</th></tr></thead>
           <tbody>
             <tr><td>Stepping-switch keystream</td><td>Linear feedback shift register (LFSR) stream ciphers</td></tr>
-            <tr><td>Per-character-class subcipher</td><td>Cautionary anti-pattern — modern ciphers treat all bits uniformly</td></tr>
+            <tr><td>Per-character-class subcipher</td><td>Cautionary anti-pattern — analyse the complete construction for exploitable partitions</td></tr>
             <tr><td>Daily key-sheet rotation</td><td>Modern key rotation policies (TLS session keys, signal protocol ratchets)</td></tr>
-            <tr><td>Reconstruction from traffic alone</td><td>Modern side-channel and known-ciphertext attack research</td></tr>
+            <tr><td>Reconstruction from traffic alone</td><td>Reconstructing a design from traffic is distinct from measuring physical side-channel leakage</td></tr>
           </tbody>
         </table>
         <div class="callout callout-info" style="margin-top:1rem;">
@@ -169,7 +169,7 @@
             <tr><td>Era</td><td>World War II · 1939–1945</td></tr>
             <tr><td>Status</td><td>Broken (1940)</td></tr>
             <tr><td>Inventor</td><td>Japanese Foreign Ministry (Type 97)</td></tr>
-            <tr><td>Year</td><td>1937 (deployed) · 1939 (replaced Red)</td></tr>
+            <tr><td>Year</td><td>Type 97 design; diplomatic deployment from 1939</td></tr>
             <tr><td>Key Type</td><td>Stepping-switch banks + daily key sheet</td></tr>
             <tr><td>Broken By</td><td>Rowlett, Grotjan &amp; the US SIS</td></tr>
             <tr><td>Modern Lesson</td><td>Avoid per-class sub-ciphers</td></tr>

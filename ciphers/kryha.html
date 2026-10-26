@@ -61,7 +61,7 @@
   </div>
   <h1 class="page-title">Kryha <span style="opacity:.6;font-weight:400;">Pocket cipher machine · 1924</span></h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">Sold as the unbreakable cipher of the future. Friedman broke a 1135-letter test message in 2 hours 41 minutes.</p>
+  <p class="page-tagline">Sold as the unbreakable cipher of the future. Friedman’s team solved a 1,135-letter test message in 2 hours 41 minutes.</p>
   <p class="exhibit-status-note">Broken (Friedman, 1933)</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Alexander von Kryha, Berlin</span></div>
@@ -79,7 +79,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Alexander von Kryha marketed clockwork cipher machines in the 1920s. Models varied: the small Liliput should not be confused with the larger Standard machine. Commercial claims of strength were later challenged by practical cryptanalysis.</p><p style="margin-top:1rem;">Sales pitches included challenge messages with cash prizes. Kryha’s machine was used commercially through the late 1920s and was even adopted by the German Foreign Office for some diplomatic traffic — a decision that intelligence historians regard as one of the more avoidable cryptographic mistakes of the inter-war period.</p>
+      <p>Alexander von Kryha marketed clockwork cipher machines in the 1920s. Models varied: the small Liliput should not be confused with the larger Standard machine. Commercial claims of strength were later challenged by practical cryptanalysis.</p><p style="margin-top:1rem;">The documented 1933 challenge tested a specific message and setup. Its solution provides stronger evidence than sales claims about the number of possible settings, but it should not be generalized to every model or deployment.</p>
     </div>
 
     <div class="panel">
@@ -89,12 +89,12 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Friedman & Kullback, 1933</div><div class="attack-diff">Complexity: Two analysts, 2 hours 41 minutes, ciphertext only</div><p class="attack-desc">William Friedman, Solomon Kullback, Frank Rowlett and Abraham Sinkov solved a 1,135-character Kryha test message in 2 hours 41 minutes in 1933. The result concerns that challenge and its conditions; it is not a universal running-time bound for every message or key.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Kasiski / index of coincidence</div><div class="attack-diff">Complexity: Routine for any polyalphabetic with finite period</div><p class="attack-desc">The repeated stepping structure creates related substitutions that can be exploited. How much ciphertext is needed depends on the settings, message and available information; “a few hundred characters” is not a guaranteed threshold.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Friedman, Kullback, Rowlett and Sinkov, 1933</div><div class="attack-diff">Reported challenge solution: four analysts, 2 hours 41 minutes</div><p class="attack-desc">William Friedman, Solomon Kullback, Frank Rowlett and Abraham Sinkov solved a 1,135-character Kryha test message in 2 hours 41 minutes in 1933. The result concerns that challenge and its conditions; it is not a universal running-time bound for every message or key.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Kasiski / index of coincidence</div><div class="attack-diff">Depends on the period, text length and available evidence</div><p class="attack-desc">The repeated stepping structure creates related substitutions that can be exploited. How much ciphertext is needed depends on the settings, message and available information; “a few hundred characters” is not a guaranteed threshold.</p></div></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
-      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Kryha lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Counting wheel orientations ≠ key strength</td><td>Key length ≠ entropy in modern key analysis</td></tr><tr><td>Vendor unbreakability claims with no public review</td><td>“Trust us” crypto vs. open peer-reviewed standards</td></tr><tr><td>Fixed stepping pattern = finite period</td><td>Why modern stream ciphers need state at least as large as the security level</td></tr><tr><td>2 hours 41 minutes is a long time to admire a cipher</td><td>A demonstrated attack is stronger evidence than a marketing keyspace count</td></tr></tbody></table></div>
+      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Kryha lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Counting wheel orientations ≠ key strength</td><td>Key length ≠ entropy in modern key analysis</td></tr><tr><td>Vendor unbreakability claims with no public review</td><td>“Trust us” crypto vs. open peer-reviewed standards</td></tr><tr><td>Fixed stepping pattern = finite period</td><td>A long period alone does not establish keystream unpredictability</td></tr><tr><td>2 hours 41 minutes is a long time to admire a cipher</td><td>A demonstrated attack is stronger evidence than a marketing keyspace count</td></tr></tbody></table></div>
     </div>
 
   </div>
@@ -118,23 +118,25 @@
   </div>
 </div>
 
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Lambros D. Callimahos, <a href="https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/tech-journals/qed.pdf">“Q. E. D.—2 Hours, 41 Minutes”</a>, <em>NSA Technical Journal</em>, pp. 13–34, especially p. 18 on the four analysts. The time applies to the documented 1933 test message.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">
     <a href="../ciphers/jefferson-disk.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Jefferson Disk</span>
-      <span class="related-card__tag">The 18th-century pocket cipher Kryha was meant to modernise</span>
+      <span class="related-card__tag">Compare a proposed alphabet-wheel mechanism</span>
     </a>
     <a href="../ciphers/enigma.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Enigma</span>
-      <span class="related-card__tag">The contemporary commercial machine that did achieve real complexity</span>
+      <span class="related-card__tag">A contemporary rotor-machine design</span>
     </a>
     <a href="../ciphers/m209.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Hagelin C-38 / M-209</span>
-      <span class="related-card__tag">The other commercial pocket machine that actually saw secure use</span>
+      <span class="related-card__tag">A widely deployed tactical pin-and-lug machine</span>
     </a>
   </div>
 </section>

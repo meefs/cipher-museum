@@ -1,0 +1,236 @@
+{
+  "items": [
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "scope": "Local desktop/mobile page and word-table interaction; external resources blocked.",
+  "pages": [
+    {
+      "slug": "sigsaly",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "beurling",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "geheimschreiber",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "hagelin-c36",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "nema",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "rs44",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "double-playfair",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "amsco",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "turning-grille",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "colossus",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "agnes-driscoll",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "elizebeth-friedman",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "rochefort",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "venona",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "mavis-batey",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "leo-marks",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "dunin",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "lasry",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "sigsaly",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "beurling",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "geheimschreiber",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "hagelin-c36",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "nema",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "rs44",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "double-playfair",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "amsco",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "turning-grille",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "colossus",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "agnes-driscoll",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "elizebeth-friedman",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "rochefort",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "venona",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "mavis-batey",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "leo-marks",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "dunin",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "lasry",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "failures": [],
+  "interactions": [
+    "Colossus planted-bias and no-bias control with explicit inconclusive result",
+    "Three manual-cipher complete results and opposite-mode controls; independent vectors tested in Node suite"
+  ]
+}

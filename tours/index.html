@@ -71,7 +71,10 @@
   function getVisitedCount(id, total){
     try{
       var arr = JSON.parse(localStorage.getItem(LS_PREFIX + id + '.visited')) || [];
-      return Math.min(arr.length, total);
+      if(!Array.isArray(arr)) return 0;
+      return arr.filter(function(idx, i){
+        return Number.isInteger(idx) && idx >= 0 && idx < total && arr.indexOf(idx) === i;
+      }).length;
     } catch(e){ return 0; }
   }
 

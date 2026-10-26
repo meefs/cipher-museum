@@ -99,14 +99,24 @@
 
   var currentStop = 0;
   var tourData = null;
+  var sessionVisited = null;
 
   function getVisited(){
-    try{ return JSON.parse(localStorage.getItem(LS_PREFIX + tourId + '.visited')) || []; }
-    catch(e){ return []; }
+    if(sessionVisited !== null) return sessionVisited.slice();
+    try{
+      var saved = JSON.parse(localStorage.getItem(LS_PREFIX + tourId + '.visited'));
+      if(!Array.isArray(saved)) return [];
+      return saved.filter(function(idx, i){
+        return Number.isInteger(idx) && idx >= 0 && idx < tourData.stops.length && saved.indexOf(idx) === i;
+      });
+    } catch(e){ return []; }
   }
   function markVisited(idx){
     var arr = getVisited();
-    if(arr.indexOf(idx)===-1){ arr.push(idx); localStorage.setItem(LS_PREFIX+tourId+'.visited', JSON.stringify(arr)); }
+    if(arr.indexOf(idx)===-1) arr.push(idx);
+    sessionVisited = arr;
+    try{ localStorage.setItem(LS_PREFIX+tourId+'.visited', JSON.stringify(arr)); }
+    catch(e){ /* Continue the tour with progress held for this page. */ }
   }
 
   function render(){

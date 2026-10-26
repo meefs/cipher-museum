@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caesar Cipher — The Cipher Museum</title>
-    <meta name="description" content="Caesar cipher — the simplest substitution cipher, used by Julius Caesar around 58 BC with a shift of 3. Broken by Al-Kindi's frequency analysis circa 850 AD.">
+    <meta name="description" content="Caesar’s recorded shift of three, demonstrated on a modern alphabet. Exhaustive shift search is small; frequency analysis helps rank candidate plaintexts.">
   <meta property="og:title" content="Caesar Cipher — The Cipher Museum">
-  <meta property="og:description" content="Caesar cipher — the simplest substitution cipher, used by Julius Caesar around 58 BC with a shift of 3. Broken by Al-Kindi's frequency analysis circa 850 AD.">
+  <meta property="og:description" content="Caesar’s recorded shift of three, demonstrated on a modern alphabet. Exhaustive shift search is small; frequency analysis helps rank candidate plaintexts.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/caesar.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Caesar Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Caesar cipher — the simplest substitution cipher, used by Julius Caesar around 58 BC with a shift of 3. Broken by Al-Kindi's frequency analysis circa 850 AD.">
+  <meta name="twitter:description" content="Caesar’s recorded shift of three, demonstrated on a modern alphabet. Exhaustive shift search is small; frequency analysis helps rank candidate plaintexts.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/caesar.html">
@@ -113,12 +113,12 @@
   <p class="page-tagline">"The simplest cipher — and the most famous failure in history."</p>
   <p class="exhibit-status-note">Exhaustive shift search; frequency evidence helps rank candidates.</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Invented</span><span class="fact-value">~58 BC</span></div>
-    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Julius Caesar</span></div>
+    <div class="fact"><span class="fact-label">Recorded use</span><span class="fact-value">First century BC</span></div>
+    <div class="fact"><span class="fact-label">Named user</span><span class="fact-value">Julius Caesar</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Shift (1–25)</span></div>
     <div class="fact"><span class="fact-label">Keyspace</span><span class="fact-value">25 possible keys</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Exhaustive search or language analysis; no specific ancient break claimed</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">S-boxes in AES</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Substitution and exhaustive key search</span></div>
   </div>
 </div>
 
@@ -205,13 +205,13 @@ Example (shift = 3):
       <div class="panel-body">
         <div class="attack-panel">
           <div class="attack-name">Frequency Analysis</div>
-          <div class="attack-diff">Complexity: Trivial · Invented: ~850 AD · By: Al-Kindi</div>
+          <div class="attack-diff">Al-Kindi described frequency analysis in the ninth century; no first break of Caesar’s messages is established here</div>
           <p class="attack-desc">Long English samples often have E among their most frequent letters, but individual messages may differ greatly. A Caesar shift preserves the observed letter counts. Treating the most common ciphertext letter as E proposes a key; other shifts and the resulting language must still be checked.</p>
         </div>
         <div class="attack-panel">
           <div class="attack-name">Brute Force</div>
           <div class="attack-diff">Complexity: Trivial · Keyspace: 25</div>
-          <p class="attack-desc">The entire keyspace is just 25 shifts. A human can test all 25 by hand in minutes. A computer does it in microseconds. This is the simplest form of exhaustive key search — a technique that scales to modern ciphers but requires vastly more computation.</p>
+          <p class="attack-desc">The entire keyspace is just 25 shifts. There are only 25 nonidentity shifts to test. Recognizing the intended plaintext can still require context. This is the simplest form of exhaustive key search — a technique that scales to modern ciphers but requires vastly more computation.</p>
         </div>
         <div class="callout callout-danger" style="margin-top:1rem;">
           <span class="callout-icon">⚠️</span>
@@ -227,15 +227,15 @@ Example (shift = 3):
         <table class="cipher-table">
           <thead><tr><th>Caesar Concept</th><th>Evolved Into</th></tr></thead>
           <tbody>
-            <tr><td>Letter substitution</td><td>Non-linear S-boxes in AES — designed to resist frequency analysis</td></tr>
+            <tr><td>Letter substitution</td><td>AES combines nonlinear byte substitution with key addition and diffusion; a substitution table alone preserves frequencies</td></tr>
             <tr><td>Shift = key</td><td>Symmetric key concept — both parties share a secret parameter</td></tr>
             <tr><td>25-key space</td><td>Generic search of a uniform AES-256 key takes about 2²⁵⁵ trials on average</td></tr>
-            <tr><td>Frequency leak</td><td>Diffusion principle — modern ciphers ensure every output bit depends on every input bit</td></tr>
+            <tr><td>Frequency leak</td><td>Diffusion in block-cipher design spreads input changes; this is not a property of every cryptographic construction</td></tr>
           </tbody>
         </table>
         <div class="callout callout-success" style="margin-top:1.5rem;">
           <span class="callout-icon">🎓</span>
-          <div class="callout-body"><p><strong>Shannon's confusion:</strong> Claude Shannon (1949) defined "confusion" as making the relationship between key and ciphertext as complex as possible. Caesar has zero confusion — the relationship is simply <code>C = P + 3</code>. AES's S-boxes are specifically designed to maximize confusion.</p></div>
+          <div class="callout-body"><p><strong>Shannon's confusion:</strong> Claude Shannon (1949) defined "confusion" as making the relationship between key and ciphertext as complex as possible. Caesar’s relation <code>C = P + k (mod 26)</code> is easy to invert for each candidate key. “Zero confusion” is not a numerical security measurement. AES combines nonlinear substitution with other round operations; its strength cannot be attributed to an S-box alone.</p></div>
         </div>
       </div>
     </div>

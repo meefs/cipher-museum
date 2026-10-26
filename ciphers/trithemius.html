@@ -79,7 +79,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Johannes Trithemius (1462–1516) was a Benedictine abbot, occult scholar, and one of the most consequential cryptographers of the German Renaissance. His <em>Steganographia</em> (written ~1499, published 1606) disguised a cipher manual as a book of angel-summoning magic; his <em>Polygraphia</em> (1518) was the first printed book on cryptography in the West. The progressive cipher described here appears in <em>Polygraphia</em>'s opening tables.</p><p style="margin-top:1rem;">Trithemius made successive shifted alphabets visible in a tabula recta. His historical table used a smaller Latin alphabet; the 26×26 table here is a modern adaptation. Later polyalphabetic systems developed several ways to choose alphabets, rather than one simple documented lineage.</p>
+      <p>Johannes Trithemius (1462–1516) was a Benedictine abbot, occult scholar, and one of the most consequential cryptographers of the German Renaissance. His <em>Steganographia</em> (written ~1499, published 1606) disguised a cipher manual as a book of angel-summoning magic; his <em>Polygraphia</em> (1518) was the first printed book on cryptography in the West. The progressive cipher described here appears in Book V of <em>Polygraphia</em>.</p><p style="margin-top:1rem;">Trithemius made successive shifted alphabets visible in a tabula recta. His historical table used a smaller Latin alphabet; the 26×26 table here is a modern adaptation. Later polyalphabetic systems developed several ways to choose alphabets, rather than one simple documented lineage.</p>
     </div>
 
     <div class="panel">
@@ -91,7 +91,7 @@ Cipher: S U G J E S U N Z J Z S U N</pre><p style="margin-top:1rem;">The optiona
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Try 26 starting offsets</div><div class="attack-diff">Complexity: Trivial</div><p class="attack-desc">Because the keystream is fixed and public, the only secret is the starting position. Twenty-six guesses recover the plaintext — Caesar-grade work.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Frequency drift</div><div class="attack-diff">Complexity: Easy on long messages</div><p class="attack-desc">After 26 letters the shifts wrap around and a 26-period structure emerges. Splitting the ciphertext into 26 columns and frequency-analysing each one yields the offset.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Try 26 starting offsets</div><div class="attack-diff">Complexity: Trivial</div><p class="attack-desc">Because the keystream is fixed and public, the only secret is the starting position. Trying all 26 offsets includes the correct plaintext; recognizing it still requires language or context.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Frequency drift</div><div class="attack-diff">Complexity: Easy on long messages</div><p class="attack-desc">After 26 letters the shifts wrap around and a 26-period structure emerges. The known position-dependent shifts can simply be subtracted first, leaving one Caesar shift to test. Column statistics are possible but unnecessary for this model.</p></div></div>
     </div>
 
     <div class="panel">
@@ -119,6 +119,8 @@ Cipher: S U G J E S U N Z J Z S U N</pre><p style="margin-top:1rem;">The optiona
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading-title"><div class="panel-head"><h2 class="panel-title" id="audit-reading-title">Sources and Reading</h2></div><div class="panel-body"><p><em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, David Kahn (revised edition, 1996), “On the Origin of a Species”: the 1518 printing of <em>Polygraphia</em> and Book V’s tabula recta.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>

@@ -1,0 +1,446 @@
+{
+  "items": [
+    21,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "scope": "Local desktop/mobile page and word-table interaction; external resources blocked.",
+  "pages": [
+    {
+      "file": "hall-of-foundations/closest-vector.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/elliptic-curves-real.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/entropy.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/euler-fermat.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/finite-fields.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/group-theory.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/index.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/interpolation.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/lattices-svp.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/learning-with-errors.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/modular-arithmetic.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/modularity-exhibit.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/one-way-function.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/pairings.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/polynomial-rings.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/prime-number-theorem.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/random-oracle.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/reduction.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/aes.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/rsa.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/diffie-hellman.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/ecdsa.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/zero-knowledge-proofs.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/patterson-jefferson-cipher.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/autokey.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/cardano-autokey.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/gronsfeld.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/four-square.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/rot13.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/scytale.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/caesar.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/slidex.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "comparison.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "timeline.html",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/closest-vector.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/elliptic-curves-real.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/entropy.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/euler-fermat.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/finite-fields.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/group-theory.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/index.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/interpolation.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/lattices-svp.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/learning-with-errors.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/modular-arithmetic.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/modularity-exhibit.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/one-way-function.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/pairings.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/polynomial-rings.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/prime-number-theorem.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/random-oracle.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "hall-of-foundations/reduction.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/aes.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/rsa.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/diffie-hellman.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/ecdsa.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/zero-knowledge-proofs.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/patterson-jefferson-cipher.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/autokey.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/cardano-autokey.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/gronsfeld.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/four-square.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/rot13.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/scytale.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/caesar.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "ciphers/slidex.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "comparison.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "file": "timeline.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "failures": [],
+  "interactions": [
+    {
+      "file": "hall-of-foundations/learning-with-errors.html",
+      "width": 1280,
+      "lwe": "Recovered s exactly. With no error this is just algebra.",
+      "decoding": "At error ±1: 200/200 decryptions correct (100%)."
+    },
+    {
+      "file": "ciphers/ecdsa.html",
+      "width": 1280,
+      "result": "k = (h₁ − h₂) / (s₁ − s₂) = 7 ✓\nd = (s₁k − h₁) / r = 42 — that is the private key, recovered from two signatures and nothing else.\nNo search, no guessing. This is the arithmetic that cost Sony its console."
+    },
+    {
+      "file": "hall-of-foundations/learning-with-errors.html",
+      "width": 390,
+      "lwe": "Recovered s exactly. With no error this is just algebra.",
+      "decoding": "At error ±1: 200/200 decryptions correct (100%)."
+    },
+    {
+      "file": "ciphers/ecdsa.html",
+      "width": 390,
+      "result": "k = (h₁ − h₂) / (s₁ − s₂) = 7 ✓\nd = (s₁k − h₁) / r = 42 — that is the private key, recovered from two signatures and nothing else.\nNo search, no guessing. This is the arithmetic that cost Sony its console."
+    }
+  ]
+}

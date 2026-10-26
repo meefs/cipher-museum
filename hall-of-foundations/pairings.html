@@ -56,13 +56,7 @@
   <div class="hero">
     <div class="kicker">A Tool Used by Some zk-SNARKs</div>
     <h1>Multiplying the<br><em>unmultipliable</em></h1>
-    <p class="standfirst">
-      On an elliptic curve you can add points, but you cannot multiply two of
-      them together &#8212; and the discrete log keeps their secret scalars hidden.
-      A pairing is a strange, powerful function that reaches across two points and
-      checks a multiplicative relationship between those hidden scalars, without
-      ever revealing them.
-    </p>
+    <p class="standfirst">Pairings connect elliptic-curve groups to a target group so that scaling two input points becomes exponentiation by the product of their scalars. This algebraic relationship supports some proof and signature schemes. Hiding those scalars requires suitable source and target groups and security assumptions.</p>
   </div>
 
   <div class="honesty"><strong>A model of one identity.</strong> This page illustrates bilinearity with small modular powers. It neither hides its inputs nor implements a pairing or privacy protocol.</div>
@@ -77,9 +71,7 @@
     </p>
     <div class="eq">e(aP, bQ) = e(P, Q)<sup>a&#183;b</sup></div>
     <p>
-      That's the entire superpower. The scalars a and b stay locked behind the
-      discrete log on the curve, but the pairing lets anyone verify that the
-      multiplication a&#183;b happened &#8212; blindly.
+      The identity enables checks on products of scalars without directly computing those scalars. It does not by itself establish zero knowledge or prevent attacks in either group.
     </p>
   </section>
 
@@ -125,10 +117,7 @@
       STARKs verify with hashes and no pairing at all; Bulletproofs and
       Halo-style systems get short proofs and recursion from ordinary
       discrete-log groups. The distinction matters here more than most places in
-      this hall: pairing-friendly curves rest on the discrete log, so a quantum
-      computer takes them with everything else in
-      <a href="modular-arithmetic.html">&#167;143</a>'s lineage &#8212; while
-      hash-based STARKs are expected to survive. Succinct verification has more
+      this hall: a sufficiently capable fault-tolerant quantum computer running Shor’s algorithm would defeat the discrete-log assumptions used by pairing-friendly curves. Hash-based proof systems are candidates for post-quantum use, subject to their specific construction, parameters and quantum security analysis. Succinct verification has more
       than one foundation, and they don't share a fate.
     </p>
   </section>

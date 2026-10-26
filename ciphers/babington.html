@@ -70,8 +70,8 @@
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Used By</span><span class="fact-value">Mary, Queen of Scots &amp; Anthony Babington</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1586 (correspondence May–August)</span></div>
-    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Nomenclator: 23 letter symbols + 36 codewords + 4 nulls + 1 "doubleth"</span></div>
-    <div class="fact"><span class="fact-label">Keyspace</span><span class="fact-value">~64! permutations of glyph-to-token (effectively brute-force-immune for the era)</span></div>
+    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Teaching model: 23 letter symbols + 36 codewords + 4 nulls + 1 "doubleth"</span></div>
+    <div class="fact"><span class="fact-label">Keyspace</span><span class="fact-value">Teaching model: 64! token assignments, not a historical security estimate</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Thomas Phelippes, working for Sir Francis Walsingham · within days of interception</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Cryptography is an operational system, not just an algorithm — channel security and forgery resistance matter</span></div>
   </div>
@@ -153,7 +153,7 @@
             <text class="bb-sym" x="200" y="192" style="font-size:18px;fill:#e8d5a3">⇒</text>
             <text x="280" y="195" class="bb-lbl" style="font-size:14px;fill:#e8d5a3">decodes as "LL"</text>
           </svg>
-          <figcaption class="figure-caption">Common words like THE, QUEEN, and MUST got their own glyphs; rare letters used letter symbols; dashed glyphs are nulls (decoys dropped on decode); one trap glyph doubled the next letter — exactly as the original 1586 key did.</figcaption>
+          <figcaption class="figure-caption">Museum teaching inventory: letter signs, codewords, nulls and a doubling instruction. These drawn glyphs and assignments are illustrative, not a transcription of the 1586 key.</figcaption>
         </figure>
         <p style="margin-top:1rem;">This software uses a greedy-longest-match scan: it selects a codeword where possible, otherwise a letter token. It can insert nulls and abbreviate doubled letters. These are the model’s deterministic rules, not a documented reconstruction of a clerk’s exact working procedure.</p>
       </div>
@@ -169,7 +169,7 @@
         </div>
         <div class="attack-panel">
           <div class="attack-name">Ciphertext Forgery (Active Attack)</div>
-          <div class="attack-diff">Complexity: The first known forged-ciphertext attack in history</div>
+          <div class="attack-diff">A documented forged-postscript episode</div>
           <p class="attack-desc">Knowledge of an enciphering key lets an attacker create plausible new ciphertext. Phelippes’s forged postscript illustrates impersonation after key compromise. It is not a formal chosen-ciphertext attack: no decryption-oracle experiment is established, and the requested reply is not known to have arrived.</p>
         </div>
         <div class="attack-panel">
@@ -239,7 +239,7 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-swords"/></svg></span><span class="panel-title">Break This Cipher</span></div>
       <div class="panel-body">
-        <p>Decode this intercepted dispatch (seed: <code>BABINGTON</code>):</p>
+        <p>Decode this synthetic teaching dispatch (seed: <code>BABINGTON</code>):</p>
         <pre style="white-space:pre-wrap;word-break:break-all;">⟨w25⟩ ⟨a14⟩ ⟨w32⟩ ⟨a20⟩ ⟨w33⟩ ⟨a17⟩ ⟨x2⟩</pre>
         <details style="margin-top:.5rem;"><summary style="cursor:pointer;color:var(--gold);">Reveal solution</summary>
           <p style="margin-top:.5rem;font-family:var(--fm);">The dispatch reads <strong>DAGGER ELIZABETH AT THE TOWER DEATH</strong> — paste the ciphertext into the demo and switch to <em>Decrypt</em> to verify. The seed shuffles the symbol-to-token assignment, so each glyph stands for whichever word the shuffle deals it.</p>
@@ -262,7 +262,7 @@
     <a href="../ciphers/great-cipher.html" class="related-card">
       <span class="related-card__number">Exhibit 38</span>
       <span class="related-card__name">The Great Cipher</span>
-      <span class="related-card__tag">The trick that worked: it had a "delete" trap to Babington's "double" trap</span>
+      <span class="related-card__tag">Compare another historical nomenclator</span>
     </a>
     <a href="../halls/codebreakers.html" class="related-card">
       <span class="related-card__number">Hall X</span>

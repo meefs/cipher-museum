@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learn — The Cipher Museum</title>
-  <meta name="description" content="Understand how classical ciphers work and how they became the foundation for modern encryption — from Caesar's shift to AES.">
+  <meta name="description" content="Understand classical ciphers and compare their mechanisms with modern encryption — from Caesar's shift to AES.">
   <meta property="og:title" content="Learn — The Cipher Museum">
-  <meta property="og:description" content="Understand how classical ciphers work and how they became the foundation for modern encryption.">
+  <meta property="og:description" content="Understand classical ciphers and compare their mechanisms with modern encryption.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/learn.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Learn — The Cipher Museum">
-  <meta name="twitter:description" content="Understand how classical ciphers work and how they became the foundation for modern encryption.">
+  <meta name="twitter:description" content="Understand classical ciphers and compare their mechanisms with modern encryption.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/learn.html">
@@ -68,8 +68,8 @@
   <div class="content-mid">
     <div class="section-head" style="margin-bottom:2.5rem;">
       <span class="section-eyebrow">Why History Matters</span>
-      <h2 class="section-title">Every Classical Cipher Teaches Modern Cryptography</h2>
-      <p class="section-sub">The same ideas that protected Caesar's dispatches now protect your bank account — just with stronger mathematics. Each exhibit includes a "What It Teaches" section connecting the classical failure to the modern solution.</p>
+      <h2 class="section-title">What Classical Ciphers Can Teach</h2>
+      <p class="section-sub">Historical ciphers offer useful comparisons with modern substitution, permutation and key management. These comparisons explain concepts; they do not establish a direct historical path from a classical system to AES or another modern design.</p>
     </div>
     <div class="learn-panels-grid">
       <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-gear"/></svg></span><span class="panel-title">Substitution → S-Boxes</span></div><div class="panel-body"><p style="font-size:.95rem;">Classical substitutions illustrate a basic idea also present in AES. Its nonlinear S-boxes operate with key mixing and diffusion; a fixed substitution table alone does not provide modern security.</p></div></div>
@@ -77,7 +77,7 @@
       <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">Transposition → Permutation</span></div><div class="panel-body"><p style="font-size:.95rem;">Classical transpositions permute symbols. AES ShiftRows permutes byte positions and MixColumns combines bytes linearly; these are useful conceptual comparisons, not a claim of direct historical descent.</p></div></div>
       <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-gear"/></svg></span><span class="panel-title">Rotor Machines → Block Ciphers</span></div><div class="panel-body"><p style="font-size:.95rem;">Enigma changes its substitution as it steps. Modern block ciphers use repeated designed round operations. Compare the mechanisms without treating one as a direct implementation of the other.</p></div></div>
       <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-diamond"/></svg></span><span class="panel-title">Lorenz → Computing</span></div><div class="panel-body"><p style="font-size:.95rem;">Manual cryptanalysis recovered Lorenz messages and inferred the machine before Colossus. From February 1944, Colossus accelerated statistical searches for wheel settings; it was an important early programmable electronic computer.</p></div></div>
-      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">One-Time Pad → Perfect Secrecy</span></div><div class="panel-body"><p style="font-size:.95rem;">Shannon proved the OTP is information-theoretically secure. Practical encryption often targets computational security with shorter keys. Information-theoretic and computational security are different guarantees, with different assumptions.</p></div></div>
+      <div class="panel"><div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">One-Time Pad → Perfect Secrecy</span></div><div class="panel-body"><p style="font-size:.95rem;">Shannon formalized perfect secrecy: an OTP achieves it for fixed-length messages when the pad is uniformly random, secret, independent of the message and never reused. Practical encryption often targets computational security with shorter keys. Information-theoretic and computational security are different guarantees, with different assumptions.</p></div></div>
     </div>
   </div>
 </section>
@@ -96,7 +96,7 @@
     <a href="modern.html" class="cipher-card">
       <div class="card-head"><span class="card-num">Deep Dive</span></div>
       <h3 class="card-name">Modern Cryptography</h3>
-      <p class="card-desc">How classical failures became AES, RSA, and post-quantum security. The full evolution from pen-and-paper to computational security.</p>
+      <p class="card-desc">Compare classical cipher mechanisms with AES, RSA and post-quantum security, and learn the assumptions behind computational security.</p>
       <div class="card-foot"><div class="card-badges"><span class="badge era-theoretical">Advanced</span></div><span class="card-arrow">→</span></div>
     </a>
 
@@ -150,10 +150,11 @@
   <div class="content-narrow">
     <span class="section-eyebrow">New to Cryptography?</span>
     <h2 class="section-title">Start with the Caesar Cipher</h2>
-    <p style="margin-bottom:2rem;">The simplest cipher in history is the best place to begin. Learn how Julius Caesar encoded messages — then see how the same idea powers modern encryption.</p>
+    <p style="margin-bottom:2rem;">A fixed alphabet shift is a useful place to begin. Explore the cipher associated with Julius Caesar, then compare its limitations with the requirements of modern encryption.</p>
     <a href="ciphers/caesar.html" class="hero-cta" style="display:inline-flex;">Start with Caesar →</a>
   </div>
 </section>
+<section class="section"><h2>Reading</h2><p>Joshua Holden, <em>The Mathematics of Secrets: Cryptography from Caesar Ciphers to Digital Encryption</em> (2017 edition), chapters 4–5; Claude E. Shannon, “Communication Theory of Secrecy Systems” (1949), §§10 and 23. These support the conceptual comparisons and perfect-secrecy conditions.</p></section>
 </main>
 
 <footer></footer>

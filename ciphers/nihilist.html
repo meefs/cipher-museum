@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nihilist Cipher — The Cipher Museum</title>
-    <meta name="description" content="Nihilist cipher (1880s) — the Russian revolutionary classic adding Polybius numbers to a repeating keyword's Polybius numbers by plain addition. Broken early 1900s.">
+    <meta name="description" content="The additive Nihilist cipher sums plaintext and repeating-key Polybius coordinates. Its traditional Russian revolutionary attribution is qualified, and it differs from Nihilist transposition.">
   <meta property="og:title" content="Nihilist Cipher — The Cipher Museum">
-  <meta property="og:description" content="Nihilist cipher (1880s) — the Russian revolutionary classic adding Polybius numbers to a repeating keyword's Polybius numbers by plain addition. Broken early 1900s.">
+  <meta property="og:description" content="The additive Nihilist cipher sums plaintext and repeating-key Polybius coordinates. Its traditional Russian revolutionary attribution is qualified, and it differs from Nihilist transposition.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/nihilist.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nihilist Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Nihilist cipher (1880s) — the Russian revolutionary classic adding Polybius numbers to a repeating keyword's Polybius numbers by plain addition. Broken early 1900s.">
+  <meta name="twitter:description" content="The additive Nihilist cipher sums plaintext and repeating-key Polybius coordinates. Its traditional Russian revolutionary attribution is qualified, and it differs from Nihilist transposition.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/nihilist.html">
@@ -69,7 +69,7 @@
   <p class="page-tagline">Russian revolutionaries vs the Tsar's secret police — arithmetic as armor</p>
   <p class="exhibit-status-note">Frequency analysis of digit pairs · Kasiski-equivalent</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Russian Nihilist movement</span></div>
+    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Traditionally associated with Russian revolutionaries</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1880s</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Polybius square + numeric keyword</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Frequency analysis of digit pairs · Kasiski-equivalent</span></div>
@@ -84,12 +84,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Used by Russian revolutionary nihilists evading the Tsar’s Okhrana secret police, this cipher combined Polybius coordinates with Vigenère-style addition — a system designed to be memorized, performed without equipment, and changed instantly when compromised.</p>
+      <p>Traditionally associated with Russian revolutionaries, this cipher combines Polybius coordinates with Vigenère-style addition — a system designed to be memorized, performed without equipment, and changed instantly when compromised.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The Nihilist cipher took its name from the Russian revolutionary movement of the 1880s that used it. Facing the Okhrana — the Tsar's secret police and one of the world's first modern intelligence agencies — the revolutionaries needed a cipher that could be memorized, performed without equipment, and changed quickly when compromised.</p><p style="margin-top:1rem;">The cipher combined Polybius square substitution with Vigenère-style numeric addition, producing numerical ciphertext that looked like arbitrary number sequences to an interceptor.</p></div>
+      <div class="panel-body"><p>The name is traditionally associated with Russian revolutionaries of the late nineteenth century. Kahn qualifies their authorship as possible, not established. The additive system shown here converts plaintext and a repeating keyword to Polybius coordinates and adds the resulting integers.</p><p style="margin-top:1rem;">The cipher combined Polybius square substitution with Vigenère-style numeric addition, producing numerical ciphertext that looked like arbitrary number sequences to an interceptor.</p></div>
     </div>
 
     <div class="panel">
@@ -145,9 +145,9 @@ Cipher:    33  52  56  63  35  65</pre>
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from Nihilist Cipher</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>Polybius + addition (two operations)</td><td>AES: four operations per round create layered security</td></tr>
-<tr><td>Numeric output hides letter frequencies</td><td>AES output: statistically indistinguishable from random bytes</td></tr>
-<tr><td>Repeating numeric key</td><td>Modern ciphers use key schedules to generate unique subkeys for each round</td></tr></tbody>
+          <tbody><tr><td>Polybius + addition (two operations)</td><td>AES combines several operations; its final round omits MixColumns</td></tr>
+<tr><td>Numeric output hides letter frequencies</td><td>Numeric notation alone hides no statistics; modern security requires a defined construction and attack model</td></tr>
+<tr><td>Repeating numeric key</td><td>Modern designs derive round keys; distinctness alone is not a security guarantee</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -165,7 +165,7 @@ Cipher:    33  52  56  63  35  65</pre>
             <tr><td>Exhibit</td><td>19 of 172</td></tr>
             <tr><td>Era</td><td>1880s · Russia</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
-            <tr><td>Inventor</td><td>Russian Nihilist movement</td></tr>
+            <tr><td>Inventor</td><td>Traditionally associated with Russian revolutionaries</td></tr>
             <tr><td>Year</td><td>~1880s</td></tr>
             <tr><td>Key Type</td><td>Polybius square + numeric keyword</td></tr>
             <tr><td>Broken By</td><td>Frequency analysis of digit pairs · Kasiski-equivalent</td></tr>
@@ -177,7 +177,7 @@ Cipher:    33  52  56  63  35  65</pre>
     <div class="panel" style="margin-top:1rem;">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-compass"/></svg></span><span class="panel-title">Two Nihilist Ciphers</span></div>
       <div class="panel-body">
-        <p style="font-size:.92rem;line-height:1.7;">The term "Nihilist cipher" can refer to two related constructions: a Polybius-style substitution-only form and the stronger additive form shown here (Polybius numbers plus a repeating numeric key).</p>
+        <p style="font-size:.92rem;line-height:1.7;">The name also appears in <strong>Nihilist transposition</strong>, a different construction that reorders rows and columns. It should not be confused with the additive substitution shown here. A source using the name alone needs further procedural detail before its method can be identified.</p>
         <p style="font-size:.92rem;line-height:1.7;margin-top:.7rem;">Operationally, archives and memoirs use the same label for both. Distinguishing which form is present is a key first step in successful cryptanalysis.</p>
       </div>
     </div>
@@ -185,6 +185,8 @@ Cipher:    33  52  56  63  35  65</pre>
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), discussion of Russian cryptography, on the additive cipher and its qualified attribution; Helen Fouché Gaines, <em>Cryptanalysis: A Study of Ciphers and Their Solution</em> (1939; Dover reprint 1956), on Nihilist transposition and additive substitution as distinct systems.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

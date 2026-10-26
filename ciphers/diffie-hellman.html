@@ -60,9 +60,9 @@
   </div>
   <h1 class="page-title">Diffie-Hellman Key Exchange</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--secure" href="../museum-map.html#trust-labels" title="Still considered secure when used correctly with modern key handling." aria-label="Trust label: Secure (Modern). Still considered secure when used correctly with modern key handling."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span class="trust-label__text">Secure (Modern)</span></a></div>
-  <p class="page-tagline">Two strangers create a shared secret over an open wire &mdash; the discovery that broke the millennia-old &lsquo;you must meet first' assumption.</p>
+  <p class="page-tagline">Key agreement over a public channel: computational assumptions protect against passive eavesdropping; authentication addresses active impersonation.</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Whitfield Diffie &amp; Martin Hellman, &lsquo;New Directions in Cryptography' (1976); Ralph Merkle independently</span></div>
+    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Whitfield Diffie &amp; Martin Hellman, &lsquo;New Directions in Cryptography' (1976); Ralph Merkle’s related public-key research</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1976</span></div>
     <div class="fact"><span class="fact-label">Type</span><span class="fact-value">Public-key key-agreement protocol &mdash; <strong>not a cipher</strong> (does not encrypt data)</span></div>
     <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Widely used; finite-field DH and elliptic-curve variants such as X25519 have different parameter choices</span></div>
@@ -80,7 +80,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Diffie and Hellman published &lsquo;New Directions in Cryptography' in <em>IEEE Transactions on Information Theory</em>, November 1976. The paper proposed both public-key encryption (as a goal) and the key-exchange protocol (as a working example). Three British researchers at GCHQ &mdash; James Ellis, Clifford Cocks, and Malcolm Williamson &mdash; had discovered the same ideas between 1969 and 1974 but classification kept their work secret until 1997. The 1976 paper directly inspired Rivest, Shamir, and Adleman to find RSA the following year.</p></div>
+      <div class="panel-body"><p>Diffie and Hellman published &lsquo;New Directions in Cryptography' in <em>IEEE Transactions on Information Theory</em>, November 1976. The paper proposed both public-key encryption (as a goal) and the key-exchange protocol (as a working example). Three British researchers at GCHQ &mdash; James Ellis, Clifford Cocks, and Malcolm Williamson &mdash; developed classified public-key ideas during 1970–1974 but classification kept their work secret until 1997. The 1976 paper directly inspired Rivest, Shamir, and Adleman to find RSA the following year.</p></div>
     </div>
 
     <div class="panel">
@@ -92,13 +92,13 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">One direction, with toy numbers</span></div>
       <div class="panel-body">
         <p>With <em>p</em> = 23, <em>g</em> = 5, <em>A</em> = 8 and <em>B</em> = 19, a discrete-log solver finds <em>a</em> = 6 because 5<sup>6</sup> mod 23 = 8. It can then compute the shared value 19<sup>6</sup> mod 23 = 2. These tiny parameters are for arithmetic only.</p>
-        <p class="source-note">Source: Boneh and Shoup, <a href="https://toc.cryptobook.us/" target="_blank" rel="noopener noreferrer"><em>A Graduate Course in Applied Cryptography</em>, version 0.6 (January 2023), §10.4.2</a>. Learning whether the value looks random is a further security question, distinct from merely computing it.</p>
+        <p class="source-note">Source: Dan Boneh and Victor Shoup, <em>A Graduate Course in Applied Cryptography</em>, version 0.6 (January 2023), §10.4.2. Learning whether the value looks random is a further security question, distinct from merely computing it.</p>
       </div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
-      <div class="panel-body"><p>Resistance to recovering the shared value rests on the computational Diffie–Hellman assumption in the selected group; discrete-log hardness alone does not establish that assumption. Parameter size, subgroup choice and public-key validation all matter; a bit length alone does not establish security. The 2015 <em>Logjam</em> attack exploited servers using common 512-bit primes &mdash; the lesson was to use larger groups and to switch to elliptic curves where 256-bit keys suffice (X25519). DH is vulnerable to <em>active</em> man-in-the-middle attacks because the exchanged values are unauthenticated &mdash; in practice DH is always combined with authentication (for example signatures, certificates or a suitable pre-shared-key protocol). A human password requires a properly designed password-authenticated key exchange, not an improvised password check.</p></div>
+      <div class="panel-body"><p>Resistance to recovering the shared value rests on the computational Diffie–Hellman assumption in the selected group; discrete-log hardness alone does not establish that assumption. Parameter size, subgroup choice and public-key validation all matter; a bit length alone does not establish security. The 2015 Logjam work demonstrated a downgrade to export-grade 512-bit finite-field DH and studied the benefits of precomputation for widely shared groups. Suitable group sizes and validation matter; moving to an elliptic curve also requires a specified secure construction. DH is vulnerable to <em>active</em> man-in-the-middle attacks because the exchanged values are unauthenticated &mdash; protocols that need protection from active attackers must combine DH with authentication (for example signatures, certificates or a suitable pre-shared-key protocol). A human password requires a properly designed password-authenticated key exchange, not an improvised password check.</p></div>
     </div>
 
     <div class="panel">
@@ -110,7 +110,7 @@
             <tr><td>TLS 1.3 (HTTPS)</td><td>TLS 1.3 supports ephemeral finite-field DH, ECDH and pre-shared-key modes; PSK-only exchange does not provide the same forward-secrecy guarantee</td></tr>
             <tr><td>Signal</td><td>X3DH and the classical Double Ratchet are historical foundations. Signal later introduced PQXDH and the Triple Ratchet with a continuing post-quantum ratchet</td></tr>
             <tr><td>SSH</td><td>DH and ECDH are among SSH key-exchange families; negotiated choices vary</td></tr>
-            <tr><td>WireGuard / Tor</td><td>Both built on Curve25519 ECDH</td></tr>
+            <tr><td>WireGuard / Tor</td><td>WireGuard uses Curve25519; Tor’s ntor handshake also uses Curve25519. Their complete protocols differ.</td></tr>
             <tr><td>IPsec / IKEv2</td><td>IKEv2 negotiates key-exchange groups; no single group set applies to every VPN</td></tr>
           </tbody>
         </table>
@@ -128,7 +128,7 @@
           <tbody>
             <tr><td>Era</td><td>Modern &middot; 1976</td></tr>
             <tr><td>Status</td><td>Widely used; finite-field DH and elliptic-curve variants such as X25519 have different parameter choices</td></tr>
-            <tr><td>Origin</td><td>Whitfield Diffie &amp; Martin Hellman, &lsquo;New Directions in Cryptography' (1976); Ralph Merkle independently</td></tr>
+            <tr><td>Origin</td><td>Whitfield Diffie &amp; Martin Hellman, &lsquo;New Directions in Cryptography' (1976); Ralph Merkle’s related public-key research</td></tr>
             <tr><td>Year</td><td>1976</td></tr>
             <tr><td>Type</td><td>Public-key key-agreement protocol &mdash; <strong>not a cipher</strong> (does not encrypt data)</td></tr>
             <tr><td>Modern Role</td><td>Contributes shared secrets to TLS, SSH, Signal and WireGuard; some protocols also combine post-quantum mechanisms</td></tr>
@@ -157,7 +157,7 @@
     <a href="../ciphers/one-time-pad.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">One-Time Pad</span>
-      <span class="related-card__tag">The earlier &lsquo;perfect' system DH made practical to bootstrap</span>
+      <span class="related-card__tag">An information-theoretic guarantee that computational DH key agreement does not supply</span>
     </a>
       <a href="../hall-of-foundations/modular-arithmetic.html" class="related-card">
       <span class="related-card__number">&sect;143 &middot; Foundations</span>

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ECDSA &mdash; The Cipher Museum</title>
-  <meta name="description" content="ECDSA (1992) — signing with elliptic curves, and the one-line mistake that handed Sony's PlayStation 3 master key to the world.">
+  <meta name="description" content="ECDSA signs messages using elliptic curves. Reusing a secret nonce across distinct message hashes can expose the signing key, as the PlayStation 3 episode illustrates.">
   <meta property="og:title" content="ECDSA &mdash; The Cipher Museum">
-  <meta property="og:description" content="ECDSA (1992) — signing with elliptic curves, and the one-line mistake that handed Sony's PlayStation 3 master key to the world.">
+  <meta property="og:description" content="ECDSA signs messages using elliptic curves. Reusing a secret nonce across distinct message hashes can expose the signing key, as the PlayStation 3 episode illustrates.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/ecdsa.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ECDSA &mdash; The Cipher Museum">
-  <meta name="twitter:description" content="ECDSA (1992) — signing with elliptic curves, and the one-line mistake that handed Sony's PlayStation 3 master key to the world.">
+  <meta name="twitter:description" content="ECDSA signs messages using elliptic curves. Reusing a secret nonce across distinct message hashes can expose the signing key, as the PlayStation 3 episode illustrates.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/ecdsa.html">
@@ -60,12 +60,12 @@
   </div>
   <h1 class="page-title">ECDSA</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--secure" href="../museum-map.html#trust-labels" title="Still considered secure when used correctly with modern key handling." aria-label="Trust label: Secure (Modern). Still considered secure when used correctly with modern key handling."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span class="trust-label__text">Secure (Modern)</span></a></div>
-  <p class="page-tagline">A signature scheme built on elliptic curves &mdash; and the one-line mistake that handed Sony's PlayStation 3 master key to the world.</p>
+  <p class="page-tagline">A signature scheme built on elliptic curves, with nonce handling essential to protecting the signing key.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Scott Vanstone, 1992; standardised as ANSI X9.62 (1999) and FIPS 186</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1992</span></div>
     <div class="fact"><span class="fact-label">Type</span><span class="fact-value">Digital signature algorithm &mdash; <strong>not a cipher</strong> (verifies a signature against a key, encrypts nothing)</span></div>
-    <div class="fact"><span class="fact-label">Rests on</span><span class="fact-value">The elliptic-curve discrete logarithm problem</span></div>
+    <div class="fact"><span class="fact-label">Rests on</span><span class="fact-value">Scheme-specific assumptions; solving ECDLP breaks key secrecy</span></div>
     <div class="fact"><span class="fact-label">Status</span><span class="fact-value">Signs TLS certificates, Bitcoin and Ethereum transactions, and software updates</span></div>
   </div>
 </div>
@@ -76,7 +76,7 @@
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
       <p>Encryption protects confidentiality. A digital signature lets a verifier check a message against a public key. Certificates, authorization rules and context connect that key to a domain, person or permitted action. ECDSA is used for many certificates, software signatures and cryptocurrency transactions, although those ecosystems also use other signature schemes.</p>
-      <p>It is also the museum's clearest case of a scheme whose mathematics is sound and whose <em>implementations</em> have failed repeatedly. Nonce mistakes are a particularly revealing example; secure implementation also requires careful arithmetic, validation and side-channel protection.</p>
+      <p>It is also the museum's clearest case of the difference between a mathematical signature construction and implementation failures. Nonce mistakes are a particularly revealing example; secure implementation also requires careful arithmetic, validation and side-channel protection.</p>
     </div>
 
     <div class="panel">
@@ -90,7 +90,7 @@
         <p>Fix a curve, a base point <em>G</em> on it, and the number <em>n</em> of points <em>G</em> generates. A private key is a number <em>d</em>; the matching public key is the point <em>Q</em> = <em>dG</em>. Recovering <em>d</em> from <em>Q</em> means solving the elliptic-curve discrete logarithm problem, for which no practical classical attack is known on properly chosen large groups.</p>
         <p>To sign a message hash <em>h</em>, pick a one-time random number <em>k</em> &mdash; the <strong>nonce</strong> &mdash; and compute:</p>
         <p style="font-family:ui-monospace,monospace;background:var(--bg2,rgba(255,255,255,.04));padding:12px 16px;border-radius:6px;overflow-x:auto;">R = kG &nbsp;&middot;&nbsp; r = R<sub>x</sub> mod n &nbsp;&middot;&nbsp; s = k<sup>&minus;1</sup>(h + rd) mod n</p>
-        <p>The signature is the pair (<em>r</em>, <em>s</em>). A verifier who has only <em>Q</em>, <em>h</em> and the signature recomputes a point from them and checks that its x-coordinate comes back to <em>r</em>. The private key never appears in the check &mdash; that asymmetry is the whole point.</p>
+        <p>The signature is the pair (<em>r</em>, <em>s</em>). A verifier who has only <em>Q</em>, <em>h</em> and the signature recomputes a point from them and reduces its x-coordinate modulo <em>n</em> and compares the result with <em>r</em>. The private key never appears in the check &mdash; that asymmetry is the whole point.</p>
       </div>
     </div>
 
@@ -122,6 +122,7 @@
       <div class="panel-body">
         <p>The nonce <em>k</em> must be secret. Reusing it with <strong>distinct message-hash values modulo <em>n</em></strong> is dangerous: the two signature equations then share an unknown. Subtract them and <em>k</em> falls out; substitute back and the private key follows. No lattice, no supercomputer &mdash; secondary-school algebra:</p>
         <p style="font-family:ui-monospace,monospace;background:var(--bg2,rgba(255,255,255,.04));padding:12px 16px;border-radius:6px;overflow-x:auto;">k = (h&#8321; &minus; h&#8322;) / (s&#8321; &minus; s&#8322;) &nbsp;&nbsp;then&nbsp;&nbsp; d = (s&#8321;k &minus; h&#8321;) / r</p>
+        <p>All arithmetic in these recovery formulas is modulo <em>n</em>; division means multiplication by a modular inverse.</p>
         <p>In December 2010 fail0verflow demonstrated that reused ECDSA nonces exposed PlayStation 3 signing keys. The example shows why secrecy of the long-term key is not enough: the per-signature nonce must be generated and handled correctly. Deterministic nonce generation, as specified by RFC 6979, is one established way to avoid relying on fresh randomness for each signature; it does not remove other implementation risks.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin:18px 0;">
           <label style="display:flex;flex-direction:column;gap:4px;font-size:.85rem;">first message h&#8321;
@@ -143,13 +144,13 @@
         <p>No practical classical attack is known against properly parameterised ECDSA with suitable curves and hashes. Implementations can fail through nonce reuse, weak randomness, faults, or side-channel leakage. <strong>Partial nonce leakage can enable key recovery</strong>, but success depends on the amount and structure of leakage, measurement noise and the number of signatures available; it is not an unconditional result for any leaked bit.</p>
         <p><strong>Deterministic ECDSA</strong> derives the nonce from the private key and message hash, removing dependence on fresh signing randomness. With the same inputs it produces the same signature. It does <strong>not guarantee collision-free nonces</strong> for different messages, and it does not remove side-channel or fault risks. Correct randomised ECDSA is also possible; secure key generation still needs suitable randomness.</p>
         <p class="source-note">Source: <a href="https://www.rfc-editor.org/rfc/rfc6979.html#section-4" target="_blank" rel="noopener noreferrer">RFC 6979 (August 2013), §§1, 3.2 and 4</a>, an Informational RFC. Its deterministic nonce procedure retains implementation-security requirements. This exhibit uses visitor-selected toy nonces and does not implement RFC 6979.</p>
-        <p>Like all discrete-logarithm cryptography, ECDSA falls to a sufficiently large quantum computer running Shor's algorithm. ML-DSA is one standardized post-quantum signature option and uses module-lattice assumptions &mdash; the reason that shift works is set out in the <a href="../hall-of-foundations/learning-with-errors.html">Learning With Errors</a> exhibit.</p>
+        <p>Like all discrete-logarithm cryptography, ECDSA falls to a sufficiently large quantum computer running Shor's algorithm. ML-DSA is one standardized post-quantum signature option and uses module-lattice assumptions &mdash; the <a href="../hall-of-foundations/learning-with-errors.html">Learning With Errors</a> exhibit introduces one relevant family of assumptions, not a proof of the complete signature scheme.</p>
       </div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-globe"/></svg></span><span class="panel-title">Where You Use It Today</span></div>
-      <div class="panel-body"><p>Every HTTPS connection to a site with an EC certificate verifies an ECDSA signature during the handshake. Every Bitcoin and Ethereum transaction is authorised by one. Secure-boot chains in phones, games consoles and cars use ECDSA or its close relatives to check that firmware came from the manufacturer. When your browser shows a padlock, an elliptic-curve signature was almost certainly checked to put it there.</p></div>
+      <div class="panel-body"><p>ECDSA is one signature option in TLS, cryptocurrency protocols and software verification. TLS also supports other signature schemes, and a resumed or PSK handshake need not send a fresh certificate signature. Bitcoin uses both ECDSA and, for Taproot, BIP 340 Schnorr signatures. A browser’s connection indicator does not identify the signature algorithm.</p></div>
     </div>
 
   </div>
@@ -171,7 +172,7 @@
   </div>
 </div>
 
-<section class="panel" aria-labelledby="primary-sources"><div class="panel-body"><h2 id="primary-sources">Primary Sources</h2><p><a href="https://csrc.nist.gov/pubs/fips/186-5/final">FIPS 186-5 (2023)</a>; <a href="https://www.rfc-editor.org/rfc/rfc6979.html">RFC 6979 (deterministic DSA/ECDSA, 2013)</a>; <a href="https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki">BIP 340 (Schnorr signatures used with Bitcoin Taproot)</a>. Bitcoin therefore does not use ECDSA for every transaction.</p></div></section>
+<section class="panel" aria-labelledby="primary-sources"><div class="panel-body"><h2 id="primary-sources">Primary Sources</h2><p><a href="https://csrc.nist.gov/pubs/fips/186-5/final">FIPS 186-5 (2023)</a>; <a href="https://www.rfc-editor.org/rfc/rfc8446.html">RFC 8446 (TLS 1.3, 2018), §§2 and 4.2.3</a>; <a href="https://www.rfc-editor.org/rfc/rfc6979.html">RFC 6979 (deterministic DSA/ECDSA, 2013)</a>; <a href="https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki">BIP 340 (Schnorr signatures used with Bitcoin Taproot)</a>. Bitcoin therefore does not use ECDSA for every transaction.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
@@ -184,7 +185,7 @@
     <a href="../hall-of-foundations/finite-fields.html" class="related-card">
       <span class="related-card__number">&sect;142 &middot; Foundations</span>
       <span class="related-card__name">Finite Fields</span>
-      <span class="related-card__tag">Why this works: the smooth curve shatters into a scatter of points, and the discrete log gets hard</span>
+      <span class="related-card__tag">Finite-field curve arithmetic; visual disorder alone does not establish hardness</span>
     </a>
     <a href="../hall-of-foundations/group-theory.html" class="related-card">
       <span class="related-card__number">&sect;149 &middot; Foundations</span>
@@ -194,7 +195,7 @@
     <a href="../ciphers/sha256.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">SHA-256</span>
-      <span class="related-card__tag">ECDSA signs the hash of a message, never the message itself</span>
+      <span class="related-card__tag">ECDSA processes a specified integer derived from the message hash</span>
     </a>
     <a href="zero-knowledge-proofs.html" class="related-card">
       <span class="related-card__number">Related</span>

@@ -1,0 +1,39 @@
+# Cipher Museum page-by-page accuracy audit
+
+**Content review and local release validation complete; merge and deployment pending.** Review date: 26 October 2026. Baseline: `15efc4402155a35a1b455c9fcb5ba0f507e96d6e`. Changes: [PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13). The [67-item tracker](ACCURACY_REVIEW_PROGRESS.md) is the authoritative release checklist.
+
+All **214 public HTML pages** received an initial reading and a final consistency reread. **200 HTML pages** have changes relative to the baseline, alongside shared scripts, references, generated cards and search metadata. The inventory includes 155 cipher/context/research pages, 18 foundation pages, 13 hall pages and 28 other public pages. These are page counts, distinct from the 172 numbered exhibits and 88 registered engines.
+
+Six parallel reviewers completed the final exhibit, research, teaching, navigation, corpus and bibliography work. The primary reviewer integrated their changes, reviewed implementation diffs and checked derived public summaries. The [coverage ledger](page-audit/coverage.json) records each page, current SHA-256, consulted source IDs, final reader and material limits. The [source ledger](page-audit/sources.json) records the passages actually inspected. A whole-page reread does not mean every inherited statement received a new independent archival investigation, and none of these checks certify an error-free museum.
+
+## What changed
+
+- **Historical claims and attribution.** Corrected dates, machine variants, biography details, codebook formats and misleading claims that one person, decrypt or invention alone caused a later event. Metadata, sidebars, related cards, hall summaries, comparison rows and timeline entries now reflect the qualified exhibit text. Examples include M-209 trial/production dates, Rossignol family relationships, Enigma stepping, Jefferson/M-94 distinctions and DIANA's unverified deployment dates.
+- **Unsolved and cultural material.** Distinguished archival recovery from cryptanalysis, parchment age from writing date, readable constructions from authenticated treasure, and research identifications from official findings. Fictional or invented widgets identify their teaching role. Rosetta's mislabeled Coptic output was replaced with explicit script descriptions; its Greek name remains a separate example.
+- **Mathematics and security.** Kept perfect secrecy separate from computational assumptions; clarified nonce, subgroup, finite-field, encoding and protocol conditions. Corrected LWE cancellation/rounding explanations, model limits and inherited claims of direct classical-to-modern descent. Independent checks include 194 LWE rounding cases, the 103-point toy elliptic curve, 676 DIANA letter pairs and published/reference classical vectors.
+- **Attack evidence.** NFC descriptions distinguish command authentication, genuine-WRITE tearing, storage/timing assumptions and hardware actually sampled. SoDark separates chosen-tweak oracle data from passive ALE collection and records hardware, success probability and attacked rounds. GPU rates, full-search extrapolations, preprocessing and conditional-DES candidate-count experiments remain distinct. UA-8295 and GEA are visibly limited where full primary papers were inaccessible; unverified technical particulars were removed.
+- **Teaching behavior.** Cipher Detective describes relative heuristic fit rather than measured probabilities. A high coincidence score no longer disables Vigenère analysis; a simple counterexample is covered by regression tests. Cryptanalysis includes the final repeated substring, labels IC/Kasiski limits, compares annealing proposals with the current state and safely displays supplied text. Numeric cipher IDs work in embeds; tours tolerate unavailable or malformed storage; 404 assets work under nested missing paths.
+- **Corpus and navigation.** Five tours/51 stops, 12 flow destinations, 13 halls and all 14 culture-survey cards were reviewed. Complete shipped datasets were counted independently: the v0.6 archive has 100326 records / 85 types / 9 languages; v0.8 has 100313 records / 85 types / 7 languages. All 85 benchmark rows were checked. Mixed difficulty is reported as mixed, and unsupported cross-dataset performance claims were removed. Counts and engine replay do not authenticate historical provenance or measure solver quality.
+- **Book credits.** Public references use full titles, authors and the relevant edition/year, with verified locators when available. Direct ebook/viewer destinations were removed from public references and suppressed in dynamically rendered corpus credits. Historical source metadata remains unchanged. Primary papers, standards, archival documents and ordinary publisher information pages remain available.
+
+## Validation and release evidence
+
+The final local browser sweep loaded every page at 1280px and 390px: **428 checks passed**, with zero recorded uncaught script errors or document overflow. External requests were blocked. Separate browser checks exercised IC boundaries, terminal Kasiski repeats, the high-IC Vigenère counterexample, ROT13/M-209 embeds, all three Rosetta modes and culture filters at both widths: **12 checks passed**. Selected mobile/desktop screenshots were visually inspected, including teaching controls, UA-8295's source-scope note, reading trails, a foundation formula and the benchmark table.
+
+- [Whole-site browser results](page-audit/browser-final.json)
+- [Changed-control browser results](page-audit/browser-final-controls.json)
+- [Final validation record](page-audit/validation-final.json)
+- [Public-claim guards](../tests/test-page-audit-claims.js): 35 checks reject 35 deliberately restored errors.
+- [Navigation regression checks](../tests/test-navigation-audit.js) and [rendered book-reference checks](../tests/test-book-source-links.js).
+
+All intended counts, trust labels, search entries, artifact cards and minified bundles were regenerated. The first integration suite found a stale search index while the last DIANA correction was being integrated. Regeneration resolved that state. The fresh complete `npm test` run passed all 63 suites; HTMLHint passed all 214 pages; all 6501 local links passed; release metadata validation passed. Final merge/deployment and live verification remain tracked separately and are not claimed here yet.
+
+## Evidence limits retained
+
+The source ledger distinguishes full inspected passages from abstract-only, indexed or bibliographic evidence. Examples include inaccessible UA-8295/GEA full papers, the Smithline attack article, Kaeding's full paper and the CNSA PDF. Exact historical T52 control paths and an authenticated Vietnamese field-cipher reconstruction are outside the verified model scope. Modularity theorem statements and publication records were checked; the proofs were not independently verified. Current puzzle status is dated to the inspected sources.
+
+These limits appear in the relevant exhibits or restrict the claims retained there. An inaccessible source did not receive a verified label. The supplied ebooks were used privately for consultation; no supplied ebook copy or private reading file is linked in the public site.
+
+## Review records
+
+The [review notes](page-audit/review-notes/) preserve the nine scoped handoffs, their source passages, exact read lists and targeted test evidence. They were written before integration; the main tracker and final validation record supersede their remaining-build instructions. Earlier checkpoint browser records remain in `docs/page-audit/` for comparison. No corpus bytes, frozen release hashes or manifests were rewritten in this final review.

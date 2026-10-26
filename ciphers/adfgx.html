@@ -66,14 +66,14 @@
   </div>
   <h1 class="page-title">ADFGX Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">Germany's front-line WWI cipher — broken in weeks by one exhausted Frenchman</p>
+  <p class="page-tagline">A German field cipher attacked through relationships among wartime messages</p>
   <p class="exhibit-status-note">Painvin and other Allied analysts used repeated traffic, statistics and transposition analysis in 1918.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Lieutenant Fritz Nebel · German Army</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">March 1918</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Polybius key square + columnar key</span></div>
-    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Georges Painvin · 1918 · Differential frequency analysis</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Substitution + transposition = modern cipher rounds</span></div>
+    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Georges Painvin and Allied analysts · 1918</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Compare fractionation and transposition with modern round structures</span></div>
   </div>
 </div>
 
@@ -84,54 +84,49 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The ADFGX cipher was Germany's front-line field cipher during the critical 1918 Spring Offensive. Its rapid cryptanalysis by French Lieutenant Georges Painvin — working under extreme exhaustion — may have altered the outcome of World War I.</p>
+      <p>ADFGX combined a coordinate substitution with columnar transposition. Its analysis during the 1918 offensives illustrates how related messages and operational procedures can assist an attack on a layered cipher. It does not establish that one analyst alone determined the war’s outcome.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>As Germany prepared its 1918 Spring Offensive, Fritz Nebel designed the ADFGX cipher for front-line use. The letters A, D, F, G, X were specifically chosen because they sound very distinct in Morse code — reducing the risk of garbled transmissions misreading one letter as another.</p><p style="margin-top:1rem;">French cryptanalyst Georges Painvin broke the cipher within weeks of its introduction, despite working under extreme pressure with limited ciphertext. When ADFGVX replaced it in June 1918, Painvin broke that version too — an achievement that may have changed the outcome of WWI.</p></div>
+      <div class="panel-body"><p>As Germany prepared its 1918 Spring Offensive, Fritz Nebel designed the ADFGX cipher for front-line use. The letters A, D, F, G, X were specifically chosen because they sound very distinct in Morse code — reducing the risk of garbled transmissions misreading one letter as another.</p><p style="margin-top:1rem;">Georges Painvin solved important ADFGX traffic in 1918 and then attacked its six-symbol extension, ADFGVX. Recovering particular keys required suitable intercepted material and sustained analysis; it was not a guaranteed solution to every message.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><pre>Step 1: Polybius substitution using 5×5 square
+      <div class="panel-body"><pre>Step 1: keyed 5×5 square, keyword PRIVACY (I/J share a cell)
+          A D F G X
+        A P R I V A
+        D C Y B D E
+        F F G H K L
+        G M N O Q S
+        X T U W X Z
+
+        Coordinates are row, then column.
         Each letter → pair from {A,D,F,G,X}
         H → FF   E → DX   L → FX
 
 Step 2: Columnar transposition with keyword
         Write pairs in rows, read by column order
 
-HELLO → FF DX FX FX GF → columnar → ciphertext</pre>
+HELLO → FF DX FX FX GF
+Column key: G E R M A N
+            F F D X F X
+            F X G F
+Read A,E,G,M,N,R columns → F FX FF XF X DG
+Final ciphertext: FFXFFXFXDG</pre>
 <figure class="figure">
-<svg viewBox="0 0 400 220" style="width:100%;max-width:400px;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ADFGX two-step encryption diagram">
-  <style>text{font-family:'JetBrains Mono',monospace;fill:#EDE5D4}rect{rx:3}</style>
-  <!-- Step 1: Polybius -->
-  <text x="10" y="18" font-size="10" fill="#C9A84C" letter-spacing=".1em">STEP 1: POLYBIUS SQUARE</text>
-  <g transform="translate(10,28)">
-    <text x="0" y="12" font-size="9" fill="#706878"> </text>
-    <text x="18" y="12" font-size="9" fill="#C9A84C">A</text><text x="38" y="12" font-size="9" fill="#C9A84C">D</text><text x="58" y="12" font-size="9" fill="#C9A84C">F</text><text x="78" y="12" font-size="9" fill="#C9A84C">G</text><text x="98" y="12" font-size="9" fill="#C9A84C">X</text>
-    <text x="0" y="30" font-size="9" fill="#C9A84C">A</text><rect x="14" y="20" width="18" height="16" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.22)" stroke-width=".5"/><text x="18" y="32" font-size="9">P</text>
-    <rect x="34" y="20" width="18" height="16" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.22)" stroke-width=".5"/><text x="38" y="32" font-size="9">R</text>
-    <rect x="54" y="20" width="18" height="16" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.22)" stroke-width=".5"/><text x="58" y="32" font-size="9">I</text>
-    <rect x="74" y="20" width="18" height="16" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.22)" stroke-width=".5"/><text x="78" y="32" font-size="9">V</text>
-    <rect x="94" y="20" width="18" height="16" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.22)" stroke-width=".5"/><text x="98" y="32" font-size="9">A</text>
-  </g>
-  <!-- Arrow -->
-  <text x="140" y="72" font-size="20" fill="#7a6530">→</text>
-  <!-- Step 2 -->
-  <text x="180" y="18" font-size="10" fill="#C9A84C" letter-spacing=".1em">STEP 2: COLUMNAR TRANSPOSITION</text>
-  <g transform="translate(180,28)">
-    <rect x="0" y="0" width="200" height="60" fill="rgba(90,144,200,.08)" stroke="rgba(90,144,200,.2)" stroke-width=".5" rx="4"/>
-    <text x="10" y="18" font-size="9" fill="#5A90C8">Write pairs in rows</text>
-    <text x="10" y="34" font-size="9" fill="#5A90C8">Read by keyed column order</text>
-    <text x="10" y="50" font-size="9" fill="#B8B0A0">FF DX FX FX GF → reorder</text>
-  </g>
-  <!-- Result -->
-  <text x="10" y="130" font-size="10" fill="#706878">H E L L O</text>
-  <text x="10" y="148" font-size="20" fill="#7a6530">↓</text>
-  <text x="10" y="168" font-size="10" fill="#5AC8A0">FF DX FX FX GF</text>
-  <text x="10" y="186" font-size="20" fill="#7a6530">↓</text>
-  <text x="10" y="206" font-size="10" fill="#C9A84C">COLUMNAR CIPHERTEXT</text>
+<svg viewBox="0 0 400 220" style="width:100%;max-width:400px;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Complete PRIVACY square and HELLO fractionation example">
+<text x="12" y="25" fill="#EDE5D4" font-family="monospace" font-size="16" xml:space="preserve">  A D F G X</text>
+<text x="12" y="53" fill="#EDE5D4" font-family="monospace" font-size="16" xml:space="preserve">A P R I V A</text>
+<text x="12" y="81" fill="#EDE5D4" font-family="monospace" font-size="16" xml:space="preserve">D C Y B D E</text>
+<text x="12" y="109" fill="#EDE5D4" font-family="monospace" font-size="16" xml:space="preserve">F F G H K L</text>
+<text x="12" y="137" fill="#EDE5D4" font-family="monospace" font-size="16" xml:space="preserve">G M N O Q S</text>
+<text x="12" y="165" fill="#EDE5D4" font-family="monospace" font-size="16" xml:space="preserve">X T U W X Z</text>
+<text x="195" y="70" fill="#C9A84C" font-family="monospace" font-size="14">HELLO</text>
+<text x="195" y="100" fill="#5AC8A0" font-family="monospace" font-size="13">FF DX FX FX GF</text>
+<text x="195" y="135" fill="#B8B0A0" font-size="12">Then transpose with GERMAN</text>
+<text x="195" y="165" fill="#C9A84C" font-family="monospace" font-size="14">FFXFFXFXDG</text>
 </svg>
 <figcaption class="figure-caption">Two-step process: Polybius substitution (letters → pairs) then columnar transposition (reorder columns by keyword)</figcaption>
 </figure></div>
@@ -139,7 +134,7 @@ HELLO → FF DX FX FX GF → columnar → ciphertext</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Painvin's Differential Analysis (1918)</div><div class="attack-diff">Complexity: Hard · Broken under wartime pressure</div><p class="attack-desc">Painvin used relationships among intercepted messages and hypotheses about their structure to recover keys. The work required suitable traffic, not a guaranteed attack from one short message. His own later account distinguishes particular recovered keys from a universal break of all ADFGX traffic.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Painvin’s analysis of related traffic (1918)</div><div class="attack-diff">Complexity: Hard · Broken under wartime pressure</div><p class="attack-desc">Painvin used relationships among intercepted messages and hypotheses about their structure to recover keys. The work required suitable traffic, not a guaranteed attack from one short message. His own later account distinguishes particular recovered keys from a universal break of all ADFGX traffic.</p></div></div>
     </div>
 
     <div class="panel">
@@ -147,8 +142,8 @@ HELLO → FF DX FX FX GF → columnar → ciphertext</pre>
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from ADFGX Cipher</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>Polybius substitution → columnar transposition</td><td>AES: SubBytes (substitution) → ShiftRows/MixColumns (permutation) every round</td></tr>
-<tr><td>5-letter output alphabet (A,D,F,G,X)</td><td>Binary encoding: all modern ciphers operate on bits (2-symbol alphabet)</td></tr>
+          <tbody><tr><td>Polybius substitution → columnar transposition</td><td>AES combines substitution, row shifting, linear column mixing and round-key addition; the final round omits MixColumns</td></tr>
+<tr><td>5-letter output alphabet (A,D,F,G,X)</td><td>Compare a restricted output alphabet with the binary encodings used by digital systems</td></tr>
 <tr><td>Field-usable design</td><td>Hardware cipher implementations optimize for speed and resource constraints</td></tr></tbody>
         </table>
       </div>
@@ -170,7 +165,7 @@ HELLO → FF DX FX FX GF → columnar → ciphertext</pre>
             <tr><td>Inventor</td><td>Fritz Nebel · German Army</td></tr>
             <tr><td>Year</td><td>March 1918</td></tr>
             <tr><td>Key Type</td><td>Polybius key square + columnar key</td></tr>
-            <tr><td>Broken By</td><td>Georges Painvin · 1918 · Differential frequency analysis</td></tr>
+            <tr><td>Broken By</td><td>Georges Painvin and Allied analysts · 1918</td></tr>
           </tbody>
         </table>
       </div>

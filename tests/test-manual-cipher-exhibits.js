@@ -108,7 +108,14 @@ for (const [a,b] of [['rs44','turning-grille'],['rs44','columnar'],['rs44','mysz
   const d = dom.window.document;
   for (const column of ['year', 'era']) for (let direction = 0; direction < 2; direction++) {
     d.querySelector(`th[data-col="${column}"]`).click();
-    assert.match(d.querySelector('#cipher-tbody tr:last-child').textContent, /AMSCO.*Undated specification/);
+    const rows = [...d.querySelectorAll('#cipher-tbody tr')];
+    const amsco = rows.find(row => row.querySelector('a').getAttribute('href') === 'ciphers/amsco.html');
+    assert.match(amsco.textContent, /AMSCO.*Undated specification/);
+    const undatedHrefs = new Set([...read('comparison.html').matchAll(/href:'([^']+)'[^\n]*?year:null/g)].map(m => m[1]));
+    const undated = row => undatedHrefs.has(row.querySelector('a').getAttribute('href'));
+    const firstUndated = rows.findIndex(undated);
+    assert(firstUndated > 0);
+    assert(rows.slice(firstUndated).every(undated), 'All undated entries sort after dated entries in either direction');
   }
   dom.window.close();
 }

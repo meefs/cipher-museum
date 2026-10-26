@@ -97,7 +97,7 @@
     <a class="card" href="euler-fermat.html">
       <span class="cnum">§145</span>
       <h3>Euler &amp; Fermat</h3>
-      <span class="sym">aᵠ⁽ⁿ⁾ ≡ 1 (mod n)</span>
+      <span class="sym">aᵠ⁽ⁿ⁾ ≡ 1 (mod n), gcd(a,n)=1</span>
       <p>The little theorem that makes RSA decryption undo RSA encryption. Watch a message round-trip.</p>
     </a>
   </div>
@@ -120,7 +120,7 @@
     <a class="card" href="closest-vector.html">
       <span class="cnum">§152</span>
       <h3>The Closest Vector Problem</h3>
-      <span class="sym">CVP · LWE · Kyber's core</span>
+      <span class="sym">CVP · geometric decoding intuition</span>
       <p>Round a target to the nearest lattice corner — exact with the orthogonal preset, potentially wrong with a skewed one. This is decoding.</p>
     </a>
     <a class="card" href="reduction.html">
@@ -167,25 +167,25 @@
       <span class="cnum">§154</span>
       <h3>The Random Oracle</h3>
       <span class="sym">avalanche · Fiat–Shamir</span>
-      <p>Flip one input bit, scramble half the output — the idealized hash assumption beneath Fiat–Shamir signatures.</p>
+      <p>Explore a toy avalanche effect, then distinguish it from the ideal random-function model used in Fiat–Shamir security arguments.</p>
     </a>
     <a class="card" href="interpolation.html">
       <span class="cnum">§155</span>
       <h3>Polynomial Interpolation</h3>
       <span class="sym">k distinct points fix degree at most k−1</span>
-      <p>Drag points until the curve locks and the secret intercept appears — the heart of Shamir sharing.</p>
+      <p>Explore interpolation over the reals, then see why Shamir sharing needs finite fields and uniform random coefficients.</p>
     </a>
     <a class="card" href="pairings.html">
       <span class="cnum">§156</span>
       <h3>Bilinear Pairings</h3>
       <span class="sym">e(aP,bQ) = e(P,Q)ᵃᵇ</span>
-      <p>Verify a product of hidden scalars without revealing them — an algebraic tool used by some zk-SNARKs.</p>
+      <p>Explore bilinearity with a tiny exponent model, then see where actual pairings fit into proof systems.</p>
     </a>
     <a class="card" href="learning-with-errors.html">
       <span class="cnum">§157</span>
       <h3>Learning With Errors</h3>
       <span class="sym">t = As + e</span>
-      <p>Solve for the secret, then switch the noise on and watch the same algebra fail — the structure ML-KEM actually holds.</p>
+      <p>Compare exact elimination with noisy equations in a tiny model; ML-KEM adds larger structured parameters and further mechanisms.</p>
     </a>
   </div>
 

@@ -91,6 +91,7 @@
 <h2>Authentication is only one step</h2>
 <p>The 2026 “BREAKMEIFYOUCAN!” study examines MIFARE Ultralight C, Ultralight AES, NTAG 223/224 DNA and several compatible or counterfeit products. Its central lesson is that protocol state, writable key storage, integrity checks, key diversification and hardware quality can determine the outcome even when a device uses 3DES or AES.</p>
 <p>This is a deployment and protocol case, not a break of the AES primitive. The tag model and configuration matter: results from one counterfeit family do not automatically apply to genuine NXP silicon or every installation.</p>
+<p><strong>Hardware evidence limit:</strong> in §14 the authors report obtaining a few NTAG 223 DNA StatusDetect samples but <strong>no NTAG 224 DNA samples</strong>. Their NTAG 224 DNA interpretations are preliminary, based on documentation and similarities to tested products; they are not measurements on that model.</p>
 </section>
 <section>
 <h2>The relay leaves the tag authenticated</h2>
@@ -113,7 +114,7 @@
 </tr>
 <tr>
 <td>Command integrity, including enforced CMAC where supported</td>
-<td>Authentication alone may leave later commands insufficiently protected; protocol variants have different integrity facilities.</td>
+<td>Enforced Ultralight AES CMAC protects against unauthorized command injection. The paper separately describes relayed tearing of genuine WRITE commands, conditional on reader timing and the relevant writable storage; CMAC does not make these distinct attack paths equivalent.</td>
 </tr>
 <tr>
 <td>Shared versus diversified keys</td>
@@ -132,13 +133,13 @@
 </section>
 <section>
 <h2>Demonstration, extrapolation and theory</h2>
-<p>The paper distinguishes implemented attacks from workload estimates and theoretical proposals. In particular, its single-tag Ultralight C proposal in §17 is theoretical and time-intensive, with a roughly 777-day estimate in the discussed configuration. It must not be presented as the fast counterfeit-tag demonstration.</p>
+<p>The paper distinguishes implemented attacks from workload estimates and theoretical proposals. In particular, its single-tag Ultralight C proposal in §17 is theoretical. It requires unlocked key pages and access to a legitimate reader. The first 28-bit segment alone is estimated to require about 777 days at two reader-assisted attempts per second; further recovery stages follow. The assumed number of EEPROM writes also exceeds the guaranteed endurance, and the paper’s five-million-write experiment does not demonstrate completion of that first stage. It must not be presented as the fast counterfeit-tag demonstration.</p>
 <p>This exhibit follows revision 1.1, dated 28 August 2026. The revision corrects an earlier recovered-bit extrapolation. Numbers copied from an older summary can therefore misrepresent the paper’s current evidence.</p>
 <p>A browser demonstration cannot measure physical distance securely. Crypto Lab’s distance-bounding work is a related protocol lesson; this museum exhibit supplies the device history and the distinctions between authentication, proximity, integrity and key storage.</p>
 </section>
 <section>
 <h2>Primary source and connections</h2>
-<p>Nathan Nye and coauthors, <a href="https://eprint.iacr.org/2026/100">“BREAKMEIFYOUCAN!: Exploiting Keyspace Reduction and Relay Attacks in 3DES and AES-protected NFC Technologies”</a>, ePrint 2026/100, revision 1.1 (28 August 2026). This is a preprint; ePrint posting does not establish peer review. See §4, the configuration-specific attack sections, §17 and Appendix A; PDF pp. 3–5, 15–16 and 23–30.</p>
+<p>Nathan Nye and coauthors, <a href="https://eprint.iacr.org/2026/100">“BREAKMEIFYOUCAN!: Exploiting Keyspace Reduction and Relay Attacks in 3DES and AES-protected NFC Technologies”</a>, ePrint 2026/100, revision 1.1 (28 August 2026). This is a preprint; ePrint posting does not establish peer review. See §4, §12.1–12.3 for command integrity and tearing, §14 for the NTAG sample limitation, §17 and Appendix A; PDF pp. 3–5, 15–16, 19–22 and 23–30.</p>
 <p>
 <a href="aes.html">AES</a> · <a href="des.html">DES and Triple DES</a> · <a href="../lab/modern-attack-evidence.html">Compare measured attacks, extrapolations and physical fault access</a>
 </p>

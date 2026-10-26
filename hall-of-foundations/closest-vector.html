@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Round a target to the nearest lattice corner — right with a short basis, wrong with a skewed one. The decoding problem beneath lattice cryptography.">
+<meta name="description" content="Compare exact nearest-point search with coordinate rounding in two dimensions. An intuition for lattice decoding, not an implementation of ML-KEM.">
 <title>The Closest Vector Problem · Hall of Foundations</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0a0a0f">
 <meta property="og:title" content="The Closest Vector Problem — The Cipher Museum">
-<meta property="og:description" content="Round a target to the nearest lattice corner — right with a short basis, wrong with a skewed one. The decoding problem beneath lattice cryptography.">
+<meta property="og:description" content="Compare exact nearest-point search with coordinate rounding in two dimensions. An intuition for lattice decoding, not an implementation of ML-KEM.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ciphermuseum.com/hall-of-foundations/closest-vector.html">
 <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -54,25 +54,17 @@
   <main id="main">
 
   <div class="hero">
-    <div class="kicker">The Problem ML-KEM (Kyber) Actually Leans On</div>
+    <div class="kicker">Geometric Intuition for Lattice Decoding</div>
     <h1>Finding the<br>nearest <em>corner</em></h1>
     <p class="standfirst">
       Its sibling exhibit asked for the shortest vector in a lattice. This one
       asks something subtler: given a target point floating <em>off</em> the
-      grid, which lattice corner is closest? Answer it and you can decrypt.
-      Fail, and you're staring at noise. This is the ground Kyber stands on.
+      grid, which lattice point is closest? This is a geometric decoding problem. It helps motivate lattice cryptography, but ML-KEM uses a different algebraic construction.
     </p>
   </div>
 
   <div class="honesty">
-    <strong>The same lattice, two fortunes.</strong> With a "good" basis &#8212;
-    short, near-perpendicular vectors &#8212; the closest corner falls out of a
-    single rounding step. With a "bad" basis for that same lattice, the rounding
-    lands on the wrong corner most of the time. That gap is the shape of a
-    lattice <span class="term">trapdoor</span>, and it is what
-    <a href="learning-with-errors.html">a noise term</a> is defending. Read the
-    two bases as a model of that asymmetry: &#167;4 below shows the rather
-    different form ML-KEM's own key takes.
+    <strong>The same lattice, different rounding behavior.</strong> Coordinate rounding is exact for the orthogonal preset here. A short, nearly perpendicular basis need not give the nearest point for every target, and a skewed basis can still succeed for some targets. These pictures illustrate basis-dependent decoding. Section 4 distinguishes this model from ML-KEM’s short secret vector and noisy public equations.
   </div>
 
   <section class="exhibit">
@@ -94,7 +86,7 @@
         The <span style="color:var(--teal)">teal ring</span> is the <b>true</b>
         closest corner. The <span style="color:var(--vermilion)">vermilion
         square</span> is where <b>Babai rounding with the current basis</b>
-        lands. With a good basis they coincide; with a bad one they part ways.
+        lands. For the orthogonal preset they coincide; for a skewed basis they may differ.
       </div>
       <!-- keyboard / screen-reader fallback -->
       <div class="a11y-fallback">
@@ -116,7 +108,7 @@
     <div class="eq">t = a&#183;b&#8321; + b&#183;b&#8322; &nbsp;&#8594;&nbsp; round(a), round(b) &nbsp;&#8594;&nbsp; nearest corner?</div>
     <ul class="ladder">
       <li><span class="rung">Good basis<span>the trapdoor</span></span><span class="gloss">Orthogonal vectors in this preset. Coordinate rounding gives a nearest lattice point.</span></li>
-      <li><span class="rung">Bad basis<span>what an attacker gets</span></span><span class="gloss">Long, skewed vectors for the same lattice. Rounding misfires on most targets &#8212; for many targets.</span></li>
+      <li><span class="rung">Bad basis<span>what an attacker gets</span></span><span class="gloss">Long, skewed vectors for the same lattice. Coordinate rounding can return a point that is not nearest.</span></li>
     </ul>
   </section>
 
@@ -135,8 +127,8 @@
         </label>
         <label>basis
           <select id="lweBasis">
-            <option value="good">good (secret)</option>
-            <option value="bad">bad (public)</option>
+            <option value="good">orthogonal preset</option>
+            <option value="bad">skewed preset</option>
           </select>
         </label>
         <button id="resample">New sample</button>
@@ -147,13 +139,12 @@
         message). The <span style="color:var(--vermilion)">vermilion dot</span>
         is the published ciphertext = point + noise. Decryption succeeds when
         rounding returns the ink dot &#8212; a <span style="color:var(--teal)">teal
-        ring</span>. As &#963; grows, the good basis holds far longer than the bad one.
+        ring</span>. For a given sample, the presets can produce different rounding results. Neither preset turns this two-dimensional example into secure encryption.
       </div>
     </div>
 
     <div class="pull">
-      Security is the noise. Too little and it's plain CVP; enough, in high
-      dimensions, and only the good-basis holder can round back home.
+      Noise size, dimension, distributions and modulus jointly affect correctness and attack cost. This small geometric model proves neither hardness nor exclusive access to decoding.
     </div>
   </section>
 
@@ -182,10 +173,10 @@
       <h3>Why the owner can still get in</h3>
       <p>This exhibit shows how decoding can recover a point from a bounded perturbation. Real encryption balances correctness and resistance to attacks using a complete parameter set. Signatures have different correctness conditions; a decryption noise budget is not a universal description of lattice cryptography.</p>
     </div>
-    <p class="aside"><b>Three views of one problem.</b>
-      <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> is the geometry — why the secret stays hidden.
-      <a href="closest-vector.html" style="color:var(--vermilion)">§152</a> is the decoding — why its owner still gets in.
-      <a href="learning-with-errors.html" style="color:var(--vermilion)">§157</a> is the algebra — what the keys are actually made of.
+    <p class="aside"><b>Three related teaching models.</b>
+      <a href="lattices-svp.html" style="color:var(--vermilion)">§147</a> introduces lattice geometry.
+      <a href="closest-vector.html" style="color:var(--vermilion)">§152</a> illustrates geometric decoding.
+      <a href="learning-with-errors.html" style="color:var(--vermilion)">§157</a> shows a tiny noisy-equation model and distinguishes it from standardized keys.
       Also related: <a href="reduction.html" style="color:var(--vermilion)">Reduction &amp; Proof</a>, for what "reduces to this problem" claims.</p>
   </section>
 

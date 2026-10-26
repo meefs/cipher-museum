@@ -65,9 +65,7 @@
   <div class="honesty">
     <strong>A note on honesty.</strong> Fermat's Last Theorem — the 100-page
     proof this exhibit builds toward — has no direct use in cryptography.
-    What ECC actually stands on is the <em>world</em> that proof revealed:
-    the deep link between elliptic curves and modular forms. We'll show you
-    that world without overselling the theorem itself.
+    The link between elliptic curves and modular forms is mathematical context here. ECC’s group law and computational assumptions do not depend on the Modularity Theorem.
   </div>
 </div>
 
@@ -152,16 +150,12 @@
   <section class="exhibit">
     <div class="step-head">
       <span class="step-num">§3</span>
-      <h2>Why the addition is a fortress</h2>
+      <h2>Scalar multiplication and its inverse problem</h2>
     </div>
     <p>
-      Over a finite field instead of a smooth drawing, that same addition scatters
-      unpredictably. Add a point to itself <em>k</em> times and you reach a new
-      point <em>Q = kP</em>. Recovering <em>k</em> from <em>P</em> and <em>Q</em>
-      is the <span class="term">elliptic-curve discrete logarithm problem</span> —
-      easy to compute forward, believed infeasible to reverse.
+      In an elliptic-curve group, scalar multiplication forms <em>Q = kP</em> by adding <em>k</em> copies of <em>P</em>. Recovering <em>k</em> modulo the order of <em>P</em> from <em>P</em> and <em>Q</em> is the <span class="term">elliptic-curve discrete logarithm problem</span>. Its difficulty depends on the group and parameters.
     </p>
-    <div class="eq">P, Q known &nbsp;→&nbsp; find k such that Q = kP &nbsp; ✗ hard</div>
+    <div class="eq">P, Q known &nbsp;→&nbsp; find k such that Q = kP &nbsp; · difficulty depends on the group</div>
     <p>Suitable finite-field elliptic-curve groups support hard discrete-log and related assumptions used by protocols such as ECDH and ECDSA. Not every curve or prime is secure, and visual scattering does not prove hardness. The modularity story below is mathematical context rather than a prerequisite for that security claim.</p>
   </section>
 
@@ -228,6 +222,7 @@
     </p>
   </section>
 
+  <section class="exhibit"><h2>Primary mathematical sources</h2><p>Andrew Wiles, <a href="https://annals.math.princeton.edu/1995/141-3/p01"><em>Modular elliptic curves and Fermat’s Last Theorem</em></a>, Annals of Mathematics 141 (1995), 443–551; Richard Taylor and Andrew Wiles, <a href="https://annals.math.princeton.edu/1995/141-3/p02"><em>Ring-theoretic properties of certain Hecke algebras</em></a>, 553–572. These are the 109-page paper and 20-page companion referenced above. Christophe Breuil, Brian Conrad, Fred Diamond and Richard Taylor, <em>On the Modularity of Elliptic Curves over ℚ: Wild 3-adic Exercises</em>, Journal of the American Mathematical Society 14 (2001), 843–939, establishes the general result. The illustration does not reproduce these proofs.</p></section>
   </main>
 
 

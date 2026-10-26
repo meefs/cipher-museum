@@ -1660,20 +1660,12 @@ cipherMuseumGlobal.CipherEngines = (() => {
     };
   })();
 
-  /* ─── 38d. Voynich Manuscript (Voynichese glyph substitution simulator) ───
-     The Voynich Manuscript (Beinecke MS 408, c. 1404–1438) remains
-     undeciphered. The "Voynichese" script has ~25–30 base glyphs
-     transcribed in EVA (European Voynich Alphabet). This engine is
-     NOT a claim that Voynichese is a substitution cipher — it is a
-     visualization aid: it lets visitors see what their own English
-     would look like if rendered in EVA glyphs, and round-trips
-     deterministically so the demo is reversible.                        */
+  /* ─── 38d. Voynich exhibit: invented Latin-letter substitution ───
+     This reversible teaching model is not an EVA transcription, a glyph
+     renderer or a proposed decipherment. It preserves input word lengths. */
   const voynich = (() => {
-    // Common EVA glyph shapes (using the EVA letters that have unicode-safe
-    // visual analogues so the page renders without a custom font)
-    // Source: Reddy & Knight 2011, "What we know about the Voynich Manuscript"
     const EVA = ['o','a','y','e','d','s','h','c','k','t','p','f','l','r','i','n','m','q','x','g','z','v','j','b','u','w'];
-    // Map A→EVA[0] … Z→EVA[25]; render in italic small caps via the page CSS
+    // EVA is a legacy internal variable name; this permutation is invented.
     function fold(ch) {
       const c = ch.charCodeAt(0);
       if (c >= 65 && c <= 90) return EVA[c - 65];
@@ -1687,7 +1679,7 @@ cipherMuseumGlobal.CipherEngines = (() => {
     }
     return {
       encode: (text) => {
-        // Voynichese tokens are space-separated "words"; preserve word breaks
+        // Preserve the user’s word breaks; these are not manuscript word patterns.
         return text.split('').map(fold).join('');
       },
       decode: (text) => {
@@ -3986,14 +3978,8 @@ cipherMuseumGlobal.CipherEngines = (() => {
     };
   })();
 
-  // Ethiopian Ge\u02bcez Monastic Cipher (~14th\u201319th c.).
-  // Cipher tradition preserved in Ethiopian Orthodox monasteries to protect
-  // esoteric and liturgical texts. Demo: keyed monoalphabetic substitution
-  // over the Latin alphabet (the actual Ge\u02bcez systems substituted within
-  // the Ge\u02bcez syllabary, but the underlying mechanism is the same \u2014 a
-  // permutation of the script\u2019s ordered glyph table). The key seeds a
-  // shuffled cipher alphabet; the page\u2019s prose explains the syllabary
-  // layer.
+  // Invented keyword-seeded Latin-letter substitution teaching model.
+  // Legacy engine name retained; no Geʼez monastic-cipher provenance established.
   const geezMonastic = (() => {
     function buildMap(key) {
       const seed = clean(key) || 'GEEZ';

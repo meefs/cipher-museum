@@ -64,26 +64,26 @@
   <p class="exhibit-status-note">Promotional / collaborative cipher hunts</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Region</span><span class="fact-value">Global online communities</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Genre established 2001 (<em>The Beast</em>, A.I. promotion)</span></div>
-    <div class="fact"><span class="fact-label">Genre origin</span><span class="fact-value">Microsoft / DreamWorks promotion of Spielberg's <em>A.I.</em></span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">2001: The Beast, an influential early commercial example</span></div>
+    <div class="fact"><span class="fact-label">Early example</span><span class="fact-value">Microsoft / DreamWorks promotion of Spielberg's <em>A.I.</em></span></div>
     <div class="fact"><span class="fact-label">Track</span><span class="fact-value">B (cipher-toolkit demo)</span></div>
   </div>
 </div>
 
 <div class="demo-section" data-cipher="krypto-arg">
   <h2>Interactive Exhibit</h2>
-  <p style="opacity:.85;">Pick one of the classical ciphers most commonly used in ARGs and the widget will show a short worked example. Track B — overview tool.</p>
-  <label for="input" style="display:block;margin-top:1rem;font-weight:600;">Pick a classical cipher (1=Caesar 2=Vigen\u00e8re 3=Bacon 4=Pigpen)</label>
+  <p style="opacity:.85;">Pick a classical cipher used here to illustrate ARG-style puzzles and the widget will show a short worked example. Track B — overview tool.</p>
+  <label for="input" style="display:block;margin-top:1rem;font-weight:600;">Pick a classical cipher (1=Caesar 2=Vigenère 3=Bacon 4=Pigpen)</label>
   <input type="number" id="input" min="1" max="4" value="1" style="width:6rem;padding:.5rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;font-family:monospace;">
   <button type="button" data-fn="encode" style="margin-left:.5rem;padding:.5rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;cursor:pointer;">Show ARG example</button>
   <div id="output" style="margin-top:1rem;padding:1rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);border-radius:6px;font-family:monospace;line-height:1.6;min-height:5rem;white-space:pre-wrap;"></div>
   <script>
     (function () {
       var EXAMPLES = {
-        1: 'CAESAR  (used in The Beast 2001, NIN Year Zero 2007)\n\n  Plain : MEET AT DAWN\n  Key   : shift +3 (Caesar)\n  Cipher: PHHW DW GDZQ\n\n  Trick: ARG often spells out only the URL slug, not full English.',
-        2: 'VIGEN\u00c8RE  (used in NIN Year Zero, MIT Hunt 2014)\n\n  Plain : THE TRUTH IS COMING\n  Key   : EXTERMINAL (repeats)\n  Cipher: XEX XIGBU ID GLFMES\n\n  Trick: keys are usually fan-discovered words from the franchise.',
-        3: 'BACON  (used in I Love Bees 2004, Lost Experience 2006)\n\n  Plain : HI\n  Bacon : aabbb abaaa  (5 bits per letter)\n  Carrier: thE QUiCk brown fox jumped  (mixed case = bits)\n\n  Trick: hides bits inside otherwise normal-looking text.',
-        4: 'PIGPEN  (printed on physical props in escape rooms, ARGs)\n\n  Geometric grid \u2192 each letter shown as a fragment shape.\n  See the Cipher Museum\u2019s Pigpen exhibit for the full alphabet.\n\n  Trick: visually striking, instantly recognisable on a poster.'
+        1: 'CAESAR  (museum example)\n\n  Plain : MEET AT DAWN\n  Key   : shift +3 (Caesar)\n  Cipher: PHHW DW GDZQ\n\n  Design idea: a short encrypted URL clue may have little frequency evidence.',
+        2: 'VIGEN\u00c8RE  (museum example)\n\n  Plain : THE TRUTH IS COMING\n  Key   : EXTERMINAL (repeats)\n  Cipher: XEX XIGBU ID GLFMES\n\n  Design idea: players might find the keyword in an earlier clue.',
+        3: 'BACON  (museum example; 26-letter binary convention)\n\n  Plain : HI\n  Bacon : aabbb abaaa  (5 bits per letter)\n  Carrier: we ARE sAfe today  (first 10 letters: lower=a, upper=b)\n\n  Trick: hides bits inside otherwise normal-looking text.',
+        4: 'PIGPEN  (museum example)\n\n  Geometric grid \u2192 each letter shown as a fragment shape.\n  See the Cipher Museum\u2019s Pigpen exhibit for the full alphabet.\n\n  Trick: visually striking, recognisable to someone familiar with the selected alphabet.'
       };
       window.encode = function () {
         var n = parseInt(document.getElementById('input').value, 10);
@@ -101,22 +101,22 @@
 
     <div class="cipher-significance">
       <h3>Why This Matters</h3>
-      <p>Alternate-reality games (ARGs) are story-puzzle hybrids that play out across multiple real-world media — websites, phone numbers, physical letters, audio recordings, video — and treat the audience as collective detective. Almost every major ARG since <em>The Beast</em> (2001, marketing for <em>A.I. Artificial Intelligence</em>) has used ciphers as gating puzzles: Caesar, Vigenère, Bacon, Pigpen, Polybius, and bespoke symbol systems all appear regularly. Together, ARGs have probably trained more amateur cryptanalysts than any university course.</p>
+      <p>Alternate-reality games combine stories and participatory puzzles across media such as websites, recordings and physical objects. Classical ciphers can supply clues that groups solve together. This exhibit illustrates that design pattern; it does not measure how many games use particular ciphers or compare their educational reach with university courses.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p><em>The Beast</em> (2001) is generally credited as the first ARG; players collaborated on the Cloudmakers Yahoo group, eventually involving 7,500+ contributors. Subsequent landmark ARGs include <em>I Love Bees</em> (2004, <em>Halo 2</em> promotion, used GPS-coordinate ciphers and timed phone calls); Nine Inch Nails's <em>Year Zero</em> (2007, Vigenère and steganography across USB sticks left in concert venue bathrooms); <em>Lost Experience</em> (2006, ABC, classical substitutions); and the gaming community's <em>Trials Evolution</em> ARG (2012, Caesar + Vigenère + binary). Each canonised a particular cipher technique in popular gaming culture.</p></div>
+      <div class="panel-body"><p><em>The Beast</em> (2001), produced to promote <em>A.I. Artificial Intelligence</em>, was an influential early commercial ARG. Contemporary player accounts describe a distributed investigation and collaboration around its fictional world. Calling it an early landmark avoids conflating a particular promotion with the invention of all participatory or cross-media storytelling.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">Technical Notes</span></div>
-      <div class="panel-body"><p>ARGs almost never use modern strong cryptography (RSA, AES) — the puzzles must be solvable by collective amateur effort within hours or days. Instead they recycle classical ciphers in layered combinations: Caesar to gate a URL, Bacon to hide a phone number in mixed-case text, Vigenère to encrypt a plaintext clue, Pigpen for visual flair on a printed prop. The cryptographic interest is exactly the inverse of professional crypto: the goal is to be <em>solvable</em>, but only by clever organisation and crowd effort.</p></div>
+      <div class="panel-body"><p>A puzzle must give players a viable route to progress. That may involve attacking a weak classical cipher, discovering a key for a strong cipher, or interpreting a noncryptographic clue. AES or RSA can therefore appear in a solvable puzzle without being broken. The widget uses classical examples for teaching, not a survey of the genre’s cryptographic practices.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">Modern Echo</span></div>
-      <div class="panel-body"><p>ARGs continue to introduce classical cryptanalysis to new audiences and have become a recognised recruitment pipeline for security firms, intelligence agencies, and red-team companies. The NSA Codebreaker Challenge for university students explicitly draws from the ARG playbook, as does GCHQ's annual public puzzle.</p></div>
+      <div class="panel-body"><p>Collaborative puzzles can encourage careful transcription, record keeping and hypothesis testing. Institutional code challenges share some of those activities, but resemblance does not establish a documented recruitment pipeline or direct adoption of an ARG’s design.</p></div>
     </div>
 
   </div>
@@ -140,6 +140,8 @@
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Unfiction’s <a href="https://www.unfiction.com/compendium/2001/04/01/beast/">“A.I. Web Game — The Beast”</a>, a participant-community account of the 2001 game. The cipher combinations in this exhibit are museum examples, not attributed reconstructions of every named game.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>

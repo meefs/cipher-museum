@@ -47,7 +47,7 @@ test('Zimmermann metadata describes successive transmission legs', () => {
     assert.match(description, /0075 to Washington, then re-encoded in 13040 for Mexico/);
     assert.doesNotMatch(description, /two-stage|3DES|Triple DES/i);
   }
-  assert.match(d.body.textContent, /educational codebook model, not a reconstruction/);
+  assert.match(d.body.textContent, /teaching choice, not a reconstruction/);
   assert.match(html, /the_zimmermann_telegram\.pdf/);
   dom.window.close();
 });
@@ -96,7 +96,8 @@ test('Diffie–Hellman states the DLP-solver to CDH-solver implication only', ()
   assert.match(s, /converse is not established for arbitrary groups/);
   assert.doesNotMatch(s, /cannot recover a, b, or K without solving|Security rests on the discrete logarithm problem/);
   assert.match(html, /hall-of-foundations\/reduction\.html/);
-  assert.match(html, /https:\/\/toc\.cryptobook\.us\//);
+  assert.match(s, /Dan Boneh and Victor Shoup, A Graduate Course in Applied Cryptography, version 0.6/);
+  assert.doesNotMatch(html, /href="https:\/\/toc\.cryptobook\.us/);
   // Independent integer arithmetic pins the explanatory toy vector.
   assert.equal((5n ** 6n) % 23n, 8n);
   assert.equal((5n ** 15n) % 23n, 19n);

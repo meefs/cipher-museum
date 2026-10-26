@@ -414,7 +414,7 @@
     <div class="det-tools"><button type="button" id="manual-patterns">Compare word patterns</button><button type="button" id="manual-apply" disabled>Apply the sole compatible candidate</button></div>
     <output id="manual-candidates" class="det-work-output" aria-live="polite">Compare the patterns in ABBA AB with the small supplied dictionary.</output>
     <p>A result is compatible only with this dictionary and your current key hypotheses. Even a sole candidate is not proof of the original message. No word boundaries are invented for continuous text. Pattern matching requires resolved A–Z words separated by whitespace; unknown symbols and punctuation must not be silently treated as boundaries. To keep the search responsive, use at most eight distinct cipherwords, each no longer than 20 letters.</p>
-    <p class="det-source">Reading: Al Sweigart, <em>Cracking Codes with Python</em> (2018), <a href="https://inventwithpython.com/cracking/chapter17.html" target="_blank" rel="noopener">Chapter 17: word patterns and intersecting mappings</a>. This small original fixture teaches the constraint step, not the full book’s dictionary attack. <a href="further-reading.html#sweigart">Continue the reading trail</a>.</p>
+    <p class="det-source">Reading: Al Sweigart, <em>Cracking Codes with Python</em> (2018), Chapter 17: word patterns and intersecting mappings. This small original fixture teaches the constraint step, not the full book’s dictionary attack. <a href="further-reading.html#sweigart">Continue the reading trail</a>.</p>
   </details>
 
   <div id="det-results" hidden>
@@ -500,7 +500,7 @@
   <div class="det-limitations" id="det-limitations">
     <h3>What the Detective can&#8217;t tell you</h3>
     <ul>
-      <li>Short ciphertext (under ~60 characters) makes statistical analysis unreliable.</li>
+      <li>Short ciphertext can make statistical analysis unreliable; the roughly 60-character warning is a teaching heuristic, not a universal threshold.</li>
       <li>English-language scores can mislead on non-English plaintext.</li>
       <li>Random-looking data may be encrypted, compressed or simply random. These letter-based heuristics cannot reliably identify a modern cipher, establish its security or prove that a sample is encrypted.</li>
       <li>Layered constructions and simplified machine models can confound single-pass identification.</li>

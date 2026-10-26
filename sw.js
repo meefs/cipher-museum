@@ -4,9 +4,9 @@
  *
  * Strategy:
  *   - HTML navigations: network-first, falling back to cache (content stays fresh
- *     online; the whole museum keeps working offline once pages are visited).
+ *     online; cached pages may be available offline while their assets remain cached).
  *   - Static assets (css/js/images/json): cache-first with background refresh.
- *   - The multi-megabyte corpus downloads under /public/ are never cached.
+ *   - Requests under /public/, including corpus samples and reports, bypass this cache.
  *
  * VERSION is stamped automatically by `npm run build:js` from a hash of every
  * asset served cache-first — the minified bundles, the non-HTML entries of
@@ -16,7 +16,7 @@
  */
 'use strict';
 
-const VERSION = 'cipher-museum-10164342';
+const VERSION = 'cipher-museum-ca4277b5';
 
 const CORE = [
   '/',
@@ -125,7 +125,7 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
-  // Never cache the corpus downloads — they are enormous and versioned separately.
+  // Bypass all /public/ requests, including corpus downloads, samples and reports.
   if (url.pathname.startsWith('/public/')) return;
 
   if (req.mode === 'navigate') {

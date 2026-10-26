@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D'Agapeyeff Cipher — The Cipher Museum</title>
-  <meta name="description" content="A 1939 textbook 'cryptogram for the student' that the author himself later admitted he had forgotten how to solve.">
+  <meta name="description" content="Alexander d’Agapeyeff’s 1939 numeric challenge: a verified ciphertext excerpt, overlapping-pair analysis and explicit limits on proposed reconstructions.">
   <meta property="og:title" content="D'Agapeyeff Cipher — The Cipher Museum">
-  <meta property="og:description" content="A 1939 textbook 'cryptogram for the student' that the author himself later admitted he had forgotten how to solve.">
+  <meta property="og:description" content="Alexander d’Agapeyeff’s 1939 numeric challenge: a verified ciphertext excerpt, overlapping-pair analysis and explicit limits on proposed reconstructions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/dagapeyeff.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="D'Agapeyeff Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="A 1939 textbook 'cryptogram for the student' that the author himself later admitted he had forgotten how to solve.">
+  <meta name="twitter:description" content="Alexander d’Agapeyeff’s 1939 numeric challenge: a verified ciphertext excerpt, overlapping-pair analysis and explicit limits on proposed reconstructions.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/dagapeyeff.html">
@@ -61,7 +61,7 @@
   </div>
   <h1 class="page-title">D'Agapeyeff Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--historical" href="../museum-map.html#trust-labels" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise." aria-label="Trust label: Historical Only. Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h11v12a2 2 0 0 0 2 2H6a3 3 0 0 1-3-3V7z"/><path d="M16 5a2 2 0 0 1 2 2v8h3a0 0 0 0 1 0 0v2a2 2 0 0 1-2 2"/></svg><span class="trust-label__text">Historical Only</span></a></div>
-  <p class="page-tagline">A 1939 textbook 'cryptogram for the student' that the author himself later admitted he had forgotten how to solve.</p>
+  <p class="page-tagline">A 1939 numeric challenge with no generally accepted reconstruction of its method.</p>
   <p class="exhibit-status-note">Unsolved challenge cipher</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Region</span><span class="fact-value">London, England</span></div>
@@ -73,7 +73,7 @@
 
 <div class="demo-section" data-cipher="dagapeyeff">
   <h2>Interactive Exhibit</h2>
-  <p style="opacity:.85;">The widget loads a 130-digit excerpt of the 395-digit ciphertext (or paste the full cryptogram yourself) and will tally adjacent digit pairs. A real Polybius-style fractionation will show a non-uniform distribution. Track B — analytic helper, not a solver.</p>
+  <p style="opacity:.85;">The widget loads a 130-digit excerpt of the 395-digit ciphertext (or paste the full cryptogram yourself) and will tally adjacent digit pairs. It counts overlapping pairs after removing spaces. Uneven counts can suggest hypotheses but do not establish a cipher family. This is an analytic helper, not a solver.</p>
   <label for="input" style="display:block;margin-top:1rem;font-weight:600;">Numeric ciphertext</label>
   <textarea id="input" rows="5" style="width:100%;padding:.6rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;font-family:monospace;">75628 28591 62916 48164 91748 58464 74748 28483 81638 18174 74826 26475 83828 49175 74658 37575 75936 36565 81638 17585 75756 46282 92857 46382 75748 38165</textarea>
   <button type="button" data-fn="encode" style="margin-top:.5rem;padding:.5rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;cursor:pointer;">Tally digit pairs</button>
@@ -91,12 +91,12 @@
         }
         var entries = Object.keys(counts).map(function (k) { return [k, counts[k]]; });
         entries.sort(function (a, b) { return b[1] - a[1]; });
-        var lines = ['Digits analysed: ' + raw.length, 'Distinct adjacent pairs: ' + entries.length, '', 'Top 12 pairs by frequency:'];
+        var lines = ['Digits analysed: ' + raw.length, 'Overlapping pairs analysed: ' + (raw.length - 1), 'Distinct adjacent pairs: ' + entries.length, '', 'Top 12 pairs by frequency:'];
         for (var j = 0; j < Math.min(12, entries.length); j++) {
           lines.push('  ' + entries[j][0] + '  \u00d7 ' + entries[j][1]);
         }
         lines.push('');
-        lines.push('A uniform random source over 100 pairs would expect ~' + (raw.length/100).toFixed(1) + ' hits per pair.');
+        lines.push('For independent uniform decimal digits, each pair has expected count ' + ((raw.length - 1)/100).toFixed(2) + '. Overlapping pairs are not independent observations.');
         out.textContent = lines.join('\n');
       };
       document.addEventListener('DOMContentLoaded', function () { window.encode(); });
@@ -109,22 +109,22 @@
 
     <div class="cipher-significance">
       <h3>Why This Matters</h3>
-      <p>On the last page of the first edition of <em>Codes and Ciphers</em> (Oxford University Press, 1939), Alexander d'Agapeyeff appended a 395-digit numeric cryptogram as 'a cryptogram upon which the reader is invited to test his skill.' It has never been publicly cracked. By the second edition, d'Agapeyeff had quietly removed it, reportedly admitting he had forgotten the encryption method. It is one of the few unsolved ciphers whose <em>author lost the key</em>.</p>
+      <p>Alexander d’Agapeyeff published a 395-digit challenge in <em>Codes and Ciphers</em> (Oxford University Press, 1939). Its method has no generally accepted reconstruction. Researchers report that he later could not recall how he had enciphered it; that report does not identify a lost key or establish that the printed text is error-free.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The cipher consists of 395 digits arranged in five-digit groups. The expected attack route assumes a fractionating system (Polybius square or similar) followed by a transposition — both common in the British cryptographic education tradition d'Agapeyeff was writing for. None of the proposed solutions has been independently confirmed, and several solutions are mutually contradictory.</p></div>
+      <div class="panel-body"><p>The digits are printed in five-digit groups. The widget’s default is the first 26 groups (130 digits), checked against the reproduced challenge page. Fractionation followed by transposition is one line of investigation, not a recovered description of the author’s method.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">Technical Notes</span></div>
-      <div class="panel-body"><p>Statistical work shows the digit distribution is not uniform — pairs and triples deviate from random — strongly implying a real cipher rather than gibberish. The most widely discussed reconstruction — set out in Nick Pelling's computational analysis — is a 5&times;5 Polybius substitution of plaintext letters into row-column digit pairs, followed by a transposition, which leaves an attacker having to solve both layers at once. The puzzle is that the corpus (~395 digits ≈ 200 plaintext characters) is just at the edge where multiple keys can fit equally well.</p></div>
+      <div class="panel-body"><p>Nonuniform frequencies do not prove that a sequence encodes a meaningful message. A Polybius-style hypothesis must specify its coordinate alphabet, grouping, transposition and any treatment of the odd final digit. Dividing 395 by two does not establish a plaintext length, and no justified unicity-distance calculation is supplied here.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">Modern Echo</span></div>
-      <div class="panel-body"><p>The cipher is a teaching favourite for explaining <em>unicity distance</em> — the corpus is short enough that more than one key produces grammatical English. Modern brute-force searches over candidate Polybius squares and transposition keys have produced several 'almost' solutions, but none with the unambiguous English readability that would settle the case. It remains an open problem and a regular target of cryptanalysis competitions.</p></div>
+      <div class="panel-body"><p>Gordon Rugg and collaborators investigated possible human error as well as computational attacks. Their report identifies a mistake in another worked example in the book; that is a reason to investigate transcription or enciphering errors, not proof that this challenge contains one. A convincing candidate needs explicit rules that reproduce the printed digits and explain any proposed correction.</p></div>
     </div>
 
   </div>
@@ -141,7 +141,7 @@
             <tr><td>Era</td><td>Pre-WWII Britain · 1939</td></tr>
             <tr><td>Discipline</td><td>Numeric fractionation (suspected)</td></tr>
             <tr><td>Track</td><td>B (frequency analyzer)</td></tr>
-            <tr><td>Modern echo</td><td>Unicity distance · cryptanalysis competitions</td></tr>
+            <tr><td>Modern echo</td><td>Model assumptions · reproducible candidate testing</td></tr>
           </tbody>
         </table>
       </div>
@@ -155,7 +155,7 @@
     <a href="../ciphers/voynich.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Voynich Manuscript</span>
-      <span class="related-card__tag">Statistical attacks on small corpora</span>
+      <span class="related-card__tag">Compare another unresolved text</span>
     </a>
     <a href="../ciphers/beale.html" class="related-card">
       <span class="related-card__number">Related</span>

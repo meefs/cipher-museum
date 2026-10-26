@@ -84,7 +84,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Delastelle’s Trifid extended the Bifid into three dimensions — using a 3×3×3 cube instead of a 5×5 square — achieving even greater diffusion by weaving three coordinate streams together before converting back to letters.</p>
+      <p>Delastelle’s Trifid uses three coordinates per symbol. Concatenating and regrouping those coordinates mixes information across a chosen period. The method is a useful comparison with Bifid, but three dimensions alone do not prove stronger security for every parameter choice.</p>
     </div>
 
     <div class="panel">
@@ -145,13 +145,13 @@ HELLO encrypted:
     <text x="200" y="76" font-size="8" fill="#5AC8A0">→ look up each in cube</text>
   </g>
 </svg>
-<figcaption class="figure-caption">Three coordinate streams (layer, row, column) are interleaved — 3D diffusion is stronger than Bifid's 2D</figcaption>
+<figcaption class="figure-caption">Three coordinate streams (layer, row, column) are interleaved — the extra coordinate changes mixing, not a universal security ranking</figcaption>
 </figure></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Statistical Cryptanalysis</div><div class="attack-diff">Complexity: Hard — more so than Bifid</div><p class="attack-desc">Three-coordinate fractionation changes how information is mixed across a block. Exactly which plaintext positions influence an output depends on the period and layout. A third coordinate alone does not prove that Trifid always requires more ciphertext to attack than Bifid.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Statistical Cryptanalysis</div><div class="attack-diff">Difficulty depends on period, key, text and attack</div><p class="attack-desc">Three-coordinate fractionation changes how information is mixed across a block. Exactly which plaintext positions influence an output depends on the period and layout. A third coordinate alone does not prove that Trifid always requires more ciphertext to attack than Bifid.</p></div></div>
     </div>
 
     <div class="panel">
@@ -160,8 +160,8 @@ HELLO encrypted:
         <table class="cipher-table">
           <thead><tr><th>Concept from Trifid Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>3D coordinate system</td><td>Multi-dimensional bit manipulations in modern hash functions</td></tr>
-<tr><td>Three-stream interleaving</td><td>AES: 4 operations per round create multi-dimensional diffusion</td></tr>
-<tr><td>Larger coordinate space than Bifid</td><td>Increasing output size increases security: SHA-256 vs SHA-512</td></tr></tbody>
+<tr><td>Three-stream interleaving</td><td>AES combines nonlinear substitution and linear mixing; its final round omits MixColumns</td></tr>
+<tr><td>Larger coordinate space than Bifid</td><td>Larger representation size alone does not establish greater cryptanalytic strength</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -191,6 +191,8 @@ HELLO encrypted:
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Helen Fouché Gaines, <em>Cryptanalysis: A Study of Ciphers and Their Solution</em> (1939; Dover reprint 1956), Chapter XXII; David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), on Delastelle’s posthumous <em>Traité élémentaire de cryptographie</em> (1902).</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

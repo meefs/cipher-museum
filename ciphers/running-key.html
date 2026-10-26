@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Running Key Cipher — The Cipher Museum</title>
-    <meta name="description" content="Running Key cipher (19th c.) — a Vigenère variant using a long passage of natural text as the key. Broken by Friedman with high-probability-trigram dragging.">
+    <meta name="description" content="Running Key uses a message-length text passage as its Vigenère key. Language patterns in both message and key prevent the perfect secrecy of an ideal one-time pad.">
   <meta property="og:title" content="Running Key Cipher — The Cipher Museum">
-  <meta property="og:description" content="Running Key cipher (19th c.) — a Vigenère variant using a long passage of natural text as the key. Broken by Friedman with high-probability-trigram dragging.">
+  <meta property="og:description" content="Running Key uses a message-length text passage as its Vigenère key. Language patterns in both message and key prevent the perfect secrecy of an ideal one-time pad.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/running-key.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Running Key Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Running Key cipher (19th c.) — a Vigenère variant using a long passage of natural text as the key. Broken by Friedman with high-probability-trigram dragging.">
+  <meta name="twitter:description" content="Running Key uses a message-length text passage as its Vigenère key. Language patterns in both message and key prevent the perfect secrecy of an ideal one-time pad.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/running-key.html">
@@ -69,8 +69,8 @@
   <p class="page-tagline">A book-length key removes short repetition, but keeps language patterns</p>
   <p class="exhibit-status-note">Source text identification · Statistical analysis</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Various 19th century cryptographers</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1850s</span></div>
+    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">No single inventor established here</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Historical running-key family</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Full-length key text (book or speech)</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Source text identification · Statistical analysis</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">A long key is not necessarily a random key</span></div>
@@ -95,7 +95,7 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
       <div class="panel-body"><pre>Plain: ATTACKATDAWN
-Key:   FROMTHISBOOKW
+Key:   FROMTHISBOOK
 Cipher: each letter shifted by key letter
 
 A+F=F, T+R=K, T+O=H, A+M=M,
@@ -142,10 +142,10 @@ C+T=V, K+H=R, A+I=I, T+S=L...</pre><p style="margin-top:1rem;">An attacker can t
         <table class="cipher-table">
           <thead><tr><th>Concept from Running Key Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Key length = message length</td><td>Necessary but not sufficient for a one-time pad: its secret key must also be uniformly random, independent of the message, and used only once</td></tr>
-<tr><td>Non-repeating key</td><td>Modern stream ciphers: keystream length = message length, never reused</td></tr>
+<tr><td>Non-repeating key</td><td>Modern stream constructions must avoid reusing keystream under their specified key-and-nonce rules</td></tr>
 <tr><td>Key source = security weakness</td><td>True randomness: OTP keys must be random, not drawn from patterned text</td></tr></tbody>
         </table>
-        <p style="margin-top:1rem;">Reading: Joshua Holden, <a href="../further-reading.html#holden"><em>The Mathematics of Secrets</em></a> (2017), §5.1 on running-key attacks and §5.2 on one-time pads. A long key and a uniformly random key are different requirements.</p>
+        <p style="margin-top:1rem;">Reading: Joshua Holden, <a href="../further-reading.html#holden"><em>The Mathematics of Secrets: Cryptography from Caesar Ciphers to Digital Encryption</em></a> (2017), §5.1 on running-key attacks and §5.2 on one-time pads. A long key and a uniformly random key are different requirements.</p>
       </div>
     </div>
 
@@ -162,8 +162,8 @@ C+T=V, K+H=R, A+I=I, T+S=L...</pre><p style="margin-top:1rem;">An attacker can t
             <tr><td>Exhibit</td><td>12 of 172</td></tr>
             <tr><td>Era</td><td>19th Century</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
-            <tr><td>Inventor</td><td>Various 19th century cryptographers</td></tr>
-            <tr><td>Year</td><td>~1850s</td></tr>
+            <tr><td>Inventor</td><td>No single inventor established here</td></tr>
+            <tr><td>Year</td><td>Historical running-key family</td></tr>
             <tr><td>Key Type</td><td>Full-length key text (book or speech)</td></tr>
             <tr><td>Broken By</td><td>Source text identification · Statistical analysis</td></tr>
           </tbody>

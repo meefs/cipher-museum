@@ -151,8 +151,8 @@
   // SENT. decryptBit's own `noise` is measured against the bit it decoded, so
   // on a failure it reports a small number — correct for what it means, and
   // misleading if you read it as "how much noise was there". Callers that know
-  // the true message should use this instead: |residual| > q/4 is exactly the
-  // condition under which rounding tips to the wrong bit.
+  // the true message should use this instead. For odd q, exact boundary
+  // behavior also depends on the sent bit, noise direction and tie rule.
   function residualNoise(raw, m, q) {
     return center(raw - m * Math.floor(q / 2), q);
   }

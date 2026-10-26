@@ -46,6 +46,8 @@ pages.forEach(function (p) {
 // Exact primary-source destinations reviewed during the accuracy audit.
 // Do not replace this with an unrestricted host allowlist.
 var PRIMARY_SOURCES = new Set([
+  "https://annals.math.princeton.edu/1995/141-3/p01",
+  "https://annals.math.princeton.edu/1995/141-3/p02",
   "https://www.rfc-editor.org/rfc/rfc8017.html",
   "https://www.rfc-editor.org/rfc/rfc7919.html",
   "https://www.rfc-editor.org/rfc/rfc8235.html",

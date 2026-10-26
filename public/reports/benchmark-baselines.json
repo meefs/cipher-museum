@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-22",
+  "generated": "2026-10-26",
   "version": "0.6",
   "description": "Cipher Corpus descriptive statistics; solver accuracy is not measured here",
   "corpus_url": "https://ciphermuseum.com/cipher-corpus.html",
@@ -21,7 +21,7 @@
       "authors": "Li et al.",
       "year": 2025,
       "url": "https://arxiv.org/pdf/2504.19093",
-      "note": "Foundational benchmark establishing LLM cryptanalysis evaluation methodology"
+      "note": "Related LLM decryption benchmark; its records and evaluation methods differ from this corpus"
     }
   },
   "summary": {
@@ -74,6 +74,9 @@
       "cipher_type": "caesar",
       "cipher_family": "substitution",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 5102
+      },
       "record_count": 5102,
       "public_count": 3600,
       "blind_count": 1502,
@@ -99,7 +102,11 @@
     {
       "cipher_type": "vigenere",
       "cipher_family": "polyalphabetic",
-      "difficulty": "intermediate",
+      "difficulty": "mixed",
+      "difficulty_distribution": {
+        "intermediate": 4978,
+        "advanced": 1
+      },
       "record_count": 4979,
       "public_count": 3443,
       "blind_count": 1536,
@@ -126,6 +133,9 @@
       "cipher_type": "affine",
       "cipher_family": "substitution",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 4635
+      },
       "record_count": 4635,
       "public_count": 3235,
       "blind_count": 1400,
@@ -152,6 +162,9 @@
       "cipher_type": "monoalphabetic",
       "cipher_family": "substitution",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 3782
+      },
       "record_count": 3782,
       "public_count": 2658,
       "blind_count": 1124,
@@ -173,6 +186,9 @@
       "cipher_type": "columnar_transposition",
       "cipher_family": "transposition",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 3490
+      },
       "record_count": 3490,
       "public_count": 2405,
       "blind_count": 1085,
@@ -199,6 +215,9 @@
       "cipher_type": "playfair",
       "cipher_family": "polygraphic",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 3036
+      },
       "record_count": 3036,
       "public_count": 2122,
       "blind_count": 914,
@@ -225,6 +244,9 @@
       "cipher_type": "beaufort",
       "cipher_family": "polyalphabetic",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 2815
+      },
       "record_count": 2815,
       "public_count": 1930,
       "blind_count": 885,
@@ -250,6 +272,9 @@
       "cipher_type": "enigma",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 2723
+      },
       "record_count": 2723,
       "public_count": 1899,
       "blind_count": 824,
@@ -272,6 +297,9 @@
       "cipher_type": "gronsfeld",
       "cipher_family": "polyalphabetic",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 2538
+      },
       "record_count": 2538,
       "public_count": 1768,
       "blind_count": 770,
@@ -291,7 +319,11 @@
     {
       "cipher_type": "alberti_disk",
       "cipher_family": "disk",
-      "difficulty": "expert",
+      "difficulty": "mixed",
+      "difficulty_distribution": {
+        "expert": 2140,
+        "advanced": 1
+      },
       "record_count": 2141,
       "public_count": 1516,
       "blind_count": 625,
@@ -314,6 +346,9 @@
       "cipher_type": "rail_fence",
       "cipher_family": "transposition",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 2125
+      },
       "record_count": 2125,
       "public_count": 1496,
       "blind_count": 629,
@@ -339,6 +374,9 @@
       "cipher_type": "bazeries",
       "cipher_family": "transposition",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1970
+      },
       "record_count": 1970,
       "public_count": 1362,
       "blind_count": 608,
@@ -359,6 +397,9 @@
       "cipher_type": "autokey",
       "cipher_family": "polyalphabetic",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 1910
+      },
       "record_count": 1910,
       "public_count": 1356,
       "blind_count": 554,
@@ -385,6 +426,9 @@
       "cipher_type": "scytale",
       "cipher_family": "transposition",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 1860
+      },
       "record_count": 1860,
       "public_count": 1255,
       "blind_count": 605,
@@ -404,6 +448,9 @@
       "cipher_type": "bifid",
       "cipher_family": "fractionation",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1853
+      },
       "record_count": 1853,
       "public_count": 1272,
       "blind_count": 581,
@@ -430,6 +477,9 @@
       "cipher_type": "confederate_vigenere",
       "cipher_family": "polyalphabetic",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 1682
+      },
       "record_count": 1682,
       "public_count": 1186,
       "blind_count": 496,
@@ -450,7 +500,11 @@
     {
       "cipher_type": "diana",
       "cipher_family": "polyalphabetic",
-      "difficulty": "intermediate",
+      "difficulty": "mixed",
+      "difficulty_distribution": {
+        "intermediate": 1680,
+        "expert": 1
+      },
       "record_count": 1681,
       "public_count": 1146,
       "blind_count": 535,
@@ -472,6 +526,9 @@
       "cipher_type": "porta",
       "cipher_family": "polyalphabetic",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 1680
+      },
       "record_count": 1680,
       "public_count": 1139,
       "blind_count": 541,
@@ -492,6 +549,9 @@
       "cipher_type": "adfgx",
       "cipher_family": "fractionation",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1552
+      },
       "record_count": 1552,
       "public_count": 1067,
       "blind_count": 485,
@@ -512,6 +572,9 @@
       "cipher_type": "trifid",
       "cipher_family": "fractionation",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1530
+      },
       "record_count": 1530,
       "public_count": 1090,
       "blind_count": 440,
@@ -532,6 +595,9 @@
       "cipher_type": "fractionated_morse",
       "cipher_family": "fractionation",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1450
+      },
       "record_count": 1450,
       "public_count": 1003,
       "blind_count": 447,
@@ -552,6 +618,9 @@
       "cipher_type": "hill",
       "cipher_family": "polygraphic",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1450
+      },
       "record_count": 1450,
       "public_count": 1040,
       "blind_count": 410,
@@ -572,6 +641,9 @@
       "cipher_type": "adfgvx",
       "cipher_family": "fractionation",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1391
+      },
       "record_count": 1391,
       "public_count": 951,
       "blind_count": 440,
@@ -594,6 +666,9 @@
       "cipher_type": "chaocipher",
       "cipher_family": "machine",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1391
+      },
       "record_count": 1391,
       "public_count": 956,
       "blind_count": 435,
@@ -615,6 +690,9 @@
       "cipher_type": "double_transposition",
       "cipher_family": "transposition",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1390
+      },
       "record_count": 1390,
       "public_count": 990,
       "blind_count": 400,
@@ -635,6 +713,9 @@
       "cipher_type": "lorenz",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 1301
+      },
       "record_count": 1301,
       "public_count": 908,
       "blind_count": 393,
@@ -657,6 +738,9 @@
       "cipher_type": "four_square",
       "cipher_family": "polygraphic",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1284
+      },
       "record_count": 1284,
       "public_count": 883,
       "blind_count": 401,
@@ -676,7 +760,11 @@
     {
       "cipher_type": "stager_route",
       "cipher_family": "transposition",
-      "difficulty": "expert",
+      "difficulty": "mixed",
+      "difficulty_distribution": {
+        "expert": 1281,
+        "intermediate": 1
+      },
       "record_count": 1282,
       "public_count": 896,
       "blind_count": 386,
@@ -698,6 +786,9 @@
       "cipher_type": "m209",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 1221
+      },
       "record_count": 1221,
       "public_count": 888,
       "blind_count": 333,
@@ -719,6 +810,9 @@
       "cipher_type": "kryptos",
       "cipher_family": "polyalphabetic",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1162
+      },
       "record_count": 1162,
       "public_count": 821,
       "blind_count": 341,
@@ -740,6 +834,9 @@
       "cipher_type": "sigaba",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 1161
+      },
       "record_count": 1161,
       "public_count": 826,
       "blind_count": 335,
@@ -761,6 +858,9 @@
       "cipher_type": "fialka",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 1161
+      },
       "record_count": 1161,
       "public_count": 781,
       "blind_count": 380,
@@ -783,6 +883,9 @@
       "cipher_type": "kl7",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 1161
+      },
       "record_count": 1161,
       "public_count": 800,
       "blind_count": 361,
@@ -804,6 +907,9 @@
       "cipher_type": "geheimschreiber",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 1161
+      },
       "record_count": 1161,
       "public_count": 814,
       "blind_count": 347,
@@ -826,6 +932,9 @@
       "cipher_type": "kama_sutra",
       "cipher_family": "substitution",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 1160
+      },
       "record_count": 1160,
       "public_count": 817,
       "blind_count": 343,
@@ -845,6 +954,9 @@
       "cipher_type": "cardano_autokey",
       "cipher_family": "polyalphabetic",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1160
+      },
       "record_count": 1160,
       "public_count": 821,
       "blind_count": 339,
@@ -865,6 +977,9 @@
       "cipher_type": "red_type_a",
       "cipher_family": "machine",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1160
+      },
       "record_count": 1160,
       "public_count": 828,
       "blind_count": 332,
@@ -885,6 +1000,9 @@
       "cipher_type": "typex",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 1160
+      },
       "record_count": 1160,
       "public_count": 837,
       "blind_count": 323,
@@ -905,6 +1023,9 @@
       "cipher_type": "wadsworth",
       "cipher_family": "polyalphabetic",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1100
+      },
       "record_count": 1100,
       "public_count": 753,
       "blind_count": 347,
@@ -923,7 +1044,11 @@
     {
       "cipher_type": "vic",
       "cipher_family": "substitution",
-      "difficulty": "advanced",
+      "difficulty": "mixed",
+      "difficulty_distribution": {
+        "advanced": 1073,
+        "expert": 1
+      },
       "record_count": 1074,
       "public_count": 742,
       "blind_count": 332,
@@ -945,6 +1070,9 @@
       "cipher_type": "nihilist",
       "cipher_family": "fractionation",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1072
+      },
       "record_count": 1072,
       "public_count": 781,
       "blind_count": 291,
@@ -965,6 +1093,9 @@
       "cipher_type": "two_square",
       "cipher_family": "polygraphic",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1072
+      },
       "record_count": 1072,
       "public_count": 754,
       "blind_count": 318,
@@ -984,6 +1115,9 @@
       "cipher_type": "geez_monastic",
       "cipher_family": "substitution",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 930
+      },
       "record_count": 930,
       "public_count": 671,
       "blind_count": 259,
@@ -1004,6 +1138,9 @@
       "cipher_type": "purple",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 872
+      },
       "record_count": 872,
       "public_count": 596,
       "blind_count": 276,
@@ -1025,7 +1162,11 @@
     {
       "cipher_type": "copiale",
       "cipher_family": "substitution",
-      "difficulty": "advanced",
+      "difficulty": "mixed",
+      "difficulty_distribution": {
+        "advanced": 870,
+        "expert": 1
+      },
       "record_count": 871,
       "public_count": 621,
       "blind_count": 250,
@@ -1048,6 +1189,9 @@
       "cipher_type": "wheatstone",
       "cipher_family": "polygraphic",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 871
+      },
       "record_count": 871,
       "public_count": 604,
       "blind_count": 267,
@@ -1069,6 +1213,9 @@
       "cipher_type": "great_cipher",
       "cipher_family": "nomenclator",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 871
+      },
       "record_count": 871,
       "public_count": 620,
       "blind_count": 251,
@@ -1091,6 +1238,9 @@
       "cipher_type": "jn25",
       "cipher_family": "codebook",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 871
+      },
       "record_count": 871,
       "public_count": 594,
       "blind_count": 277,
@@ -1112,6 +1262,9 @@
       "cipher_type": "venona_pad_reuse",
       "cipher_family": "stream",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 871
+      },
       "record_count": 871,
       "public_count": 611,
       "blind_count": 260,
@@ -1133,6 +1286,9 @@
       "cipher_type": "straddling_checkerboard",
       "cipher_family": "substitution",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 870
+      },
       "record_count": 870,
       "public_count": 610,
       "blind_count": 260,
@@ -1153,6 +1309,9 @@
       "cipher_type": "kryha",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 870
+      },
       "record_count": 870,
       "public_count": 596,
       "blind_count": 274,
@@ -1173,6 +1332,9 @@
       "cipher_type": "argenti",
       "cipher_family": "nomenclator",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 870
+      },
       "record_count": 870,
       "public_count": 639,
       "blind_count": 231,
@@ -1193,6 +1355,9 @@
       "cipher_type": "slidex",
       "cipher_family": "transposition",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 870
+      },
       "record_count": 870,
       "public_count": 612,
       "blind_count": 258,
@@ -1213,6 +1378,9 @@
       "cipher_type": "solitaire",
       "cipher_family": "stream",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 811
+      },
       "record_count": 811,
       "public_count": 571,
       "blind_count": 240,
@@ -1234,6 +1402,9 @@
       "cipher_type": "chinese_telegraph",
       "cipher_family": "codebook",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 811
+      },
       "record_count": 811,
       "public_count": 562,
       "blind_count": 249,
@@ -1256,6 +1427,9 @@
       "cipher_type": "nomenclator",
       "cipher_family": "nomenclator",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 810
+      },
       "record_count": 810,
       "public_count": 582,
       "blind_count": 228,
@@ -1275,6 +1449,9 @@
       "cipher_type": "m94",
       "cipher_family": "machine",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 772
+      },
       "record_count": 772,
       "public_count": 513,
       "blind_count": 259,
@@ -1296,6 +1473,9 @@
       "cipher_type": "jefferson_disk",
       "cipher_family": "disk",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 757
+      },
       "record_count": 757,
       "public_count": 522,
       "blind_count": 235,
@@ -1317,6 +1497,9 @@
       "cipher_type": "wallis_cipher",
       "cipher_family": "nomenclator",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 580
+      },
       "record_count": 580,
       "public_count": 411,
       "blind_count": 169,
@@ -1337,6 +1520,9 @@
       "cipher_type": "one_time_pad",
       "cipher_family": "stream",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 485
+      },
       "record_count": 485,
       "public_count": 336,
       "blind_count": 149,
@@ -1357,6 +1543,9 @@
       "cipher_type": "vernam",
       "cipher_family": "stream",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 485
+      },
       "record_count": 485,
       "public_count": 333,
       "blind_count": 152,
@@ -1376,6 +1565,9 @@
       "cipher_type": "rot13",
       "cipher_family": "substitution",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 405
+      },
       "record_count": 405,
       "public_count": 305,
       "blind_count": 100,
@@ -1402,6 +1594,9 @@
       "cipher_type": "atbash",
       "cipher_family": "substitution",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 405
+      },
       "record_count": 405,
       "public_count": 283,
       "blind_count": 122,
@@ -1427,6 +1622,9 @@
       "cipher_type": "polybius",
       "cipher_family": "substitution",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 378
+      },
       "record_count": 378,
       "public_count": 274,
       "blind_count": 104,
@@ -1453,6 +1651,9 @@
       "cipher_type": "trithemius",
       "cipher_family": "polyalphabetic",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 350
+      },
       "record_count": 350,
       "public_count": 252,
       "blind_count": 98,
@@ -1472,6 +1673,9 @@
       "cipher_type": "running_key",
       "cipher_family": "polyalphabetic",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 348
+      },
       "record_count": 348,
       "public_count": 247,
       "blind_count": 101,
@@ -1491,6 +1695,9 @@
       "cipher_type": "zimmermann",
       "cipher_family": "codebook",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 292
+      },
       "record_count": 292,
       "public_count": 219,
       "blind_count": 73,
@@ -1512,6 +1719,9 @@
       "cipher_type": "culper_ring",
       "cipher_family": "codebook",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 292
+      },
       "record_count": 292,
       "public_count": 203,
       "blind_count": 89,
@@ -1533,6 +1743,9 @@
       "cipher_type": "morse_code",
       "cipher_family": "encoding",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 290
+      },
       "record_count": 290,
       "public_count": 214,
       "blind_count": 76,
@@ -1552,6 +1765,9 @@
       "cipher_type": "commercial_code",
       "cipher_family": "codebook",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 290
+      },
       "record_count": 290,
       "public_count": 197,
       "blind_count": 93,
@@ -1572,6 +1788,9 @@
       "cipher_type": "pigpen",
       "cipher_family": "substitution",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 252
+      },
       "record_count": 252,
       "public_count": 178,
       "blind_count": 74,
@@ -1592,6 +1811,9 @@
       "cipher_type": "voynich_render",
       "cipher_family": "substitution",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 252
+      },
       "record_count": 252,
       "public_count": 175,
       "blind_count": 77,
@@ -1612,6 +1834,9 @@
       "cipher_type": "babington",
       "cipher_family": "nomenclator",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 249
+      },
       "record_count": 249,
       "public_count": 174,
       "blind_count": 75,
@@ -1633,6 +1858,9 @@
       "cipher_type": "null_cipher",
       "cipher_family": "steganography",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 234
+      },
       "record_count": 234,
       "public_count": 176,
       "blind_count": 58,
@@ -1655,6 +1883,9 @@
       "cipher_type": "tap_code",
       "cipher_family": "substitution",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 192
+      },
       "record_count": 192,
       "public_count": 138,
       "blind_count": 54,
@@ -1674,6 +1905,9 @@
       "cipher_type": "navajo_code",
       "cipher_family": "code",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 119
+      },
       "record_count": 119,
       "public_count": 84,
       "blind_count": 35,
@@ -1695,6 +1929,9 @@
       "cipher_type": "arnold_andre",
       "cipher_family": "codebook",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 117
+      },
       "record_count": 117,
       "public_count": 81,
       "blind_count": 36,
@@ -1716,6 +1953,9 @@
       "cipher_type": "bacon_cipher",
       "cipher_family": "steganography",
       "difficulty": "beginner",
+      "difficulty_distribution": {
+        "beginner": 116
+      },
       "record_count": 116,
       "public_count": 79,
       "blind_count": 37,
@@ -1735,6 +1975,9 @@
       "cipher_type": "aeneas_tacticus",
       "cipher_family": "steganography",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 116
+      },
       "record_count": 116,
       "public_count": 79,
       "blind_count": 37,
@@ -1754,6 +1997,9 @@
       "cipher_type": "homophonic",
       "cipher_family": "substitution",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 107
+      },
       "record_count": 107,
       "public_count": 76,
       "blind_count": 31,
@@ -1775,6 +2021,9 @@
       "cipher_type": "rs44",
       "cipher_family": "transposition",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 100
+      },
       "record_count": 100,
       "public_count": 70,
       "blind_count": 30,
@@ -1794,6 +2043,9 @@
       "cipher_type": "double_playfair",
       "cipher_family": "polygraphic",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 100
+      },
       "record_count": 100,
       "public_count": 70,
       "blind_count": 30,
@@ -1813,6 +2065,9 @@
       "cipher_type": "amsco",
       "cipher_family": "transposition",
       "difficulty": "intermediate",
+      "difficulty_distribution": {
+        "intermediate": 100
+      },
       "record_count": 100,
       "public_count": 70,
       "blind_count": 30,
@@ -1832,6 +2087,9 @@
       "cipher_type": "book_cipher",
       "cipher_family": "codebook",
       "difficulty": "expert",
+      "difficulty_distribution": {
+        "expert": 65
+      },
       "record_count": 65,
       "public_count": 48,
       "blind_count": 17,
@@ -1853,6 +2111,9 @@
       "cipher_type": "wallis_ciphers",
       "cipher_family": "polyalphabetic",
       "difficulty": "advanced",
+      "difficulty_distribution": {
+        "advanced": 1
+      },
       "record_count": 1,
       "public_count": 1,
       "blind_count": 0,
@@ -2099,7 +2360,7 @@
   "benchmark_splits": {
     "public": {
       "count": 70132,
-      "description": "70% of records — available for training and development evaluation",
+      "description": "Public split label — available for training and development evaluation",
       "note": "Do not train and evaluate on the same split"
     },
     "blind": {
@@ -2111,19 +2372,12 @@
   "comparison_with_cipherbank": {
     "cipherbank": {
       "records": 2358,
-      "cipher_types": 9,
-      "historical": false,
-      "live_infrastructure": false,
-      "blind_splits": false
+      "cipher_types": 9
     },
     "cipher_corpus": {
       "records": 100326,
-      "cipher_types": 85,
-      "historical": 54,
-      "live_infrastructure": true,
-      "blind_splits": true,
-      "multilingual": true
+      "cipher_types": 85
     },
-    "note": "Cipher Corpus extends the CipherBank methodology to a broader cipher set with historical records and live benchmark infrastructure."
+    "note": "These are collection counts, not comparable accuracy results. The collections use different records and evaluation methods."
   }
 }

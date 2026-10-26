@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHA-256 &mdash; The Cipher Museum</title>
-  <meta name="description" content="SHA-256 (2002) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.">
+  <meta name="description" content="SHA-256 produces a 256-bit digest for messages shorter than 2^64 bits. Used in checksums, signatures and Bitcoin; a bare hash does not authenticate its sender.">
   <meta property="og:title" content="SHA-256 &mdash; The Cipher Museum">
-  <meta property="og:description" content="SHA-256 (2002) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.">
+  <meta property="og:description" content="SHA-256 produces a 256-bit digest for messages shorter than 2^64 bits. Used in checksums, signatures and Bitcoin; a bare hash does not authenticate its sender.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/sha256.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SHA-256 &mdash; The Cipher Museum">
-  <meta name="twitter:description" content="SHA-256 (2002) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.">
+  <meta name="twitter:description" content="SHA-256 produces a 256-bit digest for messages shorter than 2^64 bits. Used in checksums, signatures and Bitcoin; a bare hash does not authenticate its sender.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/sha256.html">
@@ -60,7 +60,7 @@
   </div>
   <h1 class="page-title">SHA-256</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--secure" href="../museum-map.html#trust-labels" title="Still considered secure when used correctly with modern key handling." aria-label="Trust label: Secure (Modern). Still considered secure when used correctly with modern key handling."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span class="trust-label__text">Secure (Modern)</span></a></div>
-  <p class="page-tagline">A 256-bit fingerprint for any input &mdash; one-way, collision-resistant, and the verification engine of the digital world.</p>
+  <p class="page-tagline">A 256-bit digest for messages shorter than 2<sup>64</sup> bits &mdash; one-way, collision-resistant, and the verification engine of the digital world.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">NSA (designed); published by NIST as FIPS 180-2 in 2002</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">2002</span></div>
@@ -140,17 +140,17 @@
     <a href="../ciphers/aes.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">AES</span>
-      <span class="related-card__tag">Paired with SHA-256 for authenticated encryption (HMAC-SHA-256, AES-GCM)</span>
+      <span class="related-card__tag">AES-GCM authenticates using GHASH and AES, not HMAC-SHA-256</span>
     </a>
     <a href="../ciphers/rsa.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">RSA</span>
-      <span class="related-card__tag">RSA signatures sign a SHA-256 hash, never raw plaintext</span>
+      <span class="related-card__tag">Standard RSA signature schemes encode a message hash; SHA-256 is one supported hash</span>
     </a>
     <a href="../ciphers/diffie-hellman.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Diffie-Hellman</span>
-      <span class="related-card__tag">DH-derived secrets are typically run through SHA-256-based KDFs</span>
+      <span class="related-card__tag">DH-derived secrets need a suitable KDF; some protocols use HKDF with SHA-256</span>
     </a>
       <a href="../hall-of-foundations/random-oracle.html" class="related-card">
       <span class="related-card__number">&sect;154 &middot; Foundations</span>

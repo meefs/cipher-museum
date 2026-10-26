@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>UA-8295: A Changed Cipher Behind the Same Interface — The Cipher Museum</title>
-<meta name="description" content="Compare recovered firmware, measured key recovery and forensic claims about intent.">
+<title>UA-8295: Forensic Cryptanalysis of a Message Terminal — The Cipher Museum</title>
+<meta name="description" content="A preprint case study separating cryptanalytic findings from inferences about backdoor design.">
 <link rel="canonical" href="https://ciphermuseum.com/ciphers/ua-8295.html">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/museum.css">
@@ -59,27 +59,26 @@
 <a href="../index.html">Entrance</a>
 <span>›</span>
 <a href="../halls/modern-crypto.html">Hall XI: Modern Cryptography</a>
-<span>›</span>UA-8295: A Changed Cipher Behind the Same Interface</div>
+<span>›</span>UA-8295: Forensic Cryptanalysis of a Message Terminal</div>
 <div class="page-meta">
 <span class="page-num">Exhibit 170 of 172</span>
 <span class="badge era-modern">Modern cryptography · research case study</span>
 </div>
-<h1 class="page-title">UA-8295: A Changed Cipher Behind the Same Interface</h1>
-  <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-<p class="page-tagline">Compare recovered firmware, measured key recovery and forensic claims about intent.</p>
-  <p class="exhibit-status-note">Recovered SBTcipher has implemented key-recovery attacks under specified input/output and resource conditions.</p>
+<h1 class="page-title">UA-8295: Forensic Cryptanalysis of a Message Terminal</h1>
+<p class="page-tagline">A preprint case study separating cryptanalytic findings from inferences about backdoor design.</p>
+  <p class="exhibit-status-note">Forensic cryptanalysis case study; abstract and publication record verified, with full-paper technical details outside this exhibit’s verified scope.</p>
 <div class="exhibit-facts">
 <div class="fact">
 <span class="fact-label">Device</span>
 <span class="fact-value">USFA UA-8295 Short Burst Terminal</span>
 </div>
 <div class="fact">
-<span class="fact-label">Original design</span>
-<span class="fact-value">Nokia DA-8520 · DES in OFB mode</span>
+<span class="fact-label">Study focus</span>
+<span class="fact-value">Forensic cryptanalysis</span>
 </div>
 <div class="fact">
-<span class="fact-label">Altered cipher</span>
-<span class="fact-value">SBTcipher</span>
+<span class="fact-label">Methodology</span>
+<span class="fact-value">Backdoor Conjecture</span>
 </div>
 <div class="fact">
 <span class="fact-label">Research</span>
@@ -89,54 +88,22 @@
 </div>
 <main id="main-content" class="research-main" tabindex="-1">
 <section>
-<h2>One terminal, two cryptographic designs</h2>
-<p>The UA-8295 Short Burst Terminal connects hardware history with forensic cryptanalysis. The original Nokia DA-8520 used DES in output-feedback mode. The USFA version studied by Maatje and Stevens used replacement firmware containing a different design, which the authors call SBTcipher. The 2026 paper reconstructs that cipher from the recovered firmware and evaluates how its structure supports key recovery.</p>
-<p>According to the paper’s documented device history, the replacement ROMs came through an NSA–USFA arrangement. The original and altered versions kept the same visible interface and startup version, and even matching full-ROM checksums. A different cipher could therefore sit behind familiar equipment behavior. The authors had both versions available for comparison.</p>
+<h2>What the primary record establishes</h2>
+<p>Stijn Maatje and Marc Stevens’s 2026 preprint studies the UA-8295 message terminal as an example of backdoored cryptographic equipment. Its abstract describes a forensic cryptanalysis aimed at understanding how the backdoor was designed and which attack it was intended to enable.</p>
+<p>The authors propose a methodology based on the “Backdoor Conjecture” for reasoning about those questions. Inferring an intended attack from a design is distinct from directly observing the designers’ decisions.</p>
 </section>
 <section>
-<h2>Separate observations from explanations</h2>
-<table class="cipher-table">
-<thead>
-<tr>
-<th scope="col">Evidence layer</th>
-<th scope="col">What it supports</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Firmware comparison</td>
-<td>The DES-based original and the altered SBTcipher implementation are materially different despite their similar presentation.</td>
-</tr>
-<tr>
-<td>Recovered specification</td>
-<td>Limited mixing and partial-key dependencies give an attacker structure to exploit.</td>
-</tr>
-<tr>
-<td>Implemented attacks</td>
-<td>List Merge and Branch-and-Prune recover keys under the tested input/output and resource conditions.</td>
-</tr>
-<tr>
-<td>Forensic interpretation</td>
-<td>The authors compare plausible intended attacks using their “Backdoor Conjecture” methodology. This is an argument about design intent, not direct observation of the designers’ decisions.</td>
-</tr>
-</tbody>
-</table>
-<p>A weakness alone does not prove deliberate sabotage. Here the technical analysis accompanies the device’s documented history. The paper also identifies a nonce-generation weakness inherited from the original terminal; that defect should not be attributed solely to the replacement cipher.</p>
-</section>
-<section>
-<h2>Read the experiment with its conditions</h2>
-<p>The authors benchmarked 20 random keys using a fixed initial input block and zero to three additional randomly sampled input/output block pairs. Those outputs were computed with SBTcipher. The experiment measures key recovery given suitable pairs; it does not demonstrate that every intercepted message supplies them.</p>
-<p>Runs used a server with two Intel Xeon Gold 6248 processors and 1.5 TB installed RAM; individual attacks were single-threaded. Installed server memory is not the memory consumed by each attack. The paper reports List Merge preprocessing and main attack separately; Branch-and-Prune memory stayed around 3 MiB. Additional pairs sharply reduced recovery time. Read runtime, memory, preprocessing, sample size and available data together rather than selecting the fastest row as a universal result.</p>
-<p>The paper’s discussion of what 1980s hardware might have achieved is retrospective analysis. It is distinct from the measured modern-server experiments.</p>
+<h2>Evidence available for this exhibit</h2>
+<p><strong>Evidence scope:</strong> this exhibit relies on the accessible abstract and ePrint publication record. The full paper was unavailable for verification, so detailed claims about firmware differences, attack performance and data requirements remain outside its scope.</p>
 </section>
 <section>
 <h2>The museum connection</h2>
-<p>Compare this case with <a href="hagelin-c36.html">Hagelin and Crypto AG’s supplier history</a>, while keeping the organizations, equipment and evidence distinct. Compare the original cipher with <a href="des.html">DES</a>. The common question is whether the delivered implementation matches the security story told to its users.</p>
-<p>This exhibit presents the documented design comparison and attack conditions. It does not simulate the terminal or reproduce its complete attacks.</p>
+<p>Compare this case with <a href="hagelin-c36.html">Hagelin and Crypto AG’s supplier history</a>, while keeping the organizations, equipment and evidence distinct. The shared historical question is whether the delivered implementation matches the security story told to its users.</p>
+<p>This exhibit introduces the research question and its evidence limits. It does not simulate the terminal or reproduce the paper’s attacks.</p>
 </section>
 <section>
 <h2>Primary source</h2>
-<p>Stijn Maatje and Marc Stevens, <a href="https://eprint.iacr.org/2026/1309">“Forensic Cryptanalysis of the Backdoored UA-8295 Message Terminal”</a>, ePrint 2026/1309, revision reviewed: 22 September 2026. This source is an ePrint preprint; posting is not evidence of peer review. See §1.2, the recovered design, §5.4 and §6; PDF pp. 3–6, 11–14 and 20–26.</p>
+<p>Stijn Maatje and Marc Stevens, <a href="https://eprint.iacr.org/2026/1309">“Forensic Cryptanalysis of the Backdoored UA-8295 Message Terminal”</a>, ePrint 2026/1309. The record lists a last revision of 22 September 2026 and identifies the work as a preprint. Abstract and metadata verified; full-paper claims remain outside this exhibit’s verified scope. Posting to ePrint is not evidence of peer review.</p>
 </section>
 <div class="hall-nav">
 <a href="../ciphers/sodark.html" class="hall-nav-link next">

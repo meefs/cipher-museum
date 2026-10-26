@@ -12,7 +12,7 @@
     {
       "href": "../ciphers/polybius.html",
       "label": "Polybius Square",
-      "note": "Coordinate encoding — converting letters to number pairs using a 5×5 grid."
+      "note": "Polybius described alphabetic torch signalling; the 5×5 Latin-alphabet coordinate grid here is a later adaptation."
     },
     {
       "href": "../ciphers/vigenere.html",
@@ -37,7 +37,7 @@
     {
       "href": "../ciphers/one-time-pad.html",
       "label": "One-Time Pad",
-      "note": "Shannon's proof of perfect secrecy — information-theoretic security."
+      "note": "Perfect secrecy requires a secret, independent, uniformly random message-length pad used once. It does not provide authentication."
     },
     {
       "href": "../modern.html",

@@ -142,18 +142,18 @@
         <span class="badge badge-civil">Confederate · 1862</span>
       </div>
       <div class="card-name">Confederate Vigenère</div>
-      <p class="card-desc">Confederate Vigenère (1861-1865) — the brass cipher disk used by Confederate officers, broken in 1863 once the three repeating field keys were recovered.</p>
+      <p class="card-desc">Confederate repeating-key ciphers and Union solutions, including the MANCHESTER BLUFF dispatch of 25 May 1863. Some solutions were delayed or obstructed by transmission errors.</p>
 
       <!-- Keywords -->
       <div style="margin:.5rem 0;">
-        <div style="font-family:var(--fm);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx3);margin-bottom:.4rem;">Actual Keywords Used:</div>
+        <div style="font-family:var(--fm);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx3);margin-bottom:.4rem;">Documented example key:</div>
         <div class="keyword-grid">
           <span class="keyword-badge">Manchester Bluff</span>
-          <span class="keyword-badge">Complete Victory</span>
-          <span class="keyword-badge">Come Retribution</span>
-          <span class="keyword-badge">My Old Kentucky Home</span>
-          <span class="keyword-badge">Our Destiny Is One</span>
-          <span class="keyword-badge">Fight and Conquer</span>
+
+
+
+
+
         </div>
       </div>
 
@@ -174,8 +174,8 @@
       <div class="card-name">Confederate Dictionary Code</div>
       <p class="card-desc">Dictionary codes replace words with references in an agreed book. Repeated references and language patterns can still leak information; this widget is a simplified model.</p>
       <div style="font-family:var(--fm);font-size:.75rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
-        <span style="color:var(--tx3);">ship → page 674, word 26 → </span><span style="color:var(--gold-lt);">(674)26</span><br>
-        <span style="color:var(--tx3);">Webster 1857 edition required</span>
+        <span style="color:var(--tx3);">Historical coordinate example: </span><span style="color:var(--gold-lt);">146.L.20</span><br>
+        <span style="color:var(--tx3);">Page 146, left column, twentieth word; edition must match</span>
       </div>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span>
@@ -191,7 +191,7 @@
   <!-- Union vs Confederate comparison -->
   <div class="section-head" style="text-align:left;">
     <span class="section-eyebrow">The Cryptographic Balance of Power</span>
-    <h2 class="section-title">Why the Union Won the Cipher War</h2>
+    <h2 class="section-title">Contrasting Systems and Operational Evidence</h2>
   </div>
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:3rem;">
@@ -204,7 +204,7 @@
         <ul class="steps">
           <li class="step"><div class="step-text"><strong>Stager Cipher:</strong> Purpose-built for telegraph security. Route transposition + code-word substitution evolved continuously throughout the war, through a series of numbered cipher books ending with Cipher No. 4 (1865).</div></li>
           <li class="step"><div class="step-text"><strong>Professional management:</strong> The U.S. Military Telegraph Corps, under Stager and Eckert, controlled all cipher usage. Operators were trained and supervised.</div></li>
-          <li class="step"><div class="step-text"><strong>Never broken:</strong> Despite Confederate wiretapping, no Stager-enciphered message was ever successfully decrypted by the Confederacy during the war.</div></li>
+          <li class="step"><div class="step-text"><strong>Reported operational success:</strong> Historical accounts credit the Union system’s protection of traffic. This does not prove mathematical immunity or establish the fate of every intercepted telegram.</div></li>
         </ul>
       </div>
     </div>
@@ -216,9 +216,9 @@
       </div>
       <div class="panel-body">
         <ul class="steps">
-          <li class="step"><div class="step-text"><strong>Vigenère cipher:</strong> Already known to be breakable since Kasiski's 1863 publication. Confederate Signal Corps adopted it anyway — or were unaware of its defeat.</div></li>
-          <li class="step"><div class="step-text"><strong>Key management failures:</strong> The same keywords used for months. "Manchester Bluff" secured all Confederate military departments for an extended period — once cracked, all messages fell.</div></li>
-          <li class="step"><div class="step-text"><strong>Dictionary code disaster:</strong> No standardized code book issued. Different generals used different dictionaries. Messages were unreadable even to intended recipients.</div></li>
+          <li class="step"><div class="step-text"><strong>Repeating-key substitution:</strong> Confederate use preceded Kasiski’s 1863 publication. Documented Union solutions do not establish that the analysts used his method.</div></li>
+          <li class="step"><div class="step-text"><strong>Key reuse:</strong> A recovered key could expose other traffic using that key. It did not automatically reveal every Confederate military message.</div></li>
+          <li class="step"><div class="step-text"><strong>Dictionary codes:</strong> Correspondents needed matching editions and lookup conventions. Kahn documents specific dictionary arrangements; an unsupported story about two generals using mismatched editions is not evidence.</div></li>
         </ul>
       </div>
     </div>
@@ -228,7 +228,7 @@
   <div class="callout callout-info">
     <span class="callout-icon">🏛️</span>
     <div class="callout-body">
-      <p><strong>A phonetic encoding curiosity:</strong> The Stager cipher's code books lacked entries for all proper nouns. Operators improvised phonetically. "Gettysburg" was encoded as "get ties large" — the ending "-burg" (meaning fortification) mapped to the code word "large." "Rapidity" became "rape ditty." These improvised encodings sometimes created riddles even for the intended recipient.</p>
+      <p><strong>Reading the evidence:</strong> Word-route ciphers, codeword substitutions and dictionary references are different procedures. The linked exhibits distinguish historical records from their synthetic browser examples. Source: David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 7, “Crises of the Union.”</p>
     </div>
   </div>
 

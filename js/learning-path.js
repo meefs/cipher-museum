@@ -11,7 +11,7 @@
     {id:'polyalphabetic',label:'Hall III',name:'Polyalphabetic',         href:'halls/polyalphabetic.html'},
     {id:'transposition',label:'Hall IV',  name:'Transposition',          href:'halls/transposition.html'},
     {id:'military',     label:'Hall V',   name:'Military & Spy',         href:'halls/military.html'},
-    {id:'civil-war',    label:'CW',       name:'Civil War Gallery',      href:'halls/civil-war.html'},
+    {id:'civil-war',    label:'Hall VI',       name:'Civil War Gallery',      href:'halls/civil-war.html'},
     {id:'machines',     label:'Hall VII', name:'Mechanical Machines',     href:'halls/machines.html'},
     {id:'puzzle',       label:'Hall VIII',name:'Puzzle Ciphers',          href:'halls/puzzle.html'},
     {id:'unbreakable',  label:'Hall IX',  name:'The Unbreakable',        href:'halls/unbreakable.html'},
@@ -21,7 +21,7 @@
 
   var QUIZZES = {
     ancient:[
-      {q:'What is the Scytale?',opts:['A substitution cipher','A transposition device using a rod','A Roman military code','A Greek frequency table'],a:1},
+      {q:'What does the traditional modern scytale reconstruction illustrate?',opts:['A substitution cipher','A transposition device using a rod','A Roman military code','A Greek frequency table'],a:1},
       {q:'For a 26-letter alphabet, how many nontrivial Caesar shifts are there (excluding the identity shift)?',opts:['26','25','52','10'],a:1},
       {q:'Which scholar described frequency analysis in a surviving ninth-century treatise?',opts:['Julius Caesar','Al-Kindi','Leon Battista Alberti','Blaise de Vigenère'],a:1}
     ],
@@ -48,7 +48,7 @@
     'civil-war':[
       {q:'Which side used Stager route systems, for which no Confederate cryptanalytic break is documented?',opts:['Confederate','Union','Both used the same system','Neither used ciphers'],a:1},
       {q:'What type of cipher did the Stager system use?',opts:['Substitution','Route transposition plus code words','Enigma-style rotors','One-time pad'],a:1},
-      {q:'What was the major weakness of Confederate ciphers?',opts:['Too complex to use','They relied on Vigenère with known weaknesses','They used physical machines','The keys were too long'],a:1}
+      {q:'Which weakness affected the Confederate repeating-key systems shown here?',opts:['Too complex to use','They relied on Vigenère with known weaknesses','They used physical machines','The keys were too long'],a:1}
     ],
     machines:[
       {q:'Why does an Enigma key-space count need a specified machine and keying procedure?',opts:['Every model has the same settings','Rotor choices, plugboard and permitted settings vary','Enigma has no key','Only message length matters'],a:1},
@@ -63,7 +63,7 @@
     unbreakable:[
       {q:'Who proved the One-Time Pad is perfectly secret?',opts:['Alan Turing','Claude Shannon','Blaise de Vigenère','Auguste Kerckhoffs'],a:1},
       {q:'What is the One-Time Pad\'s critical practical requirement?',opts:['A computer','A secret, independent, uniformly random key as long as the message, used once','A 256-bit key','A public key exchange'],a:1},
-      {q:'What caused the VENONA project to succeed against Soviet OTPs?',opts:['Better computers','Key pad reuse due to wartime supply pressure','A mathematical breakthrough','Social engineering'],a:1}
+      {q:'Which operational failure enabled VENONA’s partial recoveries?',opts:['Better computers','Duplicated one-time-pad material','A mathematical breakthrough','Social engineering'],a:1}
     ],
     codebreakers:[
       {q:'Whose ninth-century treatise is the earliest surviving description of frequency analysis?',opts:['Al-Kindi (9th century)','Alan Turing (20th century)','Charles Babbage (19th century)','Julius Caesar (1st century BC)'],a:0},
@@ -71,8 +71,8 @@
       {q:'What principle states that a cipher\'s security must depend only on the key, not secrecy of the algorithm?',opts:['Shannon\'s theorem','Kerckhoffs\'s principle','Turing\'s law','Diffie-Hellman theorem'],a:1}
     ],
     foundations:[
-      {q:'Why can RSA key generation find a 2048-bit prime in moments?',opts:['Primes become denser as numbers grow','The Prime Number Theorem: about 1 in ln(x) numbers near x is prime','Factoring large numbers is easy'],a:1},
-      {q:'What makes a lattice basis "good" for decryption (Babai rounding)?',opts:['Short and nearly orthogonal vectors','The largest possible determinant','It contains the encrypted point'],a:0},
+      {q:'What does the Prime Number Theorem estimate for RSA candidate search?',opts:['Primes become denser as numbers grow','The Prime Number Theorem: about 1 in ln(x) numbers near x is prime','Factoring large numbers is easy'],a:1},
+      {q:'Which basis makes coordinate rounding exact in the two-dimensional preset shown here?',opts:['The orthogonal basis','Every short, nearly orthogonal basis','Any skewed basis'],a:0},
       {q:'For a bilinear pairing, e(aP, bQ) equals…',opts:['e(P,Q)^(a+b)','e(P,Q)^(ab)','e(P,Q)^(a−b)'],a:1}
     ]
   };

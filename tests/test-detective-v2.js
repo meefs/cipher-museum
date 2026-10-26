@@ -342,7 +342,14 @@ ok('caesar not ok for Morse charset', A.isApplicable('caesar', { charset: 'morse
 ok('morse ok for Morse charset',      A.isApplicable('morse',  { charset: 'morse', n: 50, ioc: 0.04 }).ok === true);
 ok('caesar not ok < 8 letters',       A.isApplicable('caesar', { charset: 'alpha', n: 4, ioc: 0.04 }).ok === false);
 ok('vigKeyLength not ok < 50 letters',A.isApplicable('vigKeyLength', { charset: 'alpha', n: 30, ioc: 0.04 }).ok === false);
-ok('vigKeyLength not ok when IoC high (monoalpha)', A.isApplicable('vigKeyLength', { charset: 'alpha', n: 100, ioc: 0.068 }).ok === false);
+ok('vigKeyLength remains available at high IoC', A.isApplicable('vigKeyLength', { charset: 'alpha', n: 100, ioc: 0.068 }).ok === true);
+// An explicit repeating-key counterexample: all-A plaintext under AB yields
+// alternating A/B ciphertext with very high IoC. The tool must remain usable.
+const highVig = vigenereEncrypt('A'.repeat(120), 'AB');
+const highVigStats = AN.run(highVig);
+ok('nonconstant Vigenère key can give high IoC', highVigStats.ioc > 0.4);
+ok('high-IoC Vigenère example can run period analysis', A.isApplicable('vigKeyLength', highVigStats).ok);
+
 ok('substFreq not ok < 30 letters',   A.isApplicable('substFreq', { charset: 'alpha', n: 20, ioc: 0.06 }).ok === false);
 ok('isApplicable returns reason string when not ok',
    typeof A.isApplicable('caesar', { charset: 'morse', n: 50, ioc: 0.04 }).reason === 'string');
@@ -519,7 +526,7 @@ async function integrationTests() {
 console.log('\n━━━ §12 DOM integration — attack tools ━━━\n');
 
 {
-  const CAESAR_CT = caesarEncrypt('THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG MANY TIMES', 7);
+  const CAESAR_CT = caesarEncrypt('THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG MANY TIMES'.repeat(2), 7);
   const dom = await buildDom(CAESAR_CT);
   const { document } = dom.window;
 
@@ -543,9 +550,9 @@ console.log('\n━━━ §12 DOM integration — attack tools ━━━\n');
   const morseBtn = Array.from(btns).find(b => b.getAttribute('data-tool') === 'morse');
   ok('Morse button disabled for alpha text', morseBtn && morseBtn.disabled === true);
 
-  /* VigKeyLength should be disabled for high-IoC text */
+  /* High IoC cannot rule out a repeating-key cipher. */
   const vigBtn = Array.from(btns).find(b => b.getAttribute('data-tool') === 'vigKeyLength');
-  ok('VigKeyLength button disabled for Caesar text (high IoC)', vigBtn && vigBtn.disabled === true);
+  ok('VigKeyLength remains available for high-IoC text', vigBtn && vigBtn.disabled === false);
 
   dom.window.close();
 }

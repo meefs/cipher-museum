@@ -96,11 +96,39 @@ function main(check = false) {
   // key agreement, a hash, a signature, a sharing scheme and a proof system
   // all protect something without encrypting anything.
   const OVERRIDES = {
+    enigma: { family: 'Rotor machine' },
+    lorenz: { family: 'Teleprinter stream cipher' },
+    solitaire: { family: 'Card-deck stream cipher' },
+    vernam: { family: 'Additive teleprinter cipher' },
+    'amharic-ge-ez-ciphers': {
+      family: 'Modern substitution teaching model', region: 'Ethiopian and Eritrean manuscript context',
+      usedBy: 'Museum learners; no historical cipher deployment established',
+      keyType: 'Keyword-seeded permutation of Latin A–Z'
+    },
+    'navajo-code-talkers': {
+      family: 'Military vocabulary and spelling code', region: 'Pacific theatre, World War II',
+      usedBy: 'Navajo Marines trained as Code Talkers'
+    },
+    'microdot': {
+      family: 'Photographic steganography',
+      keyType: 'Physical concealment; any content encryption is separate'
+    },
+    'field-hollers': {
+      family: 'Oral traditions and contextual communication', region: 'United States',
+      keyType: 'No authenticated fixed cipher reconstructed',
+      usedBy: 'Historical African American communities; widget is modern'
+    },
+    'gravity-falls': {
+      family: 'Fictional puzzles using classical ciphers',
+      usedBy: 'Series creators and puzzle-solving viewers',
+      keyType: 'Varies by puzzle; this widget uses Caesar +3',
+      modernLesson: 'Record the text, clues and method; a plausible reading must fit the puzzle.'
+    },
     'ua-8295': {
       family: 'Firmware forensics', region: 'Finland / Netherlands',
       usedBy: 'Nokia DA-8520 / USFA UA-8295 terminal users',
-      keyType: 'Original DES-OFB versus altered SBTcipher',
-      modernLesson: 'Separate recovered implementation facts, measured attacks and inferences about intent.'
+      keyType: 'See the source-scope note; full-paper technical details are not verified here',
+      modernLesson: 'Distinguish the verified research question from unverified implementation details and inferences about intent.'
     },
     sodark: {
       family: 'Tweakable block cipher and radio protocol',
@@ -142,7 +170,7 @@ function main(check = false) {
       usedBy: 'Many authenticated key-agreement protocols, including ephemeral-DH modes of TLS'
     },
     'sha256': {
-      keyIdea: 'One-way compression of any input to a fixed 256-bit digest; not reversible by design',
+      keyIdea: 'Maps a message shorter than 2^64 bits to a 256-bit digest; hashing does not encrypt the message',
       keyType: 'Unkeyed',
       usedBy: 'Certificate chains, Bitcoin mining, file integrity, password storage (via KDFs)'
     },
@@ -152,7 +180,7 @@ function main(check = false) {
       usedBy: 'TLS certificates, Bitcoin and Ethereum transactions, secure-boot chains'
     },
     'shamir-secret-sharing': {
-      keyIdea: 'Hides a secret as a polynomial constant term; any k of n points recover it, k−1 reveal nothing',
+      keyIdea: 'Any k distinct valid shares recover the field-element secret; fewer reveal nothing when the polynomial coefficients are uniform and independent',
       keyType: 'No key — the secret is the object being split',
       usedBy: 'Threshold backup and custody designs; deployment details vary'
     },

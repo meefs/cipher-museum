@@ -70,7 +70,7 @@
   <p class="page-tagline">A canonical cipher with proven perfect secrecy — and nearly impossible to use correctly</p>
   <p class="exhibit-status-note">Perfect secrecy requires an independent, uniformly random secret pad at least as long as the message, used once. No authentication.</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Frank Miller (1882) · Vernam (1917) · Shannon (1949)</span></div>
+    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Miller’s 1882 proposal; Vernam’s teleprinter work; Shannon’s 1949 theory</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1882 / 1917</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Random key same length as message (used once)</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Never — if rules followed. VENONA: key reuse exploitation</span></div>
@@ -129,16 +129,16 @@ Letter OTP used below: C = (P + K) mod 26
 
 Example:
 Plain:  H  E  L  L  O  = 07 04 11 11 14
-Key:    X  M  C  K  L  = 23 12 02 10 11 (random)
+Key:    X  M  C  K  L  = 23 12 02 10 11 (illustrative pad)
 Cipher: 30 16 13 21 25 mod 26 = E Q N V Z
 
 Four requirements for perfect secrecy:
-1. Key must be truly random (not pseudorandom)
+1. Key must be uniformly random and independent of the message (not pseudorandom)
 2. Key must be as long as the message
 3. Key must never be reused
 4. Key must be kept secret
 
-Violate any condition → security collapses</pre>
+Without these assumptions, the perfect-secrecy guarantee does not follow</pre>
       <figure class="figure">
         <svg viewBox="0 0 400 200" style="max-width:400px;width:100%;height:auto;" aria-label="One-Time Pad modular addition diagram">
           <style>
@@ -199,7 +199,7 @@ Violate any condition → security collapses</pre>
         <div class="callout callout-info">
           <span class="callout-icon">ℹ️</span>
           <div class="callout-body">
-            <p><strong>About this demo:</strong> The demo works in letters: each plaintext letter is shifted by the corresponding key letter (mod 26). Leave the key blank and a random pad is generated with the browser's secure random source and appended to the output as [Key: …]. A key shorter than the message is rejected rather than repeated — stretching or reusing pad material is exactly what breaks a one-time pad.</p>
+            <p><strong>About this demo:</strong> The demo works in letters: each plaintext letter is shifted by the corresponding key letter (mod 26). Leave the key blank and a random pad is generated with the browser's secure random source and appended to the output as [Key: …]. A key shorter than the message is rejected rather than repeated. The displayed pad is available to this browser, so this is not confidential communication. Browser-generated randomness does not demonstrate the information-theoretic assumptions of an ideal physical random source.</p>
           </div>
         </div>
       </div>
@@ -207,7 +207,7 @@ Violate any condition → security collapses</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="callout callout-success"><span class="callout-icon">🔒</span><div class="callout-body"><p><strong>Shannon's proof (1949):</strong> For any ciphertext C and any possible plaintext P, P(plaintext=P | ciphertext=C) = P(plaintext=P). The ciphertext provides zero information about the plaintext. An attacker with unlimited computing power cannot improve on the best guess justified by the plaintext's prior distribution.</p></div></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">VENONA: Key Reuse Attack</div><div class="attack-diff">Complexity: Moderate if pads reused</div><p class="attack-desc">C1 XOR C2 = P1 XOR P2. If two messages are encrypted with the same key, XORing the ciphertexts eliminates the key and produces the XOR of the plaintexts. With enough crib-based guessing, both plaintexts can be recovered. The Soviets reused pads in 1942-1943 under wartime supply pressure — giving the NSA its entry point.</p></div></div>
+      <div class="panel-body"><div class="callout callout-success"><span class="callout-icon">🔒</span><div class="callout-body"><p><strong>Shannon's proof (1949):</strong> For any ciphertext C and any possible plaintext P, P(plaintext=P | ciphertext=C) = P(plaintext=P). The ciphertext provides zero information about the plaintext. An attacker with unlimited computing power cannot improve on the best guess justified by the plaintext's prior distribution.</p></div></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">VENONA: Key Reuse Attack</div><div class="attack-diff">Complexity: Moderate if pads reused</div><p class="attack-desc">For a binary reused pad, C1 XOR C2 = P1 XOR P2: the key cancels, exposing a relation between the plaintexts. That relation may support crib-based recovery, but need not uniquely determine both messages. VENONA exploited reused Soviet decimal additive material and required codebook reconstruction and extensive analysis. It began in the US Army’s Signal Intelligence Service in 1943; NSA inherited the work later.</p></div></div>
     </div>
 
     <div class="panel">
@@ -217,7 +217,7 @@ Violate any condition → security collapses</pre>
           <thead><tr><th>Concept from One-Time Pad</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Perfect secrecy (Shannon, 1949)</td><td>Information-theoretic vs computational security: the fundamental distinction</td></tr>
 <tr><td>XOR as cipher operation</td><td>Many modern stream ciphers combine data with a pseudorandom keystream using XOR</td></tr>
-<tr><td>Key = message length</td><td>The impracticality drove development of public-key cryptography (RSA, DH)</td></tr>
+<tr><td>Key = message length</td><td>Long secret pads create distribution and storage costs; public-key key establishment addresses a different security model</td></tr>
 <tr><td>Key reuse is catastrophic</td><td>Modern stream constructions require appropriate nonce and keystream handling; they can safely reuse a long-term key under their specified conditions</td></tr></tbody>
         </table>
       </div>
@@ -228,8 +228,8 @@ Violate any condition → security collapses</pre>
       <div class="panel-body"><pre>Message: A T T A C K   (6 letters)
 As numbers (A=0): 0  19  19  0  2  10
 
-Random key:       7  14   3  8  25  16
-(from true random source — dice, radiation, etc.)
+Illustrative key: 7  14   3  8  25  16
+(fixed example; no random-source provenance claimed)
 
 Encrypt — add mod 26:
   A(0)  + key(7)  = 7  mod 26 = 7  → H
@@ -255,7 +255,7 @@ of the possible plaintexts.</pre></div>
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-columns"/></svg></span><span class="panel-title">Related Exhibits</span></div>
       <div class="panel-body">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem;">
-          <li><a href="enigma.html" style="color:var(--gold);text-decoration:underline;">Enigma Machine</a> — Rotor cipher that traded perfect secrecy for practicality</li>
+          <li><a href="enigma.html" style="color:var(--gold);text-decoration:underline;">Enigma Machine</a> — A finite-state rotor system, distinct from an independent random pad</li>
           <li><a href="lorenz.html" style="color:var(--gold);text-decoration:underline;">Lorenz Cipher</a> — XOR-based teleprinter cipher inspired by OTP principles</li>
           <li><a href="vigenere.html" style="color:var(--gold);text-decoration:underline;">Vigen&egrave;re Cipher</a> — Repeating-key polyalphabetic: what happens when the key is shorter than the message</li>
         </ul>
@@ -275,7 +275,7 @@ of the possible plaintexts.</pre></div>
             <tr><td>Exhibit</td><td>36 of 172</td></tr>
             <tr><td>Era</td><td>1882 · Theoretical</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span></td></tr>
-            <tr><td>Inventor</td><td>Frank Miller (1882) · Vernam (1917) · Shannon (1949)</td></tr>
+            <tr><td>Inventor</td><td>Miller’s 1882 proposal; Vernam’s teleprinter work; Shannon’s 1949 theory</td></tr>
             <tr><td>Year</td><td>1882 / 1917</td></tr>
             <tr><td>Key Type</td><td>Random key same length as message (used once)</td></tr>
             <tr><td>Broken By</td><td>Never — if rules followed. VENONA: key reuse exploitation</td></tr>
@@ -287,6 +287,8 @@ of the possible plaintexts.</pre></div>
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Claude E. Shannon, <em>Communication Theory of Secrecy Systems</em> (1949), §10, for perfect secrecy; Alfred J. Menezes, Paul C. van Oorschot and Scott A. Vanstone, <em>Handbook of Applied Cryptography</em> (1997), §1.5. The displayed example keys are teaching data, not evidence of a particular randomness process.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

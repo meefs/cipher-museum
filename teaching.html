@@ -12,7 +12,12 @@
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <nav class="museum-nav" aria-label="Primary"></nav>
+  <nav class="museum-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">The Cipher Museum</a>
+      <ul class="nav-links"><li><a href="cipher-corpus.html">Cipher Corpus</a></li></ul>
+    </div>
+  </nav>
   <main id="main-content">
     <div class="page-hero">
       <p class="page-eyebrow">Cipher Corpus</p>
@@ -31,14 +36,14 @@
       <h2>How to Use the Corpus</h2>
       <ul>
         <li>Practice codebreaking in Challenge Mode (solution hidden)</li>
-        <li>Study metadata and solutions in Known Corpus Mode</li>
+        <li>Study metadata and solutions in Known Answers mode</li>
         <li>Download the dataset for research or tool development</li>
         <li>Contribute new records following the <a href="/CONTRIBUTING.md">contribution guide</a></li>
       </ul>
 
       <h2>For Educators</h2>
       <ul>
-        <li>Use real and synthetic ciphers to teach cryptanalysis concepts</li>
+        <li>Use synthetic exercises and source-reviewed historical examples to teach cryptanalysis concepts</li>
         <li>Assign challenges by difficulty, cipher type, or language</li>
         <li>Demonstrate solver benchmarking and reproducibility</li>
       </ul>
@@ -68,7 +73,8 @@
       <h2>Resources</h2>
       <ul>
         <li><a href="cipher-corpus.html">Corpus Browser</a></li>
-        <li><a href="public/corpus/cipher-corpus.schema.json">Schema</a></li>
+        <li><a href="public/corpus/v0.8/cipher-corpus.schema.json">Corrected v0.8 schema</a></li>
+        <li><a href="public/corpus/v0.8/README.md">v0.8 scope and verification notes</a></li>
       </ul>
 
       <h2>Contact &amp; Feedback</h2>

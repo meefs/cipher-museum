@@ -6,9 +6,9 @@
   <title>Hall XI: Modern Cryptography &mdash; The Cipher Museum</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="../manifest.webmanifest">
-  <meta name="description" content="DES, Diffie-Hellman, RSA, AES, SHA-256 &mdash; the canonical five primitives that founded modern cryptography and anchor every secure system today.">
+  <meta name="description" content="Explore block ciphers, key agreement, public-key schemes, hashing, signatures, secret sharing and zero-knowledge proofs, with their assumptions and limits.">
   <meta property="og:title" content="Hall XI: Modern Cryptography &mdash; The Cipher Museum">
-  <meta property="og:description" content="DES, Diffie-Hellman, RSA, AES, SHA-256 &mdash; the canonical five primitives that founded modern cryptography and anchor every secure system today.">
+  <meta property="og:description" content="Explore block ciphers, key agreement, public-key schemes, hashing, signatures, secret sharing and zero-knowledge proofs, with their assumptions and limits.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/halls/modern-crypto.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -17,7 +17,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hall XI: Modern Cryptography &mdash; The Cipher Museum">
-  <meta name="twitter:description" content="DES, Diffie-Hellman, RSA, AES, SHA-256 &mdash; the canonical five primitives that founded modern cryptography and anchor every secure system today.">
+  <meta name="twitter:description" content="Explore block ciphers, key agreement, public-key schemes, hashing, signatures, secret sharing and zero-knowledge proofs, with their assumptions and limits.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/halls/modern-crypto.html">
@@ -57,8 +57,8 @@
   </div>
   <span class="page-eyebrow" style="color:var(--gold);">Hall XI &middot; 1976 &ndash; Present</span>
   <h1 class="page-title">Modern Cryptography</h1>
-  <p class="page-tagline">The canonical five primitives that founded the modern era &mdash; plus the wider landscape they unlocked</p>
-  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">The earlier halls distinguish cryptanalytic breaks, operational misuse, obsolescence, and unresolved systems; a correctly used one-time pad remains unbreakable. The five primitives here serve different purposes. DES and AES are symmetric block ciphers; DES is now unsafe because its 56-bit key is too small. RSA supports distinct public-key encryption and signature schemes, with appropriate encoding and padding such as OAEP and PSS. Diffie–Hellman is key agreement, and SHA-256 is a hash function. These building blocks explain encryption, shared-secret establishment, signatures, and integrity; none alone provides a complete secure system.</p>
+  <p class="page-tagline">Different cryptographic tasks, constructions and security assumptions</p>
+  <p style="max-width:680px;font-size:1.1rem;color:var(--tx2);line-height:1.9;position:relative;z-index:1;">The earlier halls distinguish cryptanalytic breaks, operational misuse, obsolescence, and unresolved systems; a correctly used one-time pad remains unbreakable. The constructions here serve different purposes. DES and AES are symmetric block ciphers; DES is now unsafe because its 56-bit key is too small. RSA supports distinct public-key encryption and signature schemes, with appropriate encoding and padding such as OAEP and PSS. Diffie–Hellman is key agreement, and SHA-256 is a hash function. These building blocks explain encryption, shared-secret establishment, signatures, and integrity; none alone provides a complete secure system.</p>
   <p style="max-width:680px;font-size:.95rem;color:var(--tx3);line-height:1.8;margin-top:1rem;position:relative;z-index:1;">For the broader landscape &mdash; ChaCha20, ECDH, post-quantum standardisation, and the cipher-vs-protocol taxonomy &mdash; see the <a href="../modern.html" style="color:var(--gold);">Modern Cryptography wing</a>. For the design rule that underpins every card in this hall, see <a href="../ciphers/kerckhoffs.html" style="color:var(--gold);">Kerckhoffs's Principle</a>.</p>
   <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem;position:relative;z-index:1;">
     <span class="badge era-modern">Modern Era</span>
@@ -97,7 +97,7 @@
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
-          <span class="badge era-theoretical">Discrete log hardness</span>
+          <span class="badge era-theoretical">CDH and authentication</span>
         </div>
         <span class="card-arrow">&rarr;</span>
       </div>
@@ -113,7 +113,7 @@
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
-          <span class="badge era-theoretical">Factoring hardness</span>
+          <span class="badge era-theoretical">RSA assumption and encoding</span>
         </div>
         <span class="card-arrow">&rarr;</span>
       </div>
@@ -125,7 +125,7 @@
         <span class="badge era-modern">2001 &middot; FIPS 197</span>
       </div>
       <div class="card-name">AES (Advanced Encryption Standard)</div>
-      <p class="card-desc">AES (2001) — the cipher that encrypts the modern world; chosen by open competition, scrutinised for two decades, still without a practical attack.</p>
+      <p class="card-desc">AES standardises a 128-bit block cipher with 128-, 192- or 256-bit keys. Secure use also requires an appropriate mode, key management and implementation.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -138,10 +138,10 @@
     <a href="../ciphers/sha256.html" class="cipher-card" style="border-color:rgba(90,200,160,.25);">
       <div class="card-head">
         <span class="card-num">Exhibit 63</span>
-        <span class="badge era-modern">2001 &middot; NSA / NIST</span>
+        <span class="badge era-modern">2002 &middot; NSA / NIST</span>
       </div>
       <div class="card-name">SHA-256</div>
-      <p class="card-desc">SHA-256 (2002) — a 256-bit fingerprint for any input; the verification engine of Git, Bitcoin, TLS certificates, and software integrity worldwide.</p>
+      <p class="card-desc">SHA-256 produces a 256-bit digest for messages shorter than 2^64 bits. Hashing has distinct roles in signatures, integrity checks and other protocols; a bare hash is not authentication.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -157,7 +157,7 @@
         <span class="badge era-modern">1992 &middot; Vanstone</span>
       </div>
       <div class="card-name">ECDSA</div>
-      <p class="card-desc">ECDSA (1992) — signing with elliptic curves, and the one-line mistake that handed Sony's PlayStation 3 master key to the world.</p>
+      <p class="card-desc">ECDSA signs with elliptic-curve arithmetic. The toy model shows how nonce reuse can expose a signing key under the stated conditions; it is not a production implementation.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -173,7 +173,7 @@
         <span class="badge era-modern">1979 &middot; Adi Shamir</span>
       </div>
       <div class="card-name">Shamir&#39;s Secret Sharing</div>
-      <p class="card-desc">Shamir's Secret Sharing (1979) — split a secret so any k of n holders can rebuild it and any k−1 learn absolutely nothing.</p>
+      <p class="card-desc">Shamir’s finite-field construction lets k valid shares reconstruct a secret. Fewer shares preserve its prior distribution when coefficients are chosen uniformly and independently with distinct nonzero share coordinates.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -189,7 +189,7 @@
         <span class="badge era-modern">1985 &middot; GMR</span>
       </div>
       <div class="card-name">Zero-Knowledge Proofs</div>
-      <p class="card-desc">Zero-knowledge proofs (1985) — convince someone a statement is true while revealing nothing beyond its truth. Run the Schnorr protocol and its simulator.</p>
+      <p class="card-desc">Zero-knowledge formalizes what a proof reveals. This small Schnorr model illustrates honest-verifier zero knowledge and extraction from repeated commitments, not production security.</p>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--secure trust-label--sm" title="Still considered secure when used correctly with modern key handling.">Secure (Modern)</span>
 
@@ -207,7 +207,7 @@
       <a href="../hall-of-foundations/finite-fields.html" class="related-card">
         <span class="related-card__number">&sect;142 &middot; Foundations</span>
         <span class="related-card__name">Finite Fields</span>
-        <span class="related-card__tag">Beneath AES: arithmetic where every nonzero element has an inverse, and the S-box finds one</span>
+        <span class="related-card__tag">Beneath AES: finite-field inversion for nonzero bytes, a special zero rule and an affine transform</span>
       </a>
       <a href="../hall-of-foundations/modular-arithmetic.html" class="related-card">
         <span class="related-card__number">&sect;143 &middot; Foundations</span>
@@ -222,7 +222,7 @@
       <a href="../hall-of-foundations/random-oracle.html" class="related-card">
         <span class="related-card__number">&sect;154 &middot; Foundations</span>
         <span class="related-card__name">The Random Oracle</span>
-        <span class="related-card__tag">Beneath SHA-256: the idealised hash assumption Fiat-Shamir signatures lean on</span>
+        <span class="related-card__tag">An idealised model used in some hash-based security analyses; SHA-256 is a concrete function</span>
       </a>
     </div>
   </section>

@@ -67,6 +67,11 @@ const DEMO = '@demo-default';
 const DERIVED = '@derived-claim';
 
 const VECTORS = [
+  // Independently calculated complete examples, including irregular final rows.
+  ['adfgx.html', 'adfgx', 'encode', 'HELLO', 'PRIVACY,GERMAN', 'FFXFFXFXDG', 'letters'],
+  ['adfgvx.html', 'adfgvx', 'encode', 'EAT20', 'PH0QG64MEA1YNOFDXKR3CVS5Z97J2WBTILU8,GERMAN', 'XFVDVGFDDA', 'letters'],
+  ['alberti-disk.html', 'alberti', 'encode', 'AAAAABCD', '3', 'YYYYCXDW', 'letters'],
+  ['chaocipher.html', 'chaocipher', 'encode', 'WELLDONEISBETTERTHANWELLSAID', 'CHAOCIPHER', 'DSZYOZXXGRZVVUSRQUBYXYJBMZIE', 'letters'],
   // page, engine, mode, input, key, expected, compare, anchor?
   ['adfgx.html', 'adfgx', 'encode', 'HELLO', 'PRIVACY,A', 'FFDXFXFXGF', 'letters', 'FF DX FX FX GF'],
   ['adfgx.html', 'adfgx', 'decode', 'FFDXFXFXGF', 'PRIVACY,A', 'HELLO', 'letters'],

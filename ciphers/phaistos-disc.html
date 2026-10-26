@@ -65,22 +65,23 @@
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Region</span><span class="fact-value">Minoan Crete (Phaistos palace)</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1700 BCE (discovered 1908)</span></div>
-    <div class="fact"><span class="fact-label">Discovered by</span><span class="fact-value">Luigi Pernier, 3 July 1908</span></div>
+    <div class="fact"><span class="fact-label">Discovered by</span><span class="fact-value">Luigi Pernier’s excavation, 1908</span></div>
     <div class="fact"><span class="fact-label">Track</span><span class="fact-value">B (visualization)</span></div>
   </div>
 </div>
 
 <div class="demo-section" data-cipher="phaistos-disc">
   <h2>Interactive Exhibit</h2>
-  <p style="opacity:.85;">The disc uses 45 distinct pictograms across 241 stamped tokens. Type a sign number (1–45) to see how often it occurs on each face. Track B exhibit — corpus is too small for true decipherment, but you can audit the standard sign counts.</p>
+  <p style="opacity:.85;">The disc uses 45 distinct pictograms across 241 stamped tokens. Type a sign number (1–45) to see how often it occurs on each face. The counts below follow Michael Everson’s published Unicode transcription: 122 identifiable signs on side A and 119 on side B. They exclude the marked gap and combining oblique strokes. These are transcription counts, not evidence that decipherment is impossible.</p>
   <label for="input" style="display:block;margin-top:1rem;font-weight:600;">Sign number (1–45)</label>
   <input type="number" id="input" min="1" max="45" value="2" style="width:6rem;padding:.5rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;font-family:monospace;">
   <button type="button" data-fn="encode" style="margin-left:.5rem;padding:.5rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;cursor:pointer;">Look up</button>
   <div id="output" style="margin-top:1rem;padding:1rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);border-radius:6px;font-family:monospace;line-height:1.6;min-height:5rem;white-space:pre-wrap;"></div>
   <script>
     (function () {
-      // Sign numbering, names and per-face frequencies follow the standard
-      // Godart & Olivier corpus (side A 122 + side B 119 = 241 tokens).
+      // Frequencies checked against Michael Everson, Phaistos Disc corpus (2011).
+      // Count U+101D0–U+101FC; exclude gap [.] and combining oblique strokes.
+      // Side A 122 + side B 119 = 241 identifiable signs.
       var COUNTS = {
         1: ['Pedestrian', 6, 5],       2: ['Plumed head', 14, 5],
         3: ['Tattooed head', 2, 0],    4: ['Captive', 1, 0],
@@ -107,17 +108,16 @@
         45: ['Wavy band', 2, 4]
       };
       window.encode = function () {
-        var n = parseInt(document.getElementById('input').value, 10);
+        var n = Number(document.getElementById('input').value);
         var out = document.getElementById('output');
-        if (!n || n < 1 || n > 45) { out.textContent = 'Enter a sign number between 1 and 45.'; return; }
+        if (!Number.isInteger(n) || n < 1 || n > 45) { out.textContent = 'Enter a sign number between 1 and 45.'; return; }
         var entry = COUNTS[n];
-        if (!entry) { out.textContent = 'Sign #' + n + ': not in the summarised corpus. See Godart & Olivier, GORILA.'; return; }
         var label = entry[0], a = entry[1], b = entry[2];
         out.textContent =
           'Sign #' + n + ' \u00b7 ' + label + '\n' +
           '  Side A: ' + a + ' occurrence' + (a===1?'':'s') + '\n' +
           '  Side B: ' + b + ' occurrence' + (b===1?'':'s') + '\n' +
-          '  Total : ' + (a + b) + ' / 241 stamped tokens';
+          '  Total : ' + (a + b) + ' / 241 identifiable signs in this transcription';
       };
       document.addEventListener('DOMContentLoaded', function () { window.encode(); });
     })();
@@ -134,7 +134,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Pernier excavated the disc on the night of 3 July 1908 in a small storeroom of the palace, alongside a Linear A tablet and clearly Minoan pottery. The 45 unique signs include human figures, fish, birds, plants, ships, tools, and abstract shapes. Sign sequences are grouped into 61 short 'words' separated by vertical strokes. Both spirals run from the rim toward the centre. Whether the language is Minoan, an early form of Greek, Anatolian, or something else entirely is unknown. The seals required to stamp the disc have never been found.</p></div>
+      <div class="panel-body"><p>The disc was recovered during Luigi Pernier’s excavations at Phaistos in 1908. The 45 unique signs include human figures, fish, birds, plants, ships, tools, and abstract shapes. The signs fall into 61 separated groups, often interpreted as words. Reading from the rim toward the centre is supported by overlapping impressions; neither the language nor the meaning of the divisions is established. Whether the language is Minoan, an early form of Greek, Anatolian, or something else entirely is unknown. The seals required to stamp the disc have never been found.</p></div>
     </div>
 
     <div class="panel">
@@ -161,7 +161,7 @@
             <tr><td>Era</td><td>Bronze Age Crete · ~1700 BCE</td></tr>
             <tr><td>Discipline</td><td>Undeciphered script</td></tr>
             <tr><td>Track</td><td>B (visualization)</td></tr>
-            <tr><td>Modern echo</td><td>Bilingual-key cryptanalysis · Linear B parallels</td></tr>
+            <tr><td>Modern echo</td><td>Independent evidence in script decipherment</td></tr>
           </tbody>
         </table>
       </div>
@@ -185,7 +185,7 @@
     <a href="../ciphers/rosetta-stone.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Rosetta Stone</span>
-      <span class="related-card__tag">What decipherment requires</span>
+      <span class="related-card__tag">How a parallel text helped decipherment</span>
     </a>
   </div>
 </section>

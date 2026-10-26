@@ -68,7 +68,7 @@
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">In service 1956 – ~1990</span></div>
     <div class="fact"><span class="fact-label">Rotors</span><span class="fact-value">10 (alternating forward/reverse stepping)</span></div>
     <div class="fact"><span class="fact-label">Reflector</span><span class="fact-value">Yes; the complete circuit permits self-encipherment</span></div>
-    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">No public break of operational traffic; declassified after 1991</span></div>
+    <div class="fact"><span class="fact-label">Status</span><span class="fact-value">No public break of operational traffic; museum documentation covers surviving machines</span></div>
   </div>
 </div>
 
@@ -82,12 +82,12 @@
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
       <p>Fialka M-125 entered service in 1956 and was used by the Soviet Union and allied countries. Variants had different keyboards and country-specific rotor wiring. It was one of several communications-security systems, not the device through which every Warsaw Pact signal passed.</p><p style="margin-top:1rem;">The machine changed several features familiar from Enigma, including the wheel count, stepping, and input substitution. Improvements to particular weaknesses do not prove that a design has no others.</p>
-      <p>In the public record, this system was never publicly broken by cryptanalysis in operational service. That historical record does not establish security today; this obsolete system is presented for historical study.</p>
+      <p>This exhibit establishes no public cryptanalytic break of operational traffic. That historical record does not establish security today; this obsolete system is presented for historical study.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>Adjacent rotors move in opposite directions. Mechanical pin patterns control irregular stepping; not every wheel necessarily advances on each keypress. The punched card supplies a substitution rather than setting the rotor order, ring positions, or stepping pins. See the <a href="https://www.cryptomuseum.com/crypto/fialka/">Crypto Museum’s documented machines and technical reference</a>.</p><p style="margin-top:1rem;">Three further design choices matter:</p><ul style="margin:0.5rem 0 0 1.5rem;line-height:1.8;"><li><strong>Self-encipherment is possible.</strong> Fialka’s electrical arrangement permits a letter to encipher to itself, unlike military Enigma.</li><li><strong>Punched-card substitution.</strong> A daily card replaces the plugboard’s role; the other machine settings remain separate.</li><li><strong>Thirty-contact alphabet.</strong> The later M-125-3 supports mixed letters, numbers, and punctuation through operating modes; 30 contacts do not individually represent all those symbols at once.</li></ul></div>
+      <div class="panel-body"><p>Adjacent rotors move in opposite directions. Mechanical pin patterns control irregular stepping; not every wheel necessarily advances on each keypress. The punched card supplies a substitution rather than setting the rotor order, ring positions, or stepping pins. See the <a href="https://www.cryptomuseum.com/crypto/fialka/">Crypto Museum’s documented machines and technical reference</a>.</p><p style="margin-top:1rem;">Three further design choices matter:</p><ul style="margin:0.5rem 0 0 1.5rem;line-height:1.8;"><li><strong>Self-encipherment is possible.</strong> Fialka’s electrical arrangement permits a letter to encipher to itself, unlike military Enigma.</li><li><strong>Punched-card substitution.</strong> A daily card replaces the plugboard’s role; the other machine settings remain separate.</li><li><strong>Thirty-contact alphabet.</strong> The later M-125-3M supports mixed letters, numbers, and punctuation through operating modes; 30 contacts do not individually represent all those symbols at once.</li></ul></div>
     </div>
 
     <div class="panel">
@@ -97,7 +97,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
-      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Fialka design choice</th><th>Modern echo</th></tr></thead><tbody><tr><td>Bidirectional rotor stepping</td><td>State-update rules matter; these rotor rules do not describe Trivium or A5/1</td></tr><tr><td>Removing “no letter encrypts to itself”</td><td>Bias removal in modern S-box design</td></tr><tr><td>Daily punched-card key</td><td>Per-session symmetric keys derived from a master key</td></tr><tr><td>Key compromise is a separate threat</td><td>Protecting keys remains necessary even when an algorithm resists known attacks</td></tr></tbody></table></div>
+      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Fialka design choice</th><th>Modern echo</th></tr></thead><tbody><tr><td>Bidirectional rotor stepping</td><td>State-update rules matter; these rotor rules do not describe Trivium or A5/1</td></tr><tr><td>Removing “no letter encrypts to itself”</td><td>Bias removal in modern S-box design</td></tr><tr><td>Daily punched-card substitution</td><td>Scheduled replacement of key material; not a key-derivation protocol</td></tr><tr><td>Key compromise is a separate threat</td><td>Protecting keys remains necessary even when an algorithm resists known attacks</td></tr></tbody></table></div>
     </div>
 
   </div>
@@ -113,7 +113,7 @@
             <tr><td>Year</td><td>In service 1956 – ~1990</td></tr>
             <tr><td>Rotors</td><td>10 (alternating forward/reverse stepping)</td></tr>
             <tr><td>Reflector</td><td>Yes; the complete circuit permits self-encipherment</td></tr>
-            <tr><td>Status</td><td>No public break of operational traffic; declassified after 1991</td></tr>
+            <tr><td>Status</td><td>No public break of operational traffic; museum documentation covers surviving machines</td></tr>
           </tbody>
         </table>
       </div>
@@ -127,7 +127,7 @@
     <a href="../ciphers/enigma.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Enigma</span>
-      <span class="related-card__tag">The machine Fialka was explicitly designed to outdo</span>
+      <span class="related-card__tag">Earlier rotor machine with different design constraints</span>
     </a>
     <a href="../ciphers/sigaba.html" class="related-card">
       <span class="related-card__number">Related</span>
@@ -137,7 +137,7 @@
     <a href="../ciphers/kl-7.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">KL-7</span>
-      <span class="related-card__tag">NATO’s answer to Fialka in the same period</span>
+      <span class="related-card__tag">US and allied machine introduced earlier, in 1952</span>
     </a>
   </div>
 </section>

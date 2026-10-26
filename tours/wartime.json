@@ -17,7 +17,7 @@
     {
       "href": "../ciphers/confederate-vigenere.html",
       "label": "Confederate Vigenère",
-      "note": "The South's brass cipher disk — broken repeatedly by Union codebreakers."
+      "note": "Confederate repeating-key traffic and documented Union solutions, including delays and transmission errors."
     },
     {
       "href": "../ciphers/adfgx.html",
@@ -32,12 +32,12 @@
     {
       "href": "../ciphers/enigma.html",
       "label": "Enigma",
-      "note": "The machine that shaped WWII — and the codebreakers who defeated it."
+      "note": "Polish and Allied teams attacked particular Enigma models, settings and procedures; recovery was not universal."
     },
     {
       "href": "../ciphers/lorenz.html",
       "label": "Lorenz SZ40/42",
-      "note": "Hitler's strategic cipher — broken without ever seeing the machine."
+      "note": "Tiltman recovered key material in 1941; Tutte and colleagues inferred the machine structure by early 1942; Colossus later accelerated wheel-setting."
     },
     {
       "href": "../ciphers/nihilist.html",

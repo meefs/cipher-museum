@@ -73,7 +73,7 @@
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1700s</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Fixed symbol-to-letter grid</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Symbol frequency analysis · Pattern recognition</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Visual encoding as cryptography</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Symbols alone do not strengthen a substitution</span></div>
   </div>
 </div>
 
@@ -89,7 +89,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The Pigpen (or Masonic) cipher uses geometric symbols derived from two grids and two X patterns to represent the 26 letters of the alphabet. It was used by Freemasons from at least the 18th century for lodge records and correspondence. George Washington's Freemason brothers used it; examples appear in gravestone inscriptions and historical documents across the English-speaking world.</p><p style="margin-top:1rem;">The cipher is a simple monoalphabetic substitution using symbols instead of letters — cryptographically equivalent to Caesar or any other fixed letter-to-symbol mapping, and breakable by the same frequency analysis.</p></div>
+      <div class="panel-body"><p>Pigpen alphabets use geometric fragments and dots as letter symbols. Kahn records a concrete Masonic example on James Leeson’s 1794 gravestone in New York. Layouts vary: an inscription needs its own alphabet convention, rather than an assumed universal Masonic key.</p><p style="margin-top:1rem;">A secret pigpen alphabet is a monoalphabetic substitution; symbols preserve the same repetition patterns as letter substitutes. A published fixed alphabet can instead be decoded by lookup. Caesar’s restricted shift family has a much smaller keyspace than a freely permuted substitution, so the two should not be assigned identical attack difficulty.</p></div>
     </div>
 
     <div class="panel">
@@ -116,13 +116,10 @@ I = bottom-right     &rarr; line above, line to the left
 
 (The demo above prints single text characters as
 stand-ins, because plain text has no glyphs for
-most of these shapes. The diagram below shows the
-authentic drawn forms.)
+most of these shapes. The diagram below shows this exhibit’s drawn variant; its S–Z assignment differs from the common four-wedges-per-X layout.)
 
-Famous users:
-- Freemasons (lodge records)
-- George Washington
-- Civil War soldiers (personal letters)</pre>
+Documented example:
+- James Leeson’s Masonic gravestone, New York, 1794</pre>
       <figure class="figure">
         <svg viewBox="0 0 400 340" style="max-width:400px;width:100%;height:auto;" aria-label="Pigpen cipher: the two lettered grids, and the nine glyph shapes derived from the boundary lines of each cell">
           <style>
@@ -204,7 +201,7 @@ Famous users:
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Symbol Frequency Analysis</div><div class="attack-diff">Complexity: Trivial</div><p class="attack-desc">The Pigpen cipher is a monoalphabetic substitution cipher using symbols instead of letters. Al-Kindi's 850 AD frequency analysis applies directly: count how often each symbol appears, match the most common symbol to E, work through the frequency table, and the alphabet mapping is recovered in minutes. Modern word pattern analysis makes it even faster.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Symbol Frequency Analysis</div><div class="attack-diff">Complexity: Trivial</div><p class="attack-desc">A known alphabet needs only lookup. With an unknown alphabet, frequencies, repeated words and word shapes can support a substitution attack. The most frequent symbol is not necessarily E, and short inscriptions may be ambiguous. No universal minutes-to-recovery guarantee follows from using geometric symbols.</p></div></div>
     </div>
 
     <div class="panel">
@@ -244,6 +241,8 @@ Famous users:
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 21, “Heterogeneous Impulses,” on symbol alphabets and James Leeson’s 1794 inscription. The drawn S–Z variant on this page and the four-wedge layout in the fraternal-tradition widget are explicitly different conventions.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

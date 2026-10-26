@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Monoalphabetic Substitution — The Cipher Museum</title>
-    <meta name="description" content="Monoalphabetic substitution — replace each letter with a fixed substitute. Foundation of all substitution ciphers; broken by Al-Kindi's frequency analysis ~850.">
+    <meta name="description" content="Monoalphabetic substitution — replace each letter with a fixed substitute. A large keyspace can still leak language patterns; al-Kindi described frequency analysis in the ninth century.">
   <meta property="og:title" content="Monoalphabetic Substitution — The Cipher Museum">
-  <meta property="og:description" content="Monoalphabetic substitution — replace each letter with a fixed substitute. Foundation of all substitution ciphers; broken by Al-Kindi's frequency analysis ~850.">
+  <meta property="og:description" content="Monoalphabetic substitution — replace each letter with a fixed substitute. A large keyspace can still leak language patterns; al-Kindi described frequency analysis in the ninth century.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/monoalphabetic.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Monoalphabetic Substitution — The Cipher Museum">
-  <meta name="twitter:description" content="Monoalphabetic substitution — replace each letter with a fixed substitute. Foundation of all substitution ciphers; broken by Al-Kindi's frequency analysis ~850.">
+  <meta name="twitter:description" content="Monoalphabetic substitution — replace each letter with a fixed substitute. A large keyspace can still leak language patterns; al-Kindi described frequency analysis in the ninth century.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/monoalphabetic.html">
@@ -62,17 +62,17 @@
   </div>
   <div class="page-meta">
     <span class="page-num">Exhibit 04 of 172</span>
-    <span class="badge era-medieval">Medieval · ~800 AD</span>
+    <span class="badge era-medieval">Ancient roots · medieval cryptanalysis</span>
   </div>
   <h1 class="page-title">Monoalphabetic Substitution</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">26! possible keys. Zero security.</p>
+  <p class="page-tagline">26! possible keys, but language patterns survive.</p>
   <p class="exhibit-status-note">Language statistics and word patterns can expose a fixed substitution.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Unknown (ancient practice)</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~800 AD</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">No single invention date</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Full alphabet permutation (26! keys)</span></div>
-    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Al-Kindi · Frequency Analysis · 850 AD</span></div>
+    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Frequency analysis · al-Kindi’s ninth-century account</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">S-boxes in AES</span></div>
   </div>
 </div>
@@ -89,7 +89,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Monoalphabetic substitution ciphers — where each letter maps permanently to another letter or symbol — are among the oldest cryptographic techniques. They appear in ancient Hebrew texts (the Atbash cipher), Roman inscriptions, and medieval manuscripts. The sheer number of possible keys (26! ≈ 4×10²⁶) made cryptographers believe they were unbreakable.</p><p style="margin-top:1rem;">Al-Kindi’s surviving ninth-century treatise explains how letter counts and linguistic knowledge can help solve substitution. It does not prove that every short or unusual message has a unique recoverable plaintext.</p></div>
+      <div class="panel-body"><p>Monoalphabetic substitution ciphers — where each letter maps permanently to another letter or symbol — are among the oldest cryptographic techniques. They appear in ancient Hebrew texts (the Atbash cipher), Roman inscriptions, and medieval manuscripts. For a modern 26-letter alphabet there are 26! ≈ 4×10²⁶ permutations, but that count does not measure resistance to statistical attacks.</p><p style="margin-top:1rem;">Al-Kindi’s surviving ninth-century treatise explains how letter counts and linguistic knowledge can help solve substitution. It does not prove that every short or unusual message has a unique recoverable plaintext.</p></div>
     </div>
 
     <div class="panel">
@@ -177,7 +177,7 @@ HELLO → ITSSG</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Frequency Analysis (Al-Kindi, 850 AD)</div><div class="attack-diff">Complexity: Easy · Time: Minutes by hand</div><p class="attack-desc">A substitution preserves the frequency of each plaintext letter under a different label. Common English corpora often have E and T near the top, but a particular message can differ substantially. Frequency guesses are starting hypotheses, tested against word patterns and other evidence, not guaranteed letter assignments.</p></div><div class="callout callout-danger" style="margin-top:1rem;"><span class="callout-icon">⚠️</span><div class="callout-body"><p><strong>Why 26! keys doesn't help:</strong> The keyspace is astronomically large but the statistical fingerprint of English is inescapable. Key size is meaningless if the ciphertext leaks information about the plaintext.</p></div></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Frequency Analysis (al-Kindi, ninth century)</div><div class="attack-diff">Difficulty depends on message length, language, and available clues</div><p class="attack-desc">A substitution preserves the frequency of each plaintext letter under a different label. Common English corpora often have E and T near the top, but a particular message can differ substantially. Frequency guesses are starting hypotheses, tested against word patterns and other evidence, not guaranteed letter assignments.</p></div><div class="callout callout-danger" style="margin-top:1rem;"><span class="callout-icon">⚠️</span><div class="callout-body"><p><strong>Why 26! keys doesn't help:</strong> A large keyspace does not remove repeated-letter and language patterns. Those clues often make long messages solvable, while short or unusual messages can remain ambiguous.</p></div></div></div>
     </div>
 
     <div class="panel">
@@ -185,9 +185,9 @@ HELLO → ITSSG</pre>
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from Monoalphabetic Substitution</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>Letter permutation</td><td>AES S-boxes: fixed non-linear substitution tables that resist frequency analysis</td></tr>
-<tr><td>Fixed substitution leaks frequency</td><td>Shannon's confusion: AES S-boxes designed to resist frequency analysis</td></tr>
-<tr><td>26 possible frequency peaks</td><td>AES avalanche effect: 1 bit change flips ~half all output bits</td></tr></tbody>
+          <tbody><tr><td>Letter permutation</td><td>AES also uses substitution, but combines it with key addition and diffusion across repeated rounds</td></tr>
+<tr><td>Fixed substitution leaks frequency</td><td>A fixed invertible S-box merely relabels input frequencies; the complete cipher and encryption mode determine what leaks</td></tr>
+<tr><td>Changes remain local in letter substitution</td><td>AES rounds spread changes across a block; approximately half the output bits change on average, not on every input</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -203,12 +203,12 @@ HELLO → ITSSG</pre>
         <table class="cipher-table">
           <tbody>
             <tr><td>Exhibit</td><td>4 of 172</td></tr>
-            <tr><td>Era</td><td>Medieval · ~800 AD</td></tr>
+            <tr><td>Era</td><td>Ancient roots · medieval cryptanalysis</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
             <tr><td>Inventor</td><td>Unknown (ancient practice)</td></tr>
-            <tr><td>Year</td><td>~800 AD</td></tr>
+            <tr><td>Year</td><td>No single invention date</td></tr>
             <tr><td>Key Type</td><td>Full alphabet permutation (26! keys)</td></tr>
-            <tr><td>Broken By</td><td>Al-Kindi · Frequency Analysis · 850 AD</td></tr>
+            <tr><td>Broken By</td><td>Frequency analysis · al-Kindi’s ninth-century account</td></tr>
           </tbody>
         </table>
       </div>
@@ -217,6 +217,8 @@ HELLO → ITSSG</pre>
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading-title"><div class="panel-head"><h2 class="panel-title" id="audit-reading-title">Sources and Reading</h2></div><div class="panel-body"><p><em>Handbook of Applied Cryptography</em>, Alfred J. Menezes, Paul C. van Oorschot and Scott A. Vanstone (1997), §7.3.2, pp.239–240: substitution mappings and retained frequency distributions.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

@@ -68,7 +68,7 @@
     <div class="fact"><span class="fact-label">Famous use</span><span class="fact-value">Neal Stephenson's novel Cryptonomicon (as "Pontifex")</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Initial ordering of a 54-card deck (52 + 2 jokers)</span></div>
     <div class="fact"><span class="fact-label">Keyspace</span><span class="fact-value">54! ≈ 2.3 × 10⁷¹</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Hand-deniable crypto for high-risk environments</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Manual stream-cipher design and its limitations</span></div>
   </div>
 </div>
 
@@ -79,12 +79,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Bruce Schneier designed Solitaire in 1999 for Neal Stephenson's novel Cryptonomicon, where it appears under the name "Pontifex". The goal: a cipher that an agent could carry in a hostile country with nothing more incriminating than a deck of playing cards. Strong enough to resist amateur attack, simple enough to operate by hand. Subsequent analysis revealed minor statistical biases, so it is not recommended for production use today, but it remains an important demonstration that strong-ish encryption can be done with no electronics at all.</p>
+      <p>Bruce Schneier designed Solitaire in 1999 for Neal Stephenson's novel Cryptonomicon, where it appears under the name "Pontifex". The goal: a cipher that an agent could carry in a hostile country with nothing more incriminating than a deck of playing cards. Strong enough to resist amateur attack, simple enough to operate by hand. Subsequent analysis found statistical biases. The exhibit uses Solitaire to study manual state updates and keystreams, not to recommend it for protecting communications.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Schneier published Solitaire in an appendix to Cryptonomicon and later on his Counterpane website. Within months, cryptanalysts including Paul Crowley discovered small biases in the keystream — enough to make Solitaire weaker than ideal but not catastrophically broken. Schneier maintains the design as a teaching example and acknowledges the analysis. Real-world use by activists and journalists has been documented but is rare.</p></div>
+      <div class="panel-body"><p>Schneier published the design for Neal Stephenson’s <em>Cryptonomicon</em> (1999). Paul Crowley’s analysis found biased consecutive outputs and a non-invertible state transition. The cited material does not establish a history of deployment by activists or journalists; this exhibit presents the cipher for study, not operational protection.</p></div>
     </div>
 
     <div class="panel">
@@ -100,7 +100,7 @@
         <div class="callout callout-info">
           <span class="callout-icon">ℹ️</span>
           <div class="callout-body">
-            <p><strong>About this demo:</strong> To guarantee that Decrypt exactly restores your original message, this demo reversibly escapes the letters X, Q, and Z (as ZA, ZB, ZC) before enciphering, so padding and filler X can never be confused with a real letter. Messages containing X, Q, or Z therefore produce slightly different ciphertext than a strictly classical Solitaire would. Encryption pads to a multiple of five letters with X, per Schneier's specification.</p>
+            <p><strong>About this demo:</strong> To distinguish letters from padding in the normalised A–Z message, this demo reversibly escapes the letters X, Q, and Z (as ZA, ZB, ZC) before enciphering, so padding and filler X can never be confused with a real letter. Messages containing X, Q, or Z therefore produce slightly different ciphertext than a strictly classical Solitaire would. Encryption pads to a multiple of five letters with X, per Schneier's specification.</p>
           </div>
         </div>
       </div>
@@ -157,15 +157,15 @@
     </div>
 
     <div class="panel">
-      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">Operator's Field Manual</span></div>
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">Historical Operating Conventions</span></div>
       <div class="panel-body">
-        <p style="font-size:.9rem;color:var(--tx2);margin-bottom:.6rem;">Distilled from <a href="https://steemit.com/steemiteducation/@shai-hulud/solitaire-encryption-low-tech-high-security-a-how-to" target="_blank" rel="noopener">@shai-hulud's Solitaire how-to</a> and Schneier's original spec — the conventions that make a hand-cipher actually survive contact with the real world.</p>
+        <p style="font-size:.9rem;color:var(--tx2);margin-bottom:.6rem;">Practice conventions drawn from Schneier’s specification and the cited walkthrough. They explain manual operation; they do not establish modern security.</p>
         <table class="cipher-table">
           <thead><tr><th style="width:32%;">Convention</th><th>Why it matters</th></tr></thead>
           <tbody>
             <tr>
               <td><strong>X-pad to multiples of 5</strong></td>
-              <td>Pad the plaintext with <code>X</code> until its length is a multiple of 5. Both sides know <code>X</code> at the end of a word is filler. Eliminates the cribs that obvious sentence boundaries would give an attacker.</td>
+              <td>Pad the plaintext with <code>X</code> until its length is a multiple of 5. Trailing X padding is ambiguous unless a convention resolves it. The engine demo uses an additional reversible escape and pads automatically. The deck visualizer processes exactly the normalised letters you enter; add any desired X padding yourself.</td>
             </tr>
             <tr>
               <td><strong>Group output in 5-letter blocks</strong></td>
@@ -176,7 +176,7 @@
               <td>Sender and receiver must start from the <em>exact same</em> 54-card ordering. The key (a passphrase, or a memorized initial deck) is the secret. The cipher is symmetric: same procedure for encrypt and decrypt — only the final <code>±</code> changes.</td>
             </tr>
             <tr>
-              <td><strong>Never reuse a deck for two messages</strong></td>
+              <td><strong>Do not restart the same keystream for two messages</strong></td>
               <td>Two messages on the same keystream is a classic two-time-pad break. After sending, re-key from a fresh passphrase or shuffle to a new agreed-on order.</td>
             </tr>
             <tr>
@@ -184,8 +184,8 @@
               <td>Both jokers count as 53 in the count-cut and the top-card lookup. If the lookup card itself is a joker, <em>discard</em> the output and run the algorithm again — never write a joker into the keystream.</td>
             </tr>
             <tr>
-              <td><strong>One slip = gibberish forever after</strong></td>
-              <td>The deck is the state; one mis-counted card desynchronizes sender and receiver permanently. Slow is smooth. Smooth is fast. Recount every step.</td>
+              <td><strong>A deck error can desynchronise later output</strong></td>
+              <td>A deck error can change the subsequent stream. Recovery requires restoring an agreed state; correct arithmetic alone cannot repair a mismatched deck.</td>
             </tr>
             <tr>
               <td><strong>Destroy the deck after use</strong></td>
@@ -434,7 +434,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Crowley Bias (1999)</div><div class="attack-diff">Complexity: Distinguisher only</div><p class="attack-desc">Paul Crowley showed that the Solitaire keystream has a measurable bias: the probability that two consecutive keystream values are equal is about 1/22.5 instead of the ideal 1/26. This is enough to <em>distinguish</em> Solitaire output from random, but not enough to recover plaintext or key in practice.</p></div><div class="attack-panel"><div class="attack-name">Operator Errors</div><div class="attack-diff">Complexity: The real risk</div><p class="attack-desc">A single mis-step in the count-cut or keystream extraction misaligns the recipient's deck and turns the rest of the message into gibberish. In practice, operator error is the main threat — not cryptanalysis.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Crowley Bias (1999)</div><div class="attack-diff">Complexity: Distinguisher only</div><p class="attack-desc">Crowley measured equal consecutive keystream outputs at roughly 1/22.5 rather than 1/26 in his experiments. That is a statistical distinguisher. The finding alone is not a demonstrated general-purpose key or plaintext recovery, but it should not be turned into a claim that no practical recovery attack could exist.</p></div><div class="attack-panel"><div class="attack-name">Operator Errors</div><div class="attack-diff">A separate operational failure</div><p class="attack-desc">Manual errors can leave the two decks in different states. This operational hazard is separate from cryptanalytic weaknesses; the exhibit does not establish that either is always the dominant risk.</p></div></div>
     </div>
 
     <div class="panel">
@@ -443,9 +443,9 @@
         <table class="cipher-table">
           <thead><tr><th>Concept from Solitaire / Pontifex</th><th>Modern Evolution</th></tr></thead>
           <tbody>
-            <tr><td>Hardware-free cryptography</td><td>Useful where electronics are dangerous to possess</td></tr>
-            <tr><td>Deniable artifacts</td><td>A deck of cards is innocuous; a thumb drive is not</td></tr>
-            <tr><td>Distinguishability vs. recovery</td><td>Modern crypto requires indistinguishability from random</td></tr>
+            <tr><td>Hardware-free cryptography</td><td>A manual construction can illustrate state and keystream generation</td></tr>
+            <tr><td>Deniable artifacts</td><td>Ordinary objects do not guarantee concealment or personal safety</td></tr>
+            <tr><td>Distinguishability vs. recovery</td><td>A keystream generator is expected to resist computational distinguishers; security definitions depend on the primitive</td></tr>
           </tbody>
         </table>
       </div>
@@ -468,13 +468,15 @@
             <tr><td>Famous use</td><td>Neal Stephenson's novel Cryptonomicon (as "Pontifex")</td></tr>
             <tr><td>Key Type</td><td>Initial ordering of a 54-card deck (52 + 2 jokers)</td></tr>
             <tr><td>Keyspace</td><td>54! ≈ 2.3 × 10⁷¹</td></tr>
-            <tr><td>Modern Lesson</td><td>Hand-deniable crypto for high-risk environments</td></tr>
+            <tr><td>Modern Lesson</td><td>Manual stream-cipher design and its limitations</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Bruce Schneier, <a href="https://www.schneier.com/academic/solitaire/">“The Solitaire Encryption Algorithm”</a> (1999), including the published test vectors; Paul Crowley, <a href="https://www.ciphergoth.org/crypto/solitaire/">“Problems with Bruce Schneier’s Solitaire”</a>, on the measured repetition bias. Fictional setting: Neal Stephenson, <em>Cryptonomicon</em> (1999).</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>

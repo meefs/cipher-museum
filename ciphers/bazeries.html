@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bazeries Cipher — The Cipher Museum</title>
-    <meta name="description" content="Bazeries cylinder cipher — Etienne Bazeries' 1891 wheel cipher with 20 alphabet disks, an evolution later adopted by the US Army as the M-94 in 1922.">
+    <meta name="description" content="Explore the Bazeries hand-cipher procedure and a simplified browser model, distinguished from his separate mechanical cipher cylinder.">
   <meta property="og:title" content="Bazeries Cipher — The Cipher Museum">
-  <meta property="og:description" content="Bazeries cylinder cipher — Etienne Bazeries' 1891 wheel cipher with 20 alphabet disks, an evolution later adopted by the US Army as the M-94 in 1922.">
+  <meta property="og:description" content="Explore the Bazeries hand-cipher procedure and a simplified browser model, distinguished from his separate mechanical cipher cylinder.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/bazeries.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bazeries Cipher — The Cipher Museum">
-  <meta name="twitter:description" content="Bazeries cylinder cipher — Etienne Bazeries' 1891 wheel cipher with 20 alphabet disks, an evolution later adopted by the US Army as the M-94 in 1922.">
+  <meta name="twitter:description" content="Explore the Bazeries hand-cipher procedure and a simplified browser model, distinguished from his separate mechanical cipher cylinder.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/bazeries.html">
@@ -66,12 +66,12 @@
   </div>
   <h1 class="page-title">Bazeries Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">Invented by a codebreaker — who knew exactly how breakable it was</p>
+  <p class="page-tagline">A historical hand-cipher procedure and an explicitly simplified browser model</p>
   <p class="exhibit-status-note">Layered frequency analysis</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Étienne Bazeries</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1890s</span></div>
-    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Numeric keyword (Polybius + transposition)</span></div>
+    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Numeric key; substitution plus group reversal</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Layered frequency analysis</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Key-controlled multi-layer operations</span></div>
   </div>
@@ -84,54 +84,24 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Étienne Bazeries broke <a href="great-cipher.html">the Great Cipher of Louis XIV</a> — a code unread for 200 years — and independently reinvented Thomas Jefferson’s wheel cipher. His cylinder design became the basis for the US Army’s M-94, used through World War II.</p>
+      <p>Étienne Bazeries reconstructed historic French nomenclators and proposed cipher devices of his own. His mechanical cylinder, the hand cipher bearing his name, and this browser’s simplified model are distinct constructions.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Étienne Bazeries was one of the most famous cryptanalysts of his era — he broke the Great Cipher of Louis XIV, a code that had protected French royal secrets for 200 years. Ironically, he also designed his own cipher and spent years trying to convince the French military to adopt it, without success.</p><p style="margin-top:1rem;">The Bazeries cylinder — a mechanical device with rotating disks — was independently invented by Thomas Jefferson and later became the basis for the US Army's M-94 cipher device used through WWII.</p></div>
+      <div class="panel-body"><p>Étienne Bazeries was one of the most famous cryptanalysts of his era — he reconstructed a Rossignol-era nomenclator in correspondence from about two centuries earlier. Ironically, he also designed his own cipher and spent years trying to convince the French military to adopt it, without success.</p><p style="margin-top:1rem;">Bazeries proposed a 20-disk cylinder independently of Jefferson’s earlier 36-disk description. The later U.S. M-94 belongs to a related but separately developed cylinder tradition; none of these devices is the two-square hand procedure described below.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><pre>Step 1: Convert keyword to number (A=1, B=2...)
-        e.g., 'ATTAQUE' → 1,20,20,1,17,21,5
-
-Step 2: Build Polybius square, columns in
-        keyword-number order
-
-Step 3: Encrypt using the square
-
-Step 4: Apply transposition using the same
-        numeric keyword as column order</pre>
-<figure class="figure">
-<svg viewBox="0 0 380 180" style="width:100%;max-width:380px;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bazeries cipher two-layer encryption diagram">
-  <style>text{font-family:'JetBrains Mono',monospace;fill:#EDE5D4}rect{rx:3}</style>
-  <!-- Step labels -->
-  <text x="10" y="18" font-size="10" fill="#C9A84C" letter-spacing=".1em">KEYWORD → NUMBER → TWO LAYERS</text>
-  <text x="10" y="40" font-size="10" fill="#706878">ATTAQUE → 1,20,20,1,17,21,5</text>
-  <!-- Layer 1: Polybius -->
-  <rect x="10" y="55" width="170" height="50" fill="rgba(90,200,160,.06)" stroke="rgba(90,200,160,.15)" stroke-width="1" rx="5"/>
-  <text x="20" y="72" font-size="9" fill="#5AC8A0">LAYER 1: SUBSTITUTION</text>
-  <text x="20" y="90" font-size="9" fill="#B8B0A0">Polybius square keyed by word</text>
-  <!-- Layer 2: Transposition -->
-  <rect x="200" y="55" width="170" height="50" fill="rgba(201,168,76,.06)" stroke="rgba(201,168,76,.15)" stroke-width="1" rx="5"/>
-  <text x="210" y="72" font-size="9" fill="#C9A84C">LAYER 2: TRANSPOSITION</text>
-  <text x="210" y="90" font-size="9" fill="#B8B0A0">Column order from number key</text>
-  <!-- Arrow -->
-  <text x="185" y="85" font-size="16" fill="#7a6530">→</text>
-  <!-- Shared key -->
-  <rect x="10" y="120" width="360" height="45" fill="rgba(201,168,76,.04)" stroke="rgba(201,168,76,.1)" stroke-width=".5" rx="5"/>
-  <text x="20" y="140" font-size="9" fill="#C9A84C">★ Same keyword controls BOTH layers</text>
-  <text x="20" y="155" font-size="9" fill="#706878">This creates interdependence — breaking one helps break the other</text>
-</svg>
-<figcaption class="figure-caption">One keyword drives both substitution and transposition — a strength in theory, but the shared key creates exploitable correlations</figcaption>
-</figure></div>
+      <div class="panel-body"><p><strong>ACA hand-cipher convention:</strong> choose a number and spell it out to key a 5×5 ciphertext square, merging I/J. The plaintext square has its alphabet written down columns. Reverse groups of plaintext according to successive key digits, then substitute between corresponding square cells.</p>
+<p>For example, key 3752 uses successive group lengths 3, 7, 5 and 2. This is group reversal, not columnar transposition.</p>
+<p><strong>Browser model boundary:</strong> the widget above instead accepts 2–99, builds a 26-letter keyword substitution from the English number name, and reverses fixed-size groups. The size is min(6, max(2, (key mod 7)+2)); key 42 therefore uses pairs. It does not implement the ACA two-square rule or the mechanical cylinder. Its outputs are model exercises, not historical test vectors.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Multi-Layer Frequency Analysis</div><div class="attack-diff">Complexity: Hard</div><p class="attack-desc">The Bazeries cipher's two layers are not independent — they share the same keyword. This correlation can be exploited: recovering the transposition key partially constrains the substitution square. Modern hill climbing attacks that search both layers simultaneously can crack it given several hundred characters of ciphertext.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Multi-Layer Frequency Analysis</div><div class="attack-diff">Complexity: Hard</div><p class="attack-desc">Both layers depend on the key, so their search spaces should not be multiplied as though they were independent. This widget has only 98 selectable numbers, making exhaustive comparison straightforward. That bound applies to this model, not to every historical Bazeries procedure.</p></div></div>
     </div>
 
     <div class="panel">
@@ -141,7 +111,7 @@ Step 4: Apply transposition using the same
           <thead><tr><th>Concept from Bazeries Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Single key controls multiple operations</td><td>AES key schedule: one master key generates all round keys</td></tr>
 <tr><td>Inventor = famous codebreaker</td><td>Security through obscurity fails: cipher design must be public and peer-reviewed</td></tr>
-<tr><td>Mechanical cylinder version</td><td>Rotor machines: Jefferson Disk → Hebern → Enigma</td></tr></tbody>
+<tr><td>Mechanical cylinder version</td><td>Compare the separate cylinder tradition with moving wired-rotor machines</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -161,7 +131,7 @@ Step 4: Apply transposition using the same
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
             <tr><td>Inventor</td><td>Étienne Bazeries</td></tr>
             <tr><td>Year</td><td>~1890s</td></tr>
-            <tr><td>Key Type</td><td>Numeric keyword (Polybius + transposition)</td></tr>
+            <tr><td>Key Type</td><td>Numeric key; substitution plus group reversal</td></tr>
             <tr><td>Broken By</td><td>Layered frequency analysis</td></tr>
           </tbody>
         </table>
@@ -171,6 +141,8 @@ Step 4: Apply transposition using the same
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>American Cryptogram Association, <a href="https://www.cryptogram.org/downloads/aca.info/ciphers/Bazeries.pdf">“Bazeries” specification and worked example</a>; David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 8, for Bazeries and his separate cylinder. The numerical widget’s rule is documented above so it can be distinguished from the source procedure.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

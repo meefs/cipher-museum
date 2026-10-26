@@ -60,7 +60,7 @@
     <span class="badge era-modern">Antebellum America · 1843</span>
   </div>
   <h1 class="page-title">Poe's Gold-Bug Cipher</h1>
-  <p class="page-tagline">Edgar Allan Poe's 1843 short story <em>The Gold-Bug</em> — the first widely read piece of fiction to teach cryptanalysis, complete with a worked decipherment of a buried-treasure cryptogram.</p>
+  <p class="page-tagline">Edgar Allan Poe's 1843 short story <em>The Gold-Bug</em> — a widely read work of fiction presenting cryptanalysis, complete with a worked decipherment of a buried-treasure cryptogram.</p>
   <p class="exhibit-status-note">Fictional substitution cipher</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Region</span><span class="fact-value">Sullivan's Island, South Carolina (in-fiction); Philadelphia (publication)</span></div>
@@ -109,22 +109,22 @@
 
     <div class="cipher-significance">
       <h3>Why This Matters</h3>
-      <p>Poe's <em>The Gold-Bug</em> contains one of the most famous worked cryptanalyses in American literature. The narrator's friend William Legrand discovers a parchment bearing 203 numerals and symbols and breaks it through frequency analysis to recover Captain Kidd's treasure map. Poe presents the entire decipherment step-by-step, in plain English, in the story itself — turning a popular short story into a cryptanalysis tutorial. <em>The Gold-Bug</em> won a $100 prize, sold over 300,000 copies in Poe's lifetime, and made him America's most famous author.</p>
+      <p>Poe's <em>The Gold-Bug</em> contains one of the most famous worked cryptanalyses in American literature. The narrator's friend William Legrand discovers a parchment bearing 203 numerals and symbols in the 1843 text and breaks it through frequency analysis to recover Captain Kidd's treasure map. Poe explains key decipherment steps and supplies the resulting reading, making cryptanalysis part of the story itself. The story won a $100 newspaper prize and helped popularise cipher solving; a sales figure is not a measured count of readers or cryptanalysts.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Poe was a passionate amateur cryptographer. As editor of <em>Graham's Magazine</em> in 1841 he ran a column challenging readers to send him substitution ciphers, claiming he could solve any one. He published the solutions to almost every submission (including, in some cases, fabricated 'submissions' he had constructed himself). <em>The Gold-Bug</em> grew directly from that column. The cipher in the story uses digits, punctuation, and typographic dingbats as substitution symbols, and the worked example walks the reader through identifying '8' as E (most frequent), then 'the', then progressively rarer letters until a Captain Kidd map emerges.</p></div>
+      <div class="panel-body"><p>Poe invited cipher submissions in <em>Alexander’s Weekly Messenger</em> beginning in December 1839 and published solutions during 1840. His 1841 <em>Graham’s Magazine</em> essay “A Few Words on Secret Writing” discussed those earlier challenges. The surviving newspaper record does not support treating his boast of universal success as an established cryptanalytic result.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">Technical Notes</span></div>
-      <div class="panel-body"><p>Like the Dancing Men cipher (which Conan Doyle published 60 years later, almost certainly inspired by Poe), the Gold-Bug cryptogram is a pure monoalphabetic substitution and falls to standard frequency analysis. Poe's narrative is essentially a textbook in disguise. He is correct that English-language E dominates at ~12%, that T, A, O, I, N follow, that 'the' is the most common trigram, and that digrammatic and word-pattern matching close the gap once a few letters are known. Modern cryptanalysis still teaches exactly this attack against monoalphabetic substitutions.</p></div>
+      <div class="panel-body"><p>The story’s substitution relabels letter frequencies and preserves repeated patterns. Legrand combines counts with likely words and context. E’s usual prominence in English is a heuristic, not a guarantee for each message; a frequency ranking by itself does not recover every substitution key. The widget extends the story’s partial alphabet with invented assignments, as its introduction states.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">Modern Echo</span></div>
-      <div class="panel-body"><p><em>The Gold-Bug</em> is the founding document of <em>cryptography as popular culture</em>. Every later 'breakable cipher in fiction' — Conan Doyle, Verne, Sayers, Sebald, Brown — owes Poe a debt. It is also indirectly responsible for the early 20th-century recruitment of amateur cryptanalysts into government work: Bletchley Park's famous <em>Daily Telegraph</em> crossword test (1942) was a direct descendant of Poe's reader-cipher columns.</p></div>
+      <div class="panel-body"><p>Poe helped make codebreaking a subject of popular fiction and reader participation. Later stories offer useful comparisons, but similarity alone does not establish a direct chain of influence to every cipher novel, puzzle hunt or wartime recruitment test.</p></div>
     </div>
 
   </div>
@@ -141,7 +141,7 @@
             <tr><td>Era</td><td>Antebellum America · 1843</td></tr>
             <tr><td>Discipline</td><td>Monoalphabetic substitution (digit/symbol)</td></tr>
             <tr><td>Track</td><td>B (Poe-style frequency tool)</td></tr>
-            <tr><td>Modern echo</td><td>Public cryptanalysis · Bletchley recruitment puzzles</td></tr>
+            <tr><td>Modern echo</td><td>Public cryptanalysis and reader challenges</td></tr>
           </tbody>
         </table>
       </div>
@@ -149,12 +149,14 @@
     <div class="panel" style="margin-top:1.25rem;">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">Poe's Challenge-Cipher Legacy</span></div>
       <div class="panel-body">
-        <p>Before <em>The Gold-Bug</em>, Poe ran public cipher challenges in magazines and invited readers to submit encrypted messages for him to solve. That reader-participation format is a direct ancestor of newspaper cryptograms, puzzle hunts, and modern ARG cipher drops.</p>
-        <p style="margin-top:.65rem;">In short: Poe did not just write about codebreaking. He created a mass-audience codebreaking culture.</p>
+        <p>Poe’s newspaper challenges show readers taking part in cipher solving before <em>The Gold-Bug</em>. They can be compared with later public puzzles without claiming that every modern format descends directly from them.</p>
+        <p style="margin-top:.65rem;">The surviving publications provide evidence of reader participation, without measuring its reach or proving a direct lineage to later institutions.</p>
       </div>
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Edgar Allan Poe, <em>The Gold-Bug</em> (1843) and “A Few Words on Secret Writing” (1841); Clarence S. Brigham, <em>Edgar Allan Poe’s Contributions to Alexander’s Weekly Messenger</em> (1943), introduction, pp. 3–7, for the dated newspaper record and limits of Poe’s claims.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
@@ -167,7 +169,7 @@
     <a href="../ciphers/dancing-men.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Dancing Men</span>
-      <span class="related-card__tag">Conan Doyle's later homage</span>
+      <span class="related-card__tag">Conan Doyle’s later fictional decipherment</span>
     </a>
     <a href="../ciphers/babington.html" class="related-card">
       <span class="related-card__number">Related</span>

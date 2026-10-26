@@ -1,0 +1,192 @@
+{
+  "items": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "scope": "Local desktop/mobile page and word-table interaction; external resources blocked.",
+  "pages": [
+    {
+      "slug": "amharic-ge-ez-ciphers",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "field-hollers",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "gravity-falls",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "microdot",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "navajo-code-talkers",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "gold-bug",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "arnold-andre",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "chinese-telegraph",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "solitaire",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "wadsworth-cipher",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "wheatstone",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "fialka",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "kl-7",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "m209",
+      "width": 1280,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "amharic-ge-ez-ciphers",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "field-hollers",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "gravity-falls",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "microdot",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "navajo-code-talkers",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "gold-bug",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "arnold-andre",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "chinese-telegraph",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "solitaire",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "wadsworth-cipher",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "wheatstone",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "fialka",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "kl-7",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "slug": "m209",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "failures": [],
+  "interactions": [
+    "Latin substitution: A–Z policy, repeated-letter pattern and inverse",
+    "Vowel/consonant annotation: AB -> A● B◦",
+    "Caesar: XYZ ABC -> ABC DEF",
+    "Base64 HELLO with explicit non-encryption label",
+    "Navajo GUAM model roundtrip and separately sourced alphabet exercise",
+    "Solitaire visualizer: published FOO / fifteen A letters vector and inverse"
+  ]
+}

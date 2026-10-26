@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Slidex (British WWII tactical code card) — The Cipher Museum</title>
-  <meta name="description" content="Slidex (1943) — the British Army's front-line tactical code card. A 204-cell vocabulary grid plus two sliding coordinate strips. Fast for a platoon signaller; read by German units within hours.">
+  <meta name="description" content="Slidex used a 204-cell tactical vocabulary card and sliding coordinate strips. Reported German recovery times concerned particular wartime traffic, not every message.">
   <meta property="og:title" content="Slidex (British WWII tactical code card) — The Cipher Museum">
-  <meta property="og:description" content="Slidex (1943) — the British Army's front-line tactical code card. A 204-cell vocabulary grid plus two sliding coordinate strips. Fast for a platoon signaller; read by German units within hours.">
+  <meta property="og:description" content="Slidex used a 204-cell tactical vocabulary card and sliding coordinate strips. Reported German recovery times concerned particular wartime traffic, not every message.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/slidex.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Slidex (British WWII tactical code card) — The Cipher Museum">
-  <meta name="twitter:description" content="Slidex (1943) — the British Army's front-line tactical code card. A 204-cell vocabulary grid plus two sliding coordinate strips. Fast for a platoon signaller; read by German units within hours.">
+  <meta name="twitter:description" content="Slidex used a 204-cell tactical vocabulary card and sliding coordinate strips. Reported German recovery times concerned particular wartime traffic, not every message.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/slidex.html">
@@ -61,13 +61,13 @@
   </div>
   <h1 class="page-title">Slidex <span style="opacity:.6;font-weight:400;">British WWII tactical code card</span></h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">A printed card, two sliding strips, and a pencilled daily key — the code the British Army handed to every front-line signaller from 1943 to the 1980s.</p>
+  <p class="page-tagline">Printed vocabulary cards and sliding coordinate strips for British tactical communications; different cards and operating procedures must be distinguished.</p>
   <p class="exhibit-status-note">Short-lived tactical vocabulary cards and changing cursor settings; the widget is a simplified bigram model.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Royal Signals, United Kingdom</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">In service 1943 – early 1980s</span></div>
     <div class="fact"><span class="fact-label">Mechanism</span><span class="fact-value">204-cell vocabulary card (12&times;17) + two sliding coordinate strips</span></div>
-    <div class="fact"><span class="fact-label">Use</span><span class="fact-value">Tactical voice and morse traffic; never strategic</span></div>
+    <div class="fact"><span class="fact-label">Use</span><span class="fact-value">Tactical voice and morse traffic; intended for tactical communications</span></div>
     <div class="fact"><span class="fact-label">Successor</span><span class="fact-value">BATCO (Battle Code), early 1980s</span></div>
   </div>
 </div>
@@ -79,7 +79,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Slidex was the British answer to a problem every WWII army faced: how do you encrypt platoon-level radio traffic without giving every signaller a fragile machine? The answer was a small printed card with two sliding strips. The system was deliberately weak — it would not stop a serious cryptanalyst given a day of traffic — but it was meant to be robust against an opponent who needed the message <em>now</em>, in the next 30 minutes, before the gunfire moved.</p><p style="margin-top:1rem;">It was introduced to the British Army in 1943 for front-line use at platoon, troop and section level, and it outlived the war by decades, staying in service through the Cold War until BATCO arrived with the Clansman radio in the early 1980s. It did not, however, deliver even the modest security it promised: German units were reading it before the invasion of Europe.</p>
+      <p>Slidex provided a portable paper-based way to conceal short tactical messages. Its purpose was to delay an opponent’s reading of time-sensitive information, not to protect it indefinitely. The historical reports discussed below describe successes against particular traffic; they do not establish a universal thirty-minute protection interval or a fixed time to break every card.</p><p style="margin-top:1rem;">It was introduced to the British Army in 1943 for front-line use at platoon, troop and section level, and it outlived the war by decades, staying in service through the Cold War until BATCO arrived with the Clansman radio in the early 1980s. The postwar-interrogation summary cited below reports German successes against particular traffic before the invasion of Europe.</p>
     </div>
 
     <div class="panel">
@@ -99,7 +99,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Code-group frequency analysis</div><div class="attack-diff">Complexity: Routine — days of traffic suffice</div><p class="attack-desc">With the strips fixed for the day, Slidex is a substitution over just 204 code groups — and the vocabulary printed on the card is itself the frequency table. Recover a handful of the commonest entries and the rest of the grid falls out by position, because the cells are laid out in a fixed printed order. German interrogation reports collected after the war rated Slidex among the easiest Allied systems of 1944–45, with messages typically recovered within five or six hours of the start of transmission.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Operator habit and mixed plain text</div><div class="attack-diff">Complexity: Trivial when message templates are predictable</div><p class="attack-desc">Two habits did most of the damage. Signallers sent messages that mixed coded groups with plain language, handing the analyst a running crib; and they showed a marked preference for the left-hand starting positions of the strips, shrinking an already small keyspace. German units had been reading British Slidex since the Allied training exercises in Britain in late 1943 and early 1944 — before it was ever used in action. Slidex relied on the message being obsolete by the time the cipher was broken, not on resisting analysis.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Code-group frequency analysis</div><div class="attack-diff">Work depends on card, traffic volume and operator practice</div><p class="attack-desc">Repeated coordinates, a known or reconstructed vocabulary and predictable message formats could help analysts infer entries and settings. The cited account of postwar German interrogations reports readable Allied Slidex traffic in 1944–45 and typical delays of several hours. That is a reported operational result, not a timing guarantee for arbitrary ciphertext.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Operator habit and mixed plain text</div><div class="attack-diff">Mixed plaintext and repeated templates can provide cribs</div><p class="attack-desc">The cited interrogation summary identifies two exploitable habits. Signallers sent messages that mixed coded groups with plain language, handing the analyst a running crib; and they showed a marked preference for the left-hand starting positions of the strips, shrinking an already small keyspace. That summary reports readable British training traffic in late 1943 and early 1944. It does not establish the date of Slidex’s first combat use or a success rate for every network. Slidex relied on the message being obsolete by the time the cipher was broken, not on resisting analysis.</p></div></div>
     </div>
 
     <div class="panel">
@@ -131,7 +131,7 @@
             <tr><td>Origin</td><td>Royal Signals, United Kingdom</td></tr>
             <tr><td>Year</td><td>In service 1943 – early 1980s</td></tr>
             <tr><td>Mechanism</td><td>204-cell vocabulary card (12&times;17) + two sliding coordinate strips</td></tr>
-            <tr><td>Use</td><td>Tactical voice and morse traffic; never strategic</td></tr>
+            <tr><td>Use</td><td>Tactical voice and morse traffic; intended for tactical communications</td></tr>
             <tr><td>Successor</td><td>BATCO (Battle Code), early 1980s</td></tr>
           </tbody>
         </table>

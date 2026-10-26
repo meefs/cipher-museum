@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bible Code (ELS) — The Cipher Museum</title>
-  <meta name="description" content="The Bible Code — equidistant letter sequences (ELS) claimed to hide prophecies in the Hebrew scriptures. A rigorous statistical refutation by McKay et al. (1999) showed the same method finds identical 'predictions' in War and Peace and Moby-Dick.">
+  <meta name="description" content="The Bible Code — equidistant letter sequences (ELS) claimed to hide prophecies in the Hebrew scriptures. McKay et al. (1999) examined experimental flexibility; separate Moby-Dick counterexamples addressed popular prophecy claims.">
   <meta property="og:title" content="Bible Code (ELS) — The Cipher Museum">
   <meta property="og:description" content="Not a real cipher — a cautionary tale about applying pattern-finding to long texts and misreading probability. The Bible Code controversy and its statistical refutation.">
   <meta property="og:type" content="website">
@@ -104,13 +104,13 @@
     <span class="badge era-modern">1994 · Refuted 1999</span>
   </div>
   <h1 class="page-title">Bible Code — Equidistant Letter Sequences</h1>
-  <p class="page-tagline">Not a cipher — a lesson in probability. The same method finds the same "prophecies" in Moby-Dick.</p>
+  <p class="page-tagline">A lesson in probability: ELS counterexamples and experimental flexibility challenge claims of hidden prophecies.</p>
   <p class="exhibit-status-note">Statistical claims challenged by controlled counterexamples and analysis of selection flexibility.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Claimed by</span><span class="fact-value">Witztum, Rips &amp; Rosenberg (1994); Michael Drosnin (1997)</span></div>
     <div class="fact"><span class="fact-label">Method</span><span class="fact-value">Equidistant Letter Sequences (ELS) in Hebrew Torah text</span></div>
     <div class="fact"><span class="fact-label">Refuted by</span><span class="fact-value">McKay, Bar-Natan, Bar-Hillel &amp; Kalai — <em>Statistical Science</em> 14:150 (1999)</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">The law of large numbers always produces patterns — the question is whether they exceed expectation</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Searching many alternatives creates opportunities for chance matches; significance depends on the test and selection process</span></div>
   </div>
 </div>
 
@@ -125,9 +125,9 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
-        <p>In 1994 Israeli mathematicians Doron Witztum, Eliyahu Rips, and Yoav Rosenberg published a paper in <em>Statistical Science</em> claiming to find statistically significant equidistant letter sequences (ELS) in the Hebrew text of Genesis. They claimed that the names of famous medieval rabbis appeared encoded in the text at unusually short skip intervals, clustered near their dates of birth and death.</p>
+        <p>In 1994 Israeli mathematicians Doron Witztum, Eliyahu Rips, and Yoav Rosenberg published a paper in <em>Statistical Science</em> claiming to find statistically significant equidistant letter sequences (ELS) in the Hebrew text of Genesis. They claimed that names of famous rabbis and associated dates occurred unusually close together under their chosen ELS proximity measure.</p>
         <p style="margin-top:1rem;">The paper caused a sensation. In 1997 journalist Michael Drosnin published <em>The Bible Code</em>, extending the method to predict modern events — the assassination of Yitzhak Rabin (cited after the fact), the Gulf War, and others. Drosnin's challenge: "When my critics find a message about the assassination of a prime minister encrypted in <em>Moby-Dick</em>, I'll believe them."</p>
-        <p style="margin-top:1rem;">In 1997, mathematician Brendan McKay accepted the challenge. He found messages in the English text of <em>Moby-Dick</em> predicting the assassinations of Indira Gandhi, Yitzhak Rabin, John F. Kennedy, Robert F. Kennedy, Martin Luther King, Abraham Lincoln, and Leon Trotsky — all using Drosnin's exact method. The findings appeared in <em>Statistical Science</em> in 1999, co-authored with Dror Bar-Natan, Maya Bar-Hillel, and Gil Kalai. The original Witztum-Rips experiment was independently shown to depend entirely on a specific controversial list of rabbis; when an independent list was substituted, the effect disappeared entirely.</p>
+        <p style="margin-top:1rem;">Brendan McKay published <em>Moby-Dick</em> assassination-name examples in response to Drosnin’s popular challenge. This was distinct from the 1999 statistical paper by McKay, Bar-Natan, Bar-Hillel and Kalai, which examined the Genesis experiment’s data and design choices and reported unsuccessful new tests. Neither finding means that every text has the same matches.</p>
       </div>
     </div>
 
@@ -151,7 +151,7 @@ expected hits = 98,498,500 / 26⁴ ≈ 215.54.</pre>
     </div>
 
     <div class="panel">
-      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">The Refutation — Run It Yourself</span></div>
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">Explore ELS Matches and a Shuffled Control</span></div>
       <div class="panel-body">
         <p>The boxes compare a prose passage with a shuffled control containing the same letters. Their hit counts may differ. <strong>This comparison is an illustration, not a significance test or proof that the texts are statistically indistinguishable.</strong> A sound test needs a specified hypothesis, null model, search procedure, and accounting for all comparisons.</p>
 
@@ -191,14 +191,14 @@ expected hits = 98,498,500 / 26⁴ ≈ 215.54.</pre>
               <strong>Analytic expectation:</strong> searching for <strong id="els-word-display"></strong>
               in a text of <strong id="els-n-display"></strong> letters at skips 2–<strong id="els-maxskip-display"></strong>
               predicts approximately <strong id="els-expected-display"></strong> hits.
-              The Bible Code's "discovery" is arithmetic, not prophecy.
+              This expectation uses an idealized model; it is not a significance test.
             </div>
           </div>
         </div>
 
         <p style="font-size:.9rem;color:var(--tx3);margin:.75rem 0 0;font-style:italic;">
           Try target words: <code>EDEN</code>, <code>DEATH</code>, <code>WAR</code>, <code>KING</code>, <code>ASSASSIN</code>.
-          The hit count tracks nothing but word length and letter frequency: short common-letter words turn up again and again, longer ones never appear at all — and the random control behaves the same way. The "Bible Code" method gives you no way to distinguish these hits from noise.
+          Hit counts depend on the text, target and allowed skips. Longer words can occur, and prose can differ from its shuffled control. These observations require a specified statistical test; this widget does not supply one.
         </p>
       </div>
     </div>
@@ -208,8 +208,8 @@ expected hits = 98,498,500 / 26⁴ ≈ 215.54.</pre>
       <div class="panel-body">
         <div class="attack-panel">
           <div class="attack-name">Statistical Replication Test (McKay et al., 1999)</div>
-          <div class="attack-diff">Method: Exact replication in non-biblical texts</div>
-          <p class="attack-desc">McKay's team applied Drosnin's own method — identical parameters, identical search procedure — to Hebrew translations of <em>War and Peace</em> and to the English text of <em>Moby-Dick</em>. Both texts produced equally "remarkable" clusters of famous names near death dates. The original Witztum-Rips result also proved sensitive to which list of rabbis was used: the specific list in the 1994 paper was a version that had been informally optimised for the experiment over several years. When an independent scholar's list was substituted, the result vanished completely.</p>
+          <div class="attack-diff">Method: Examine experimental flexibility and attempt independent tests</div>
+          <p class="attack-desc">The 1999 paper examines choices in the Genesis experiment. Its §6 demonstrates how changing permissible rabbinical names and spellings can produce a strong-looking result in a Hebrew <em>War and Peace</em> passage while weakening the Genesis result. It is a demonstration of selection flexibility, not an identical search using an unchanged list in both books. The separate <em>Moby-Dick</em> examples address Drosnin’s popular interpretation.</p>
         </div>
         <div class="attack-panel" style="margin-top:1rem;">
           <div class="attack-name">The Multiplicity Problem (searching for significance)</div>
@@ -234,15 +234,15 @@ expected hits = 98,498,500 / 26⁴ ≈ 215.54.</pre>
               <td><strong>Distinguisher attacks:</strong> a valid linear or differential distinguisher requires showing the bias in the cipher is <em>greater than expected from a random permutation</em>, not merely that a bias exists</td>
             </tr>
             <tr>
-              <td>The "remarkable" result depended on a specific optimised dataset the authors had adjusted over years</td>
+              <td>Unaccounted flexibility in selecting names, spellings and tests can change reported significance</td>
               <td><strong>Chosen-input bias:</strong> choosing a dataset after inspecting results can invalidate a test’s stated significance</td>
             </tr>
             <tr>
-              <td>Short ciphertext + flexible parameters = near-certain matching</td>
-              <td><strong>Over-parameterised models find anything:</strong> a cipher analysis with enough free parameters can "fit" any plaintext hypothesis to any ciphertext — the same reason differential cryptanalysis requires strict key and round constraints</td>
+              <td>Short texts and flexible interpretation can permit competing readings</td>
+              <td>State the cipher model and constraints before judging a proposed decipherment; a plausible phrase alone does not identify the original message</td>
             </tr>
             <tr>
-              <td>Peer review passed the original claim; independent replication killed it</td>
+              <td>Publication and independent examination can reach different conclusions</td>
               <td><strong>Security proofs require adversarial review:</strong> a published claim still needs independent examination of its assumptions, evidence, and reproducibility; publication alone does not settle it</td>
             </tr>
           </tbody>
@@ -261,10 +261,10 @@ expected hits = 98,498,500 / 26⁴ ≈ 215.54.</pre>
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-columns"/></svg></span><span class="panel-title">Related Exhibits</span></div>
       <div class="panel-body">
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem;">
-          <li><a href="voynich.html" style="color:var(--gold);">Voynich Manuscript</a> — genuinely unsolved; statistical analysis has proved its letter distributions are unlike any known cipher or natural language</li>
+          <li><a href="voynich.html" style="color:var(--gold);">Voynich Manuscript</a> — an undeciphered manuscript whose statistical properties constrain hypotheses without proving its language or cipher</li>
           <li><a href="beale.html" style="color:var(--gold);">Beale Ciphers</a> — another case where "finding" a partial decode via book cipher may be pattern-matching rather than cryptanalysis</li>
-          <li><a href="kryptos.html" style="color:var(--gold);">Kryptos</a> — four panels, three solved; the fourth is a genuine open problem, not a statistical artefact</li>
-          <li><a href="caesar.html" style="color:var(--gold);">Caesar Cipher</a> — chi-squared scoring is the correct way to distinguish signal from noise in a short substitution cipher</li>
+          <li><a href="kryptos.html" style="color:var(--gold);">Kryptos</a> — K1–K3 publicly solved; K4 plaintext was recovered from archival papers in 2025, distinct from public cryptanalytic reconstruction</li>
+          <li><a href="caesar.html" style="color:var(--gold);">Caesar Cipher</a> — all shifts can be tested; statistical scores are heuristic, particularly for short text</li>
         </ul>
       </div>
     </div>
@@ -324,7 +324,7 @@ expected hits = 98,498,500 / 26⁴ ≈ 215.54.</pre>
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem;font-size:.88rem;color:var(--tx2);line-height:1.7;">
           <li><strong style="color:var(--gold);">The claim:</strong> Witztum, Rips &amp; Rosenberg — "Equidistant Letter Sequences in the Book of Genesis." <em>Statistical Science</em> 9:3 (1994), pp. 429–438.</li>
           <li><strong style="color:var(--gold);">The popular version:</strong> Michael Drosnin — <em>The Bible Code</em>. Simon &amp; Schuster, 1997. (<em>This exhibit is a direct response to this book's methodology and conclusions.</em>)</li>
-          <li><strong style="color:var(--gold);">The refutation:</strong> McKay, Bar-Natan, Bar-Hillel &amp; Kalai — "Solving the Bible Code Puzzle." <em>Statistical Science</em> 14:2 (1999), pp. 150–173. Freely available online.</li>
+          <li><strong style="color:var(--gold);">The refutation:</strong> McKay, Bar-Natan, Bar-Hillel &amp; Kalai — "Solving the Bible Code Puzzle." <em>Statistical Science</em> 14:2 (1999), pp. 150–173. <a href="https://users.cecs.anu.edu.au/~bdm/dilugim/StatSci/">Author’s research page and paper</a>.</li>
           <li><strong style="color:var(--gold);">Moby-Dick experiment:</strong> Brendan McKay's personal site preserves the analysis: <a href="https://users.cecs.anu.edu.au/~bdm/dilugim/moby.html" target="_blank" rel="noopener" style="color:var(--gold);">users.cecs.anu.edu.au/~bdm/dilugim/moby.html</a></li>
         </ul>
       </div>

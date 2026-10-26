@@ -66,10 +66,7 @@
 
   <div class="honesty">
     <strong>A model, held on purpose.</strong> No real function is a true random
-    oracle. But designing a scheme as if one exists, then instantiating it with
-    a strong hash like SHA-3, is how a huge fraction of deployed cryptography is
-    proven and built. This exhibit shows the two properties that make the fiction
-    hold up.
+    oracle. A random-oracle proof studies a complete scheme with access to an ideal random function. Replacing that oracle with a real hash is an additional design step, not an automatic transfer of the proof. The visible avalanche effect below is a much weaker property.
   </div>
 
   <section class="exhibit">
@@ -104,10 +101,7 @@
         mixer changes about <b>half</b>, unpredictably &#8212; that's the avalanche.
       </div>
       <div class="lab-hint">
-        <strong>Necessary, not sufficient.</strong> Avalanche is what a broken
-        hash <em>fails</em> to show, so it's a useful first look &#8212; but a
-        deliberately weak function can pass this eye test and still be trivial to
-        invert or collide. The toy mixer here is one of them. Seeing the
+        <strong>Not a security test.</strong> A broken hash can still show an avalanche effect. Even a deliberately weak function can pass this visual check while remaining easy to invert or collide. The toy mixer here is one of them. Seeing the
         scramble is not evidence of one-wayness; it only tells you the output
         isn't obviously tracking the input.
       </div>
@@ -125,8 +119,7 @@
     <div class="step-head"><span class="step-num">&#167;3</span><h2>From random oracle to signature</h2></div>
     <p>The Fiat&ndash;Shamir transform replaces the verifier's challenge with a hash of the commitment, public statement and required application context; a signature also binds its message. A proof in the random-oracle model treats that hash as an ideal random function. Correct transcript binding and the proof's assumptions matter, and substituting a real hash does not automatically transfer the proof.</p>
     <div class="pull">
-      Hash the message to get an unforgeable challenge, and an interactive proof
-      becomes a signature anyone can check.
+      A Fiat–Shamir signature binds the message and required transcript context into a hash-derived challenge. Unforgeability belongs to the complete construction under its stated assumptions; it is not a property of the challenge alone.
     </div>
   </section>
 

@@ -66,13 +66,13 @@
   </div>
   <h1 class="page-title">VIC Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--historical" href="../museum-map.html#trust-labels" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise." aria-label="Trust label: Historical Only. Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h11v12a2 2 0 0 0 2 2H6a3 3 0 0 1-3-3V7z"/><path d="M16 5a2 2 0 0 1 2 2v8h3a0 0 0 0 1 0 0v2a2 2 0 0 1-2 2"/></svg><span class="trust-label__text">Historical Only</span></a></div>
-  <p class="page-tagline">The most sophisticated hand cipher ever deployed in real espionage</p>
+  <p class="page-tagline">A complex Soviet hand-cipher procedure associated with the Hollow Nickel case</p>
   <p class="exhibit-status-note">Historical Soviet hand system; the key procedure became known through Häyhänen’s 1957 defection. No proof of unbreakability.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Soviet KGB</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1950s</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Straddling checkerboard + double transposition</span></div>
-    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Never broken by cryptanalysis — exposed by defector (1957)</span></div>
+    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Hollow Nickel message recovered with Häyhänen’s information in 1957</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Peak hand-cipher design principles</span></div>
   </div>
 </div>
@@ -84,24 +84,24 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The VIC cipher, used by Soviet spy Rudolf Abel in 1950s America, was never broken during his active service. It represents the absolute peak of hand cipher design — the most complex and secure pencil-and-paper cipher ever created.</p>
+      <p>The VIC tradition combines a straddling checkerboard, numerical key derivation and transposition. The Hollow Nickel case shows how a difficult cryptanalytic problem can become tractable after operational disclosure. It does not prove this cipher is the strongest hand system or immune to cryptanalysis.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The VIC cipher was used by Soviet spy Rudolf Abel (real name Willie Fisher) and his assistant Reino Häyhänen in the United States during the 1950s. When Häyhänen defected to the CIA in 1957, he revealed the cipher system. The NSA confirmed that no VIC-encrypted messages had been broken during the time Abel was active.</p><p style="margin-top:1rem;">The cipher's name comes from VICTOR — Reino Häyhänen's Moscow cryptonym. It represents the absolute peak of what hand cipher design achieved before electronic encryption took over.</p></div>
+      <div class="panel-body"><p>The cipher is associated with the Soviet espionage network involving Reino Häyhänen and the officer known as Rudolf Abel, William Fisher. The FBI’s history records unsuccessful work on a message found in a hollow nickel in 1953. Information from Häyhänen’s 1957 defection allowed laboratory analysts to recover its plaintext by 3 June 1957.</p><p style="margin-top:1rem;">Published descriptions of VIC and the museum’s simplified demonstration must be distinguished. The historical procedure used more elaborate key derivation and a disrupted second transposition. The demo uses a single keyword, merges J into I, adds a derived digit stream to its checkerboard output and applies two ordinary columnar transpositions. It is not interoperable with historical VIC traffic.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><pre>Step 1: Straddling checkerboard
+      <div class="panel-body"><p>The steps and diagram below describe the simplified browser model, not the historical disrupted-transposition procedure.</p><pre>Step 1: Straddling checkerboard
         High-frequency letters get 1-digit codes
         All others get 2-digit codes
         E=3, T=6, A=0, etc.
 
-Step 2: Chain addition key derivation
-        From a song lyric/date, derive
-        extended numeric keystream
+Step 2: Teaching-model keyed addition
+        From the keyword, derive a digit
+        stream and add it modulo ten
 
 Step 3: First transposition
         Apply columnar transposition
@@ -118,8 +118,8 @@ Result: Compact numeric ciphertext</pre>
   <text x="15" y="18" font-size="9" fill="#5AC8A0">1. STRADDLING CHECKERBOARD</text>
   <text x="15" y="32" font-size="8" fill="#B8B0A0">E=3 T=6 A=0 → freq letters: 1 digit | rare: 2 digits = compression</text>
   <rect x="5" y="48" width="370" height="35" fill="rgba(201,168,76,.06)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-  <text x="15" y="62" font-size="9" fill="#C9A84C">2. CHAIN ADDITION KEY</text>
-  <text x="15" y="76" font-size="8" fill="#B8B0A0">Song lyric + date → pseudo-random numeric keystream via chain addition</text>
+  <text x="15" y="62" font-size="9" fill="#C9A84C">2. TEACHING-MODEL KEYED ADDITION</text>
+  <text x="15" y="76" font-size="8" fill="#B8B0A0">Demo keyword → derived digit stream, added modulo ten</text>
   <rect x="5" y="92" width="370" height="35" fill="rgba(90,144,200,.06)" stroke="rgba(90,144,200,.2)" stroke-width="1"/>
   <text x="15" y="106" font-size="9" fill="#5A90C8">3. FIRST COLUMNAR TRANSPOSITION</text>
   <text x="15" y="120" font-size="8" fill="#B8B0A0">Reorder columns by derived key → scramble digit positions</text>
@@ -127,9 +127,9 @@ Result: Compact numeric ciphertext</pre>
   <text x="15" y="150" font-size="9" fill="#C85A5A">4. SECOND COLUMNAR TRANSPOSITION</text>
   <text x="15" y="164" font-size="8" fill="#B8B0A0">Different key → double transposition of already-scrambled digits</text>
   <rect x="5" y="180" width="370" height="16" fill="rgba(201,168,76,.08)" stroke="rgba(201,168,76,.2)" stroke-width=".5" rx="3"/>
-  <text x="15" y="192" font-size="8" fill="#C9A84C">Never broken by cryptanalysis — exposed only by defector Reino Hayhanen (1957)</text>
+  <text x="15" y="192" font-size="8" fill="#C9A84C">Häyhänen’s 1957 disclosures enabled the Hollow Nickel message to be read</text>
 </svg>
-<figcaption class="figure-caption">Four-layer process: encoding → keyed addition → transposition → transposition — resisted all NSA attacks</figcaption>
+<figcaption class="figure-caption">Demo process: encoding → keyed addition → transposition → transposition; a simplified model</figcaption>
 </figure>
         <div class="callout callout-info">
           <span class="callout-icon">ℹ️</span>
@@ -142,7 +142,7 @@ Result: Compact numeric ciphertext</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Exposed</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">The Cipher Was Never Broken</div><div class="attack-diff">Not applicable — broken by defector, not cryptanalysis</div><p class="attack-desc">The VIC cipher's combination of variable-length encoding (checkerboard), chain addition key derivation, and double transposition created a system that resisted all NSA cryptanalytic attacks during its operational period. The cipher was exposed only when Häyhänen defected in 1957. This is the spy's ultimate lesson: the strongest cipher fails to human betrayal, not mathematics.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">The Documented Recovery</div><div class="attack-diff">FBI account: defector information enabled recovery in 1957</div><p class="attack-desc">The documented Hollow Nickel recovery relied on information supplied by Häyhänen. That is narrower than a claim that every VIC message resisted every NSA attack. Cryptanalytic strength, an investigator’s access to keys and a simplified browser example are separate questions.</p></div></div>
     </div>
 
     <div class="panel">
@@ -152,8 +152,8 @@ Result: Compact numeric ciphertext</pre>
           <thead><tr><th>Concept from VIC Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Straddling checkerboard (variable length encoding)</td><td>Huffman coding in data compression; variable-length codes in modern protocols</td></tr>
 <tr><td>Chain addition key derivation</td><td>HKDF, PBKDF2: derive cryptographic keys from seed material</td></tr>
-<tr><td>Double transposition as final layer</td><td>Multiple cipher rounds in AES: each round adds security</td></tr>
-<tr><td>Exposed by defector, not cryptanalysis</td><td>Side-channel and operational security: math is not the weakest link</td></tr></tbody>
+<tr><td>Double transposition as final layer</td><td>Compare composition of operations; adding a round is not a general proof of security</td></tr>
+<tr><td>Exposed by defector, not cryptanalysis</td><td>Operational disclosure can expose a system independently of a ciphertext-only attack</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -174,7 +174,7 @@ Result: Compact numeric ciphertext</pre>
             <tr><td>Inventor</td><td>Soviet KGB</td></tr>
             <tr><td>Year</td><td>~1950s</td></tr>
             <tr><td>Key Type</td><td>Straddling checkerboard + double transposition</td></tr>
-            <tr><td>Broken By</td><td>Never broken by cryptanalysis — exposed by defector (1957)</td></tr>
+            <tr><td>Broken By</td><td>Hollow Nickel message recovered with Häyhänen’s information in 1957</td></tr>
           </tbody>
         </table>
       </div>
@@ -183,6 +183,8 @@ Result: Compact numeric ciphertext</pre>
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Federal Bureau of Investigation, <a href="https://www.fbi.gov/history/cases-and-criminals/hollow-nickel-rudolph-abel">“Hollow Nickel/Rudolf Abel”</a>, for the 1953 discovery and 1957 recovery. The historical case does not validate the security of the museum’s distinct teaching algorithm.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">
