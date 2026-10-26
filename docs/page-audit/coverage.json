@@ -25,7 +25,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "challenges.html",
@@ -50,7 +50,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "cipher-corpus.html",
@@ -76,7 +76,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "cipher-detective.html",
@@ -101,7 +101,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "cipher-flow.html",
@@ -127,7 +127,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/adfgvx.html",
@@ -155,7 +155,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/adfgx.html",
@@ -183,7 +183,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/aeneas-tacticus.html",
@@ -211,7 +211,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/aes.html",
@@ -241,7 +241,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "CNSA official indexed table supports AES256classification use; direct PDF403, no full-document review. Signal specification is not an inventory of every deployed client."
       ]
@@ -272,7 +272,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/agnes-driscoll.html",
@@ -301,7 +301,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Parker volume bibliographic metadata checked, not full volume; Johnson source inspection limited to the specified pages."
       ]
@@ -332,7 +332,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/amharic-ge-ez-ciphers.html",
@@ -362,7 +362,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/amsco.html",
@@ -390,7 +390,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/arabic-nomenclators.html",
@@ -418,7 +418,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/argenti.html",
@@ -446,7 +446,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/arnold-andre.html",
@@ -475,7 +475,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/atbash.html",
@@ -503,7 +503,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/autokey.html",
@@ -531,7 +531,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/babington.html",
@@ -557,7 +557,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/bach-motif.html",
@@ -583,7 +583,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/bacon.html",
@@ -611,7 +611,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/bazeries.html",
@@ -640,7 +640,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/beale.html",
@@ -668,7 +668,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/beaufort.html",
@@ -697,7 +697,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/beurling.html",
@@ -726,7 +726,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/bible-code.html",
@@ -755,7 +755,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/bifid.html",
@@ -784,7 +784,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/bill-tutte.html",
@@ -813,7 +813,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/bletchley-park.html",
@@ -843,7 +843,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Early Days episode description read, not full audio; war-shortening counterfactual not a measured outcome."
       ]
@@ -874,7 +874,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/book-cipher.html",
@@ -900,7 +900,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/cabinet-noir.html",
@@ -928,7 +928,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/caesar.html",
@@ -956,7 +956,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/cardano-autokey.html",
@@ -984,7 +984,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/cardano-grille.html",
@@ -1012,7 +1012,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/chaocipher.html",
@@ -1040,7 +1040,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/che-guevara.html",
@@ -1066,7 +1066,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/chinese-telegraph.html",
@@ -1097,7 +1097,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/cicada-3301.html",
@@ -1125,7 +1125,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/colossus.html",
@@ -1153,7 +1153,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/columnar.html",
@@ -1182,7 +1182,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/commercial-codebooks.html",
@@ -1211,7 +1211,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/confederate-vigenere.html",
@@ -1239,7 +1239,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/copiale.html",
@@ -1268,7 +1268,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/culper-ring.html",
@@ -1296,7 +1296,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/da-vinci-code.html",
@@ -1322,7 +1322,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/dagapeyeff.html",
@@ -1350,7 +1350,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/dancing-men.html",
@@ -1376,7 +1376,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/des.html",
@@ -1404,7 +1404,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/diana-cryptosystem.html",
@@ -1433,7 +1433,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "No local Boak primary text available; exact service dates and deployment/origin claims are not established and are no longer asserted. Technical table arithmetic is not evidence of operational use."
       ],
@@ -1468,7 +1468,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/diffie-hellman.html",
@@ -1497,7 +1497,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/dilly-knox.html",
@@ -1525,7 +1525,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/dorabella.html",
@@ -1554,7 +1554,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/double-playfair.html",
@@ -1582,7 +1582,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/double-transposition.html",
@@ -1608,7 +1608,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/dunin.html",
@@ -1639,7 +1639,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/ecdsa.html",
@@ -1665,7 +1665,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/egyptian-substitution.html",
@@ -1693,7 +1693,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/elizebeth-friedman.html",
@@ -1721,7 +1721,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/enigma.html",
@@ -1750,7 +1750,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "generated_card_review": {
         "reader": "root",
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
@@ -1784,7 +1784,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/field-hollers.html",
@@ -1813,7 +1813,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/four-square.html",
@@ -1841,7 +1841,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/fractionated-morse.html",
@@ -1869,7 +1869,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/freemason-pigpen.html",
@@ -1897,7 +1897,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/gchq-trio.html",
@@ -1926,7 +1926,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/geheimschreiber.html",
@@ -1955,7 +1955,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Exact historical T52 variant control paths have not been verified against a technical manual; the two-bank26-letter widget remains an explicitly different model."
       ]
@@ -1988,7 +1988,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/gravity-falls.html",
@@ -2019,7 +2019,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/great-cipher.html",
@@ -2047,7 +2047,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/gronsfeld.html",
@@ -2075,7 +2075,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/hagelin-c36.html",
@@ -2105,7 +2105,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Greenough full paper not read; only publisher abstract/bibliographic scope supports wheel-subset/order/pin recovery. No universal data/runtime claim verified."
       ]
@@ -2138,7 +2138,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/histiaeus-tattoo.html",
@@ -2166,7 +2166,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/homophonic.html",
@@ -2195,7 +2195,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/ira-ciphers.html",
@@ -2225,7 +2225,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/jefferson-disk.html",
@@ -2253,7 +2253,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/jn-25.html",
@@ -2281,7 +2281,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/joan-clarke.html",
@@ -2311,7 +2311,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/kahn.html",
@@ -2340,7 +2340,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/kama-sutra.html",
@@ -2368,7 +2368,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/kerckhoffs.html",
@@ -2397,7 +2397,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/kl-7.html",
@@ -2427,7 +2427,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/kryha.html",
@@ -2455,7 +2455,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/krypto-arg.html",
@@ -2481,7 +2481,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/kryptos.html",
@@ -2517,7 +2517,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Bauer–Link–Molle full paper inaccessible; conjecture attribution only. Sanborn World Clock clue read through secondary quotation; original letter403. Paradigm verifier is an operator account, not an independent audit."
       ]
@@ -2548,7 +2548,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/latin-american-codebooks.html",
@@ -2576,7 +2576,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/leo-marks.html",
@@ -2604,7 +2604,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/lorenz.html",
@@ -2632,7 +2632,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "generated_card_review": {
         "reader": "root",
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
@@ -2663,7 +2663,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/m209.html",
@@ -2694,7 +2694,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/mary-stuart-castelnau-letters.html",
@@ -2720,7 +2720,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/mavis-batey.html",
@@ -2750,7 +2750,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Churchill archive account inspected; linked original participant sheets were not separately read."
       ]
@@ -2781,7 +2781,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/microdot.html",
@@ -2810,7 +2810,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/mit-mystery-hunt.html",
@@ -2838,7 +2838,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/monoalphabetic.html",
@@ -2866,7 +2866,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/morse.html",
@@ -2894,7 +2894,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/myszkowski.html",
@@ -2920,7 +2920,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/national-treasure.html",
@@ -2948,7 +2948,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/navajo-code-talkers.html",
@@ -2981,7 +2981,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/nema.html",
@@ -3009,7 +3009,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/nfc-deployment.html",
@@ -3037,7 +3037,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/nihilist.html",
@@ -3065,7 +3065,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/nomenclator.html",
@@ -3093,7 +3093,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/null-cipher.html",
@@ -3119,7 +3119,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/one-time-pad.html",
@@ -3148,7 +3148,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/patterson-jefferson-cipher.html",
@@ -3178,7 +3178,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Full Smithline article unavailable; attack scoring details removed. Weber/Tomokiyo support the stated historical/reconstruction scope, not a newly verified full2007attack."
       ]
@@ -3210,7 +3210,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Holding-museum full page inaccessible; indexed result not treated as complete reading. Counts/read direction do not identify language or decipherment."
       ]
@@ -3241,7 +3241,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/playfair.html",
@@ -3269,7 +3269,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/polybius.html",
@@ -3297,7 +3297,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/porta.html",
@@ -3326,7 +3326,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/purple.html",
@@ -3352,7 +3352,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/rail-fence.html",
@@ -3378,7 +3378,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/red-army-faction.html",
@@ -3406,7 +3406,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/red-type-a.html",
@@ -3432,7 +3432,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/rochefort.html",
@@ -3464,7 +3464,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/rosetta-stone.html",
@@ -3490,7 +3490,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/rot13.html",
@@ -3518,7 +3518,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/rs44.html",
@@ -3546,7 +3546,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/rsa.html",
@@ -3574,7 +3574,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/running-key.html",
@@ -3600,7 +3600,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/sator-square.html",
@@ -3628,7 +3628,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/scytale.html",
@@ -3656,7 +3656,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/sha256.html",
@@ -3682,7 +3682,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "generated_card_review": {
         "reader": "root",
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
@@ -3715,7 +3715,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "generated_card_review": {
         "reader": "root",
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
@@ -3748,7 +3748,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/sigaba.html",
@@ -3774,7 +3774,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/sigsaly.html",
@@ -3804,7 +3804,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Earlier SIGSALY Story PDF inaccessible; separate NSA SIGSALY brochure pp.3–10 was read. The two source-access states must not be conflated."
       ]
@@ -3835,7 +3835,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/sodark.html",
@@ -3863,7 +3863,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/solitaire.html",
@@ -3893,7 +3893,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "generated_card_review": {
         "reader": "root",
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
@@ -3926,7 +3926,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/stager.html",
@@ -3954,7 +3954,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/station-hypo.html",
@@ -3983,7 +3983,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/straddling-checkerboard.html",
@@ -4009,7 +4009,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/tap-code.html",
@@ -4037,7 +4037,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Harris interview description read; complete interview not listened to. Supports teaching/revival, not invention."
       ]
@@ -4069,7 +4069,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/trithemius.html",
@@ -4097,7 +4097,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/turning-grille.html",
@@ -4125,7 +4125,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/two-square.html",
@@ -4151,7 +4151,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/typex.html",
@@ -4179,7 +4179,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/ua-8295.html",
@@ -4207,7 +4207,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Primary abstract/metadata only: full PDF returned403. No experimental/table, implementation or detailed forensic validation claimed."
       ],
@@ -4246,7 +4246,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Cairncross source indexed excerpt only; full page403 and original file not examined. Benson and SIGTOT/5-UCO sources inspected only at ledger-specified passages."
       ]
@@ -4278,7 +4278,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "generated_card_review": {
         "reader": "root",
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
@@ -4311,7 +4311,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/vietnamese-underground.html",
@@ -4337,7 +4337,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Essential Matters passage has not been fully inspected; no particular historical field cipher or traffic break is established."
       ]
@@ -4369,7 +4369,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/voynich.html",
@@ -4403,7 +4403,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/wadsworth-cipher.html",
@@ -4433,7 +4433,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Kaeding paper abstract/metadata only; full PDF unavailable. Historical operation not established and precise model not authenticated by the abstract."
       ]
@@ -4464,7 +4464,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/wheatstone.html",
@@ -4493,7 +4493,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Kaeding paper abstract/metadata only; full PDF unavailable. Museum equal-dial model is explicitly limited."
       ]
@@ -4524,7 +4524,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/zero-knowledge-proofs.html",
@@ -4553,7 +4553,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/zimmermann.html",
@@ -4583,7 +4583,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "ciphers/zodiac.html",
@@ -4611,7 +4611,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "community/index.html",
@@ -4636,7 +4636,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "comparison.html",
@@ -4663,7 +4663,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "cryptanalysis.html",
@@ -4695,7 +4695,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "embed.html",
@@ -4721,7 +4721,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "further-reading.html",
@@ -4755,7 +4755,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "glossary.html",
@@ -4788,7 +4788,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/closest-vector.html",
@@ -4816,7 +4816,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/elliptic-curves-real.html",
@@ -4843,7 +4843,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/entropy.html",
@@ -4870,7 +4870,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/euler-fermat.html",
@@ -4897,7 +4897,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/finite-fields.html",
@@ -4924,7 +4924,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/group-theory.html",
@@ -4951,7 +4951,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/index.html",
@@ -4979,7 +4979,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/interpolation.html",
@@ -5006,7 +5006,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/lattices-svp.html",
@@ -5034,7 +5034,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/learning-with-errors.html",
@@ -5062,7 +5062,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/modular-arithmetic.html",
@@ -5089,7 +5089,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/modularity-exhibit.html",
@@ -5116,7 +5116,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "Publication metadata and theorem statements checked; full proofs not independently verified."
       ]
@@ -5146,7 +5146,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/pairings.html",
@@ -5173,7 +5173,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/polynomial-rings.html",
@@ -5201,7 +5201,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/prime-number-theorem.html",
@@ -5228,7 +5228,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/random-oracle.html",
@@ -5255,7 +5255,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "hall-of-foundations/reduction.html",
@@ -5282,7 +5282,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/ancient.html",
@@ -5308,7 +5308,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/civil-war.html",
@@ -5334,7 +5334,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/codebreakers.html",
@@ -5360,7 +5360,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/culture.html",
@@ -5386,7 +5386,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/machines.html",
@@ -5412,7 +5412,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/military.html",
@@ -5438,7 +5438,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/modern-crypto.html",
@@ -5464,7 +5464,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/polyalphabetic.html",
@@ -5490,7 +5490,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/puzzle.html",
@@ -5516,7 +5516,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/substitution.html",
@@ -5542,7 +5542,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/transposition.html",
@@ -5568,7 +5568,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "halls/unbreakable.html",
@@ -5594,7 +5594,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "generated_card_review": {
         "reader": "root",
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
@@ -5625,7 +5625,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "index.html",
@@ -5653,7 +5653,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "lab/decipherment-cases.html",
@@ -5678,7 +5678,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "lab/evidence-workbench.html",
@@ -5703,7 +5703,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "lab/modern-attack-evidence.html",
@@ -5733,7 +5733,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately.",
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
       "remaining_evidence_limits": [
         "GEA full PDF returned403; abstract/institutional record supports publication and controlled experiment only. GPU extrapolation, collection costs and TMTO preprocessing remain distinct from measured rates. Conditional-DES79runs did not execute79full key searches."
       ]
@@ -5761,7 +5761,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "learn.html",
@@ -5791,7 +5791,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "modern.html",
@@ -5820,7 +5820,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "museum-map.html",
@@ -5846,7 +5846,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "my-path.html",
@@ -5872,7 +5872,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "offline.html",
@@ -5898,7 +5898,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "popular-culture-survey.html",
@@ -5926,7 +5926,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "public/reports/benchmark-baselines.html",
@@ -5952,7 +5952,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "search.html",
@@ -5978,7 +5978,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "teaching.html",
@@ -6004,7 +6004,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "timeline.html",
@@ -6036,7 +6036,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "tours/index.html",
@@ -6062,7 +6062,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
       "path": "tours/tour.html",
@@ -6088,7 +6088,7 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Complete npm test,214-page HTML lint,6501-link check and final browser checks passed; deployment tracked separately."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     }
   ],
   "checkpoint": {
@@ -6096,14 +6096,17 @@
     "static_pages_read": 214,
     "html_pages_with_prepared_corrections": 200,
     "completed": true,
-    "merged": false,
-    "deployed": false,
+    "merged": true,
+    "deployed": true,
     "final_prose_reviews_complete": 214,
     "final_prose_review_confirmation_pending": [],
     "final_browser_validation": "428/428 desktop/mobile page loads passed, with zero recorded script errors or document overflow",
-    "release_validation": "Complete local release checks passed; GitHub CI/merge/deployment pending",
+    "release_validation": "Complete local and GitHub CI checks passed; Pages deployment succeeded;26sampled live files match reviewed bytes.",
     "generated_card_semantic_review": "Verified post-build: corrected UA abstract-only boundary, Enigma/Lorenz/Solitaire/Vernam classifications, SHA256length, Shamirconditions and DIANA scope.",
     "coverage_hashes": "SHA-256 refreshed after final metadata generation",
-    "local_checks_complete": true
+    "local_checks_complete": true,
+    "release_commit": "bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4",
+    "release_workflow": "https://github.com/systemslibrarian/cipher-museum/actions/runs/40401756569",
+    "live_verification": "docs/page-audit/live-verification.json"
   }
 }

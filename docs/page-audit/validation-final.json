@@ -26,8 +26,12 @@
     "independent_high_IC_Vigenere_counterexample": "passed",
     "engine_mutation_and_complexity_canaries": "passed in integration run"
   },
-  "merge": "pending",
-  "deployment": "pending",
+  "merge": "PR13 merged after successful final-head CI",
+  "deployment": {
+    "status": "success",
+    "workflow": "https://github.com/systemslibrarian/cipher-museum/actions/runs/40401756569",
+    "commit": "bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+  },
   "limitations": [
     "Browser external requests blocked; no external-link availability certification.",
     "Source coverage is passage-specific; bibliography does not establish whole-book reading.",
@@ -35,5 +39,18 @@
   ],
   "local_links": "6501 links across214 pages passed",
   "reviewed_change_save": "final PR13 checkpoint",
-  "npm_test_suites": 63
+  "npm_test_suites": 63,
+  "reviewed_commit": "2ad958e839f688a1cd4cf72d883b2dbd31efd295",
+  "release_commit": "bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4",
+  "github_pr_ci": {
+    "status": "success",
+    "workflow": "https://github.com/systemslibrarian/cipher-museum/actions/runs/40400989783"
+  },
+  "live_verification": {
+    "checked": 26,
+    "matched": 26,
+    "evidence": "docs/page-audit/live-verification.json",
+    "verified_at_utc": "2026-10-26T21:14:37.293490+00:00"
+  },
+  "completion_record": "Documentation-only follow-up; site/source bytes unchanged"
 }

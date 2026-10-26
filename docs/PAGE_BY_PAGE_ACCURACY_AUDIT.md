@@ -1,6 +1,6 @@
 # Cipher Museum page-by-page accuracy audit
 
-**Content review and local release validation complete; merge and deployment pending.** Review date: 26 October 2026. Baseline: `15efc4402155a35a1b455c9fcb5ba0f507e96d6e`. Changes: [PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13). The [67-item tracker](ACCURACY_REVIEW_PROGRESS.md) is the authoritative release checklist.
+**Review complete: merged, deployed and verified live.** Review date: 26 October 2026. Baseline: `15efc4402155a35a1b455c9fcb5ba0f507e96d6e`. Changes: [PR #13](https://github.com/systemslibrarian/cipher-museum/pull/13). The [67-item tracker](ACCURACY_REVIEW_PROGRESS.md) is the authoritative release checklist.
 
 All **214 public HTML pages** received an initial reading and a final consistency reread. **200 HTML pages** have changes relative to the baseline, alongside shared scripts, references, generated cards and search metadata. The inventory includes 155 cipher/context/research pages, 18 foundation pages, 13 hall pages and 28 other public pages. These are page counts, distinct from the 172 numbered exhibits and 88 registered engines.
 
@@ -26,7 +26,7 @@ The final local browser sweep loaded every page at 1280px and 390px: **428 check
 - [Public-claim guards](../tests/test-page-audit-claims.js): 35 checks reject 35 deliberately restored errors.
 - [Navigation regression checks](../tests/test-navigation-audit.js) and [rendered book-reference checks](../tests/test-book-source-links.js).
 
-All intended counts, trust labels, search entries, artifact cards and minified bundles were regenerated. The first integration suite found a stale search index while the last DIANA correction was being integrated. Regeneration resolved that state. The fresh complete `npm test` run passed all 63 suites; HTMLHint passed all 214 pages; all 6501 local links passed; release metadata validation passed. Final merge/deployment and live verification remain tracked separately and are not claimed here yet.
+All intended counts, trust labels, search entries, artifact cards and minified bundles were regenerated. The first integration suite found a stale search index while the last DIANA correction was being integrated. Regeneration resolved that state. The fresh complete `npm test` run passed all 63 suites; HTMLHint passed all 214 pages; all 6501 local links passed; release metadata validation passed. PR #13 merged as `bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4`. [Main-branch CI and GitHub Pages deployment](https://github.com/systemslibrarian/cipher-museum/actions/runs/40401756569) passed. The [live verification record](page-audit/live-verification.json) confirms 26 representative pages and shared files match the reviewed release byte for byte. All 67 tracker items are complete.
 
 ## Evidence limits retained
 

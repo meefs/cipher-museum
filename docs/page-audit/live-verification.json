@@ -1,0 +1,217 @@
+{
+  "verified_at_utc": "2026-10-26T21:14:37.293490+00:00",
+  "release_commit": "bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4",
+  "site": "https://ciphermuseum.com/",
+  "scope": "Representative public pages and shared assets compared byte-for-byte with the reviewed working tree; the full214page desktop/mobile audit was local. Cache-busting query used.",
+  "checks": [
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "eb0b1e31d61531c71f80229b2bea2423cc440e3506b2323adce4d4d2b0a5ef17",
+      "expected_sha256": "eb0b1e31d61531c71f80229b2bea2423cc440e3506b2323adce4d4d2b0a5ef17",
+      "url": "https://ciphermuseum.com/index.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "cryptanalysis.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "be97a48cfa12b8824fc684c18181f95233b2ac4a5ec950b0aa0484e57ad4c6ea",
+      "expected_sha256": "be97a48cfa12b8824fc684c18181f95233b2ac4a5ec950b0aa0484e57ad4c6ea",
+      "url": "https://ciphermuseum.com/cryptanalysis.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "cipher-detective.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "427cfc8eb09e4a82a3dc2c6636c593bcba67072de0c15c00c07a84f7984bafc6",
+      "expected_sha256": "427cfc8eb09e4a82a3dc2c6636c593bcba67072de0c15c00c07a84f7984bafc6",
+      "url": "https://ciphermuseum.com/cipher-detective.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "glossary.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "4cce04e36500c992e90bd84054d4e1c21b7711c28d5d47a24c4dbd2d507f1638",
+      "expected_sha256": "4cce04e36500c992e90bd84054d4e1c21b7711c28d5d47a24c4dbd2d507f1638",
+      "url": "https://ciphermuseum.com/glossary.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "museum-map.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "2f5e77993c4da440aecefac6a201cdbf1dbac4fa60590117885f6fb5b4228ed3",
+      "expected_sha256": "2f5e77993c4da440aecefac6a201cdbf1dbac4fa60590117885f6fb5b4228ed3",
+      "url": "https://ciphermuseum.com/museum-map.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "further-reading.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "e430fad96ee25fb529cccdbec946f42bea4d4b6232cd9e07b059d5e5d4437899",
+      "expected_sha256": "e430fad96ee25fb529cccdbec946f42bea4d4b6232cd9e07b059d5e5d4437899",
+      "url": "https://ciphermuseum.com/further-reading.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "popular-culture-survey.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "42c53fa9e4bfb6105c0b03ad6e1d4629b74cacb157bbb41abe595264d9d7b5c3",
+      "expected_sha256": "42c53fa9e4bfb6105c0b03ad6e1d4629b74cacb157bbb41abe595264d9d7b5c3",
+      "url": "https://ciphermuseum.com/popular-culture-survey.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "embed.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "9ecc87b93b5801a1b08f6e3b8997248e1780103ec1da37d96984d5dfd43bfa26",
+      "expected_sha256": "9ecc87b93b5801a1b08f6e3b8997248e1780103ec1da37d96984d5dfd43bfa26",
+      "url": "https://ciphermuseum.com/embed.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "teaching.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "39cd0346e91abb62615553662cff8f2172e4ca0c72ec203ff76384fe2abbb888",
+      "expected_sha256": "39cd0346e91abb62615553662cff8f2172e4ca0c72ec203ff76384fe2abbb888",
+      "url": "https://ciphermuseum.com/teaching.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "timeline.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "b4efed8bcf6ac75b5c5738d50ddd5cdb8eda52eed3f244f390d4dcdf833b7dc6",
+      "expected_sha256": "b4efed8bcf6ac75b5c5738d50ddd5cdb8eda52eed3f244f390d4dcdf833b7dc6",
+      "url": "https://ciphermuseum.com/timeline.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "ciphers/enigma.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "fcb5ca7fb9176cc03153a92557aaeef2a9b586b74b1f0b2b9ad786b7a07ba210",
+      "expected_sha256": "fcb5ca7fb9176cc03153a92557aaeef2a9b586b74b1f0b2b9ad786b7a07ba210",
+      "url": "https://ciphermuseum.com/ciphers/enigma.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "ciphers/rosetta-stone.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "ac40984da9269a5cc37d86478c3b868cc48f7ced4b6dcc28354fe2476e426924",
+      "expected_sha256": "ac40984da9269a5cc37d86478c3b868cc48f7ced4b6dcc28354fe2476e426924",
+      "url": "https://ciphermuseum.com/ciphers/rosetta-stone.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "ciphers/diana-cryptosystem.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "c975d5fafa4b1b183a089962316c8bd555221c57ee517ee8c5285345dd58783a",
+      "expected_sha256": "c975d5fafa4b1b183a089962316c8bd555221c57ee517ee8c5285345dd58783a",
+      "url": "https://ciphermuseum.com/ciphers/diana-cryptosystem.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "ciphers/nfc-deployment.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "3354093dd61b3753d80a17c3cfafae6de5fd1ddc6f6b8e8f5302fd7e016c05b8",
+      "expected_sha256": "3354093dd61b3753d80a17c3cfafae6de5fd1ddc6f6b8e8f5302fd7e016c05b8",
+      "url": "https://ciphermuseum.com/ciphers/nfc-deployment.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "ciphers/sodark.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "a3ac725d120df825d652e0f1f0e421fa55d0603ff9b996e78f0549f4d7aa85e5",
+      "expected_sha256": "a3ac725d120df825d652e0f1f0e421fa55d0603ff9b996e78f0549f4d7aa85e5",
+      "url": "https://ciphermuseum.com/ciphers/sodark.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "ciphers/ua-8295.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "34d7db11418101403181d0a7c0ada838ab5afeb4288933c91306a19312a58fb1",
+      "expected_sha256": "34d7db11418101403181d0a7c0ada838ab5afeb4288933c91306a19312a58fb1",
+      "url": "https://ciphermuseum.com/ciphers/ua-8295.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "hall-of-foundations/learning-with-errors.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "d7c6a6e00d410ca67d5f984f73970d4e98e82cda6b06b872afbbdd3fa82b5fec",
+      "expected_sha256": "d7c6a6e00d410ca67d5f984f73970d4e98e82cda6b06b872afbbdd3fa82b5fec",
+      "url": "https://ciphermuseum.com/hall-of-foundations/learning-with-errors.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "lab/modern-attack-evidence.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "b8c3e8c60a70836f999853ccc8e9545190e52c6b32a6d0c3abe6e873eb0fa4fb",
+      "expected_sha256": "b8c3e8c60a70836f999853ccc8e9545190e52c6b32a6d0c3abe6e873eb0fa4fb",
+      "url": "https://ciphermuseum.com/lab/modern-attack-evidence.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "tours/tour.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "6163461ac9b96fb68ae1aac38e33ae5721023f5259936f891545217d5e2ec5b2",
+      "expected_sha256": "6163461ac9b96fb68ae1aac38e33ae5721023f5259936f891545217d5e2ec5b2",
+      "url": "https://ciphermuseum.com/tours/tour.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "public/reports/benchmark-baselines.html",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "10b14ab6de81ea6775dcde0bc77fbe34b44a0290f1338b082257df567844bd96",
+      "expected_sha256": "10b14ab6de81ea6775dcde0bc77fbe34b44a0290f1338b082257df567844bd96",
+      "url": "https://ciphermuseum.com/public/reports/benchmark-baselines.html?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "js/demo-loader.min.js",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "5179210f3c44a4747f46ca3cbcbdf04ebf3369e372df0b73fccc917127cbed17",
+      "expected_sha256": "5179210f3c44a4747f46ca3cbcbdf04ebf3369e372df0b73fccc917127cbed17",
+      "url": "https://ciphermuseum.com/js/demo-loader.min.js?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "js/artifact-cards-data.min.js",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "7476a7f0c6ac697bff8fc43e42cd6d96db4edc94d0d6f8c033bfc55367164598",
+      "expected_sha256": "7476a7f0c6ac697bff8fc43e42cd6d96db4edc94d0d6f8c033bfc55367164598",
+      "url": "https://ciphermuseum.com/js/artifact-cards-data.min.js?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "js/search-index.json",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "5e2e6b1e3bd8493005403ec74508306412217aa4f750730496ef57590c388e86",
+      "expected_sha256": "5e2e6b1e3bd8493005403ec74508306412217aa4f750730496ef57590c388e86",
+      "url": "https://ciphermuseum.com/js/search-index.json?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "js/detective/scoring.js",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "7ba0094e5385f87e5d40d5c0d11f664444dbce0b3ab981c406c7254064098265",
+      "expected_sha256": "7ba0094e5385f87e5d40d5c0d11f664444dbce0b3ab981c406c7254064098265",
+      "url": "https://ciphermuseum.com/js/detective/scoring.js?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "data/artifact-cards.json",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "ce5c573ce3557ab30c6bfc09914928b968f7752a0878e7616020a4b1761620be",
+      "expected_sha256": "ce5c573ce3557ab30c6bfc09914928b968f7752a0878e7616020a4b1761620be",
+      "url": "https://ciphermuseum.com/data/artifact-cards.json?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    },
+    {
+      "path": "sw.js",
+      "http_status": 200,
+      "matches_reviewed_bytes": true,
+      "sha256": "3181d40c34e26062d972467ce9a236fdc796eee0a4e36036995a1523f37edae0",
+      "expected_sha256": "3181d40c34e26062d972467ce9a236fdc796eee0a4e36036995a1523f37edae0",
+      "url": "https://ciphermuseum.com/sw.js?audit=bedb4d9d82b3ecbb54b198c2c7d191c7576d5fc4"
+    }
+  ],
+  "failures": []
+}
