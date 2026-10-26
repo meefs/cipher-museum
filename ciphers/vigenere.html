@@ -100,7 +100,7 @@
   </div>
   <h1 class="page-title">Vigenère Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">"Le chiffre indéchiffrable" — 300 years of misplaced confidence</p>
+  <p class="page-tagline">A repeating keyword hides simple frequencies but leaves periodic structure</p>
   <p class="exhibit-status-note">Babbage ~1854 · Kasiski 1863</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Described</span><span class="fact-value">1553 by Giovan Bellaso</span></div>
@@ -154,7 +154,7 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
         <p>Bellaso described a related keyword-controlled polyalphabetic system in 1553. The modern repeating-Caesar-table cipher bears Vigenère’s name, although Vigenère’s 1586 work also described an autokey method. These historical constructions should not all be treated as identical tables.</p>
-        <p style="margin-top:1rem;">It remained unbroken for nearly 300 years. Charles Babbage cracked it in the 1850s but kept his method secret. Friedrich Kasiski published independently in 1863, ending the myth forever.</p>
+        <p style="margin-top:1rem;">Babbage developed an attack in the 1850s; Kasiski published a general method in 1863. Those milestones do not establish that every earlier message remained unread or that the cipher enjoyed an uninterrupted 300-year security guarantee.</p>
         <div class="callout callout-mystery" style="margin-top:1.5rem;">
           <span class="callout-icon">⚔️</span>
           <div class="callout-body"><p><strong>Civil War use:</strong> Confederate communications used repeating-key polyalphabetic methods, with documented keywords including MANCHESTER BLUFF, COMPLETE VICTORY and COME RETRIBUTION. Kasiski’s publication was in 1863, after the war began; it is inaccurate to say adoption necessarily followed that public break.</p></div>
@@ -184,7 +184,7 @@ Plain:  A  T  T  A  C  K  A  T  D  A  W  N
 Cipher: L  X  F  O  P  V  E  F  R  N  H  R
 
 Formula: C = (P + K) mod 26</pre>
-        <p style="margin-top:1rem;">The same plaintext letter can encrypt differently at different key positions — A becomes L, then O, then E depending on which key letter is above it. This completely defeats simple frequency analysis.</p>
+        <p style="margin-top:1rem;">The same plaintext letter can encrypt differently at different key positions — A becomes L, then O, then E depending on which key letter is above it. This mixes several shifted frequency distributions. The combined counts can still contain clues, and positions sharing a key letter can be analysed together.</p>
 
         <!-- Tabula Recta -->
         <figure class="figure">
@@ -225,10 +225,10 @@ Formula: C = (P + K) mod 26</pre>
         <table class="cipher-table">
           <thead><tr><th>Vigenère Concept</th><th>Modern Evolution</th></tr></thead>
           <tbody>
-            <tr><td>Multiple alphabets (key-dependent shift)</td><td>Stream ciphers: ChaCha20 generates a different keystream byte for every position</td></tr>
-            <tr><td>Repeating key → detectable periodicity</td><td>Modern keystreams never repeat within a session (nonce + counter prevents this)</td></tr>
-            <tr><td>Key length determines security</td><td>AES-256 uses a 256-bit key — guessing it requires 2²⁵⁶ operations</td></tr>
-            <tr><td>XOR-equivalent operation</td><td>All modern stream ciphers use XOR: C = P ⊕ keystream</td></tr>
+            <tr><td>Multiple alphabets (key-dependent shift)</td><td>ChaCha20 derives a pseudorandom keystream from a key, nonce, and block counter; individual byte values naturally recur</td></tr>
+            <tr><td>Repeating key → detectable periodicity</td><td>Unique nonce/counter inputs prevent deliberate reuse of the same keystream block under a key, within the construction’s limits; this does not forbid repeated byte values</td></tr>
+            <tr><td>Key length determines security</td><td>A uniformly selected AES-256 key has 2²⁵⁶ possibilities; exhaustive search averages about 2²⁵⁵ trials</td></tr>
+            <tr><td>XOR-equivalent operation</td><td>Many modern stream ciphers combine bytes using XOR: C = P ⊕ keystream; Vigenère instead adds modulo 26</td></tr>
           </tbody>
         </table>
       </div>
@@ -295,7 +295,7 @@ Formula: C = (P + K) mod 26</pre>
         <span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-swords"/></svg></span><span class="panel-title" style="color:var(--gold);">Break This Cipher</span>
       </div>
       <div class="panel-body">
-        <p style="font-size:.85rem;margin-bottom:.75rem;">This is a real fragment from the Confederate Civil War cipher system. Key length: 15 letters.</p>
+        <p style="font-size:.85rem;margin-bottom:.75rem;">This is a constructed exercise using a historically documented Confederate keyword, not an authenticated wartime ciphertext. Key length: 15 letters.</p>
         <div style="font-family:var(--fm);font-size:.8rem;background:var(--s3);border-radius:var(--r);padding:.85rem;letter-spacing:.1em;color:var(--tx);word-break:break-all;line-height:1.8;">
           VVQECILMYMPM
         </div>
@@ -309,6 +309,8 @@ Formula: C = (P + K) mod 26</pre>
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading-title"><div class="panel-head"><h2 class="panel-title" id="audit-reading-title">Sources and Reading</h2></div><div class="panel-body"><p><em>Handbook of Applied Cryptography</em>, Alfred J. Menezes, Paul C. van Oorschot and Scott A. Vanstone (1997), §7.3.3, p.241: repeating-key arithmetic. <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, David Kahn (revised edition, 1996), “On the Origin of a Species”: Bellaso’s 1553 keyword-controlled system. The challenge ciphertext here was independently recalculated from its stated plaintext and key; that calculation does not authenticate wartime provenance.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

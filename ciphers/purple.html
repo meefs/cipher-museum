@@ -67,7 +67,7 @@
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Invented</span><span class="fact-value">1937 (Japanese Foreign Ministry)</span></div>
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Navy Technical Research Institute engineers, for the Foreign Ministry</span></div>
-    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Stepping-switch banks (6-vowel + 20-consonant split) plus daily key sheet</span></div>
+    <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Stepping-switch banks (sixes/twenties split) plus daily key sheet</span></div>
     <div class="fact"><span class="fact-label">Keyspace</span><span class="fact-value">~9.45×10³² settings (26! plugboard × 6 switch arrangements × 25⁴ starting positions)</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Frank Rowlett, Genevieve Grotjan &amp; the US SIS · 20 September 1940</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Distinct sub-ciphers per character class create exploitable structure</span></div>
@@ -88,7 +88,7 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
         <p>Purple replaced Red for important Japanese diplomatic traffic in 1939. It used telephone-type stepping switches rather than Enigma-style rotors. Its wiring separated six electrical paths from twenty others. With the external alphabet connections, these groups need not correspond to vowels and consonants; “sixes” and “twenties” are the more precise names.</p>
-        <p>William Friedman recruited Frank Rowlett to lead the cryptanalytic attack. The team had no machine, no diagram, and no defector — only ciphertext. For 18 months they hunted patterns in stepping cycles. On the afternoon of September 20, 1940, junior cryptanalyst Genevieve Grotjan brought Rowlett a worksheet with a recurring alignment in the consonant alphabet. Within weeks, the SIS had constructed a working analog of Purple from inference alone.</p>
+        <p>William Friedman recruited Frank Rowlett to lead the cryptanalytic attack. The team reconstructed the machine without possessing its hardware. Intercepts, repeated messages and known or inferred plaintext all helped the analysis. For 18 months they hunted patterns in stepping cycles. On the afternoon of September 20, 1940, junior cryptanalyst Genevieve Grotjan brought Rowlett a worksheet with a recurring alignment in the twenties. Within weeks, the SIS had constructed a working analog of Purple from inference alone.</p>
         <div class="callout callout-info">
           <span class="callout-icon">💡</span>
           <div class="callout-body">
@@ -118,7 +118,7 @@
         <div class="attack-panel">
           <div class="attack-name">Stepping-Switch Cycle Analysis</div>
           <div class="attack-diff">Complexity: Hard · Frank Rowlett, SIS · 1939–1940</div>
-          <p class="attack-desc">Rowlett's team treated the consonant bank's stepping cycle as the leverage point. By tabulating which ciphertext letters appeared in which positions across many intercepts, they reconstructed the stepping behavior without ever observing the hardware. The vowel bank, with only six letters, fell first — providing partial cribs that constrained the larger consonant problem.</p>
+          <p class="attack-desc">Rowlett's team treated the twenties bank's stepping cycle as the leverage point. By tabulating which ciphertext letters appeared in which positions across many intercepts, they reconstructed the stepping behavior without ever observing the hardware. The sixes bank fell first — providing partial cribs that constrained the larger twenties problem.</p>
         </div>
         <div class="attack-panel">
           <div class="attack-name">Pattern Recognition (Grotjan's Insight)</div>
@@ -169,7 +169,7 @@
             <tr><td>Era</td><td>World War II · 1939–1945</td></tr>
             <tr><td>Status</td><td>Broken (1940)</td></tr>
             <tr><td>Inventor</td><td>Japanese Foreign Ministry (Type 97)</td></tr>
-            <tr><td>Year</td><td>1937 (deployed) · 1939 (replaced Red)</td></tr>
+            <tr><td>Year</td><td>Type 97 design; diplomatic deployment from 1939</td></tr>
             <tr><td>Key Type</td><td>Stepping-switch banks + daily key sheet</td></tr>
             <tr><td>Broken By</td><td>Rowlett, Grotjan &amp; the US SIS</td></tr>
             <tr><td>Modern Lesson</td><td>Avoid per-class sub-ciphers</td></tr>

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T12:48:15.710Z",
+  "generatedAt": "2026-10-26T16:51:37.537Z",
   "totalExhibits": 155,
   "cards": {
     "adfgvx": {
@@ -35,7 +35,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Painvin and other Allied analysts used repeated traffic, statistics and transposition analysis in 1918.",
-      "modernLesson": "Substitution + transposition = modern cipher rounds"
+      "modernLesson": "Compare fractionation and transposition with modern round structures"
     },
     "aeneas-tacticus": {
       "name": "Aeneas Tacticus Water-Clock Signal Code",
@@ -173,7 +173,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Matteo and Marcello Argenti served as papal cryptanalysts to seven popes. Their Trattato in Cifra codified the homophonic-nomenclator pattern that dominated European diplomacy for two centuries.",
+      "keyIdea": "Giovanni Battista Argenti and his nephew Matteo documented papal nomenclators, homophones, nulls and cryptanalytic methods in Renaissance Italy.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -278,7 +278,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Pattern recognition · Statistical analysis of A/B distribution",
-      "modernLesson": "Binary encoding — direct ancestor of all digital data"
+      "modernLesson": "Two-symbol representation and steganography"
     },
     "bazeries": {
       "name": "Bazeries Cipher",
@@ -287,7 +287,7 @@
       "family": "Military and Field Ciphers",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
-      "keyType": "Numeric keyword (Polybius + transposition)",
+      "keyType": "Numeric key; substitution plus group reversal",
       "keyIdea": "Bazeries cylinder cipher — Etienne Bazeries' 1891 wheel cipher with 20 alphabet disks, an evolution later adopted by the US Army as the M-94 in 1922.",
       "trust": {
         "key": "broken",
@@ -352,10 +352,10 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "The Bible Code — equidistant letter sequences (ELS) claimed to hide prophecies in the Hebrew scriptures. A rigorous statistical refutation by McKay et al. (1999) showed the same method finds identical 'predictions' in War and Peace and Moby-Dick.",
+      "keyIdea": "The Bible Code — equidistant letter sequences (ELS) claimed to hide prophecies in the Hebrew scriptures. McKay et al. (1999) examined experimental flexibility; separate Moby-Dick counterexamples addressed popular prophecy claims.",
       "trust": null,
       "securityFailure": null,
-      "modernLesson": "The law of large numbers always produces patterns — the question is whether they exceed expectation"
+      "modernLesson": "Searching many alternatives creates opportunities for chance matches; significance depends on the test and selection process"
     },
     "bifid": {
       "name": "Bifid Cipher",
@@ -451,7 +451,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Shift (1–25)",
-      "keyIdea": "Caesar cipher — the simplest substitution cipher, used by Julius Caesar around 58 BC with a shift of 3. Broken by Al-Kindi's frequency analysis circa 850 AD.",
+      "keyIdea": "Caesar’s recorded shift of three, demonstrated on a modern alphabet. Exhaustive shift search is small; frequency analysis helps rank candidate plaintexts.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -461,7 +461,7 @@
       "modernLesson": "S-boxes in AES"
     },
     "cardano-autokey": {
-      "name": "Cardano Autokey 1550 · the original self-keying cipher",
+      "name": "Cardano Autokey 1550 historical idea · modern comparison model",
       "hall": "III",
       "era": "Italian Renaissance · 1550",
       "family": "Polyalphabetic",
@@ -509,7 +509,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Published key-recovery attacks by Lasry, Rubin, Kopal and Wacker (2016).",
-      "modernLesson": "Self-modifying ciphers can be strong with simple parts"
+      "modernLesson": "State evolution needs analysis under explicit attack conditions"
     },
     "che-guevara": {
       "name": "Che Guevara’s Checkerboard and Pad",
@@ -861,10 +861,10 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "The Khnumhotep II tomb inscription (~1900 BCE) — the world's earliest surviving instance of a deliberate substitution cipher, using unusual hieroglyph variants.",
+      "keyIdea": "Unusual hieroglyphic spellings in the tomb of Khnumhotep II, around 1900 BCE: an early example discussed in histories of cryptography, with uncertain intent.",
       "trust": null,
       "securityFailure": null,
-      "modernLesson": "The line between cipher, code, and ornament is older than writing itself"
+      "modernLesson": "Unusual writing does not by itself establish secret-key encryption"
     },
     "elizebeth-friedman": {
       "name": "Elizebeth Smith Friedman",
@@ -994,7 +994,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "The Siemens T52 “Sturgeon” — a German WWII teleprinter cipher with ten irregularly-clocked wheels feeding an additive keystream and a per-character permutation. Broken by Arne Beurling and the Swedish FRA in summer 1940.",
+      "keyIdea": "The Siemens T52 “Sturgeon” — a German WWII teleprinter cipher with ten wheels, with stepping that varied by model feeding an additive keystream and a per-character permutation. Broken by Arne Beurling and the Swedish Defence Staff’s cryptographic service in 1940.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1032,7 +1032,7 @@
     "great-cipher": {
       "name": "The Great Cipher",
       "hall": "II",
-      "era": "Baroque · ~1626",
+      "era": "Baroque · 17th century",
       "family": "Substitution",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
@@ -1112,7 +1112,7 @@
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Steganography (concealment)",
-      "modernLesson": "If a channel cannot be searched, the message does not need to be encrypted"
+      "modernLesson": "Concealment and encryption protect different properties"
     },
     "homophonic": {
       "name": "Homophonic Substitution",
@@ -1468,7 +1468,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "An annual three-day puzzle marathon at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.",
+      "keyIdea": "An annual puzzle hunt at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1476,12 +1476,12 @@
     "monoalphabetic": {
       "name": "Monoalphabetic Substitution",
       "hall": "II",
-      "era": "Medieval · ~800 AD",
+      "era": "Ancient roots · medieval cryptanalysis",
       "family": "Substitution",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Full alphabet permutation (26! keys)",
-      "keyIdea": "Monoalphabetic substitution — replace each letter with a fixed substitute. Foundation of all substitution ciphers; broken by Al-Kindi's frequency analysis ~850.",
+      "keyIdea": "Monoalphabetic substitution — replace each letter with a fixed substitute. A large keyspace can still leak language patterns; al-Kindi described frequency analysis in the ninth century.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1528,7 +1528,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "The 2004 Disney film National Treasure sent audiences hunting for cipher clues on the US dollar bill, the Liberty Bell, and Independence Hall — all real historical sites.",
+      "keyIdea": "The 2004 film National Treasure turns historical documents and landmarks into a fictional cipher hunt; its book clue uses the Silence Dogood letters.",
       "trust": null,
       "securityFailure": null,
       "modernLesson": "Security depends on design quality, key management, and implementation."
@@ -1753,7 +1753,7 @@
       "family": "Mechanical and Rotor Machines",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
-      "keyType": "Stepping-switch banks (6-vowel + 20-consonant split) plus daily key sheet",
+      "keyType": "Stepping-switch banks (sixes/twenties split) plus daily key sheet",
       "keyIdea": "Purple machine (1939) — Japan's Type 97 stepping-switch cipher for diplomatic traffic. Broken on 20 September 1940 by Frank Rowlett and the US Army SIS team.",
       "trust": {
         "key": "broken",
@@ -1805,7 +1805,7 @@
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
       "keyType": "Varies by system",
-      "keyIdea": "Red (Type A) (1930s) - the Japanese diplomatic stepping-switch predecessor to Purple and the cryptanalytic bridge to MAGIC.",
+      "keyIdea": "Red (Type A) (1930s) - the Japanese diplomatic half-rotor predecessor to Purple and the cryptanalytic bridge to MAGIC.",
       "trust": {
         "key": "broken",
         "text": "Broken",
@@ -1924,7 +1924,7 @@
     "scytale": {
       "name": "Scytale",
       "hall": "I",
-      "era": "Sparta · ~500 BC",
+      "era": "Ancient Sparta · interpretation debated",
       "family": "Ancient and Foundational Ciphers",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
@@ -2141,7 +2141,7 @@
     "tap-code": {
       "name": "Tap Code",
       "hall": "VIII",
-      "era": "Korean War · Vietnam War",
+      "era": "Vietnam War · earlier precedents",
       "family": "Puzzle and Cultural Ciphers",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",

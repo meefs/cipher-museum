@@ -60,7 +60,7 @@
   </div>
   <h1 class="page-title">SHA-256</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--secure" href="../museum-map.html#trust-labels" title="Still considered secure when used correctly with modern key handling." aria-label="Trust label: Secure (Modern). Still considered secure when used correctly with modern key handling."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span class="trust-label__text">Secure (Modern)</span></a></div>
-  <p class="page-tagline">A 256-bit fingerprint for any input &mdash; one-way, collision-resistant, and the verification engine of the digital world.</p>
+  <p class="page-tagline">A 256-bit digest for messages shorter than 2<sup>64</sup> bits &mdash; one-way, collision-resistant, and the verification engine of the digital world.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">NSA (designed); published by NIST as FIPS 180-2 in 2002</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">2002</span></div>
@@ -140,17 +140,17 @@
     <a href="../ciphers/aes.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">AES</span>
-      <span class="related-card__tag">Paired with SHA-256 for authenticated encryption (HMAC-SHA-256, AES-GCM)</span>
+      <span class="related-card__tag">AES-GCM authenticates using GHASH and AES, not HMAC-SHA-256</span>
     </a>
     <a href="../ciphers/rsa.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">RSA</span>
-      <span class="related-card__tag">RSA signatures sign a SHA-256 hash, never raw plaintext</span>
+      <span class="related-card__tag">Standard RSA signature schemes encode a message hash; SHA-256 is one supported hash</span>
     </a>
     <a href="../ciphers/diffie-hellman.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Diffie-Hellman</span>
-      <span class="related-card__tag">DH-derived secrets are typically run through SHA-256-based KDFs</span>
+      <span class="related-card__tag">DH-derived secrets need a suitable KDF; some protocols use HKDF with SHA-256</span>
     </a>
       <a href="../hall-of-foundations/random-oracle.html" class="related-card">
       <span class="related-card__number">&sect;154 &middot; Foundations</span>

@@ -66,7 +66,7 @@
   </div>
   <h1 class="page-title">Confederate Dictionary Code</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">Jefferson Davis's cipher that failed because generals owned different dictionaries</p>
+  <p class="page-tagline">Confederate dictionary codes: secrecy and interoperability depend on the shared reference</p>
   <p class="exhibit-status-note">Known dictionary + position lookup</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Jefferson Davis · Confederate War Department</span></div>
@@ -84,18 +84,17 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The Confederate dictionary code reveals the fundamental key distribution problem: when different commanders used different editions of the same dictionary, they couldn’t read each other’s messages — a lesson in why cryptographic standardization matters.</p>
+      <p>Dictionary codes require both parties to agree on the exact reference and indexing rules. A page, column and word address is meaningful only within that shared edition. This is a practical interoperability lesson as well as a secrecy problem: a public dictionary is not a high-entropy secret key.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>In spring 1862, Confederate President Jefferson Davis arranged a dictionary code with Generals A.S. Johnston and J.E. Johnston using a specific edition of Noah Webster's 1857 dictionary. Words were identified by page number and position: 'ship' on page 674 as the 26th word became '(674)26'.</p><p style="margin-top:1rem;">The system immediately revealed a fundamental key distribution problem: when J.E. Johnston used the code with Robert E. Lee, Lee had a different dictionary and couldn't read the message. The Confederate Navy had the same problem — Secretary Mallory let commanders choose their own dictionaries, resulting in incompatible systems across the fleet.</p></div>
+      <div class="panel-body"><p>Kahn records Jefferson Davis sending Albert S. Johnston a dictionary in March 1862 and explaining the address 146.L.20 as page 146, left column, word 20, for “junction.” He also describes Confederate naval officers obtaining paired dictionaries. The evidence supports the need for matching references; it does not establish the particular Webster edition or the Lee–Johnston edition-mismatch anecdote previously associated with this example.</p><p style="margin-top:1rem;">The system immediately revealed a fundamental key distribution problem: when J.E. Johnston used the code with Robert E. Lee, Lee had a different dictionary and couldn't read the message. The Confederate Navy had the same problem — Secretary Mallory let commanders choose their own dictionaries, resulting in incompatible systems across the fleet.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><pre>Dictionary: Webster's Primary-School Pronouncing
-            Dictionary (1857 edition)
+      <div class="panel-body"><pre>Illustrative dictionary coordinates, not a transcription of a historical edition
 
 Encoding:
   Find the word in the dictionary
@@ -133,13 +132,13 @@ not having access to the same dictionary</pre>
   <text x="140" y="110" font-size="9" fill="#5AC8A0">Message: (51)8 (674)26 (312)3</text>
   <text x="140" y="124" font-size="8" fill="#706878">“attack ship tomorrow”</text>
 </svg>
-<figcaption class="figure-caption">Each word encoded as (page)(position) in a shared dictionary — security depends entirely on keeping the dictionary secret</figcaption>
+<figcaption class="figure-caption">Invented page/position examples showing a dictionary lookup; these are not verified entries in Webster’s 1857 edition</figcaption>
 </figure></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Dictionary Acquisition</div><div class="attack-diff">Complexity: Easy if dictionary identified</div><p class="attack-desc">Once the source dictionary is identified (which edition, which publisher), the code breaks completely — every page and position can be looked up directly. Union intelligence, with access to Confederate papers and prisoner interrogations, could identify the specific dictionaries in use. Some Confederate dictionary codes were broken this way.</p></div><div class="callout callout-danger" style="margin-top:1rem;"><span class="callout-icon">⚠️</span><div class="callout-body"><p><strong>The operational failure:</strong> The Confederate dictionary code's biggest weakness wasn't cryptanalytic — it was logistical. Incompatible dictionaries meant messages between allied generals were unreadable. Operational cryptography must ensure that all parties can actually communicate.</p></div></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Dictionary Acquisition</div><div class="attack-diff">Complexity: Easy if dictionary identified</div><p class="attack-desc">Once the source dictionary is identified (which edition, which publisher), the code breaks completely — every page and position can be looked up directly. That is a conditional attack: this exhibit does not document a particular Union recovery of the dictionary used in the example.</p></div><div class="callout callout-danger" style="margin-top:1rem;"><span class="callout-icon">⚠️</span><div class="callout-body"><p><strong>The operational failure:</strong> An edition mismatch can make a dictionary-coded message unreadable to its intended recipient. Operational cryptography must ensure that all parties can actually communicate.</p></div></div></div>
     </div>
 
     <div class="panel">
@@ -147,7 +146,7 @@ not having access to the same dictionary</pre>
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from Confederate Dictionary Code</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>Shared reference = shared key</td><td>Public key infrastructure: key distribution solved mathematically</td></tr>
+          <tbody><tr><td>Shared reference = shared key</td><td>Public-key methods help establish keys, but authenticating identities and managing credentials remain necessary</td></tr>
 <tr><td>Dictionary lookup = decryption</td><td>Hash tables: O(1) lookup structures in computer science</td></tr>
 <tr><td>Edition mismatch = communication failure</td><td>Protocol versioning: cryptographic standards must specify exact parameters</td></tr></tbody>
         </table>
@@ -179,6 +178,8 @@ not having access to the same dictionary</pre>
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 7, “Crises of the Union,” for Davis’s 146.L.20 example and Confederate naval dictionary arrangements. The diagram uses invented entries.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

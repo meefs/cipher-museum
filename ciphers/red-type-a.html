@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red (Type A) - The Cipher Museum</title>
-  <meta name="description" content="Red (Type A) (1930s) - the Japanese diplomatic stepping-switch predecessor to Purple and the cryptanalytic bridge to MAGIC.">
+  <meta name="description" content="Red (Type A) (1930s) - the Japanese diplomatic half-rotor predecessor to Purple and the cryptanalytic bridge to MAGIC.">
   <meta property="og:title" content="Red (Type A) - The Cipher Museum">
-  <meta property="og:description" content="The predecessor to Purple: a stepping-switch diplomatic system broken by SIS before the 1940 Purple breakthrough.">
+  <meta property="og:description" content="The predecessor to Purple: a half-rotor diplomatic system broken by SIS before the 1940 Purple breakthrough.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/red-type-a.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -126,7 +126,7 @@
           <thead><tr><th>Red Design Choice</th><th>Modern Implication</th></tr></thead>
           <tbody>
             <tr><td>Split substitution by character class</td><td>Avoid structural side channels across symbol classes</td></tr>
-            <tr><td>Deterministic stepping families</td><td>Key schedules must be high-entropy and hard to correlate</td></tr>
+            <tr><td>Deterministic stepping families</td><td>A deterministic schedule does not create fresh entropy; its security depends on the key and construction</td></tr>
             <tr><td>Heavy dependence on operator discipline</td><td>Human process errors remain first-order security failures</td></tr>
             <tr><td>Opaque hardware as security layer</td><td>Kerckhoffs still applies: assume adversary learns design</td></tr>
           </tbody>

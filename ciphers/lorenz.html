@@ -115,7 +115,7 @@ Wheel pin counts: 41,31,29,26,23,
                   61,37
 
 Joint wheel positions alone do not determine the output period
-= astronomically large — never repeats in practice</pre>
+The output is deterministic; wheel states and keystream symbols can repeat</pre>
       <figure class="figure">
         <svg viewBox="0 0 520 170" style="max-width:440px;width:100%;height:auto;" aria-label="Lorenz cipher wheel structure diagram">
           <style>
@@ -190,7 +190,7 @@ Joint wheel positions alone do not determine the output period
             <tr><td><strong>Modern echo</strong></td><td>Side-channel and operational security still beat strong primitives</td><td>Nonce reuse on AES-GCM, IV collisions on WEP — the depth attack, unchanged</td></tr>
           </tbody>
         </table>
-        <p style="font-size:.95rem;color:var(--tx3);margin:1rem 0 0;font-style:italic;">If Enigma is the canonical example of <em>strong primitive defeated by usage patterns</em>, Lorenz is the canonical example of <em>strong primitive defeated by a single repeated key</em>. Eight decades later, both lessons are still being relearned in production code.</p>
+        <p style="font-size:.95rem;color:var(--tx3);margin:1rem 0 0;font-style:italic;">Enigma and Lorenz were attacked through combinations of mathematical structure, traffic, operating practices and intelligence. Neither story is adequately explained by operator error alone.</p>
       </div>
     </div>
 
@@ -235,7 +235,7 @@ Joint wheel positions alone do not determine the output period
       <div class="callout callout-warn" style="margin-top:1.5rem;">
         <span class="callout-icon">⚠</span>
         <div class="callout-body">
-          <p><strong>Why this still matters.</strong> Every modern stream cipher — RC4, ChaCha20, AES-CTR, AES-GCM — is a Vernam construction with a generated keystream. The depth attack you just ran is bit-for-bit identical to the WEP IV-collision attack that broke Wi-Fi (2001), the nonce-reuse attack on AES-GCM (still rediscovered in audits), and the forbidden-attack on TLS 1.2 GCM cipher suites. The cryptography textbooks call it <em>two-time pad</em>. The wartime cryptanalysts called it <em>depth</em>. The mistake is the same mistake.</p>
+          <p><strong>Why this still matters.</strong> Reusing an XOR keystream cancels it when two ciphertexts are XORed, exposing the XOR of the plaintexts. This confidentiality failure also arises when a modern stream construction repeats its key/nonce/counter input. WEP key-recovery attacks and AES-GCM tag forgeries have additional structure; they are not bit-for-bit copies of the Lorenz attack.</p>
         </div>
       </div>
       </div>
@@ -249,7 +249,7 @@ Joint wheel positions alone do not determine the output period
           <tbody><tr><td>Wheel-based keystream generator</td><td>Linear Feedback Shift Registers (LFSRs): the direct descendant of rotor-based keystreams</td></tr>
 <tr><td>XOR teleprinter encryption</td><td>Vernam cipher: XOR is the foundation of all stream cipher design</td></tr>
 <tr><td>Breaking it built Colossus</td><td>The needs of cryptanalysis drove the invention of programmable computing</td></tr>
-<tr><td>Depth attack on reused settings</td><td>Nonce reuse attacks: identical to the Lorenz depth attack, still relevant today</td></tr></tbody>
+<tr><td>Depth attack on reused settings</td><td>Keystream reuse can expose a relation between plaintexts; authentication failures require separate analysis</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -278,8 +278,8 @@ After each character:
   • Motor wheels decide whether ψ wheels step
     (irregular motion = extra security)
 
-With all 12 wheels: period before repetition
-≈ 1.6 × 10¹⁹ characters — effectively infinite</pre></div>
+Output period depends on wheel patterns and stepping rules.
+A product of wheel lengths is not a demonstrated keystream period.</pre></div>
     </div>
 
     <div class="panel">

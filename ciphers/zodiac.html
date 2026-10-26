@@ -104,7 +104,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The Zodiac Killer’s Z-340 cipher defied professional and amateur cryptanalysts for 51 years before being solved in 2020 — the most famous unsolved cipher in American criminal history and a testament to the difficulty of homophonic substitution analysis.</p>
+      <p>Z-340 remained unsolved for 51 years. Its 2020 solution combined a search for transposition patterns with homophonic-substitution solving and manual investigation. The result illustrates how an incorrect model can obstruct an attack, even when the individual cipher techniques are familiar.</p>
     </div>
 
     <div class="panel">
@@ -112,7 +112,7 @@
         <span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
         <p>Between 1969 and 1970, an unidentified serial killer called the Zodiac sent four encrypted messages to San Francisco Bay Area newspapers, taunting police and demanding publication. The killer claimed the ciphers contained his identity.</p>
-        <p style="margin-top:1rem;">The first cipher, Z-408 (408 characters), was solved in 1969 by schoolteachers Donald and Bettye Harden. It contained no name. The second cipher, Z-340 (340 characters), defied cryptanalysts, amateur solvers, and FBI investigators for 51 years.</p>
+        <p style="margin-top:1rem;">The first cipher, Z-408 (408 characters), was solved in 1969 by Donald and Bettye Harden. It contained no name. The second cipher, Z-340 (340 characters), defied cryptanalysts, amateur solvers, and FBI investigators for 51 years.</p>
         <p style="margin-top:1rem;">On December 11, 2020, David Oranchak, mathematician Sam Blake, and software developer Jarl Van Eycke publicly announced the solution. They had submitted it to the FBI on December 5; the FBI independently verified the decryption. They had worked remotely during the COVID-19 pandemic lockdown.</p>
       </div>
     </div>
@@ -189,12 +189,12 @@ looking for patterns in the wrong reading order</pre>
         <div class="attack-panel">
           <div class="attack-name">Computational Search + N-gram Scoring (2020)</div>
           <div class="attack-diff">Complexity: Very Hard · Oranchak, Blake &amp; Van Eycke</div>
-          <p class="attack-desc">Oranchak had suspected a transposition component since 2012. Working with Blake (who wrote the statistical scoring software) and Van Eycke (who built the AZdecrypt cipher-solving tool), the team identified the specific diagonal reading pattern through computational search. Candidate routes, recognizable fragments, homophonic search and correction of section-specific disruptions worked together. The exact physical procedure used to encipher the message remains uncertain.</p>
+          <p class="attack-desc">Oranchak had suspected a transposition component since 2012. Working with Blake (who explored candidate transpositions) and Van Eycke (who built the AZdecrypt cipher-solving tool), the team identified the specific diagonal reading pattern through computational search. Candidate routes, recognizable fragments, homophonic search and correction of section-specific disruptions worked together. The exact physical procedure used to encipher the message remains uncertain.</p>
         </div>
         <div class="callout callout-info" style="margin-top:1rem;">
           <span class="callout-icon">📝</span>
           <div class="callout-body">
-            <p>The decoded message begins: <em>"I hope you are having lots of fun in trying to catch me. I am not afraid of the gas chamber because it will send me to paradise all the sooner because I now have enough slaves to work for me..."</em></p>
+            <p>The solution expresses taunts about the investigation and the killer’s claimed beliefs about an afterlife. It does not disclose the killer’s identity.</p>
             <p style="margin-top:.5rem;">The Zodiac's identity was not revealed.</p>
           </div>
         </div>
@@ -208,10 +208,10 @@ looking for patterns in the wrong reading order</pre>
         <table class="cipher-table">
           <thead><tr><th>Concept from Zodiac Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody>
-            <tr><td>Homophonic substitution (multiple symbols per letter)</td><td>Padding schemes: modern encryption adds randomness to prevent identical plaintexts producing identical ciphertexts</td></tr>
+            <tr><td>Homophonic substitution (multiple symbols per letter)</td><td>Compare randomized or nonce-based encryption; padding alone does not hide repeated plaintexts</td></tr>
             <tr><td>Layered cipher (transposition + substitution)</td><td>Modern cipher analysis studies how operations interact; layering alone does not establish security</td></tr>
             <tr><td>51 years + short ciphertext = hard</td><td>Ciphertext length matters: more data = more statistical signal for an attacker</td></tr>
-            <tr><td>Solved by n-gram scoring + computation</td><td>Modern cryptanalysis: hill climbing with n-gram fitness functions breaks most classical ciphers</td></tr>
+            <tr><td>Solved by n-gram scoring + computation</td><td>Language-scored search can attack classical ciphers; success depends on the cipher, data and search budget</td></tr>
           </tbody>
         </table>
       </div>
@@ -225,7 +225,7 @@ looking for patterns in the wrong reading order</pre>
       <div class="panel-body">
         <p style="font-size:.9rem;margin-bottom:1rem;">A short cipher message. Use what you just learned.</p>
         <div style="font-family:var(--fm);font-size:.95rem;background:var(--s3);border-radius:var(--r);padding:1.25rem;letter-spacing:.15em;color:var(--tx);word-break:break-all;line-height:1.8;margin-bottom:1rem;">XLI UYMGO FVSAR JSB</div>
-        <p style="font-family:var(--fm);font-size:.65rem;color:var(--tx3);margin-bottom:1rem;">Hint: Not the Zodiac's cipher — this one is simpler. Sixteen letters is too short for frequency counts, but there are only 25 shifts to try. Which one reads as English?</p>
+        <p style="font-family:var(--fm);font-size:.65rem;color:var(--tx3);margin-bottom:1rem;">Hint: Not the Zodiac's cipher — this one is simpler. Sixteen letters gives limited frequency evidence, but there are only 25 shifts to try. Which one reads as English?</p>
         <button class="btn btn-secondary" style="width:100%;font-size:.72rem;" data-reveal-next>Reveal Answer</button>
         <div style="display:none;font-family:var(--fm);font-size:.8rem;color:var(--gold-lt);margin-top:.75rem;background:var(--s3);border-radius:var(--r);padding:1rem;line-height:1.8;">Shift = 4 · Plaintext: THE QUICK BROWN FOX</div>
       </div>
@@ -275,7 +275,7 @@ looking for patterns in the wrong reading order</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-puzzle"/></svg></span><span class="panel-title">The Remaining Zodiac Ciphers: Z-13 and Z-32</span></div>
-      <div class="panel-body"><p>Z-408 and Z-340 are solved, but the Zodiac story is not closed. Two later messages remain open: <strong>Z-13</strong>, the short "My name is" cipher, and <strong>Z-32</strong>, usually interpreted as a location cipher. Their brevity is the main obstacle. At 13 and 32 characters, they do not provide enough depth for the kind of statistical leverage that broke Z-340. That is why Round 3 also routes them into <a href="../halls/unsolved.html">Hall XII: Unsolved Ciphers</a> as active research problems, even though this main exhibit focuses on the solved 408- and 340-character messages.</p></div>
+      <div class="panel-body"><p>The main Z-408 message and Z-340 are deciphered, but the meaning of Z-408’s final 18 characters remains uncertain and the Zodiac story is not closed. Two later messages remain open: <strong>Z-13</strong>, the short "My name is" cipher, and <strong>Z-32</strong>, usually interpreted as a location cipher. Their brevity is the main obstacle. At 13 and 32 characters, they do not provide enough depth for the kind of statistical leverage that broke Z-340. That is why Round 3 also routes them into <a href="../halls/unsolved.html">Hall XII: Unsolved Ciphers</a> as active research problems, even though this main exhibit focuses on the solved 408- and 340-character messages.</p></div>
     </div>
   </div>
 
@@ -283,6 +283,8 @@ looking for patterns in the wrong reading order</pre>
 
 <!-- Related Exhibits -->
 <section class="panel"><div class="panel-body"><h2>Follow the Evidence</h2><p><a href="../lab/decipherment-cases.html#z340">Investigate the source, competing hypotheses and verification</a>, then preserve your own readings in the <a href="../lab/evidence-workbench.html">Evidence Workbench</a>.</p></div></section>
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Oranchak, Sam Blake and Jarl Van Eycke, <a href="https://arxiv.org/abs/2403.17350">“The Solution of the Zodiac Killer’s 340-Character Cipher”</a> (2024), §§1.3 and 5, for the distinction between the two messages, the remaining Z-408 tail and the solution process.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">
@@ -299,7 +301,7 @@ looking for patterns in the wrong reading order</pre>
     <a href="../ciphers/playfair.html" class="related-card">
       <span class="related-card__number">Exhibit 6</span>
       <span class="related-card__name">Playfair Cipher</span>
-      <span class="related-card__tag">Unsolved</span>
+      <span class="related-card__tag">Compare digram substitution</span>
     </a>
   </div>
 </section>

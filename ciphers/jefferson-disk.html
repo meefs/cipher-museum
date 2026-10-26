@@ -167,8 +167,8 @@ M-94 specifications:
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from Jefferson Disk</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>Physical disk arrangement as key</td><td>Key as configuration: RSA key = large number pair, AES key = 256-bit string</td></tr>
-<tr><td>Multiple cipher rows per setting</td><td>Multiple decryption candidates: birthday attacks on hash functions</td></tr>
+          <tbody><tr><td>Physical disk arrangement as key</td><td>Key as configuration: RSA uses related public and private parameters; AES accepts 128-, 192- or 256-bit keys</td></tr>
+<tr><td>Multiple cipher rows per setting</td><td>Language context can help select a candidate; this is not the birthday attack on hashes</td></tr>
 <tr><td>Mechanical implementation</td><td>Hardware Security Modules (HSMs): crypto operations in dedicated hardware</td></tr></tbody>
         </table>
       </div>
@@ -189,7 +189,7 @@ M-94 specifications:
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
             <tr><td>Inventor</td><td>Thomas Jefferson (1795) · Independently: Bazeries (1891)</td></tr>
             <tr><td>Year</td><td>1795</td></tr>
-            <tr><td>Key Type</td><td>Physical disk arrangement (25 disks)</td></tr>
+            <tr><td>Key Type</td><td>Physical disk arrangement (36 proposed by Jefferson; 25 in M-94)</td></tr>
             <tr><td>Broken By</td><td>Brute force · Probable word attack</td></tr>
           </tbody>
         </table>

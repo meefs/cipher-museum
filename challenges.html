@@ -148,19 +148,19 @@
       prompt: 'This message was shifted by a fixed number of positions. Determine the shift and decrypt it.',
       ciphertext: 'WKH GLH LV FDVW',
       answer: 'THE DIE IS CAST',
-      lesson: 'Caesar ciphers have only 25 possible keys — you can try them all in seconds. This is why keyspace size matters.',
+      lesson: 'Caesar ciphers have only 25 nonidentity shifts — you can try them all in seconds. This is why keyspace size matters.',
       hints: [
         'Caesar used a shift of 3. Try shifting each letter back by small numbers.',
         'W→T, K→H, H→E… the shift is 3.'
       ],
-      walkthrough: 'Each letter is shifted forward by 3 positions: T→W, H→K, E→H. Shifting back by 3 gives the original Latin quote attributed to Julius Caesar: "THE DIE IS CAST" (Alea iacta est).'
+      walkthrough: 'Each letter is shifted forward by 3 positions: T→W, H→K, E→H. Shifting back by 3 gives an English rendering of the Latin phrase attributed to Julius Caesar: "THE DIE IS CAST" (Alea iacta est).'
     },
     {
       level: 2, cipher: 'Atbash', difficulty: 'Beginner',
       prompt: 'This cipher reverses the alphabet: A↔Z, B↔Y, C↔X… Decrypt it.',
       ciphertext: 'PMLD GSBHVOU',
       answer: 'KNOW THYSELF',
-      lesson: 'Atbash uses a fixed substitution with zero secret information — the "key" is the algorithm itself. Security through obscurity never works.',
+      lesson: 'Atbash uses a fixed substitution with zero secret information — the "key" is the algorithm itself. Once the mapping is known, it provides no secret key to protect the text.',
       hints: [
         'A=Z, B=Y, C=X, D=W… Map each letter to its reverse.',
         'P→K, M→N, L→O, D→W…'
@@ -172,10 +172,10 @@
       prompt: 'A monoalphabetic substitution with keyword CIPHER. Use frequency analysis or the keyword to crack it.',
       ciphertext: 'SEPQETS BDHE DL NJCDL SDABT',
       answer: 'SECRETS HIDE IN PLAIN SIGHT',
-      lesson: 'Monoalphabetic ciphers preserve letter frequency. The letter E still appears most often — just under a different name. This is why AES uses non-linear S-boxes.',
+      lesson: 'Monoalphabetic ciphers preserve letter frequency. The frequency counts are relabelled, not erased; E need not be the most common letter in a short message. AES combines nonlinear substitution with diffusion and key mixing over many rounds.',
       hints: [
         'The keyword CIPHER produces the alphabet: C I P H E R A B D F G J K L M N O Q S T U V W X Y Z. Map ciphertext back.',
-        'E encrypts to itself under this keyword alphabet — so the most common ciphertext letter is your entry point.'
+        'E encrypts to itself under this keyword alphabet. Use repeated patterns as clues; short-text frequencies are only a heuristic.'
       ],
       walkthrough: 'Keyword CIPHER generates the substitution alphabet: C-I-P-H-E-R-A-B-D-F-G-J-K-L-M-N-O-Q-S-T-U-V-W-X-Y-Z. To decrypt, find each ciphertext letter\'s position in the cipher alphabet and map it to the standard alphabet position.'
     },
@@ -184,7 +184,7 @@
       prompt: 'This message was encrypted with a Vigenère cipher. The key is a common English word related to waiting.',
       ciphertext: 'IHX SIL KW EAMQIAEI',
       answer: 'THE KEY IS PATIENCE',
-      lesson: 'Vigenère defeated frequency analysis for 300 years by using multiple alphabets. But the repeating key creates patterns — Kasiski examination finds the key length, then each position reduces to Caesar.',
+      lesson: 'A repeating Vigenère key creates periodic structure. Kasiski examination can suggest candidate periods from repeated sequences; with the period known, each position class is a Caesar substitution.',
       hints: [
         'The key relates to "waiting." Try PATIENCE as the key word.',
         'Vigenère: subtract key letters from ciphertext letters mod 26. I-P=T, H-A=H, X-T=E… Align the key PATIENCE with letters only.'
@@ -196,7 +196,7 @@
       prompt: 'This Playfair-encrypted message uses the keyword MONARCHY. Decrypt the digraph pairs.',
       ciphertext: 'ZD XL QR AP GA EQ LU MH IZ',
       answer: 'TRUST NO SINGLE LOCK',
-      lesson: 'Playfair encrypts letter pairs (digraphs), making frequency analysis harder. But digraph frequencies still leak information — modern block ciphers use 128-bit blocks to eliminate this.',
+      lesson: 'Playfair encrypts letter pairs (digraphs), making frequency analysis harder. But digraph frequencies still leak information — a large block size alone is not enough. Modern security also requires a suitable cipher, mode and key handling.',
       hints: [
         'Build the 5×5 Playfair grid with MONARCHY: M-O-N-A-R / C-H-Y-B-D / E-F-G-I-K / L-P-Q-S-T / U-V-W-X-Z',
         'Apply the rectangle/row/column rules in reverse for each pair: ZD→TR, XL→US, etc.'
@@ -205,15 +205,15 @@
     },
     {
       level: 6, cipher: 'Enigma', difficulty: 'Expert',
-      prompt: 'Enigma-encrypted with rotors I-II-III at starting position MCK. Type each letter to trace the signal.',
+      prompt: 'Enigma-encrypted with rotors I-II-III, reflector B, rings AAA, no plugboard, at starting position MCK. Type each letter to trace the signal.',
       ciphertext: 'APZ LBTFZ OXPBB',
       answer: 'THE BOMBE TURNS',
-      lesson: 'Enigma had 158 quintillion settings but structural flaws (no letter encrypts to itself) gave codebreakers a foothold. Even huge keyspaces fail if the algorithm has exploitable properties.',
+      lesson: 'Enigma key-space counts depend on the model and permitted settings. Its reflector prevents self-encryption, a property codebreakers exploited. Even huge keyspaces fail if the algorithm has exploitable properties.',
       hints: [
         'Use the Enigma demo on the Enigma exhibit page with start position MCK.',
         'Enigma is reciprocal: encrypting the ciphertext with the same settings produces the plaintext.'
       ],
-      walkthrough: 'Enigma is its own inverse — typing the ciphertext with the same rotor settings (I-II-III at MCK) produces the plaintext. The answer refers to the Bombe, the electromechanical machine Alan Turing designed to crack Enigma at Bletchley Park.'
+      walkthrough: 'Enigma is its own inverse — typing the ciphertext with the same rotor settings (I-II-III at MCK) produces the plaintext. The answer refers to the Bombe, the British electromechanical key-search machine developed from Turing’s design with Welchman’s diagonal-board improvement, building on earlier Polish work.'
     }
   ];
 
@@ -224,7 +224,7 @@
       prompt: 'ROT13 is a special case of Caesar where every letter shifts by exactly 13 positions. Since 13 is half of 26, applying it twice returns the original text.',
       ciphertext: 'XABJYRQTR VF CBJRE',
       answer: 'KNOWLEDGE IS POWER',
-      lesson: 'ROT13 is its own inverse — encrypting twice returns the original. This "involution" property also exists in Enigma and modern Feistel networks.',
+      lesson: 'ROT13 is its own inverse — encrypting twice returns the original. Enigma has this property at a fixed rotor state. A general Feistel cipher instead decrypts by reversing the round-key order; it is not necessarily an involution.',
       hints: [
         'Shift every letter back (or forward) by 13 — both directions give the same result.',
         'X→K, A→N, B→O, J→W, Y→L, R→E…'
@@ -236,7 +236,7 @@
       prompt: 'The plaintext was written into rows under the key KEYS, then columns were read out in alphabetical key order. Reverse the process.',
       ciphertext: 'RTOOBKCNAEEEHDW',
       answer: 'BREAK THE CODE NOW',
-      lesson: 'Transposition ciphers rearrange letters without changing them — providing diffusion but no confusion. AES ShiftRows and MixColumns are the modern descendants.',
+      lesson: 'Transposition rearranges positions while preserving letter counts. AES ShiftRows also permutes positions; MixColumns goes further by combining bytes algebraically.',
       hints: [
         'Key KEYS → 4 columns. Sorted alphabetically: E(col 2), K(col 1), S(col 4), Y(col 3). 15 letters ÷ 4 columns = 4 rows, last column short.',
         'Distribute ciphertext into columns in key order — E gets 4 letters (RTOO), K gets 4 (BKCN), S gets 3 (AEE), Y gets 4 (EHDW). Write them back into grid positions and read rows.'
@@ -245,10 +245,10 @@
     },
     {
       level: 9, cipher: 'Multi-Layer', difficulty: 'Master',
-      prompt: 'This message was encrypted with two classical ciphers layered together. One reverses the alphabet, the other shifts it by a single-digit number. Determine both operations and their order.',
+      prompt: 'This message was encrypted with two classical ciphers layered together. One reverses the alphabet, the other shifts it by a single-digit number. Recover the plaintext and find a compatible ordering and shift.',
       ciphertext: 'RGNYCTEC ESTQMCPO GVV',
       answer: 'PATIENCE CONQUERS ALL',
-      lesson: 'Layering two weak ciphers doesn\'t necessarily create a strong one — if each layer is independently attackable, the stack falls. Modern ciphers use 10-14 rounds where each round depends on the previous one.',
+      lesson: 'Layering two weak ciphers doesn\'t necessarily create a strong one — this particular Atbash-and-Caesar composition is still a monoalphabetic substitution. AES instead combines key addition, nonlinear substitution and diffusion over 10, 12 or 14 rounds.',
       hints: [
         'Two layers: one is Atbash (A↔Z reverse), the other is a Caesar shift (1–9). Try undoing the outer layer first for different shift values.',
         'Outer layer: Caesar +7. Undo it first (shift back 7): R→K, G→Z, N→G, Y→R… → KZGRVMXV XLMJFVIH ZOO. Then undo Atbash on that result.'
@@ -257,10 +257,10 @@
     },
     {
       level: 10, cipher: 'Multi-Layer', difficulty: 'Master',
-      prompt: 'Two operations were applied: a letter shift and then the entire result was written backwards. Determine the shift value and undo both layers in the correct order.',
+      prompt: 'Two operations were applied: a letter shift and then the entire result was written backwards. Determine the shift value and undo both layers.',
       ciphertext: 'DJPSJMYWJMUNHYXWNK',
       answer: 'FIRST CIPHER THEN KEY',
-      lesson: 'Order of operations matters. In modern cryptography, the precise sequence of substitution, permutation, and key mixing in each round is what creates security. Scramble the order and the cipher breaks.',
+      lesson: 'Here a uniform Caesar shift and text reversal commute: either decryption order works. Operations do not commute in general; this example is a useful exception, not proof that reversing round operations preserves a modern cipher.',
       hints: [
         'The outer operation is reversal. Try reading the ciphertext backwards first, then apply Caesar shifts.',
         'Reversed: KNWXYHNUMJWYMJSPJD. Now try small Caesar shifts backwards. Shift −5: K→F, N→I, W→R, X→S, Y→T…'

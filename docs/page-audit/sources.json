@@ -1,0 +1,289 @@
+{
+  "HAC-1997": {
+    "title": "Handbook of Applied Cryptography",
+    "authors": [
+      "Alfred J. Menezes",
+      "Paul C. van Oorschot",
+      "Scott A. Vanstone"
+    ],
+    "year": 1997,
+    "passages_read": [
+      "§1.5, definitions1.27–1.30",
+      "§7.3.2, printed pp.239–240 / supplied PDF270–271",
+      "§7.3.3, printed p.241 / supplied PDF272",
+      "§12.7, printed pp.524–527, particularly Mechanism12.71"
+    ],
+    "scope": "Classical substitution definitions, affine inverse, homophones, Hill, Vigenère and Beaufort. Historical priority and operational deployments require separate evidence."
+  },
+  "KAHN-1996": {
+    "title": "The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet",
+    "authors": [
+      "David Kahn"
+    ],
+    "year": 1996,
+    "edition": "Revised edition",
+    "passages_read": [
+      "Supplied PDF113–114: Atbash",
+      "PDF118–121: traditional scytale, Polybius, Caesar",
+      "PDF148–149: Mantua1401 and uncertainty about transmission",
+      "PDF171–175,179–183: Alberti, Trithemius, Bellaso",
+      "PDF261–262: Playfair and Beaufort",
+      "PDF311–313: Delastelle",
+      "PDF315: Gronsfeld",
+      "PDF507: Hill",
+      "PDF947–951: Leeson and Masonic pigpen",
+      "PDF1085–1088: Bacon",
+      "Converted text pp.154–156: Argenti family and techniques",
+      "pp.197–199: contextual attacks and operational reasons for nomenclators",
+      "pp.207–212: Rossignol, Réalmont 1628 and two-part nomenclators",
+      "pp.277,280–281: Union route code and Confederate Vigenère",
+      "pp.313–315,317: Bazeries and his cylinder",
+      "pp.1059–1060: Great Cipher reconstruction and erasure instruction",
+      "Chapter 2 opening: Khnumhotep inscription, unusual writing versus secrecy",
+      "Chapter 7: Davis dictionary example 146.L.20 and Confederate naval dictionary arrangements",
+      "Chapter 22: commercial codeword formats, tariff changes and Bentley 1906",
+      "Chapter 23: Hammer’s interpretation of Beale statistical tests"
+    ],
+    "scope": "Historical secondary account, compared with primary records where available. Converted PDF pagination differs from printed edition; chapter references preferred in visible credits. Its old priority and lineage claims are not adopted without qualification."
+  },
+  "HOLDEN-2017": {
+    "title": "The Mathematics of Secrets: Cryptography from Caesar Ciphers to Digital Encryption",
+    "authors": [
+      "Joshua Holden"
+    ],
+    "year": 2017,
+    "passages_read": [
+      "§5.3, printed pp.157–163 / PDF174–180"
+    ],
+    "scope": "Distinguishes Cardano’s word-based scheme, Vigenère’s primer/transformations, and modern feedback constructions. Museum recurrence is a defined teaching model, not a full historical reconstruction."
+  },
+  "GAINES-1956": {
+    "title": "Cryptanalysis: A Study of Ciphers and Their Solution",
+    "authors": [
+      "Helen Fouché Gaines"
+    ],
+    "year": 1956,
+    "edition": "Dover reprint of 1939 work",
+    "passages_read": [
+      "ChapterXXII, supplied PDF322–324"
+    ],
+    "scope": "Bifid/Trifid fractionation, grouping and distinction from mere coordinate encoding."
+  },
+  "HARRIS-2020": {
+    "title": "Air Force Judge Advocate General’s School Podcast15: Vietnam POW & Tap Code with (Ret.) Colonel Carlyle “Smitty” Harris — Part1",
+    "author": "U.S. Air Force Judge Advocate General’s School",
+    "year": 2020,
+    "url": "https://www.dvidshub.net/audio/63657/air-force-judge-advocate-generals-school-podcast-15-vietnam-pow-tap-code-with-ret-colonel-carlyle-smitty-harris-part-1",
+    "scope": "Read episode description; did not listen to the complete interview. Description attributes revival/teaching of existing tap code, not invention, to Harris."
+  },
+  "POLYBIUS-10": {
+    "title": "Histories",
+    "author": "Polybius",
+    "section": "10.44–47",
+    "scope": "Read water-clock and alphabetic torch descriptions in W.R.Paton translation. Five alphabet divisions, separate left/right torch groups, and explicit attribution to Cleoxenus and Democleitus. Translation says first/next; do not invent a precisely simultaneous timing protocol."
+  },
+  "SHANNON-1949": {
+    "title": "Communication Theory of Secrecy Systems",
+    "author": "Claude E. Shannon",
+    "year": 1949,
+    "passages_read": [
+      "§10, printed pp.679–682 (PDF24–27); formula on printed p.680 visually checked",
+      "§23, printed pp.708–709 (PDF53–54)"
+    ],
+    "scope": "Perfect secrecy preserves prior probabilities, Latin-square perfect systems, key uncertainty; confusion and diffusion are qualitative design methods, not universal numeric security scores."
+  },
+  "BONEH-SHOUP-2023": {
+    "title": "A Graduate Course in Applied Cryptography",
+    "authors": [
+      "Dan Boneh",
+      "Victor Shoup"
+    ],
+    "edition": "Version0.6, January2023",
+    "passages_read": [
+      "§19.1, printed pp.756–757,760: Schnorr identification, Theorem19.1 and honest-verifier zero knowledge",
+      "§10.4.2: CDH and DL distinction"
+    ],
+    "scope": "Proof assumptions and challenge strategy are not an unconditional bound on all attacks."
+  },
+  "FIPS-203-204": {
+    "title": "FIPS203 and FIPS204",
+    "author": "NIST",
+    "year": 2024,
+    "passages_read": [
+      "FIPS203 §§5.1–5.3: K-PKE secret, public equations and cancellation",
+      "FIPS204 §3.2: MLWE and SelfTargetMSIS"
+    ],
+    "scope": "The geometric rounding model is not the ML-KEM construction. ML-DSA has additional assumptions."
+  },
+  "NSA-ROCHEFORT": {
+    "title": "CAPT Joseph J. Rochefort, USN",
+    "author": "National Security Agency",
+    "url": "https://www.nsa.gov/History/Cryptologic-History/Historical-Figures/Historical-Figures-View/Article/1623007/capt-joseph-j-rochefort-usn/",
+    "scope": "Early1941 command appointment and HYPO team. Birth-year discrepancy not resolved by this source."
+  },
+  "NSA-YARDLEY": {
+    "title": "Herbert O. Yardley; The Black Chamber",
+    "author": "National Security Agency",
+    "scope": "1929 closure precedes1931 memoir; no assertion that all American cryptanalysis stopped."
+  },
+  "COPIALE-2011": {
+    "title": "The Copiale Cipher",
+    "authors": [
+      "Kevin Knight",
+      "Beáta Megyesi",
+      "Christiane Schaefer"
+    ],
+    "year": 2011,
+    "url": "https://aclanthology.org/W11-1202/",
+    "passages_read": [
+      "§§1–5, PDF pages 1–5"
+    ],
+    "scope": "Description, transcription and failed initial hypotheses; its 1866 date must be read alongside the later manuscript study."
+  },
+  "COPIALE-2012": {
+    "title": "The Secrets of the Copiale Cipher",
+    "authors": [
+      "Kevin Knight",
+      "Beáta Megyesi",
+      "Christiane Schaefer"
+    ],
+    "year": 2012,
+    "edition": "Journal for Research into Freemasonry and Fraternalism 2(2), issue dated 2011, pp.314–324",
+    "passages_read": [
+      "Printed p.315 and manuscript image p.316, visually inspected because extracted PDF text is garbled"
+    ],
+    "scope": "Private ownership, estimated 1760–1780 manuscript date based on physical features, owner mark distinguished from creation date."
+  },
+  "MCKAY-1999": {
+    "title": "Solving the Bible Code Puzzle",
+    "authors": [
+      "Brendan McKay",
+      "Dror Bar-Natan",
+      "Maya Bar-Hillel",
+      "Gil Kalai"
+    ],
+    "year": 1999,
+    "url": "https://users.cecs.anu.edu.au/~bdm/dilugim/StatSci/",
+    "passages_read": [
+      "Author research-page abstract",
+      "§6 of author-hosted PDF, pages 13–14"
+    ],
+    "scope": "Selection flexibility in names and spellings; War and Peace test is not an unchanged-list identical replication of Drosnin’s popular claims."
+  },
+  "MCKAY-MOBY": {
+    "title": "Assassinations Foretold in Moby Dick",
+    "author": "Brendan McKay",
+    "url": "https://users.cecs.anu.edu.au/~bdm/dilugim/moby.html",
+    "scope": "Read challenge and example labels. Separate from the 1999 statistical-paper experiment; not a proof that every text yields identical hits."
+  },
+  "Z340-2024": {
+    "title": "The Solution of the Zodiac Killer’s 340-Character Cipher",
+    "authors": [
+      "David Oranchak",
+      "Sam Blake",
+      "Jarl Van Eycke"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2403.17350",
+    "passages_read": [
+      "§1.3",
+      "§5.4",
+      "§5.5 conclusion and FBI statements"
+    ],
+    "scope": "Homophonic search and candidate transpositions, 2020 solution dates, remaining Z408 tail; HTML date display differs from arXiv submission metadata."
+  },
+  "POE-BRIGHAM-1943": {
+    "title": "Edgar Allan Poe’s Contributions to Alexander’s Weekly Messenger",
+    "author": "Clarence S. Brigham",
+    "year": 1943,
+    "passages_read": [
+      "Introduction pp.3–7"
+    ],
+    "scope": "Historical newspaper record, 1839 challenge, 1840 submissions, 1841 retrospective; limits of Poe’s universal-solution boast."
+  },
+  "HERODOTUS-5-35": {
+    "title": "Histories",
+    "author": "Herodotus",
+    "edition": "G. C. Macaulay translation",
+    "passages_read": [
+      "Book V, chapter 35"
+    ],
+    "scope": "Tattooed messenger account, guarded roads and revolt signal; no asserted inspection scene or absolute first-use priority."
+  },
+  "RIJMENANTS-DIANA": {
+    "title": "DIANA — A Fast Reciprocal One Time Pad Table",
+    "author": "Dirk Rijmenants",
+    "year": 2017,
+    "url": "https://rijmenants.blogspot.com/2017/10/a-fast-reciprocal-one-time-pad-table.html",
+    "scope": "Read table mechanism and 126 unordered triples; independently enumerated all 676 input pairs and verified reciprocity. Public conversion table is separate from secret pad."
+  },
+  "RFC7541": {
+    "title": "HPACK: Header Compression for HTTP/2",
+    "authors": [
+      "Roberto Peon",
+      "Hervé Ruellan"
+    ],
+    "year": 2015,
+    "url": "https://www.rfc-editor.org/rfc/rfc7541.html",
+    "passages_read": [
+      "§7.1.1"
+    ],
+    "scope": "Length-based oracle, shared compression state, whole-field guessing and mitigations; not blanket timing-leak claims."
+  },
+  "MIT-HUNT-2015": {
+    "title": "On the hunt",
+    "author": "MIT News",
+    "year": 2015,
+    "url": "https://news.mit.edu/2015/mit-mystery-hunt-0129",
+    "scope": "Read report on 2015 event, 1981 origin, winning-team tradition; numerical figures remain attached to 2015."
+  },
+  "NATIONAL-TREASURE-2004": {
+    "title": "National Treasure",
+    "author": "Jon Turteltaub, director",
+    "year": 2004,
+    "passages_read": [
+      "Transcript scenes about Silence Dogood lookup and Trinity Church"
+    ],
+    "scope": "Film plot only. Pigpen exercise is separate; transcript is not historical evidence for treasure."
+  },
+  "PARKER-1994": {
+    "title": "Pearl Harbor Revisited: U.S. Navy Communications Intelligence, 1924–1941",
+    "author": "Frederick D. Parker",
+    "year": 1994,
+    "scope": "Bibliographic author and year verified against NSA institutional history; full volume not read in this pass."
+  },
+  "ACA-BAZERIES": {
+    "title": "Bazeries",
+    "author": "American Cryptogram Association",
+    "url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Bazeries.pdf",
+    "scope": "Read one-page number-key, two-square and digit-group reversal specification; distinguish existing museum 26-letter fixed-group model."
+  },
+  "CICADA-STATUS": {
+    "title": "QuickStart",
+    "author": "CicadaSolvers",
+    "url": "https://www.cicadasolvers.com/quickstart/",
+    "consulted": "2026-10-26",
+    "scope": "Community status: LP1 17 pages solved; LP2 58 pages with pages56 and57 solved. Does not identify organizers."
+  },
+  "TYPEX-ARTIFACT": {
+    "title": "Typex",
+    "author": "Crypto Museum",
+    "url": "https://www.cryptomuseum.com/crypto/uk/typex/index.htm",
+    "scope": "Artifact account: commercial Enigma roots, service from1937, differing retirement dates by user."
+  },
+  "T52-ARTIFACT": {
+    "title": "Siemens T52",
+    "author": "Crypto Museum",
+    "url": "https://www.cryptomuseum.com/crypto/siemens/t52/index.htm",
+    "scope": "Variant distinctions and irregular stepping in later models; technical-manual verification of exact historical control paths remains pending."
+  },
+  "KRYHA-CALLIMAHOS": {
+    "title": "Q.E.D.",
+    "author": "Lambros D. Callimahos",
+    "url": "https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/tech-journals/qed.pdf",
+    "passages_read": [
+      "PDF p.13 introduction and p.18 historical attack account"
+    ],
+    "scope": "Four analysts and particular 2h41 test; no universal attack-time guarantee."
+  }
+}

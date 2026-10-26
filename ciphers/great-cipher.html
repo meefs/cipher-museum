@@ -61,8 +61,8 @@
   </div>
   <div class="page-meta">
     <span class="page-num">Exhibit 38 of 172</span>
-    <span class="badge era-renaissance">Baroque · ~1626</span>
-    <span class="badge badge-hard">Unread for 200 years</span>
+    <span class="badge era-renaissance">Baroque · 17th century</span>
+    <span class="badge badge-hard">Deciphered in the 1890s</span>
   </div>
   <h1 class="page-title">The Great Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
@@ -70,7 +70,7 @@
   <p class="exhibit-status-note">Étienne Bazeries (1893): syllabic frequency analysis and contextual cribs.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventors</span><span class="fact-value">Antoine &amp; Bonaventure Rossignol</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1626 (used into 1690s)</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">17th century; surviving traffic includes the 1690s</span></div>
     <div class="fact"><span class="fact-label">Court</span><span class="fact-value">Louis XIII &amp; Louis XIV of France</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Codebook of ~587 numbered syllables</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Étienne Bazeries · 1893 (after ~3 years)</span></div>
@@ -91,9 +91,9 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
-        <p>Antoine Rossignol (1600–1682) was France's first true cryptanalyst. His talent was discovered at the 1626 siege of Réalmont, where he broke a Huguenot ciphered letter overnight — and the rebels surrendered the next day. Cardinal Richelieu brought him to court, and Antoine, joined by his son Bonaventure, designed a new cipher so strong it became the official cipher of the French crown.</p>
+        <p>Antoine Rossignol became a prominent French royal cryptologist in the seventeenth century. Kahn places the celebrated Réalmont decipherment in 1628, not 1626. Antoine and, later, his son Bonaventure developed and operated royal nomenclators; a single invention date should not be assigned to all of these changing keys.</p>
         <p style="margin-top:1rem;">The Rossignols' code book contained roughly <strong>587 numbers</strong>, each standing for a syllable, a common word, a single letter, or — critically — nothing at all. Some numbers were pure decoys (nulls); at least one number meant <em>"ignore the previous letter"</em>. After Bonaventure's grandson Antoine-Bonaventure died in 1751, the codebook itself vanished, and the Rossignol papers in the French archives became unreadable artifacts.</p>
-        <p style="margin-top:1rem;">Around 1890 a stack of these encrypted letters reached Étienne Bazeries (see <a href="bazeries.html">Exhibit 22</a>; full biography in <a href="../halls/codebreakers.html#bazeries">Hall X &middot; Codebreakers</a>), already famous for breaking diplomatic ciphers. Bazeries spent three years on it. His breakthrough: noticing that one common number was followed only by certain other numbers — and that interpreting it as <em>"delete the previous letter"</em> suddenly produced French words. A 1691 letter about General Vivien de Bulonde led Bazeries to propose an identity for the Man in the Iron Mask. His identification remains disputed: the decipherment and the historical inference are separate claims.</p>
+        <p style="margin-top:1rem;">In the 1890s Étienne Bazeries reconstructed a Rossignol-era nomenclator by testing letter and syllable readings against repeated groups and the correspondence’s context. Kahn describes homophones, nulls and an instruction to erase the preceding sign. A deciphered 1691 dispatch led Bazeries to identify General Bulonde with the Man in the Iron Mask, but that historical inference remains disputed.</p>
       </div>
     </div>
 
@@ -148,7 +148,7 @@
             <text class="gc-num" x="265" y="167" style="font-size:18px;fill:#e8d5a3">⇒</text>
             <text x="350" y="170" class="gc-lbl" style="font-size:14px;fill:#e8d5a3">decodes as "U" only</text>
           </svg>
-          <figcaption class="figure-caption">Common syllables get their own codes; nulls are decoys; one trap code erases the previous letter. Bazeries spent three years missing this trick.</figcaption>
+          <figcaption class="figure-caption">Illustrative code numbers, not a historical key: syllables, nulls and an erasure instruction. This diagram’s erase-one-letter rule is a teaching convention.</figcaption>
         </figure>
 
         <p style="margin-top:1rem;">To encrypt, the clerk worked through the message picking the longest matching codeword from the book — <code>RE</code>, <code>EN</code>, <code>TRE</code>, etc. — falling back to single letters only when no syllable matched. Occasionally the clerk would sprinkle in null codes as decoys. To decrypt, you needed the codebook in front of you. Without it, the message was just a long list of three-digit numbers.</p>
@@ -161,17 +161,17 @@
         <div class="attack-panel">
           <div class="attack-name">Frequency Analysis on Syllables</div>
           <div class="attack-diff">Complexity: Hard · Took Bazeries ~3 years</div>
-          <p class="attack-desc">Bazeries assumed the codebook used syllables, not just letters. He counted the most frequent codewords across hundreds of letters, hypothesizing that the most common one represented <code>les</code> — by far the most common French syllable. From there he tested combinations against known historical context (place names, royal titles, dates of known events).</p>
+          <p class="attack-desc">Bazeries tested syllable interpretations, including groups for <em>les ennemis</em>, and used partial readings to extend the reconstruction. Different groups could represent the same syllable or ending; some entries represented individual letters or whole words. A single frequency table was therefore insufficient.</p>
         </div>
         <div class="attack-panel">
           <div class="attack-name">The "Delete" Trap</div>
-          <div class="attack-diff">Complexity: The breakthrough insight</div>
-          <p class="attack-desc">For two centuries every attacker assumed each codeword stood for <em>something</em>. Bazeries noticed that one common number, no matter how he interpreted it, produced gibberish — but if he treated it as a command to <em>erase the preceding letter</em>, French words emerged. That single trap was what kept the cipher unreadable for so long.</p>
+          <div class="attack-diff">Complexity: Special codebook instructions</div>
+          <p class="attack-desc">Kahn reports a sign that erased the preceding sign. Such instructions complicate a solver’s model, but the source does not establish that one erasure code alone explains the long delay in decipherment. The browser demo uses its own explicitly defined erase-one-letter convention.</p>
         </div>
         <div class="attack-panel">
           <div class="attack-name">Modern Cryptanalytic Tools</div>
-          <div class="attack-diff">Complexity: Moderate (with computers)</div>
-          <p class="attack-desc">A modern hill-climbing solver, given enough ciphertext and a French syllable-frequency model, can recover most of the codebook in minutes. The cipher's true defense was the labor and time required by 19th-century pen-and-paper analysis, not its mathematical strength.</p>
+          <div class="attack-diff">Complexity: Depends on text, model and search budget</div>
+          <p class="attack-desc">Computer search can test candidate codebooks with language scores, but success depends on the corpus, segmentation, nulls and special instructions. No timed recovery of the historical Rossignol codebook is demonstrated here; the small generated example does not establish a minutes-long attack on the original system.</p>
         </div>
       </div>
     </div>
@@ -192,7 +192,7 @@
           <tbody>
             <tr><td>Variable-length codewords (syllables, not letters)</td><td>Compression + encryption: encoding redundancy makes plaintext smaller and statistical attacks harder</td></tr>
             <tr><td>Null tokens / decoys</td><td>Padding schemes (PKCS#7, OAEP) and chaff-and-winnow techniques</td></tr>
-            <tr><td>Hidden control codes ("delete previous")</td><td>Format-aware deception in steganography; honey encryption that produces plausible plaintext for wrong keys</td></tr>
+            <tr><td>Special codebook instructions (including erasure)</td><td>A reminder to model the message format; not evidence of a direct connection to modern honey encryption</td></tr>
             <tr><td>Lost codebook = lost messages forever</td><td>Key management is the hard part: a strong cipher with lost keys is indistinguishable from no cipher at all</td></tr>
             <tr><td>Security through operator skill, not algorithm</td><td>Modern principle (Kerckhoffs): the algorithm should be public; only the key must be secret</td></tr>
           </tbody>
@@ -211,8 +211,8 @@
         <table class="cipher-table">
           <tbody>
             <tr><td>Exhibit</td><td>38 of 172</td></tr>
-            <tr><td>Era</td><td>Baroque · ~1626</td></tr>
-            <tr><td>Security (then)</td><td>Effectively unbreakable for 200 years</td></tr>
+            <tr><td>Era</td><td>Baroque · 17th century</td></tr>
+            <tr><td>Security (then)</td><td>Historic correspondence deciphered in the 1890s</td></tr>
             <tr><td>Security (today)</td><td>Broken by hill-climbing</td></tr>
             <tr><td>Inventors</td><td>Antoine &amp; Bonaventure Rossignol</td></tr>
             <tr><td>Codebook size</td><td>~587 numbered codewords</td></tr>
@@ -235,6 +235,8 @@
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 5, “The Era of the Black Chambers,” and Chapter 23, “Ciphers in the Past Tense.” The latter distinguishes the decipherment from Bazeries’ disputed identification of the masked prisoner.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

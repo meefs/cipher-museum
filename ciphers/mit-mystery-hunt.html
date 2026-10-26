@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MIT Mystery Hunt — The Cipher Museum</title>
-  <meta name="description" content="An annual three-day puzzle marathon at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.">
+  <meta name="description" content="An annual puzzle hunt at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.">
   <meta property="og:title" content="MIT Mystery Hunt — The Cipher Museum">
-  <meta property="og:description" content="An annual three-day puzzle marathon at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.">
+  <meta property="og:description" content="An annual puzzle hunt at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/mit-mystery-hunt.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="The Cipher Museum — an interactive history of encryption">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MIT Mystery Hunt — The Cipher Museum">
-  <meta name="twitter:description" content="An annual three-day puzzle marathon at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.">
+  <meta name="twitter:description" content="An annual puzzle hunt at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/mit-mystery-hunt.html">
@@ -60,7 +60,7 @@
     <span class="badge era-modern">MIT · 1981–present</span>
   </div>
   <h1 class="page-title">MIT Mystery Hunt</h1>
-  <p class="page-tagline">An annual three-day puzzle marathon at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.</p>
+  <p class="page-tagline">An annual puzzle hunt at MIT (since 1981) where teams solve dozens of layered cryptographic, linguistic, and lateral-thinking puzzles to find a hidden coin somewhere on campus.</p>
   <p class="exhibit-status-note">Annual collaborative puzzle hunt</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Region</span><span class="fact-value">Cambridge, Massachusetts, USA</span></div>
@@ -83,7 +83,7 @@
       window.encode = function () {
         var raw = (document.getElementById('input').value || '').trim().toLowerCase();
         var out = document.getElementById('output');
-        var hint = 'Each answer names a cipher (or a cipher tool):\n  FENCE  \u2192 Rail-fence transposition\n  ENCODE \u2192 Generic verb \u2014 trap answer\n  ENIGMA \u2192 Enigma machine\n  CAESAR \u2192 Caesar cipher\n\nMeta-link: \u201cthings in the Cipher Museum\u201d \u2014 the meta-answer is one of\nCIPHERS, CRYPTOGRAPHY, EXHIBITS, or HALL.';
+        var hint = 'The answers relate to ciphers, but not all name a cipher:\n  FENCE  \u2192 Rail-fence transposition\n  ENCODE \u2192 Generic verb \u2014 trap answer\n  ENIGMA \u2192 Enigma machine\n  CAESAR \u2192 Caesar cipher\n\nMeta-link: \u201cthings in the Cipher Museum\u201d \u2014 the meta-answer is one of\nCIPHERS, CRYPTOGRAPHY, EXHIBITS, or HALL.';
         if (raw === 'ciphers' || raw === 'cipher') {
           out.textContent = '\u2705  Solved! Meta-answer accepted.\n\n' + hint;
         } else if (raw === 'cryptography' || raw === 'exhibits' || raw === 'hall') {
@@ -102,22 +102,22 @@
 
     <div class="cipher-significance">
       <h3>Why This Matters</h3>
-      <p>The MIT Mystery Hunt, held over MLK weekend each January, is the longest-running large puzzle hunt in the world. Teams of 50–100 solvers work for 60+ hours straight to crack dozens of puzzles whose solutions feed into meta-puzzles, eventually pointing to the location of a physical coin hidden on MIT's campus. The hunt produces some of the most ingenious cryptographic puzzles ever set publicly, regularly using Vigenère, Bacon, Polybius, Morse, semaphore, braille, IPA, base-N encodings, and bespoke ciphers invented by the year's writing team.</p>
+      <p>MIT’s Mystery Hunt combines puzzles, team collaboration and a search for a hidden coin. It began in 1981. Team sizes, puzzle counts and finishing times vary by year; the event is not restricted to cryptography, and its puzzle difficulty is not a measure of cryptographic security.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Brad Schaefer ran the first hunt in 1981 with a single sheet of paper given to a few friends. The hunt has grown every year since. Each year's winning team writes the next year's puzzles — a tradition that creates an unbroken lineage of escalating puzzle craftsmanship. Notable cryptographic moments span Caesar-and-Bacon stacks, Vigenère spread across multiple media, and metas that reconstruct cipher keys from physical campus details — the 2020 ‘Penny Park’ hunt among the most celebrated. Many professional cryptographers (including several at the NSA, Google, and academic departments) trained on Mystery Hunt puzzles.</p></div>
+      <div class="panel-body"><p>MIT News attributes the first 1981 hunt to graduate student Brad Schaefer. The winning team earns the opportunity to design the next hunt. Its report on 2015 describes more than 70 registered teams and 2,200 participants, with 158 online puzzles plus events and runarounds. Those are figures for that year, not fixed features of every hunt.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">Technical Notes</span></div>
-      <div class="panel-body"><p>Mystery Hunt puzzles often <em>compose</em> ciphers in surprising ways: the answers to a dozen Vigenère puzzles, sorted by length, might themselves be a Caesar shift sequence; a Polybius square decoded from one puzzle becomes the keyboard layout for entering another. The pedagogy is implicit: solvers learn to recognise classical ciphers on sight, master tools like CyberChef and dCode, and develop intuition for when a 'random' string is in fact a Bacon-encoded acrostic.</p></div>
+      <div class="panel-body"><p>A meta-puzzle uses answers or other information from earlier puzzles. Cipher recognition may be one step, alongside wordplay, mathematics, images or physical tasks. For example, a designer could use earlier answers to supply a substitution key; this is an illustrative design idea, not an attributed historical Hunt puzzle. The small widget above is an original museum exercise.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">Modern Echo</span></div>
-      <div class="panel-body"><p>The Mystery Hunt template — collaborative weekend hunts with multi-stage cipher puzzles — has been replicated worldwide: the Galactic Puzzle Hunt, Puzzle Boat, BAPHL, Puzzled Pint, and corporate hunt clones at Microsoft, Google, and Stripe. Together these hunts form the largest informal training pipeline for amateur cryptanalysis in the world.</p></div>
+      <div class="panel-body"><p>Puzzle hunts encourage collaboration, hypothesis testing and clear records of intermediate results. Those habits can help with historical cipher research. Solving a designed puzzle, however, does not establish that an encryption scheme used in a real protocol is secure or broken.</p></div>
     </div>
 
   </div>
@@ -142,13 +142,15 @@
   </div>
 </div>
 
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>MIT News, <a href="https://news.mit.edu/2015/mit-mystery-hunt-0129">“On the hunt”</a> (29 January 2015), for the 1981 origin, winning-team tradition and dated participation figures.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">
     <a href="../ciphers/cicada-3301.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Cicada 3301</span>
-      <span class="related-card__tag">Same puzzle-stack lineage</span>
+      <span class="related-card__tag">Compare collaborative puzzle solving</span>
     </a>
     <a href="../ciphers/kryptos.html" class="related-card">
       <span class="related-card__number">Related</span>

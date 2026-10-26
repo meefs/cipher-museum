@@ -84,12 +84,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The Beaufort cipher is a Vigenère variant with an elegant reciprocal property: the same operation both encrypts and decrypts. Used by the Royal Navy, it demonstrated that cipher design could prioritize operational simplicity without adding new vulnerability.</p>
+      <p>The Beaufort cipher is a Vigenère variant with an elegant reciprocal property: the same operation both encrypts and decrypts. Its reciprocal mapping simplifies the operator’s procedure while retaining the vulnerabilities of a repeating key.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Sir Francis Beaufort — famous for the Beaufort wind scale — devised a variant of the Vigenère cipher with an elegant property: the same operation encrypts and decrypts. Where Vigenère adds key to plaintext modulo 26, Beaufort subtracts plaintext from key. Because of this reciprocal property, you never need to switch between an encryption and decryption mode.</p><p style="margin-top:1rem;">Beaufort's cipher was used by the British Royal Navy and represents one of the cleaner historical cipher designs. Its weakness is identical to Vigenère's: the repeating key creates detectable periodicity.</p></div>
+      <div class="panel-body"><p>Sir Francis Beaufort — famous for the Beaufort wind scale — devised a variant of the Vigenère cipher with an elegant property: the same operation encrypts and decrypts. Where Vigenère adds key to plaintext modulo 26, Beaufort subtracts plaintext from key. Because of this reciprocal property, you never need to switch between an encryption and decryption mode.</p><p style="margin-top:1rem;">David Kahn describes a cipher card published under Beaufort’s name in 1857, after his death. His naval rank does not by itself establish Royal Navy operational adoption. Its weakness is identical to Vigenère's: the repeating key creates detectable periodicity.</p></div>
     </div>
 
     <div class="panel">
@@ -99,7 +99,7 @@ Beaufort: C = (K - P + 26) mod 26
 
 Key:    S  E  C  R  E  T
 Plain:  H  E  L  L  O  W
-Cipher: L  A  R  G  Q  X</pre><p style="margin-top:1rem;">Because subtraction is its own inverse: Decrypt(C, K) = Encrypt(C, K). This makes key management simpler — operators only need one table.</p>
+Cipher: L  A  R  G  Q  X</pre><p style="margin-top:1rem;">Because K − (K − P) = P modulo 26: Decrypt(C, K) = Encrypt(C, K). This simplifies the operation; it does not remove the need to distribute and protect the key.</p>
 <figure class="figure">
 <svg viewBox="0 0 380 130" style="width:100%;max-width:380px;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Beaufort vs Vigenere formula comparison">
   <style>text{font-family:'JetBrains Mono',monospace;fill:#EDE5D4}</style>
@@ -122,7 +122,7 @@ Cipher: L  A  R  G  Q  X</pre><p style="margin-top:1rem;">Because subtraction is
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Kasiski Examination</div><div class="attack-diff">Complexity: Moderate</div><p class="attack-desc">The Beaufort cipher shares Vigenère's fatal flaw: the repeating key. Identical plaintext segments that align with identical key segments produce identical ciphertext. Kasiski's method finds the key length; Index of Coincidence confirms it; frequency analysis recovers each key letter.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Kasiski Examination</div><div class="attack-diff">Complexity: Moderate</div><p class="attack-desc">The Beaufort cipher shares Vigenère's fatal flaw: the repeating key. Identical plaintext segments that align with identical key segments produce identical ciphertext. Repetition distances and index-of-coincidence tests can suggest a period. Language scoring can then rank key-letter candidates; short texts and accidental repetitions can mislead.</p></div></div>
     </div>
 
     <div class="panel">
@@ -130,9 +130,9 @@ Cipher: L  A  R  G  Q  X</pre><p style="margin-top:1rem;">Because subtraction is
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from Beaufort Cipher</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>Reciprocal operation (encrypt = decrypt)</td><td>XOR: the foundation of all modern stream ciphers (A XOR B XOR B = A)</td></tr>
-<tr><td>Key-driven alphabet selection</td><td>PRNG keystream: cryptographically random key material per position</td></tr>
-<tr><td>Repeating key weakness</td><td>Modern ciphers use nonce + counter to ensure keystream never repeats</td></tr></tbody>
+          <tbody><tr><td>Reciprocal operation (encrypt = decrypt)</td><td>Many binary stream ciphers use reciprocal XOR: A XOR B XOR B = A</td></tr>
+<tr><td>Key-driven alphabet selection</td><td>A cryptographic stream generator derives a pseudorandom keystream from a secret key and its nonce/counter state</td></tr>
+<tr><td>Repeating key weakness</td><td>Correct nonce/counter management prevents reusing the same keystream positions under a key; individual values can still recur</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -162,6 +162,8 @@ Cipher: L  A  R  G  Q  X</pre><p style="margin-top:1rem;">Because subtraction is
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading-title"><div class="panel-head"><h2 class="panel-title" id="audit-reading-title">Sources and Reading</h2></div><div class="panel-body"><p><em>Handbook of Applied Cryptography</em>, Alfred J. Menezes, Paul C. van Oorschot and Scott A. Vanstone (1997), Example 7.54, p.241. <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, David Kahn (revised edition, 1996), “The Contribution of the Dilettantes”: the 1857 Beaufort card.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

@@ -69,7 +69,7 @@
     <div class="fact"><span class="fact-label">Cipher type</span><span class="fact-value">Book cipher (number = Nth word, take first letter)</span></div>
     <div class="fact"><span class="fact-label">Solved</span><span class="fact-value">Beale 2 only (key: Declaration of Independence)</span></div>
     <div class="fact"><span class="fact-label">Unsolved</span><span class="fact-value">Beale 1 (treasure location) and Beale 3 (heirs)</span></div>
-    <div class="fact"><span class="fact-label">Treasure value (claimed)</span><span class="fact-value">~$60M+ in modern dollars</span></div>
+    <div class="fact"><span class="fact-label">Treasure value (claimed)</span><span class="fact-value">Unverified treasure claim; no valuation established</span></div>
   </div>
 </div>
 
@@ -93,12 +93,12 @@
       <div class="panel-body"><p>A book cipher converts each plaintext letter to the position of a word in a reference text whose first letter matches.<br><br><pre>Plaintext: G O L D
            ↓ ↓ ↓ ↓
 Declaration words: 48=god, 12=one, 42=laws, 15=dissolve
-Ciphertext: 48 12 42 15</pre>To decrypt, you need the exact same edition of the reference text the encoder used. A single misnumbered word breaks the entire message.</p></div>
+Ciphertext: 48 12 42 15</pre>To decrypt, you need the exact same edition of the reference text the encoder used. An insertion or omission can shift later word numbers; a wrong lookup can also corrupt only the affected letter.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Beale 2: Right Book Found</div><div class="attack-diff">Complexity: Lucky guess</div><p class="attack-desc">The anonymous narrator of the 1885 pamphlet supplies a Declaration-of-Independence decoding of the second sequence. That demonstrates a readable construction for B2, not the historical truth of the treasure claim or that B1 and B3 must have meaningful plaintexts and missing books.</p></div><div class="attack-panel"><div class="attack-name">Beale 1 & 3: Still Open</div><div class="attack-diff">Complexity: Unsolved after 140 years</div><p class="attack-desc">Cryptanalysts have tested thousands of candidate documents — Bibles, Shakespeare, the US Constitution, contemporary almanacs and newspapers — without success. Statistical analysis of cipher 1 by Carl Hammer (published 1971) and Jim Gillogly (1980) suggests the number sequence is non-random in suspicious ways. Gillogly found that decoding B1 against the Declaration of Independence throws out long alphabetical runs such as ABFDEFGHIIJKLMMNOHPP &mdash; a pattern no plain English message would produce, hinting at either a different cipher type or a hoax.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Beale 2: Right Book Found</div><div class="attack-diff">Complexity: Lucky guess</div><p class="attack-desc">The anonymous narrator of the 1885 pamphlet supplies a Declaration-of-Independence decoding of the second sequence. That demonstrates a readable construction for B2, not the historical truth of the treasure claim or that B1 and B3 must have meaningful plaintexts and missing books.</p></div><div class="attack-panel"><div class="attack-name">Beale 1 & 3: Still Open</div><div class="attack-diff">Status: No generally accepted decipherment</div><p class="attack-desc">B1 and B3 have no generally accepted decipherment. Hammer and Gillogly should not be presented as reaching the same conclusion: Kahn reports that Hammer regarded his tests as support for a genuine cipher, whereas Gillogly’s 1980 paper argues for a hoax interpretation. Alphabetical runs produced by applying the Declaration key to B1 are evidence to examine under an explicit model, not proof of either a treasure or a hoax.</p></div></div>
     </div>
 
     <div class="panel">
@@ -107,8 +107,8 @@ Ciphertext: 48 12 42 15</pre>To decrypt, you need the exact same edition of the 
         <table class="cipher-table">
           <thead><tr><th>Concept from Beale Ciphers</th><th>Modern Evolution</th></tr></thead>
           <tbody>
-            <tr><td>Book cipher principle</td><td>Modern key derivation from shared secrets</td></tr>
-            <tr><td>Edition specificity</td><td>Cryptographic agility — same key, different formatting → fails</td></tr>
+            <tr><td>Book cipher principle</td><td>A shared text supplies a lookup reference; ordinary prose is not a uniformly random cryptographic key</td></tr>
+            <tr><td>Edition specificity</td><td>Exact format agreement: edition changes can alter coordinate lookups</td></tr>
             <tr><td>Hoax-resistance of evidence</td><td>Provenance and reproducibility matter as much as the math</td></tr>
           </tbody>
         </table>
@@ -144,13 +144,15 @@ Ciphertext: 48 12 42 15</pre>To decrypt, you need the exact same edition of the 
             <tr><td>Cipher type</td><td>Book cipher (number = Nth word, take first letter)</td></tr>
             <tr><td>Solved</td><td>Beale 2 only (key: Declaration of Independence)</td></tr>
             <tr><td>Unsolved</td><td>Beale 1 (treasure location) and Beale 3 (heirs)</td></tr>
-            <tr><td>Treasure value (claimed)</td><td>~$60M+ in modern dollars</td></tr>
+            <tr><td>Treasure value (claimed)</td><td>Unverified treasure claim; no valuation established</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 23, for Hammer’s interpretation of his statistical work; James J. Gillogly, “The Beale Cipher: A Dissenting Opinion,” <em>Cryptologia</em> 4(2), pp. 116–119 (1980), for the contrasting argument. These interpretations do not authenticate the 1885 pamphlet’s story.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>

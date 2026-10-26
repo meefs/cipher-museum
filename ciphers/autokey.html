@@ -97,7 +97,7 @@
       <div class="panel-body">
         <div class="attack-panel">
           <div class="attack-name">Friedman's Autokey Attack</div>
-          <div class="attack-diff">Complexity: Polynomial (1920s SIS hand methods)</div>
+          <div class="attack-diff">Crib propagation is straightforward; finding a correct crib or primer can require substantial search</div>
           <p class="attack-desc">The extended key is related to the plaintext and is not independent random material. A guessed plaintext letter reveals a later key letter, allowing the guess to propagate at a distance equal to the primer length. Crib testing and language scoring can exploit this structure; there is no universal guarantee of recovery within a specified number of trials.</p>
         </div>
       </div>
@@ -110,7 +110,7 @@
           <thead><tr><th>Concept from Autokey</th><th>Modern Evolution</th></tr></thead>
           <tbody>
             <tr><td>Self-extending key</td><td>CFB feeds ciphertext back through a keyed block cipher; that is distinct from appending bare plaintext as a keystream</td></tr>
-            <tr><td>Friedman's index of coincidence (κ)</td><td>Still the canonical periodicity test taught in cryptanalysis courses</td></tr>
+            <tr><td>Plaintext feedback</td><td>Language structure in the appended plaintext supplies statistical clues; a repeating-key period test is not a general autokey solver</td></tr>
             <tr><td>&lsquo;Don't reuse keys&rsquo; isn't enough</td><td>If your &lsquo;key' has natural-language structure you've leaked it</td></tr>
           </tbody>
         </table>
@@ -159,7 +159,7 @@
     <a href="../ciphers/vigenere.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Vigenère</span>
-      <span class="related-card__tag">Repeating-key sibling, much weaker</span>
+      <span class="related-card__tag">Repeating-key relative with a different attack structure</span>
     </a>
     <a href="../ciphers/running-key.html" class="related-card">
       <span class="related-card__number">Related</span>

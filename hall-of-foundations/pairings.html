@@ -125,10 +125,7 @@
       STARKs verify with hashes and no pairing at all; Bulletproofs and
       Halo-style systems get short proofs and recursion from ordinary
       discrete-log groups. The distinction matters here more than most places in
-      this hall: pairing-friendly curves rest on the discrete log, so a quantum
-      computer takes them with everything else in
-      <a href="modular-arithmetic.html">&#167;143</a>'s lineage &#8212; while
-      hash-based STARKs are expected to survive. Succinct verification has more
+      this hall: a sufficiently capable fault-tolerant quantum computer running Shor’s algorithm would defeat the discrete-log assumptions used by pairing-friendly curves. Hash-based proof systems are candidates for post-quantum use, subject to their specific construction, parameters and quantum security analysis. Succinct verification has more
       than one foundation, and they don't share a fate.
     </p>
   </section>

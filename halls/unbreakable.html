@@ -86,7 +86,7 @@
       <p class="card-desc">A one-time pad offers perfect secrecy with a secret, uniform, independent message-length key used once. Try ciphertext tampering to see why secrecy is not authentication.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
         <span style="color:var(--tx3);">Plain:  </span><span style="color:var(--tx);">HELLO</span><br>
-        <span style="color:var(--tx3);">Key:    </span><span style="color:var(--gold);">XMCKL</span><span style="color:var(--tx3);"> (truly random)</span><br>
+        <span style="color:var(--tx3);">Key:    </span><span style="color:var(--gold);">XMCKL</span><span style="color:var(--tx3);"> (illustrative pad)</span><br>
         <span style="color:var(--tx3);">Cipher: </span><span style="color:var(--gold-lt);">EQNVZ</span>
       </div>
       <div class="card-foot">
@@ -106,7 +106,7 @@
       <div class="card-name">Vernam Cipher</div>
       <p class="card-desc">Vernam’s teleprinter system combines text with a key stream. XOR supplies perfect secrecy only when the pad is uniformly random, independent, secret, long enough and never reused.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
-        <span style="color:var(--tx3);">Plain:  </span><span style="color:var(--tx);">H (01000)</span><br>
+        <span style="color:var(--tx3);">Plain:  </span><span style="color:var(--tx);">H (01000; illustrative A=1 encoding)</span><br>
         <span style="color:var(--tx3);">Key:    </span><span style="color:var(--gold);">Q (10001)</span><br>
         <span style="color:var(--tx3);">XOR:    </span><span style="color:var(--gold-lt);">Y (11001)</span>
       </div>
@@ -127,7 +127,7 @@
       <div class="card-name">VENONA Project</div>
       <p class="card-desc">VENONA analysed intercepted Soviet messages, chiefly from the 1940s, by exploiting duplicated pad material. The project ran from 1943 to 1980.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;line-height:1.9;letter-spacing:.06em;">
-        <span style="color:var(--tx3);">Depth relation: </span><span style="color:var(--gold-lt);">C₁ ⊕ C₂ = P₁ ⊕ P₂</span><br>
+        <span style="color:var(--tx3);">Depth relation: </span><span style="color:var(--gold-lt);">Decimal: C₁ − C₂ = P₁ − P₂ (mod 10, digitwise)</span><br>
         <span style="color:var(--tx3);">Failure mode: </span><span style="color:var(--gold);">Key page reuse</span><br>
         <span style="color:var(--tx3);">Lesson: </span><span style="color:var(--tx);">Math stayed sound; operations failed</span>
       </div>
@@ -173,14 +173,14 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-chart"/></svg></span><span class="panel-title">Shannon's 1949 Proof</span></div>
       <div class="panel-body">
         <p>Perfect secrecy means observing ciphertext does not change the prior probability of any plaintext: P(M=m | C=c) = P(M=m), for ciphertexts with nonzero probability. Plaintexts need not be equally likely beforehand. An independently uniform one-time pad meets this definition; it is not the only possible perfectly secret construction. Encryption alone does not authenticate a message.</p>
-        <p style="margin-top:.75rem;">This means: for any ciphertext, every possible plaintext is equally likely. An attacker — even with unlimited computing power — gains zero information from the ciphertext alone.</p>
-        <p style="margin-top:.75rem;">The one-time pad is the only cipher that satisfies all three conditions.</p>
+        <p style="margin-top:.75rem;">For example, if a message was more likely before interception, it remains more likely afterwards. The ciphertext does not improve that prior guess. This guarantee concerns message content within the defined message space; length and other traffic metadata may still be visible.</p>
+        <p style="margin-top:.75rem;">Source: Claude E. Shannon, <em>Communication Theory of Secrecy Systems</em> (1949), §10, pp. 679–682. Shannon also describes perfectly secret systems using Latin squares.</p>
       </div>
     </div>
     <div class="panel">
-      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-diamond"/></svg></span><span class="panel-title">Why We Don't Use It</span></div>
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-diamond"/></svg></span><span class="panel-title">Why Its Use Is Limited</span></div>
       <div class="panel-body">
-        <p>The OTP's requirements make it nearly impossible to use at scale:</p>
+        <p>A one-time pad has demanding operational requirements:</p>
         <ul class="steps" style="margin-top:.75rem;">
           <li class="step"><div class="step-text">The key must be as long as the message — a 1GB file needs a 1GB key</div></li>
           <li class="step"><div class="step-text">The key must be truly random — not pseudorandom</div></li>
@@ -208,8 +208,8 @@
         <span class="panel-title" style="color:var(--gold);">Confusion</span>
       </div>
       <div class="panel-body">
-        <p>Making the relationship between the key and ciphertext as complex as possible. <em>Caesar has zero confusion</em> — the relationship is simply C = P + 3. An attacker who sees one plaintext-ciphertext pair knows the entire key.</p>
-        <p style="margin-top:.75rem;"><strong>Modern solution:</strong> AES S-boxes are carefully designed non-linear functions. Knowing one output tells you almost nothing about the key or other outputs.</p>
+        <p>Confusion complicates the relationship between the key and ciphertext statistics. For a Caesar shift, C = P + k mod 26, one aligned plaintext–ciphertext letter pair reveals k. Shannon’s term is a design principle, not a universal numerical score.</p>
+        <p style="margin-top:.75rem;"><strong>Modern solution:</strong> AES uses a fixed, public nonlinear S-box together with key addition and diffusion over multiple rounds. The S-box alone is a known byte substitution; its output determines its input. Security belongs to the complete construction, not secrecy of that table.</p>
       </div>
     </div>
     <div class="panel" style="border-color:var(--gold-b);">
@@ -218,7 +218,7 @@
         <span class="panel-title" style="color:var(--gold);">Diffusion</span>
       </div>
       <div class="panel-body">
-        <p>Spreading the influence of each plaintext bit across many ciphertext bits. <em>Caesar has zero diffusion</em> — changing one letter changes exactly one ciphertext letter. Frequency analysis exploits this directly.</p>
+        <p>Spreading the influence of each plaintext bit across many ciphertext bits. <em>Caesar does not spread changes between letters</em> — changing one letter changes exactly one ciphertext letter. Frequency analysis exploits this directly.</p>
         <p style="margin-top:.75rem;"><strong>Modern comparison:</strong> AES combines nonlinear substitution, key mixing and linear diffusion. A full-cipher avalanche measurement describes behavior across inputs, not a promise that every change flips exactly half the bits.</p>
       </div>
     </div>
@@ -242,13 +242,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Caesar / Substitution</td><td>Frequency analysis — letter mapping preserved</td><td>Non-linear S-boxes destroy frequency patterns</td><td>AES SubBytes</td></tr>
-          <tr><td>Monoalphabetic</td><td>26! keys but all have same statistical signature</td><td>Key-dependent substitution tables</td><td>AES with round keys</td></tr>
-          <tr><td>Polyalphabetic / Vigenère</td><td>Repeating key creates detectable periodicity</td><td>Non-repeating pseudorandom keystreams</td><td>ChaCha20, AES-CTR</td></tr>
-          <tr><td>Transposition</td><td>Letters preserved, just rearranged — anagram attacks work</td><td>Substitution combined with permutation every round</td><td>AES ShiftRows + MixColumns</td></tr>
+          <tr><td>Caesar / Substitution</td><td>Frequency analysis — letter mapping preserved</td><td>Repeated substitution, diffusion and key mixing</td><td>AES SubBytes</td></tr>
+          <tr><td>Monoalphabetic</td><td>26! keys but all have same statistical signature</td><td>Fixed public S-box combined with round-key addition</td><td>AES with round keys</td></tr>
+          <tr><td>Polyalphabetic / Vigenère</td><td>Repeating key creates detectable periodicity</td><td>Pseudorandom keystreams with unique nonce/counter inputs under a key; output bytes can repeat</td><td>ChaCha20, AES-CTR</td></tr>
+          <tr><td>Transposition</td><td>Letters preserved, just rearranged — anagram attacks work</td><td>Substitution and linear diffusion across rounds</td><td>AES ShiftRows + MixColumns</td></tr>
           <tr><td>Playfair / Hill (block)</td><td>Small blocks leak digraph statistics; linear algebra solvable</td><td>128-bit blocks, non-linear operations, key mixing</td><td>AES (128-bit block)</td></tr>
-          <tr><td>Military layered (ADFGVX)</td><td>Substitution + transposition — each layer still attackable</td><td>10–14 rounds of 4 operations — computationally infeasible to reverse</td><td>AES, Camellia</td></tr>
-          <tr><td>One-Time Pad</td><td>Impractical key management — reuse is catastrophic</td><td>Computationally secure with short key — key derivation functions</td><td>AES-256, X25519 key exchange</td></tr>
+          <tr><td>Military layered (ADFGVX)</td><td>Substitution + transposition — each layer still attackable</td><td>AES uses 10, 12 or 14 rounds; the final round omits MixColumns. Inversion with the key is efficient</td><td>AES</td></tr>
+          <tr><td>One-Time Pad</td><td>Impractical key management — reuse is catastrophic</td><td>Computational security with short keys under stated assumptions; not perfect secrecy</td><td>AES modes; authenticated X25519-based protocols</td></tr>
         </tbody>
       </table>
     </div>

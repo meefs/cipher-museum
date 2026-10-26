@@ -89,13 +89,13 @@
       <div class="panel-body">
         <p>A zero-knowledge proof must satisfy three properties at once, and the third is the hard one:</p>
         <ul style="line-height:1.9;">
-          <li><strong>Completeness</strong> &mdash; an honest prover who really knows the secret always convinces the verifier.</li>
+          <li><strong>Completeness</strong> &mdash; an honest prover convinces the verifier with the probability required by the protocol. Perfect completeness means this probability is one.</li>
           <li><strong>Soundness</strong> &mdash; false statements are accepted only with bounded probability. A proof of knowledge additionally formalizes possession of a witness.</li>
           <li><strong>Zero knowledge</strong> &mdash; the verifier learns nothing they could not have produced alone.</li>
         </ul>
         <p>This Schnorr identification example has perfect completeness, a knowledge-soundness argument and honest-verifier zero knowledge. The prover knows <em>x</em>; everyone knows <em>y</em> = <em>g</em><sup><em>x</em></sup>. The prover commits to a random <em>r</em> by sending <em>t</em> = <em>g</em><sup><em>r</em></sup>. The verifier replies with a random challenge <em>c</em>. The prover answers <em>s</em> = (<em>r</em> + <em>cx</em>) mod <em>q</em>, where <em>q</em> is the group order, and the verifier checks:</p>
         <p style="font-family:ui-monospace,monospace;background:var(--bg2,rgba(255,255,255,.04));padding:12px 16px;border-radius:6px;overflow-x:auto;">g<sup>s</sup> &nbsp;=&nbsp; t &middot; y<sup>c</sup> &nbsp;(mod p)</p>
-        <p>The response <em>s</em> is the secret <em>x</em> masked by the fresh random <em>r</em>, so it discloses nothing. But it could only have been produced by someone who knew <em>x</em> &mdash; unless they guessed the challenge in advance.</p>
+        <p>An honest transcript can be simulated without the witness, which is the honest-verifier zero-knowledge argument. Two accepting responses to distinct challenges for the same commitment allow extraction of the discrete logarithm. Impersonation security additionally relies on that logarithm being hard to compute in the selected group.</p>
       </div>
     </div>
 
@@ -131,7 +131,7 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
       <div class="panel-body">
-        <p>Schnorr's soundness is not perfect and is not meant to be: a cheat who guesses the challenge in advance succeeds, with probability 1 divided by the size of the challenge space. On this page that is 1 in 233, which you can watch happen. Real deployments use challenge spaces around 2<sup>256</sup>, where the same gap is unreachable.</p>
+        <p>The displayed attack guesses a uniform response, succeeding with probability 1/233 for each fixed commitment and challenge. This is not an upper bound on all attackers: the tiny group here lets an attacker enumerate the secret and then always answer correctly. In a real protocol, impersonation bounds depend on the discrete-log assumption, challenge space and attack model.</p>
         <p>The Fiat&ndash;Shamir transform derives a challenge by hashing the commitment together with the public statement and required application context. A signature must bind the message as well. Domain separation and unambiguous encodings matter. The prover can try different commitments, but should not be able to choose a useful challenge cheaply under the proof's hash model. A random-oracle proof is a conditional security argument, not a proof that a concrete hash is an ideal oracle.</p>
         <p>Succinct proof systems add their own concerns. Many pairing-based zk-SNARKs require a trusted setup whose discarded randomness would forge arbitrary proofs if retained &mdash; the reason for elaborate multi-party ceremonies. Transparent systems such as STARKs avoid that setup entirely, at the cost of larger proofs. Pairing-based constructions also inherit the discrete logarithm's vulnerability to quantum attack, while suitably designed hash-based systems avoid that particular attack; their post-quantum security still depends on parameters and assumptions.</p>
       </div>
@@ -153,7 +153,7 @@
         <p><strong>Claim:</strong> &lsquo;I know <em>x</em> with <em>g</em><sup><em>x</em></sup> = <em>y</em>.'</p>
         <p><strong>Three messages:</strong> commit, challenge, respond.</p>
         <p><strong>Completeness:</strong> honest provers always pass.</p>
-        <p><strong>Soundness:</strong> a cheat's odds are 1 in the challenge space.</p>
+        <p><strong>Displayed attack:</strong> uniform response guessing succeeds with probability 1/233; the tiny group permits better attacks.</p>
         <p><strong>Honest-verifier zero knowledge:</strong> a simulator matches the honest transcript distribution without knowing the witness.</p>
         <p style="margin-top:14px;border-top:1px solid var(--gold-b);padding-top:12px;">The mathematics is in the <a href="../hall-of-foundations/pairings.html">Hall of Foundations</a>: pairings used by some succinct proof systems, and <a href="../hall-of-foundations/random-oracle.html">the oracle</a> Fiat&ndash;Shamir leans on.</p>
       </div>
@@ -163,6 +163,7 @@
 
 <section class="panel" aria-labelledby="primary-sources"><div class="panel-body"><h2 id="primary-sources">Primary Sources</h2><p><a href="https://www.rfc-editor.org/rfc/rfc8235.html">RFC 8235 (Schnorr NIZK proof, 2017)</a>; <a href="https://www.rfc-editor.org/rfc/rfc8032.html">RFC 8032 (EdDSA, 2017)</a>. These specify related but distinct constructions; this page implements only the small interactive teaching model.</p></div></section>
 
+<section class="panel"><div class="panel-body"><h2>Sources and Reading</h2><p>Dan Boneh and Victor Shoup, <em>A Graduate Course in Applied Cryptography</em>, version 0.6 (January 2023), §19.1, Theorem 19.1, and §19.1.1: Schnorr identification, extraction and honest-verifier zero knowledge.</p></div></section>
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">
@@ -253,7 +254,7 @@
       "&nbsp;&nbsp;t = "+t+" &nbsp;&middot;&nbsp; c = "+c+" &nbsp;&middot;&nbsp; guessed s = "+s+"<br>"+
       "check &rarr; "+pass(ok)+
       "<br><span style=\"opacity:.75\">"+(ok
-        ? "A 1-in-233 fluke — the soundness error is real, not zero. Real systems use a challenge space near 2<sup>256</sup>."
+        ? "A 1-in-233 success for this guessing strategy. This tiny group also permits complete secret recovery."
         : "As expected. Only one response in 233 works for this commitment and challenge.")+"</span>";
   }
 
@@ -265,8 +266,8 @@
     }
     el("proofOut").innerHTML=
       "500 attempts by a prover with no secret: <b>"+wins+"</b> succeeded.<br>"+
-      "Expected from the soundness bound 1/q = 1/233 &rarr; about "+(500/G.q).toFixed(1)+".<br>"+
-      "<span style=\"opacity:.75\">Soundness is a probability, not a guarantee. Widening the challenge space is what makes it negligible.</span>";
+      "Expected for uniform response guessing, 1/q = 1/233 &rarr; about "+(500/G.q).toFixed(1)+".<br>"+
+      "<span style=\"opacity:.75\">This experiment measures one strategy. A large challenge space alone does not establish security; the group and protocol assumptions matter.</span>";
   }
 
   function simulate(){

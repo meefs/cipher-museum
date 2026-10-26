@@ -84,12 +84,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Homophonic substitution was the Renaissance cryptographers’ answer to frequency analysis: by giving common letters multiple cipher symbols, they flattened the telltale frequency distribution that had broken every monoalphabetic cipher.</p>
+      <p>Homophonic substitution was the Renaissance cryptographers’ answer to frequency analysis: giving common letters multiple cipher symbols can flatten individual-symbol frequencies, although language patterns can still support cryptanalysis.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>After Al-Kindi's frequency analysis destroyed simple substitution ciphers, Renaissance cryptographers fought back. Their solution: if common letters betray themselves by appearing too often, give them multiple disguises. The letter E might encrypt as 12, 37, or 44 — chosen at random each time. With enough symbols, no single ciphertext character stands out as overwhelmingly common.</p><p style="margin-top:1rem;">This system was widely used in European diplomatic correspondence from the 15th through 17th centuries. The Vatican, Italian city-states, and royal courts all employed variations. Some systems used over 100 symbols.</p></div>
+      <div class="panel-body"><p>European diplomatic ciphers used multiple substitutes for common letters; David Kahn documents a Mantuan example from 1401. This does not establish a direct transmission of al-Kindi’s methods to Renaissance cryptographers. The idea: if common letters betray themselves by appearing too often, give them multiple disguises. The letter E might encrypt as 12, 37, or 44 — chosen at random each time. With a suitable allocation and random selection, the frequency of each common letter is spread across its substitutes.</p><p style="margin-top:1rem;">This system was widely used in European diplomatic correspondence from the 15th through 17th centuries. The Vatican, Italian city-states, and royal courts all employed variations. Some systems used over 100 symbols.</p></div>
     </div>
 
     <div class="panel">
@@ -136,12 +136,12 @@ Z → 99                 (1 symbol,  ~0.07% freq)</pre>
           <text class="ho-lbl" x="200" y="140" style="fill:#d4af37">Common letters get more symbols — this flattens the frequency distribution</text>
         </svg>
         <figcaption class="figure-caption">Homophonic substitution: E gets 5 symbols, Z gets 1 — more symbols for common letters masks frequency patterns</figcaption>
-      </figure><p style="margin-top:1rem;">To encrypt: for each plaintext letter, randomly pick one of its assigned symbols. The resulting ciphertext should have roughly uniform symbol frequencies.</p></div>
+      </figure><p style="margin-top:1rem;">To encrypt: for each plaintext letter, randomly pick one of its assigned symbols. This illustrative allocation reduces some peaks but does not make frequencies uniform: with equal choice among alternatives, each E symbol has an expected frequency of 12.7% / 5 = 2.54%, each T symbol 9.1% / 2 = 4.55%, and the Z symbol 0.07%. Approximate flattening requires the number of substitutes to track the plaintext distribution; a short message can still vary substantially.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Structural Pattern Analysis</div><div class="attack-diff">Complexity: Moderate</div><p class="attack-desc">Even with flattened frequencies, the cipher retains structural patterns. Digraph frequencies (two-symbol sequences) still reflect English digraph statistics — TH, HE, IN, ER appear more often than XX, QQ, ZZ. With enough ciphertext and modern hill-climbing algorithms, the symbol-to-letter mapping can be recovered.</p></div><div class="attack-panel"><div class="attack-name">Poor Symbol Distribution</div><div class="attack-diff">Complexity: Easy if symbols not perfectly weighted</div><p class="attack-desc">In practice, operators rarely assigned symbols with mathematically correct frequencies. A symbol appearing 8% of the time when it should appear 2% immediately identifies itself. Real historical systems were broken this way.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Structural Pattern Analysis</div><div class="attack-diff">Complexity: Moderate</div><p class="attack-desc">Even with flattened frequencies, the cipher retains structural patterns. Digraph frequencies (two-symbol sequences) still reflect English digraph statistics — TH, HE, IN, ER appear more often than XX, QQ, ZZ. With suitable ciphertext, statistical scoring and search can recover mappings; success depends on the language, message length, symbol allocation, and search budget.</p></div><div class="attack-panel"><div class="attack-name">Poor Symbol Distribution</div><div class="attack-diff">Complexity: Easy if symbols not perfectly weighted</div><p class="attack-desc">An uneven allocation or biased choice of substitutes can leave strong frequency peaks. Such a peak suggests hypotheses; it does not by itself identify the underlying plaintext letter.</p></div></div>
     </div>
 
     <div class="panel">
@@ -149,9 +149,9 @@ Z → 99                 (1 symbol,  ~0.07% freq)</pre>
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from Homophonic Substitution</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>Multiple symbols per letter</td><td>Modern encryption uses uniformly random output — no symbol is more common</td></tr>
-<tr><td>Frequency flattening attempt</td><td>Stream cipher XOR with random key: every output bit is uniformly random</td></tr>
-<tr><td>Fixed symbol set</td><td>AES with proper IV: same plaintext produces completely different ciphertext each time</td></tr></tbody>
+          <tbody><tr><td>Multiple symbols per letter</td><td>Secure encryption aims to conceal plaintext patterns under a specified attack model; uniform symbol counts alone do not establish security</td></tr>
+<tr><td>Frequency flattening attempt</td><td>A one-time pad uses independent uniform pad bits; practical stream ciphers instead generate a pseudorandom keystream</td></tr>
+<tr><td>Fixed symbol set</td><td>AES is deterministic for a fixed key and block. Encryption modes add nonce or IV rules; those rules and authentication matter</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -181,6 +181,8 @@ Z → 99                 (1 symbol,  ~0.07% freq)</pre>
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading-title"><div class="panel-head"><h2 class="panel-title" id="audit-reading-title">Sources and Reading</h2></div><div class="panel-body"><p><em>Handbook of Applied Cryptography</em>, Alfred J. Menezes, Paul C. van Oorschot and Scott A. Vanstone (1997), §7.3.2, p.240: proportional homophone sets and residual statistics. <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, David Kahn (revised edition, 1996), “The Rise of the West”: the Mantuan 1401 example and the uncertain transmission of cryptanalytic knowledge.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

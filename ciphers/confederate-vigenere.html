@@ -66,13 +66,13 @@
   </div>
   <h1 class="page-title">Confederate Vigenère</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">The Confederacy's government cipher — publicly broken by Kasiski in 1863, a year after its adoption</p>
+  <p class="page-tagline">Confederate repeating-key ciphers and the Union analysts who read some of their dispatches</p>
   <p class="exhibit-status-note">Union analysts exploited repeated keywords and language patterns.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Confederate Signal Corps · E.P. Alexander</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1862</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Vigenère keyword (15 letters typical)</span></div>
-    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Union cryptanalysts · Kasiski (published 1863)</span></div>
+    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Union cryptanalysts; Kasiski published a general method in 1863</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Operational security failures</span></div>
   </div>
 </div>
@@ -84,19 +84,19 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The Confederacy adopted the Vigenère cipher as its official ‘government cipher’ in 1862 — just one year before Kasiski published the method to break it. Union cryptanalysts read Confederate dispatches throughout the Civil War, demonstrating the cost of outdated cryptography.</p>
+      <p>Confederate forces used repeating-key Vigenère systems during the Civil War. Union analysts solved a number of dispatches by exploiting predictable text and reused keys. Kasiski’s 1863 publication is part of the broader history of the cipher, not evidence that Union analysts used his method.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>In May 1862, the Confederate Signal Corps established the Vigenère cipher as 'the government cipher' — to be used by Jefferson Davis, Robert E. Lee, and all Confederate field commanders. The choice was tragically timed: Friedrich Kasiski would publish his method for breaking Vigenère just one year later, in 1863. Whether Confederate cryptographers were aware of the cipher's theoretical vulnerability is unclear.</p><p style="margin-top:1rem;">Union cryptanalysts read Confederate dispatches throughout the war. The keywords were sometimes shared for months across all military departments — meaning a single key compromise allowed all messages to be read retrospectively.</p></div>
+      <div class="panel-body"><p>Confederate cipher disks and tables implemented repeating-key substitution. Kahn describes Union solutions, including a message sent during the Vicksburg siege on May 25, 1863, with the key MANCHESTER BLUFF. He also records transmission errors and occasions when delayed solutions were no longer operationally useful.</p><p style="margin-top:1rem;">Reusing a key across messages can extend the value of a recovered key, but does not mean that every Confederate message used the same system or was read. The historical examples establish particular successes, not universal access to Confederate communications.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
       <div class="panel-body"><pre>Confederate keywords documented in historical record:
 
-1862: 'Manchester Bluff' (15 letters)
+1863: 'Manchester Bluff' (15 letters) — documented Vicksburg dispatch
       Used by Pemberton and J.E. Johnston
       during the Vicksburg campaign
 
@@ -134,7 +134,7 @@ All Vigenère: C = (P + K) mod 26</pre>
   <g transform="translate(220,10)">
     <text x="0" y="14" font-size="9" fill="#C9A84C" letter-spacing=".1em">WARTIME KEYWORDS</text>
     <line x1="0" y1="22" x2="0" y2="180" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-    <circle cx="0" cy="40" r="3" fill="#5AC8A0"/><text x="10" y="44" font-size="8" fill="#5AC8A0">1862 Manchester Bluff</text>
+    <circle cx="0" cy="40" r="3" fill="#5AC8A0"/><text x="10" y="44" font-size="8" fill="#5AC8A0">1863 Manchester Bluff</text>
     <circle cx="0" cy="70" r="3" fill="#5A90C8"/><text x="10" y="74" font-size="8" fill="#5A90C8">1863 My Old Kentucky Home</text>
     <circle cx="0" cy="100" r="3" fill="#C9A84C"/><text x="10" y="104" font-size="8" fill="#C9A84C">1864 Complete Victory</text>
     <circle cx="0" cy="130" r="3" fill="#C85A5A"/><text x="10" y="134" font-size="8" fill="#C85A5A">1865 Come Retribution</text>
@@ -148,7 +148,7 @@ All Vigenère: C = (P + K) mod 26</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Key Length Detection + Frequency Analysis</div><div class="attack-diff">Complexity: Moderate · Union cryptanalysts succeeded routinely</div><p class="attack-desc">With 15-letter keywords and messages often hundreds of words long, Union cryptanalysts had ample ciphertext. The key length (15) produces detectable periodicity through Kasiski examination and Index of Coincidence. Once the key length was known, each of the 15 letter positions was solved independently using frequency analysis.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Key Length Detection + Frequency Analysis</div><div class="attack-diff">Historical attacks and later statistical methods</div><p class="attack-desc">A modern analyst can use repeated sequences and the index of coincidence to test candidate periods, then analyse each position class. The index of coincidence was developed after the Civil War; it should not be attributed to Union operators. Their documented solutions also exploited likely words, message context and recovered keys.</p></div></div>
     </div>
 
     <div class="panel">
@@ -179,7 +179,7 @@ All Vigenère: C = (P + K) mod 26</pre>
             <tr><td>Inventor</td><td>Confederate Signal Corps · E.P. Alexander</td></tr>
             <tr><td>Year</td><td>1862</td></tr>
             <tr><td>Key Type</td><td>Vigenère keyword (15 letters typical)</td></tr>
-            <tr><td>Broken By</td><td>Union cryptanalysts · Kasiski (published 1863)</td></tr>
+            <tr><td>Broken By</td><td>Union cryptanalysts; Kasiski published a general method in 1863</td></tr>
           </tbody>
         </table>
       </div>
@@ -188,6 +188,8 @@ All Vigenère: C = (P + K) mod 26</pre>
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 7, “Crises of the Union,” especially the May 25, 1863 dispatch and the distinction between successful decipherment and timely intelligence.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

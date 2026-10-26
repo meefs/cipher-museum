@@ -92,13 +92,13 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">One direction, with toy numbers</span></div>
       <div class="panel-body">
         <p>With <em>p</em> = 23, <em>g</em> = 5, <em>A</em> = 8 and <em>B</em> = 19, a discrete-log solver finds <em>a</em> = 6 because 5<sup>6</sup> mod 23 = 8. It can then compute the shared value 19<sup>6</sup> mod 23 = 2. These tiny parameters are for arithmetic only.</p>
-        <p class="source-note">Source: Boneh and Shoup, <a href="https://toc.cryptobook.us/" target="_blank" rel="noopener noreferrer"><em>A Graduate Course in Applied Cryptography</em>, version 0.6 (January 2023), §10.4.2</a>. Learning whether the value looks random is a further security question, distinct from merely computing it.</p>
+        <p class="source-note">Source: Dan Boneh and Victor Shoup, <em>A Graduate Course in Applied Cryptography</em>, version 0.6 (January 2023), §10.4.2. Learning whether the value looks random is a further security question, distinct from merely computing it.</p>
       </div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-shield"/></svg></span><span class="panel-title">Security &amp; Cryptanalysis</span></div>
-      <div class="panel-body"><p>Resistance to recovering the shared value rests on the computational Diffie–Hellman assumption in the selected group; discrete-log hardness alone does not establish that assumption. Parameter size, subgroup choice and public-key validation all matter; a bit length alone does not establish security. The 2015 <em>Logjam</em> attack exploited servers using common 512-bit primes &mdash; the lesson was to use larger groups and to switch to elliptic curves where 256-bit keys suffice (X25519). DH is vulnerable to <em>active</em> man-in-the-middle attacks because the exchanged values are unauthenticated &mdash; in practice DH is always combined with authentication (for example signatures, certificates or a suitable pre-shared-key protocol). A human password requires a properly designed password-authenticated key exchange, not an improvised password check.</p></div>
+      <div class="panel-body"><p>Resistance to recovering the shared value rests on the computational Diffie–Hellman assumption in the selected group; discrete-log hardness alone does not establish that assumption. Parameter size, subgroup choice and public-key validation all matter; a bit length alone does not establish security. The 2015 <em>Logjam</em> attack exploited servers using common 512-bit primes &mdash; the lesson was to use larger groups and to switch to elliptic curves where 256-bit keys suffice (X25519). DH is vulnerable to <em>active</em> man-in-the-middle attacks because the exchanged values are unauthenticated &mdash; protocols that need protection from active attackers must combine DH with authentication (for example signatures, certificates or a suitable pre-shared-key protocol). A human password requires a properly designed password-authenticated key exchange, not an improvised password check.</p></div>
     </div>
 
     <div class="panel">
@@ -157,7 +157,7 @@
     <a href="../ciphers/one-time-pad.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">One-Time Pad</span>
-      <span class="related-card__tag">The earlier &lsquo;perfect' system DH made practical to bootstrap</span>
+      <span class="related-card__tag">An information-theoretic guarantee that computational DH key agreement does not supply</span>
     </a>
       <a href="../hall-of-foundations/modular-arithmetic.html" class="related-card">
       <span class="related-card__number">&sect;143 &middot; Foundations</span>

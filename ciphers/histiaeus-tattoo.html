@@ -61,20 +61,20 @@
   </div>
   <h1 class="page-title">Histiaeus's Tattooed Messenger</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--historical" href="../museum-map.html#trust-labels" title="Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise." aria-label="Trust label: Historical Only. Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h11v12a2 2 0 0 0 2 2H6a3 3 0 0 1-3-3V7z"/><path d="M16 5a2 2 0 0 1 2 2v8h3a0 0 0 0 1 0 0v2a2 2 0 0 1-2 2"/></svg><span class="trust-label__text">Historical Only</span></a></div>
-  <p class="page-tagline">The earliest recorded act of pure steganography — message hidden under regrown hair.</p>
+  <p class="page-tagline">An ancient account of steganography: a message concealed beneath regrown hair.</p>
   <p class="exhibit-status-note">Steganography (concealment)</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Source</span><span class="fact-value">Herodotus, <em>Histories</em> Book V, ch. 35</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~499 BCE</span></div>
     <div class="fact"><span class="fact-label">Sender</span><span class="fact-value">Histiaeus, tyrant of Miletus, then captive in Susa</span></div>
     <div class="fact"><span class="fact-label">Method</span><span class="fact-value">Tattoo on shaved scalp; sent after hair regrew</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">If a channel cannot be searched, the message does not need to be encrypted</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Concealment and encryption protect different properties</span></div>
   </div>
 </div>
 
 <div class="demo-section" data-cipher="histiaeus-tattoo">
   <h2>Concealment Visualization</h2>
-  <p style="opacity:.85;">Type a short message. Step through "shave → tattoo → wait for regrowth → send → re-shave" to see how the cover hides the cipher. Track B exhibit — visualization rather than encryption.</p>
+  <p style="opacity:.85;">Type a short message. Step through "shave → tattoo → wait for regrowth → send → re-shave" to see how the cover hides the message. Track B exhibit — visualization rather than encryption.</p>
   <label for="input" style="display:block;margin-top:1rem;font-weight:600;">Secret message</label>
   <input type="text" id="input" value="REVOLT NOW" maxlength="40" style="width:100%;padding:.6rem;background:rgba(0,0,0,.3);border:1px solid var(--gold-b);color:var(--ink);border-radius:6px;font-family:monospace;">
   <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap;">
@@ -99,10 +99,10 @@
           return 'Stage 3: hair regrows over weeks\n\n  ~~~~\n /~o o~\\\n |~~~~~|   (message hidden, traveler appears unmarked)\n \\~~~~/';
         }
         if (stage === 3) {
-          return 'Stage 4: messenger walks to Aristagoras\n\n   ~~~~\n  /~o o~\\         ~~~ road to Miletus ~~~\n  |~~~~~|   →   →   →\n  \\~~~~/\n\n  Persian inspectors find nothing on his person.';
+          return 'Stage 4: messenger walks to Aristagoras\n\n   ~~~~\n  /~o o~\\         ~~~ road to Miletus ~~~\n  |~~~~~|   →   →   →\n  \\~~~~/\n\n  Herodotus describes the concealed message reaching Aristagoras; no inspection scene is specified.';
         }
         if (stage === 4) {
-          return 'Stage 5: recipient shaves the messenger\n\n  ___\n / o o\\\n |[' + (msg || '?') + ']|\n \\___/\n\n  → message read → revolt begins (Ionian Revolt, 499 BCE)';
+          return 'Stage 5: recipient shaves the messenger\n\n  ___\n / o o\\\n |[' + (msg || '?') + ']|\n \\___/\n\n  → message read: a signal urging revolt in Herodotus’s account';
         }
         return '';
       }
@@ -120,22 +120,22 @@
 
     <div class="cipher-significance">
       <h3>Why This Matters</h3>
-      <p>Around 499 BCE, the Milesian tyrant Histiaeus was effectively hostage at the Persian court of Darius. He needed to send a revolt order to his kinsman Aristagoras back in Ionia, knowing every road and harbor was watched. According to Herodotus, he shaved the head of his most trusted slave, tattooed the order on the scalp, and waited for the hair to regrow. The slave then walked unhindered through Persian territory and was instructed simply to ask Aristagoras to shave his head. The Ionian Revolt followed. This is the earliest extant story of pure steganography — hiding the existence of a message rather than its meaning.</p>
+      <p>Herodotus’s <em>Histories</em> 5.35 describes Histiaeus, detained at Susa, urging Aristagoras to revolt. With the roads guarded, he had an enslaved messenger’s head shaved and marked, waited for the hair to grow, then sent him to Miletus with instructions to have his head shaved again. This is an ancient literary account of concealment; the visualization is not independent evidence for every detail of the journey.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The episode appears in Herodotus's <em>Histories</em>, Book V, chapter 35. Herodotus also records other Greek concealment techniques in the same period: messages scratched onto wooden tablets and then waxed over (Demaratus warning Sparta of Xerxes' invasion), notes hidden inside the bellies of dead hares, and Aeneas Tacticus's catalogue of arrow-shaft and dice-cube concealments. Greek warfare produced an extensive culture of covert messaging, and Histiaeus's tattoo is the most theatrical example.</p></div>
+      <div class="panel-body"><p>The episode appears in Herodotus, <em>Histories</em> 5.35. Aeneas Tacticus wrote in the following century; his discussions of concealed messages belong to a separate source, not to Herodotus’s account. The surviving narrative does not establish a universal “first use” of steganography.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">Cryptography vs Steganography</span></div>
-      <div class="panel-body"><p>Cryptography <em>scrambles</em> a message; steganography <em>hides</em> that any message exists. Histiaeus's plaintext was never encrypted — anyone who shaved the slave could read the order plainly. The security came from the channel: no Persian inspector would think to shave a messenger. The two disciplines combine well: a modern leaker who hides PGP-encrypted bytes inside the low bits of a JPEG is performing both, in sequence, for exactly Histiaeus's reason.</p></div>
+      <div class="panel-body"><p>Encryption aims to hide a message’s meaning from someone who sees its ciphertext; steganography aims to hide the presence of a message. Herodotus describes concealment without specifying an encryption algorithm. Finding the concealed marks and interpreting them are separate tasks. Modern systems can encrypt a payload before embedding it in cover material.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">The Modern Heir: Steganography Today</span></div>
-      <div class="panel-body"><p>Modern steganography hides bits inside images, audio, video, network packet timing, and even DNA. The premise is unchanged from 499 BCE: the adversary is searching only the channels they expect to carry messages, and any unsearched channel is, by definition, secure. The Cipher Museum's Hall XI on Modern Cryptography includes the partner discipline of <em>covert channels</em>; Histiaeus is its earliest documented practitioner.</p></div>
+      <div class="panel-body"><p>Digital steganography can embed information in images or audio, while covert channels can exploit other observable behaviour. Security depends on what an observer can detect, inspect and modify. An overlooked channel is not automatically secure, and finding a hidden payload need not reveal its meaning if it is separately encrypted.</p></div>
     </div>
 
   </div>
@@ -160,6 +160,8 @@
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Herodotus, <em>Histories</em>, Book V, chapter 35 (G. C. Macaulay translation), for the messenger narrative. The exact modern wording entered in the visualization is illustrative.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>

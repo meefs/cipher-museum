@@ -72,15 +72,15 @@
   </div>
   <div class="page-meta">
     <span class="page-num">Exhibit 01 of 172</span>
-    <span class="badge era-ancient">Sparta · ~500 BC</span>
+    <span class="badge era-ancient">Ancient Sparta · interpretation debated</span>
   </div>
   <h1 class="page-title">Scytale</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">A leather strip, a wooden rod, and the birth of military cryptography</p>
+  <p class="page-tagline">A traditional rod-and-strip reconstruction, with a debated historical interpretation</p>
   <p class="exhibit-status-note">Simple transposition model; historical origin and military use are debated.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Sparta, Ancient Greece</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~500 BC</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Ancient accounts; reconstructed method not securely dated</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Rod diameter (physical key)</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Brute force — try different rod diameters</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Transposition &amp; key space</span></div>
@@ -102,7 +102,7 @@
         <span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
         <p>Later accounts, especially Plutarch’s <em>Life of Lysander</em>, describe a staff and written strip. The earlier sources and their cryptographic interpretation are disputed. The physical reconstruction below is useful for teaching, but should not be presented as an uncontested account of Spartan practice.</p>
-        <p style="margin-top:1rem;">Spartan ephors (civilian magistrates) used the scytale to communicate secretly with generals in the field. The system ensured that if a messenger was captured — or defected — the message would appear as nothing more than a meaningless strip of leather with scrambled letters.</p>
+        <p style="margin-top:1rem;">Traditional reconstructions interpret the Spartan staff-and-dispatch accounts as secret military communication. In the transposition model, an unwound strip disrupts the reading order; that demonstration does not settle how the ancient object was used.</p>
         <p style="margin-top:1rem;">The familiar scytale reconstruction illustrates transposition cryptography — the idea that you can hide a message not by changing its letters, but by rearranging their order. This concept survived 2,500 years and is visible today in AES ShiftRows.</p>
       </div>
     </div>
@@ -111,7 +111,7 @@
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span>
         <span class="panel-title">How It Works</span></div>
       <div class="panel-body">
-        <p>A leather strip (skytale) is wound tightly around a wooden rod. The message is written along the length of the rod. When the strip is unwound, the letters are scrambled. Only a rod of the same diameter decrypts it.</p>
+        <p>A leather strip (skytale) is wound tightly around a wooden rod. The message is written along the length of the rod. When the strip is unwound, the letters are scrambled. A matching rod restores the intended arrangement physically; an analyst may also recover the arrangement without that rod.</p>
         <p style="margin-top:1rem;"><strong>Key = rod diameter</strong></p>
         <pre style="background:var(--s3);border:1px solid var(--s4);border-radius:var(--r);padding:1.25rem;font-family:var(--fm);font-size:.8rem;color:var(--tx2);line-height:1.8;overflow-x:auto;margin-top:1rem;">
 Example (3-row rod, message ATTACKATDAWN):
@@ -126,8 +126,8 @@ of the rod: ACD TKA TAW ATN
 (transposition rearranges letter positions)
 
 Unwound strip reads: ACDTKATAWATN
-Only wrapping on a rod of the same diameter
-restores the original reading order.</pre>
+Wrapping on a matching rod restores this reading order;
+the equivalent rectangle can also be reconstructed.</pre>
         <div class="callout callout-info">
           <span class="callout-icon">ℹ️</span>
           <div class="callout-body">
@@ -159,7 +159,7 @@ restores the original reading order.</pre>
             <tr><td>Physical key (rod diameter)</td><td>Cryptographic key: a specific parameter shared by sender and receiver</td></tr>
             <tr><td>Transposition (rearrange, not replace)</td><td>AES ShiftRows: cyclic row shifts for diffusion</td></tr>
             <tr><td>Brute force possible (small key space)</td><td>AES-256: 2²⁵⁶ possible keys — exhaustive search infeasible</td></tr>
-            <tr><td>Physical device = key distribution problem</td><td>Public-key cryptography: Diffie-Hellman solves key distribution mathematically</td></tr>
+            <tr><td>Physical device = key distribution problem</td><td>Authenticated Diffie–Hellman can establish a shared secret; unauthenticated exchange remains vulnerable to an active intermediary</td></tr>
           </tbody>
         </table>
       </div>
@@ -211,10 +211,10 @@ restores the original reading order.</pre>
         <table class="cipher-table">
           <tbody>
             <tr><td>Exhibit</td><td>1 of 172</td></tr>
-            <tr><td>Era</td><td>Sparta · ~500 BC</td></tr>
+            <tr><td>Era</td><td>Ancient Sparta · interpretation debated</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
             <tr><td>Origin</td><td>Spartan military</td></tr>
-            <tr><td>Year</td><td>~500 BC</td></tr>
+            <tr><td>Year</td><td>Ancient accounts; reconstructed method not securely dated</td></tr>
             <tr><td>Broken By</td><td>Brute force</td></tr>
           </tbody>
         </table>

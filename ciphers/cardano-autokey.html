@@ -59,7 +59,7 @@
     <span class="page-num">Hall III · Polyalphabetic</span>
     <span class="badge era-renaissance">Italian Renaissance · 1550</span>
   </div>
-  <h1 class="page-title">Cardano Autokey <span style="opacity:.6;font-weight:400;">1550 · the original self-keying cipher</span></h1>
+  <h1 class="page-title">Cardano Autokey <span style="opacity:.6;font-weight:400;">1550 historical idea · modern comparison model</span></h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
   <p class="page-tagline">Cardano’s self-keying idea, compared with a modern one-letter-primer plaintext-autokey model.</p>
   <p class="exhibit-status-note">The one-letter-primer widget is a modern comparison with Vigenère-style plaintext autokey, not Cardano’s exact procedure.</p>
@@ -67,7 +67,7 @@
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Girolamo Cardano, Italy</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">1550 (<em>De Subtilitate</em>)</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Single priming letter</span></div>
-    <div class="fact"><span class="fact-label">Key Length</span><span class="fact-value">Effectively the message length</span></div>
+    <div class="fact"><span class="fact-label">Secret choice in this model</span><span class="fact-value">One of 26 primer letters</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Key reuse from the plaintext is not the same as key freshness</span></div>
   </div>
 </div>
@@ -92,7 +92,7 @@ Cipher: C Q I X F Q E T F U L Q V O N A</pre></div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Probable-word cascade</div><div class="attack-diff">Complexity: Easy with a crib</div><p class="attack-desc">With a one-letter primer, a correct plaintext guess propagates one position at a time. Wrong guesses generate alternative chains that need evaluation against language or other evidence. Longer primers change the spacing of propagation rather than making plaintext feedback secure.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">26 priming guesses</div><div class="attack-diff">Complexity: Trivial on short messages</div><p class="attack-desc">Try every possible seed letter. For each, run the cascade and look for English. Twenty-six attempts and a frequency check is enough.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Probable-word cascade</div><div class="attack-diff">Complexity: Easy with a crib</div><p class="attack-desc">With a one-letter primer, a correct plaintext guess propagates one position at a time. Wrong guesses generate alternative chains that need evaluation against language or other evidence. Longer primers change the spacing of propagation rather than making plaintext feedback secure.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">26 priming guesses</div><div class="attack-diff">Complexity: Trivial on short messages</div><p class="attack-desc">Try every possible seed letter. For each, run the cascade and look for English. The correct plaintext is among the 26 candidates; a short or unusual message may need context to distinguish it.</p></div></div>
     </div>
 
     <div class="panel">
@@ -127,7 +127,7 @@ Cipher: C Q I X F Q E T F U L Q V O N A</pre></div>
     <a href="../ciphers/autokey.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Vigenère Autokey</span>
-      <span class="related-card__tag">Cardano's idea, hardened with a multi-letter primer</span>
+      <span class="related-card__tag">A longer primer spaces the propagation chains farther apart</span>
     </a>
     <a href="../ciphers/vigenere.html" class="related-card">
       <span class="related-card__number">Related</span>

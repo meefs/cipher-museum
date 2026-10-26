@@ -47,7 +47,8 @@ function validate(html) {
     const stop = stops.find(item => item.dataset.chapters === chapters);
     assert.ok(stop, 'Missing 2018 chapter range ' + chapters);
     assert.ok(stop.querySelector('a[href="' + exhibit + '"]'), chapters + ' has the wrong exhibit.');
-    for (const chapter of sourceChapters) assert.ok(stop.querySelector('a[href="https://inventwithpython.com/cracking/chapter' + chapter + '.html"]'), 'Wrong author chapter URL for ' + chapter);
+    for (const chapter of sourceChapters) assert.match(stop.textContent, new RegExp('Chapter ' + chapter + '(?![0-9])'), 'Missing bibliographic chapter ' + chapter);
+    assert.equal(stop.querySelectorAll('a[href^="https://inventwithpython.com/cracking/"]').length, 0, 'Reference book chapters without linking to ebook copies.');
   }
 
   const legalSourceHosts = new Set([
@@ -96,6 +97,9 @@ assert.throws(() => validate(html.replace('ciphers/columnar.html#multiple-anagra
 assert.throws(() => validate(html.replace('concept companions, not reproductions', 'complete reproductions')), /concept companions/);
 assert.throws(() => validate(html.replace('https://store.doverpublications.com/products/9780486200972', 'https://drive.google.com/file/d/private-copy')), /official author\/publisher resource/);
 
+// User preference: a correct chapter citation must not become a full-ebook link.
+assert.throws(() => validate(html.replace('<p>Chapter 5 · Chapter 6</p>', '<p><a href="https://inventwithpython.com/cracking/chapter5.html">Chapter 5</a> · Chapter 6</p>')), /without linking to ebook copies/);
+
 // Source links from other exhibits must reveal the referenced book, not leave
 // its source and chapters hidden inside a closed disclosure.
 const navSource = new JSDOM(html).window.document.getElementById('reading-trail-navigation').textContent;
@@ -111,4 +115,4 @@ linked.window.document.querySelector('.fr-trail-nav a[href="#gaines"]').click();
 assert.equal(gains.open, true, 'Selecting an already-targeted but closed route should reopen it.');
 linked.window.close();
 
-console.log('Reading trails: four edition-pinned books, seven Sweigart stops, ' + checked + ' internal routes, official sources, deep links and four mutation checks passed.');
+console.log('Reading trails: four edition-pinned books, seven Sweigart stops, ' + checked + ' internal routes, official sources, deep links and five mutation checks passed.');

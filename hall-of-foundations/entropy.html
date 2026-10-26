@@ -59,15 +59,12 @@
     <p class="standfirst">
       Shannon gave uncertainty a number. Entropy measures how surprising a
       source is — how many bits of genuine unknowing it holds. It's why the
-      one-time pad is provably unbreakable, and why a weak password falls in
-      seconds regardless of how the cipher is built.
+      one-time pad can achieve perfect secrecy, and why predictable passwords are vulnerable to guessing. Guessing cost also depends on the password distribution, derivation function and attack setting.
     </p>
   </div>
 
   <div class="honesty">
-    <strong>Secrecy is bounded by surprise.</strong> No cipher can protect a key
-    that wasn't surprising to begin with. Entropy is the ceiling on security —
-    everything else is just not wasting it.
+    <strong>Different measures answer different questions.</strong> Shannon entropy measures average uncertainty. Min-entropy, guessing distributions and the cost of each trial are also relevant to attacks. None is a stand-alone security rating for a complete system.
   </div>
 
   <section class="exhibit">
@@ -135,8 +132,7 @@
       <p>
         The <a href="../ciphers/one-time-pad.html">One-Time Pad</a>&#8217;s perfect
         secrecy is this measure made physical. A cipher fed a
-        low-entropy key is broken before the algorithm runs — the attacker just
-        searches the small space of likely keys. Entropy is why
+        predictable key can be vulnerable to searches over likely candidates, with cost depending on how candidates can be tested. Entropy is why
         <strong>the random number generator matters as much as the cipher</strong>.
       </p>
       <p>Security bits estimate attack cost under a specified model; they are not the same quantity as Shannon entropy. AES-128 has a 128-bit key space and is intended to provide roughly 128-bit classical security. A suitable 256-bit elliptic-curve group has generic discrete-log attacks costing roughly 2¹²⁸ group operations. A source's Shannon entropy alone does not specify its password-guessing cost or a scheme's computational security.</p>

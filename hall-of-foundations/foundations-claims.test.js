@@ -193,7 +193,7 @@ var REQUIRED = [
     "§144 must give the odd-candidate density"],
   ["hall-of-foundations/random-oracle.html", /SLH-DSA/,
     "§154 must name the signature standard that does not need the oracle"],
-  ["hall-of-foundations/random-oracle.html", /[Nn]ecessary, not sufficient/,
+  ["hall-of-foundations/random-oracle.html", /scramble is not evidence of one-wayness/,
     "§154 must caveat that avalanche is not evidence of one-wayness"],
   ["hall-of-foundations/pairings.html", /STARK/,
     "§156 must name a succinct system that uses no pairing"],
@@ -217,7 +217,7 @@ var REQUIRED = [
   // visitor who stops early should not leave with the misconception.
   ["hall-of-foundations/closest-vector.html", /trapdoor model/i,
     "§152's basis labels must mark themselves as a model, not as Kyber's keys"],
-  ["hall-of-foundations/closest-vector.html", /§4 below shows/i,
+  ["hall-of-foundations/closest-vector.html", /(?:§4 below shows|Section 4 distinguishes)/i,
     "§152's honesty box must point forward to the real key structure"],
   ["hall-of-foundations/learning-with-errors.html", /essential public relation/i,
     "§157 must claim the public relation, not the whole published key"]

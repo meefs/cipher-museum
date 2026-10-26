@@ -118,7 +118,7 @@
   <text x="42" y="108" font-size="7" fill="#706878">... (13 rows total, paired letters)</text>
   <!-- Reciprocal note -->
   <rect x="10" y="150" width="360" height="30" fill="rgba(90,200,160,.06)" stroke="rgba(90,200,160,.15)" stroke-width=".5" rx="5"/>
-  <text x="20" y="164" font-size="9" fill="#5AC8A0">★ Each row maps A↔N, B↔O, etc. — swap is symmetric</text>
+  <text x="20" y="164" font-size="9" fill="#5AC8A0">★ The AB row maps A↔N, B↔O; other rows use different pairs</text>
   <text x="20" y="176" font-size="8" fill="#706878">Encrypt(A)=N → Encrypt(N)=A → same operation decrypts!</text>
 </svg>
 <figcaption class="figure-caption">13 rows for 13 key-letter pairs — symmetric swaps make encryption and decryption identical</figcaption>
@@ -135,7 +135,7 @@
       <div class="panel-body">
         <table class="cipher-table">
           <thead><tr><th>Concept from Porta Cipher</th><th>Modern Evolution</th></tr></thead>
-          <tbody><tr><td>13-row reciprocal tableau</td><td>Symmetric cipher operations: same hardware encrypts and decrypts</td></tr>
+          <tbody><tr><td>13-row reciprocal tableau</td><td>Reciprocal substitutions share one operation; symmetric-key encryption in general need not be self-inverse</td></tr>
 <tr><td>Paired key letter lookup</td><td>S-box lookup tables in AES SubBytes step</td></tr>
 <tr><td>Smaller table for field use</td><td>Hardware-optimized cipher implementations</td></tr></tbody>
         </table>

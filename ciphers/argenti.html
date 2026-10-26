@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Argenti Family Cipher (Vatican papal nomenclators · 1500s–1600s) — The Cipher Museum</title>
-  <meta name="description" content="Matteo and Marcello Argenti served as papal cryptanalysts to seven popes. Their Trattato in Cifra codified the homophonic-nomenclator pattern that dominated European diplomacy for two centuries.">
+  <meta name="description" content="Giovanni Battista Argenti and his nephew Matteo documented papal nomenclators, homophones, nulls and cryptanalytic methods in Renaissance Italy.">
   <meta property="og:title" content="Argenti Family Cipher (Vatican papal nomenclators · 1500s–1600s) — The Cipher Museum">
-  <meta property="og:description" content="Matteo and Marcello Argenti served as papal cryptanalysts to seven popes. Their Trattato in Cifra codified the homophonic-nomenclator pattern that dominated European diplomacy for two centuries.">
+  <meta property="og:description" content="Giovanni Battista Argenti and his nephew Matteo documented papal nomenclators, homophones, nulls and cryptanalytic methods in Renaissance Italy.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphermuseum.com/ciphers/argenti.html">
   <meta property="og:image" content="https://ciphermuseum.com/images/og/og-default.png">
@@ -16,7 +16,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://ciphermuseum.com/images/og/og-default.png">
   <meta name="twitter:title" content="Argenti Family Cipher (Vatican papal nomenclators · 1500s–1600s) — The Cipher Museum">
-  <meta name="twitter:description" content="Matteo and Marcello Argenti served as papal cryptanalysts to seven popes. Their Trattato in Cifra codified the homophonic-nomenclator pattern that dominated European diplomacy for two centuries.">
+  <meta name="twitter:description" content="Giovanni Battista Argenti and his nephew Matteo documented papal nomenclators, homophones, nulls and cryptanalytic methods in Renaissance Italy.">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="canonical" href="https://ciphermuseum.com/ciphers/argenti.html">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -61,7 +61,7 @@
   </div>
   <h1 class="page-title">Argenti Family Cipher <span style="opacity:.6;font-weight:400;">Vatican papal nomenclators · 1500s–1600s</span></h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">The Vatican’s house cryptographers wrote the textbook — literally — on homophonic substitution. For 200 years, every European chancery copied it.</p>
+  <p class="page-tagline">Papal cipher specialists whose surviving manuscripts document the craft of Renaissance nomenclators.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Designers</span><span class="fact-value">Giovanni Battista Argenti &amp; his nephew Matteo Argenti</span></div>
     <div class="fact"><span class="fact-label">Employer</span><span class="fact-value">Holy See (Vatican Secretary of State, 1591–1630s)</span></div>
@@ -78,7 +78,7 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Giovanni Battista Argenti and Matteo Argenti served the papal cipher office in the late sixteenth and early seventeenth centuries. Surviving keys and manuscripts document their work on diplomatic ciphers. This does not establish the previously asserted hereditary office from 1555 or the stated relationship between Matteo and Marcello.</p><p style="margin-top:1rem;">Matteo’s manuscripts discuss homophones, nulls, codewords, and cryptanalysis. Aloys Meister published papal cryptographic material in 1906. <a href="https://cryptiana.web.fc2.com/code/polyalphabetic.htm">Satoshi Tomokiyo’s source-based analysis</a> distinguishes Matteo’s service in 1591–1605 from his later compilation of material. These techniques were not all invented at once in a 1591 handbook.</p><p style="margin-top:1rem;">Nomenclators remained important in European diplomacy for centuries, with substantial variation among keys and administrations. The Argenti documents are valuable examples, not evidence that every later chancery or the earlier Babington correspondence copied a single Argenti pattern.</p>
+      <p>Giovanni Battista Argenti and Matteo Argenti served the papal cipher office in the late sixteenth and early seventeenth centuries. Surviving keys and manuscripts document their work on diplomatic ciphers. Matteo succeeded his uncle Giovanni Battista in 1591; Marcello was Matteo’s younger brother, not his nephew.</p><p style="margin-top:1rem;">Matteo’s manuscripts discuss homophones, nulls, codewords, and cryptanalysis. Aloys Meister published papal cryptographic material in 1906. <a href="https://cryptiana.web.fc2.com/code/polyalphabetic.htm">Satoshi Tomokiyo’s source-based analysis</a> distinguishes Matteo’s service in 1591–1605 from his later compilation of material. These techniques were not all invented at once in a 1591 handbook.</p><p style="margin-top:1rem;">Nomenclators remained important in European diplomacy for centuries, with substantial variation among keys and administrations. The Argenti documents are valuable examples, not evidence that every later chancery or the earlier Babington correspondence copied a single Argenti pattern.</p>
     </div>
 
     <div class="panel">
@@ -93,7 +93,7 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">What It Teaches Modern Cryptography</span></div>
-      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Argenti lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Homophones spread frequency — but never erase it</td><td>Why ECB-mode block ciphers leak; why authenticated encryption is mandatory</td></tr><tr><td>Layered defences (alphabet + nomenclator + nulls)</td><td>Defence in depth: cipher + MAC + nonces + key rotation</td></tr><tr><td>Regular replacement of compromised or overused keys</td><td>Modern key-management policies set lifetimes appropriate to the system and threat</td></tr><tr><td>Best-in-class systems still need cryptanalysts to validate them</td><td>Independent academic review; NIST competitions; open-source scrutiny</td></tr></tbody></table></div>
+      <div class="panel-body"><table class="cipher-table"><thead><tr><th>Argenti lesson</th><th>Modern echo</th></tr></thead><tbody><tr><td>Homophones split letter counts; higher-order patterns can remain</td><td>Compare statistical leakage with ECB’s repeated-block leakage; homophones provide no authentication</td></tr><tr><td>Layered defences (alphabet + nomenclator + nulls)</td><td>Defence in depth: cipher + MAC + nonces + key rotation</td></tr><tr><td>Regular replacement of compromised or overused keys</td><td>Modern key-management policies set lifetimes appropriate to the system and threat</td></tr><tr><td>Best-in-class systems still need cryptanalysts to validate them</td><td>Independent academic review; NIST competitions; open-source scrutiny</td></tr></tbody></table></div>
     </div>
 
     <div class="panel">
@@ -110,7 +110,7 @@
       <div class="panel-body">
         <table class="cipher-table">
           <tbody>
-            <tr><td>Designers</td><td>Matteo Argenti (1561–1638) &amp; his nephew Marcello Argenti</td></tr>
+            <tr><td>Designers</td><td>Giovanni Battista Argenti &amp; his nephew Matteo Argenti</td></tr>
             <tr><td>Employer</td><td>Holy See (Vatican Secretary of State, 1591–1630s)</td></tr>
             <tr><td>Treatise</td><td>Trattato in Cifra (manuscript, c.1591–1605)</td></tr>
             <tr><td>Mechanism</td><td>Homophonic substitution + nomenclator + nulls</td></tr>
@@ -121,6 +121,8 @@
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 3, “The Rise of the West,” on Giovanni Battista, Matteo and Marcello Argenti. The interactive codebook is a teaching model, not a transcription of a papal key.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
