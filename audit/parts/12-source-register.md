@@ -1,8 +1,8 @@
 # Source register and recorded access limits
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
-These 148 identities and reading scopes come from the prior review ledger. They are not the underlying books/papers and are not proof that a particular claim is established.
+These 160 identities and reading scopes come from the prior review ledger. They are not the underlying books/papers and are not proof that a particular claim is established.
 
 ## HAC-1997 — Handbook of Applied Cryptography
 
@@ -825,7 +825,16 @@ These 148 identities and reading scopes come from the prior review ledger. They 
     "Title/copyright/degree page visually inspected: University of Kassel Dr. rer. nat., defence 16 October 2017, publication 2018",
     "Chapter7 §7.1, supplied text7013–7038: approximately140000 M-209 machines."
   ],
-  "scope": "Verified per-bar OR engagement. The book’s output-period wording is not adopted as an unconditional guarantee; joint wheel positions and generated keystream period are distinct."
+  "scope": "Verified per-bar OR engagement. The book’s output-period wording is not adopted as an unconditional guarantee; joint wheel positions and generated keystream period are distinct.",
+  "ebook_followup_2026_10_26": {
+    "edition_checked": "kassel university press, published thesis",
+    "passages_read": [
+      "Printed pp.28–37 / PDF49–58: scoring functions and sample-length sensitivity",
+      "Printed pp.49–60 / PDF70–81: evaluation methodology, restarts and work accounting",
+      "Printed pp.67–80 / PDF88–101: columnar search and complete/incomplete rectangles"
+    ],
+    "scope": "Targeted passage review; reported book success rates are not Museum measurements."
+  }
 }
 ```
 
@@ -2259,5 +2268,252 @@ These 148 identities and reading scopes come from the prior review ledger. They 
     "§4.7.1, PDF p.34: 79 full-DES data/analysis runs; data collection on 48 threads, counting phase on one thread, and additional time required if actual full key recovery were performed."
   ],
   "scope": "Peer-reviewed IACR ToSC 2018(3), pp.215–264. Full journal PDF obtained and relevant passages inspected. The operating point is a conditional-linear known-plaintext result, not differential–linear composition, ciphertext-only recovery or a universal laptop timing claim. Experiments validate statistics and candidate-key counts; they do not demonstrate 79 completed full key searches. Updated exhibit wording and precise section/page locators to preserve that distinction."
+}
+```
+
+## SWEIGART-2018 — Cracking Codes with Python: An Introduction to Building and Breaking Ciphers
+
+```json
+{
+  "title": "Cracking Codes with Python: An Introduction to Building and Breaking Ciphers",
+  "authors": [
+    "Al Sweigart"
+  ],
+  "year": 2018,
+  "edition": "No Starch Press",
+  "passages_read": [
+    "Chapter11, supplied reflowed PDF182–188,199–202: heuristic English recognition and adjustable thresholds"
+  ],
+  "scope": "Printed folios unavailable; section and PDF positions identify the supplied copy. No whole-book reading.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## GRAY-1990-CORRECTED-2023 — Entropy and Information Theory
+
+```json
+{
+  "title": "Entropy and Information Theory",
+  "authors": [
+    "Robert M. Gray"
+  ],
+  "year": 1990,
+  "edition": "Corrected first edition, 26 June 2023",
+  "passages_read": [
+    "§2.2 printed pp.18–20 / PDF40–42: single-variable, block entropy and entropy rate",
+    "§2.6 printed p.42 / PDF64, Lemmas2.6.1–2; surrounding pp.42–44"
+  ],
+  "scope": "This supplied work is the corrected first edition, not the 2011 second edition. Applying the process distinction to IC is an inference supported by exact Museum-code reproduction.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## VADHAN-2012 — Pseudorandomness
+
+```json
+{
+  "title": "Pseudorandomness",
+  "authors": [
+    "Salil P. Vadhan"
+  ],
+  "year": 2012,
+  "edition": "Foundations and Trends in Theoretical Computer Science 7(1–3); volume dated 2011",
+  "passages_read": [
+    "§6.1.2 printed pp.171–172 / PDF174–175: Definition6.7, Lemma6.8 and point-mass/uniform mixture",
+    "Supporting §§6.1.3 and6.2.1 printed pp.174–180"
+  ],
+  "scope": "Copyright2012 and volume date2011 distinguished. Museum mixture preset is an adaptation, not a measured password population.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## TYAGI-WATANABE-2023 — Information-theoretic Cryptography
+
+```json
+{
+  "title": "Information-theoretic Cryptography",
+  "authors": [
+    "Himanshu Tyagi",
+    "Shun Watanabe"
+  ],
+  "year": 2023,
+  "edition": "Cambridge University Press",
+  "passages_read": [
+    "§7.1 printed pp.119–121",
+    "§7.3 Example7.9 and Definition7.10, printed p.124 / PDF139",
+    "§7.3 printed pp.125–127 / PDF140–142: conditional min-entropy and general formulation"
+  ],
+  "scope": "Two independent fair bits and a specified one-coordinate leakage model. Parity-leakage failure is an original control; no generic XOR-security assertion.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## TUNNY-1945 — General Report on Tunny: With Emphasis on Statistical Methods
+
+```json
+{
+  "title": "General Report on Tunny: With Emphasis on Statistical Methods",
+  "authors": [
+    "I. J. Good",
+    "Donald Michie",
+    "Geoffrey Timms"
+  ],
+  "year": 1945,
+  "edition": "Supplied 499-page modern collected archival facsimile",
+  "passages_read": [
+    "§11A(b)–(c), printed p.4 / PDF7: operational teleprinter/radio signal path",
+    "§11B(g),(j), printed pp.8,10 / PDF11,13: plaintext-feedback limitations and configurations",
+    "§43B printed p.313 / PDF307: Turingery",
+    "§43C(g) printed p.317 / PDF311: Herring depth limitation",
+    "§53B printed pp.333–334 / PDF327–328: tape clock, electronic movement and rate",
+    "§53F–G printed pp.337–338 / PDF331–332: counters and threshold selection"
+  ],
+  "scope": "Principal disputed historical passages checked against scans, with extracted text for surrounding context. Static six-position counting example is invented teaching data, not historical traffic.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## GANNON-2014 — Colossus: Bletchley Park’s Greatest Secret
+
+```json
+{
+  "title": "Colossus: Bletchley Park’s Greatest Secret",
+  "authors": [
+    "Paul Gannon"
+  ],
+  "year": 2014,
+  "edition": "Atlantic Books, 2014 edition; original copyright2006",
+  "passages_read": [
+    "Chapter10 Fishing the Depths, converted PDF94–97",
+    "Chapter13 Making the Difference, converted PDF132–135, especially133",
+    "Chapter15 Inventing the Electronic Computing Machine, converted PDF153–156"
+  ],
+  "scope": "Converted PDF positions are not verified print pagination. Arithmetic slip around converted p.95 excluded:574=14×41. Primary Tunny report controls specific Turingery attribution.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## DAEMEN-RIJMEN-2020 — The Design of Rijndael: The Advanced Encryption Standard (AES)
+
+```json
+{
+  "title": "The Design of Rijndael: The Advanced Encryption Standard (AES)",
+  "authors": [
+    "Joan Daemen",
+    "Vincent Rijmen"
+  ],
+  "year": 2020,
+  "edition": "Springer, second edition",
+  "passages_read": [
+    "§9.1.3 printed p.128 / PDF148: trails versus differentials",
+    "§§9.2.2–9.2.3 printed pp.131–132 / PDF151–152: active Sboxes/byte weights",
+    "§§9.4.4–9.5.2 printed pp.140–143 / PDF160–163: dispersion and Theorem9.5.1",
+    "Chapter13 opening, printed p.195 / PDF215"
+  ],
+  "scope": "Individual nonzero four-round trail bound, not an exact count for every pair or a full-AES security proof.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## BIHAM-SHAMIR-1993-2009 — Differential Cryptanalysis of the Data Encryption Standard
+
+```json
+{
+  "title": "Differential Cryptanalysis of the Data Encryption Standard",
+  "authors": [
+    "Eli Biham",
+    "Adi Shamir"
+  ],
+  "year": 1993,
+  "edition": "Springer book; supplied authors’ LaTeX recompilation dated7December2009",
+  "passages_read": [
+    "§3.2 numbered pp.15–22 / PDF21–28: Definition3.2, Table3.2, Examples3.4–3.7",
+    "Chapter5 and§5.1 numbered pp.78–86 / PDF84–92; Table5.2 numbered86/PDF92"
+  ],
+  "scope": "Numbered pages belong to the 2009 recompilation, not verified1993 print folios. Distinguish collection, retained data, analysis work and access models; S1 exercise exposes intermediate information.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## ANDERSON-2020 — Security Engineering: A Guide to Building Dependable Distributed Systems
+
+```json
+{
+  "title": "Security Engineering: A Guide to Building Dependable Distributed Systems",
+  "authors": [
+    "Ross Anderson"
+  ],
+  "year": 2020,
+  "edition": "Wiley, third edition",
+  "passages_read": [
+    "§4.3 printed pp.122–124 / PDF169–171: token-meter replay, last-token failure, counters/reset/synchronization",
+    "Surrounding protocol context PDF167–173"
+  ],
+  "scope": "Targeted reading supports authenticity versus freshness. Museum counter example declares ordered delivery and key/session context.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## WONG-2021 — Real-World Cryptography
+
+```json
+{
+  "title": "Real-World Cryptography",
+  "authors": [
+    "David Wong"
+  ],
+  "year": 2021,
+  "edition": "Manning; supplied768-page reflowed conversion",
+  "passages_read": [
+    "§2.5.4 PDF120–123: ambiguous structured hashing and TupleHash",
+    "§3.3.3 PDF140–143: replay",
+    "§8.6 PDF349–356: HKDF Extract/Expand, labels and output-length prefix relationship"
+  ],
+  "scope": "Printed folios unavailable. Supplied figure8.7/8.8 captions/references appear swapped; prose/specification controls. Identical serialized inputs are not a hash collision; HKDF does not create input entropy.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## MENEZES-LATTICES-2026 — A Gentle Introduction to Lattice-Based Cryptography
+
+```json
+{
+  "title": "A Gentle Introduction to Lattice-Based Cryptography",
+  "authors": [
+    "Alfred Menezes"
+  ],
+  "year": 2026,
+  "edition": "Version3.3,16September2026",
+  "passages_read": [
+    "§§4.3–4.4 printed pp.35–40 / PDF48–53: q-ary lattice and BDD connection",
+    "§6.4 printed pp.64–66 / PDF77–79: PKE to KEM and implicit rejection",
+    "§7.1.4 Issue5 printed pp.73–74 / PDF86–87: bounded masking and aborts"
+  ],
+  "scope": "Pedagogical mechanisms, not standard implementation. FIPS algorithm passages checked separately; current errata spreadsheet contents were inaccessible and are not represented as reconciled. q-ary example explicitly uses prime modulus and finite-field rank.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## MANGARD-OSWALD-POPP-2007 — Power Analysis Attacks: Revealing the Secrets of Smart Cards
+
+```json
+{
+  "title": "Power Analysis Attacks: Revealing the Secrets of Smart Cards",
+  "authors": [
+    "Stefan Mangard",
+    "Elisabeth Oswald",
+    "Thomas Popp"
+  ],
+  "year": 2007,
+  "edition": "Springer",
+  "passages_read": [
+    "Introduction printed pp.1–13 / PDF23–35: implementation attacks and models",
+    "§3.3 printed pp.38–42 / PDF58–62: Hamming-weight/distance models",
+    "§§6.1–6.2 printed pp.119–124 / PDF138–143: aligned known-data traces and correlation",
+    "§9.1 printed pp.223–226 / PDF240–243: masking and independence assumptions",
+    "§§10.1–10.2 printed pp.245–249 / PDF262–266: joint leakage and masking limitations"
+  ],
+  "scope": "Specific implementation/leakage assumptions; no generic AES break, universal trace count or masking certification. Original covariance example independently enumerated over all65536 byte/mask pairs.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
 }
 ```

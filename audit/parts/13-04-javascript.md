@@ -1,6 +1,6 @@
 # javascript appendix 4
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## JavaScript — js/detective/challenges.js
 
@@ -390,8 +390,8 @@ Supporting source for public page behavior; presence of code does not prove that
 Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
 
 - Served/distributed path: `js/detective/detective.js`
-- Served SHA-256: `f35b856babbd33ce06bbc881981c66397be4149f786e5e73b8e3afd4ba0c474c`
-- Readable-source SHA-256: `f35b856babbd33ce06bbc881981c66397be4149f786e5e73b8e3afd4ba0c474c`
+- Served SHA-256: `4abd9c050c1dfbae843aecc5393fa1a1b3374752614e77a7b1dea42607a4cc84`
+- Readable-source SHA-256: `4abd9c050c1dfbae843aecc5393fa1a1b3374752614e77a7b1dea42607a4cc84`
 
 
 ```javascript
@@ -709,7 +709,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
 
     var html = '<div class="autosolve-best">' +
       '<div class="autosolve-best-header">' +
-        '<h3 class="autosolve-best-method">Best candidate: ' + esc(best.method) + '</h3>' +
+        '<h3 class="autosolve-best-method">Best-scoring candidate (unverified): ' + esc(best.method) + '</h3>' +
         '<span class="conf-badge conf-badge--' + esc(conf.tier) + '">' + esc(conf.label) + '</span>' +
       '</div>' +
       '<p class="autosolve-best-key"><strong>Key:</strong> ' + esc(best.key) + '</p>' +
@@ -717,11 +717,26 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
       '<a class="autosolve-cta" href="lab/workbench.html#ct=' + encodedCt + '">Refine in the Workbench \u2192</a>' +
       '</div>';
 
+    html += '<p class="autosolve-runtime">Unverified: the score ranks candidates under this embedded English model. It is not a language probability, a proof of the original message, or an authentication check. Short samples, names, other languages and repeated fragments can mislead. The 60-letter display guard is a teaching convention, not a reliability threshold.</p>';
+    var model = global.DetectiveLangModel;
+    if (model) {
+      var letters = (best.plaintext || '').toUpperCase().replace(/[^A-Z]/g, '').length;
+      function displayScore(value) { return Number.isFinite(value) ? value.toFixed(3) : 'not available'; }
+      html += '<details><summary>Inspect this candidate’s model score</summary><p>' + letters + ' letters; ' + Math.max(0, letters - 1) + ' overlapping bigrams; ' + Math.max(0, letters - 2) + ' overlapping trigrams.</p>' +
+        '<p>Trigram sum ' + displayScore(model.trigramScore(best.plaintext)) +
+        ' + 0.4 × bigram sum ' + displayScore(model.bigramScore(best.plaintext)) +
+        ' + word bonus ' + displayScore(model.wordBonus(best.plaintext)) +
+        ' = total ' + displayScore(model.fitness(best.plaintext)) +
+        '. Per letter: ' + displayScore(letters ? model.fitness(best.plaintext) / letters : -Infinity) +
+        '. Higher is preferred by the search; these are heuristic units.</p></details>';
+    }
+
     if (result.attempts.length > 1) {
       html += '<div class="autosolve-others">' +
         '<p class="autosolve-others-title">Other candidates considered</p>' +
+        '<div class="autosolve-table-scroll" role="region" tabindex="0" aria-label="Other candidate results; scroll horizontally">' +
         '<table class="autosolve-others-table">' +
-        '<thead><tr><th>Method</th><th>Per-char fit</th><th>Confidence</th><th>Plaintext start</th></tr></thead>' +
+        '<thead><tr><th>Method</th><th>Per-char fit</th><th>Model-fit note</th><th>Plaintext start</th></tr></thead>' +
         '<tbody>';
       for (var i = 1; i < result.attempts.length; i++) {
         var a = result.attempts[i];
@@ -734,7 +749,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
           '<td class="ao-plain">' + esc(preview) + (a.plaintext && a.plaintext.length > 60 ? '\u2026' : '') + '</td>' +
         '</tr>';
       }
-      html += '</tbody></table></div>';
+      html += '</tbody></table></div></div>';
     }
 
     html += '<p class="autosolve-runtime">Search completed in ' + result.runtimeMs + ' ms.</p>';
@@ -763,8 +778,8 @@ Supporting source for public page behavior; presence of code does not prove that
 Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
 
 - Served/distributed path: `js/detective/lang-model.js`
-- Served SHA-256: `50e0e589e7d89f2ce5d7e199fdd66b6979d2cb387017089c03c288b9c94e72b9`
-- Readable-source SHA-256: `50e0e589e7d89f2ce5d7e199fdd66b6979d2cb387017089c03c288b9c94e72b9`
+- Served SHA-256: `7c5e01f81df9885c9150841509d32c0d4408f034e7795e9986117c7cd317b483`
+- Readable-source SHA-256: `7c5e01f81df9885c9150841509d32c0d4408f034e7795e9986117c7cd317b483`
 
 
 ```javascript
@@ -780,12 +795,10 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
      - Top ~80 English bigram log probabilities (Mayzner-revisited)
      - Top ~200 English trigram log probabilities
      - Bonus credit for ~120 most-common English words found
-     - Floor penalty for n-grams not in the table (calibrated so
-       hill-climbing escapes local minima on short text)
+     - Fixed floor penalty for n-grams not in the table
 
-   Total embedded weight: roughly 6 KB before gzip — small enough
-   to ship inline with the page and large enough to break
-   substitution ciphers in well under a second.
+   This ranking heuristic is not a calibrated language detector or
+   a probability of authentic plaintext recovery.
    ================================================================ */
 'use strict';
 
@@ -893,8 +906,8 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
     for (k in TRIGRAM_FREQ) if (Object.prototype.hasOwnProperty.call(TRIGRAM_FREQ, k)) TRIGRAM_LOG[k] = Math.log(TRIGRAM_FREQ[k] / 100);
   }());
 
-  /* Floor penalties — calibrated empirically so hill climbing
-     converges on substitution within ~1-3 sec for ~250 chars. */
+  /* Fixed penalties for unseen n-grams; these do not establish
+     recovery rates, timing guarantees or language probabilities. */
   var BIGRAM_FLOOR  = Math.log(0.01 / 100);  /* unseen bigram  ≈ -9.2 */
   var TRIGRAM_FLOOR = Math.log(0.005 / 100); /* unseen trigram ≈ -9.9 */
 
@@ -956,22 +969,17 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
     return trigramScore(text) + 0.4 * bigramScore(text) + wordBonus(text);
   }
 
-  /* ── Confidence tier ─────────────────────────────────────────
-     Convert raw fitness per character into a human label.
-     These thresholds were picked by running the solver against
-     known plaintexts vs. noise; they are calibration constants,
-     not a probability.                                          */
+  /* Compatibility API: return presentation labels, never probabilities.
+     The 60-letter display guard is a teaching convention, not a measured
+     minimum. It does not change fitness or the solver's candidate ranking. */
   function confidenceLabel(fitnessVal, textLen) {
-    /* Calibrated against real English plaintext vs random ciphertext
-       with the embedded n-gram tables above. Per-char fitness for
-       real English typically ranges -7 to -10.5; gibberish -12 or
-       worse. The boundary sits near -11.5.                        */
-    var perChar = (textLen > 0) ? (fitnessVal / textLen) : -Infinity;
-    if (perChar > -8.5)  return { tier: 'very-likely',  label: 'Very likely English' };
-    if (perChar > -9.8)  return { tier: 'likely',       label: 'Likely English' };
-    if (perChar > -10.7) return { tier: 'possible',     label: 'Possibly English (partial fit)' };
-    if (perChar > -11.6) return { tier: 'unlikely',     label: 'Unlikely English (weak fit)' };
-    return                      { tier: 'inconclusive', label: 'Inconclusive — does not look like English' };
+    if (!Number.isFinite(fitnessVal) || textLen < 3) {
+      return { tier: 'inconclusive', label: 'Insufficient n-gram evidence' };
+    }
+    if (textLen < 60) {
+      return { tier: 'inconclusive', label: 'Short sample — model fit not interpreted' };
+    }
+    return { tier: 'possible', label: 'Uncalibrated model fit' };
   }
 
   /* ── Export ──────────────────────────────────────────────────── */

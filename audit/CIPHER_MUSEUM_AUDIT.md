@@ -1,17 +1,17 @@
 # Cipher Museum — complete independent audit document
 
-This snapshot brings together **214 public HTML pages**, **80 nonempty inline scripts**, **51 shared/supporting JavaScript files**, **25 JSON/manifest data files**, and **148 source-register entries**. It is an export for independent review, not a new claim-by-claim verification.
+This snapshot brings together **214 public HTML pages**, **80 nonempty inline scripts**, **52 shared/supporting JavaScript files**, **26 JSON/manifest data files**, and **160 source-register entries**. It is an export for independent review, not a new claim-by-claim verification.
 
 - Source repository: systemslibrarian/cipher-museum
-- Exact source commit: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`
-- Source commit time: 2026-10-26T17:16:41-04:00
+- Exact source commit: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`
+- Source commit time: 2026-10-26T18:48:31-04:00
 - Public website: https://ciphermuseum.com/
 - Inventory authority: docs/page-audit/coverage.json, checked against every tracked public HTML page.
 - Snapshot hashes identify the original files. Exported text is reformatted; direct ebook URLs are replaced with a visible omission marker. Book titles, authors and publication details remain.
 
 ## What is included
 
-Complete static body text, including hidden panels, captions, tables, examples, controls and inline SVG geometry; descriptive metadata; image/tooltip/accessibility text; each page's inline scripts; readable shared JavaScript (with hashes of served minified versions); tour and challenge data; all 104 corpus-browser sample records; search/artifact-card text; research scoring model; benchmark/count/schema evidence; page review notes and the complete prior source register. This includes duplicates deliberately: the same claim may differ between a page, a card and a search description.
+Complete static body text, including hidden panels, captions, tables, examples, controls and inline SVG geometry; descriptive metadata; image/tooltip/accessibility text; each page's inline scripts; readable shared JavaScript (with hashes of served minified versions); tour and challenge data; all 104 corpus-browser sample records; search/artifact-card text; research scoring model; benchmark/count/schema evidence; page review notes and the complete prior source register; the columnar classroom worksheet, its fixed fixtures and its Node.js runner. This includes duplicates deliberately: the same claim may differ between a page, a card and a search description.
 
 ## Limits the reviewer must preserve
 
@@ -255,7 +255,7 @@ Suggested finding fields: `id, page_id, path, quotation_or_location, category, s
 
 # Pages P001–P020
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P001: 404.html -->
 <a id="p001"></a>
@@ -1028,8 +1028,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `cipher-detective.html`
 - Public page: https://ciphermuseum.com/cipher-detective.html
-- Snapshot source SHA-256: `427cfc8eb09e4a82a3dc2c6636c593bcba67072de0c15c00c07a84f7984bafc6`
-- Source identities in the prior evidence ledger: None assigned; this is not evidence that the page needs no sources.
+- Snapshot source SHA-256: `0c63f1a92df29f6b913afbd15b1fba643ab3a34399096361f699f213c2465294`
+- Source identities in the prior evidence ledger: LASRY-2018, SWEIGART-2018
 
 ### Metadata and search/social descriptions
 
@@ -1176,6 +1176,12 @@ Run every applicable solver against this ciphertext and rank the results by how 
 
 For controlled columnar experiments, open the [seeded advanced columnar search](<https://ciphermuseum.com/ciphers/columnar.html#advanced-search>): set a width and work budget, then compare segment moves, staged scoring and restarts.
 
+Every output is an unverified candidate. The embedded English model supplies a ranking score, not a probability of English or of successful decryption. Inspect the score components before treating a readable result as evidence.
+
+Reading on language-score limits
+
+George Lasry, *A Methodology for the Cryptanalysis of Classical Ciphers with Search Metaheuristics* (2018 published thesis), §§3.2.3–3.2.4, printed pp. 29–34 / PDF pp. 50–55; Al Sweigart, *Cracking Codes with Python: An Introduction to Building and Breaking Ciphers* (2018 edition), chapter 11, “How Can a Computer Understand English?” and “Detecting English Words,” supplied reflowed PDF pp. 183–184 and 199–202 (original printed folios unverified). These passages explain limits of word and statistical scoring; they do not calibrate this model.
+
 ##### Cryptanalytic Profile
 
 | Length |  — |
@@ -1269,8 +1275,11 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
-  "sources": [],
+  "status": "ebook follow-up implementation and local validation complete",
+  "sources": [
+    "LASRY-2018",
+    "SWEIGART-2018"
+  ],
   "notes": "Root reread page and dynamic Detective behavior; IC references are not universal bounds, repeated fragments are hypotheses, and scores are not proof of cipher identification. Full source credits retained without ebook links.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
   "final_prose_review": {
@@ -1287,7 +1296,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-01"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -2391,8 +2411,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `ciphers/aes.html`
 - Public page: https://ciphermuseum.com/ciphers/aes.html
-- Snapshot source SHA-256: `4e71d55e901d9eb7f37eafe6a841bdaa1a94f363140052f6f4655ffcdc8fafcb`
-- Source identities in the prior evidence ledger: NIST-AES-DEVELOPMENT, SIGNAL-RATCHET-REV4, NSA-CNSA-2025
+- Snapshot source SHA-256: `12fee221244c92509002becdc09f7000adf8c1eb461b4d8088039090596f0d66`
+- Source identities in the prior evidence ledger: NIST-AES-DEVELOPMENT, SIGNAL-RATCHET-REV4, NSA-CNSA-2025, DAEMEN-RIJMEN-2020, MANGARD-OSWALD-POPP-2007
 
 ### Metadata and search/social descriptions
 
@@ -2504,6 +2524,16 @@ AES is a substitution-permutation network operating on a 4×4 byte state. After 
 
 AES-128 runs 10 rounds, AES-192 runs 12, AES-256 runs 14. The key schedule expands the master key into all round keys. The four-operation round delivers Shannon's confusion (S-box) and diffusion (ShiftRows + MixColumns). Repeated rounds spread changes through the state; diffusion alone is not a proof of security.
 
+#### Why these diffusion steps?
+
+For differential analysis, an **active S-box** receives a nonzero byte difference. MixColumns has branch number five: for any nonzero column difference, the number of active input bytes plus active output bytes is at least five. ShiftRows spreads a column’s bytes across four columns before the next MixColumns step.
+
+Together these properties force **at least 25 active S-boxes in an individual nonzero four-round differential trail**. This counts byte activity, not changed bits. A trail specifies intermediate differences; a differential can collect many trails. The bound constrains individual trails, but does not by itself prove full-AES security or give an exact probability for every input pair.
+
+[Explore the four-round trail lesson in AES Anatomy](<https://systemslibrarian.github.io/crypto-lab-aes-anatomy/>).
+
+Joan Daemen and Vincent Rijmen, *The Design of Rijndael: The Advanced Encryption Standard (AES)*, second edition (2020), §§9.2.2–9.2.3 and 9.4.4–9.5.2, pp. 131–132 and 140–143; trail aggregation: §9.1.3, p. 128, and chapter 13, p. 195.
+
 [Inline SVG: original diagram/icon markup]
 
 ```html
@@ -2513,6 +2543,31 @@ AES-128 runs 10 rounds, AES-192 runs 12, AES-256 runs 14. The key schedule expan
 Security & Cryptanalysis
 
 Cryptanalysis studies reduced-round variants and theoretical improvements over exhaustive key search, but these do not provide a practical break of full-round AES. Systems can still fail through cache-timing leakage, unauthenticated encryption, weak mode choices or nonce reuse in GCM. BEAST concerned TLS CBC initialization vectors, CRIME exploited compression, and Lucky Thirteen exploited CBC authentication timing; they were not three cache attacks on AES. Hardware AES instructions can improve speed and reduce some software timing risks, but do not repair a flawed protocol.
+
+Physical power measurements can also reveal information about an implementation. [Compare passive power observation with active fault injection](<https://ciphermuseum.com/lab/modern-attack-evidence.html#power-leakage>), then explore simulated leakage in [Power Trace](<https://systemslibrarian.github.io/crypto-lab-power-trace/>).
+
+#### One share hides a value; joint leakage can reveal a pattern
+
+Split a secret byte v into the Boolean shares m and v XOR m, using a fresh, independent, uniformly random byte mask for each execution. Either share alone is uniform and independent of v; together they determine it.
+
+Consider an idealized leakage model: HW counts the one-bits in a byte, and each share leaks its Hamming weight. For any fixed v, each leakage has the same distribution: weights 0 through 8 occur with counts 1, 8, 28, 56, 70, 56, 28, 8, 1 among the 256 masks. Both means are 4. Combining the observations changes the picture:
+
+`Cov(HW(m), HW(v XOR m)) = 2 − HW(v)/2`
+
+Exact averages over all 256 equally likely masks
+
+| Secret byte (decimal) | HW(v) | Covariance |
+| --- | --- | --- |
+| 0 | 0 | 2 |
+| 1 | 1 | 1.5 |
+| 15 | 4 | 0 |
+| 255 | 8 | −2 |
+
+The marginal distributions stay unchanged while the average centered product depends on the secret’s Hamming weight. Many bytes have the same weight, so this is not unique byte recovery. Real leakage need not equal Hamming weight; mask reuse, bias, transitions and hardware glitches require separate analysis. This example neither proves an implementation secure nor shows that all masking fails.
+
+[Explore first- and second-order leakage in Masked Core](<https://systemslibrarian.github.io/crypto-lab-masked-core/>). The covariance calculation above is an original worked example, not a theorem quoted from the book.
+
+Stefan Mangard, Elisabeth Oswald and Thomas Popp, *Power Analysis Attacks: Revealing the Secrets of Smart Cards* (2007), §9.1, pp. 223–226, and §10.1.1, pp. 246–247, explain two-share masking and joint leakage.
 
 [Inline SVG: original diagram/icon markup]
 
@@ -2583,11 +2638,13 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
     "NIST-AES-DEVELOPMENT",
     "SIGNAL-RATCHET-REV4",
-    "NSA-CNSA-2025"
+    "NSA-CNSA-2025",
+    "DAEMEN-RIJMEN-2020",
+    "MANGARD-OSWALD-POPP-2007"
   ],
   "notes": "Final exhibit_final_read consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/exhibit-final-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
   "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -2606,10 +2663,23 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
   "remaining_evidence_limits": [
     "CNSA official indexed table supports AES256classification use; direct PDF403, no full-document review. Signal specification is not an inventory of every deployed client."
-  ]
+  ],
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-06",
+      "EBR-20",
+      "EBR-21"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -5430,7 +5500,7 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Pages P021–P040
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P021: ciphers/bach-motif.html -->
 <a id="p021"></a>
@@ -7688,8 +7758,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `ciphers/bill-tutte.html`
 - Public page: https://ciphermuseum.com/ciphers/bill-tutte.html
-- Snapshot source SHA-256: `e4458af507b886572bf058c7b235cedb5b965b121081212b2cbe51d8d0344bcb`
-- Source identities in the prior evidence ledger: TNMOC-TUNNY, TUTTE-GCHQ
+- Snapshot source SHA-256: `7c3ee6feae98526a5a3980416d9f4888a1822887d2278c86fafaeaccb3fafd79`
+- Source identities in the prior evidence ledger: TNMOC-TUNNY, TUTTE-GCHQ, TUNNY-1945, GANNON-2014
 
 ### Metadata and search/social descriptions
 
@@ -7795,7 +7865,25 @@ The Lorenz SZ40 (Schlüsselzusatz — "cipher attachment") was a teleprinter cip
 
 The Depth and the Reconstruction
 
-On August 30, 1941, a German operator sent a 4,000-character message to another station. The receiving station asked for a repeat. The operator retransmitted — using the same Lorenz wheel settings, but with wording and abbreviations changed. This pair of ciphertexts produced with a reused keystream was intercepted by the British "Y stations." When Tutte was given Tiltman’s recovered key, he performed a statistical attack called "wheel breaking": by XOR-differencing successive characters of the recovered keystream, he could identify statistical biases introduced by the Chi-wheel keystream. Working with the Research Section through early 1942, he inferred the wheel structure and sizes (41, 31, 29, 26, 23 in the Chi set; 43, 47, 51, 53, 59 for Psi; and 61, 37 for motor wheels) and their pin patterns. This was a tour de force of reverse engineering conducted entirely through mathematical inference.
+On August 30, 1941, a German operator sent a 4,000-character message to another station. The receiving station asked for a repeat. The operator retransmitted — using the same Lorenz wheel settings, but with wording and abbreviations changed. This pair of ciphertexts produced with a reused keystream was intercepted by the British "Y stations." Tutte examined repetitions and periodic structure in Tiltman’s recovered key. Working with the Research Section through early 1942, he inferred the machine’s wheel groups, sizes (41, 31, 29, 26, 23 in the Chi set; 43, 47, 51, 53, 59 for Psi; and 61, 37 for motor wheels) and their interaction. This was a tour de force of reverse engineering conducted entirely through mathematical inference.
+
+#### Three Different Unknowns
+
+Diagnosing an unseen machine, recovering wheel pin patterns and finding a message’s starting positions were separate tasks. Success at one supplied information for the next.
+
+Swipe or scroll the table horizontally to see every column. Keyboard: focus the table area and use the arrow keys.
+
+Inputs, unknowns and methods in Tunny cryptanalysis
+
+| Task and period | Input and unknown | Method and contribution |
+| --- | --- | --- |
+| Infer structure 1941–early 1942 | Recovered key from Tiltman’s depth; unknown wheel groups, lengths and interaction. | Tutte and the Research Section analysed repetitions and periodic structure. |
+| Break wheel patterns Turingery, 1942 | Recovered key and a known machine structure; unknown pin patterns. | Turing’s method used XOR differences between adjacent key symbols to recover wheel patterns. |
+| Find message settings Later statistical work; Colossus operational in 1944 | Ciphertext and known wheel patterns; unknown starting positions for a message. | Tutte’s statistical methods used differencing; Flowers’s team built [Colossus](<https://ciphermuseum.com/ciphers/colossus.html>) to accelerate counting for setting searches. |
+
+These tasks formed part of a larger process: a promising setting was not yet a complete plaintext, and manual work remained essential.
+
+Sources: I. J. Good, Donald Michie and Geoffrey Timms, *General Report on Tunny: With Emphasis on Statistical Methods* (1945), §43B, printed p. 313 / collected PDF p. 307, for Turingery; Paul Gannon, *Colossus: Bletchley Park’s Greatest Secret* (Atlantic Books, 2014 edition), chapter 10, “Fishing the Depths,” converted PDF pp. 94–97, and chapter 13, “Making the Difference,” converted PDF pp. 132–135, especially p. 133. Gannon’s converted PDF numbering is not verified print pagination.
 
 Source: NSA Center for Cryptologic History, [*Brigadier John Tiltman: A Giant Among Cryptanalysts* (2007), pp. 25–26](<https://www.nsa.gov/portals/75/documents/about/cryptologic-heritage/historical-figures-publications/publications/misc/tiltman.pdf>), distinguishes Tiltman’s manual message/key recovery from the subsequent structural analysis.
 
@@ -7843,6 +7931,7 @@ GCHQ, [“William Thomas ‘Bill’ Tutte”](<https://www.gchq.gov.uk/person/bi
 ### Additional image, accessibility, tooltip and placeholder text
 
 - nav — aria-label: Primary
+- div — aria-label: Tunny cryptanalysis tasks
 
 ### Control identities, constraints and initial-state attributes
 
@@ -7866,10 +7955,12 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
     "TNMOC-TUNNY",
-    "TUTTE-GCHQ"
+    "TUTTE-GCHQ",
+    "TUNNY-1945",
+    "GANNON-2014"
   ],
   "notes": "Corrected identical-message claim, Tiltman-to-Tutte chain, Kitchener death location, electronic Robinson counting and specialised Colossus scope. Independently checked12wheelproduct. Final public-prose consistency reread completed by exhibit_final_read; source and runtime limits remain separate.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -7888,7 +7979,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-05"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -10698,7 +10800,7 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Pages P041–P060
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P041: ciphers/colossus.html -->
 <a id="p041"></a>
@@ -10706,8 +10808,8 @@ Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum 
 
 - Site path: `ciphers/colossus.html`
 - Public page: https://ciphermuseum.com/ciphers/colossus.html
-- Snapshot source SHA-256: `e5d1e8b3287f1e6720f8660ba186e91d9c9c3f95c1a68796f8c6fd1e0a9511e5`
-- Source identities in the prior evidence ledger: TNMOC-TUNNY
+- Snapshot source SHA-256: `12f97888209a625a92e34af42b6b0ce0e92aebe1fea1161979edbc2acece39a5`
+- Source identities in the prior evidence ledger: TNMOC-TUNNY, TUNNY-1945, GANNON-2014
 
 ### Metadata and search/social descriptions
 
@@ -10777,6 +10879,39 @@ Colossus helped attack Lorenz teleprinter traffic, known at Bletchley Park as Tu
 
 Punched paper tape supplied ciphertext. Electronic logic evaluated combinations of tape data and generated wheel patterns, while counters accumulated statistical scores. This accelerated the search for Lorenz chi-wheel settings. Colossus supported a larger cryptanalytic process; it did not automatically turn arbitrary intercepted traffic into readable messages.
 
+#### Tape Clock → Condition → Count
+
+Colossus read intercepted ciphertext from a continuous paper-tape loop. Sprocket holes supplied the timing signals for counting and electronic wheel movement. The wheel patterns were generated electronically, replacing the second synchronized tape used by Heath Robinson. At about 5,000 tape characters per second, the reader supplied many observations for each statistical trial; that figure is not 5,000 keys or completed trials per second.
+
+- **Clock:** a tape timing pulse presents the next character and coordinates the electronic pattern.
+
+- **Condition:** configured logic combines selected tape and wheel signals.
+
+- **Count:** a counter increments when that condition is satisfied.
+
+- **Select:** at the end of the count, a configured “set total” can select scores for printing.
+
+The original worked example below isolates one counter. Let A and B be two selected binary inputs to the logic, and count positions where `A XOR B = 0`. The six positions and their values are invented teaching data, not historical traffic or a full Colossus simulation.
+
+Swipe or scroll the table horizontally to see every column. Keyboard: focus the table area and use the arrow keys.
+
+One fixed setting: count equal input bits
+
+| Position | A | B | A XOR B | Running count |
+| --- | --- | --- | --- | --- |
+| 1 | 0 | 0 | 0 | 1 |
+| 2 | 1 | 0 | 1 | 1 |
+| 3 | 1 | 1 | 0 | 2 |
+| 4 | 0 | 1 | 1 | 2 |
+| 5 | 0 | 0 | 0 | 3 |
+| 6 | 1 | 1 | 0 | 4 |
+
+**Final score: 4.** In “exceeds set total” mode, a set total of 3 selects this score for printing; a set total of 4 does not. Other selection modes were available. A slower reading of the same positions at the same setting would still count 4: speed changes elapsed time, not the logical result. A selected score is evidence to investigate, not a recovered plaintext.
+
+The machine had five separate counters, allowing several conditions to be counted together subject to shared stepping and spanning controls. This example shows only one condition. The [existing two-wheel experiment below](<https://ciphermuseum.com/ciphers/colossus.html#chi-setting-search>) illustrates statistical comparison across candidate settings; the [three-task history](<https://ciphermuseum.com/ciphers/bill-tutte.html#tunny-three-tasks>) separates setting from structural inference and wheel-pattern recovery.
+
+Sources: I. J. Good, Donald Michie and Geoffrey Timms, *General Report on Tunny: With Emphasis on Statistical Methods* (1945), §53B, printed pp. 333–334 / collected PDF pp. 327–328, and §53F–G, printed pp. 337–338 / collected PDF pp. 331–332; Paul Gannon, *Colossus: Bletchley Park’s Greatest Secret* (Atlantic Books, 2014 edition), chapter 15, “Inventing the Electronic Computing Machine,” converted PDF pp. 153–156, especially pp. 154, 156. Gannon’s converted PDF numbering is not verified print pagination. The six-position table is an original teaching example based on these mechanisms.
+
 #### Try a Two-Wheel Chi-Setting Search
 
 Given known chi-wheel patterns, search their initial settings. Here D = Z XOR chi, and delta means XOR of adjacent symbols. Count dots (zeroes) in delta D1 XOR delta D2, equivalently delta Z1 XOR delta Z2 XOR delta chi1 XOR delta chi2. Impulses 1 and 2 are the two low bits in this five-bit representation. All 41 × 31 = 1,271 candidate settings are counted.
@@ -10803,7 +10938,7 @@ Run the search, then compare a short tape or the no-bias control. A high score a
 
 The displayed sigma is a single-setting score. Selecting the best of 1,271 settings changes its interpretation; the experiment compares that maximum against maxima from 39 seeded independent uniform-symbol null tapes. The null assumes independent five-bit symbols and is not a historical traffic model. Short or noisy traffic can be inconclusive. Finding wheel settings, recovering unknown wheel patterns, and recovering plaintext are separate problems.
 
-Source: I. J. Good, Donald Michie and Geoffrey Timms, *General Report on Tunny* (1945), §§23A–C, printed pp. 78–80 / collected PDF pp. 81–83; Colossus machinery in §§53A–D, printed pp. 333–335 / collected PDF pp. 327–329. Formula and notation checked against the page images.
+Source: I. J. Good, Donald Michie and Geoffrey Timms, *General Report on Tunny: With Emphasis on Statistical Methods* (1945), §§23A–C, printed pp. 78–80 / collected PDF pp. 81–83; Colossus machinery in §§53A–D, printed pp. 333–335 / collected PDF pp. 327–329. Formula and notation checked against the page images.
 
 #### Historical Context and Limits
 
@@ -10831,6 +10966,7 @@ The interactive is a bounded two-wheel statistical experiment with synthetic tra
 ### Additional image, accessibility, tooltip and placeholder text
 
 - nav — aria-label: Primary
+- div — aria-label: Colossus worked counter example
 
 ### Control identities, constraints and initial-state attributes
 
@@ -10863,9 +10999,11 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
-    "TNMOC-TUNNY"
+    "TNMOC-TUNNY",
+    "TUNNY-1945",
+    "GANNON-2014"
   ],
   "notes": "Final exhibit_final_read consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/exhibit-final-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
   "browser_smoke": "Sixth batch: desktop1280/mobile390 loaded without script errors or overflow. Colossus and three manual-cipher controls exercised; source vectors checked independently in Node. External resources blocked.",
@@ -10884,7 +11022,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-19"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -10899,8 +11048,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `ciphers/columnar.html`
 - Public page: https://ciphermuseum.com/ciphers/columnar.html
-- Snapshot source SHA-256: `321e1e433ea1767b0864555027a4670b05e168ca7d54db41c069eb8055b80269`
-- Source identities in the prior evidence ledger: GAINES-1956, HOLDEN-2017
+- Snapshot source SHA-256: `07d9490edf3d4cff5448979ae77c8841d8c345a68a9db4233925aab8d53c6e21`
+- Source identities in the prior evidence ledger: GAINES-1956, HOLDEN-2017, LASRY-2018
 
 ### Metadata and search/social descriptions
 
@@ -10999,6 +11148,8 @@ Change one option at a time to compare searches with the same seed and budget.
 ```
 
 Limits: widths 2–12, at most 20,000 score evaluations, including adjacency preprocessing, phase-transition scoring and every restart. Unknown-width mode divides one total budget across widths 2–12; preprocessing may exhaust a width's allocation. This bounded adaptation samples moves and combines normalized adjacency/alignment scores; it does not reproduce Lasry's alternating thresholds, exhaustive neighborhoods, optimized triplet scores or large-key performance. Language-model fitness uses the museum's bigram/trigram model. A candidate remains unverified even if it looks readable.
+
+Classroom experiment: [run the fixed 24-trial comparison and keep its receipt](<https://ciphermuseum.com/teaching.html#columnar-classroom>). It reuses this solver with four supplied-answer messages, three seeds and two variants. The worksheet separates exact plaintext from exact key recovery and retains failed or preprocessing-exhausted runs. A shared seed alone does not make changed algorithms follow matching random paths.
 
 Source: George Lasry, *A Methodology for the Cryptanalysis of Classical Ciphers with Search Metaheuristics* (2018), §§5.3.2–5.3.4, printed pp. 69–78 / supplied PDF pp. 90–99. Evaluation principles: §§4.5–4.7, printed pp. 57–60 / PDF pp. 78–81.
 
@@ -11257,10 +11408,11 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
     "GAINES-1956",
-    "HOLDEN-2017"
+    "HOLDEN-2017",
+    "LASRY-2018"
   ],
   "notes": "Removed unsupported single19thcenturyorigin and universaldeployment claims; ShiftRows comparison replacesMixColumns label. Final public-prose consistency reread completed by exhibit_final_read; source and runtime limits remain separate.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -11279,7 +11431,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-10"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -13011,8 +13174,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `ciphers/des.html`
 - Public page: https://ciphermuseum.com/ciphers/des.html
-- Snapshot source SHA-256: `58b6a815e87e0a7b0c61eb47f9188d4dfe14f0253c014a0caff045e007a219b2`
-- Source identities in the prior evidence ledger: COPPERSMITH-1994
+- Snapshot source SHA-256: `bdd4bb74cf26f94c4a5ad6664d1e3822bd118be050cbd0147cdf4f47126f04e1`
+- Source identities in the prior evidence ledger: COPPERSMITH-1994, BIHAM-SHAMIR-1993-2009
 
 ### Metadata and search/social descriptions
 
@@ -13116,6 +13279,34 @@ How It Works
 
 DES is a 16-round Feistel network. The 64-bit plaintext is split into two 32-bit halves L and R. Each round computes `L<sub>i+1</sub> = R<sub>i</sub>` and `R<sub>i+1</sub> = L<sub>i</sub> ⊕ F(R<sub>i</sub>, K<sub>i</sub>)`. The round function F expands R to 48 bits, XORs the round subkey, passes the result through eight 6-to-4-bit S-boxes (the heart of DES's non-linearity), and applies a final permutation. Sixteen rounds of this with sixteen subkeys derived from the 56-bit master key produce a reversible block cipher. Its 56-bit key is too small to withstand modern exhaustive search.
 
+#### A differential through one S-box
+
+XORing the same subkey into two inputs leaves their difference unchanged: `(x XOR k) XOR (x′ XOR k) = x XOR x′`. The nonlinear S-box then produces some output differences more often than others. For DES S1 and input difference `34`, enumerate all 64 possible six-bit inputs:
+
+Selected S1 difference-distribution entries; differences are hexadecimal
+
+| Output difference | Count out of 64 | Probability |
+| --- | --- | --- |
+| 02 | 16 | 1/4 |
+| 04 | 2 | 1/32 |
+| 00 | 0 | 0 |
+| 09 | 0 | 0 |
+
+Now suppose a teaching example exposes the inputs *before* the subkey XOR and the S1 output difference. Keep each six-bit candidate k for which `S1(x XOR k) XOR S1(x′ XOR k)` matches that observation. All values below are hexadecimal:
+
+Filtering the 64 possible S1 subkeys
+
+| Inputs | Output XOR | Surviving subkeys |
+| --- | --- | --- |
+| 01, 35 | 0D | 07, 11, 17, 1D, 23, 25, 29, 33 |
+| 21, 15 | 03 | 00, 14, 17, 20, 23, 34 |
+
+The intersection is **`{17, 23}`**, so these observations do not identify a unique subkey. Both pairs use input difference `34`; a suitable observation with a different difference is needed to distinguish these survivors. This component example assumes exposed intermediate information, not ordinary intercepted DES ciphertexts or full-DES key recovery.
+
+[Explore difference tables and bounded attacks in Biham Lens](<https://systemslibrarian.github.io/crypto-lab-biham-lens/>). Its exercises are separate from the [historic full-DES differential attack and its resource requirements](<https://ciphermuseum.com/lab/modern-attack-evidence.html#des-differential>).
+
+Eli Biham and Adi Shamir, *Differential Cryptanalysis of the Data Encryption Standard* (1993), §3.2, Examples 3.4–3.7. Numbered pp. 15–22, especially pp. 18–20, refer to the authors’ repaginated 7 December 2009 recompilation.
+
 [Inline SVG: original diagram/icon markup]
 
 ```html
@@ -13202,9 +13393,10 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
-    "COPPERSMITH-1994"
+    "COPPERSMITH-1994",
+    "BIHAM-SHAMIR-1993-2009"
   ],
   "notes": "IBM S-box role and1994criteria disclosure corrected; full paper attack not replicated. Final public-prose consistency reread completed by exhibit_final_read; source and runtime limits remain separate.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -13223,7 +13415,19 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-07",
+      "EBR-08"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -13761,8 +13965,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `ciphers/diffie-hellman.html`
 - Public page: https://ciphermuseum.com/ciphers/diffie-hellman.html
-- Snapshot source SHA-256: `e1c50c726c578387177fb2ca1e8e407765fc2cbb184ef85d8c8c9695dd40117c`
-- Source identities in the prior evidence ledger: LOGJAM-2015, BONEH-SHOUP-2023
+- Snapshot source SHA-256: `3ae1be5c51ac24f2ac14e1ae2b164966d1f51f80102ec51926bfcf8295c860ed`
+- Source identities in the prior evidence ledger: LOGJAM-2015, BONEH-SHOUP-2023, WONG-2021
 
 ### Metadata and search/social descriptions
 
@@ -13876,6 +14080,28 @@ With *p* = 23, *g* = 5, *A* = 8 and *B* = 19, a discrete-log solver finds *a* = 
 
 Source: Dan Boneh and Victor Shoup, *A Graduate Course in Applied Cryptography*, version 0.6 (January 2023), §10.4.2. Learning whether the value looks random is a further security question, distinct from merely computing it.
 
+#### From a shared value to keys for different purposes
+
+HKDF-SHA-256 first **Extracts** a pseudorandom key (PRK) from input key material (IKM): `PRK = HMAC-SHA-256(salt, IKM)`. It then **Expands** that PRK with an `info` byte string and requested output length. A protocol can use different labels for its two traffic directions.
+
+Reproducible fixture: IKM is the 32 bytes `00 01 … 1f` (hexadecimal), salt is 32 zero bytes, and labels below are UTF-8. These published bytes have no secrecy; they are separate from the tiny DH arithmetic above. Extract gives:
+
+`46bd320605c5a6b6163ab70bc6345b92a5f908e79fe58979c23ebb47d1a5e307`
+
+HKDF-SHA-256 outputs for the fixed input above (hexadecimal)
+
+| Info label | Bytes | Output key material |
+| --- | --- | --- |
+| `museum-demo/client-to-server` | 16 | `a6d093bc8d19224f252d50a07c32bd77` |
+| `museum-demo/client-to-server` | 32 | `a6d093bc8d19224f252d50a07c32bd778b08327a06548f672adda01ae4a9d1f2` |
+| `museum-demo/server-to-client` | 32 | `cefaddbcf88b04083d511449e158fc5cfc33dcf08759adda9bb09759e02ff728` |
+
+Identical inputs reproduce identical outputs. Changing only the requested length keeps a common prefix; use purpose labels rather than length alone to separate uses. Changing the direction label changes this example's output. Salt and info need not be secret. HKDF does not create new input entropy or make a guessable password or tiny DH group secure; it is not a password-stretching function. Authentication and group validation remain necessary.
+
+Change these inputs in the existing [Crypto Lab: KDF Chain](<https://systemslibrarian.github.io/crypto-lab-kdf-chain/>), under **HKDF: Extract and Expand**, to inspect PRK, output key material and expansion blocks.
+
+Source: David Wong, *Real-World Cryptography* (2021 edition), §8.6, “Key derivation with HKDF,” PDF pp. 349–356 in the reflowed edition, which has no printed pagination. The fixed fixture is a museum example, not a protocol key schedule.
+
 [Inline SVG: original diagram/icon markup]
 
 ```html
@@ -13920,7 +14146,7 @@ Quick Facts
 
 #### Primary Sources
 
-[RFC 8446 (TLS 1.3, 2018), key-exchange modes](<https://www.rfc-editor.org/rfc/rfc8446.html>); [Signal: SPQR and the Triple Ratchet (2 October 2025)](<https://signal.org/blog/spqr/>); [Signal ratchet specification](<https://signal.org/docs/specifications/doubleratchet/>). Protocols feed DH outputs through a key derivation function; this exhibit shows the underlying shared-value arithmetic.
+[RFC 8446 (TLS 1.3, 2018), key-exchange modes](<https://www.rfc-editor.org/rfc/rfc8446.html>); [Signal: SPQR and the Triple Ratchet (2 October 2025)](<https://signal.org/blog/spqr/>); [Signal ratchet specification](<https://signal.org/docs/specifications/doubleratchet/>). Protocols feed DH outputs through a [key derivation function](<https://ciphermuseum.com/ciphers/diffie-hellman.html#key-derivation>); compare the shared-value arithmetic with the worked HKDF example above.
 
 #### Related Exhibits
 
@@ -13955,10 +14181,11 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
     "LOGJAM-2015",
-    "BONEH-SHOUP-2023"
+    "BONEH-SHOUP-2023",
+    "WONG-2021"
   ],
   "notes": "Final exhibit_final_read consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/exhibit-final-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
   "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -13977,7 +14204,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-15"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -16003,7 +16241,7 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Pages P061–P080
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P061: ciphers/elizebeth-friedman.html -->
 <a id="p061"></a>
@@ -21544,7 +21782,7 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Pages P081–P100
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P081: ciphers/joan-clarke.html -->
 <a id="p081"></a>
@@ -24370,8 +24608,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `ciphers/lorenz.html`
 - Public page: https://ciphermuseum.com/ciphers/lorenz.html
-- Snapshot source SHA-256: `aaf51b8df1e000e4f9a90be70a03cc18c4551333de859adb9af73ba3f5acb139`
-- Source identities in the prior evidence ledger: TNMOC-TUNNY
+- Snapshot source SHA-256: `db274be3d557cb0a7a7bd975a829a51ebbd5b86d245d96f1f4371cc063bdc091`
+- Source identities in the prior evidence ledger: TNMOC-TUNNY, TUNNY-1945
 
 ### Metadata and search/social descriptions
 
@@ -24471,9 +24709,25 @@ Lorenz SZ42 cipher machine — on display at Bletchley Park Museum, UK. Image: M
 
 Historical Context
 
-While Enigma protected German field communications, the Lorenz SZ40/42 protected Hitler's strategic communications to his senior commanders. Where Enigma was a hand-operated cipher machine, Lorenz was a fully automatic teleprinter attachment — messages fed in on paper tape, encrypted output punched automatically.
+While Enigma protected German field communications, the Lorenz SZ40/42 protected Hitler's strategic communications to his senior commanders. Where Enigma was a hand-operated cipher machine, Lorenz encrypted teleprinter signals automatically. An operator could type plaintext at a keyboard or send it from prepared paper tape; the cipher attachment encrypted the signals for radio transmission. At the other end, a matching attachment decrypted the signals before the receiving teleprinter printed or punched the plaintext.
 
 On August 30, 1941, a German operator sent a 4,000-character message, received a request to resend, and sent it again — with the same settings but slightly different plaintext (abbreviating some words). John Tiltman used this *depth* to recover the two messages and their shared keystream by hand. Tutte and the Research Section analysed the recovered key and inferred the machine’s structure by early 1942, without seeing the machine. Later, Flowers and his team built Colossus, operational at Bletchley Park in February 1944, to accelerate statistical wheel-setting.
+
+#### Follow the Signal
+
+- **Plaintext input:** a keyboard or prepared plaintext tape supplies teleprinter signals.
+
+- **Sending cipher attachment:** the SZ combines those signals with its keystream.
+
+- **Radio link:** the transmitter sends ciphertext signals to the receiving station.
+
+- **Receiving cipher attachment:** the matching SZ removes the keystream.
+
+- **Plaintext output:** the receiving teleprinter prints the message or punches it onto tape.
+
+In the arrangement described in the wartime report, neither operator saw the ciphertext: there was no recorder between the cipher attachment and the radio equipment. British intercept stations recorded ciphertext for analysis; those intercept tapes belong to a different part of the story, including [Colossus](<https://ciphermuseum.com/ciphers/colossus.html>).
+
+Source: I. J. Good, Donald Michie and Geoffrey Timms, *General Report on Tunny: With Emphasis on Statistical Methods* (1945), §11A(b)–(c), printed p. 4 / collected PDF p. 7.
 
 [Inline SVG: original diagram/icon markup]
 
@@ -24571,13 +24825,21 @@ Both ran in parallel through the war, and both lived in the same Bletchley campu
 |  | Enigma (1923 / field) | Lorenz SZ40/42 (1940 / strategic) |
 | --- | --- | --- |
 | **Who used it** | German armed services; configurations varied | German high-command teleprinter networks |
-| **Operator model** | Hand-typed, lamp-board readout, telegraph the result | Inline teleprinter attachment — paper tape in, encrypted tape out, fully automatic |
+| **Operator model** | Hand-typed, lamp-board readout, telegraph the result | Keyboard or plaintext tape → cipher attachment → radio ciphertext; receiving attachment → plaintext printer or tape |
 | **Cipher primitive** | Polyalphabetic substitution via 3–4 stepping rotors + reflector + plugboard | Vernam XOR of 5-bit Baudot characters with a 12-wheel pseudo-random keystream |
 | **Key space** | ≈ 1.6 × 10<sup>20</sup> (with plugboard) | Irregular stepping and wheel patterns determine the output cycle; this is not a keyspace estimate or a one-time pad |
-| **Fatal weakness** | Reflector → no letter encrypts to itself → cribs eliminate placements | Reusing a wheel setting collapses two messages into a depth (P<sub>A</sub> ⊕ P<sub>B</sub>) |
+| **Fatal weakness** | Reflector → no letter encrypts to itself → cribs eliminate placements | Reusing the same keystream creates a depth: C<sub>A</sub> ⊕ C<sub>B</sub> = P<sub>A</sub> ⊕ P<sub>B</sub> |
 | **What broke it** | Cribs + electromechanical Bombe (Turing, Welchman, 1940) | Tiltman's manual depth recovery (1941) + Tutte's structure inference (1942) + Colossus wheel-setting (1944) |
 | **What it built** | Large cryptanalytic teams with access varying by network and period | Programmable electronics — Colossus showed how electronic logic could accelerate statistical searches |
 | **Modern echo** | Side-channel and operational security still beat strong primitives | Keystream reuse exposes plaintext relations; GCM and WEP have additional attack details |
+
+##### Same Settings, Same Keystream?
+
+The no-limitation SZ40 and later SZ42 configurations must be distinguished. Some later configurations fed a delayed fifth plaintext impulse into motor control, changing how the psi wheels stepped. This *autoclave* feedback meant that different plaintexts could produce different keystreams even from identical starting settings. Not every SZ42 configuration used plaintext feedback.
+
+In general, `C_A ⊕ C_B = P_A ⊕ P_B ⊕ K_A ⊕ K_B`. The keys cancel only where `K_A = K_B`. Reusing starting settings alone does not establish that condition for a plaintext-feedback configuration. The depth experiment below assumes an identical keystream; the SZ40 teaching model above does not model later plaintext feedback.
+
+Source: I. J. Good, Donald Michie and Geoffrey Timms, *General Report on Tunny: With Emphasis on Statistical Methods* (1945), §11B(g), (j), printed pp. 8, 10 / collected PDF pp. 11, 13; §43C(g), printed p. 317 / collected PDF p. 311, on the Herring link’s diverging psi streams. This distinction is not a claim that feedback made Lorenz generally secure.
 
 Enigma and Lorenz were attacked through combinations of mathematical structure, traffic, operating practices and intelligence. Neither story is adequately explained by operator error alone.
 
@@ -24755,9 +25017,10 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
-    "TNMOC-TUNNY"
+    "TNMOC-TUNNY",
+    "TUNNY-1945"
   ],
   "notes": "Final body/table/SVG/sidebar read reconciled Tiltman recovery, Tutte/team inference and later Colossus; wheel-state product is not an unconditional output period. Removed universal computing/LFSR lineage and unchanged WEP/GCM attack claims.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -24776,11 +25039,23 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
   "generated_card_review": {
     "reader": "root",
     "status": "semantic overrides corrected; generated rebuild and final validation pending",
     "scope": "Root removed stale UA8295technical override; separated HallIX grouping from OTP classification for Enigma/Lorenz/Solitaire/Vernam; qualified SHA256length and Shamirconditions. Generator corrections are not a new historical-source verification."
+  },
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-03",
+      "EBR-04"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
   }
 }
 ```
@@ -26872,7 +27147,7 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Pages P101–P120
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P101: ciphers/morse.html -->
 <a id="p101"></a>
@@ -32567,7 +32842,7 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Pages P121–P140
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P121: ciphers/rochefort.html -->
 <a id="p121"></a>
@@ -34590,8 +34865,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `ciphers/sha256.html`
 - Public page: https://ciphermuseum.com/ciphers/sha256.html
-- Snapshot source SHA-256: `e2a61ad3c7e6742cbe0abf05f01ce6bb6126d54a31545812f26f87bd1f6467a1`
-- Source identities in the prior evidence ledger: None assigned; this is not evidence that the page needs no sources.
+- Snapshot source SHA-256: `cb1eeac3e05f9b6c89c8a9f845b83732c422579a70e2a1079914293be70f05c4`
+- Source identities in the prior evidence ledger: WONG-2021
 
 ### Metadata and search/social descriptions
 
@@ -34695,6 +34970,27 @@ The input is padded so its length is congruent to 448 mod 512, then a 64-bit len
 
 Two security goals are preimage resistance (finding an input for a specified digest) and collision resistance (finding any two distinct inputs with the same digest). Generic classical work factors for an ideal 256-bit hash are about 2<sup>256</sup> and 2<sup>128</sup> respectively. These are search-model estimates, not a guarantee that a guessable password takes that much work to recover.
 
+#### Hash bytes, preserve field boundaries
+
+The tuples `["ab", "c"]` and `["a", "bc"]` both become `abc` when their fields are simply joined. Both hash inputs are the same bytes, `61 62 63` in hexadecimal. Their equal digest is an encoding ambiguity, **not a collision attack on SHA-256**.
+
+For this two-field teaching format, encode each field as its four-byte unsigned big-endian UTF-8 byte length followed by its UTF-8 bytes. A receiver checks each length and recovers exactly two fields, rejecting truncation or extra data. Lengths count bytes: `é` encodes as `c3 a9`, so its length is 2.
+
+Swipe or scroll the table horizontally to see every column. Keyboard: focus the table area and use the arrow keys.
+
+Unambiguous encoding for two UTF-8 fields (hexadecimal)
+
+| Fields | Length-prefixed bytes |
+| --- | --- |
+| `["ab", "c"]` | `00 00 00 02 61 62 00 00 00 01 63` |
+| `["a", "bc"]` | `00 00 00 01 61 00 00 00 02 62 63` |
+
+These encoded messages have different SHA-256 digests. Encoding removes this field-boundary ambiguity; it does not make hash collisions mathematically impossible. A complete protocol also defines field types, context and allowed representations. TupleHash is a standardized tuple-hashing construction based on cSHAKE, distinct from SHA-256 and from this teaching encoding.
+
+Inspect an existing application in [Crypto Lab: Context Ward](<https://systemslibrarian.github.io/crypto-lab-context-ward/>): switch to **Full lab** to examine length-prefixed leaf bytes and sealed fields. Its fixed teaching keys and scripted agent are not a production security guarantee.
+
+Source: David Wong, *Real-World Cryptography* (2021 edition), §2.5.4, “Avoid ambiguous hashing with TupleHash,” PDF pp. 120–123 in the reflowed edition, which has no printed pagination. The two-field byte example is a museum adaptation.
+
 [Inline SVG: original diagram/icon markup]
 
 ```html
@@ -34753,6 +35049,7 @@ Quick Facts
 - nav — aria-label: Primary
 - a — title: Still considered secure when used correctly with modern key handling.
 - a — aria-label: Trust label: Secure (Modern). Still considered secure when used correctly with modern key handling.
+- div — aria-label: Structured hash input comparison
 
 ### Control identities, constraints and initial-state attributes
 
@@ -34775,8 +35072,10 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
-  "sources": [],
+  "status": "ebook follow-up implementation and local validation complete",
+  "sources": [
+    "WONG-2021"
+  ],
   "notes": "Final corpus_utilities consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/final-s-z-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
   "final_prose_review": {
@@ -34794,11 +35093,22 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
   "generated_card_review": {
     "reader": "root",
     "status": "semantic overrides corrected; generated rebuild and final validation pending",
     "scope": "Root removed stale UA8295technical override; separated HallIX grouping from OTP classification for Enigma/Lorenz/Solitaire/Vernam; qualified SHA256length and Shamirconditions. Generator corrections are not a new historical-source verification."
+  },
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-14"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
   }
 }
 ```
@@ -37835,7 +38145,7 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Pages P141–P160
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P141: ciphers/tap-code.html -->
 <a id="p141"></a>
@@ -43777,7 +44087,7 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Pages P161–P180
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P161: community/index.html -->
 <a id="p161"></a>
@@ -44579,8 +44889,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `cryptanalysis.html`
 - Public page: https://ciphermuseum.com/cryptanalysis.html
-- Snapshot source SHA-256: `be97a48cfa12b8824fc684c18181f95233b2ac4a5ec950b0aa0484e57ad4c6ea`
-- Source identities in the prior evidence ledger: HOLDEN-2017, HAC-1997, SHANNON-1949, BENSON-VENONA, COPPERSMITH-1994
+- Snapshot source SHA-256: `7741435385b5b835f3942c51c7244f630d7c229b0881c0b0b70afe9ad8a89e57`
+- Source identities in the prior evidence ledger: HOLDEN-2017, HAC-1997, SHANNON-1949, BENSON-VENONA, COPPERSMITH-1994, LASRY-2018
 
 ### Metadata and search/social descriptions
 
@@ -44880,11 +45190,23 @@ Ciphertext  [Input hillInput: type=text; initial value=KHOOR ZRUOG]
 
  Run Hill Climb
 
+The objective is the mean reference frequency assigned to each letter: `sum(reference frequency of each letter) / letter count`. Higher scores are preferred. This measures a preference for common letters, not distance from an English frequency distribution.
+
+Counterexample: `HELLOWORLD` and its reversal `DLROWOLLEH` both score 5.85; `EEEEEEEEEE` scores 12.7. A score optimum can be wrong even when every key has been checked.
+
+ Restore supplied known-answer example
+
 Simulated annealing sometimes accepts worse-scoring candidates to escape local optima. This Caesar example illustrates the rule; a finite run does not guarantee the globally best score or the authentic plaintext.
 
 Ciphertext (Caesar)  [Input annealInput: type=text; initial value=WKLV LV D WHVW PHVVDJH]
 
  Run Annealing
+
+The objective is the mean reference frequency assigned to each letter: `sum(reference frequency of each letter) / letter count`. Higher scores are preferred. This measures a preference for common letters, not distance from an English frequency distribution.
+
+Counterexample: `HELLOWORLD` and its reversal `DLROWOLLEH` both score 5.85; `EEEEEEEEEE` scores 12.7. A score optimum can be wrong even when every key has been checked.
+
+ Restore supplied known-answer example
 
 Historical Record
 
@@ -45020,6 +45342,10 @@ The SHAttered team produced two different PDFs with the same SHA-1 digest. This 
 
 [Evidence Workbench](<https://ciphermuseum.com/lab/evidence-workbench.html>) · [Copiale, Mary Stuart and Z340 investigations](<https://ciphermuseum.com/lab/decipherment-cases.html>) · [Modern attack conditions](<https://ciphermuseum.com/lab/modern-attack-evidence.html>)
 
+#### Reading the search score
+
+George Lasry, *A Methodology for the Cryptanalysis of Classical Ciphers with Search Metaheuristics* (2018 published thesis), §§3.2.1–3.2.4, printed pp. 29–34 / PDF pp. 50–55, and §4.5, printed pp. 56–57 / PDF pp. 77–78, distinguishes objectives, selectivity and resilience to key errors. The small Caesar landscape above is an original teaching example; it does not reproduce the thesis’s large-key experiments.
+
 #### Reading
 
 Joshua Holden, *The Mathematics of Secrets: Cryptography from Caesar Ciphers to Digital Encryption* (2017 edition), chapter 2 and §§5.1–5.2; David Kahn, *The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet* (revised edition, 1996); Robert L. Benson, *The VENONA Story* (Center for Cryptologic History edition, 2001), pp. 1–3, 7 and 14–17. The demonstrations illustrate hypotheses and search rules, not guaranteed recoveries.
@@ -45075,8 +45401,10 @@ These preserve IDs, option values, numeric limits, data attributes and event bin
 - button: data-fn="runKPA"
 - input: type="text" id="hillInput" value="KHOOR ZRUOG" autocomplete="off" spellcheck="false"
 - button: id="hillBtn" data-fn="runHillClimb"
+- button: id="hillExample" type="button"
 - input: type="text" id="annealInput" value="WKLV LV D WHVW PHVVDJH" autocomplete="off" spellcheck="false"
 - button: id="annealBtn" data-fn="runAnneal"
+- button: id="annealExample" type="button"
 
 ### Scripts supporting this page
 
@@ -45347,33 +45675,70 @@ function runKPA() {
   out.innerHTML = html;
 }
 
+// The score stays unchanged: this lesson exposes its limitations.
+function caesarToyScore(text) {
+  const letters = text.toUpperCase().replace(/[^A-Z]/g, '');
+  if (!letters.length) return null;
+  return Array.from(letters).reduce((sum, c) => sum + ENG_FREQ[c.charCodeAt(0) - 65], 0) / letters.length;
+}
+function caesarToyDecrypt(text, shift) {
+  return text.toUpperCase().replace(/[A-Z]/g, c => ALPHA[(c.charCodeAt(0) - 65 - shift + 26) % 26]);
+}
+const CAESAR_LESSON_EXAMPLES = {
+  hill: { ciphertext: 'KHOOR ZRUOG', plaintext: 'HELLO WORLD', shift: 3 },
+  anneal: { ciphertext: 'WKLV LV D WHVW PHVVDJH', plaintext: 'THIS IS A TEST MESSAGE', shift: 3 }
+};
+function renderCaesarLandscape(prefix, input, state) {
+  const out = document.getElementById(prefix + 'Landscape');
+  if (!/[A-Z]/i.test(input)) {
+    out.textContent = 'Enter at least one A–Z letter to define a score. No search or language conclusion is available.';
+    return;
+  }
+  const rows = Array.from({length: 26}, (_, shift) => ({shift, text: caesarToyDecrypt(input, shift), score: caesarToyScore(caesarToyDecrypt(input, shift))}));
+  const maximum = Math.max(...rows.map(row => row.score));
+  const optima = rows.filter(row => Math.abs(row.score - maximum) < 1e-10).map(row => row.shift);
+  const example = CAESAR_LESSON_EXAMPLES[prefix];
+  const known = input.toUpperCase().trim() === example.ciphertext ? example : null;
+  let html = '<h3>All 26 shifts under this objective</h3><p><strong>Search stopping point:</strong> ' +
+    (state ? 'shift ' + state.stop + ' (last accepted state).' : 'not run.') +
+    ' <strong>Score optimum after checking all 26:</strong> shift' + (optima.length > 1 ? 's ' : ' ') + optima.join(', ') +
+    '. <strong>Supplied known answer:</strong> ' + (known ? 'shift ' + known.shift + ', ' + known.plaintext + '.' : 'none for this edited input.') + '</p>';
+  if (state) html += '<p><strong>Best sampled shift:</strong> ' + state.best + '. <strong>Evaluated path:</strong> ' + state.path.join(' → ') + '. Rejected proposals are included; they do not become the stopping point.</p>';
+  html += '<p>The exhaustive score check is a reference for this 26-key lesson, separate from the search trajectory. It does not validate a plaintext.</p>' +
+    '<div style="overflow-x:auto;" role="region" tabindex="0" aria-label="Caesar shift scores; scroll horizontally if needed"><table class="caesar-landscape-table" style="width:100%;text-align:left;"><caption>Higher mean letter-frequency scores are preferred. Markers distinguish the search state, model optimum and supplied answer.</caption><thead><tr><th scope="col">Shift</th><th scope="col">Score</th><th scope="col">Role</th><th scope="col">Candidate</th></tr></thead><tbody>';
+  for (const row of rows) {
+    const roles = [];
+    if (state && row.shift === state.stop) roles.push('Stopping point');
+    if (state && row.shift === state.best) roles.push('Best sampled');
+    if (optima.includes(row.shift)) roles.push('Score optimum');
+    if (known && row.shift === known.shift) roles.push('Supplied answer');
+    html += '<tr data-shift="' + row.shift + '" data-score="' + row.score + '"><th scope="row">' + row.shift + '</th><td>' + row.score.toFixed(4) +
+      '<br><meter min="0" max="12.7" value="' + row.score + '" aria-label="Shift ' + row.shift + ' score" style="width:6rem;">' + row.score.toFixed(4) + '</meter></td><td>' + roles.join('; ') +
+      '</td><td style="font-family:var(--fm);word-break:break-word;">' + escapeLabText(row.text) + '</td></tr>';
+  }
+  out.innerHTML = html + '</tbody></table></div>';
+}
+for (const prefix of ['hill', 'anneal']) {
+  const field = document.getElementById(prefix + 'Input');
+  function refresh() { document.getElementById(prefix + 'Output').textContent = ''; renderCaesarLandscape(prefix, field.value); }
+  field.addEventListener('input', refresh);
+  document.getElementById(prefix + 'Example').addEventListener('click', () => { field.value = CAESAR_LESSON_EXAMPLES[prefix].ciphertext; refresh(); });
+  refresh();
+}
+
 // ── Hill Climbing ───────────────────────────────────
 async function runHillClimb() {
   const input = document.getElementById('hillInput').value.toUpperCase();
   const out = document.getElementById('hillOutput');
   const btn = document.getElementById('hillBtn');
+  if (!/[A-Z]/.test(input)) { out.textContent = ''; renderCaesarLandscape('hill', input); return; }
+  document.getElementById('hillInput').disabled = true;
+  document.getElementById('hillExample').disabled = true;
   btn.disabled = true;
   out.innerHTML = '';
 
-  function score(text) {
-    const clean = text.replace(/[^A-Z]/g,'');
-    if (!clean.length) return 0;
-    let s = 0;
-    for (let i = 0; i < clean.length; i++) {
-      s += ENG_FREQ[clean.charCodeAt(i) - 65];
-    }
-    return s / clean.length;
-  }
-
-  function decrypt(text, shift) {
-    let r = '';
-    for (let i = 0; i < text.length; i++) {
-      const c = text.charCodeAt(i);
-      if (c >= 65 && c <= 90) r += String.fromCharCode(((c - 65 - shift + 26) % 26) + 65);
-      else r += text[i];
-    }
-    return r;
-  }
+  const score = caesarToyScore;
+  const decrypt = caesarToyDecrypt;
 
   let current = 0;
   let bestScore = score(decrypt(input, 0));
@@ -45408,6 +45773,9 @@ async function runHillClimb() {
     out.appendChild(line);
     await new Promise(r => setTimeout(r, 120));
   }
+  renderCaesarLandscape('hill', input, {stop: current, best: current, path: steps.map(step => step.shift)});
+  document.getElementById('hillInput').disabled = false;
+  document.getElementById('hillExample').disabled = false;
   btn.disabled = false;
 }
 
@@ -45416,28 +45784,17 @@ async function runAnneal() {
   const input = document.getElementById('annealInput').value.toUpperCase();
   const out = document.getElementById('annealOutput');
   const btn = document.getElementById('annealBtn');
+  if (!/[A-Z]/.test(input)) { out.textContent = ''; renderCaesarLandscape('anneal', input); return; }
+  document.getElementById('annealInput').disabled = true;
+  document.getElementById('annealExample').disabled = true;
   btn.disabled = true;
   out.innerHTML = '';
 
-  function score(text) {
-    const clean = text.replace(/[^A-Z]/g,'');
-    if (!clean.length) return 0;
-    let s = 0;
-    for (let i = 0; i < clean.length; i++) s += ENG_FREQ[clean.charCodeAt(i) - 65];
-    return s / clean.length;
-  }
-
-  function decrypt(text, shift) {
-    let r = '';
-    for (let i = 0; i < text.length; i++) {
-      const c = text.charCodeAt(i);
-      if (c >= 65 && c <= 90) r += String.fromCharCode(((c - 65 - shift + 26) % 26) + 65);
-      else r += text[i];
-    }
-    return r;
-  }
+  const score = caesarToyScore;
+  const decrypt = caesarToyDecrypt;
 
   let current = Math.floor(Math.random() * 26);
+  const initialShift = current;
   let currentScore = score(decrypt(input, current));
   let bestShift = current, bestScore = currentScore;
   let temp = 10.0;
@@ -45473,6 +45830,9 @@ async function runAnneal() {
   final.style.cssText = 'margin-top:.75rem;padding:.6rem;background:var(--gold-glow);border-radius:3px;';
   final.innerHTML = '<strong style="color:var(--gold);">Best sampled candidate:</strong> Shift ' + bestShift + ' → <span style="color:var(--tx);font-family:var(--fm);letter-spacing:.1em;">' + escapeLabText(decrypt(input, bestShift)) + '</span> <span style="color:var(--green);font-size:.7rem;">(score ' + bestScore.toFixed(1) + ')</span>';
   out.appendChild(final);
+  renderCaesarLandscape('anneal', input, {stop: current, best: bestShift, path: [initialShift, ...steps.map(step => step.shift)]});
+  document.getElementById('annealInput').disabled = false;
+  document.getElementById('annealExample').disabled = false;
   btn.disabled = false;
 }
 ```
@@ -45484,13 +45844,14 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
     "HOLDEN-2017",
     "HAC-1997",
     "SHANNON-1949",
     "BENSON-VENONA",
-    "COPPERSMITH-1994"
+    "COPPERSMITH-1994",
+    "LASRY-2018"
   ],
   "notes": "Complete static/SVG/dynamic explanation review. Frequency and IC overclaims removed; Kasiski final-substring and annealing current-state acceptance bugs corrected; candidate HTML escaped. Playground 137/137, IC 0/1 and short-input checks, Kasiski endpoint, additive known answer and independent seeded annealing trace passed.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -45509,7 +45870,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-09"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -46995,8 +47367,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `hall-of-foundations/closest-vector.html`
 - Public page: https://ciphermuseum.com/hall-of-foundations/closest-vector.html
-- Snapshot source SHA-256: `bc7938332b7b7e2f814e7d40b94eab82fde022d992d10507c0b53b59ab668a06`
-- Source identities in the prior evidence ledger: BONEH-SHOUP-2023, FIPS-203-204
+- Snapshot source SHA-256: `a64e353495a3f32410d0b776f688dd2f9294661f2d9d525fe4ce370f30837645`
+- Source identities in the prior evidence ledger: BONEH-SHOUP-2023, FIPS-203-204, MENEZES-LATTICES-2026
 
 ### Metadata and search/social descriptions
 
@@ -47126,6 +47498,32 @@ These keys contain short secret vectors, not a generic secret good basis. The pu
 The secret is a short *vector*, not a short *basis*. Same geometric family, different key structure.
 
 The connection is geometric intuition: lattice attacks can turn noisy equations into decoding or short-vector problems. Concrete attacks include primal, dual and hybrid approaches; it is inaccurate to say they all solve exactly this two-dimensional closest-point task. See the LWE exhibit for the public equations and message-cancellation model.
+
+§5
+
+#### Where the lattice hides in LWE
+
+Take a prime modulus *q* and an *m × n* matrix *A* with column rank *n* over the finite field F<sub>q</sub>, where *m > n*. Collect every integer vector that reduces modulo *q* to a column combination of *A*:
+
+L<sub>A</sub> = { y ∈ Z<sup>m</sup> : y ≡ Az (mod q), z ∈ Z<sup>n</sup> }
+
+This is a full-rank integer lattice of volume *q<sup>m−n</sup>*. For noisy equations *b ≡ As + e (mod q)*, choose integer representatives of *b* and the small error *e*. Then *y = b − e* belongs to the lattice and lies close to *b*. Finding that point allows recovery of *s* modulo *q* by solving the noiseless equations. Bounded-distance decoding adds a promise: the nearby lattice point is unique.
+
+##### A rectangular example you can check
+
+Let *q = 5*, *m = 2*, *n = 1* and let *A* be the column vector *(1, 2)*. Here the lattice consists of integer points *(u, v)* satisfying *v ≡ 2u (mod 5)*. A basis is *(1, 2), (0, 5)*, with determinant 5.
+
+Choose *s = 1* and *e = (1, 0)*. The observed vector is *b = (2, 2)*. Its nearby lattice point is *y = b − e = (1, 2)*, at distance 1; solving *As ≡ y (mod 5)* gives *s = 1*.
+
+**Why unique?** No nonzero lattice vector has squared length below 5, and *(1, 2)* has squared length 5. The lattice's minimum spacing is therefore √5. Since *1 < √5/2*, no second lattice point can be as close to *b*. This tiny instance is easy to enumerate; it is not a hardness demonstration.
+
+**A tie control.** Move the target to *(1/2, 1)*, halfway between *(0, 0)* and *(1, 2)*. Both points are nearest, at distance *√5/2*. The uniqueness promise has now failed. Being near some lattice point is not enough to identify one unambiguously.
+
+The [square invertible LWE toy](<https://ciphermuseum.com/hall-of-foundations/learning-with-errors.html>) uses a different model: its ordinary L<sub>A</sub> is all of Z<sup>n</sup>, so this lattice alone does not express its small-secret constraint. The rectangular example supplies one bridge to primal lattice attacks, not a description of every attack or of Module-LWE's parameters.
+
+Continue with the existing [Lattice Gentle lab](<https://systemslibrarian.github.io/crypto-lab-lattice-gentle/>) for noisy-equation residuals and basis exercises, or [Lattice Builder](<https://systemslibrarian.github.io/crypto-lab-lattice-builder/>) for geometry and an ML-KEM exchange. Their small geometric models remain distinct from the standard's security assumptions.
+
+**Source:** Alfred Menezes, *A Gentle Introduction to Lattice-Based Cryptography*, version 3.3, September 16, 2026, §4.3, Definition 4.15 and Theorem 4.16, pp.35–36; §4.4.1, pp.37–38. The numerical example is worked here for teaching.
 
 Where this touches your keys
 
@@ -47320,10 +47718,11 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
     "BONEH-SHOUP-2023",
-    "FIPS-203-204"
+    "FIPS-203-204",
+    "MENEZES-LATTICES-2026"
   ],
   "notes": "Root reread complete foundation page and teaching-model explanations; assumptions, examples and real-versus-finite-field or toy-versus-production boundaries reconciled. Earlier protocol/foundation tests remain bounded evidence, not independent proof verification.",
   "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -47341,7 +47740,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-18"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -47648,8 +48058,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `hall-of-foundations/entropy.html`
 - Public page: https://ciphermuseum.com/hall-of-foundations/entropy.html
-- Snapshot source SHA-256: `01b324649ac456e2674ae96944c1f1fd0a7edc3a58a922cec490fb3fb0f45e05`
-- Source identities in the prior evidence ledger: BONEH-SHOUP-2023
+- Snapshot source SHA-256: `8177bf619c350287e1f2984f08ef3e28c18dc24842ed804819831a43381f4a65`
+- Source identities in the prior evidence ledger: BONEH-SHOUP-2023, GRAY-1990-CORRECTED-2023, VADHAN-2012, TYAGI-WATANABE-2023
 
 ### Metadata and search/social descriptions
 
@@ -47748,6 +48158,71 @@ Bars show total entropy in bits for three alphabets. As a rule of thumb, **128 b
 
 §3
 
+#### A flat histogram can hide a pattern
+
+Write A–Z in order 100 times. Each letter occurs 100 times, yet the next letter is completely predictable. The [workbench](<https://ciphermuseum.com/lab/workbench.html>) reports an index of coincidence (IC) rounded to **0.0381**. The exact value is 26 × 100 × 99 / (2600 × 2599). Rearranging those same letters preserves the histogram and IC. Neither statistic measures their order.
+
+To discuss entropy, specify a source distribution. In the cyclic source below, choose one of the 26 starting letters uniformly *once*, then continue around the alphabet forever. Compare that with choosing a fresh independent uniform letter at every position. Here n is a positive block length.
+
+Uniform single-letter distributions, different sequence uncertainty
+
+| Declared source | One position | Whole n-letter block | Entropy rate |
+| --- | --- | --- | --- |
+| One random cyclic phase | log₂ 26 ≈ 4.7004 bits | log₂ 26 bits: only 26 possible blocks | 0 bits per letter in the limit |
+| Independent uniform letters | log₂ 26 ≈ 4.7004 bits | n log₂ 26 bits: 26ⁿ possible blocks | log₂ 26 bits per letter |
+
+Entropy rate is the limiting block entropy divided by block length. For the cyclic source, 4.7004/n tends to zero: learning the first letter determines the rest. These are properties of the declared sources, not entropy estimates for a particular observed string.
+
+Robert M. Gray, *Entropy and Information Theory*, corrected first edition, 26 June 2023 (original 1990), §2.2, printed pp.18–20, and §2.6, printed p.42. The alphabet/IC comparison is our worked application of the distinction between marginal and sequence entropy. Continue with Crypto Lab’s [Good Randomness](<https://systemslibrarian.github.io/crypto-lab-good-randomness/>) for deeper randomness experiments.
+
+§4
+
+#### Average uncertainty versus the first guess
+
+Shannon entropy averages surprise across outcomes. Min-entropy asks about the most likely outcome: **H<sub>min</sub> = −log₂(P<sub>best</sub>)**, where P<sub>best</sub> is the success probability of the best single guess. Neither specifies the cost of testing a guess.
+
+Consider an n-bit source that outputs the all-zero string with probability a, and otherwise draws a uniform n-bit string. The uniform branch can also produce zeros, so P<sub>best</sub> = a + (1−a)/2ⁿ. Each other string has probability q = (1−a)/2ⁿ. Its exact Shannon entropy is −P<sub>best</sub> log₂ P<sub>best</sub> − (2ⁿ−1)q log₂ q, with 0 log₂ 0 treated as zero.
+
+Two declared 256-bit sources
+
+| Source | Shannon entropy | Best first guess | Min-entropy |
+| --- | --- | --- | --- |
+| Uniform (a = 0) | 256 bits | Success 2⁻²⁵⁶ | 256 bits |
+| Mixture (a = 1/2) | Approximately 129 bits | Guess all zeros: success 1/2 + 2⁻²⁵⁷ | Approximately 1 bit |
+
+The mixture has substantial average uncertainty, yet one guess succeeds about half the time. This is a constructed distribution, not a measured password population; 2 raised to the Shannon entropy is not a “guesses required” formula. Deterministic hashing cannot manufacture missing source entropy.
+
+Adapted from Salil P. Vadhan, *Pseudorandomness*, *Foundations and Trends in Theoretical Computer Science* 7(1–3), volume dated 2011, copyright 2012, §6.1.2, printed pp.171–172 (Definition 6.7 and Lemma 6.8). Vadhan uses a .99/.01 mixture; the half-and-half values here are our teaching preset. Crypto Lab’s [Noise to Numbers](<https://systemslibrarian.github.io/crypto-lab-noise-to-numbers/>) offers a deeper exploration of randomness sources.
+
+§5
+
+#### A shorter secret after partial leakage
+
+Alice and Bob share two independent fair bits X₁ and X₂. An observer learns one bit and which position it came from; choose that position independently and fairly. Alice and Bob do not know which position leaked. Their shared output K = X₁ XOR X₂ is still a fair secret bit under this specific leakage model.
+
+All eight equally likely outcomes (probability 1/8 each)
+
+| X₁X₂ | Revealed position | Observed bit | K = parity |
+| --- | --- | --- | --- |
+| 00 | 1 | 0 | 0 |
+| 00 | 2 | 0 | 0 |
+| 01 | 1 | 0 | 1 |
+| 01 | 2 | 1 | 1 |
+| 10 | 1 | 1 | 1 |
+| 10 | 2 | 0 | 1 |
+| 11 | 1 | 1 | 0 |
+| 11 | 2 | 1 | 0 |
+
+Group rows by what the observer knows: (position, observed bit). Every group contains one K = 0 and one K = 1. Thus K is uniform and independent of that observation. For example, seeing position 1 equal to 0 leaves 00 and 01 equally likely, giving opposite parities.
+
+**Negative control: leak parity instead.** If the observer learns X₁ XOR X₂, the proposed output K is completely known: their first guess succeeds with probability 1. XOR does not remove arbitrary leakage.
+
+Privacy amplification aims to obtain a shorter, almost-uniform secret independent of the observer’s side information and the public extractor choice. The guarantees depend on the joint source/leakage model and remaining uncertainty. This fixed table enumerates a model; it generates no operational secret keys.
+
+Himanshu Tyagi and Shun Watanabe, *Information-theoretic Cryptography*, Cambridge University Press, 2023, §7.3, printed p.124, Example 7.9 and Definition 7.10; pp.125–127 develop conditional min-entropy and Theorem 7.13. The leaked-parity control is our contrasting example. See also the [XOR glossary entry](<https://ciphermuseum.com/glossary.html#gl-X>).
+
+§6
+
 #### The one-time pad's perfect secret
 
 A pad chosen uniformly and independently of the message, kept secret, as long as the message and used once provides perfect secrecy for fixed-length messages. Entropy is part of that argument, but a high-entropy string that is public or related to the message is not a secure pad.
@@ -47769,6 +48244,9 @@ Where the ceiling is reached: [the One-Time Pad](<https://ciphermuseum.com/ciphe
 - nav — aria-label: Primary
 - svg#hcurve — aria-label: Entropy of a biased coin as bias varies.
 - svg#keybar — aria-label: Entropy in bits for different password lengths and alphabets.
+- div — aria-label: Source dependence comparison
+- div — aria-label: First guess and entropy comparison
+- div — aria-label: Privacy amplification worked outcomes
 
 ### Control identities, constraints and initial-state attributes
 
@@ -47850,9 +48328,12 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
-    "BONEH-SHOUP-2023"
+    "BONEH-SHOUP-2023",
+    "GRAY-1990-CORRECTED-2023",
+    "VADHAN-2012",
+    "TYAGI-WATANABE-2023"
   ],
   "notes": "Root reread complete foundation page and teaching-model explanations; assumptions, examples and real-versus-finite-field or toy-versus-production boundaries reconciled. Earlier protocol/foundation tests remain bounded evidence, not independent proof verification.",
   "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -47870,7 +48351,20 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-02",
+      "EBR-11",
+      "EBR-12"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -49514,8 +50008,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `hall-of-foundations/learning-with-errors.html`
 - Public page: https://ciphermuseum.com/hall-of-foundations/learning-with-errors.html
-- Snapshot source SHA-256: `d7c6a6e00d410ca67d5f984f73970d4e98e82cda6b06b872afbbdd3fa82b5fec`
-- Source identities in the prior evidence ledger: BONEH-SHOUP-2023, FIPS-203-204
+- Snapshot source SHA-256: `ce67bdc0d5d3c4fcd25fc1ae7f4a4025577996efc7ab48020d049a9e2cb0cb74`
+- Source identities in the prior evidence ledger: BONEH-SHOUP-2023, FIPS-203-204, MENEZES-LATTICES-2026
 
 ### Metadata and search/social descriptions
 
@@ -49654,6 +50148,26 @@ Three things here are toys, and it is worth naming them.
 
 What is faithful is the shape: the public key really is a matrix plus a noisy product, the secret really is a short vector, decryption really does work by cancelling a shared term, and the noise budget really is the thing parameter choices are fighting over.
 
+§5
+
+#### From an encrypted bit to a shared key
+
+A key-encapsulation mechanism establishes a shared secret for later symmetric cryptography. Its three operations have different inputs and outputs:
+
+- **Key generation:** the recipient creates a public encapsulation key and a private decapsulation key.
+
+- **Encapsulation:** using an authentic copy of that public key, the sender produces a secret shared key *K* and a public ciphertext *c*. Only the ciphertext is sent.
+
+- **Decapsulation:** the recipient uses the private key and ciphertext to recover the shared key. Receiving key-shaped bytes alone does not authenticate the sender or confirm that both parties agree.
+
+In ML-KEM's Fujisaki–Okamoto construction, decapsulation decrypts a candidate message, derives a candidate key and encryption randomness, then **reencrypts** that message. It compares the regenerated ciphertext with the received one. A match selects the candidate key; a mismatch selects the fallback *J(z ∥ c)*, derived from a private value *z* stored in the decapsulation key and the received ciphertext.
+
+This is **implicit rejection**: the internal consistency failure still yields key bytes. The fallback is deterministic for the same private key and ciphertext, not fresh randomness drawn on each failure. The real interface does not return the internal rejection flag. A malformed ciphertext length fails a separate input check before this branch. Correct protocol integration must handle such errors and provide the authentication or key confirmation its application requires.
+
+Step through the existing [KEM Trap lab](<https://systemslibrarian.github.io/crypto-lab-kem-trap/>) for reencryption, implicit rejection and caller mistakes. Its separate shortened-comparison example is a schematic implementation bug, not a break of correct ML-KEM. This explanation adds no standard-compatible algorithm to the one-bit demo above.
+
+For the geometric connection behind the equations, see the [worked rectangular LWE lattice example](<https://ciphermuseum.com/hall-of-foundations/closest-vector.html#lwe-lattice>). It uses a different matrix shape from this page's square, small-secret toy.
+
 Where this touches your keys
 
 ##### The bet the post-quantum standards make
@@ -49662,7 +50176,7 @@ ML-KEM uses this broad structured noisy-equation pattern at much larger paramete
 
 **Three related teaching models.** [§147](<https://ciphermuseum.com/hall-of-foundations/lattices-svp.html>) introduces lattice geometry. [§152](<https://ciphermuseum.com/hall-of-foundations/closest-vector.html>) illustrates geometric decoding. [§157](<https://ciphermuseum.com/hall-of-foundations/learning-with-errors.html>) shows a tiny noisy-equation model and distinguishes it from standardized keys. Next: [Polynomial Rings](<https://ciphermuseum.com/hall-of-foundations/polynomial-rings.html>), where these plain vectors become polynomials. Tested logic in `lwe-math.js`.
 
-**Sources and scope:** [FIPS 203 (ML-KEM, 2024)](<https://csrc.nist.gov/pubs/fips/203/final>) and [FIPS 204 (ML-DSA, 2024)](<https://csrc.nist.gov/pubs/fips/204/final>). This scalar, uniform-error toy is not either standard.
+**Sources and scope:** Alfred Menezes, *A Gentle Introduction to Lattice-Based Cryptography*, version 3.3, September 16, 2026, §6.4, pp.64–66, Algorithm 6.12; NIST [FIPS 203 (ML-KEM, 2024)](<https://csrc.nist.gov/pubs/fips/203/final>), Algorithms 16–21, and [FIPS 204 (ML-DSA, 2024)](<https://csrc.nist.gov/pubs/fips/204/final>). The KEM explanation is conceptual. This scalar, uniform-error toy is not either standard.
 
 ### Additional image, accessibility, tooltip and placeholder text
 
@@ -49903,10 +50417,11 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
     "BONEH-SHOUP-2023",
-    "FIPS-203-204"
+    "FIPS-203-204",
+    "MENEZES-LATTICES-2026"
   ],
   "notes": "Root reread complete foundation page and teaching-model explanations; assumptions, examples and real-versus-finite-field or toy-versus-production boundaries reconciled. Earlier protocol/foundation tests remain bounded evidence, not independent proof verification.",
   "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -49924,7 +50439,19 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-17",
+      "EBR-18"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -51103,7 +51630,7 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Pages P181–P200
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P181: hall-of-foundations/polynomial-rings.html -->
 <a id="p181"></a>
@@ -51595,8 +52122,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `hall-of-foundations/random-oracle.html`
 - Public page: https://ciphermuseum.com/hall-of-foundations/random-oracle.html
-- Snapshot source SHA-256: `a287ee8dd7878853c2002b33744e085a7238fdc563e1f280579373e873753701`
-- Source identities in the prior evidence ledger: BONEH-SHOUP-2023
+- Snapshot source SHA-256: `ef9ac80c64a6ff45b28a1e41383d4cac8091b543d0fab5fb85851626159d2511`
+- Source identities in the prior evidence ledger: BONEH-SHOUP-2023, MENEZES-LATTICES-2026, FIPS-203-204
 
 ### Metadata and search/social descriptions
 
@@ -51695,6 +52222,26 @@ The Fiat–Shamir transform replaces the verifier's challenge with a hash of the
 
 A Fiat–Shamir signature binds the message and required transcript context into a hash-derived challenge. Unforgeability belongs to the complete construction under its stated assumptions; it is not a property of the challenge alone.
 
+§4
+
+#### Why abort a signature attempt?
+
+ML-DSA forms a response shaped like *z = y + c·s*: a random mask plus a secret-dependent shift. Unlike uniform masking around a finite group, a mask drawn from a bounded interval has edges. Publishing a response near an edge can reveal information about that shift.
+
+**A scalar example.** Choose the integer mask *y* uniformly from −4 through 4, and let the shift *t* be −1, 0 or 1. The response is *z = y + t*. These are inclusive integer ranges:
+
+- For *t = −1*, responses range from −5 through 3.
+
+- For *t = 0*, responses range from −4 through 4.
+
+- For *t = 1*, responses range from −3 through 5.
+
+Seeing *z = 5* identifies *t = 1*. Instead, discard the attempt unless *−3 ≤ z ≤ 3*, then resample the mask. For every allowed shift, exactly seven of the nine masks survive. Conditional on acceptance, each of the seven responses has probability 1/7, independent of the shift. The common interior removes this edge information.
+
+This illustrates one reason for Fiat–Shamir *with aborts*. Actual ML-DSA operates on polynomial vectors, imposes a strict response-norm bound and performs further rejection checks. The scalar example is not its signing algorithm or a security proof. Compare the [Schnorr identification example](<https://ciphermuseum.com/ciphers/zero-knowledge-proofs.html>), where masking uses modular arithmetic.
+
+Explore the existing [Dilithium Reject lab](<https://systemslibrarian.github.io/crypto-lab-dilithium-reject/>): “Why Each Check Exists” explains the bounds, and “Watch the Loop” shows signing attempts. Retry histograms alone do not demonstrate exploitable secret leakage.
+
 Where this touches your keys
 
 ##### Used by several signature families
@@ -51703,7 +52250,7 @@ Schnorr-style signatures and ML-DSA use Fiat–Shamir ideas. ML-DSA uses SHAKE-b
 
 Related: [One-Way Functions](<https://ciphermuseum.com/hall-of-foundations/one-way-function.html>) (pre-image resistance in general), [Reduction & Proof](<https://ciphermuseum.com/hall-of-foundations/reduction.html>) (what a proof in this model claims).
 
-**Sources and scope:** [RFC 8235 (2017)](<https://www.rfc-editor.org/rfc/rfc8235.html>); NIST [FIPS 204](<https://csrc.nist.gov/pubs/fips/204/final>) and [FIPS 205](<https://csrc.nist.gov/pubs/fips/205/final>) (2024). The interactive 16-bit mixer is an illustration, not a cryptographic hash.
+**Sources and scope:** Alfred Menezes, *A Gentle Introduction to Lattice-Based Cryptography*, version 3.3, September 16, 2026, §7.1.4, Issue #5, pp.73–74; [RFC 8235 (2017)](<https://www.rfc-editor.org/rfc/rfc8235.html>); NIST [FIPS 204](<https://csrc.nist.gov/pubs/fips/204/final>), Algorithm 7, and [FIPS 205](<https://csrc.nist.gov/pubs/fips/205/final>) (2024). The interval example is conceptual; the interactive 16-bit mixer is an illustration, not a cryptographic hash.
 
 ### Additional image, accessibility, tooltip and placeholder text
 
@@ -51821,9 +52368,11 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
-    "BONEH-SHOUP-2023"
+    "BONEH-SHOUP-2023",
+    "MENEZES-LATTICES-2026",
+    "FIPS-203-204"
   ],
   "notes": "Root reread complete foundation page and teaching-model explanations; assumptions, examples and real-versus-finite-field or toy-versus-production boundaries reconciled. Earlier protocol/foundation tests remain bounded evidence, not independent proof verification.",
   "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -51841,7 +52390,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-16"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -56663,7 +57223,7 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Pages P201–P214
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 <!-- BEGIN PAGE P201: lab/modern-attack-evidence.html -->
 <a id="p201"></a>
@@ -56671,8 +57231,8 @@ Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum 
 
 - Site path: `lab/modern-attack-evidence.html`
 - Public page: https://ciphermuseum.com/lab/modern-attack-evidence.html
-- Snapshot source SHA-256: `b8c3e8c60a70836f999853ccc8e9545190e52c6b32a6d0c3abe6e873eb0fa4fb`
-- Source identities in the prior evidence ledger: GPU-SEARCH-2025, GEA-FAULTS-2026, CONDITIONAL-DES-2018
+- Snapshot source SHA-256: `14bc65124bbe165aba374b7b90e2ddb0c5e78e561075af3528906ccd5e57fb21`
+- Source identities in the prior evidence ledger: GPU-SEARCH-2025, GEA-FAULTS-2026, CONDITIONAL-DES-2018, BIHAM-SHAMIR-1993-2009, MANGARD-OSWALD-POPP-2007
 
 ### Metadata and search/social descriptions
 
@@ -56728,6 +57288,18 @@ Separate measured RTX 4090 throughput from extrapolated total search time, prepr
 
 [Primary journal paper (2025)](<https://doi.org/10.46586/tosc.v2025.i1.309-327>) · [Institutional full text](<https://research.sabanciuniv.edu/id/eprint/51583/1/GPU%20Assisted.pdf>), PDF pp. 1–3 and 12–15. Compare [DES’s finite keyspace](<https://ciphermuseum.com/ciphers/des.html>) and [SoDark’s related-tweak attacks](<https://ciphermuseum.com/ciphers/sodark.html>).
 
+#### Power observation: a model of the implementation
+
+A passive power attack observes executions; active fault injection tries to alter them. In correlation power analysis, an analyst selects a key-dependent intermediate, predicts it under small subkey hypotheses, models its leakage, and compares those predictions with associated power traces.
+
+This needs repeated executions under the relevant key, known associated inputs that vary, aligned traces or a way to align them, an appropriate leakage model, and sufficient signal relative to noise. Hamming weight HW counts one-bits in a value. Hamming distance models a transition: `HD(a,b) = HW(a XOR b)`. Neither model is an exact law for every device’s consumption.
+
+A high correlation or candidate rank is evidence to test, not recovery confirmed against a known answer. Noise, mismatched models and acquisition conditions affect the result; there is no universal trace count or recovery time. A physical implementation can leak without a mathematical break of AES.
+
+[Power Trace](<https://systemslibrarian.github.io/crypto-lab-power-trace/>) computes CPA/DPA statistics over **simulated leakage**; those results are not measured-device evidence. For the effect of combining masked observations, see the [Museum’s exact masking example](<https://ciphermuseum.com/ciphers/aes.html#masking>) and [Masked Core](<https://systemslibrarian.github.io/crypto-lab-masked-core/>).
+
+Stefan Mangard, Elisabeth Oswald and Thomas Popp, *Power Analysis Attacks: Revealing the Secrets of Smart Cards* (2007), introduction, pp. 1–13; §3.3, pp. 38–42; §§6.1–6.2, pp. 119–124. These implementation conditions differ from the [induced-fault model below](<https://ciphermuseum.com/lab/modern-attack-evidence.html#faults>).
+
 #### GPRS faults: physical access changes the model
 
 “Practical Differential Fault Attacks on the GPRS Standard Ciphers” studies GEA-1 and GEA-2 under a random fault model. The authors’ abstract reports validation by simulating the attacks on ChipWhisperer Lite, with the experimental attacks completing within sixteen minutes on a common laptop.
@@ -56738,13 +57310,34 @@ Compare the need for controlled physical faults with the data/oracle access in [
 
 Zhengting Li and coauthors, [IEEE Transactions on Dependable and Secure Computing 23(3), pp. 7129–7142 (2026)](<https://doi.org/10.1109/TDSC.2026.3671957>). The [authors’ institutional record](<https://pure.bit.edu.cn/en/publications/practical-differential-fault-attacks-on-the-gprs-standard-ciphers/>) identifies a peer-reviewed journal article; [ePrint 2026/1806](<https://eprint.iacr.org/2026/1806>) is a minor revision of that published work. This summary uses the verified abstract and publication records.
 
+#### Historic full-DES differential attack: collection is not analysis
+
+Biham and Shamir’s attack targets all 16 rounds with the standard DES key schedule. Its chosen-plaintext form requires access to encrypt structured inputs with the needed XOR differences. Table 5.2 of their book separates these rounded resource estimates:
+
+Historical estimates, not a modern hardware benchmark
+
+| Resource | Approximate amount |
+| --- | --- |
+| Chosen plaintexts collected | 2<sup>47</sup> blocks |
+| Retained data analyzed | 2<sup>36</sup> blocks from that collection |
+| Analysis work | 2<sup>37</sup> equivalent DES operations, excluding collection |
+| Separate known-plaintext variant | 2<sup>55</sup> known plaintexts |
+
+Possessing 2<sup>36</sup> arbitrary ciphertexts does not supply the selected data. Nor is 2<sup>37</sup> the total end-to-end work. The more precise metastructure estimates in §5.1 are 2<sup>47.2</sup> chosen plaintexts and 2<sup>37.2</sup> analysis operations.
+
+Success is probabilistic. The book’s base schedule uses about 2<sup>35</sup> structures of 2<sup>13</sup> inputs (2<sup>48</sup> plaintexts) and gives about a 58% chance of at least one right pair. Metastructures obtain four times as many pairs from twice as many inputs, reducing the rounded collection requirement to 2<sup>47</sup>. The 58% figure describes that base schedule; it is not an exact success guarantee for every rounded estimate. Restricted input alphabets also matter: the original differences cannot be realized using only ASCII inputs; the book’s adapted attack needs about 2<sup>49</sup> chosen ASCII plaintexts.
+
+[Start with the DES S1 worked example](<https://ciphermuseum.com/ciphers/des.html#s1-differential>) or explore differential methods in [Biham Lens](<https://systemslibrarian.github.io/crypto-lab-biham-lens/>). Those bounded exercises do not execute this full-DES attack.
+
+Eli Biham and Adi Shamir, *Differential Cryptanalysis of the Data Encryption Standard* (1993), chapter 5 and §5.1, Table 5.2. Numbered pp. 78–86, especially pp. 84–86, refer to the authors’ repaginated 7 December 2009 recompilation.
+
 #### Conditional-linear DES: discard data to gain bias
 
 Biham and Perle’s 2018 conditional-linear analysis conditions linear approximations on observable information. Keeping a selected subset can increase statistical bias, trading discarded data against a stronger distinguisher.
 
 One reported full-DES operating point uses about 2<sup>41.9</sup> known plaintexts and analysis work at 85% success. These are separate quantities even when their exponents coincide. The paper includes statistical/reduced-round experiments and selected full-DES checks; §4.7 counts the candidate keys preceding the correct key instead of executing that search; §4.7.1 reports 79 full-DES data/analysis runs using this distinction. It is not a guaranteed, ciphertext-only or laptop-speed recovery claim.
 
-This is **conditional-linear** analysis. Crypto Lab’s planned differential–linear composition is a different technique. The museum’s contribution is a dated explanation of the result and its evidence conditions.
+This is **conditional-linear** analysis. Crypto Lab’s [Matsui Line differential–linear composition lesson](<https://systemslibrarian.github.io/crypto-lab-matsui-line/>) is a different technique. The museum’s contribution is a dated explanation of the result and its evidence conditions.
 
 [Biham and Perle, primary ToSC paper (2018)](<https://doi.org/10.46586/tosc.v2018.i3.215-264>), Tables 1–2 and §4.7–4.7.1, PDF pp. 5–6 and 30–34. [Journal full text](<https://tosc.iacr.org/index.php/ToSC/article/download/7302/6476>). [Return to the DES exhibit](<https://ciphermuseum.com/ciphers/des.html>).
 
@@ -56776,11 +57369,13 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
     "GPU-SEARCH-2025",
     "GEA-FAULTS-2026",
-    "CONDITIONAL-DES-2018"
+    "CONDITIONAL-DES-2018",
+    "BIHAM-SHAMIR-1993-2009",
+    "MANGARD-OSWALD-POPP-2007"
   ],
   "notes": "Research-case review checked KASUMI-64 repeated-key deployment versus independent 128-bit search, TEA3 target, GEA abstract-level controlled-fault result and corrected journal status, and conditional DES candidate-count experiments versus full key searches. Exact conditions and source-access limits retained.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -56799,10 +57394,22 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
   "remaining_evidence_limits": [
     "GEA full PDF returned403; abstract/institutional record supports publication and controlled experiment only. GPU extrapolation, collection costs and TMTO preprocessing remain distinct from measured rates. Conditional-DES79runs did not execute79full key searches."
-  ]
+  ],
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-08",
+      "EBR-20"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -56817,8 +57424,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `lab/workbench.html`
 - Public page: https://ciphermuseum.com/lab/workbench.html
-- Snapshot source SHA-256: `ff8b4ba221f70d5606f03ed9ae4d262fdd6266c69166ebaedcc57f889585d50b`
-- Source identities in the prior evidence ledger: None assigned; this is not evidence that the page needs no sources.
+- Snapshot source SHA-256: `dc2633d4aff2872330a05c5d7d3306f2685489976069c8b66e4afef58699f848`
+- Source identities in the prior evidence ledger: GRAY-1990-CORRECTED-2023
 
 ### Metadata and search/social descriptions
 
@@ -56883,6 +57490,8 @@ Input Text Distribution
 Index of Coincidence
 
 —
+
+IC counts matching letter pairs; it ignores their order. It does not identify a cipher or prove randomness. [See a balanced, predictable counterexample.](<https://ciphermuseum.com/hall-of-foundations/entropy.html#entropy-rate>)
 
 ##### English Reference
 
@@ -57193,12 +57802,13 @@ Source text, not a record of every rendered state. Any ebook URL is replaced by 
     var freqs = r.counts.map(function(c){ return r.total ? (c/r.total*100) : 0; });
     renderBars('freqBars','freqLabels', freqs);
     var ic = calcIC(r.counts, r.total);
-    document.getElementById('icVal').textContent = r.total > 0 ? ic.toFixed(4) : '—';
-    var hint = '';
-    if(r.total >= 20){
-      if(ic > 0.06) hint = 'Consistent with monoalphabetic / natural language';
-      else if(ic > 0.04) hint = 'Suggests polyalphabetic with short key';
-      else hint = 'Flat distribution — polyalphabetic or random';
+    document.getElementById('icVal').textContent = r.total >= 2 ? ic.toFixed(4) : '—';
+    var hint = 'At least two A–Z letters are needed for a matching-pair proportion.';
+    if(r.total >= 2){
+      if(r.total < 20) hint = 'Short sample: the observed coincidence proportion is sensitive to each letter.';
+      else if(ic > 0.06) hint = 'Higher observed coincidence: more repeated-letter pairs than the uniform-letter reference (1/26 ≈ 0.0385).';
+      else if(ic > 0.04) hint = 'Observed coincidence is above the uniform-letter reference (1/26 ≈ 0.0385).';
+      else hint = 'Low observed coincidence: compatible with many sources, including balanced deterministic text.';
     }
     document.getElementById('icHint').textContent = hint;
   }
@@ -57231,8 +57841,10 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
-  "sources": [],
+  "status": "ebook follow-up implementation and local validation complete",
+  "sources": [
+    "GRAY-1990-CORRECTED-2023"
+  ],
   "notes": "Root reread workbench prose and controls. IC values are approximate references; engine correctness and historical procedure/provenance are separate questions.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
   "final_prose_review": {
@@ -57249,7 +57861,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-02"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -57264,8 +57887,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `learn.html`
 - Public page: https://ciphermuseum.com/learn.html
-- Snapshot source SHA-256: `eef8a77546deaad56db30632a2c3ee164bfcc9c0cca448fd52a49f83888bdb8e`
-- Source identities in the prior evidence ledger: HOLDEN-2017, HAC-1997, SHANNON-1949
+- Snapshot source SHA-256: `447c41722da733924e63cacd416c543cdafe2ff99241b594671a8258831a9ba4`
+- Source identities in the prior evidence ledger: HOLDEN-2017, HAC-1997, SHANNON-1949, ANDERSON-2020, WONG-2021
 
 ### Metadata and search/social descriptions
 
@@ -57401,6 +58024,16 @@ Shannon formalized perfect secrecy: an OTP achieves it for fixed-length messages
 <svg class="section-divider" viewBox="0 0 180 6"><line x1="0" y1="3" x2="180" y2="3"></line></svg>
 ```
 
+#### Three details that change a protocol
+
+Follow these worked examples, then continue in the linked Crypto Lab activities:
+
+- [A valid tag versus a fresh message](<https://ciphermuseum.com/modern.html#replay-freshness>): replay A/B/A and see what receiver state changes.
+
+- [Field boundaries before hashing](<https://ciphermuseum.com/ciphers/sha256.html#structured-hashing>): distinguish different records from different input bytes.
+
+- [Separate keys after key agreement](<https://ciphermuseum.com/ciphers/diffie-hellman.html#key-derivation>): compare HKDF purpose labels and output lengths.
+
 Continue Learning
 
 #### Explore by Topic
@@ -57498,11 +58131,13 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
     "HOLDEN-2017",
     "HAC-1997",
-    "SHANNON-1949"
+    "SHANNON-1949",
+    "ANDERSON-2020",
+    "WONG-2021"
   ],
   "notes": "Complete learning summaries and metadata reread. Direct classical-to-AES lineage removed; OTP uniformity, independence, secrecy and nonreuse stated; conceptual comparisons distinguished from historical transmission.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -57521,7 +58156,20 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-13",
+      "EBR-14",
+      "EBR-15"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -57536,8 +58184,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `modern.html`
 - Public page: https://ciphermuseum.com/modern.html
-- Snapshot source SHA-256: `acc2b978998b2bcb0fa7998d5da80e8a39264ad89021cfb3088d60d3be178048`
-- Source identities in the prior evidence ledger: BONEH-SHOUP-2023, HAC-1997, SHANNON-1949
+- Snapshot source SHA-256: `3c8ab175bb7e546a744cfc2d9c41da36479d7cf034c9762f519db53fef13e534`
+- Source identities in the prior evidence ledger: BONEH-SHOUP-2023, HAC-1997, SHANNON-1949, ANDERSON-2020, WONG-2021
 
 ### Metadata and search/social descriptions
 
@@ -57823,6 +58471,28 @@ Zero-Knowledge Proofs → exhibit
 
 [Zero-knowledge proofs](<https://ciphermuseum.com/ciphers/zero-knowledge-proofs.html>) combine a soundness guarantee with a specified bound on what the verifier can learn beyond the statement. The guarantee depends on the protocol and security model; toy protocols can have a visible nonzero soundness error. The succinct variants — zk-SNARKs and STARKs — validate private transactions and compress whole blocks of computation into a proof small enough to check on a blockchain. The Fiat–Shamir transformation connects certain interactive identification protocols to noninteractive proofs or signatures under additional assumptions. A signature is not automatically a general-purpose zero-knowledge proof.
 
+#### A valid tag can belong to an old message
+
+Suppose A carries counter 1 and B carries counter 2. Each tag covers the counter and message under the same session key. An observer records both. Compare a receiver that remembers only the last token with one that accepts a valid tag only when its counter exceeds the highest accepted counter, initially 0.
+
+Swipe or scroll the table horizontally to see every column. Keyboard: focus the table area and use the arrow keys.
+
+Deliver A, B, then A again; authenticate before updating state
+
+| Delivery | Tag check | Last-token-only rule | Increasing-counter rule |
+| --- | --- | --- | --- |
+| A (1) | Valid | Accept | Accept; highest = 1 |
+| B (2) | Valid | Accept | Accept; highest = 2 |
+| A (1), replayed | Valid | Accept | Reject; highest = 2 |
+| A changed to counter 3; old tag | Invalid | Reject | Reject; highest = 2 |
+| Forget receiver state, keep key; replay A (1) | Valid | Accept | Accept; highest = 1 |
+
+The A/B/A sequence defeats last-token-only checking. Resetting state under the unchanged key defeats the counter rule too. Rejected packets must not advance the accepted counter. This simplified rule rejects out-of-order messages; transports that allow reordering need a defined replay window and session lifecycle, including counter exhaustion. Replaying recorded ciphertext does not require encrypting a new message with a reused nonce: sender nonce uniqueness and receiver freshness are separate requirements.
+
+Try the existing [Crypto Lab: Regex Veil](<https://systemslibrarian.github.io/crypto-lab-fte/>), in its **Freshness** section: open authenticated fragments twice, then reset the used-counter window. It is a local protocol teaching model, not a deployed transport.
+
+Sources: Ross Anderson, *Security Engineering: A Guide to Building Dependable Distributed Systems*, third edition (2020), §4.3, printed pp. 122–124 (PDF pp. 169–171); David Wong, *Real-World Cryptography* (2021 edition), §3.3.3, PDF pp. 140–143 in the reflowed edition, which has no printed pagination. The table is a museum teaching example.
+
 🎓
 
 **The museum's final lesson:** Many historical systems failed through structural weaknesses, key reuse, or operational mistakes; others are obsolete or unresolved. A correctly used one-time pad retains perfect secrecy. Modern cryptography adds computational security and public-key methods, while still depending on sound key management, and extends into protocols, signatures, and proofs.
@@ -57870,6 +58540,7 @@ Dan Boneh’s Coursera course covers modern cryptographic primitives: stream cip
 ### Additional image, accessibility, tooltip and placeholder text
 
 - nav — aria-label: Primary
+- div — aria-label: Replay and receiver-state comparison
 
 ### Control identities, constraints and initial-state attributes
 
@@ -57890,11 +58561,13 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
+  "status": "ebook follow-up implementation and local validation complete",
   "sources": [
     "BONEH-SHOUP-2023",
     "HAC-1997",
-    "SHANNON-1949"
+    "SHANNON-1949",
+    "ANDERSON-2020",
+    "WONG-2021"
   ],
   "notes": "Root reread full modern overview. Stream reuse, CDH, hash limits, signature attribution, finite-field sharing assumptions and proof soundness remain bounded to their models.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -57912,7 +58585,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-13"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -59582,8 +60266,8 @@ This describes work recorded before this export. Treat these notes as assertions
 
 - Site path: `teaching.html`
 - Public page: https://ciphermuseum.com/teaching.html
-- Snapshot source SHA-256: `39cd0346e91abb62615553662cff8f2172e4ca0c72ec203ff76384fe2abbb888`
-- Source identities in the prior evidence ledger: None assigned; this is not evidence that the page needs no sources.
+- Snapshot source SHA-256: `3bc03cae8cc696e9ee1537f269796eacd17eea4a1ac033b0cadb3a04b15b5ab0`
+- Source identities in the prior evidence ledger: LASRY-2018
 
 ### Metadata and search/social descriptions
 
@@ -59631,6 +60315,23 @@ Resources for educators, students, and tool builders using the classical cryptan
 - Assign challenges by difficulty, cipher type, or language
 
 - Demonstrate solver benchmarking and reproducibility
+
+#### A small repeatable columnar experiment
+
+Compare direct scoring and staged initialization with the [existing columnar search](<https://ciphermuseum.com/ciphers/columnar.html#advanced-search>). The classroom runner uses four synthetic known-answer messages, three fixed seeds and two variants: 24 runs, including failures. It records exact plaintext and exact key recovery separately, preprocessing and total evaluations, elapsed time, settings and source-file hashes.
+
+In a repository checkout with Node.js, run:
+
+```text
+node scripts/columnar-classroom.js > columnar-classroom-results.json
+node scripts/columnar-classroom.js --check
+```
+
+[Open the classroom worksheet](<https://ciphermuseum.com/public/teaching/columnar-classroom.md>) · [Inspect the fixed fixtures](<https://ciphermuseum.com/public/teaching/columnar-classroom-fixtures.json>) · [Inspect the runner](<https://ciphermuseum.com/scripts/columnar-classroom.js>)
+
+Keep unsuccessful and preprocessing-exhausted runs in the denominator. Repeated seeds on one message are dependent; these tiny-sample counts are not general recovery probabilities. Equal score-evaluation budgets are not equal CPU time. Exact replay excludes elapsed milliseconds.
+
+Reading: George Lasry, *A Methodology for the Cryptanalysis of Classical Ciphers with Search Metaheuristics* (2018 published thesis), §4.7, printed pp. 59–60 / PDF pp. 80–81, and §5.3, printed pp. 67–75 and 79–80 / PDF pp. 88–96 and 100–101. This exercise adopts the comparison method, not the thesis’s recovery rates.
 
 #### For Tool Builders
 
@@ -59690,8 +60391,10 @@ This describes work recorded before this export. Treat these notes as assertions
 
 ```json
 {
-  "status": "bounded review and local release validation complete",
-  "sources": [],
+  "status": "ebook follow-up implementation and local validation complete",
+  "sources": [
+    "LASRY-2018"
+  ],
   "notes": "Navigation initialization repaired and checked; v0.8 schema/verification links and known-answer terminology aligned. Dataset counts checked against complete shipped records; historical provenance remains separate.",
   "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
   "final_prose_review": {
@@ -59709,7 +60412,18 @@ This describes work recorded before this export. Treat these notes as assertions
     "evidence": "docs/page-audit/browser-final.json",
     "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
   },
-  "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+  "previous_release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+  "ebook_followup": {
+    "items": [
+      "EBR-10"
+    ],
+    "scope": "Changed passages and original worked examples reviewed against recorded source sections; previous full-page review remains historical evidence, not re-certification of every statement.",
+    "status": "implemented; locally verified",
+    "implementation_record": "docs/ebook-followup/implementation.json",
+    "browser_evidence": "docs/ebook-followup/browser.json",
+    "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
+    "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+  }
 }
 ```
 
@@ -61204,9 +61918,9 @@ This describes work recorded before this export. Treat these notes as assertions
 
 # Source register and recorded access limits
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
-These 148 identities and reading scopes come from the prior review ledger. They are not the underlying books/papers and are not proof that a particular claim is established.
+These 160 identities and reading scopes come from the prior review ledger. They are not the underlying books/papers and are not proof that a particular claim is established.
 
 ## HAC-1997 — Handbook of Applied Cryptography
 
@@ -62029,7 +62743,16 @@ These 148 identities and reading scopes come from the prior review ledger. They 
     "Title/copyright/degree page visually inspected: University of Kassel Dr. rer. nat., defence 16 October 2017, publication 2018",
     "Chapter7 §7.1, supplied text7013–7038: approximately140000 M-209 machines."
   ],
-  "scope": "Verified per-bar OR engagement. The book’s output-period wording is not adopted as an unconditional guarantee; joint wheel positions and generated keystream period are distinct."
+  "scope": "Verified per-bar OR engagement. The book’s output-period wording is not adopted as an unconditional guarantee; joint wheel positions and generated keystream period are distinct.",
+  "ebook_followup_2026_10_26": {
+    "edition_checked": "kassel university press, published thesis",
+    "passages_read": [
+      "Printed pp.28–37 / PDF49–58: scoring functions and sample-length sensitivity",
+      "Printed pp.49–60 / PDF70–81: evaluation methodology, restarts and work accounting",
+      "Printed pp.67–80 / PDF88–101: columnar search and complete/incomplete rectangles"
+    ],
+    "scope": "Targeted passage review; reported book success rates are not Museum measurements."
+  }
 }
 ```
 
@@ -63466,12 +64189,259 @@ These 148 identities and reading scopes come from the prior review ledger. They 
 }
 ```
 
+## SWEIGART-2018 — Cracking Codes with Python: An Introduction to Building and Breaking Ciphers
+
+```json
+{
+  "title": "Cracking Codes with Python: An Introduction to Building and Breaking Ciphers",
+  "authors": [
+    "Al Sweigart"
+  ],
+  "year": 2018,
+  "edition": "No Starch Press",
+  "passages_read": [
+    "Chapter11, supplied reflowed PDF182–188,199–202: heuristic English recognition and adjustable thresholds"
+  ],
+  "scope": "Printed folios unavailable; section and PDF positions identify the supplied copy. No whole-book reading.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## GRAY-1990-CORRECTED-2023 — Entropy and Information Theory
+
+```json
+{
+  "title": "Entropy and Information Theory",
+  "authors": [
+    "Robert M. Gray"
+  ],
+  "year": 1990,
+  "edition": "Corrected first edition, 26 June 2023",
+  "passages_read": [
+    "§2.2 printed pp.18–20 / PDF40–42: single-variable, block entropy and entropy rate",
+    "§2.6 printed p.42 / PDF64, Lemmas2.6.1–2; surrounding pp.42–44"
+  ],
+  "scope": "This supplied work is the corrected first edition, not the 2011 second edition. Applying the process distinction to IC is an inference supported by exact Museum-code reproduction.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## VADHAN-2012 — Pseudorandomness
+
+```json
+{
+  "title": "Pseudorandomness",
+  "authors": [
+    "Salil P. Vadhan"
+  ],
+  "year": 2012,
+  "edition": "Foundations and Trends in Theoretical Computer Science 7(1–3); volume dated 2011",
+  "passages_read": [
+    "§6.1.2 printed pp.171–172 / PDF174–175: Definition6.7, Lemma6.8 and point-mass/uniform mixture",
+    "Supporting §§6.1.3 and6.2.1 printed pp.174–180"
+  ],
+  "scope": "Copyright2012 and volume date2011 distinguished. Museum mixture preset is an adaptation, not a measured password population.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## TYAGI-WATANABE-2023 — Information-theoretic Cryptography
+
+```json
+{
+  "title": "Information-theoretic Cryptography",
+  "authors": [
+    "Himanshu Tyagi",
+    "Shun Watanabe"
+  ],
+  "year": 2023,
+  "edition": "Cambridge University Press",
+  "passages_read": [
+    "§7.1 printed pp.119–121",
+    "§7.3 Example7.9 and Definition7.10, printed p.124 / PDF139",
+    "§7.3 printed pp.125–127 / PDF140–142: conditional min-entropy and general formulation"
+  ],
+  "scope": "Two independent fair bits and a specified one-coordinate leakage model. Parity-leakage failure is an original control; no generic XOR-security assertion.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## TUNNY-1945 — General Report on Tunny: With Emphasis on Statistical Methods
+
+```json
+{
+  "title": "General Report on Tunny: With Emphasis on Statistical Methods",
+  "authors": [
+    "I. J. Good",
+    "Donald Michie",
+    "Geoffrey Timms"
+  ],
+  "year": 1945,
+  "edition": "Supplied 499-page modern collected archival facsimile",
+  "passages_read": [
+    "§11A(b)–(c), printed p.4 / PDF7: operational teleprinter/radio signal path",
+    "§11B(g),(j), printed pp.8,10 / PDF11,13: plaintext-feedback limitations and configurations",
+    "§43B printed p.313 / PDF307: Turingery",
+    "§43C(g) printed p.317 / PDF311: Herring depth limitation",
+    "§53B printed pp.333–334 / PDF327–328: tape clock, electronic movement and rate",
+    "§53F–G printed pp.337–338 / PDF331–332: counters and threshold selection"
+  ],
+  "scope": "Principal disputed historical passages checked against scans, with extracted text for surrounding context. Static six-position counting example is invented teaching data, not historical traffic.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## GANNON-2014 — Colossus: Bletchley Park’s Greatest Secret
+
+```json
+{
+  "title": "Colossus: Bletchley Park’s Greatest Secret",
+  "authors": [
+    "Paul Gannon"
+  ],
+  "year": 2014,
+  "edition": "Atlantic Books, 2014 edition; original copyright2006",
+  "passages_read": [
+    "Chapter10 Fishing the Depths, converted PDF94–97",
+    "Chapter13 Making the Difference, converted PDF132–135, especially133",
+    "Chapter15 Inventing the Electronic Computing Machine, converted PDF153–156"
+  ],
+  "scope": "Converted PDF positions are not verified print pagination. Arithmetic slip around converted p.95 excluded:574=14×41. Primary Tunny report controls specific Turingery attribution.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## DAEMEN-RIJMEN-2020 — The Design of Rijndael: The Advanced Encryption Standard (AES)
+
+```json
+{
+  "title": "The Design of Rijndael: The Advanced Encryption Standard (AES)",
+  "authors": [
+    "Joan Daemen",
+    "Vincent Rijmen"
+  ],
+  "year": 2020,
+  "edition": "Springer, second edition",
+  "passages_read": [
+    "§9.1.3 printed p.128 / PDF148: trails versus differentials",
+    "§§9.2.2–9.2.3 printed pp.131–132 / PDF151–152: active Sboxes/byte weights",
+    "§§9.4.4–9.5.2 printed pp.140–143 / PDF160–163: dispersion and Theorem9.5.1",
+    "Chapter13 opening, printed p.195 / PDF215"
+  ],
+  "scope": "Individual nonzero four-round trail bound, not an exact count for every pair or a full-AES security proof.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## BIHAM-SHAMIR-1993-2009 — Differential Cryptanalysis of the Data Encryption Standard
+
+```json
+{
+  "title": "Differential Cryptanalysis of the Data Encryption Standard",
+  "authors": [
+    "Eli Biham",
+    "Adi Shamir"
+  ],
+  "year": 1993,
+  "edition": "Springer book; supplied authors’ LaTeX recompilation dated7December2009",
+  "passages_read": [
+    "§3.2 numbered pp.15–22 / PDF21–28: Definition3.2, Table3.2, Examples3.4–3.7",
+    "Chapter5 and§5.1 numbered pp.78–86 / PDF84–92; Table5.2 numbered86/PDF92"
+  ],
+  "scope": "Numbered pages belong to the 2009 recompilation, not verified1993 print folios. Distinguish collection, retained data, analysis work and access models; S1 exercise exposes intermediate information.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## ANDERSON-2020 — Security Engineering: A Guide to Building Dependable Distributed Systems
+
+```json
+{
+  "title": "Security Engineering: A Guide to Building Dependable Distributed Systems",
+  "authors": [
+    "Ross Anderson"
+  ],
+  "year": 2020,
+  "edition": "Wiley, third edition",
+  "passages_read": [
+    "§4.3 printed pp.122–124 / PDF169–171: token-meter replay, last-token failure, counters/reset/synchronization",
+    "Surrounding protocol context PDF167–173"
+  ],
+  "scope": "Targeted reading supports authenticity versus freshness. Museum counter example declares ordered delivery and key/session context.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## WONG-2021 — Real-World Cryptography
+
+```json
+{
+  "title": "Real-World Cryptography",
+  "authors": [
+    "David Wong"
+  ],
+  "year": 2021,
+  "edition": "Manning; supplied768-page reflowed conversion",
+  "passages_read": [
+    "§2.5.4 PDF120–123: ambiguous structured hashing and TupleHash",
+    "§3.3.3 PDF140–143: replay",
+    "§8.6 PDF349–356: HKDF Extract/Expand, labels and output-length prefix relationship"
+  ],
+  "scope": "Printed folios unavailable. Supplied figure8.7/8.8 captions/references appear swapped; prose/specification controls. Identical serialized inputs are not a hash collision; HKDF does not create input entropy.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## MENEZES-LATTICES-2026 — A Gentle Introduction to Lattice-Based Cryptography
+
+```json
+{
+  "title": "A Gentle Introduction to Lattice-Based Cryptography",
+  "authors": [
+    "Alfred Menezes"
+  ],
+  "year": 2026,
+  "edition": "Version3.3,16September2026",
+  "passages_read": [
+    "§§4.3–4.4 printed pp.35–40 / PDF48–53: q-ary lattice and BDD connection",
+    "§6.4 printed pp.64–66 / PDF77–79: PKE to KEM and implicit rejection",
+    "§7.1.4 Issue5 printed pp.73–74 / PDF86–87: bounded masking and aborts"
+  ],
+  "scope": "Pedagogical mechanisms, not standard implementation. FIPS algorithm passages checked separately; current errata spreadsheet contents were inaccessible and are not represented as reconciled. q-ary example explicitly uses prime modulus and finite-field rank.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
+## MANGARD-OSWALD-POPP-2007 — Power Analysis Attacks: Revealing the Secrets of Smart Cards
+
+```json
+{
+  "title": "Power Analysis Attacks: Revealing the Secrets of Smart Cards",
+  "authors": [
+    "Stefan Mangard",
+    "Elisabeth Oswald",
+    "Thomas Popp"
+  ],
+  "year": 2007,
+  "edition": "Springer",
+  "passages_read": [
+    "Introduction printed pp.1–13 / PDF23–35: implementation attacks and models",
+    "§3.3 printed pp.38–42 / PDF58–62: Hamming-weight/distance models",
+    "§§6.1–6.2 printed pp.119–124 / PDF138–143: aligned known-data traces and correlation",
+    "§9.1 printed pp.223–226 / PDF240–243: masking and independence assumptions",
+    "§§10.1–10.2 printed pp.245–249 / PDF262–266: joint leakage and masking limitations"
+  ],
+  "scope": "Specific implementation/leakage assumptions; no generic AES break, universal trace count or masking certification. Original covariance example independently enumerated over all65536 byte/mask pairs.",
+  "review": "Ebook follow-up,26October2026; selected passages only."
+}
+```
+
 
 ---
 
 # javascript appendix 1
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## JavaScript — hall-of-foundations/crypto-algebra.js
 
@@ -67159,7 +68129,7 @@ if (typeof require !== 'undefined') {
 
 # javascript appendix 2
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## JavaScript — js/ciphers/all-engines.js
 
@@ -71431,7 +72401,7 @@ if (typeof module !== "undefined" && module.exports) {
 
 # javascript appendix 3
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## JavaScript — js/ciphers/caesar-break.js
 
@@ -74841,7 +75811,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
 
 # javascript appendix 4
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## JavaScript — js/detective/challenges.js
 
@@ -75231,8 +76201,8 @@ Supporting source for public page behavior; presence of code does not prove that
 Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
 
 - Served/distributed path: `js/detective/detective.js`
-- Served SHA-256: `f35b856babbd33ce06bbc881981c66397be4149f786e5e73b8e3afd4ba0c474c`
-- Readable-source SHA-256: `f35b856babbd33ce06bbc881981c66397be4149f786e5e73b8e3afd4ba0c474c`
+- Served SHA-256: `4abd9c050c1dfbae843aecc5393fa1a1b3374752614e77a7b1dea42607a4cc84`
+- Readable-source SHA-256: `4abd9c050c1dfbae843aecc5393fa1a1b3374752614e77a7b1dea42607a4cc84`
 
 
 ```javascript
@@ -75550,7 +76520,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
 
     var html = '<div class="autosolve-best">' +
       '<div class="autosolve-best-header">' +
-        '<h3 class="autosolve-best-method">Best candidate: ' + esc(best.method) + '</h3>' +
+        '<h3 class="autosolve-best-method">Best-scoring candidate (unverified): ' + esc(best.method) + '</h3>' +
         '<span class="conf-badge conf-badge--' + esc(conf.tier) + '">' + esc(conf.label) + '</span>' +
       '</div>' +
       '<p class="autosolve-best-key"><strong>Key:</strong> ' + esc(best.key) + '</p>' +
@@ -75558,11 +76528,26 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
       '<a class="autosolve-cta" href="lab/workbench.html#ct=' + encodedCt + '">Refine in the Workbench \u2192</a>' +
       '</div>';
 
+    html += '<p class="autosolve-runtime">Unverified: the score ranks candidates under this embedded English model. It is not a language probability, a proof of the original message, or an authentication check. Short samples, names, other languages and repeated fragments can mislead. The 60-letter display guard is a teaching convention, not a reliability threshold.</p>';
+    var model = global.DetectiveLangModel;
+    if (model) {
+      var letters = (best.plaintext || '').toUpperCase().replace(/[^A-Z]/g, '').length;
+      function displayScore(value) { return Number.isFinite(value) ? value.toFixed(3) : 'not available'; }
+      html += '<details><summary>Inspect this candidate’s model score</summary><p>' + letters + ' letters; ' + Math.max(0, letters - 1) + ' overlapping bigrams; ' + Math.max(0, letters - 2) + ' overlapping trigrams.</p>' +
+        '<p>Trigram sum ' + displayScore(model.trigramScore(best.plaintext)) +
+        ' + 0.4 × bigram sum ' + displayScore(model.bigramScore(best.plaintext)) +
+        ' + word bonus ' + displayScore(model.wordBonus(best.plaintext)) +
+        ' = total ' + displayScore(model.fitness(best.plaintext)) +
+        '. Per letter: ' + displayScore(letters ? model.fitness(best.plaintext) / letters : -Infinity) +
+        '. Higher is preferred by the search; these are heuristic units.</p></details>';
+    }
+
     if (result.attempts.length > 1) {
       html += '<div class="autosolve-others">' +
         '<p class="autosolve-others-title">Other candidates considered</p>' +
+        '<div class="autosolve-table-scroll" role="region" tabindex="0" aria-label="Other candidate results; scroll horizontally">' +
         '<table class="autosolve-others-table">' +
-        '<thead><tr><th>Method</th><th>Per-char fit</th><th>Confidence</th><th>Plaintext start</th></tr></thead>' +
+        '<thead><tr><th>Method</th><th>Per-char fit</th><th>Model-fit note</th><th>Plaintext start</th></tr></thead>' +
         '<tbody>';
       for (var i = 1; i < result.attempts.length; i++) {
         var a = result.attempts[i];
@@ -75575,7 +76560,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
           '<td class="ao-plain">' + esc(preview) + (a.plaintext && a.plaintext.length > 60 ? '\u2026' : '') + '</td>' +
         '</tr>';
       }
-      html += '</tbody></table></div>';
+      html += '</tbody></table></div></div>';
     }
 
     html += '<p class="autosolve-runtime">Search completed in ' + result.runtimeMs + ' ms.</p>';
@@ -75604,8 +76589,8 @@ Supporting source for public page behavior; presence of code does not prove that
 Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
 
 - Served/distributed path: `js/detective/lang-model.js`
-- Served SHA-256: `50e0e589e7d89f2ce5d7e199fdd66b6979d2cb387017089c03c288b9c94e72b9`
-- Readable-source SHA-256: `50e0e589e7d89f2ce5d7e199fdd66b6979d2cb387017089c03c288b9c94e72b9`
+- Served SHA-256: `7c5e01f81df9885c9150841509d32c0d4408f034e7795e9986117c7cd317b483`
+- Readable-source SHA-256: `7c5e01f81df9885c9150841509d32c0d4408f034e7795e9986117c7cd317b483`
 
 
 ```javascript
@@ -75621,12 +76606,10 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
      - Top ~80 English bigram log probabilities (Mayzner-revisited)
      - Top ~200 English trigram log probabilities
      - Bonus credit for ~120 most-common English words found
-     - Floor penalty for n-grams not in the table (calibrated so
-       hill-climbing escapes local minima on short text)
+     - Fixed floor penalty for n-grams not in the table
 
-   Total embedded weight: roughly 6 KB before gzip — small enough
-   to ship inline with the page and large enough to break
-   substitution ciphers in well under a second.
+   This ranking heuristic is not a calibrated language detector or
+   a probability of authentic plaintext recovery.
    ================================================================ */
 'use strict';
 
@@ -75734,8 +76717,8 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
     for (k in TRIGRAM_FREQ) if (Object.prototype.hasOwnProperty.call(TRIGRAM_FREQ, k)) TRIGRAM_LOG[k] = Math.log(TRIGRAM_FREQ[k] / 100);
   }());
 
-  /* Floor penalties — calibrated empirically so hill climbing
-     converges on substitution within ~1-3 sec for ~250 chars. */
+  /* Fixed penalties for unseen n-grams; these do not establish
+     recovery rates, timing guarantees or language probabilities. */
   var BIGRAM_FLOOR  = Math.log(0.01 / 100);  /* unseen bigram  ≈ -9.2 */
   var TRIGRAM_FLOOR = Math.log(0.005 / 100); /* unseen trigram ≈ -9.9 */
 
@@ -75797,22 +76780,17 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
     return trigramScore(text) + 0.4 * bigramScore(text) + wordBonus(text);
   }
 
-  /* ── Confidence tier ─────────────────────────────────────────
-     Convert raw fitness per character into a human label.
-     These thresholds were picked by running the solver against
-     known plaintexts vs. noise; they are calibration constants,
-     not a probability.                                          */
+  /* Compatibility API: return presentation labels, never probabilities.
+     The 60-letter display guard is a teaching convention, not a measured
+     minimum. It does not change fitness or the solver's candidate ranking. */
   function confidenceLabel(fitnessVal, textLen) {
-    /* Calibrated against real English plaintext vs random ciphertext
-       with the embedded n-gram tables above. Per-char fitness for
-       real English typically ranges -7 to -10.5; gibberish -12 or
-       worse. The boundary sits near -11.5.                        */
-    var perChar = (textLen > 0) ? (fitnessVal / textLen) : -Infinity;
-    if (perChar > -8.5)  return { tier: 'very-likely',  label: 'Very likely English' };
-    if (perChar > -9.8)  return { tier: 'likely',       label: 'Likely English' };
-    if (perChar > -10.7) return { tier: 'possible',     label: 'Possibly English (partial fit)' };
-    if (perChar > -11.6) return { tier: 'unlikely',     label: 'Unlikely English (weak fit)' };
-    return                      { tier: 'inconclusive', label: 'Inconclusive — does not look like English' };
+    if (!Number.isFinite(fitnessVal) || textLen < 3) {
+      return { tier: 'inconclusive', label: 'Insufficient n-gram evidence' };
+    }
+    if (textLen < 60) {
+      return { tier: 'inconclusive', label: 'Short sample — model fit not interpreted' };
+    }
+    return { tier: 'possible', label: 'Uncalibrated model fit' };
   }
 
   /* ── Export ──────────────────────────────────────────────────── */
@@ -78162,7 +79140,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
 
 # javascript appendix 5
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## JavaScript — js/learning-path.js
 
@@ -80472,6 +81450,93 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
 ```
 
 
+## JavaScript — scripts/columnar-classroom.js
+
+**Classroom command-line tool:** runs with Node.js in a repository checkout; it is not a browser demo. The linked worksheet and fixed fixtures are included separately.
+
+Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
+
+- Served/distributed path: `scripts/columnar-classroom.js`
+- Served SHA-256: `fc4b64e8877c3fad1c6866029f58189c1c7a6f555a4a44fdcc148f78e68fc4f3`
+- Readable-source SHA-256: `fc4b64e8877c3fad1c6866029f58189c1c7a6f555a4a44fdcc148f78e68fc4f3`
+
+
+```javascript
+#!/usr/bin/env node
+'use strict';
+// A small receipt-producing classroom experiment; reuses the Museum solver.
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const { performance } = require('node:perf_hooks');
+const root = path.join(__dirname, '..');
+const columnar = require('../js/columnar-search');
+require('../js/detective/lang-model');
+const fixturePath = 'public/teaching/columnar-classroom-fixtures.json';
+const corpus = JSON.parse(fs.readFileSync(path.join(root, fixturePath), 'utf8'));
+const digest = file => crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex');
+
+// Reference preparation is separate from the search implementation: write rows,
+// then read the specified columns. Fixed ciphertexts are retained in the fixture.
+function referenceEncrypt(plaintext, order) {
+  const rows = [];
+  for (let i = 0; i < plaintext.length; i += order.length) rows.push(plaintext.slice(i, i + order.length));
+  return order.map(column => rows.map(row => row[column] || '').join('')).join('');
+}
+function runExperiment({clock = () => performance.now()} = {}) {
+  const runs = [];
+  const variants = [{id:'direct', staged:false}, {id:'staged', staged:true}];
+  for (const fixture of corpus.fixtures) {
+    if (referenceEncrypt(fixture.plaintext, fixture.order) !== fixture.ciphertext) throw Error('Fixture does not match its independent row/column reference: ' + fixture.id);
+    if (fixture.length !== fixture.plaintext.length || fixture.width !== fixture.order.length || fixture.remainder !== fixture.length % fixture.width) throw Error('Fixture shape mismatch: ' + fixture.id);
+    for (const seed of corpus.seeds) for (const variant of variants) {
+      const options = {width:fixture.width, budget:corpus.budget, restarts:corpus.restarts, seed, staged:variant.staged, alignment:true, segments:true};
+      const started = clock();
+      const result = columnar.solve(fixture.ciphertext, options);
+      const elapsedMs = Math.max(0, clock() - started);
+      if (result.evaluations > options.budget || result.preprocessing > result.evaluations) throw Error('Budget accounting failed.');
+      const exactPlaintext = !!result.best && result.best.plaintext === fixture.plaintext;
+      const exactKey = !!result.best && result.best.order.every((value, i) => value === fixture.order[i]);
+      runs.push({fixture:fixture.id, variant:variant.id, options, length:fixture.length, remainder:fixture.remainder,
+        rectangle:fixture.remainder ? 'incomplete' : 'complete', evaluations:result.evaluations,
+        preprocessingEvaluations:result.preprocessing, elapsedMs,
+        exactPlaintext, exactKey, outcome:exactPlaintext ? 'plaintext-recovered' : result.best ? 'different-candidate' : 'no-candidate',
+        candidate:result.best ? {plaintext:result.best.plaintext, order:result.best.order, score:result.best.score} : null,
+        reason:result.reason});
+    }
+  }
+  const summary = variants.map(variant => {
+    const rows = runs.filter(run => run.variant === variant.id);
+    return {variant:variant.id, runs:rows.length, exactPlaintexts:rows.filter(run => run.exactPlaintext).length,
+      exactKeys:rows.filter(run => run.exactKey).length, noCandidate:rows.filter(run => !run.candidate).length,
+      unsuccessfulPlaintexts:rows.filter(run => !run.exactPlaintext).length};
+  });
+  return {schema:'museum-columnar-classroom-receipt-v1', fixtureSet:corpus,
+    sources:{fixturesSha256:digest(fixturePath), solverSha256:digest('js/columnar-search.js'), languageModelSha256:digest('js/detective/lang-model.js'), runnerSha256:digest('scripts/columnar-classroom.js')},
+    runtime:{node:process.version, platform:process.platform, arch:process.arch},
+    scope:'24 fixed runs: four synthetic messages, three seeds, two variants differing only in staged initialization. Every failure is retained. These counts describe this small fixture set, not general recovery probabilities. Repeated seeds on a message are dependent. Equal evaluation budgets are not equal CPU work. Timings vary and are excluded from exact replay.',
+    summary, runs};
+}
+function withoutTimings(report) {
+  return {...report, runs:report.runs.map(({elapsedMs, ...run}) => run)};
+}
+if (require.main === module) {
+  const args = process.argv.slice(2);
+  if (args.some(arg => !['--check','--help'].includes(arg))) throw Error('Usage: node scripts/columnar-classroom.js [--check | --help]');
+  if (args.includes('--help')) {
+    console.log('Emit 24-run JSON receipt to stdout: node scripts/columnar-classroom.js > columnar-classroom-results.json\nCheck deterministic replay, excluding time: node scripts/columnar-classroom.js --check');
+  } else if (args.includes('--check')) {
+    const first = runExperiment(), second = runExperiment();
+    require('node:assert/strict').deepEqual(withoutTimings(first), withoutTimings(second));
+    console.log('All 24 classroom runs replay exactly apart from elapsed time. Failures and exhausted budgets remain in the receipt.');
+  } else {
+    console.log(JSON.stringify(runExperiment(), null, 2));
+  }
+}
+module.exports = {runExperiment, withoutTimings, referenceEncrypt};
+```
+
+
 ## JavaScript — sw.js
 
 Supporting source for public page behavior; presence of code does not prove that every branch was exercised.
@@ -80479,8 +81544,8 @@ Supporting source for public page behavior; presence of code does not prove that
 Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
 
 - Served/distributed path: `sw.js`
-- Served SHA-256: `3181d40c34e26062d972467ce9a236fdc796eee0a4e36036995a1523f37edae0`
-- Readable-source SHA-256: `3181d40c34e26062d972467ce9a236fdc796eee0a4e36036995a1523f37edae0`
+- Served SHA-256: `e5afa22bfa4aa21f19e72b90f1a5f8607f2add60cbf15ca64d5c890e1a147bed`
+- Readable-source SHA-256: `e5afa22bfa4aa21f19e72b90f1a5f8607f2add60cbf15ca64d5c890e1a147bed`
 
 
 ```javascript
@@ -80502,7 +81567,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
  */
 'use strict';
 
-const VERSION = 'cipher-museum-ca4277b5';
+const VERSION = 'cipher-museum-56ec9ae8';
 
 const CORE = [
   '/',
@@ -80653,7 +81718,7 @@ self.addEventListener('fetch', (event) => {
 
 # data appendix 1
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## Data — tours/foundations.json
 
@@ -81585,7 +82650,7 @@ Source SHA-256: `72c9a03dfa48a2e2a1ae78e44e880042471e53fb871ca22dffdc8bd38a9f64e
 
 # data appendix 2
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## Data — data/research/v1/language-model.json
 
@@ -81600,7 +82665,7 @@ Source SHA-256: `5d7b3680d6671e49fa407d2db8020147a457c432e6730ab610902f87c7935f2
 
 # data appendix 3
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## Data — public/corpus/v0.8/browser-sample.json
 
@@ -87379,7 +88444,7 @@ Source SHA-256: `788eb1bc8977cb9fd38d8584521bd150ebaf0a660f24f732b8ccead684291b7
 
 # data appendix 4
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## Data — js/search-index.json
 
@@ -87394,7 +88459,7 @@ Source SHA-256: `5e2e6b1e3bd8493005403ec74508306412217aa4f750730496ef57590c388e8
 
 # data appendix 5
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## Data — data/artifact-cards.json
 
@@ -90481,7 +91546,7 @@ Source SHA-256: `3bd4770c7e3bdafad529f347a3e63703a5db49633054c20396147e9ac719f89
 
 # data appendix 6
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## Data — corpus/engine-manifest.json
 
@@ -94592,3 +95657,158 @@ Source SHA-256: `2ebb322fd8f062ba8f5a5a8fb34c13a7ea5b4a72f7da14fc0e84a6ab6bf69d5
   ]
 }
 ```
+
+
+## Data — public/teaching/columnar-classroom-fixtures.json
+
+Source SHA-256: `113473b36d39dccb1cdb7a7276dcf1fe634eb1d70d6109624e5d511ea8987fca`. Original data, including provenance limitations; ebook URLs are suppressed in this export. Statistics/manifests describe omitted full datasets but do not let a reader independently recount them.
+
+```json
+{
+  "id": "museum-columnar-classroom-v1",
+  "version": 1,
+  "provenance": "Original synthetic classroom messages. The short complete fixture is independently hand-checkable as rows ATTA / CKAT / DAWN, reading columns 3,1,4,2. Orders in this JSON are zero-based ciphertext readout orders. No historical provenance or population representativeness is claimed.",
+  "seeds": [
+    7,
+    19,
+    41
+  ],
+  "budget": 1000,
+  "restarts": 2,
+  "fixtures": [
+    {
+      "id": "short-complete",
+      "plaintext": "ATTACKATDAWN",
+      "ciphertext": "TAWACDATNTKA",
+      "order": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "width": 4,
+      "length": 12,
+      "remainder": 0
+    },
+    {
+      "id": "courier-incomplete",
+      "plaintext": "THECOURIERLEFTTHEMESSAGEBESIDETHEBRIDGE",
+      "ciphertext": "CETEEDBEHREEASHDORTSBERTULHSETIEIFMGIEG",
+      "order": [
+        3,
+        1,
+        4,
+        0,
+        2
+      ],
+      "width": 5,
+      "length": 39,
+      "remainder": 4
+    },
+    {
+      "id": "reading-complete",
+      "plaintext": "THEMUSEUMKEEPSORIGINALMESSAGESANDASKSVISITORSTOCOMPAREEVIDENCEBEFOREACCEPTINGANA",
+      "ciphertext": "EOMAIOEBCNEEIASOPERITMISDIOIFPURENSCVEEAMENGKRANENSSLSVTEECAHKGSATMDOTUPAESSRCAG",
+      "order": [
+        6,
+        2,
+        0,
+        7,
+        3,
+        5,
+        1,
+        4
+      ],
+      "width": 8,
+      "length": 80,
+      "remainder": 0
+    },
+    {
+      "id": "long-key-incomplete",
+      "plaintext": "WEWILLREADTHEORIGINALMESSAGECAREFULLYANDRECORDTHEKEYANDTHESOURCEBEFOREMAKINGANYCLAIMABOUTS",
+      "ciphertext": "DMUDEEAWRGNECNOEAEOTOCWESYEUKAHSLHOAMLIAENENSIIEDYEGUTELTSMIEOAAKRIBALFRHRLLGCRABATRNRCDFY",
+      "order": [
+        9,
+        2,
+        7,
+        0,
+        11,
+        5,
+        3,
+        10,
+        1,
+        8,
+        4,
+        6
+      ],
+      "width": 12,
+      "length": 90,
+      "remainder": 6
+    }
+  ]
+}
+```
+
+
+---
+
+# Columnar classroom worksheet
+
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+
+Source: `public/teaching/columnar-classroom.md`. SHA-256: `195e139c2732cb0d3d6c2ab5dd6fe5addf6100e130bd875a52b0d2d945d68091`. Its Node.js runner and fixed JSON fixtures are in the preceding appendices.
+
+# A 24-run columnar classroom experiment
+
+This exercise reuses the Museum's existing bounded columnar solver. It compares direct full-text scoring with staged initialization on four original synthetic messages, three fixed seeds (7, 19, 41) and two variants. Only the staged-initialization option changes. Both variants use segment moves, two restarts and a total budget of 1,000 score evaluations per run. The width is supplied; this is not an unknown-width experiment.
+
+## Run and keep the evidence
+
+Use Node.js in a checkout of the Cipher Museum repository. No extra packages are needed for this script.
+
+```sh
+node scripts/columnar-classroom.js > columnar-classroom-results.json
+node scripts/columnar-classroom.js --check
+```
+
+The first command writes a JSON receipt. The second runs the same experiment twice and compares everything except elapsed milliseconds. The receipt includes all fixture texts and supplied keys, each configuration and seed, source-file SHA-256 hashes, runtime version, candidates, exact-answer comparisons, work counts, timing and failures. There are 24 runs, not 24 independent messages. Repeated seeds on the same message are dependent; this small convenience set does not estimate a general recovery probability.
+
+Source files: [runner](../../scripts/columnar-classroom.js), [fixed fixtures](columnar-classroom-fixtures.json), [existing solver](../../js/columnar-search.js), [existing language model](../../js/detective/lang-model.js).
+
+## First check a fixture by hand
+
+The short complete fixture is `ATTACKATDAWN`, written in rows `ATTA / CKAT / DAWN`. Its columns are `ACD`, `TKA`, `TAW`, `ATN`. Reading columns 3, 1, 4, 2 gives `TAWACDATNTKA`. The JSON stores the same readout order with zero-based indices `[2,0,3,1]`.
+
+The runner checks each fixed ciphertext against a separate row-and-column reference before searching. The other fixtures contain 39, 80 and 90 letters with widths 5, 8 and 12. Their remainders are 4, 0 and 6 respectively. The complete and incomplete rectangles deliberately pose different tasks.
+
+## Fill in the comparison
+
+For each variant, count all 12 runs, including cases without a candidate. Use the receipt's `summary` and inspect the individual `runs` to explain the counts.
+
+| Measure | Direct | Staged |
+|---|---|---|
+| Exact plaintexts / all 12 runs | | |
+| Exact keys / all 12 runs | | |
+| No-candidate runs / all 12 runs | | |
+| Unsuccessful plaintexts / all 12 runs | | |
+| Median elapsed milliseconds on your machine | | |
+
+“Exact plaintext” compares the full candidate with the supplied answer. “Exact key” compares the readout permutation with the supplied key. These are different checks: repeated column contents can sometimes let different permutations reproduce the same text. A high model score alone passes neither check.
+
+`evaluations` includes adjacency preprocessing, stage-transition scoring and all restarts. `preprocessingEvaluations` is a subset of that total, not extra work to add again. The 12-column incomplete fixture can consume the staged preprocessing allocation before returning any candidate: this implementation reserves work for subsequent phases/restarts, so it can stop before reaching 1,000 evaluations. Keep that outcome in the denominator. Equal score-evaluation budgets do not imply equal CPU cost, and wall-clock timings vary with hardware, load and runtime warm-up.
+
+Discuss these questions:
+
+1. Does either variant recover every supplied answer? Which messages or seeds explain its failures?
+2. Does the highest candidate score always imply an exact answer? Check the plaintext comparison instead of judging readability.
+3. What does the incomplete 12-column case reveal about spending the budget before full-text search?
+4. Why does sharing a seed not make two changed algorithms follow matching random trajectories?
+5. What broader, separately held-out message set would be needed before claiming one configuration is generally better?
+
+An optional extension is to copy the fixture JSON, declare a larger budget before running, and retain both receipts. If you edit the checked-in fixture data for that extension, its digest changes. Do not silently overwrite or pool runs from different configurations. The fixture answers are for evaluation, not inputs passed to the search.
+
+## Reading and limits
+
+George Lasry, *A Methodology for the Cryptanalysis of Classical Ciphers with Search Metaheuristics* (kassel university press, 2018 published thesis), §4.7, printed pp. 59–60 / PDF pp. 80–81, discusses restarts and initialization costs. §5.3, printed pp. 67–75 / PDF pp. 88–96, compares success and work for baseline and modified columnar methods; printed pp. 79–80 / PDF pp. 100–101 cover incomplete-rectangle experiments.
+
+This worksheet borrows the experimental questions, not the thesis's recovery rates or implementation. The Museum samples moves, uses a compact bigram/trigram model and caps width at 12. Its outputs do not reproduce the thesis's exhaustive neighborhoods, alternating thresholds, optimized triplet scores or large-key performance. All messages here are synthetic and have no claimed historical provenance.

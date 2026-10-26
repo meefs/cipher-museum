@@ -1,13 +1,13 @@
 {
   "format_version": 1,
-  "source_commit": "5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee",
-  "source_commit_time": "2026-10-26T17:16:41-04:00",
+  "source_commit": "96e6d4efcb2cadce34bdfbe4bcac2e884472e619",
+  "source_commit_time": "2026-10-26T18:48:31-04:00",
   "page_count": 214,
   "inline_script_count": 80,
-  "shared_script_count": 51,
-  "data_file_count": 25,
-  "source_register_count": 148,
-  "preserved_body_text_nodes": 23869,
+  "shared_script_count": 52,
+  "data_file_count": 26,
+  "source_register_count": 160,
+  "preserved_body_text_nodes": 24635,
   "ebook_url_occurrences_suppressed": 5,
   "limits": "Snapshot content export, not new factual verification. Full external books/papers, binary images, CSS, dependencies and full downloadable corpus are excluded. See README.md.",
   "pages": [
@@ -59,8 +59,8 @@
       "id": "P004",
       "path": "cipher-detective.html",
       "title": "Cipher Detective — The Cipher Museum",
-      "source_sha256": "427cfc8eb09e4a82a3dc2c6636c593bcba67072de0c15c00c07a84f7984bafc6",
-      "text_nodes": 119,
+      "source_sha256": "0c63f1a92df29f6b913afbd15b1fba643ab3a34399096361f699f213c2465294",
+      "text_nodes": 126,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/nav.js",
@@ -76,7 +76,7 @@
         "https://ciphermuseum.com/js/detective/detective.js",
         "https://ciphermuseum.com/js/detective/workspaces.js"
       ],
-      "words": 890,
+      "words": 1005,
       "part": "01-pages-P001-P020.md"
     },
     {
@@ -148,8 +148,8 @@
       "id": "P009",
       "path": "ciphers/aes.html",
       "title": "AES (Advanced Encryption Standard) — The Cipher Museum",
-      "source_sha256": "4e71d55e901d9eb7f37eafe6a841bdaa1a94f363140052f6f4655ffcdc8fafcb",
-      "text_nodes": 102,
+      "source_sha256": "12fee221244c92509002becdc09f7000adf8c1eb461b4d8088039090596f0d66",
+      "text_nodes": 157,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/trust-labels.js",
@@ -157,7 +157,7 @@
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 845,
+      "words": 1303,
       "part": "01-pages-P001-P020.md"
     },
     {
@@ -488,8 +488,8 @@
       "id": "P029",
       "path": "ciphers/bill-tutte.html",
       "title": "Bill Tutte — The Cipher Museum",
-      "source_sha256": "e4458af507b886572bf058c7b235cedb5b965b121081212b2cbe51d8d0344bcb",
-      "text_nodes": 90,
+      "source_sha256": "7c3ee6feae98526a5a3980416d9f4888a1822887d2278c86fafaeaccb3fafd79",
+      "text_nodes": 117,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/trust-labels.js",
@@ -498,7 +498,7 @@
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 1089,
+      "words": 1336,
       "part": "02-pages-P021-P040.md"
     },
     {
@@ -692,8 +692,8 @@
       "id": "P041",
       "path": "ciphers/colossus.html",
       "title": "Colossus — The Cipher Museum",
-      "source_sha256": "e5d1e8b3287f1e6720f8660ba186e91d9c9c3f95c1a68796f8c6fd1e0a9511e5",
-      "text_nodes": 62,
+      "source_sha256": "12f97888209a625a92e34af42b6b0ce0e92aebe1fea1161979edbc2acece39a5",
+      "text_nodes": 124,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/trust-labels.js",
@@ -702,15 +702,15 @@
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 576,
+      "words": 1065,
       "part": "03-pages-P041-P060.md"
     },
     {
       "id": "P042",
       "path": "ciphers/columnar.html",
       "title": "Columnar Transposition — The Cipher Museum",
-      "source_sha256": "321e1e433ea1767b0864555027a4670b05e168ca7d54db41c069eb8055b80269",
-      "text_nodes": 180,
+      "source_sha256": "07d9490edf3d4cff5448979ae77c8841d8c345a68a9db4233925aab8d53c6e21",
+      "text_nodes": 183,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/trust-labels.js",
@@ -723,7 +723,7 @@
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 1667,
+      "words": 1719,
       "part": "03-pages-P041-P060.md"
     },
     {
@@ -849,8 +849,8 @@
       "id": "P050",
       "path": "ciphers/des.html",
       "title": "DES (Data Encryption Standard) — The Cipher Museum",
-      "source_sha256": "58b6a815e87e0a7b0c61eb47f9188d4dfe14f0253c014a0caff045e007a219b2",
-      "text_nodes": 107,
+      "source_sha256": "bdd4bb74cf26f94c4a5ad6664d1e3822bd118be050cbd0147cdf4f47126f04e1",
+      "text_nodes": 158,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/trust-labels.js",
@@ -858,7 +858,7 @@
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 844,
+      "words": 1142,
       "part": "03-pages-P041-P060.md"
     },
     {
@@ -899,8 +899,8 @@
       "id": "P053",
       "path": "ciphers/diffie-hellman.html",
       "title": "Diffie-Hellman Key Exchange — The Cipher Museum",
-      "source_sha256": "e1c50c726c578387177fb2ca1e8e407765fc2cbb184ef85d8c8c9695dd40117c",
-      "text_nodes": 164,
+      "source_sha256": "3ae1be5c51ac24f2ac14e1ae2b164966d1f51f80102ec51926bfcf8295c860ed",
+      "text_nodes": 202,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/trust-labels.js",
@@ -908,7 +908,7 @@
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 1058,
+      "words": 1326,
       "part": "03-pages-P041-P060.md"
     },
     {
@@ -1563,8 +1563,8 @@
       "id": "P092",
       "path": "ciphers/lorenz.html",
       "title": "Lorenz Cipher — The Cipher Museum",
-      "source_sha256": "aaf51b8df1e000e4f9a90be70a03cc18c4551333de859adb9af73ba3f5acb139",
-      "text_nodes": 200,
+      "source_sha256": "db274be3d557cb0a7a7bd975a829a51ebbd5b86d245d96f1f4371cc063bdc091",
+      "text_nodes": 232,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/trust-labels.js",
@@ -1575,7 +1575,7 @@
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 1979,
+      "words": 2320,
       "part": "05-pages-P081-P100.md"
     },
     {
@@ -2192,8 +2192,8 @@
       "id": "P129",
       "path": "ciphers/sha256.html",
       "title": "SHA-256 — The Cipher Museum",
-      "source_sha256": "e2a61ad3c7e6742cbe0abf05f01ce6bb6126d54a31545812f26f87bd1f6467a1",
-      "text_nodes": 103,
+      "source_sha256": "cb1eeac3e05f9b6c89c8a9f845b83732c422579a70e2a1079914293be70f05c4",
+      "text_nodes": 137,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/trust-labels.js",
@@ -2201,7 +2201,7 @@
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 910,
+      "words": 1191,
       "part": "07-pages-P121-P140.md"
     },
     {
@@ -2761,15 +2761,15 @@
       "id": "P163",
       "path": "cryptanalysis.html",
       "title": "Cryptanalysis Techniques — The Cipher Museum",
-      "source_sha256": "be97a48cfa12b8824fc684c18181f95233b2ac4a5ec950b0aa0484e57ad4c6ea",
-      "text_nodes": 388,
+      "source_sha256": "7741435385b5b835f3942c51c7244f630d7c229b0881c0b0b70afe9ad8a89e57",
+      "text_nodes": 414,
       "inline_scripts": 1,
       "script_srcs": [
         "https://ciphermuseum.com/js/cipher-detective.js",
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 3448,
+      "words": 3644,
       "part": "09-pages-P161-P180.md"
     },
     {
@@ -2817,14 +2817,14 @@
       "id": "P167",
       "path": "hall-of-foundations/closest-vector.html",
       "title": "The Closest Vector Problem · Hall of Foundations",
-      "source_sha256": "bc7938332b7b7e2f814e7d40b94eab82fde022d992d10507c0b53b59ab668a06",
-      "text_nodes": 101,
+      "source_sha256": "a64e353495a3f32410d0b776f688dd2f9294661f2d9d525fe4ce370f30837645",
+      "text_nodes": 210,
       "inline_scripts": 1,
       "script_srcs": [
         "https://ciphermuseum.com/hall-of-foundations/lattice-math.js",
         "https://ciphermuseum.com/js/nav.js"
       ],
-      "words": 931,
+      "words": 1360,
       "part": "09-pages-P161-P180.md"
     },
     {
@@ -2845,13 +2845,13 @@
       "id": "P169",
       "path": "hall-of-foundations/entropy.html",
       "title": "Information & Entropy · Hall of Foundations",
-      "source_sha256": "01b324649ac456e2674ae96944c1f1fd0a7edc3a58a922cec490fb3fb0f45e05",
-      "text_nodes": 55,
+      "source_sha256": "8177bf619c350287e1f2984f08ef3e28c18dc24842ed804819831a43381f4a65",
+      "text_nodes": 172,
       "inline_scripts": 1,
       "script_srcs": [
         "https://ciphermuseum.com/js/nav.js"
       ],
-      "words": 639,
+      "words": 1507,
       "part": "09-pages-P161-P180.md"
     },
     {
@@ -2940,14 +2940,14 @@
       "id": "P176",
       "path": "hall-of-foundations/learning-with-errors.html",
       "title": "Learning With Errors · Hall of Foundations",
-      "source_sha256": "d7c6a6e00d410ca67d5f984f73970d4e98e82cda6b06b872afbbdd3fa82b5fec",
-      "text_nodes": 156,
+      "source_sha256": "ce67bdc0d5d3c4fcd25fc1ae7f4a4025577996efc7ab48020d049a9e2cb0cb74",
+      "text_nodes": 188,
       "inline_scripts": 1,
       "script_srcs": [
         "https://ciphermuseum.com/hall-of-foundations/lwe-math.js",
         "https://ciphermuseum.com/js/nav.js"
       ],
-      "words": 1254,
+      "words": 1574,
       "part": "09-pages-P161-P180.md"
     },
     {
@@ -3035,13 +3035,13 @@
       "id": "P183",
       "path": "hall-of-foundations/random-oracle.html",
       "title": "The Random Oracle · Hall of Foundations",
-      "source_sha256": "a287ee8dd7878853c2002b33744e085a7238fdc563e1f280579373e873753701",
-      "text_nodes": 64,
+      "source_sha256": "ef9ac80c64a6ff45b28a1e41383d4cac8091b543d0fab5fb85851626159d2511",
+      "text_nodes": 104,
       "inline_scripts": 1,
       "script_srcs": [
         "https://ciphermuseum.com/js/nav.js"
       ],
-      "words": 670,
+      "words": 946,
       "part": "10-pages-P181-P200.md"
     },
     {
@@ -3288,56 +3288,56 @@
       "id": "P201",
       "path": "lab/modern-attack-evidence.html",
       "title": "What an Attack Result Actually Shows — The Cipher Museum",
-      "source_sha256": "b8c3e8c60a70836f999853ccc8e9545190e52c6b32a6d0c3abe6e873eb0fa4fb",
-      "text_nodes": 69,
+      "source_sha256": "14bc65124bbe165aba374b7b90e2ddb0c5e78e561075af3528906ccd5e57fb21",
+      "text_nodes": 138,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/nav.js"
       ],
-      "words": 653,
+      "words": 1156,
       "part": "11-pages-P201-P214.md"
     },
     {
       "id": "P202",
       "path": "lab/workbench.html",
       "title": "Codebreaker's Workbench — The Cipher Museum",
-      "source_sha256": "ff8b4ba221f70d5606f03ed9ae4d262fdd6266c69166ebaedcc57f889585d50b",
-      "text_nodes": 38,
+      "source_sha256": "dc2633d4aff2872330a05c5d7d3306f2685489976069c8b66e4afef58699f848",
+      "text_nodes": 40,
       "inline_scripts": 1,
       "script_srcs": [
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/ciphers/all-engines.min.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 162,
+      "words": 185,
       "part": "11-pages-P201-P214.md"
     },
     {
       "id": "P203",
       "path": "learn.html",
       "title": "Learn — The Cipher Museum",
-      "source_sha256": "eef8a77546deaad56db30632a2c3ee164bfcc9c0cca448fd52a49f83888bdb8e",
-      "text_nodes": 76,
+      "source_sha256": "447c41722da733924e63cacd416c543cdafe2ff99241b594671a8258831a9ba4",
+      "text_nodes": 84,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 706,
+      "words": 766,
       "part": "11-pages-P201-P214.md"
     },
     {
       "id": "P204",
       "path": "modern.html",
       "title": "Modern Cryptography — The Cipher Museum",
-      "source_sha256": "acc2b978998b2bcb0fa7998d5da80e8a39264ad89021cfb3088d60d3be178048",
-      "text_nodes": 228,
+      "source_sha256": "3c8ab175bb7e546a744cfc2d9c41da36479d7cf034c9762f519db53fef13e534",
+      "text_nodes": 267,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/nav.js",
         "https://ciphermuseum.com/js/lightbox.js"
       ],
-      "words": 1855,
+      "words": 2194,
       "part": "11-pages-P201-P214.md"
     },
     {
@@ -3423,13 +3423,13 @@
       "id": "P211",
       "path": "teaching.html",
       "title": "Corpus Teaching Guide — The Cipher Museum",
-      "source_sha256": "39cd0346e91abb62615553662cff8f2172e4ca0c72ec203ff76384fe2abbb888",
-      "text_nodes": 46,
+      "source_sha256": "3bc03cae8cc696e9ee1537f269796eacd17eea4a1ac033b0cadb3a04b15b5ab0",
+      "text_nodes": 61,
       "inline_scripts": 0,
       "script_srcs": [
         "https://ciphermuseum.com/js/nav.js"
       ],
-      "words": 412,
+      "words": 580,
       "part": "11-pages-P201-P214.md"
     },
     {
@@ -3481,357 +3481,416 @@
       "readable": "hall-of-foundations/crypto-algebra.js",
       "served_sha256": "d92a9a4e176c60c95bf6c2848a47ac0dfe2bad8a92dabc802508ea874811b704",
       "readable_sha256": "d92a9a4e176c60c95bf6c2848a47ac0dfe2bad8a92dabc802508ea874811b704",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "hall-of-foundations/ec-math.js",
       "readable": "hall-of-foundations/ec-math.js",
       "served_sha256": "e73bdc8f38c207be1b4ea73b73809404714dc1d3100e1108c673be6d929b451f",
       "readable_sha256": "e73bdc8f38c207be1b4ea73b73809404714dc1d3100e1108c673be6d929b451f",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "hall-of-foundations/lattice-math.js",
       "readable": "hall-of-foundations/lattice-math.js",
       "served_sha256": "de63f8ec661a052042f9810c198c2eb809eac0125407103726da38c93240da06",
       "readable_sha256": "de63f8ec661a052042f9810c198c2eb809eac0125407103726da38c93240da06",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "hall-of-foundations/lwe-math.js",
       "readable": "hall-of-foundations/lwe-math.js",
       "served_sha256": "453e6eaf8beafe07331e861efea977075be364c20a03dfc82ad0920dbc5c81d5",
       "readable_sha256": "453e6eaf8beafe07331e861efea977075be364c20a03dfc82ad0920dbc5c81d5",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/artifact-cards-data.min.js",
       "readable": "js/artifact-cards-data.js",
       "served_sha256": "7476a7f0c6ac697bff8fc43e42cd6d96db4edc94d0d6f8c033bfc55367164598",
       "readable_sha256": "a307cf5f0a376ace446edfe5b7f4b197ddaa997812829278be2c0be83d9ee31e",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/artifact-cards.js",
       "readable": "js/artifact-cards.js",
       "served_sha256": "5ffdc2e0aeae9d3c95e393b7bc9f277eaddb7f5e87117cde3f21f6e51cc83a92",
       "readable_sha256": "5ffdc2e0aeae9d3c95e393b7bc9f277eaddb7f5e87117cde3f21f6e51cc83a92",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/breadcrumbs.js",
       "readable": "js/breadcrumbs.js",
       "served_sha256": "7e96cb5dbe3e892d9f8631e46ef078d61fcb708987d37c46e480c2f0a1c5ebc1",
       "readable_sha256": "7e96cb5dbe3e892d9f8631e46ef078d61fcb708987d37c46e480c2f0a1c5ebc1",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/chi-setting.js",
       "readable": "js/chi-setting.js",
       "served_sha256": "2a1cb8852b434c1edb00c69d0985e66a4ffd8dc25722fe8267f7729b7bf51f2d",
       "readable_sha256": "2a1cb8852b434c1edb00c69d0985e66a4ffd8dc25722fe8267f7729b7bf51f2d",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/cipher-corpus.js",
       "readable": "js/cipher-corpus.js",
       "served_sha256": "1c8f4bb2422eff69ca824a25ef6bf9c531cb3c0ac1fe5c042f89aa1f60e9e6d5",
       "readable_sha256": "1c8f4bb2422eff69ca824a25ef6bf9c531cb3c0ac1fe5c042f89aa1f60e9e6d5",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/cipher-detective.js",
       "readable": "js/cipher-detective.js",
       "served_sha256": "402c542f823162b39cdaaf7dedf1e58b7a9058b79157601f418bd135ccf466c2",
       "readable_sha256": "402c542f823162b39cdaaf7dedf1e58b7a9058b79157601f418bd135ccf466c2",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/ciphers/all-engines.min.js",
       "readable": "js/ciphers/all-engines.js",
       "served_sha256": "fe9019bd064e1cf1e56638f7afdfce5493b900993d1049c62bae3e5c37c8f30f",
       "readable_sha256": "0dcd91e44914bb26ea38f78f720aea60202a898552e94fe654a905055003eb8a",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/ciphers/caesar-break.js",
       "readable": "js/ciphers/caesar-break.js",
       "served_sha256": "ceb478776f374e6994e649a26fc3e7c33c34e440e93896166832075a1974e9bb",
       "readable_sha256": "ceb478776f374e6994e649a26fc3e7c33c34e440e93896166832075a1974e9bb",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/ciphers/caesar.js",
       "readable": "js/ciphers/caesar.js",
       "served_sha256": "ccb2014670c29e9aa0e2a9709afabe731ec032adf011220d4d8f84fb5acb3089",
       "readable_sha256": "ccb2014670c29e9aa0e2a9709afabe731ec032adf011220d4d8f84fb5acb3089",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/ciphers/els.js",
       "readable": "js/ciphers/els.js",
       "served_sha256": "ee13df6e1ceaae4bf6c34bbef8075497a2d439c757e3b03af03cb41527f4e450",
       "readable_sha256": "ee13df6e1ceaae4bf6c34bbef8075497a2d439c757e3b03af03cb41527f4e450",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/ciphers/enigma-flagship.js",
       "readable": "js/ciphers/enigma-flagship.js",
       "served_sha256": "868590fa71155f9473eb14eb64a556ef07867a38d0355a91cb3c3533a9eaeef6",
       "readable_sha256": "868590fa71155f9473eb14eb64a556ef07867a38d0355a91cb3c3533a9eaeef6",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/ciphers/enigma.js",
       "readable": "js/ciphers/enigma.js",
       "served_sha256": "84fc2459d285d784945fb07af237691da44b5dd8b652f36c235ad400f562a947",
       "readable_sha256": "84fc2459d285d784945fb07af237691da44b5dd8b652f36c235ad400f562a947",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/ciphers/lorenz-depth.js",
       "readable": "js/ciphers/lorenz-depth.js",
       "served_sha256": "f3d440f9f4d0b31474a556267da6da7942ea6c9e7db85afe0cee1dc9c520aba3",
       "readable_sha256": "f3d440f9f4d0b31474a556267da6da7942ea6c9e7db85afe0cee1dc9c520aba3",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/ciphers/lorenz-page.js",
       "readable": "js/ciphers/lorenz-page.js",
       "served_sha256": "62b47fdffea59380b15313a17874ec19f520b96987000b60ae2bf30f2e2dc8c5",
       "readable_sha256": "62b47fdffea59380b15313a17874ec19f520b96987000b60ae2bf30f2e2dc8c5",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/columnar-search-ui.js",
       "readable": "js/columnar-search-ui.js",
       "served_sha256": "ea903e79fe135580ff589cc06a6c9e3f47d15e5b66ef30ef47de9b1b2e1d7b3c",
       "readable_sha256": "ea903e79fe135580ff589cc06a6c9e3f47d15e5b66ef30ef47de9b1b2e1d7b3c",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/columnar-search.js",
       "readable": "js/columnar-search.js",
       "served_sha256": "725bdb4724c8867e35f14235787c9156d13df2965c2afd3054cebccfc7439b1c",
       "readable_sha256": "725bdb4724c8867e35f14235787c9156d13df2965c2afd3054cebccfc7439b1c",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/demo-loader.min.js",
       "readable": "js/demo-loader.js",
       "served_sha256": "5179210f3c44a4747f46ca3cbcbdf04ebf3369e372df0b73fccc917127cbed17",
       "readable_sha256": "bbbab4d906fa66ca72d3bed302648710c3c06c31ddf31a8a4d4f75dd5e289892",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective-integration.js",
       "readable": "js/detective-integration.js",
       "served_sha256": "272e6f26901fdc776024f57228cc8e06cbeff372c06323694d01ccce49c14459",
       "readable_sha256": "272e6f26901fdc776024f57228cc8e06cbeff372c06323694d01ccce49c14459",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective/analyses.js",
       "readable": "js/detective/analyses.js",
       "served_sha256": "1691d50b0c5a4698139f2fa00f1f62babe7dae907e69293d19ce417662367cda",
       "readable_sha256": "1691d50b0c5a4698139f2fa00f1f62babe7dae907e69293d19ce417662367cda",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective/attacks.js",
       "readable": "js/detective/attacks.js",
       "served_sha256": "4275877c52228402697a6205bf8d60dfa8b738c726aa43a1d05ace5c9eaf5e74",
       "readable_sha256": "4275877c52228402697a6205bf8d60dfa8b738c726aa43a1d05ace5c9eaf5e74",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective/challenges.js",
       "readable": "js/detective/challenges.js",
       "served_sha256": "84ab574696183c295f71d28e58cf50fc897df6b3db7e59d6015a34c94ff87464",
       "readable_sha256": "84ab574696183c295f71d28e58cf50fc897df6b3db7e59d6015a34c94ff87464",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective/detective.js",
       "readable": "js/detective/detective.js",
-      "served_sha256": "f35b856babbd33ce06bbc881981c66397be4149f786e5e73b8e3afd4ba0c474c",
-      "readable_sha256": "f35b856babbd33ce06bbc881981c66397be4149f786e5e73b8e3afd4ba0c474c",
-      "dormant": false
+      "served_sha256": "4abd9c050c1dfbae843aecc5393fa1a1b3374752614e77a7b1dea42607a4cc84",
+      "readable_sha256": "4abd9c050c1dfbae843aecc5393fa1a1b3374752614e77a7b1dea42607a4cc84",
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective/lang-model.js",
       "readable": "js/detective/lang-model.js",
-      "served_sha256": "50e0e589e7d89f2ce5d7e199fdd66b6979d2cb387017089c03c288b9c94e72b9",
-      "readable_sha256": "50e0e589e7d89f2ce5d7e199fdd66b6979d2cb387017089c03c288b9c94e72b9",
-      "dormant": false
+      "served_sha256": "7c5e01f81df9885c9150841509d32c0d4408f034e7795e9986117c7cd317b483",
+      "readable_sha256": "7c5e01f81df9885c9150841509d32c0d4408f034e7795e9986117c7cd317b483",
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective/playback.js",
       "readable": "js/detective/playback.js",
       "served_sha256": "7c2c8f3a966e083f343c149b2dd6e734f99ca075c4dbc691c4c6cb6c1d382cd8",
       "readable_sha256": "7c2c8f3a966e083f343c149b2dd6e734f99ca075c4dbc691c4c6cb6c1d382cd8",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective/render.js",
       "readable": "js/detective/render.js",
       "served_sha256": "b7af287631438b285c2d6373e1d832cfca3550623179663f022016a13b90eb7a",
       "readable_sha256": "b7af287631438b285c2d6373e1d832cfca3550623179663f022016a13b90eb7a",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective/scoring.js",
       "readable": "js/detective/scoring.js",
       "served_sha256": "7ba0094e5385f87e5d40d5c0d11f664444dbce0b3ab981c406c7254064098265",
       "readable_sha256": "7ba0094e5385f87e5d40d5c0d11f664444dbce0b3ab981c406c7254064098265",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective/solvers.js",
       "readable": "js/detective/solvers.js",
       "served_sha256": "7ca2a3d405d8db405bcb70f30baee8e6f82e69d90f6b392d31047eefef949a70",
       "readable_sha256": "7ca2a3d405d8db405bcb70f30baee8e6f82e69d90f6b392d31047eefef949a70",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/detective/workspaces.js",
       "readable": "js/detective/workspaces.js",
       "served_sha256": "5613416b26fa4103525f7eb0d0f554cc0a8dc478ddfc1fbe5c37e93c1ae9449d",
       "readable_sha256": "5613416b26fa4103525f7eb0d0f554cc0a8dc478ddfc1fbe5c37e93c1ae9449d",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/footer.js",
       "readable": "js/footer.js",
       "served_sha256": "1d5cc4bd041628cc32d535b7aa5e3bbea67b6bce16d250273e0960be6d690d1d",
       "readable_sha256": "1d5cc4bd041628cc32d535b7aa5e3bbea67b6bce16d250273e0960be6d690d1d",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/historical-ciphers.js",
       "readable": "js/historical-ciphers.js",
       "served_sha256": "0df911fca104641b48a6ef6dbde4ec141c8bcc526ffac157497dbb085510af6b",
       "readable_sha256": "0df911fca104641b48a6ef6dbde4ec141c8bcc526ffac157497dbb085510af6b",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/historical-demos.js",
       "readable": "js/historical-demos.js",
       "served_sha256": "39f299e5c2497d83acdea66530dc0a0cf132d98570e614020201b4a2834e7a1a",
       "readable_sha256": "39f299e5c2497d83acdea66530dc0a0cf132d98570e614020201b4a2834e7a1a",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/learning-path.js",
       "readable": "js/learning-path.js",
       "served_sha256": "cca1c5bddf2c0937585e8c9b843d8c8172576977b10d476e4fb582b559cb6b9d",
       "readable_sha256": "cca1c5bddf2c0937585e8c9b843d8c8172576977b10d476e4fb582b559cb6b9d",
-      "dormant": true
+      "dormant": true,
+      "classroom_cli": false
     },
     {
       "served": "js/lightbox.js",
       "readable": "js/lightbox.js",
       "served_sha256": "df66c54172a603518ed1085ddbe3b963fef68a5a2846e0836ba96386b2286c15",
       "readable_sha256": "df66c54172a603518ed1085ddbe3b963fef68a5a2846e0836ba96386b2286c15",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/manual-cipher-demos.js",
       "readable": "js/manual-cipher-demos.js",
       "served_sha256": "84b99d862dc976f26d28d4d7b91d765025a4c98cfd3103ffa76a2b346b49f3ab",
       "readable_sha256": "84b99d862dc976f26d28d4d7b91d765025a4c98cfd3103ffa76a2b346b49f3ab",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/multiple-anagramming.js",
       "readable": "js/multiple-anagramming.js",
       "served_sha256": "6e7cfd2872d5f4ba7483f0f74ad46e71eee7f51451847caa7d708fd48344efb8",
       "readable_sha256": "6e7cfd2872d5f4ba7483f0f74ad46e71eee7f51451847caa7d708fd48344efb8",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/nav.js",
       "readable": "js/nav.js",
       "served_sha256": "5a45581ad08fd412e0d38e35a7d456fb85134042c142a078e9fa75339eb3fa33",
       "readable_sha256": "5a45581ad08fd412e0d38e35a7d456fb85134042c142a078e9fa75339eb3fa33",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/pad-experiments.js",
       "readable": "js/pad-experiments.js",
       "served_sha256": "d92bae704213cdb6c4b391657eac0f0656f8412220678951d9a86f1bb1f18d5c",
       "readable_sha256": "d92bae704213cdb6c4b391657eac0f0656f8412220678951d9a86f1bb1f18d5c",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/protocol-math.js",
       "readable": "js/protocol-math.js",
       "served_sha256": "a9fb45687f0d4d032a8dbf135741502fe35bf6da3835e27556c85a45197e8966",
       "readable_sha256": "a9fb45687f0d4d032a8dbf135741502fe35bf6da3835e27556c85a45197e8966",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/research-cases.js",
       "readable": "js/research-cases.js",
       "served_sha256": "bc67c743e701eab7ac56c2ee391435c4c540255a5968c55524d9698fd01256e9",
       "readable_sha256": "bc67c743e701eab7ac56c2ee391435c4c540255a5968c55524d9698fd01256e9",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/research-language-model.js",
       "readable": "js/research-language-model.js",
       "served_sha256": "2621e72bf6124d1d0e864d7ff643bcac62cbb22ae56a4cb0be70388f6129a492",
       "readable_sha256": "2621e72bf6124d1d0e864d7ff643bcac62cbb22ae56a4cb0be70388f6129a492",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/research-model.js",
       "readable": "js/research-model.js",
       "served_sha256": "8b7b94977421047d3cb360dad250af8513c3d7d350c141b0d4f1fc466e42b174",
       "readable_sha256": "8b7b94977421047d3cb360dad250af8513c3d7d350c141b0d4f1fc466e42b174",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/research-ui.js",
       "readable": "js/research-ui.js",
       "served_sha256": "848a83b9b5fdd26f278b1843e1b6cf5a75fa162788be29c75a19df4e83cacba6",
       "readable_sha256": "848a83b9b5fdd26f278b1843e1b6cf5a75fa162788be29c75a19df4e83cacba6",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/research-worker.js",
       "readable": "js/research-worker.js",
       "served_sha256": "ed2a941f8f50a76f690ffc2ffa4a49e1fd3c164f59041996fd0e13133627ca35",
       "readable_sha256": "ed2a941f8f50a76f690ffc2ffa4a49e1fd3c164f59041996fd0e13133627ca35",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/search.js",
       "readable": "js/search.js",
       "served_sha256": "cb152e1c07e71650fb727b994c94a0c3685217bf139dd194e52372039bedf0d7",
       "readable_sha256": "cb152e1c07e71650fb727b994c94a0c3685217bf139dd194e52372039bedf0d7",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/trust-labels.js",
       "readable": "js/trust-labels.js",
       "served_sha256": "df5dd97d87412f530ae69bc145c70159f52e13b7a1cfa8d3403c0f0c83d0476e",
       "readable_sha256": "df5dd97d87412f530ae69bc145c70159f52e13b7a1cfa8d3403c0f0c83d0476e",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
     },
     {
       "served": "js/ui-delegates.js",
       "readable": "js/ui-delegates.js",
       "served_sha256": "533029a0253d48b410e3e6f14dfbb616ff3bc233a2f6ef7d1387babd26af4959",
       "readable_sha256": "533029a0253d48b410e3e6f14dfbb616ff3bc233a2f6ef7d1387babd26af4959",
-      "dormant": false
+      "dormant": false,
+      "classroom_cli": false
+    },
+    {
+      "served": "scripts/columnar-classroom.js",
+      "readable": "scripts/columnar-classroom.js",
+      "served_sha256": "fc4b64e8877c3fad1c6866029f58189c1c7a6f555a4a44fdcc148f78e68fc4f3",
+      "readable_sha256": "fc4b64e8877c3fad1c6866029f58189c1c7a6f555a4a44fdcc148f78e68fc4f3",
+      "dormant": false,
+      "classroom_cli": true
     },
     {
       "served": "sw.js",
       "readable": "sw.js",
-      "served_sha256": "3181d40c34e26062d972467ce9a236fdc796eee0a4e36036995a1523f37edae0",
-      "readable_sha256": "3181d40c34e26062d972467ce9a236fdc796eee0a4e36036995a1523f37edae0",
-      "dormant": false
+      "served_sha256": "e5afa22bfa4aa21f19e72b90f1a5f8607f2add60cbf15ca64d5c890e1a147bed",
+      "readable_sha256": "e5afa22bfa4aa21f19e72b90f1a5f8607f2add60cbf15ca64d5c890e1a147bed",
+      "dormant": false,
+      "classroom_cli": false
     }
   ],
   "data_files": [
@@ -3934,16 +3993,20 @@
     {
       "path": "manifest.webmanifest",
       "sha256": "2ebb322fd8f062ba8f5a5a8fb34c13a7ea5b4a72f7da14fc0e84a6ab6bf69d59"
+    },
+    {
+      "path": "public/teaching/columnar-classroom-fixtures.json",
+      "sha256": "113473b36d39dccb1cdb7a7276dcf1fe634eb1d70d6109624e5d511ea8987fca"
     }
   ],
   "input_files": [
     {
       "path": "docs/page-audit/coverage.json",
-      "sha256": "7ffdc0b59751c76a409da516291e78ff0f7cabae66ad33a299a33d562dc1eea0"
+      "sha256": "beeb8972b661901a9fab1cee75f3b56b9a44b3030911867cfb0657715533c939"
     },
     {
       "path": "docs/page-audit/sources.json",
-      "sha256": "1f50fc32b016be2c6a0a691efbd129858b935ef3a8c2876c5d51bcf2c10a7ec4"
+      "sha256": "e0d6b51d375f0a0c7932b756cdff4e214737cce5a5994dc4405dbe80ab24644b"
     },
     {
       "path": "404.html",
@@ -3959,7 +4022,7 @@
     },
     {
       "path": "cipher-detective.html",
-      "sha256": "427cfc8eb09e4a82a3dc2c6636c593bcba67072de0c15c00c07a84f7984bafc6"
+      "sha256": "0c63f1a92df29f6b913afbd15b1fba643ab3a34399096361f699f213c2465294"
     },
     {
       "path": "cipher-flow.html",
@@ -3979,7 +4042,7 @@
     },
     {
       "path": "ciphers/aes.html",
-      "sha256": "4e71d55e901d9eb7f37eafe6a841bdaa1a94f363140052f6f4655ffcdc8fafcb"
+      "sha256": "12fee221244c92509002becdc09f7000adf8c1eb461b4d8088039090596f0d66"
     },
     {
       "path": "ciphers/affine.html",
@@ -4059,7 +4122,7 @@
     },
     {
       "path": "ciphers/bill-tutte.html",
-      "sha256": "e4458af507b886572bf058c7b235cedb5b965b121081212b2cbe51d8d0344bcb"
+      "sha256": "7c3ee6feae98526a5a3980416d9f4888a1822887d2278c86fafaeaccb3fafd79"
     },
     {
       "path": "ciphers/bletchley-park.html",
@@ -4107,11 +4170,11 @@
     },
     {
       "path": "ciphers/colossus.html",
-      "sha256": "e5d1e8b3287f1e6720f8660ba186e91d9c9c3f95c1a68796f8c6fd1e0a9511e5"
+      "sha256": "12f97888209a625a92e34af42b6b0ce0e92aebe1fea1161979edbc2acece39a5"
     },
     {
       "path": "ciphers/columnar.html",
-      "sha256": "321e1e433ea1767b0864555027a4670b05e168ca7d54db41c069eb8055b80269"
+      "sha256": "07d9490edf3d4cff5448979ae77c8841d8c345a68a9db4233925aab8d53c6e21"
     },
     {
       "path": "ciphers/commercial-codebooks.html",
@@ -4143,7 +4206,7 @@
     },
     {
       "path": "ciphers/des.html",
-      "sha256": "58b6a815e87e0a7b0c61eb47f9188d4dfe14f0253c014a0caff045e007a219b2"
+      "sha256": "bdd4bb74cf26f94c4a5ad6664d1e3822bd118be050cbd0147cdf4f47126f04e1"
     },
     {
       "path": "ciphers/diana-cryptosystem.html",
@@ -4155,7 +4218,7 @@
     },
     {
       "path": "ciphers/diffie-hellman.html",
-      "sha256": "e1c50c726c578387177fb2ca1e8e407765fc2cbb184ef85d8c8c9695dd40117c"
+      "sha256": "3ae1be5c51ac24f2ac14e1ae2b164966d1f51f80102ec51926bfcf8295c860ed"
     },
     {
       "path": "ciphers/dilly-knox.html",
@@ -4311,7 +4374,7 @@
     },
     {
       "path": "ciphers/lorenz.html",
-      "sha256": "aaf51b8df1e000e4f9a90be70a03cc18c4551333de859adb9af73ba3f5acb139"
+      "sha256": "db274be3d557cb0a7a7bd975a829a51ebbd5b86d245d96f1f4371cc063bdc091"
     },
     {
       "path": "ciphers/m-94.html",
@@ -4459,7 +4522,7 @@
     },
     {
       "path": "ciphers/sha256.html",
-      "sha256": "e2a61ad3c7e6742cbe0abf05f01ce6bb6126d54a31545812f26f87bd1f6467a1"
+      "sha256": "cb1eeac3e05f9b6c89c8a9f845b83732c422579a70e2a1079914293be70f05c4"
     },
     {
       "path": "ciphers/shamir-secret-sharing.html",
@@ -4595,7 +4658,7 @@
     },
     {
       "path": "cryptanalysis.html",
-      "sha256": "be97a48cfa12b8824fc684c18181f95233b2ac4a5ec950b0aa0484e57ad4c6ea"
+      "sha256": "7741435385b5b835f3942c51c7244f630d7c229b0881c0b0b70afe9ad8a89e57"
     },
     {
       "path": "embed.html",
@@ -4611,7 +4674,7 @@
     },
     {
       "path": "hall-of-foundations/closest-vector.html",
-      "sha256": "bc7938332b7b7e2f814e7d40b94eab82fde022d992d10507c0b53b59ab668a06"
+      "sha256": "a64e353495a3f32410d0b776f688dd2f9294661f2d9d525fe4ce370f30837645"
     },
     {
       "path": "hall-of-foundations/elliptic-curves-real.html",
@@ -4619,7 +4682,7 @@
     },
     {
       "path": "hall-of-foundations/entropy.html",
-      "sha256": "01b324649ac456e2674ae96944c1f1fd0a7edc3a58a922cec490fb3fb0f45e05"
+      "sha256": "8177bf619c350287e1f2984f08ef3e28c18dc24842ed804819831a43381f4a65"
     },
     {
       "path": "hall-of-foundations/euler-fermat.html",
@@ -4647,7 +4710,7 @@
     },
     {
       "path": "hall-of-foundations/learning-with-errors.html",
-      "sha256": "d7c6a6e00d410ca67d5f984f73970d4e98e82cda6b06b872afbbdd3fa82b5fec"
+      "sha256": "ce67bdc0d5d3c4fcd25fc1ae7f4a4025577996efc7ab48020d049a9e2cb0cb74"
     },
     {
       "path": "hall-of-foundations/modular-arithmetic.html",
@@ -4675,7 +4738,7 @@
     },
     {
       "path": "hall-of-foundations/random-oracle.html",
-      "sha256": "a287ee8dd7878853c2002b33744e085a7238fdc563e1f280579373e873753701"
+      "sha256": "ef9ac80c64a6ff45b28a1e41383d4cac8091b543d0fab5fb85851626159d2511"
     },
     {
       "path": "hall-of-foundations/reduction.html",
@@ -4747,19 +4810,19 @@
     },
     {
       "path": "lab/modern-attack-evidence.html",
-      "sha256": "b8c3e8c60a70836f999853ccc8e9545190e52c6b32a6d0c3abe6e873eb0fa4fb"
+      "sha256": "14bc65124bbe165aba374b7b90e2ddb0c5e78e561075af3528906ccd5e57fb21"
     },
     {
       "path": "lab/workbench.html",
-      "sha256": "ff8b4ba221f70d5606f03ed9ae4d262fdd6266c69166ebaedcc57f889585d50b"
+      "sha256": "dc2633d4aff2872330a05c5d7d3306f2685489976069c8b66e4afef58699f848"
     },
     {
       "path": "learn.html",
-      "sha256": "eef8a77546deaad56db30632a2c3ee164bfcc9c0cca448fd52a49f83888bdb8e"
+      "sha256": "447c41722da733924e63cacd416c543cdafe2ff99241b594671a8258831a9ba4"
     },
     {
       "path": "modern.html",
-      "sha256": "acc2b978998b2bcb0fa7998d5da80e8a39264ad89021cfb3088d60d3be178048"
+      "sha256": "3c8ab175bb7e546a744cfc2d9c41da36479d7cf034c9762f519db53fef13e534"
     },
     {
       "path": "museum-map.html",
@@ -4787,7 +4850,7 @@
     },
     {
       "path": "teaching.html",
-      "sha256": "39cd0346e91abb62615553662cff8f2172e4ca0c72ec203ff76384fe2abbb888"
+      "sha256": "3bc03cae8cc696e9ee1537f269796eacd17eea4a1ac033b0cadb3a04b15b5ab0"
     },
     {
       "path": "timeline.html",
@@ -4915,11 +4978,11 @@
     },
     {
       "path": "js/detective/detective.js",
-      "sha256": "f35b856babbd33ce06bbc881981c66397be4149f786e5e73b8e3afd4ba0c474c"
+      "sha256": "4abd9c050c1dfbae843aecc5393fa1a1b3374752614e77a7b1dea42607a4cc84"
     },
     {
       "path": "js/detective/lang-model.js",
-      "sha256": "50e0e589e7d89f2ce5d7e199fdd66b6979d2cb387017089c03c288b9c94e72b9"
+      "sha256": "7c5e01f81df9885c9150841509d32c0d4408f034e7795e9986117c7cd317b483"
     },
     {
       "path": "js/detective/playback.js",
@@ -5014,8 +5077,12 @@
       "sha256": "533029a0253d48b410e3e6f14dfbb616ff3bc233a2f6ef7d1387babd26af4959"
     },
     {
+      "path": "scripts/columnar-classroom.js",
+      "sha256": "fc4b64e8877c3fad1c6866029f58189c1c7a6f555a4a44fdcc148f78e68fc4f3"
+    },
+    {
       "path": "sw.js",
-      "sha256": "3181d40c34e26062d972467ce9a236fdc796eee0a4e36036995a1523f37edae0"
+      "sha256": "e5afa22bfa4aa21f19e72b90f1a5f8607f2add60cbf15ca64d5c890e1a147bed"
     },
     {
       "path": "tours/foundations.json",
@@ -5116,6 +5183,14 @@
     {
       "path": "manifest.webmanifest",
       "sha256": "2ebb322fd8f062ba8f5a5a8fb34c13a7ea5b4a72f7da14fc0e84a6ab6bf69d59"
+    },
+    {
+      "path": "public/teaching/columnar-classroom-fixtures.json",
+      "sha256": "113473b36d39dccb1cdb7a7276dcf1fe634eb1d70d6109624e5d511ea8987fca"
+    },
+    {
+      "path": "public/teaching/columnar-classroom.md",
+      "sha256": "195e139c2732cb0d3d6c2ab5dd6fe5addf6100e130bd875a52b0d2d945d68091"
     }
   ],
   "outputs": [
@@ -5126,128 +5201,133 @@
     },
     {
       "path": "parts/01-pages-P001-P020.md",
-      "bytes": 254960,
-      "sha256": "1bb89a92006a1b87452e069dd8bedb2e9eecc17ed0be5ad7e7cda7ff74047ba1"
+      "bytes": 260451,
+      "sha256": "73dc4e6b276b0b3cdfb4624ca6000ea29f30ccb053490347902949dd7646571d"
     },
     {
       "path": "parts/02-pages-P021-P040.md",
-      "bytes": 255106,
-      "sha256": "ddd3f1b8fd83a7085e2138aed839f1dc9e6d0dfd52e73b8537db9c535f9c287e"
+      "bytes": 257613,
+      "sha256": "359e93975a3e38edd49fa9b5e13a28f1dad3494cc9f4b552fae30f816f450d8a"
     },
     {
       "path": "parts/03-pages-P041-P060.md",
-      "bytes": 260116,
-      "sha256": "51407382e3b9b4a8e913ac8ce7b18cd2274545fda308a54ffdd0c4ca040394a8"
+      "bytes": 270557,
+      "sha256": "052d2fc5f0dd595cfe7a7230ecd5b8ac3e18c5d15721bf19c753d1e555d0e1da"
     },
     {
       "path": "parts/04-pages-P061-P080.md",
       "bytes": 273187,
-      "sha256": "3c784133afd281266d44cc37fa8fec7ebc44f5af1fbe2a12818f72b099900936"
+      "sha256": "2bd39005c0bd17912b805c7f3eea40585e7abf195368b548c3e76c7b8d17358a"
     },
     {
       "path": "parts/05-pages-P081-P100.md",
-      "bytes": 258370,
-      "sha256": "3ec5d1f7b5de247ce822332fba6d8da02aeece5a8efb692fada3ddde8443d390"
+      "bytes": 261495,
+      "sha256": "5ebe45bcb55e92a20fec0d5b04159d649112142503be0b2f582715262effc9cc"
     },
     {
       "path": "parts/06-pages-P101-P120.md",
       "bytes": 275625,
-      "sha256": "2f4bd3b6e63decde526567bfa9a45995501f5575fb303f615fe74c6a9991885b"
+      "sha256": "11834099a815f6518459e2b6a7ffae40a988396773b8b8511ca8521adb5bc03d"
     },
     {
       "path": "parts/07-pages-P121-P140.md",
-      "bytes": 258908,
-      "sha256": "7ab8040e6ac0be24ccbf2b56523518463e825d8066199d16e0694e81f126408b"
+      "bytes": 261469,
+      "sha256": "e68b1c4ad0705783ce5b9bdb1da86ccbd14bfdcf5624df377634df7ed38fa9ed"
     },
     {
       "path": "parts/08-pages-P141-P160.md",
       "bytes": 290585,
-      "sha256": "e988ee1597f07291f778dc693ba1bc14d7a86fab0fbdf5d06dd99c52b62915a8"
+      "sha256": "f60d113dc63ae4b29f97bb036ad0f788e99ed703b10e3f9b2d6ee1dfd59032e8"
     },
     {
       "path": "parts/09-pages-P161-P180.md",
-      "bytes": 417563,
-      "sha256": "ecc665b835f6af8108f0758d266322a3e242570fb383a25dc3c3f8102bdbe8b9"
+      "bytes": 436959,
+      "sha256": "55f5fb017e537884b271a819f1f442afca3ad66f6d02509a52127fbef30a7566"
     },
     {
       "path": "parts/10-pages-P181-P200.md",
-      "bytes": 263154,
-      "sha256": "938f81173544f493ac5362e40daccc6e5d354a7fd63b697e81cf8ca443d80b58"
+      "bytes": 265807,
+      "sha256": "4cf221774644d6a7f00a39e94be089baf94670ce4bd256882e35334d908647bd"
     },
     {
       "path": "parts/11-pages-P201-P214.md",
-      "bytes": 209690,
-      "sha256": "7a81346e3a07f94612c615a2818da47348313a97e1d1c8286e4097327957d49f"
+      "bytes": 222300,
+      "sha256": "33b58a8bb2808793dc8ac54a33373e9f330a9569fc736172d49fdf4b3f8bdf55"
     },
     {
       "path": "parts/12-source-register.md",
-      "bytes": 86107,
-      "sha256": "d3e813b6c7d74cf45f47520869fdd7791a302f3a61a3a99c281e1bd7289769a1"
+      "bytes": 96180,
+      "sha256": "8abbab074c22bf459aa028539cbf8b2dc6e8fd322b97b54493b85d70ef475756"
     },
     {
       "path": "parts/13-01-javascript.md",
       "bytes": 178307,
-      "sha256": "9c7eefa3baf73361a83e26c0175a07f406de77218881ef5fa430619c37592e3e"
+      "sha256": "3ea5d7ee3e0b7bc714c18a9339e763255c15070b194dfec4fa96b7ed73ee30ad"
     },
     {
       "path": "parts/13-02-javascript.md",
       "bytes": 181217,
-      "sha256": "f788da865f5d2ebf893b31d227a0762c342f55c23a41dae68f46bafe42ae84c1"
+      "sha256": "04b66c203c7c3d389daa91d1650207dafaa29db279841627b1e95df0b3994ea1"
     },
     {
       "path": "parts/13-03-javascript.md",
       "bytes": 169151,
-      "sha256": "f7c310fdfb3b82ea95f5db614356fa7899c5048d4f778e37962286c0722f1098"
+      "sha256": "2064562bd951e88095f8b144a351bd9a2c69fd929a6b97ca7c0963eb8eac49e5"
     },
     {
       "path": "parts/13-04-javascript.md",
-      "bytes": 165270,
-      "sha256": "13ffdcd0abaf65b2fc1e11a00702aff172dd3139370bf6ee8013221a23546db0"
+      "bytes": 165998,
+      "sha256": "fcd3416c96f413bd75a83b16707e86a6d1547ee39b74b7d05dc52f1616bdd31a"
     },
     {
       "path": "parts/13-05-javascript.md",
-      "bytes": 133104,
-      "sha256": "915cb06f6ce83c0e026d07e5cbc4067a2d33c6fb35b00ffd038b4163c3fbbdab"
+      "bytes": 138917,
+      "sha256": "a8c87bee018477200b51f6b96e8b2a03f85b0ee17b6fb9b79143a2c9642b3eb2"
     },
     {
       "path": "parts/14-01-data.md",
       "bytes": 48229,
-      "sha256": "d322ae2cba0024b17795f79ad1ec484d14cf6610e2a77d8983c470956741e7eb"
+      "sha256": "b78f4447a8054e09a27c701c1d3d19d47626bbf761bd57da47bef06fcfe7b570"
     },
     {
       "path": "parts/14-02-data.md",
       "bytes": 465598,
-      "sha256": "3e581fe38a7c676063dac72dd505f5c86598102998ea3a31f6f92bb00513b1a4"
+      "sha256": "d1297a4ffb49a3b32d35e40988e596d8c91677df9c35b025c87753f46ed13100"
     },
     {
       "path": "parts/14-03-data.md",
       "bytes": 176025,
-      "sha256": "9e895303bb8345a20818c4547edbda06cb0f598a4aafd990973db60cdb258e5d"
+      "sha256": "4342146eea3e4a6558d4ac7eb719ad97664c3fb7dce83fa3287bdb48488de1e0"
     },
     {
       "path": "parts/14-04-data.md",
       "bytes": 106624,
-      "sha256": "7ccfd4e59ebdde40a30146fdf24c5d96c39213bb6def675b8265453ad7d5c506"
+      "sha256": "af96102ad064d32bfc160589cf5bb4eb19e6acae516171182475c8007c17e0f9"
     },
     {
       "path": "parts/14-05-data.md",
       "bytes": 170550,
-      "sha256": "55cb0e4ca6253f293056278e918ddeaab4b72809c13db8fc9f58a49be1ee2456"
+      "sha256": "e7a32be84223962caec374a5da3db6b835b3d7c12608fd9160d6b0f9e1622356"
     },
     {
       "path": "parts/14-06-data.md",
-      "bytes": 103188,
-      "sha256": "ec24291ac0c49735528998baf18397185749826378d17e6d0cf8c0ddda31550a"
+      "bytes": 105471,
+      "sha256": "7d829bb79d305bae2cda3da4b0237e8a0bad3aa8a8d30f8d7b38bd5c8c46d2ab"
+    },
+    {
+      "path": "parts/15-classroom-worksheet.md",
+      "bytes": 5593,
+      "sha256": "21a74ebf610d288bb53534b2488e30e2bf5be1180994ce5b59cfd87f90fe754c"
     },
     {
       "path": "CIPHER_MUSEUM_AUDIT.md",
-      "bytes": 5027307,
-      "sha256": "4dfb4b46d878e89638f32096d6cea82b5315fba25e16d11e468b2f24b44c7783"
+      "bytes": 5110665,
+      "sha256": "d55864546dec10dccd43a058a71cefacbf3110f396377aa9aed665ae6b7d86f0"
     },
     {
       "path": "README.md",
-      "bytes": 5336,
-      "sha256": "7cd86075e493c84ed55ce5b703a0afb28a417a2a9560f97547727a5fd15dddfe"
+      "bytes": 5506,
+      "sha256": "c434f8dbb43167b4ddee3bfe21026f905f653107e5495e62b70c907df82dabb6"
     }
   ]
 }

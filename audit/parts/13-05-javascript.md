@@ -1,6 +1,6 @@
 # javascript appendix 5
 
-Snapshot: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## JavaScript — js/learning-path.js
 
@@ -2310,6 +2310,93 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
 ```
 
 
+## JavaScript — scripts/columnar-classroom.js
+
+**Classroom command-line tool:** runs with Node.js in a repository checkout; it is not a browser demo. The linked worksheet and fixed fixtures are included separately.
+
+Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
+
+- Served/distributed path: `scripts/columnar-classroom.js`
+- Served SHA-256: `fc4b64e8877c3fad1c6866029f58189c1c7a6f555a4a44fdcc148f78e68fc4f3`
+- Readable-source SHA-256: `fc4b64e8877c3fad1c6866029f58189c1c7a6f555a4a44fdcc148f78e68fc4f3`
+
+
+```javascript
+#!/usr/bin/env node
+'use strict';
+// A small receipt-producing classroom experiment; reuses the Museum solver.
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const { performance } = require('node:perf_hooks');
+const root = path.join(__dirname, '..');
+const columnar = require('../js/columnar-search');
+require('../js/detective/lang-model');
+const fixturePath = 'public/teaching/columnar-classroom-fixtures.json';
+const corpus = JSON.parse(fs.readFileSync(path.join(root, fixturePath), 'utf8'));
+const digest = file => crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex');
+
+// Reference preparation is separate from the search implementation: write rows,
+// then read the specified columns. Fixed ciphertexts are retained in the fixture.
+function referenceEncrypt(plaintext, order) {
+  const rows = [];
+  for (let i = 0; i < plaintext.length; i += order.length) rows.push(plaintext.slice(i, i + order.length));
+  return order.map(column => rows.map(row => row[column] || '').join('')).join('');
+}
+function runExperiment({clock = () => performance.now()} = {}) {
+  const runs = [];
+  const variants = [{id:'direct', staged:false}, {id:'staged', staged:true}];
+  for (const fixture of corpus.fixtures) {
+    if (referenceEncrypt(fixture.plaintext, fixture.order) !== fixture.ciphertext) throw Error('Fixture does not match its independent row/column reference: ' + fixture.id);
+    if (fixture.length !== fixture.plaintext.length || fixture.width !== fixture.order.length || fixture.remainder !== fixture.length % fixture.width) throw Error('Fixture shape mismatch: ' + fixture.id);
+    for (const seed of corpus.seeds) for (const variant of variants) {
+      const options = {width:fixture.width, budget:corpus.budget, restarts:corpus.restarts, seed, staged:variant.staged, alignment:true, segments:true};
+      const started = clock();
+      const result = columnar.solve(fixture.ciphertext, options);
+      const elapsedMs = Math.max(0, clock() - started);
+      if (result.evaluations > options.budget || result.preprocessing > result.evaluations) throw Error('Budget accounting failed.');
+      const exactPlaintext = !!result.best && result.best.plaintext === fixture.plaintext;
+      const exactKey = !!result.best && result.best.order.every((value, i) => value === fixture.order[i]);
+      runs.push({fixture:fixture.id, variant:variant.id, options, length:fixture.length, remainder:fixture.remainder,
+        rectangle:fixture.remainder ? 'incomplete' : 'complete', evaluations:result.evaluations,
+        preprocessingEvaluations:result.preprocessing, elapsedMs,
+        exactPlaintext, exactKey, outcome:exactPlaintext ? 'plaintext-recovered' : result.best ? 'different-candidate' : 'no-candidate',
+        candidate:result.best ? {plaintext:result.best.plaintext, order:result.best.order, score:result.best.score} : null,
+        reason:result.reason});
+    }
+  }
+  const summary = variants.map(variant => {
+    const rows = runs.filter(run => run.variant === variant.id);
+    return {variant:variant.id, runs:rows.length, exactPlaintexts:rows.filter(run => run.exactPlaintext).length,
+      exactKeys:rows.filter(run => run.exactKey).length, noCandidate:rows.filter(run => !run.candidate).length,
+      unsuccessfulPlaintexts:rows.filter(run => !run.exactPlaintext).length};
+  });
+  return {schema:'museum-columnar-classroom-receipt-v1', fixtureSet:corpus,
+    sources:{fixturesSha256:digest(fixturePath), solverSha256:digest('js/columnar-search.js'), languageModelSha256:digest('js/detective/lang-model.js'), runnerSha256:digest('scripts/columnar-classroom.js')},
+    runtime:{node:process.version, platform:process.platform, arch:process.arch},
+    scope:'24 fixed runs: four synthetic messages, three seeds, two variants differing only in staged initialization. Every failure is retained. These counts describe this small fixture set, not general recovery probabilities. Repeated seeds on a message are dependent. Equal evaluation budgets are not equal CPU work. Timings vary and are excluded from exact replay.',
+    summary, runs};
+}
+function withoutTimings(report) {
+  return {...report, runs:report.runs.map(({elapsedMs, ...run}) => run)};
+}
+if (require.main === module) {
+  const args = process.argv.slice(2);
+  if (args.some(arg => !['--check','--help'].includes(arg))) throw Error('Usage: node scripts/columnar-classroom.js [--check | --help]');
+  if (args.includes('--help')) {
+    console.log('Emit 24-run JSON receipt to stdout: node scripts/columnar-classroom.js > columnar-classroom-results.json\nCheck deterministic replay, excluding time: node scripts/columnar-classroom.js --check');
+  } else if (args.includes('--check')) {
+    const first = runExperiment(), second = runExperiment();
+    require('node:assert/strict').deepEqual(withoutTimings(first), withoutTimings(second));
+    console.log('All 24 classroom runs replay exactly apart from elapsed time. Failures and exhausted budgets remain in the receipt.');
+  } else {
+    console.log(JSON.stringify(runExperiment(), null, 2));
+  }
+}
+module.exports = {runExperiment, withoutTimings, referenceEncrypt};
+```
+
+
 ## JavaScript — sw.js
 
 Supporting source for public page behavior; presence of code does not prove that every branch was exercised.
@@ -2317,8 +2404,8 @@ Supporting source for public page behavior; presence of code does not prove that
 Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
 
 - Served/distributed path: `sw.js`
-- Served SHA-256: `3181d40c34e26062d972467ce9a236fdc796eee0a4e36036995a1523f37edae0`
-- Readable-source SHA-256: `3181d40c34e26062d972467ce9a236fdc796eee0a4e36036995a1523f37edae0`
+- Served SHA-256: `e5afa22bfa4aa21f19e72b90f1a5f8607f2add60cbf15ca64d5c890e1a147bed`
+- Readable-source SHA-256: `e5afa22bfa4aa21f19e72b90f1a5f8607f2add60cbf15ca64d5c890e1a147bed`
 
 
 ```javascript
@@ -2340,7 +2427,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
  */
 'use strict';
 
-const VERSION = 'cipher-museum-ca4277b5';
+const VERSION = 'cipher-museum-56ec9ae8';
 
 const CORE = [
   '/',

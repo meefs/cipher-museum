@@ -10,7 +10,7 @@ A self-contained reading pack for an AI or human reviewer without repository acc
 
 ## What is included
 
-Complete static body text, including hidden panels, captions, tables, examples, controls and inline SVG geometry; descriptive metadata; image/tooltip/accessibility text; each page's inline scripts; readable shared JavaScript (with hashes of served minified versions); tour and challenge data; all 104 corpus-browser sample records; search/artifact-card text; research scoring model; benchmark/count/schema evidence; page review notes and the complete prior source register. This includes duplicates deliberately: the same claim may differ between a page, a card and a search description.
+Complete static body text, including hidden panels, captions, tables, examples, controls and inline SVG geometry; descriptive metadata; image/tooltip/accessibility text; each page's inline scripts; readable shared JavaScript (with hashes of served minified versions); tour and challenge data; all 104 corpus-browser sample records; search/artifact-card text; research scoring model; benchmark/count/schema evidence; page review notes and the complete prior source register; the columnar classroom worksheet, its fixed fixtures and its Node.js runner. This includes duplicates deliberately: the same claim may differ between a page, a card and a search description.
 
 ## Limits the reviewer must preserve
 
@@ -22,7 +22,7 @@ The earlier 214-page review was a complete reading/consistency pass with targete
 
 ## Snapshot and regeneration
 
-Source commit: `5cdeb33f7d6bd97aa9dda7c32999dc074e6d8eee` (2026-10-26T17:16:41-04:00). This is a frozen snapshot, not an automatically current view of the website. If pages change, regenerate deliberately.
+Source commit: `96e6d4efcb2cadce34bdfbe4bcac2e884472e619` (2026-10-26T18:48:31-04:00). This is a frozen snapshot, not an automatically current view of the website. If pages change, regenerate deliberately.
 
 With repository access and dependencies installed:
 
@@ -60,3 +60,4 @@ The exporter reads committed files, checks every public HTML page against the co
 - [14-04-data.md](parts/14-04-data.md): data appendix 4
 - [14-05-data.md](parts/14-05-data.md): data appendix 5
 - [14-06-data.md](parts/14-06-data.md): data appendix 6
+- [15-classroom-worksheet.md](parts/15-classroom-worksheet.md): Columnar classroom worksheet
