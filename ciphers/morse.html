@@ -64,7 +64,7 @@
   <p class="exhibit-status-note">Encoding, not encryption</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Samuel F. B. Morse & Alfred Vail, USA</span></div>
-    <div class="fact"><span class="fact-label">First message</span><span class="fact-value">1844 — "What hath God wrought"</span></div>
+    <div class="fact"><span class="fact-label">Washington–Baltimore demonstration</span><span class="fact-value">1844 — "What hath God wrought"</span></div>
     <div class="fact"><span class="fact-label">International standard</span><span class="fact-value">1865 (Paris)</span></div>
     <div class="fact"><span class="fact-label">Carrier for</span><span class="fact-value">Vigenère, fractionated Morse, OTP, JN-25, …</span></div>
     <div class="fact"><span class="fact-label">Modern role</span><span class="fact-value">Aviation idents, amateur radio, accessibility</span></div>
@@ -108,7 +108,7 @@ HELLO = .... . .-.. .-.. ---
         <table class="cipher-table">
           <tbody>
             <tr><td>Origin</td><td>Samuel F. B. Morse & Alfred Vail, USA</td></tr>
-            <tr><td>First message</td><td>1844 — "What hath God wrought"</td></tr>
+            <tr><td>Washington–Baltimore demonstration</td><td>1844 — "What hath God wrought"</td></tr>
             <tr><td>International standard</td><td>1865 (Paris)</td></tr>
             <tr><td>Carrier for</td><td>Vigenère, fractionated Morse, OTP, JN-25, …</td></tr>
             <tr><td>Modern role</td><td>Aviation idents, amateur radio, accessibility</td></tr>
@@ -119,13 +119,13 @@ HELLO = .... . .-.. .-.. ---
     <div class="panel" style="margin-top:1.25rem;">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-signal"/></svg></span><span class="panel-title">Voyager Golden Record Sidebar</span></div>
       <div class="panel-body">
-        <p>The Voyager probes (1977) did not transmit Morse as an encryption system, but they inherited its core insight: <strong>make symbols decodable without language sharing</strong>. The Golden Record's playback and image instructions are encoded as universal mathematical diagrams, just as Morse normalised telegraph symbols for any trained operator.</p>
+        <p>A public encoding specifies how symbols are represented. That role differs from secrecy: knowing Morse, ASCII or a file format should not require a secret key. Encryption may be applied to content before it is encoded for a particular channel.</p>
       </div>
     </div>
     <div class="panel" style="margin-top:1.25rem;">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-signal"/></svg></span><span class="panel-title">Morse + Cipher Combination Pattern</span></div>
       <div class="panel-body">
-        <p>Historically, operators rarely sent plain Morse in contested channels. The common stack was:</p>
+        <p>One possible encrypted transmission stack is:</p>
         <ol style="margin-top:.6rem;line-height:1.7;padding-left:1.25rem;">
           <li>Encrypt plaintext with a cipher (Vigenere, transposition, OTP, etc.).</li>
           <li>Convert resulting ciphertext to Morse/Baudot for transmission.</li>
@@ -137,13 +137,15 @@ HELLO = .... . .-.. .-.. ---
   </div>
 </div>
 
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>U.S. House of Representatives, <a href="https://history.house.gov/HistoricalHighlight/Detail/35992">“The Capitol’s First Official Telegraph”</a>, distinguishes Morse’s 1838 demonstration to Congress from the Washington–Baltimore event of 24 May 1844.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">
     <a href="../ciphers/fractionated-morse.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Fractionated Morse</span>
-      <span class="related-card__tag">Splits each Morse symbol across columns — actual cipher, not just encoding</span>
+      <span class="related-card__tag">Substitutes triples of Morse elements and separators</span>
     </a>
     <a href="../ciphers/vernam.html" class="related-card">
       <span class="related-card__number">Related</span>
@@ -153,7 +155,7 @@ HELLO = .... . .-.. .-.. ---
     <a href="../ciphers/navajo-code-talkers.html" class="related-card">
       <span class="related-card__number">Related</span>
       <span class="related-card__name">Navajo Code Talkers</span>
-      <span class="related-card__tag">Replaced the public Morse alphabet with a private spoken one</span>
+      <span class="related-card__tag">A spoken code using Navajo vocabulary and agreed military terms</span>
     </a>
   </div>
 </section>

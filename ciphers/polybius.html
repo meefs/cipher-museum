@@ -66,14 +66,14 @@
   </div>
   <h1 class="page-title">Polybius Square</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">The first fractionation cipher — letters become coordinates</p>
+  <p class="page-tagline">An ancient signalling idea and its modern coordinate-grid adaptation</p>
   <p class="exhibit-status-note">Frequency analysis</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Polybius of Megalopolis</span></div>
     <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~150 BC</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">None (fixed grid)</span></div>
-    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Frequency analysis</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Coordinate encoding → Bit-slicing in AES</span></div>
+    <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Lookup for a public grid; substitution analysis for a secret grid</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Coordinate encoding and later fractionation</span></div>
   </div>
 </div>
 
@@ -176,7 +176,7 @@ HELLO = 23 15 31 31 34</pre>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Frequency Analysis</div><div class="attack-diff">Complexity: Trivial</div><p class="attack-desc">The Polybius square is a monoalphabetic substitution cipher in disguise. Each letter maps to exactly one pair of digits. Letter frequencies are completely preserved — just expressed as numbers instead of letters. Count the most common digit pairs and match them to expected English letter frequencies.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Frequency Analysis</div><div class="attack-diff">Complexity: Trivial</div><p class="attack-desc">For the public grid shown here, decoding is simply a lookup. If the alphabet is secretly permuted, each pair still corresponds to one letter and substitution analysis becomes relevant. Frequency rankings are hypotheses, especially for short texts; they are not a guaranteed recovery rule.</p></div></div>
     </div>
 
     <div class="panel">
@@ -185,8 +185,8 @@ HELLO = 23 15 31 31 34</pre>
         <table class="cipher-table">
           <thead><tr><th>Concept from Polybius Square</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Coordinate encoding (row, col)</td><td>Fractionation concept in Bifid, ADFGVX ciphers</td></tr>
-<tr><td>5×5 grid</td><td>SP-networks in modern block ciphers use similar lookup tables</td></tr>
-<tr><td>Letter→number conversion</td><td>Bit representation: every letter is a binary number in AES</td></tr></tbody>
+<tr><td>5×5 grid</td><td>A public coordinate table has no secret-key security by itself</td></tr>
+<tr><td>Letter→number conversion</td><td>Digital encodings represent data as bits; AES operates on 128-bit blocks, not alphabet letters</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -207,7 +207,7 @@ HELLO = 23 15 31 31 34</pre>
             <tr><td>Inventor</td><td>Polybius of Megalopolis</td></tr>
             <tr><td>Year</td><td>~150 BC</td></tr>
             <tr><td>Key Type</td><td>None (fixed grid)</td></tr>
-            <tr><td>Broken By</td><td>Frequency analysis</td></tr>
+            <tr><td>Broken By</td><td>Public-grid lookup; secret-grid substitution analysis</td></tr>
           </tbody>
         </table>
       </div>

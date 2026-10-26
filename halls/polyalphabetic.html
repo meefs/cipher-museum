@@ -87,7 +87,7 @@
         <span class="badge era-renaissance">1553</span>
       </div>
       <div class="card-name">Vigenère Cipher</div>
-      <p class="card-desc">Vigenère cipher (1553) — the polyalphabetic shift driven by a repeating keyword, called le chiffre indéchiffrable for 300 years. Broken by Kasiski in 1863.</p>
+      <p class="card-desc">The modern repeating-key cipher bears Vigenère’s name; Bellaso’s 1553 publication belongs to its earlier history. Babbage and Kasiski developed attacks in the nineteenth century.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.08em;line-height:1.9;">
         <span style="color:var(--tx3);">Plain:  </span><span style="color:var(--tx);">ATTACKATDAWN</span><br>
         <span style="color:var(--tx3);">Key:    </span><span style="color:var(--gold);">LEMONLEMONLE</span><br>
@@ -111,7 +111,7 @@
         <span style="color:var(--tx3);">C = (Key − Plain) mod 26</span>
       </div>
       <div class="card-foot">
-        <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span><span class="badge era-19c">Royal Navy</span></div>
+        <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span><span class="badge era-19c">Reciprocal Rule</span></div>
         <span class="card-arrow">→</span>
       </div>
     </a>
@@ -139,7 +139,7 @@
         <span class="badge era-renaissance">17th Century</span>
       </div>
       <div class="card-name">Gronsfeld Cipher</div>
-      <p class="card-desc">Gronsfeld cipher (1655) — a Vigenère variant restricted to numeric keys (0-9), making it field-portable but with a smaller key space that falls fast to Kasiski.</p>
+      <p class="card-desc">A numeric-key Vigenère variant traditionally associated with Gronsfeld in the seventeenth century. Ten shifts per position reduce the key choices.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.08em;line-height:1.9;">
         <span style="color:var(--tx3);">Key:    </span><span style="color:var(--gold);">3 1 4 1 5</span><br>
         <span style="color:var(--tx3);">Shift by digit value — only 10 options per position</span>
@@ -159,7 +159,7 @@
       <p class="card-desc">Running Key cipher (19th c.) — a Vigenère variant using a long passage of natural text as the key. Broken by Friedman with high-probability-trigram dragging.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.08em;line-height:1.9;">
         <span style="color:var(--tx3);">Plain: </span><span style="color:var(--tx);">ATTACKATDAWN</span><br>
-        <span style="color:var(--tx3);">Key:   </span><span style="color:var(--gold);">FROMTHISBOOK</span>
+        <span style="color:var(--tx3);">Key:   </span><span style="color:var(--gold);">FROMTHISBOOKW</span>
       </div>
       <div class="card-foot">
         <div class="card-badges"><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span><span class="badge badge-hard">Hard to Break</span></div>
@@ -196,12 +196,12 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">The Kasiski Examination</span></div>
       <div class="panel-body">
-        <p>When the same plaintext aligns with the same key letter, it produces the same ciphertext. Search the ciphertext for repeated 3+ letter sequences. The distances between them are multiples of the key length.</p>
+        <p>The same plaintext sequence under the same repeating-key alignment produces the same ciphertext. Repeated ciphertext sequences can therefore suggest distances divisible by the period. Coincidental repeats also occur, so candidate periods need testing. The repeated string below is an illustration of the inference, not a guarantee that its key length is known.</p>
         <pre style="margin-top:1rem;font-size:.78rem;">Ciphertext:
 LXFOP<strong style="color:var(--gold);">VEF</strong>RNHRLXFOP<strong style="color:var(--gold);">VEF</strong>RNHR
       ↑               ↑
    pos 6           pos 18
-   Distance = 12 → key length divides 12</pre>
+   Distance = 12 → test divisors of 12; coincidence is also possible</pre>
       </div>
     </div>
     <div class="panel">
@@ -212,7 +212,7 @@ LXFOP<strong style="color:var(--gold);">VEF</strong>RNHRLXFOP<strong style="colo
           <thead><tr><th>Text Type</th><th>IC Value</th></tr></thead>
           <tbody>
             <tr><td>Random</td><td>~0.038</td></tr>
-            <tr><td>Vigenère (key=5)</td><td>~0.052</td></tr>
+            <tr><td>Illustrative Vigenère sample</td><td>~0.052</td></tr>
             <tr><td>English</td><td>~0.066</td></tr>
           </tbody>
         </table>
@@ -224,14 +224,14 @@ LXFOP<strong style="color:var(--gold);">VEF</strong>RNHRLXFOP<strong style="colo
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;">
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-globe"/></svg></span><span class="panel-title">Vigenère → Stream Ciphers</span></div>
-      <div class="panel-body"><p>Vigenère uses a repeating key stream. Modern stream ciphers like ChaCha20 generate a non-repeating, cryptographically random keystream of the same length as the message — the same XOR operation, with an unguessable key.</p></div>
+      <div class="panel-body"><p>Vigenère repeats a short sequence of letter shifts. ChaCha20 instead generates pseudorandom bit blocks from a key, nonce and counter, then combines them with plaintext using XOR. Its security is computational, and its usage rules prevent keystream reuse. “Non-repeating” does not mean that individual output blocks can never coincide.</p></div>
     </div>
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-book"/></svg></span><span class="panel-title">Running Key → One-Time Pad</span></div>
       <div class="panel-body"><p>The running key cipher is one step from the one-time pad. The difference: a book passage is not random. If the source text has linguistic structure, that structure leaks into the ciphertext and enables statistical attacks.</p></div>
     </div>
     <div class="panel">
-      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-key"/></svg></span><span class="panel-title">Key Length = Security</span></div>
+      <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-key"/></svg></span><span class="panel-title">Keys, Periods and Usage Limits</span></div>
       <div class="panel-body"><p>The Vigenère lesson: short repeating keys are fatal. Modern systems can reuse a suitably strong key for multiple messages, but must respect each scheme’s nonce, counter, and usage limits. Key derivation can separate session keys; it does not automatically guarantee unique key material.</p></div>
     </div>
   </div>

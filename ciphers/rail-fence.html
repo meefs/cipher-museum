@@ -62,7 +62,7 @@
   </div>
   <div class="page-meta">
     <span class="page-num">Exhibit 13 of 172</span>
-    <span class="badge era-19c">19th Century</span>
+    <span class="badge era-19c">Classical Transposition</span>
   </div>
   <h1 class="page-title">Rail Fence Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
@@ -70,7 +70,7 @@
   <p class="exhibit-status-note">Brute force · Trivial keyspace</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Unknown (folk cipher)</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1800s</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Origin not established</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Number of rails (2-10)</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Brute force · Trivial keyspace</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Permutation layers in block ciphers</span></div>
@@ -136,7 +136,7 @@ Read rows: HOL + ELWRD + LO = HOLELWRDLO</pre>
           <text style="font-family:var(--fm,'Cormorant Garamond',serif);font-size:9px;fill:#d4af37;text-anchor:start" x="50" y="150">Read: H-O-L · E-L-W-R-D · L-O → HOLELWRDLO</text>
         </svg>
         <figcaption class="figure-caption">Rail Fence with 3 rails: letters zigzag diagonally, then each rail is read left-to-right</figcaption>
-      </figure><p>The key is simply the number of rails. With only a handful of possible values, any interceptor can try all possibilities in seconds.</p></div>
+      </figure><p>In the version shown, the key is the number of rails and the starting direction is fixed. Trying candidate rail counts is inexpensive for ordinary short examples; whether a candidate can be identified confidently still depends on the text.</p></div>
     </div>
 
     <div class="panel">
@@ -150,7 +150,7 @@ Read rows: HOL + ELWRD + LO = HOLELWRDLO</pre>
         <table class="cipher-table">
           <thead><tr><th>Concept from Rail Fence Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Positional rearrangement</td><td>AES ShiftRows: cyclic shift of row positions for diffusion</td></tr>
-<tr><td>Read-by-row output</td><td>Bit permutation layers in DES and many stream ciphers</td></tr>
+<tr><td>Read-by-row output</td><td>Compare position permutations in other cipher constructions</td></tr>
 <tr><td>Tiny key space (few rails)</td><td>AES: 2¹²⁸ key possibilities — exhaustive search is computationally infeasible</td></tr></tbody>
         </table>
       </div>
@@ -167,10 +167,10 @@ Read rows: HOL + ELWRD + LO = HOLELWRDLO</pre>
         <table class="cipher-table">
           <tbody>
             <tr><td>Exhibit</td><td>13 of 172</td></tr>
-            <tr><td>Era</td><td>19th Century</td></tr>
+            <tr><td>Era</td><td>Classical Transposition</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
             <tr><td>Inventor</td><td>Unknown (folk cipher)</td></tr>
-            <tr><td>Year</td><td>~1800s</td></tr>
+            <tr><td>Year</td><td>Origin not established</td></tr>
             <tr><td>Key Type</td><td>Number of rails (2-10)</td></tr>
             <tr><td>Broken By</td><td>Brute force · Trivial keyspace</td></tr>
           </tbody>

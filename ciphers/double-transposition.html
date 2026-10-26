@@ -66,11 +66,11 @@
   </div>
   <h1 class="page-title">Double Transposition</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">Two columnar transpositions — the permutation space becomes astronomical</p>
+  <p class="page-tagline">Two columnar transpositions compose two position permutations</p>
   <p class="exhibit-status-note">Anagramming · Hill climbing (difficult)</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">German Military Intelligence</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1914</span></div>
+    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">No single inventor established here</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Documented military use in the First World War</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Two columnar keywords</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Anagramming · Hill climbing (difficult)</span></div>
     <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Multiple cipher rounds</span></div>
@@ -84,12 +84,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Double transposition dramatically multiplied the keyspace of columnar transposition and was used extensively by military forces in both World Wars. It remains one of the hardest classical ciphers to crack automatically, even with modern computers.</p>
+      <p>Double transposition can make reconstruction substantially harder than one pass. Its security still depends on message length, column widths, key selection, padding and available related traffic. A count of key pairs is not a measured security level.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The German military recognized that a single columnar transposition was breakable and responded with the obvious solution: do it twice with different keys. The combined permutation creates a dramatically larger effective keyspace. Messages encrypted with double transposition were used extensively in WWI and remained in limited military use through WWII.</p><p style="margin-top:1rem;">Even modern computer attacks struggle with double transposition when the ciphertext is short and the key lengths are unknown. It remains one of the hardest classical ciphers to crack automatically.</p></div>
+      <div class="panel-body"><p>German forces used double transposition during the First World War, and related systems appeared in later military and agent communications. This operational history does not establish the German military as the original inventor. Applying two transpositions creates another permutation of the same letters; their frequencies remain unchanged.</p><p style="margin-top:1rem;">Computer attacks can exploit language scores and structural constraints. Short ciphertexts or unknown dimensions may make a particular attack difficult or ambiguous, while other instances are recoverable. Comparisons should state the keys, text length, search budget and success criterion.</p></div>
     </div>
 
     <div class="panel">
@@ -148,13 +148,13 @@ this is not a proof of k1! × k2! distinct ciphertexts.</pre>
           <text class="dt-lbl" x="230" y="160">Final ciphertext:</text>
           <text style="font-family:'JetBrains Mono',monospace;font-size:14px;fill:#d4af37;text-anchor:middle" x="230" y="180">ESL EPN DN OHW</text>
         </svg>
-        <figcaption class="figure-caption">Double transposition: two successive column reorderings with different keys — dramatically stronger than either alone</figcaption>
-      </figure><p>A 7-letter key gives 5,040 possible column orders. Two such keys give ~25 million combinations — far beyond manual brute force.</p></div>
+        <figcaption class="figure-caption">Double transposition: two successive column reorderings with different keys — the result depends on both keys and the message layout</figcaption>
+      </figure><p>A 7-letter key gives 5,040 possible column orders. Two such keys give 25,401,600 ordered key pairs. Structured cryptanalysis need not enumerate them all.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Hill Climbing / Simulated Annealing</div><div class="attack-diff">Complexity: Hard — especially on short ciphertext</div><p class="attack-desc">Modern solvers use hill climbing: start with random keys, score the decryption using English n-gram statistics, mutate the keys, and keep improvements. For double transposition with unknown key lengths, this requires millions of iterations and can fail on short messages where statistical signals are weak.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Hill Climbing / Simulated Annealing</div><div class="attack-diff">Complexity: Hard — especially on short ciphertext</div><p class="attack-desc">Heuristic solvers can search candidate keys using language scores, moves such as swaps, and repeated restarts. Results depend on the implementation and instance. No universal number of iterations or guaranteed recovery time follows from the cipher name alone.</p></div></div>
     </div>
 
     <div class="panel">
@@ -182,8 +182,8 @@ this is not a proof of k1! × k2! distinct ciphertexts.</pre>
             <tr><td>Exhibit</td><td>15 of 172</td></tr>
             <tr><td>Era</td><td>WWI · Germany</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
-            <tr><td>Inventor</td><td>German Military Intelligence</td></tr>
-            <tr><td>Year</td><td>~1914</td></tr>
+            <tr><td>Inventor</td><td>No single inventor established here</td></tr>
+            <tr><td>Year</td><td>Documented military use in the First World War</td></tr>
             <tr><td>Key Type</td><td>Two columnar keywords</td></tr>
             <tr><td>Broken By</td><td>Anagramming · Hill climbing (difficult)</td></tr>
           </tbody>
@@ -194,6 +194,8 @@ this is not a proof of k1! × k2! distinct ciphertexts.</pre>
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), discussion of First World War transposition practice. George Lasry, <em>A Methodology for the Cryptanalysis of Classical Ciphers with Search Metaheuristics</em> (2018), treats attacks as experiments with defined instances and evaluation criteria.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

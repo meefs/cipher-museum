@@ -182,7 +182,7 @@
       "modernLesson": "Security depends on design quality, key management, and implementation."
     },
     "arnold-andre": {
-      "name": "Arnold–André Book Cipher Blackstone’s Commentaries · 1779–1780",
+      "name": "Arnold–André Book Cipher Book codes · 1779–1780",
       "hall": "V",
       "era": "American Revolution · 1779–1780",
       "family": "Military and Field Ciphers",
@@ -440,7 +440,7 @@
       "keyIdea": "The European Black Chambers (cabinets noirs) were government departments that intercepted, deciphered, and resealed diplomatic mail from the 16th through 19th centuries — proto-signals-intelligence agencies.",
       "trust": null,
       "securityFailure": null,
-      "modernLesson": "Signals intelligence is as old as the written word"
+      "modernLesson": "Postal interception provides an earlier comparison for communications intelligence"
     },
     "caesar": {
       "name": "Caesar Cipher",
@@ -581,7 +581,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Frequency analysis · Anagramming",
-      "modernLesson": "Column-mixing in AES MixColumns"
+      "modernLesson": "Compare positional permutation with AES ShiftRows"
     },
     "commercial-codebooks": {
       "name": "Commercial Telegraph Codebooks ABC, Bentley’s, Lieber’s · 1870s–1930s",
@@ -945,7 +945,7 @@
     "fractionated-morse": {
       "name": "Fractionated Morse Cipher",
       "hall": "IV",
-      "era": "19th Century",
+      "era": "Classical Puzzle Cipher",
       "family": "Transposition",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
@@ -957,12 +957,12 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Structural analysis of Morse patterns",
-      "modernLesson": "Irregular encoding for security"
+      "modernLesson": "Encoding structure remains relevant to cryptanalysis"
     },
     "freemason-pigpen": {
       "name": "Freemason Pigpen Tradition",
       "hall": "XIII",
-      "era": "Early modern Europe · 17th–19th c.",
+      "era": "Masonic inscriptions and later puzzle traditions",
       "family": "Ciphers in Culture",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
@@ -1235,7 +1235,7 @@
       "keyIdea": "Auguste Kerckhoffs's 1883 principle — 'A cipher should be secure even if everything about the system, except the key, is public knowledge' — is the bedrock of modern cryptographic design.",
       "trust": null,
       "securityFailure": null,
-      "modernLesson": "Open design allows public scrutiny that defeats hidden flaws"
+      "modernLesson": "Open design enables scrutiny; it does not guarantee freedom from flaws"
     },
     "kl-7": {
       "name": "KL-7 ADONIS NATO eight-rotor machine · 1952",
@@ -1628,7 +1628,7 @@
         "description": "Obsolete or historical system; notes distinguish cryptanalysis from capture or other operational compromise."
       },
       "securityFailure": "Weak (concealment, not encryption)",
-      "modernLesson": "A hidden message that nobody looks for is, briefly, secure"
+      "modernLesson": "Concealment does not provide encryption or authentication"
     },
     "one-time-pad": {
       "name": "One-Time Pad",
@@ -1692,7 +1692,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Symbol frequency analysis · Pattern recognition",
-      "modernLesson": "Visual encoding as cryptography"
+      "modernLesson": "Symbols alone do not strengthen a substitution"
     },
     "playfair": {
       "name": "Playfair Cipher",
@@ -1726,7 +1726,7 @@
         "description": "Cryptographically broken — historically important but unsafe to use today."
       },
       "securityFailure": "Frequency analysis",
-      "modernLesson": "Coordinate encoding → Bit-slicing in AES"
+      "modernLesson": "Coordinate encoding and later fractionation"
     },
     "porta": {
       "name": "Porta Cipher",
@@ -1765,7 +1765,7 @@
     "rail-fence": {
       "name": "Rail Fence Cipher",
       "hall": "IV",
-      "era": "19th Century",
+      "era": "Classical Transposition",
       "family": "Transposition",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",
@@ -2208,7 +2208,7 @@
     "two-square": {
       "name": "Two-Square Cipher",
       "hall": "II",
-      "era": "Late 19th Century · ~1902",
+      "era": "Classical Digraph Cipher",
       "family": "Substitution",
       "region": "Global",
       "usedBy": "See the exhibit for historical participants and source evidence",

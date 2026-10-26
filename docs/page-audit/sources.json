@@ -42,7 +42,13 @@
       "Chapter 2 opening: Khnumhotep inscription, unusual writing versus secrecy",
       "Chapter 7: Davis dictionary example 146.L.20 and Confederate naval dictionary arrangements",
       "Chapter 22: commercial codeword formats, tariff changes and Bentley 1906",
-      "Chapter 23: Hammer’s interpretation of Beale statistical tests"
+      "Chapter 23: Hammer’s interpretation of Beale statistical tests",
+      "Chapter5: Arnold correspondence changed from Blackstone to dictionary schemes; no reference-book capture established.",
+      "Chapter21, Heterogeneous Impulses: Leeson1794pigpen inscription and Hammer’s Beale interpretation. Earlier working notes misassigned this topic toChapter23; corrected.",
+      "Russian cryptography discussion: Nihilist authorship qualified as possible; additive coordinates versus other namesakes.",
+      "FirstWorldWarFrance discussion: turninggrilles late1916–early1917 distinct fromCardanofixedgrille.",
+      "Chapter8: Kerckhoffs1883publication and operational design conditions.",
+      "Chapter5closing: June1844diplomaticinterception cessation versusOctoberDecypheringBranchdissolution; Austria1848."
     ],
     "scope": "Historical secondary account, compared with primary records where available. Converted PDF pagination differs from printed edition; chapter references preferred in visible credits. Its old priority and lineage claims are not adopted without qualification."
   },
@@ -285,5 +291,157 @@
       "PDF p.13 introduction and p.18 historical attack account"
     ],
     "scope": "Four analysts and particular 2h41 test; no universal attack-time guarantee."
+  },
+  "CLARKE-GCHQ": {
+    "title": "Joan Clarke",
+    "authors": [
+      "GCHQ"
+    ],
+    "public_source": "https://www.gchq.gov.uk/information/joan-clarke",
+    "scope": "Read full biographical text: Hut 8, Banburismus, 1941 engagement and 1962 return. Do not infer an uninterrupted career from this short account."
+  },
+  "CLARKE-GAZETTE-1946": {
+    "title": "Supplement to The London Gazette, 9 January 1946, p. 290",
+    "authors": [
+      "The London Gazette"
+    ],
+    "public_source": "https://www.thegazette.co.uk/London/issue/37412/supplement/290/data.pdf",
+    "scope": "Read the dated page and Joan Elisabeth Lowther Clarke entry; resolves 1946 versus repeated 1947 claims."
+  },
+  "CLARKE-ENGLISH-HERITAGE": {
+    "title": "Joan Clarke",
+    "authors": [
+      "English Heritage"
+    ],
+    "public_source": "https://www.english-heritage.org.uk/visit/blue-plaques/joan-clarke/",
+    "scope": "Read career and post-war sections: deputy September1944, MBE1946, formal retirement1977 and later clerical work ending1982. Its account questions whether she formally left in1952; do not overstate that point."
+  },
+  "COCKS-RSAC": {
+    "title": "Clifford Cocks — speaker biography",
+    "authors": [
+      "RSA Conference"
+    ],
+    "public_source": "https://www.rsaconference.com/experts/clifford-cocks",
+    "scope": "Read biography: Companion of the Order of the Bath in2008, FRS2015; corrects CMG attribution."
+  },
+  "IEEE-GCHQ-MILESTONE": {
+    "title": "Invention of Public-key Cryptography, 1969–1975",
+    "authors": [
+      "IEEE / Engineering and Technology History Wiki"
+    ],
+    "public_source": "https://ethw.org/Milestones:Invention_of_Public-key_Cryptography,_1969_-_1975",
+    "scope": "Read milestone and historical account, especially1973/1974 work and1997 disclosure. Do not adopt sweeping claims about all prior encryption or turn a proposal into operational deployment."
+  },
+  "TNMOC-TUNNY": {
+    "title": "Tunny and Heath Robinson",
+    "authors": [
+      "The National Museum of Computing"
+    ],
+    "public_source": "https://www.tnmoc.org/tunny-heath-robinson",
+    "scope": "Read Tunny, Heath Robinson, Tiltman Break, and Testery/Newmanry sections. Does not support calling Heath Robinson relay-only. The site’s prose wheel-position count is inconsistent; product of12listedlengths independently gives16033955073056318658."
+  },
+  "TUTTE-GCHQ": {
+    "title": "William Thomas Bill Tutte",
+    "authors": [
+      "GCHQ"
+    ],
+    "public_source": "https://www.gchq.gov.uk/person/bill-tutte",
+    "scope": "Read biography, confirming recruitment1941 and deathKitchener2002. Source contains a questionable Waterloo appointment year, not adopted."
+  },
+  "BP-EARLY-DAYS": {
+    "title": "E97 — Early Days",
+    "authors": [
+      "Bletchley Park"
+    ],
+    "public_source": "https://audioboom.com/posts/7391959-e97-early-days",
+    "scope": "Read episode description about2August1939move order andAugustarrival; did not listen to full audio."
+  },
+  "BP-COLLECTION": {
+    "title": "Bletchley Park: Home of the Codebreakers",
+    "authors": [
+      "Bletchley Park"
+    ],
+    "public_source": "https://artsandculture.google.com/story/bletchley-park-home-of-the-codebreakers-bletchley-park/7gUxRIPFAxsA8A",
+    "scope": "Read opening history and working-life account. About10000includesassociatedoutstations. Counterfactual war-shortening estimates are not measured outcomes."
+  },
+  "KNOX-GCHQ": {
+    "title": "Alfred Dillwyn Dilly Knox",
+    "authors": [
+      "GCHQ"
+    ],
+    "public_source": "https://www.gchq.gov.uk/person/dilly-knox",
+    "scope": "Read full biography: rodding, ItalianNavalK1937, firstissuedAbwehrdecrypt25December1941, team and deathFebruary1943."
+  },
+  "PYRY-GCHQ": {
+    "title": "The Pyry Forest Meeting",
+    "authors": [
+      "GCHQ"
+    ],
+    "public_source": "https://www.gchq.gov.uk/information/the-pyry-forest-meeting",
+    "scope": "Read account ofJuly1939Polish-British-Frenchexchange and distinct contributions."
+  },
+  "ROCHEFORT-MEDAL": {
+    "title": "Distinguished Service Medal presentation to Rochefort’s family",
+    "authors": [
+      "Ronald Reagan Presidential Library"
+    ],
+    "public_source": "https://www.reaganlibrary.gov/archives/video/photo-op-president-reagan-presents-distinguished-service-medal-posthumously-captain",
+    "scope": "Read catalogue title and date30May1986, control06270-6T-W256-492a. Did not watch fullvideo. NSAshortbioincorrectlynamesadifferentmedal; do notcopythaterror."
+  },
+  "ACA-FRACTIONATED-MORSE": {
+    "title": "Fractionated Morse",
+    "authors": [
+      "American Cryptogram Association"
+    ],
+    "public_source": "https://www.cryptogram.org/downloads/aca.info/ciphers/FractionatedMorse.pdf",
+    "scope": "Read one-page specification: xletterseparator, xxwordseparator, noxxx,26triples. Browser removeswordspaces, an explicitlylabelleddifference. No inventiondateestablished."
+  },
+  "FBI-HOLLOW-NICKEL": {
+    "title": "Hollow Nickel/Rudolf Abel",
+    "authors": [
+      "Federal Bureau of Investigation"
+    ],
+    "public_source": "https://www.fbi.gov/history/cases-and-criminals/hollow-nickel-rudolph-abel",
+    "scope": "Read discovery, unsuccessful1953–57work, Hayhaneninterviews and3June1957recovery. Does not prove immunity of allVICtraffic to allNSAattacks."
+  },
+  "CTC-NSA": {
+    "title": "The Chinese Telegraph Code",
+    "authors": [
+      "NSA"
+    ],
+    "public_source": "https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/history-today-articles/02%202018/15FEB2018%20The%20Chinese%20Telegraph%20Code.pdf",
+    "scope": "Read bothpages: Viguier1873additiondigitwisemod10,4149+5555=9694withoutcarries. Browsermod10000withcarriesisadifferentteachingmodel. Do notinferuniformrandompadsfromspeculationaboutkeygeneration."
+  },
+  "HK-IDENTITY-PARTICULARS": {
+    "title": "Identity Cards — certificate versus smart-card particulars",
+    "authors": [
+      "Hong Kong Immigration Department"
+    ],
+    "public_source": "https://www.immd.gov.hk/eng/faq/faq_hkic.html",
+    "scope": "Read namedatafieldincludingChinesecommercialcodeifany. This doesnotestablishallmainlandpassportorTaiwaneseuses."
+  },
+  "MORSE-HOUSE": {
+    "title": "The Capitol’s First Official Telegraph",
+    "authors": [
+      "US House of Representatives"
+    ],
+    "public_source": "https://history.house.gov/HistoricalHighlight/Detail/35992",
+    "scope": "Read eventhistorydistinguishingFebruary1838demonstrationfrom24May1844Washington–Baltimoreevent."
+  },
+  "KAEDING-2020": {
+    "title": "Automated ciphertext-only attack on the Wheatstone Cryptograph and related devices",
+    "authors": [
+      "Thomas Kaeding"
+    ],
+    "public_source": "https://eprint.iacr.org/2020/1492",
+    "scope": "Read abstract and metadataonly; fullPDFblocked403. Submitted2020,revised2022. Abstractsupportsdecompositionandhillclimbingforcipher-clockfamily; doesnotindependentlyvalidatethemuseum’spreciseWadsworthmodel."
+  },
+  "NIST-AES-DEVELOPMENT": {
+    "title": "AES Development",
+    "authors": [
+      "NIST"
+    ],
+    "public_source": "https://csrc.nist.gov/Projects/cryptographic-standards-and-guidelines/Archived-Crypto-Projects/AES-Development",
+    "scope": "Read developmentchronology:1997start,2October2000selection,November2001FIPS197. Distinguishselectionfromstandardpublication."
   }
 }

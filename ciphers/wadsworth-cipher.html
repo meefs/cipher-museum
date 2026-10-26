@@ -65,7 +65,7 @@
   </div>
   <h1 class="page-title">Wadsworth Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">Thirty-three teeth against twenty-six. The mismatch was the whole idea — and it made this the better machine that history forgot.</p>
+  <p class="page-tagline">Thirty-three positions against twenty-six: unequal gearing creates message-dependent movement.</p>
   <p class="exhibit-status-note">Ciphertext-only stochastic hill climbing (2020)</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Colonel Decius Wadsworth, U.S. Army Ordnance Corps</span></div>
@@ -208,7 +208,7 @@ To encipher one letter:
             <tr><td>K</td><td>15</td><td>6</td><td>B</td></tr>
           </tbody>
         </table>
-        <p style="margin-top:1rem;">Ciphertext: <code>BG8U4B</code>. Look at the two <em>T</em>s — <code>G</code> and <code>8</code>. Look at the two <em>A</em>s — <code>B</code> and <code>U</code>. Frequency analysis has nothing to count.</p>
+        <p style="margin-top:1rem;">Ciphertext: <code>BG8U4B</code>. Look at the two <em>T</em>s — <code>G</code> and <code>8</code>. Look at the two <em>A</em>s — <code>B</code> and <code>U</code>. A single plaintext letter need not have one fixed ciphertext equivalent; statistical structure still exists.</p>
         <p style="margin-top:1rem;">Note also the honest wrinkle: the final <em>K</em> also lands on <code>B</code>, colliding with the first <em>A</em>. The 33-symbol cycle applies to consecutive repetitions of a letter, not arbitrary occurrences throughout a message — different letters may share a ciphertext symbol. And because one turn moves the outer disk by between 1 and 26 teeth, seven of its thirty-three positions are out of reach from wherever it currently stands — a different seven at every step.</p>
         <p style="margin-top:1rem;">Feed the letter <em>A</em> to the device forty times and, after the first, the outer disk advances twenty-six positions every time — a repeated letter always costs a full revolution of the inner disk. Because 26 and 33 are coprime, those advances walk every one of the thirty-three outer symbols before the sequence repeats — on the thirty-fourth <em>A</em>, not before. The disks themselves only return to their common starting alignment after 858 teeth, the least common multiple of 26 and 33.</p>
       </div>
@@ -233,7 +233,7 @@ To encipher one letter:
           <thead><tr><th>Concept from Wadsworth's device</th><th>Modern evolution</th></tr></thead>
           <tbody>
             <tr><td>Coprime disk sizes stretch the period to their least common multiple</td><td>Coprime LFSR lengths in stream-cipher combiners; the same trick, and the same insufficiency on its own</td></tr>
-            <tr><td>The keystream advances on its own, independent of what it encrypts</td><td>Synchronous stream ciphers: keystream generated from key and position, never from plaintext</td></tr>
+            <tr><td>The model’s movement depends on the next plaintext letter</td><td>Compare with synchronous stream ciphers, whose keystream generation is independent of plaintext</td></tr>
             <tr><td>Structure that factors into stream-then-substitution</td><td>Divide-and-conquer cryptanalysis: attack the components separately rather than the composition</td></tr>
             <tr><td>Long period, small secret</td><td>Period is not entropy — security is bounded by keyspace, not by how long the output takes to repeat</td></tr>
           </tbody>
@@ -284,8 +284,7 @@ To encipher one letter:
     <div class="panel" style="margin-top:1.25rem;">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-book"/></svg></span><span class="panel-title">Sources</span></div>
       <div class="panel-body">
-        <p style="font-size:.9rem;line-height:1.8;">Every historical claim on this page traces
-        to one of these four.</p>
+        <p style="font-size:.9rem;line-height:1.8;">References distinguish archival observations, later historical interpretation and cryptanalytic research.</p>
         <ol style="font-size:.9rem;line-height:1.8;padding-left:1.1rem;margin:.6rem 0 0;">
           <li style="margin-bottom:.8rem;">
             Louis Kruh, "The Mystery of Colonel Decius Wadsworth's Cipher Device",

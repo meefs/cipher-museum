@@ -62,18 +62,18 @@
   </div>
   <div class="page-meta">
     <span class="page-num">Exhibit 18 of 172</span>
-    <span class="badge era-19c">19th Century</span>
+    <span class="badge era-19c">Classical Puzzle Cipher</span>
   </div>
   <h1 class="page-title">Fractionated Morse Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--broken" href="../museum-map.html#trust-labels" title="Cryptographically broken — historically important but unsafe to use today." aria-label="Trust label: Broken. Cryptographically broken — historically important but unsafe to use today."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg><span class="trust-label__text">Broken</span></a></div>
-  <p class="page-tagline">Morse code introduces irregular structure — frequency analysis struggles</p>
+  <p class="page-tagline">A keyed substitution of Morse triples crosses plaintext-letter boundaries</p>
   <p class="exhibit-status-note">Structural analysis of Morse patterns</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Unknown</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1880s</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Date not established here</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Substitution alphabet for Morse triples</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Structural analysis of Morse patterns</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Irregular encoding for security</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Encoding structure remains relevant to cryptanalysis</span></div>
   </div>
 </div>
 
@@ -84,12 +84,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>The Fractionated Morse cipher exploits Morse code’s variable-length encoding to destroy the regular letter-by-letter structure that frequency analysis relies on — an early example of using data representation itself as a cryptographic defense.</p>
+      <p>Fractionated Morse changes the units being substituted: each ciphertext letter represents a triple drawn from dots, dashes and separators. Boundaries need not coincide with plaintext letters, but Morse and language structure still constrain the result.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>The Fractionated Morse cipher exploits Morse code's variable-length encoding as a cryptographic feature. Because different letters produce different numbers of dots and dashes, converting plaintext to Morse before encryption destroys the regular letter-by-letter structure that frequency analysis relies on.</p></div>
+      <div class="panel-body"><p>The American Cryptogram Association specifies one separator between letters and two between words. Three consecutive separators are excluded, leaving 26 of the 27 possible triples for a keyed alphabet. The browser demo simplifies this convention by removing spaces and punctuation; its decoded output is letters only, with trailing separators used for padding.</p></div>
     </div>
 
     <div class="panel">
@@ -113,7 +113,7 @@ Each triple → substituted letter</pre>
     <rect x="34" y="0" width="28" height="18" fill="rgba(201,168,76,.1)" stroke="rgba(201,168,76,.25)" stroke-width=".5" rx="2"/><text x="38" y="13" font-size="8" fill="#C9A84C">·x·</text>
     <rect x="68" y="0" width="28" height="18" fill="rgba(201,168,76,.1)" stroke="rgba(201,168,76,.25)" stroke-width=".5" rx="2"/><text x="72" y="13" font-size="8" fill="#C9A84C">x·–</text>
     <rect x="102" y="0" width="28" height="18" fill="rgba(201,168,76,.1)" stroke="rgba(201,168,76,.25)" stroke-width=".5" rx="2"/><text x="106" y="13" font-size="8" fill="#C9A84C">··x</text>
-    <text x="140" y="13" font-size="9" fill="#706878">... (27 possible triples)</text>
+    <text x="140" y="13" font-size="9" fill="#706878">... (26 used triples; xxx excluded)</text>
   </g>
   <!-- Step 3 -->
   <rect x="5" y="106" width="370" height="35" fill="rgba(90,200,160,.06)" stroke="rgba(90,200,160,.15)" stroke-width=".5"/>
@@ -138,7 +138,7 @@ Each triple → substituted letter</pre>
           <thead><tr><th>Concept from Fractionated Morse Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Variable-length encoding</td><td>Huffman coding: common values get shorter codes — used in data compression</td></tr>
 <tr><td>Symbol grouping before substitution</td><td>Block cipher modes: plaintext is processed in fixed-size chunks</td></tr>
-<tr><td>Irregular structure as security</td><td>Modern cipher padding: irregular padding is a vulnerability, not a feature</td></tr></tbody>
+<tr><td>Irregular structure as security</td><td>Encoding and padding do not themselves supply confidentiality or authentication</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -154,10 +154,10 @@ Each triple → substituted letter</pre>
         <table class="cipher-table">
           <tbody>
             <tr><td>Exhibit</td><td>18 of 172</td></tr>
-            <tr><td>Era</td><td>19th Century</td></tr>
+            <tr><td>Era</td><td>Classical Puzzle Cipher</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
             <tr><td>Inventor</td><td>Unknown</td></tr>
-            <tr><td>Year</td><td>~1880s</td></tr>
+            <tr><td>Year</td><td>Date not established here</td></tr>
             <tr><td>Key Type</td><td>Substitution alphabet for Morse triples</td></tr>
             <tr><td>Broken By</td><td>Structural analysis of Morse patterns</td></tr>
           </tbody>
@@ -168,6 +168,8 @@ Each triple → substituted letter</pre>
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>American Cryptogram Association, <a href="https://www.cryptogram.org/downloads/aca.info/ciphers/FractionatedMorse.pdf">“Fractionated Morse”</a>, for the 26-triple convention. This specification does not establish the previously assigned nineteenth-century invention date.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">

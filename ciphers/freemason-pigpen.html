@@ -57,15 +57,15 @@
   </div>
   <div class="page-meta">
     <span class="page-num">Hall XIII · Culture</span>
-    <span class="badge era-modern">Early modern Europe · 17th–19th c.</span>
+    <span class="badge era-modern">Masonic inscriptions and later puzzle traditions</span>
   </div>
   <h1 class="page-title">Freemason Pigpen Tradition</h1>
-  <p class="page-tagline">The geometric pigpen alphabet — fragments of grids and X-shapes — used by Freemasons, Rosicrucians, and the Hellfire Club from the 17th century onwards as a fraternal cipher and ritual marker.</p>
+  <p class="page-tagline">Geometric letter alphabets in Masonic inscriptions and recreational cryptography; conventions vary.</p>
   <p class="exhibit-status-note">Fraternal symbol-substitution alphabet</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Region</span><span class="fact-value">England, Scotland, France, Germany, USA</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Earliest masonic uses ~1730s</span></div>
-    <div class="fact"><span class="fact-label">Best-known users</span><span class="fact-value">Speculative Freemasonry, 1730–present</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Documented example: James Leeson’s gravestone, 1794</span></div>
+    <div class="fact"><span class="fact-label">Best-known users</span><span class="fact-value">Masonic and recreational traditions</span></div>
     <div class="fact"><span class="fact-label">Track</span><span class="fact-value">B (mason-style decoder)</span></div>
   </div>
 </div>
@@ -102,7 +102,7 @@
           if (!d) { lines.push('  ' + c + ' \u2192 (not in pigpen alphabet)'); }
           else    { lines.push('  ' + c + ' \u2192 ' + d); }
         }
-        out.textContent = lines.join('\n') + '\n\n(For drawn symbols, see the full Pigpen Cipher exhibit.)';
+        out.textContent = lines.join('\n') + '\n\n(The full Pigpen exhibit draws a different S–Z variant; its alphabet is not interchangeable with this four-wedge layout.)';
       };
       document.addEventListener('DOMContentLoaded', function () { window.encode(); });
     })();
@@ -114,22 +114,22 @@
 
     <div class="cipher-significance">
       <h3>Why This Matters</h3>
-      <p>Pigpen — also called the Masonic, Rosicrucian, or Tic-Tac-Toe cipher — encodes each letter of the alphabet as a fragment of one of two grids and two X-shapes. The position of the letter in the grid determines the shape of its symbol; a dot inside the symbol distinguishes the second letter assigned to that cell. From the early 18th century the cipher became a recognised fraternal-society marker: Freemasons used it in ritual papers, on gravestones, and in correspondence between lodges. Its survival to the present day owes more to Boy Scout handbooks and puzzle books than to actual secrecy — the cipher is a pure monoalphabetic substitution and breaks instantly to frequency analysis.</p>
+      <p>Pigpen represents letters with parts of grids and X-shaped figures, often using dots to distinguish a second set. It appears in fraternal inscriptions and in recreational puzzles. A symbol alphabet can convey affiliation as well as obscure a message; those purposes should be assessed for each object.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Legend attributes grid-based symbol substitution to the Knights Templar in the 13th century, though no medieval documentation survives, but the recognisable modern pigpen layout dates from the 1730s, when speculative Freemasonry in London standardised it for in-lodge correspondence. The Rosicrucian Order adopted variants. The Hellfire Club used a grid-and-dot variant in the 1760s. By the 19th century pigpen had appeared in <em>Scientific American</em>, the <em>Boy's Own Paper</em>, and dozens of children's books — completing its journey from secret society to schoolyard pastime. Confederate generals reportedly used variants in the American Civil War, and pigpen-style epitaphs survive on Masonic graves from Boston to Edinburgh.</p></div>
+      <div class="panel-body"><p>Kahn discusses James Leeson’s 1794 gravestone in New York as a documented Masonic example. Claims of a single London standardisation in the 1730s, a medieval Templar origin or specific Hellfire Club use are not established by the evidence cited here. The widget shows a common modern layout, not a transcription of that gravestone.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">Technical Notes</span></div>
-      <div class="panel-body"><p>Pigpen is cryptographically identical to any other monoalphabetic substitution: 26 plaintext letters mapped one-to-one to 26 distinct symbols. Its security is purely visual obscurity. Once the symbol-set is recognised, the cipher breaks to frequency analysis exactly as easily as a Caesar substitution. Its real cultural function was never secrecy — it was <em>recognition</em>: a pigpen-encoded inscription on a tombstone or document signalled membership in the order to other initiates while looking decorative to outsiders.</p></div>
+      <div class="panel-body"><p>With a secret alphabet, pigpen behaves as monoalphabetic substitution and retains letter and word patterns. With a known fixed alphabet, it is immediately reversible by lookup. Recognising the style does not always identify the exact assignment, and short inscriptions need not yield to frequency analysis alone.</p></div>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-lens"/></svg></span><span class="panel-title">Modern Echo</span></div>
-      <div class="panel-body"><p>Pigpen lives on as the canonical 'fun cipher' for children, scout troops, and recreational cryptographers. It is the most-recognised symbol cipher in popular culture — appearing in <em>Sherlock</em> (BBC, 2010), <em>National Treasure</em> (2004), countless escape rooms, and an endless stream of internet puzzles. The Cipher Museum maintains a fully interactive <a href="pigpen.html">Pigpen Cipher</a> exhibit for hands-on encoding.</p></div>
+      <div class="panel-body"><p>Pigpen-style alphabets are useful recreational exercises because their encoding rule can be drawn and learned quickly. The museum’s <a href="pigpen.html">Pigpen Cipher exhibit</a> uses text stand-ins and a separately labelled drawn variant. Neither widget establishes that a specific film, lodge or historical individual used that exact alphabet.</p></div>
     </div>
 
   </div>
@@ -143,7 +143,7 @@
           <tbody>
             <tr><td>Hall</td><td>Hall XIII · Culture</td></tr>
             <tr><td>Region</td><td>England, Scotland, France, Germany, USA</td></tr>
-            <tr><td>Era</td><td>Early modern Europe · 17th–19th c.</td></tr>
+            <tr><td>Era</td><td>Masonic inscriptions and later puzzle traditions</td></tr>
             <tr><td>Discipline</td><td>Geometric monoalphabetic substitution</td></tr>
             <tr><td>Track</td><td>B (mason-style decoder)</td></tr>
             <tr><td>Modern echo</td><td>Recreational ciphers · cipher tattoos · Boy Scout activities</td></tr>
@@ -153,6 +153,8 @@
     </div>
   </div>
 </div>
+
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), Chapter 21, “Heterogeneous Impulses,” on Masonic symbol writing and Leeson’s gravestone. Historical objects and modern puzzle variants need separate alphabet identification.</p></div></section>
 
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>

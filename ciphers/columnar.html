@@ -71,11 +71,11 @@
   <p class="page-tagline">Write in rows, read by columns — letter frequencies preserved, positions scrambled</p>
   <p class="exhibit-status-note">Frequency analysis · Anagramming</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Various 19th century cryptographers</span></div>
-    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">~1800s</span></div>
+    <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">No single inventor established here</span></div>
+    <div class="fact"><span class="fact-label">Year</span><span class="fact-value">Historical transposition family</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Column-ordering keyword</span></div>
     <div class="fact"><span class="fact-label">Broken By</span><span class="fact-value">Frequency analysis · Anagramming</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Column-mixing in AES MixColumns</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Compare positional permutation with AES ShiftRows</span></div>
   </div>
 </div>
 
@@ -98,12 +98,12 @@
 </div></section>
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Columnar transposition was the workhorse of 19th-century military cryptography — simple enough to perform in the field without equipment, yet resistant enough to casual interception to protect battlefield communications through World War I.</p>
+      <p>Columnar transposition rearranges positions while preserving letter counts. It is a useful way to study the difference between a large number of possible keys and the statistical structure an attacker can exploit.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Columnar transposition became the workhorse of 19th-century military cryptography. Simple enough to perform in the field without equipment, it resists casual interception while remaining fast to encrypt and decrypt. The system was used by various military forces throughout the 1800s and into WWI, often combined with substitution ciphers for added security.</p></div>
+      <div class="panel-body"><p>Columnar systems appear in historical military and recreational cryptography, sometimes combined with other operations. “Columnar transposition” describes a family of writing and reading conventions, not one securely dated nineteenth-century invention. Complete rectangles, incomplete final rows and padding rules produce different attack problems.</p></div>
     </div>
 
     <div class="panel">
@@ -222,7 +222,7 @@ Read col 5(Z): WEEI</pre>
         <table class="cipher-table">
           <thead><tr><th>Concept from Columnar Transposition</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Column reordering</td><td>AES ShiftRows: cyclic shifts within the rows of the byte state</td></tr>
-<tr><td>Grid-based permutation</td><td>Network permutation layers in Feistel ciphers</td></tr>
+<tr><td>Grid-based permutation</td><td>Permutation layers rearrange positions; a Feistel round also combines values</td></tr>
 <tr><td>Keyword-controlled order</td><td>A key can select a permutation; AES key expansion is a different operation</td></tr></tbody>
         </table>
       </div>
@@ -241,8 +241,8 @@ Read col 5(Z): WEEI</pre>
             <tr><td>Exhibit</td><td>14 of 172</td></tr>
             <tr><td>Era</td><td>19th Century</td></tr>
             <tr><td>Trust</td><td><span class="trust-label trust-label--broken trust-label--sm" title="Cryptographically broken — historically important but unsafe to use today.">Broken</span></td></tr>
-            <tr><td>Inventor</td><td>Various 19th century cryptographers</td></tr>
-            <tr><td>Year</td><td>~1800s</td></tr>
+            <tr><td>Inventor</td><td>No single inventor established here</td></tr>
+            <tr><td>Year</td><td>Historical transposition family</td></tr>
             <tr><td>Key Type</td><td>Column-ordering keyword</td></tr>
             <tr><td>Broken By</td><td>Frequency analysis · Anagramming</td></tr>
           </tbody>

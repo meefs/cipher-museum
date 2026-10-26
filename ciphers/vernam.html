@@ -76,7 +76,7 @@
   </div>
   <h1 class="page-title">Vernam Cipher</h1>
   <div class="trust-label-wrap"><a class="trust-label trust-label--secure" href="../museum-map.html#trust-labels" title="Still considered secure when used correctly with modern key handling." aria-label="Trust label: Secure (Modern). Still considered secure when used correctly with modern key handling."><svg class="trust-label__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span class="trust-label__text">Secure (Modern)</span></a></div>
-  <p class="page-tagline">The XOR operation that underpins many modern stream ciphers — developed in 1917 and patented in 1919</p>
+  <p class="page-tagline">Vernam’s teleprinter cipher used binary addition; developed in 1917 and patented in 1919</p>
   <p class="exhibit-status-note">XOR gives perfect secrecy only with an independent, uniformly random secret pad at least as long as the message, used once. No authentication.</p>
   <div class="exhibit-facts">
     <div class="fact"><span class="fact-label">Inventor</span><span class="fact-value">Gilbert Vernam (AT&amp;T)</span></div>
@@ -94,15 +94,15 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Gilbert Vernam’s 1917 XOR-based teleprinter cipher is an early ancestor of modern XOR-based stream encryption. ChaCha20, AES-CTR, and AES-GCM all use the same XOR operation he patented over a century ago.</p>
+      <p>Gilbert Vernam’s 1917 XOR-based teleprinter cipher is an early ancestor of modern XOR-based stream encryption. ChaCha20, AES-CTR, and AES-GCM also combine data with a keystream using XOR; Vernam’s patent concerned a telegraphic system.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span>
         <span class="panel-title">Historical Context</span></div>
       <div class="panel-body">
-        <p>Gilbert Vernam was an AT&amp;T engineer who in 1917 invented an automatic cipher (patented 1919) for teleprinter communications. Messages on punched paper tape were XOR'd with a key tape character by character. When Joseph Mauborgne suggested using a completely random, non-repeating key tape, they had invented the One-Time Pad — though Shannon would not prove its perfection for another 32 years.</p>
-        <p style="margin-top:1rem;">The Vernam cipher is an early ancestor of modern XOR-based stream encryption. ChaCha20, AES-CTR, and AES-GCM all use the XOR operation Vernam patented. The difference is that modern ciphers generate their keystream from a short key and a nonce, rather than requiring a physical tape as long as the message.</p>
+        <p>Gilbert Vernam was an AT&amp;T engineer who in 1917 invented an automatic cipher (patented 1919) for teleprinter communications. Messages on punched paper tape were XOR'd with a key tape character by character. A uniformly random, independent, secret key used only once gives the one-time-pad construction. Vernam’s automatic tape system and the perfect-secrecy conditions are distinct ideas.</p>
+        <p style="margin-top:1rem;">The Vernam cipher is an early ancestor of modern XOR-based stream encryption. ChaCha20, AES-CTR, and AES-GCM also use XOR to combine data and a keystream. The difference is that modern ciphers generate their keystream from a short key and a nonce, rather than requiring a physical tape as long as the message.</p>
       </div>
     </div>
 
@@ -123,12 +123,12 @@ C XOR K = P  (XOR is its own inverse)
 
 When key tape is:
   Random + same length + used once → One-Time Pad (unbreakable)
-  Repeating or non-random          → Vigenère-equivalent (breakable)</pre>
+  Repeating tape → periodic-key weaknesses; a secure pseudorandom generator instead supports computational security</pre>
         <p style="margin-top:1rem;">The elegance of XOR is that applying the same key a second time returns the plaintext: C XOR K = P. There is no separate decryption <em>algorithm</em> — the demo's Decrypt button simply reads the hex bytes back in and XORs them with the key again.</p>
         <div class="callout callout-info">
           <span class="callout-icon">ℹ️</span>
           <div class="callout-body">
-            <p><strong>About this demo:</strong> Plaintext is normalized to the letters A–Z, XORed byte-by-byte with the key, and the ciphertext is displayed as two hexadecimal digits per byte — so Decrypt expects hex input, not letters. Leave the key blank and the demo generates a random pad using the browser's secure random source, appending it to the output as <code>[Key: …]</code>. A key shorter than the message is rejected rather than repeated, and a raw byte key can be supplied as <code>hex:&lt;bytes&gt;</code>.</p>
+            <p><strong>About this demo:</strong> Plaintext is normalized to the letters A–Z, XORed byte-by-byte with the key, and the ciphertext is displayed as two hexadecimal digits per byte — so Decrypt expects hex input, not letters. Leave the key blank and the demo generates a random pad using the browser's secure random source, appending it to the output as <code>[Key: …]</code>. A key shorter than the message is rejected rather than repeated, and a raw byte key can be supplied as <code>hex:&lt;bytes&gt;</code>. The displayed pad is not secret from the browser; this is an educational calculation, not a confidential channel.</p>
           </div>
         </div>
       </div>
@@ -141,12 +141,12 @@ When key tape is:
         <div class="attack-panel">
           <div class="attack-name">Depth Attack (Key Reuse)</div>
           <div class="attack-diff">Complexity: Moderate · When key tapes were reused</div>
-          <p class="attack-desc">When key tapes were reused (common under operational pressure), XOR-ing two ciphertexts cancels the key: C1 ⊕ C2 = P1 ⊕ P2. This reduces to a running-key cipher attack. If the key was non-random (e.g. a text passage), statistical properties of the key language leak through.</p>
+          <p class="attack-desc">For binary encryption, reusing the same keystream gives C1 ⊕ C2 = P1 ⊕ P2. This exposes relations that language guesses or known plaintext may exploit. A biased natural-language key is different from a cryptographically generated pseudorandom keystream: the latter aims for computational security, not perfect secrecy.</p>
         </div>
         <div class="callout callout-danger" style="margin-top:1rem;">
           <span class="callout-icon">⚡</span>
           <div class="callout-body">
-            <p><strong>VENONA:</strong> Soviet operators reused one-time pad key pages under WWII supply pressure. The same depth attack that breaks a reused Vernam tape broke thousands of Soviet intelligence messages — exposing the Rosenbergs and Klaus Fuchs.</p>
+            <p><strong>VENONA:</strong> VENONA exploited reused decimal additive pages. Cancellation is the analogous idea, but its digitwise arithmetic and codebook-recovery problem differed from this binary XOR example.</p>
           </div>
         </div>
       </div>

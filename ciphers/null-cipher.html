@@ -64,11 +64,11 @@
   <p class="page-tagline">Spell the secret with every Nth letter of every Mth word. Trivial when noticed; surprisingly hard to notice.</p>
   <p class="exhibit-status-note">Weak (concealment, not encryption)</p>
   <div class="exhibit-facts">
-    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">Roman & medieval correspondents</span></div>
-    <div class="fact"><span class="fact-label">Notable uses</span><span class="fact-value">Bacon's <em>Advancement of Learning</em>; WWII POW letters; spy classifieds</span></div>
+    <div class="fact"><span class="fact-label">Origin</span><span class="fact-value">No single origin established here</span></div>
+    <div class="fact"><span class="fact-label">Notable uses</span><span class="fact-value">Acrostics and selective-reading concealment</span></div>
     <div class="fact"><span class="fact-label">Key Type</span><span class="fact-value">Position rule — first/last letter, Nth letter, Nth word, …</span></div>
     <div class="fact"><span class="fact-label">Family</span><span class="fact-value">Steganography (concealment cipher)</span></div>
-    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">A hidden message that nobody looks for is, briefly, secure</span></div>
+    <div class="fact"><span class="fact-label">Modern Lesson</span><span class="fact-value">Concealment does not provide encryption or authentication</span></div>
   </div>
 </div>
 
@@ -90,7 +90,7 @@ Hidden : H E L P</pre><p>The demo on this page builds carrier sentences from a d
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-skull"/></svg></span><span class="panel-title">How It Was Broken</span></div>
-      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Suspicion plus the right reading rule</div><div class="attack-diff">Complexity: Trivial once you check</div><p class="attack-desc">Once concealment is suspected, an analyst can try simple selection rules. That can expose a naive construction, but neither success nor a fixed recovery time is guaranteed for every carrier and rule.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Statistical anomaly</div><div class="attack-diff">Complexity: Detectable on long carriers</div><p class="attack-desc">Because the carrier is constrained to spell something, its letter and word-length distributions drift away from natural English. Bletchley-era censors maintained statistical baselines for ordinary correspondence and flagged outliers.</p></div></div>
+      <div class="panel-body"><div class="attack-panel"><div class="attack-name">Suspicion plus the right reading rule</div><div class="attack-diff">Complexity: Trivial once you check</div><p class="attack-desc">Once concealment is suspected, an analyst can try simple selection rules. That can expose a naive construction, but neither success nor a fixed recovery time is guaranteed for every carrier and rule.</p></div><div class="attack-panel" style="margin-top:1rem;"><div class="attack-name">Statistical anomaly</div><div class="attack-diff">Complexity: Detectable on long carriers</div><p class="attack-desc">Constructing a carrier under letter-selection constraints can produce awkward wording or other clues. Detection depends on the writer, carrier, selection rule and available comparison material. This page does not establish a universal statistical signature or a specific Bletchley censoring procedure.</p></div></div>
     </div>
 
     <div class="panel">
@@ -107,11 +107,11 @@ Hidden : H E L P</pre><p>The demo on this page builds carrier sentences from a d
       <div class="panel-body">
         <table class="cipher-table">
           <tbody>
-            <tr><td>Origin</td><td>Roman & medieval correspondents</td></tr>
-            <tr><td>Notable uses</td><td>Bacon's <em>Advancement of Learning</em>; WWII POW letters; spy classifieds</td></tr>
+            <tr><td>Origin</td><td>No single origin established here</td></tr>
+            <tr><td>Notable uses</td><td>Acrostics and selective-reading concealment</td></tr>
             <tr><td>Key Type</td><td>Position rule — first/last letter, Nth letter, Nth word, …</td></tr>
             <tr><td>Family</td><td>Steganography (concealment cipher)</td></tr>
-            <tr><td>Modern Lesson</td><td>A hidden message that nobody looks for is, briefly, secure</td></tr>
+            <tr><td>Modern Lesson</td><td>Concealment does not provide encryption or authentication</td></tr>
           </tbody>
         </table>
       </div>

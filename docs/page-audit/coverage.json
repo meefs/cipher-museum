@@ -136,9 +136,9 @@
       "title": "Arabic Nomenclators (al-Kindi Era) — The Cipher Museum",
       "words": 414,
       "sha256": "35015ad27228d2749da47b6894d286b106ec3ff300ecfe4c2b195ae6564e4366",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Carefulbodyconflictswith polynomial/practicalanylanguage attacklabel, inventorbreakstatus, EuropeanreimportthroughSpain andallmoderncryptanalysis sidebar. KahnPDF149doesnotestablishtransmission. NeedalKinditextdirect."
+      "notes": "Removed polynomial-any-language headline and directEuropeanlineage claim; model versus identifiedhistoricalkey distinction retained. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/argenti.html",
@@ -154,9 +154,9 @@
       "title": "Arnold–André Book Cipher (Blackstone’s Commentaries · 1779–1780) — The Cipher Museum",
       "words": 849,
       "sha256": "1e9554759e526a4812296537c770f881748e97b3b267d3f727ff6b47f0bf27d9",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Sister spy courier episode unsourced. Capturein civilianclothes alone not complete legaldefinition. Historicbookvolume/index convention verifyagainstletters. Carryingkey+ciphertext tablecontradictsbody no keycaptureestablished. Teachingfallbackexplicitgood."
+      "notes": "Read Kahn on successiveBlackstone/dictionary schemes; removed two-volumeconstantkey, inventedcourierandkeycaptureimplications. Modernletterfallback remains labelled. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/atbash.html",
@@ -270,18 +270,18 @@
       "title": "Bill Tutte — The Cipher Museum",
       "words": 1007,
       "sha256": "920e89d38e02073248deeb728943b3a1706a8f2c6437a3b292c225bee5b2d409",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Header2identicalmessages false and soleallwheels overclaim. LorenzdidnotsupersedeEnigma; severalfirstcomputerqualifiersneeded; HeathRobinson mixed electronics notmerelyrelay. Wheelpositionsproductcalculate. Pinpatterns/recoveredkey chronologyTunny source; postwarfoundergraph theoryoverclaim."
+      "notes": "Corrected identical-message claim, Tiltman-to-Tutte chain, Kitchener death location, electronic Robinson counting and specialised Colossus scope. Independently checked12wheelproduct. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/bletchley-park.html",
       "title": "Bletchley Park — The Cipher Museum",
       "words": 523,
       "sha256": "43eee71b5008f87d3a05c99eaf7a3ae3d5592ec2dc9dfd2e4e33261af6c1bb9e",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. LorenzsubsetFishnotseparatethirdbreak. Sep1939startvsAug1939? peak10k/outstationsscopeverify. Knoxdied1943cannotpostwarveteranunrecognizeddecades. BombecomputerandColossus43sidebarneedsqualify, engineerHeathRobinsonnameascodebreakerwrong. Polishcontributionmissing. Hinsleyestimateconditionalnotmeasured."
+      "notes": "August1939arrival, combinedsite/outstationcount, Polishcontribution and Testery/Newmanry distinctions; removed unsupported directsecrecyorder and Knoxpostwarrecognition claim. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/bombe.html",
@@ -306,9 +306,9 @@
       "title": "Cabinet Noir — Black Chambers of Europe — The Cipher Museum",
       "words": 673,
       "sha256": "6cb00e500e4f3566a2db8781372b471b8ceb2aeabb69e2cfd5e9c458d48fd5f6",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Europeeveryletter/everycipher/stillundetected exaggerations. RossignolsfirstprofessionalcontradictsGabrieliPhelippesothers. DirectFrenchCabinetNoirtoBritishtoNSAfalsetransmission.1844abolitionvscontinuedinterceptionrequiresKahnprimary. Toyencodecouldmislead asinstitutioniscipher."
+      "notes": "Removedsingleinstitutionallineage,firstEuropeanprofessionalsandallmailclaims; Réalmont1628 and1844institutions distinguished. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/caesar.html",
@@ -333,9 +333,9 @@
       "title": "Cardano Grille (1550 · steganography by template) — The Cipher Museum",
       "words": 730,
       "sha256": "81d2ccd5cfae96ff11254f638e4f9886d505865c2de794ed3d25b1ff85cc3844",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "C(25,6)=177100matchesroundedcount butdefault7-holekeydiffersandmustnotconflate. Capture affects matchingmaskmessages, notallpast/future regardlesskeys. Noalgorithm, universalcensordetection, directmodernlineage andtraffic-analysisresistance claims overstate. Compareturninggrillehistory caveat."
+      "notes": "Defaultsevenholemask count480700 checked; capturelimitedtosamekey/convention; fixedgrille versus turninggrille and steganography versus confidentiality clarified. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/chaocipher.html",
@@ -360,9 +360,9 @@
       "title": "Chinese Telegraph Code (Standard Telegraph Codebook · 1881) — The Cipher Museum",
       "words": 657,
       "sha256": "91eed4e9bc6e6b3e70f91725ee1d91e9e2b7a85aa59efb29d6584ac62e513468",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Historicalandcurrentidentitydocumentclaimsneedprimaryverification. JN25analogyconflates5digitnoncarryingadditionwith4digitmod10000model. Englishfunctionwordanalogyincorrect; allcountriesIDcarryCCCunsupported. Needexplicittoyandhistoricalevidencelimits."
+      "notes": "Digitwisemod10 historicalexample versusbrowsermod10000withcarries distinguished; HongKongdocumentfield sourcedwithoutallpassportclaim. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/cicada-3301.html",
@@ -389,9 +389,9 @@
       "title": "Columnar Transposition — The Cipher Museum",
       "words": 1148,
       "sha256": "8d82aa96042b0f683109512166a2366bb156a030ac40567e69829deec4d20e4a",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Lasry/Gaines full-title reading is already precise. ZEBRA worked grid/readout matches by inspection. Broad19th-centuryworkhorse/inventor/date claims require historical evidence; advanced implementation and budgets covered by passing existing tests, not fresh historical authentication."
+      "notes": "Removed unsupported single19thcenturyorigin and universaldeployment claims; ShiftRows comparison replacesMixColumns label. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/commercial-codebooks.html",
@@ -508,9 +508,9 @@
       "title": "Dilly Knox — The Cipher Museum",
       "words": 518,
       "sha256": "19bdc89f856e194dbfbb4494c05e4c8309aa2c0619f336180d644a15eb9c9322",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Headerreconstructedcommercialwiringvsbodypurchasedmachine contradictory. Greatestcryptanalystunsourcedranking. Date1934 and deathplace verify. Teamwomencreditgood, mentoringselectionpsychologyunsourced."
+      "notes": "Headline now matches commercial-derived attack versus military-wiring reconstruction distinction; qualified team and mentoring claims. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/dorabella.html",
@@ -535,9 +535,9 @@
       "title": "Double Transposition — The Cipher Museum",
       "words": 520,
       "sha256": "7f8747d20f6dc8a1243e618d0caa51651fbfa394ae1580ec32227083b2a0a7d0",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "MARK/LION sample independently matches grid. Settings count explicitly distinguishes collisions, correctly. German-invention1914priority and universal millions-of-iterations/stronger-than-either claims need correction/source. Lasry provides applicable research; read relevant chapter."
+      "notes": "Separated historicaluse frominvention; key-paircount versus distinctpermutations, instance-dependent searchlimits. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/dunin.html",
@@ -618,27 +618,27 @@
       "title": "Fractionated Morse Cipher — The Cipher Museum",
       "words": 452,
       "sha256": "0a592fec9557bb228b274e458183da84a71e3f5777de4b85bc225b4194dea165",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Triples count27 vs usable26requires explainXXXexclusion andwordspacing. ~1880soriginnotestablishedhere; standardACAattribution mustcheck. Dot/dash mostcommonelements claim conflatesletterswithsymbols; guarantee recoveredmapping needsqualify."
+      "notes": "ACA26usabletriples verified; xxxexcluded; browserdiscardsspacesandpunctuation explicitlydistinguished. Unsupported1880sdate removed. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/freemason-pigpen.html",
       "title": "Freemason Pigpen Tradition — The Cipher Museum",
       "words": 562,
       "sha256": "32ee8cd9aa266f64071f271d074857d81eebefc94aa94d532d0dd0a3e4bcdd69",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. 1730standardizationHellfireClubConfederategeneralsunsupported. Frequencyinstantly/exactlyCaesarfalse vsfixedknownmappinglookup. Neversecrecyoverstatesintent. Sherlock/NationalTreasureactualusagecheck. KahnLeeson1794gravestone providesconcreteevidence."
+      "notes": "1730standardisation,Hellfire andunsupportedmedia claims removed; four-wedgewidget differsfromfullpigpenvariant. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/gchq-trio.html",
       "title": "The GCHQ Trio — Ellis, Cocks, and Williamson — The Cipher Museum",
       "words": 521,
       "sha256": "69137c18d18a0477127c81b57576f1012d80c73f6f28d288ca6f5d0d2c3ea6f4",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Header27yearsappliesEllisnotall, bio1970-73omits1974. Cocks/Williamsonimplemented vsproposed. Section30minutesnot evidencedbody. Universalacknowledgment/counterfactualRSAcitationunsupported. primaryclassifiedpapersandCMGverify."
+      "notes": "Corrected CB versusCMG,1970–1974range, proposal versusimplementation and unsupported universalacknowledgement. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/geheimschreiber.html",
@@ -703,9 +703,9 @@
       "title": "Hill Cipher — The Cipher Museum",
       "words": 715,
       "sha256": "bbcf031f542375addc4b7e1b262790ef6557ace90e336fde78ea3e7691ab228b",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "HAC p.240 and Kahn PDF507 support1929Hill/matrix operation. Known-block examples and invertibility caveat mathematically sound. Priority/direct-AES-influence and mechanical deployment assertions need source. S-boxes prevent linear-algebraic attacks too absolute."
+      "notes": "RemovedunsourceddirectAESinfluence/priorityanddeployment; algebraicattackconditions retained; nonlinearityclaim narrowed. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/histiaeus-tattoo.html",
@@ -759,9 +759,9 @@
       "title": "Joan Clarke — The Cipher Museum",
       "words": 589,
       "sha256": "9ef7425d983a0f3067f414aa16bb4d87c27b1fce8f3754a9a0d729591d1c1f68",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. HeaderdevelopedBanburismuscontradictsTuringbody; continuous1941-45breakscontradictsblackout; MBE1947 likely1946. Uboatsfasterthanconstruction and directcausallossratesrequiresrecords. VerifyGCHQsource."
+      "notes": "Corrected MBE1946 against Gazette, Banburismus practitioner attribution, blackout scope and formal retirement versus later clerical work. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/kahn.html",
@@ -786,9 +786,9 @@
       "title": "Kerckhoffs's Principle — The Cipher Museum",
       "words": 642,
       "sha256": "604db268a1a7a4265b53fde72ed66f56f56f39527435464e84ca8c492b06b6e6",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Obscuritynotsecurity contradictionwithnuancedparagraph; principlepublicscrutinynotguaranteedefeatsflaws.6requirements3keynotentiresystem; 1997-2001fiveyearcalendarlabelavoid. Enigmaviolatedheaderandrelatedcardoverclaim, noallmajoralgorithmsclaim."
+      "notes": "Requirement3appliestokey; publishedscrutiny notguarantee; AESselection2000versusstandard2001. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/kl-7.html",
@@ -943,9 +943,9 @@
       "title": "Morse Code (Telegraphy's universal alphabet · 1840s) — The Cipher Museum",
       "words": 649,
       "sha256": "58f11993bc3b182a0a956bccf39e5417d84cd1f24ffc266d25654fa7ea3a11e5",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. 1844firstmessagewasdemonstrationnotallMorsefirst. Morsewordgaps3/7unitscouldspecify. Frequencyroughnotstrictoptimal. Directionfindingvsoperatorfingerprintdifferent. Almostneverplaincontestedtrafficunsupported. FractionatedMorsesplitscolumnswrongrelatedcard; NavajonotreplacedMorsealphabet. GoldenRecord analogyhistoricalinheritanceunsupported."
+      "notes": "1844eventlabelcorrected; fractionalMorsetriples and Navajospokencodereferences corrected. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/myszkowski.html",
@@ -999,9 +999,9 @@
       "title": "Nihilist Cipher — The Cipher Museum",
       "words": 564,
       "sha256": "7a6a33e05a4778e3a30aebe316b2193a40cd36e75d285dc9492154b0e864a9e4",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "ATTACK/NEMO worked sums33,52,56,63,35,65correct. Repeated numeric KEY COORDINATE vsindividualdigitattack distinction needed. TwoNihilistCiphers ignores separate transpositionfamily. AES roundkey uniqueness, frequencyrandomness andfouroperations claims inaccurate."
+      "notes": "QualifiedRussianinventorship; identifiedNihilisttranspositionasdistinctconstruction; removedfalseuniversalAESsubkeyclaims. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/nomenclator.html",
@@ -1017,18 +1017,18 @@
       "title": "Null Cipher (Concealment by selective reading · ancient → modern) — The Cipher Museum",
       "words": 588,
       "sha256": "ff07a2a6bedf41d5707f87c4e527f59177e460b3c4c0190808e4356e6a793993",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Hiddennobodylooking brieflysecure overclaim; Bletchleycensorstatisticalbaselinesunsupported. Baconbiliteralnotpositionnullsameconstruction. Latin/medieval/Advancementattributionneedsactualsource. HELPinitialscorrect andsyntheticcarrierlabelgood."
+      "notes": "RemovedunsupportedBaconposition-ruleandBletchleycensorclaims; concealmentnotsecurityguarantee. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/one-time-pad.html",
       "title": "One-Time Pad — The Cipher Museum",
       "words": 1206,
       "sha256": "a2eabe7ea4e187e2421907a9ea51355abd9b2e0be64d0f9bfddfe1c5b5fce1e0",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Fixed example mislabeled random/true-source, violating any condition security collapses too absolute, Vernam1917 not automatically OTP, Shannon inventor field wrong. VENONA entry point predates NSA; XOR is analogy not actual decimal. Enigma trade perfect secrecy attribution unsupported. Verify source sections and numeric examples."
+      "notes": "Fixedexamplekeys explicitlyillustrative; guaranteeversuspracticalbreak distinction; VENONAdecimalUSArmyorigin versusbinaryanalogy. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/patterson-jefferson-cipher.html",
@@ -1053,27 +1053,27 @@
       "title": "Pigpen Cipher — The Cipher Museum",
       "words": 708,
       "sha256": "761dd652f87f0ba87fe6b5a0d33dec001ffdb12d13bc88711c9f8f49178d36aa",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Kahn PDF pp.947–951 supports Leeson1794 and Masonic usage. Washington personal-use claim unsubstantiated. Shown S–Z convention differs from standard four wedges per X: label variant and verify rendering/engine. Guaranteed minutes/frequency recovery needs correction."
+      "notes": "Leeson1794source checked; Washingtonpersonaluse removed; drawnS–Zvariant disclosed; publiclookupversussecretsubstitution. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/playfair.html",
       "title": "Playfair Cipher — The Cipher Museum",
       "words": 857,
       "sha256": "c8b4c10ddc917338fd825bc1033caad8f2e2d7a354bc02e27ba17a56d840aad3",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "HAC pp.239–240 and Kahn PDF261 support digraph model/Wheatstone/Playfair; primary wartime-use evidence pending. MONARCHY rules and HELPME challenge checked by grid reasoning. Qualify single-letter-frequency elimination and guaranteed solver success; known pair need not constrain four distinct letters."
+      "notes": "Single-letterstatistics not universallyerased; knownpaircaninvolveuptofourdistinctletters, cribsremainhypotheses. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/polybius.html",
       "title": "Polybius Square — The Cipher Museum",
       "words": 523,
       "sha256": "c29e247948ffedaa65c355bd9713aa50512b1e9791cb6c2085d41d1349f2d959",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Kahn PDF p.119 supports modern coordinate-square model, not inventor/first-cipher priority. Existing Histories10.45–47 citation needs primary read. Headline fixed-grid broken by frequency contradicts body correctly identifying public encoding; bitslicing comparison unsupported."
+      "notes": "Public-gridlookup distinguished from secret-grid frequencyanalysis infactsandbody; ancientGreeksource reread. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/porta.html",
@@ -1098,9 +1098,9 @@
       "title": "Rail Fence Cipher — The Cipher Museum",
       "words": 412,
       "sha256": "3ef4d9fa33dd9a78768a2f14fd3941f6dc056d3691fad76634437f952de0a2ba",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "HELLOWORLD three-rail example independently correct. Historical origin explicitly unknown in body but1800s in metadata; modern cryptography bridge requires qualification. Demo rail limits accurately called interface choices."
+      "notes": "Unsupported1800sdate andguaranteedsecondsrecovery removed; modelboundedrailcount explained. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/red-army-faction.html",
@@ -1170,9 +1170,9 @@
       "title": "Running Key Cipher — The Cipher Museum",
       "words": 638,
       "sha256": "d7444ee0b3d1f0649e1d4d47d01f79233d208f89ec35523969bb986997dfa985",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "FROMTHIS/ATTACKAT example matchesmod26. BodyandOTPdistinction bounded. Unknown1850sinventor/date needs source; never-reused modernkeystreammustbe operationalrequirement notguarantee. Holden§5.1directreadpending."
+      "notes": "Unsupported1850sdate removed; modernkeystreamreuseisusagecondition notgeneratedguarantee. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/sator-square.html",
@@ -1287,18 +1287,18 @@
       "title": "Station HYPO — Pearl Harbor to Midway — The Cipher Museum",
       "words": 663,
       "sha256": "34fbcfb574e47a6d4d6e5dfcc09568432d21d6ab40aa3b4ff59abb7e649400a4",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. CriticalPearlHarborattackcameMAGIC diplomaticchannel false: diplomaticbreakmessage not operationalattackwarning. Threecarriersfive minutes/fourone dayneedbattlecalendar. Underreportingintentunsourced, noJapanreplacementclaimtooabsolute. VerifyNHHCprimary AF account."
+      "notes": "Removed falsePearlHarborattackdecryptclaim, carrierreplacementabsolute and sole-victorycausation; medalpresentationrecord30May1986. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/straddling-checkerboard.html",
       "title": "Straddling Checkerboard — The Cipher Museum",
       "words": 513,
       "sha256": "372d76f8702b1bcc0a7c569f7c2b5b66295ee9a778ffe6bba7ca0156166b47be",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Fixed prefix parsing example coherent. Firstdocumentedlate1800s sidebar contradicts bodyunknown. UTF8identicalprinciples andVICchainadditionlayer overlystrong; lineagediagram unsupporteddirectdevelopment. VICsourcecheckpending."
+      "notes": "Firstlate1800sclaim anddirectlineagediagram corrected; variableprefixanalogy notidenticalUTF8. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/tap-code.html",
@@ -1314,9 +1314,9 @@
       "title": "Trifid Cipher — The Cipher Museum",
       "words": 421,
       "sha256": "93992e1174e1b109421f1ad8d122855e6ae4f68adbe2ed02a13e296b69989c37",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Gaines ChapterXXII and Kahn PDF313 support three-coordinate procedure. Text caveat conflicts with diagram stronger-than-Bifid and difficulty label; AES four-ops-per-round has final-round exception; output-size alone security claim overbroad."
+      "notes": "Removeddiagramclaimthirdcoordinatealwaysstronger andoutputsizealwayssecurity; AESfinal-roundexception. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/trithemius.html",
@@ -1341,9 +1341,9 @@
       "title": "Two-Square Cipher — The Cipher Museum",
       "words": 581,
       "sha256": "1024adc0874b51920f7335da95c89552b6fe3b5546a9c929f450cd4b49c561c1",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "ACA source linked and conventions explicitly described. Same-row reversal follows formula,1/5conditional model correctly bounded. Need direct primary historical attribution (Delastelle/two-square may be conflated); stronger-sibling label unsupported."
+      "notes": "ACAprocedure retained; Delastelle1902attribution not established by citedspecification, nowexplicitlyunknown. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/typex.html",
@@ -1379,18 +1379,18 @@
       "title": "Vernam Cipher — The Cipher Museum",
       "words": 766,
       "sha256": "528c720355c862853cba033839c043aa81895cb206dee0a4498c1fbc59f65468",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Nonrandom always Vigenere-equivalent/breakable false for pseudorandom modern streams; patent XOR operation wording overbroad. Mauborgne invention chronology requires independent sources. VENONA actual decimal not XOR. Distinguish secure-source browser randomness and exposed pad from theoretical perfect secrecy."
+      "notes": "Nonrandom notsynonymouswithbrokenVigenere; pseudorandomcomputationalsecurity distinguished; patentandVENONAarithmeticscope. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/vic.html",
       "title": "VIC Cipher — The Cipher Museum",
       "words": 609,
       "sha256": "1b25a157c147d7db56e942d4976d835ea6f595474cad91e55ea509268dc1282c",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Absolute most secure/peak/never broken/all NSA attacks unsupported. Demo addition keystream not historical VIC stages; second transposition historically disrupted. Must visibly label modified teaching cipher and distinguish key derivation from message addition. Cipher name VICTOR claim and NSA confirmation require sources. Each AES round adds security guaranteed claim wrong."
+      "notes": "FBI1957case recovery distinguished fromallNSAattackclaims; actualbrowsercheckerboard/addition/twoordinarytranspositions distinguished fromhistoricaldisruptedtransposition. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/vietnamese-underground.html",
@@ -1424,9 +1424,9 @@
       "title": "Wadsworth Cipher — The Cipher Museum",
       "words": 1810,
       "sha256": "d0146c7002f61c923cdec8733ea58ab231f6bc7c4cbd5f0c05a005287884072a",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Frequency analysis nothing to count false; plaintext-dependentmovement contradicts tablekeystreamadvancesindependent. Better machineunsupportedheadline. Need verify Kaeding appliesprecise model and toothcountvsouterposition; modelchoicesexplicit. Everyhistoricalclaimsourceverifiedstatementstrongerthanevidence."
+      "notes": "Removedfrequencyhasnothingtocount andplaintext-independentmovement claims; abstract notfullpaper checked. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/wallis-ciphers.html",
@@ -1442,9 +1442,9 @@
       "title": "Wheatstone Cryptograph (A clock-face polyalphabetic · 1867) — The Cipher Museum",
       "words": 558,
       "sha256": "fa0884bc0477784a2025d399c8c0b55c1a796fa1549b25c62e44548e2a2e3392",
-      "status": "text reviewed, source checks pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full page read. Plaintext-dependentunequaldial explanation good but attacklabel Kasiski/comparableVigenere and capturedmachinebecomesVigenere contradicts it. Equal-dialwidget correctlycalledfixedsubstitution. NeedKaeding2020source and exacthistorical dial/spacing."
+      "notes": "Attacklabel and capture paragraph no longercontradictmessage-dependentunequaldials. KaedingfullPDFunavailable, abstractscope only. Full-page reread, shared-surface propagation and rendered verification remain pending."
     },
     {
       "path": "ciphers/yardley.html",
@@ -1707,18 +1707,18 @@
       "title": "Hall I: World Origins of Cryptography — The Cipher Museum",
       "words": 681,
       "sha256": "58b7c874e9e08ba9d83a64cd43fe0da3d0ef3be4f91e576a811de16e69f4b1d0",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Egyptianearliestsubstitutioncardcontradictslede. Caesar58BC/alKindi850breakduplicatewrong; PolybiusRoman26vsGreek24distinguish. Agestrouteclaimsconverge notproventransmission."
+      "notes": "Full prose read. Egyptianearliestsubstitutioncardcontradictslede. Caesar58BC/alKindi850breakduplicatewrong; PolybiusRoman26vsGreek24distinguish. Agestrouteclaimsconverge notproventransmission. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending."
     },
     {
       "path": "halls/civil-war.html",
       "title": "Hall VI: Civil War Gallery — The Cipher Museum",
       "words": 510,
       "sha256": "d2b449059bbc79944e93a2f14af13ba2e32e7248447892f4c7547f61d4d6eeb5",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Vigenereadoptedafter1863contradicts1862; threefieldkeyslist6andsomeunsupported. AllManchesterallmessagesneverUnionbreakoverclaims. Dictionaryedition/page674verify. Stagerphoneticgettieslarge requiresactualsourceinterpretationnotetymology."
+      "notes": "Full prose read. Vigenereadoptedafter1863contradicts1862; threefieldkeyslist6andsomeunsupported. AllManchesterallmessagesneverUnionbreakoverclaims. Dictionaryedition/page674verify. Stagerphoneticgettieslarge requiresactualsourceinterpretationnotetymology. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending."
     },
     {
       "path": "halls/codebreakers.html",
@@ -1770,9 +1770,9 @@
       "title": "Hall III: The Polyalphabetic Revolution — The Cipher Museum",
       "words": 663,
       "sha256": "def5075167537b2ec66e8eeb6c64b23d6261858d18954b48e336985a4bfdf6e1",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Repeatedstringdistanceonlypotentialmultiple notguarantee. VigenereLEMONkey11charsvs12plaintext12. RunningFROMTHISBOOK11vs12. Nonrepeatingcryptographicallyrandom/sameXORfalse. BeaufortRoyalNavybadgeunsupported. ICkey5~.052notuniversal."
+      "notes": "Full prose read. Repeatedstringdistanceonlypotentialmultiple notguarantee. VigenereLEMONkey11charsvs12plaintext12. RunningFROMTHISBOOK11vs12. Nonrepeatingcryptographicallyrandom/sameXORfalse. BeaufortRoyalNavybadgeunsupported. ICkey5~.052notuniversal. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending."
     },
     {
       "path": "halls/puzzle.html",
@@ -1788,18 +1788,18 @@
       "title": "Hall II: Classical Substitution — The Cipher Museum",
       "words": 703,
       "sha256": "d5e4c2ed6a4bbd0bda7b20daaf1d5a5131162994d54dcb3a56aa0848fd3657ca",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. Playfairdate1902vs1854 andFourSquare1854vs1902swappedcardera. Babington64modeltokensanddoublethmappingwrongdefault. GreatCiphertrapmodelnoauthenticlabel. SameprincipleAESblocksmustqualify nonlinearwholecipher."
+      "notes": "Full prose read. Playfairdate1902vs1854 andFourSquare1854vs1902swappedcardera. Babington64modeltokensanddoublethmappingwrongdefault. GreatCiphertrapmodelnoauthenticlabel. SameprincipleAESblocksmustqualify nonlinearwholecipher. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending."
     },
     {
       "path": "halls/transposition.html",
       "title": "Hall IV: Transposition & Fractionation — The Cipher Museum",
       "words": 631,
       "sha256": "b371d5b07de94adf6f5af7b05b6d8c2f455f6097a7af32d38b62533cca2b9e2e",
-      "status": "text reviewed; source verification pending",
+      "status": "corrections prepared; final source and rendered review pending",
       "sources": [],
-      "notes": "Full prose read. RailFenceHELLOWORLD independentcheck;ZEBRAcolread5,3,2,4,1not5,2,1,3,4(ranks). MixColumns=fractionationheadingcontradictsbodydistinction. BifidpairHE21,35=FPcorrectunderIJgrid. Historicaldatesstillneedsource."
+      "notes": "Full prose read. RailFenceHELLOWORLD independentcheck;ZEBRAcolread5,3,2,4,1not5,2,1,3,4(ranks). MixColumns=fractionationheadingcontradictsbodydistinction. BifidpairHE21,35=FPcorrectunderIJgrid. Historicaldatesstillneedsource. Shared-summary corrections now prepared; final complete reread and source/diagram agreement pending."
     },
     {
       "path": "halls/unbreakable.html",

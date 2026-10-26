@@ -80,14 +80,14 @@
   <div class="callout callout-info" style="margin-bottom:3rem;">
     <span class="callout-icon">📜</span>
     <div class="callout-body">
-      <p><strong>What this hall teaches:</strong> Cryptography did not emerge from one civilization. Substitution and fractionation appear in multiple cultural traditions, then converge into the foundations of later military, diplomatic, and modern cryptographic practice.</p>
+      <p><strong>What this hall teaches:</strong> The surviving sources describe different problems: hiding a message, signalling it, substituting symbols and deciphering an unfamiliar script. Similarity between methods does not by itself establish a shared origin or direct transmission between cultures.</p>
     </div>
   </div>
 
   <div class="callout" style="margin-bottom:3rem;border-color:var(--gold-b);background:var(--gold-glow);">
     <span class="callout-icon">🧭</span>
     <div class="callout-body">
-      <p><strong>Suggested route:</strong> Start with <a href="../ciphers/egyptian-substitution.html">Egyptian Substitution</a> and the <a href="../ciphers/rosetta-stone.html">Rosetta Stone</a>, then move through <a href="../ciphers/histiaeus-tattoo.html">Histiaeus</a>, <a href="../ciphers/scytale.html">Scytale</a>, <a href="../ciphers/atbash.html">Atbash</a>, and <a href="../ciphers/caesar.html">Caesar</a>. End with <a href="../ciphers/arabic-nomenclators.html">Arabic Nomenclators</a> to see how early global traditions converge into the cryptanalysis of al-Kindi.</p>
+      <p><strong>Suggested route:</strong> Start with Egyptian Substitution and the Rosetta Stone to separate unusual writing from language decipherment. Continue through Histiaeus, Scytale, Atbash and Caesar, then compare al-Kindi’s documented cryptanalytic methods.</p>
     </div>
   </div>
 
@@ -100,7 +100,7 @@
         <span class="badge era-ancient">Egypt · ~1900 BCE</span>
       </div>
       <div class="card-name">Egyptian Substitution Hieroglyphs</div>
-      <p class="card-desc">The Khnumhotep II tomb inscription (~1900 BCE) — the world's earliest surviving instance of a deliberate substitution cipher, using unusual hieroglyph variants.</p>
+      <p class="card-desc">Unusual writing in Khnumhotep II’s tomb: an early example discussed in cryptographic histories, without an established modern secrecy purpose.</p>
       <div class="card-foot">
         <div class="card-badges">
           <span class="badge">Track B</span>
@@ -165,10 +165,10 @@
     <a href="../ciphers/caesar.html" class="cipher-card">
       <div class="card-head">
         <span class="card-num">Exhibit 2</span>
-        <span class="badge era-ancient">Ancient Rome · ~58 BC</span>
+        <span class="badge era-ancient">Ancient Rome · 1st century BCE</span>
       </div>
       <div class="card-name">Caesar Cipher</div>
-      <p class="card-desc">Caesar cipher — the simplest substitution cipher, used by Julius Caesar around 58 BC with a shift of 3. Broken by Al-Kindi's frequency analysis circa 850 AD.</p>
+      <p class="card-desc">Suetonius describes Caesar’s use of a three-letter shift. The modern 26-letter exercise has only 26 shifts to test; it does not require a ninth-century attack.</p>
       <div style="font-family:var(--fm);font-size:.8rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.1em;">
         <span style="color:var(--tx3);">PLAIN: </span><span style="color:var(--tx);">HELLO</span><br>
         <span style="color:var(--tx3);">SHIFT: </span><span style="color:var(--gold);">+3</span><br>
@@ -189,7 +189,7 @@
         <span class="badge era-ancient">Ancient Greece · ~150 BC</span>
       </div>
       <div class="card-name">Polybius Square</div>
-      <p class="card-desc">Polybius square (~150 BC) — ancient Greek 5x5 grid mapping each letter to a row-column digit pair. Foundation for Bifid, Trifid, Nihilist, ADFGX, and tap codes.</p>
+      <p class="card-desc">Polybius describes alphabetic torch signalling using five tablets for the Greek alphabet. The displayed I/J grid is a modern Latin-alphabet adaptation.</p>
       <div style="font-family:var(--fm);font-size:.78rem;background:var(--s3);border-radius:var(--r);padding:.75rem;margin:.25rem 0;letter-spacing:.1em;">
         <span style="color:var(--tx3);">A→11  B→12  C→13</span><br>
         <span style="color:var(--tx3);">HELLO = </span><span style="color:var(--gold-lt);">23 15 31 31 34</span>
@@ -299,7 +299,7 @@
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">Modular Arithmetic</span></div>
       <div class="panel-body">
-        <p>The Caesar cipher wraps around the alphabet using modulo 26. <code>(position + shift) mod 26</code>. This operation is fundamental to modern symmetric encryption including AES.</p>
+        <p>The Caesar cipher wraps around the alphabet using modulo 26. <code>(position + shift) mod 26</code>. Modular arithmetic appears throughout cryptography; AES uses binary finite-field operations rather than addition modulo 26.</p>
       </div>
     </div>
     <div class="panel">

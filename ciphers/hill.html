@@ -84,12 +84,12 @@
 
     <div class="cipher-significance">
       <h2>Why This Matters</h2>
-      <p>Lester Hill’s 1929 cipher was the first to use matrix multiplication as a cryptographic operation — bringing linear algebra into cryptography and influencing cipher design principles that persist in modern algorithms like AES’s MixColumns.</p>
+      <p>Lester Hill’s cipher illustrates block encryption through matrix multiplication. Its linear structure also gives a particularly clear known-plaintext attack. AES uses linear algebra in MixColumns, but the complete AES cipher includes nonlinear operations and is not simply a larger Hill cipher.</p>
     </div>
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-scroll"/></svg></span><span class="panel-title">Historical Context</span></div>
-      <div class="panel-body"><p>Lester Hill was a mathematics professor at Hunter College who applied linear algebra to cryptography in 1929. His cipher was the first to use matrix multiplication as a cryptographic operation — a genuinely innovative idea that would influence cipher design for decades.</p><p style="margin-top:1rem;">Hill published his system in the <em>American Mathematical Monthly</em> and later built a machine to implement it. The cipher saw some mechanical use but was never widely adopted for serious communications — its known-plaintext vulnerability was recognized quickly.</p></div>
+      <div class="panel-body"><p>Lester S. Hill published his matrix-based system in the <em>American Mathematical Monthly</em> in 1929. It maps groups of letters through an invertible matrix modulo the alphabet size. The system provides a useful introduction to linear algebra in cryptography without establishing a direct historical influence on every later matrix-based design.</p><p style="margin-top:1rem;">Hill also explored mechanical implementation. The cryptanalytic limitation illustrated here follows from the linear equations themselves; no assertion about widespread deployment is needed to demonstrate it.</p></div>
     </div>
 
     <div class="panel">
@@ -160,7 +160,7 @@
       <div class="panel-body"><div class="attack-panel"><div class="attack-name">Known Plaintext Attack</div><div class="attack-diff">Complexity: Easy with suitable known blocks</div><p class="attack-desc">For an n×n Hill key, collect n matched plaintext/ciphertext <em>blocks</em> as the columns of matrices P and C. When P is invertible modulo 26 — that is, gcd(det(P), 26) = 1 — the key follows directly: K = C × P⁻¹ mod 26. Merely knowing n blocks does not guarantee this condition. If it fails, more observations or a more general solution of the linear congruences may be needed. The cipher remains vulnerable because the relation is linear.</p>
         <p style="margin-top:1rem;"><strong>Enough information:</strong> the two blocks HI and LL give P = [[7, 11], [8, 11]], whose determinant is −11, coprime to 26. Matched with ciphertext TC and OZ, they recover K = [[3, 3], [2, 5]], the demo’s default key.</p>
         <p style="margin-top:1rem;"><strong>Not enough information:</strong> AA and AB both map to AA and DF under either K = [[3, 3], [2, 5]] or K = [[5, 3], [2, 5]]. Both keys are valid, but these two known blocks do not distinguish them. These examples use classical A = 0 blocks; remember the demo’s X/Q/Z escaping when analyzing other inputs.</p>
-        <p style="margin-top:1rem;">Reading: Joshua Holden, <a href="../further-reading.html#holden"><em>The Mathematics of Secrets</em></a> (2017), §§1.6–1.7. The invertibility check above specifies when the direct matrix-inverse recovery works.</p>
+        <p style="margin-top:1rem;">Reading: Joshua Holden, <a href="../further-reading.html#holden"><em>The Mathematics of Secrets: Cryptography from Caesar Ciphers to Digital Encryption</em></a> (2017), §§1.6–1.7. The invertibility check above specifies when the direct matrix-inverse recovery works.</p>
       </div></div>
     </div>
 
@@ -171,7 +171,7 @@
           <thead><tr><th>Concept from Hill Cipher</th><th>Modern Evolution</th></tr></thead>
           <tbody><tr><td>Matrix multiplication as cipher operation</td><td>AES MixColumns: matrix multiplication over GF(2⁸) for diffusion</td></tr>
 <tr><td>Multiple letters encrypted together</td><td>Block cipher: AES processes 128-bit (16-byte) blocks simultaneously</td></tr>
-<tr><td>Linear structure = linear algebra attack</td><td>AES non-linearity: S-boxes prevent linear algebraic attacks</td></tr></tbody>
+<tr><td>Linear structure = linear algebra attack</td><td>AES SubBytes prevents the complete cipher from being one linear matrix transformation</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -201,6 +201,8 @@
 </div>
 
 <!-- Related Exhibits -->
+<section class="panel" aria-labelledby="audit-reading"><div class="panel-body"><h2 id="audit-reading">Sources and Reading</h2><p>Alfred J. Menezes, Paul C. van Oorschot and Scott A. Vanstone, <em>Handbook of Applied Cryptography</em> (1997), §7.3.2, p. 240; David Kahn, <em>The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet</em>, revised edition (1996), on Hill’s 1929 publication. The worked matrix products and inverse conditions are independently checkable.</p></div></section>
+
 <section class="related-exhibits">
   <h2 class="related-exhibits__heading">Related Exhibits</h2>
   <div class="related-exhibits__grid">
