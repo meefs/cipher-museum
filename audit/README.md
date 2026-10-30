@@ -2,7 +2,7 @@
 
 A self-contained reading pack for an AI or human reviewer without repository access.
 
-- **Start with [CIPHER_MUSEUM_AUDIT.md](CIPHER_MUSEUM_AUDIT.md)**: all 214 pages, inline scripts, source register and supporting JavaScript/data in one file.
+- **Start with [CIPHER_MUSEUM_AUDIT.md](CIPHER_MUSEUM_AUDIT.md)**: all 216 pages, inline scripts, source register and supporting JavaScript/data in one file.
 - [CIPHER_MUSEUM_AUDIT_PACK.zip](CIPHER_MUSEUM_AUDIT_PACK.zip): download the master document, all smaller parts, prompt and manifest together.
 - [REVIEW_PROMPT.md](REVIEW_PROMPT.md): ready-to-use independent review instructions.
 - [parts/](parts/): the same page and appendix content in smaller files for context/upload limits. Upload the prompt and README first, then page parts in order; supply the source register and relevant code/data parts with each batch.
@@ -22,7 +22,7 @@ The earlier 214-page review was a complete reading/consistency pass with targete
 
 ## Snapshot and regeneration
 
-Source commit: `aa8f9f7c9193064b11b590f79f3df7888a89cde8` (2026-10-30T07:59:18-04:00). This is a frozen snapshot, not an automatically current view of the website. If pages change, regenerate deliberately.
+Source commit: `c329dc19058c960a430ac62352191a47bccfeba5` (2026-10-30T16:35:27-04:00). This is a frozen snapshot, not an automatically current view of the website. If pages change, regenerate deliberately.
 
 With repository access and dependencies installed:
 
@@ -47,7 +47,7 @@ The exporter reads committed files, checks every public HTML page against the co
 - [08-pages-P141-P160.md](parts/08-pages-P141-P160.md): Pages P141–P160
 - [09-pages-P161-P180.md](parts/09-pages-P161-P180.md): Pages P161–P180
 - [10-pages-P181-P200.md](parts/10-pages-P181-P200.md): Pages P181–P200
-- [11-pages-P201-P214.md](parts/11-pages-P201-P214.md): Pages P201–P214
+- [11-pages-P201-P216.md](parts/11-pages-P201-P216.md): Pages P201–P216
 - [12-source-register.md](parts/12-source-register.md): Source register and recorded access limits
 - [13-01-javascript.md](parts/13-01-javascript.md): javascript appendix 1
 - [13-02-javascript.md](parts/13-02-javascript.md): javascript appendix 2

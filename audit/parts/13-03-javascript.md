@@ -1,6 +1,6 @@
 # javascript appendix 3
 
-Snapshot: `aa8f9f7c9193064b11b590f79f3df7888a89cde8`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `c329dc19058c960a430ac62352191a47bccfeba5`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## JavaScript — js/ciphers/caesar-break.js
 
