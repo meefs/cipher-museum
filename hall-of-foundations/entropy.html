@@ -144,6 +144,8 @@
     <p class="aside">Robert M. Gray, <em>Entropy and Information Theory</em>, corrected first edition, 26 June 2023 (original 1990), §2.2, printed pp.18–20, and §2.6, printed p.42. The alphabet/IC comparison is our worked application of the distinction between marginal and sequence entropy. Continue with Crypto Lab’s <a href="https://systemslibrarian.github.io/crypto-lab-good-randomness/">Good Randomness</a> for deeper randomness experiments.</p>
   </section>
 
+  <p>For a conditional-distribution control, try the <a href="../ciphers/one-time-pad.html#secrecy-model">exact OTP secrecy experiment</a>: uniform plaintext can give a flat ciphertext histogram even with a biased pad. Compare the chosen prior, posterior and pairwise ciphertext distance; the same page enumerates why two individually hidden messages can leak jointly when a pad is reused.</p>
+
   <section class="exhibit" id="first-guess">
     <div class="step-head"><span class="step-num">§4</span><h2>Average uncertainty versus the first guess</h2></div>
     <p>Shannon entropy averages surprise across outcomes. Min-entropy asks about the most likely outcome: <strong>H<sub>min</sub> = −log₂(P<sub>best</sub>)</strong>, where P<sub>best</sub> is the success probability of the best single guess. Neither specifies the cost of testing a guess.</p>

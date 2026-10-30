@@ -28,7 +28,7 @@
     string(raw, 10000, 'Transcription');
     return { version: 2, kind: KIND, raw, mode: 'symbols', width: 1, annotations: {}, revision: 1,
       source: source({}), revisions: [{ id: 1, raw, reason: 'Initial transcription' }], spans: [], layers: [], keys: [], relations: [],
-      images: [], inventory: null, hypotheses: [] };
+      images: [], inventory: null, inventoryArchive: [], hypotheses: [] };
   }
   // Legacy positions count Unicode code points, not UTF-16 code units.
   function legacyTokens(raw, mode, width) {
@@ -76,6 +76,7 @@
     if (!Array.isArray(d.images)) d.images = [];
     if (!Array.isArray(d.hypotheses)) d.hypotheses = [];
     if (d.inventory === undefined) d.inventory = null;
+    if (d.inventoryArchive === undefined) d.inventoryArchive = [];
     const imageIds = new Set();
     list(d.images, 50, 'images').forEach(i => {
       const rec = imageRecord(i);
@@ -119,8 +120,7 @@
       check(r.from.trim() && r.to.trim() && r.evidence.trim(), 'Relationships need two identifiers and supporting evidence.');
       check(['transcribes', 'applies-key', 'supports', 'alternative-to'].includes(r.type), 'Unsupported relationship type.');
     });
-    if (d.inventory !== null) {
-      const inv = d.inventory;
+    function validateInventory(inv) {
       check(inv && typeof inv === 'object' && !Array.isArray(inv), 'Invalid symbol inventory.');
       check(revisions.has(inv.revision), 'The symbol inventory has no source revision.');
       check(INVENTORY_TOKENS.includes(inv.tokens), 'Unknown inventory tokenization.');
@@ -147,6 +147,8 @@
         string(h.detail, 4000, 'History detail'); check(h.detail.trim(), 'Every inventory decision records what changed.'); });
       check(inv.history.length > 0, 'The inventory must retain its decision history.');
     }
+    if (d.inventory !== null) validateInventory(d.inventory);
+    list(d.inventoryArchive, 50, 'earlier symbol inventories').forEach(validateInventory);
     list(d.hypotheses, 100, 'hypotheses').forEach(h => {
       unique(h.id); check(/^hypothesis-[1-9][0-9]*$/.test(h.id), 'Invalid hypothesis ID.');
       string(h.claim, 2000, 'Hypothesis claim'); check(h.claim.trim(), 'A hypothesis needs a claim.');
@@ -158,7 +160,8 @@
       list(h.alternatives, 20, 'unresolved alternatives').forEach(a => string(a, 500, 'Unresolved alternative'));
       string(h.note, 2000, 'Hypothesis note');
       // Applying a key cleanly is not evidence of authorship, attribution or date.
-      check(h.confidence !== 'well-supported' || h.supports.length >= 2,
+      const evidenceIds = new Set(h.supports.map(e => e.ref.normalize('NFKC').trim().replace(/\s+/g, ' ')));
+      check(h.confidence !== 'well-supported' || evidenceIds.size >= 2,
         'Calling a claim well-supported needs at least two separately recorded pieces of supporting evidence.');
       check(h.confidence !== 'well-supported' || h.contradicts.length === 0,
         'Recorded counterevidence must be answered before a claim is called well-supported.');
@@ -356,12 +359,20 @@
       if (finals.length > beam) beamPruned = true;
       finals.slice(0, beam).forEach(f => keep(f.codes, f.items, f.text));
     }
-    // The ambiguity view is read off the lattice itself, so it is exact in both modes.
+    // Count saturation cannot establish that every path visits a boundary.
+    // A boundary is bypassable iff some edge on a complete path crosses it.
+    const bypassable = new Array(n + 1).fill(false);
+    for (let pos = 0; pos < n; pos++) if (fwd[pos] > 0) {
+      for (const edge of edges[pos]) if (reach[edge.end]) {
+        for (let p = pos + 1; p < edge.end; p++) bypassable[p] = true;
+      }
+    }
     const ambiguity = [];
     if (total > 0) for (let p = 1; p < n; p++) {
       const through = Math.min(fwd[p] * bwd[p], COUNT_CAP);
       ambiguity.push({ position: p, pathsCutting: through, locked: cuts.has(p) || lineCuts.has(p),
-        forced: through >= total, impossible: through === 0,
+        pathsCuttingCapped: through >= COUNT_CAP,
+        forced: !bypassable[p], impossible: fwd[p] === 0 || bwd[p] === 0,
         startingCodes: (edges[p] || []).filter(e => e.entry && reach[e.end]).map(e => e.entry.code) });
     }
     const complete = exhaustive && !truncated;
@@ -518,6 +529,10 @@
   }
   function buildInventory(d, options = {}) {
     d = validate(d);
+    if (d.inventory) {
+      check(d.inventoryArchive.length < 50, 'Export this record before rebuilding: 50 earlier inventories retained.');
+      d.inventoryArchive.push(copy(d.inventory));
+    }
     const mode = options.tokens || 'whitespace';
     const width = mode === 'fixed' ? integer(options.width || 1, 1, 8, 'token width') : 1;
     const tokens = inventoryTokens(d.raw, mode, width);
@@ -624,8 +639,22 @@
   }
   // ── Investigation bundle ──────────────────────────────────────────────────
   const BUNDLE_KIND = 'cipher-museum-investigation';
-  const BUNDLE_VERSION = 1;
-  const MODEL_BUILD = 'research-model-2026-10-29';
+  const BUNDLE_VERSION = 2;
+  const MODEL_BUILD = 'research-model-2026-10-30';
+  // Stable key ordering makes bindings independent of JSON object insertion order.
+  function canonical(value) {
+    if (Array.isArray(value)) return '[' + value.map(canonical).join(',') + ']';
+    if (value && typeof value === 'object') return '{' + Object.keys(value).sort().map(k => JSON.stringify(k) + ':' + canonical(value[k])).join(',') + '}';
+    return JSON.stringify(value);
+  }
+  function resultBinding(b, type) {
+    const state = copy(b[type]);
+    delete state.inputFingerprint; delete state.configurationFingerprint;
+    delete state.elapsedMs; // A measurement is not a solver input.
+    return fingerprint(canonical({ state, source: b.evidence, selectedLayer: b.selectedLayer,
+      modelBuild: b.tool.modelBuild, scoringModel: type === 'search' ? b.tool.scoringModel : state.scoring,
+      solver: type === 'search' ? b.tool.solver : 'numerical-lattice' }));
+  }
   // A declared NON-cryptographic 64-bit fingerprint. It detects a changed input so
   // stale results can be invalidated; it is not an integrity or authenticity check.
   function fingerprint(text) {
@@ -645,6 +674,13 @@
     check(Object.keys(out).length <= 100, 'Too many locked mappings.');
     return out;
   }
+  function productionInfo(x) {
+    if (x === undefined || x === null) return null;
+    check(x && typeof x === 'object' && !Array.isArray(x), 'Invalid recorded tool identity.');
+    return { modelBuild: string(x.modelBuild || '', 100, 'Recorded model build'),
+      scoringModel: string(x.scoringModel || '', 200, 'Recorded scoring model'),
+      solver: string(x.solver || '', 200, 'Recorded solver') };
+  }
   function searchState(s) {
     check(s && typeof s === 'object' && !Array.isArray(s), 'Invalid solver state.');
     return { algorithm: string(s.algorithm || 'annealing', 40, 'Solver algorithm'),
@@ -654,6 +690,8 @@
       beam: integer(s.beam === undefined ? 0 : s.beam, 0, 2000, 'beam width'),
       locks: lockMap(s.locks || {}, 'locked key'),
       elapsedMs: integer(s.elapsedMs === undefined ? 0 : s.elapsedMs, 0, 86400000, 'elapsed time'),
+      producedWith: productionInfo(s.producedWith),
+      configurationFingerprint: string(s.configurationFingerprint || '', 32, 'Solver configuration fingerprint'),
       // Recorded at the time the result was produced, so a later edit shows up as stale.
       inputFingerprint: s.inputFingerprint === undefined
         ? fingerprint(string(s.raw || '', 12000, 'Solver input'))
@@ -667,6 +705,8 @@
       budget: integer(s.budget === undefined ? 10000 : s.budget, 1, 20000, 'path budget'),
       scoring: string(s.scoring || 'neutral', 60, 'Segmentation scoring'),
       lineBreaks: string(s.lineBreaks || 'boundary', 20, 'Line-break policy'),
+      producedWith: productionInfo(s.producedWith),
+      configurationFingerprint: string(s.configurationFingerprint || '', 32, 'Segmentation configuration fingerprint'),
       inputFingerprint: s.inputFingerprint === undefined
         ? fingerprint(string(s.digits || '', 200, 'Digit stream') + '|' + JSON.stringify(s.key || {}))
         : string(s.inputFingerprint, 32, 'Segmentation input fingerprint') };
@@ -685,6 +725,7 @@
     const s = state && typeof state === 'object' ? state : {};
     const value = {
       version: BUNDLE_VERSION, kind: BUNDLE_KIND,
+      legacyUnbound: s.legacyUnbound === true,
       title: string(s.title || '', 200, 'Investigation title'),
       created: string(s.created || '', 40, 'Bundle timestamp'),
       tool: { modelBuild: MODEL_BUILD, evidenceVersion: d.version,
@@ -702,18 +743,24 @@
       images: d.images.map(i => ({ id: i.id, name: i.name, sha256: i.sha256, width: i.width, height: i.height,
         rotation: i.rotation, crop: i.crop.slice() })),
       imageBytes: 'Image bytes are deliberately not included. Reopen each file locally; the recorded hash tells you whether the bytes match.',
-      sourceFingerprint: fingerprint(d.raw),
+      sourceFingerprint: s.sourceFingerprint === undefined ? fingerprint(canonical(d)) : s.sourceFingerprint,
       limits: 'Replay needs the same solver and scoring-model build, not only the same seed. A recorded filename or hash identifies bytes; it does not establish that an image is the archival object it claims to be.'
     };
+    for (const type of ['search', 'segmentation']) if (value[type]) {
+      if (s[type].producedWith === undefined) value[type].producedWith = productionInfo(value.tool);
+      if (s[type].configurationFingerprint === undefined) value[type].configurationFingerprint = resultBinding(value, type);
+    }
     return openBundle(copy(value));
   }
   function openBundle(value) {
     check(value && typeof value === 'object' && !Array.isArray(value), 'This file is not an investigation bundle.');
     check(value.kind === BUNDLE_KIND, 'This file is not a Cipher Museum investigation bundle.');
-    check(value.version === BUNDLE_VERSION,
+    check(value.version === 1 || value.version === BUNDLE_VERSION,
       'Unsupported investigation-bundle version ' + value.version + '; this workbench reads version ' + BUNDLE_VERSION + '.');
     check(JSON.stringify(value).length <= 1500000, 'Investigation bundle exceeds 1,500,000 characters.');
     const b = copy(value);
+    b.legacyUnbound = b.version === 1 || b.legacyUnbound === true;
+    b.version = BUNDLE_VERSION;
     b.title = string(b.title || '', 200, 'Investigation title');
     b.created = string(b.created || '', 40, 'Bundle timestamp');
     check(b.tool && typeof b.tool === 'object', 'A bundle must record the tools that produced it.');
@@ -722,7 +769,7 @@
     b.tool.solver = string(b.tool.solver || '', 200, 'Solver identity');
     b.evidence = validate(b.evidence);
     b.selectedLayer = string(b.selectedLayer || '', 100, 'Selected derived layer');
-    check(!b.selectedLayer || b.selectedLayer.indexOf('revision-') === 0 || b.evidence.layers.some(l => l.id === b.selectedLayer),
+    check(!b.selectedLayer || b.evidence.revisions.some(r => 'revision-' + r.id === b.selectedLayer) || b.evidence.layers.some(l => l.id === b.selectedLayer),
       'The bundle names a derived layer that its evidence record does not contain.');
     b.keyRevisions = list(b.keyRevisions || [], 50, 'key revisions').map(k => ({
       at: string(k.at || '', 40, 'Key revision time'), reason: string(k.reason || '', 1000, 'Key revision reason'),
@@ -737,13 +784,15 @@
       rotation: integer(i.rotation, 0, 270, 'image rotation'), crop: i.crop }));
     b.sourceFingerprint = string(b.sourceFingerprint || '', 32, 'Source fingerprint');
     // Stale results are reported, never silently reused.
-    const sourceMoved = b.sourceFingerprint !== fingerprint(b.evidence.raw);
-    const searchMoved = !!(b.search && b.search.inputFingerprint !== fingerprint(b.search.raw));
+    const sourceMoved = b.legacyUnbound || b.sourceFingerprint !== fingerprint(canonical(b.evidence));
+    const modelMoved = b.tool.modelBuild !== MODEL_BUILD;
+    const searchMoved = !!(b.search && (b.legacyUnbound || modelMoved ||
+      b.search.inputFingerprint !== fingerprint(b.search.raw) || b.search.configurationFingerprint !== resultBinding(b, 'search')));
     const segmentationMoved = !!(b.segmentation &&
-      b.segmentation.inputFingerprint !== fingerprint(b.segmentation.digits + '|' + JSON.stringify(b.segmentation.key)));
+      (b.legacyUnbound || modelMoved || b.segmentation.configurationFingerprint !== resultBinding(b, 'segmentation')));
     b.stale = { source: sourceMoved, search: searchMoved, segmentation: segmentationMoved,
-      modelBuild: b.tool.modelBuild !== MODEL_BUILD,
-      candidates: b.candidates.length > 0 && (sourceMoved || searchMoved) };
+      modelBuild: modelMoved,
+      candidates: b.candidates.length > 0 && (!b.search || sourceMoved || searchMoved || modelMoved) };
     return b;
   }
   // ── Beam-search solver baseline ───────────────────────────────────────────

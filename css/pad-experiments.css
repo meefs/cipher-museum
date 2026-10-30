@@ -22,3 +22,8 @@
   .pad-experiment dl { grid-template-columns: 1fr; }
   .pad-experiment dd { padding-bottom: .65rem; }
 }
+.pad-experiment select{display:block;width:100%;max-width:100%;padding:.65rem;background:var(--s2);color:var(--tx);border:1px solid var(--gold-b);border-radius:var(--r)}
+.pad-table{overflow-x:auto;margin:1rem 0}
+.pad-table table{width:100%;border-collapse:collapse;font-size:.9rem}
+.pad-table th,.pad-table td{padding:.65rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--gold-b)}
+.pad-table caption{text-align:left;color:var(--tx2);padding:.4rem 0}

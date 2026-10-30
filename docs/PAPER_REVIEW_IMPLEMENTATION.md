@@ -67,3 +67,8 @@ panel, and a benchmark-interpretation section.
 
 See [`RESEARCH_REVIEW_2026-10-29.md`](RESEARCH_REVIEW_2026-10-29.md) for the R01–R14 mapping,
 the checks actually run with their results, and the limitations that remain.
+
+
+## Full-paper follow-up — 30 October 2026
+
+The twelve newly selected papers were read in full (364PDF pages). [Implementation record](RESEARCH_REVIEW_2026-10-30.md) maps F01–F13 to the repaired investigation workflow and bounded extensions of existing OTP, implementation-evidence and quantum-resource lessons. It distinguishes the specialist papers deferred from the Museum and the experiments that remain unperformed.

@@ -30,9 +30,9 @@
     {
       "path": "challenges.html",
       "title": "Cipher Challenges — The Cipher Museum",
-      "words": 126,
-      "sha256": "9a1716e3dd5803fc072e678d845c7ea219197118d806a5844c19dff089682a24",
-      "status": "bounded review and local release validation complete",
+      "words": 167,
+      "sha256": "a086b50ab9e8cad0e8ad57117f38f06cd8af5e5d9d6467b8d2202f550d7e880d",
+      "status": "book companion integration: changed invitation and local links checked; earlier reviews remain historical evidence",
       "sources": [],
       "notes": "Root reread all ten challenge JSON entries and explanations in addition to page prose; examples and conclusions checked within their stated cipher/model assumptions.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -50,7 +50,16 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "previous_status": "bounded review and local release validation complete",
+      "book_companion_integration": {
+        "date": "2026-10-30",
+        "source_pr": "https://github.com/systemslibrarian/cipher-museum/pull/16",
+        "source_merge_commit": "4600f1c97aea82bfbb78f86cd78e948badc63d8b",
+        "scope": "Read the added book-companion invitation and its surrounding page context; checked local href/src targets and HTML fragments. Refreshed this page inventory hash, title and static-body word count for the combined source.",
+        "historical_review_scope": "Existing prose, browser and release records describe their earlier snapshots. This integration does not repeat or extend those evidence claims to the current combined source.",
+        "limits": "No new external-source verification, browser run or deployment verification in this inventory update."
+      }
     },
     {
       "path": "cipher-corpus.html",
@@ -232,14 +241,18 @@
       "path": "ciphers/aes.html",
       "title": "AES (Advanced Encryption Standard) — The Cipher Museum",
       "words": 1051,
-      "sha256": "12fee221244c92509002becdc09f7000adf8c1eb461b4d8088039090596f0d66",
+      "sha256": "92f765aaa9aae5d04307a5a86ff94114ebcb0e7e6d168da8274eff82de0f07ac",
       "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "NIST-AES-DEVELOPMENT",
         "SIGNAL-RATCHET-REV4",
         "NSA-CNSA-2025",
         "DAEMEN-RIJMEN-2020",
-        "MANGARD-OSWALD-POPP-2007"
+        "MANGARD-OSWALD-POPP-2007",
+        "RESEARCH-CL648",
+        "RESEARCH-CL655",
+        "RESEARCH-CL980",
+        "RESEARCH-CL984"
       ],
       "notes": "Final exhibit_final_read consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/exhibit-final-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -274,6 +287,12 @@
         "browser_evidence": "docs/ebook-followup/browser.json",
         "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
         "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      },
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
       }
     },
     {
@@ -1739,9 +1758,11 @@
       "path": "ciphers/ecdsa.html",
       "title": "ECDSA — The Cipher Museum",
       "words": 1178,
-      "sha256": "c313882bea1bec958a94b1c0a1bfca96e366083b907a877058020dc5dfd6daf7",
+      "sha256": "28261ce68ffccd21d95fb4096ee75ba6d34b84ffb2370e0270047a162d102023",
       "status": "bounded review and local release validation complete",
-      "sources": [],
+      "sources": [
+        "RESEARCH-CL646"
+      ],
       "notes": "Final exhibit_final_read consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/exhibit-final-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
       "final_prose_review": {
@@ -1759,7 +1780,13 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
+      }
     },
     {
       "path": "ciphers/egyptian-substitution.html",
@@ -3234,11 +3261,14 @@
       "path": "ciphers/one-time-pad.html",
       "title": "One-Time Pad — The Cipher Museum",
       "words": 1206,
-      "sha256": "40bf485abb11bad6332c8df892619475a2bbe3c17a426870ec9cc98b5e338cc3",
+      "sha256": "28079f7691e7da66094849b2e9235baa1a1a24fc212debbdff628bb312a4202f",
       "status": "bounded review and local release validation complete",
       "sources": [
         "SHANNON-1949",
-        "BENSON-VENONA"
+        "BENSON-VENONA",
+        "RESEARCH-CL952",
+        "RESEARCH-CL967",
+        "RESEARCH-CL968"
       ],
       "notes": "Fixedexamplekeys explicitlyillustrative; guaranteeversuspracticalbreak distinction; VENONAdecimalUSArmyorigin versusbinaryanalogy. Final public-prose consistency reread completed by research_cases; source and runtime limits remain separate.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -3257,7 +3287,13 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
+      }
     },
     {
       "path": "ciphers/patterson-jefferson-cipher.html",
@@ -3661,10 +3697,11 @@
       "path": "ciphers/rsa.html",
       "title": "RSA — The Cipher Museum",
       "words": 708,
-      "sha256": "350281f512626c72fc200d4a29d3ee4700b22b207db8a60a6563b779fcd521e1",
+      "sha256": "f42b66a881f6f82b4512fb88f7f9f1bdee821a2052d7b24d45aad221bdf211c0",
       "status": "bounded review and local release validation complete",
       "sources": [
-        "RFC8017"
+        "RFC8017",
+        "RESEARCH-CL646"
       ],
       "notes": "Final research_cases consistency reread covered the complete public prose, metadata, displayed examples, sidebars and related cards. Corrections and exact review limits are recorded in tmp/final-read-n-r-handoff.md. Existing source checks apply only to their recorded passages; no every-fact certification.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -3683,7 +3720,13 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
+      }
     },
     {
       "path": "ciphers/running-key.html",
@@ -4307,7 +4350,7 @@
       "path": "ciphers/ua-8295.html",
       "title": "UA-8295: A Changed Cipher Behind the Same Interface — The Cipher Museum",
       "words": 2016,
-      "sha256": "6e60800a62101ee3338e85e32b7e60dc0c63a6f5b951ce54449503222b552618",
+      "sha256": "f51c1d532314f53860dd8b2e32d8498cca7d76db3397737ab0f7a142e1e194e7",
       "status": "bounded review and local release validation complete; revised in the 29 October 2026 research review",
       "sources": [
         "UA8295-2026"
@@ -4338,7 +4381,13 @@
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
         "scope": "Root removed stale UA8295technical override; separated HallIX grouping from OTP classification for Enigma/Lorenz/Solitaire/Vernam; qualified SHA256length and Shamirconditions. Generator corrections are not a new historical-source verification."
       },
-      "research_review_2026_10_29": "revised"
+      "research_review_2026_10_29": "revised",
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
+      }
     },
     {
       "path": "ciphers/venona.html",
@@ -4378,11 +4427,14 @@
       "path": "ciphers/vernam.html",
       "title": "Vernam Cipher — The Cipher Museum",
       "words": 766,
-      "sha256": "07a9f499974013a92b52be4ea2f322ac86c3859f5d473b58b91a95a7bf7b4b49",
+      "sha256": "47cf2bdf3dbd1dd3696112ef74c26920686f5f2c0fb032fa54bfb18c60d34209",
       "status": "bounded review and local release validation complete",
       "sources": [
         "SHANNON-1949",
-        "BENSON-VENONA"
+        "BENSON-VENONA",
+        "RESEARCH-CL952",
+        "RESEARCH-CL967",
+        "RESEARCH-CL968"
       ],
       "notes": "Nonrandom notsynonymouswithbrokenVigenere; pseudorandomcomputationalsecurity distinguished; patentandVENONAarithmeticscope. Final public-prose consistency reread completed by corpus_utilities; source and runtime limits remain separate.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -4406,6 +4458,12 @@
         "reader": "root",
         "status": "semantic overrides corrected; generated rebuild and final validation pending",
         "scope": "Root removed stale UA8295technical override; separated HallIX grouping from OTP classification for Enigma/Lorenz/Solitaire/Vernam; qualified SHA256length and Shamirconditions. Generator corrections are not a new historical-source verification."
+      },
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
       }
     },
     {
@@ -4997,13 +5055,14 @@
       "path": "hall-of-foundations/entropy.html",
       "title": "Information & Entropy · Hall of Foundations",
       "words": 2222,
-      "sha256": "eb29af70866c5fad91a87cd0cb0faa355b9804c5ab1a679be72088d2c5b34f22",
+      "sha256": "5766e7d2c51b2d7aa1865bf55e09a5408762c851dffe767adf6b3cd4d72757aa",
       "status": "bounded review and local release validation complete; revised in the 29 October 2026 research review",
       "sources": [
         "BONEH-SHOUP-2023",
         "GRAY-1990-CORRECTED-2023",
         "VADHAN-2012",
-        "TYAGI-WATANABE-2023"
+        "TYAGI-WATANABE-2023",
+        "RESEARCH-CL967"
       ],
       "notes": "Root reread complete foundation page and teaching-model explanations; assumptions, examples and real-versus-finite-field or toy-versus-production boundaries reconciled. Earlier protocol/foundation tests remain bounded evidence, not independent proof verification. 29 Oct 2026 research review R10: added sections 6 and 7. A fully enumerable four-key example separating within-key from pooled code entropy (verified here), the at-most-130-code-types bound labelled as mathematical inference, and why a unicity estimate certifies no reading and promises no solver. Sections renumbered; earlier sections unchanged.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -5035,7 +5094,13 @@
         "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
         "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
       },
-      "research_review_2026_10_29": "revised"
+      "research_review_2026_10_29": "revised",
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
+      }
     },
     {
       "path": "hall-of-foundations/euler-fermat.html",
@@ -5068,10 +5133,13 @@
       "path": "hall-of-foundations/finite-fields.html",
       "title": "Finite Fields · Hall of Foundations",
       "words": 1447,
-      "sha256": "393b5faa5bf2b17a3398f7a2e63e5eb88e21cedd3eb09c27ae7236cbf06c82ef",
+      "sha256": "aa8bd8de6493a82fe83c3ebd6efc926465c0848bed05a85814f1eefbdf1c8564",
       "status": "bounded review and local release validation complete; revised in the 29 October 2026 research review",
       "sources": [
-        "BONEH-SHOUP-2023"
+        "BONEH-SHOUP-2023",
+        "RESEARCH-CL642",
+        "RESEARCH-CL648",
+        "RESEARCH-CL655"
       ],
       "notes": "Root reread complete foundation page and teaching-model explanations; assumptions, examples and real-versus-finite-field or toy-versus-production boundaries reconciled. Earlier protocol/foundation tests remain bounded evidence, not independent proof verification. 29 Oct 2026 research review R13: added section 4 separating affine exceptional cases, complete formulas on their stated curve class, functional-correctness proofs and their trusted-compiler boundary, and constant-time assurance. The exhibit JavaScript is explicitly not production-ready, constant-time or verified. No arithmetic changed; it is now validated against an independent complete-formula oracle on all 361 ordered point pairs.",
       "browser_smoke": "Eighth batch:68 desktop/mobile page checks across34pages without page errors or document overflow; LWE and ECDSA controls exercised. See browser-foundations-eighth.json.",
@@ -5090,7 +5158,13 @@
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
       "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
-      "research_review_2026_10_29": "revised"
+      "research_review_2026_10_29": "revised",
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
+      }
     },
     {
       "path": "hall-of-foundations/group-theory.html",
@@ -5876,7 +5950,7 @@
       "path": "lab/evidence-workbench.html",
       "title": "Evidence Workbench — The Cipher Museum",
       "words": 2060,
-      "sha256": "eaa2ece9d7739a487f83f7ca9d885bf1b503f0f0d9b978141d5e672fa9cb53f8",
+      "sha256": "ddbe8a2f6e750dca046d868200dbcb2471ef60c77843bd69469bdf03fc3be4f7",
       "status": "bounded review and local release validation complete; revised in the 29 October 2026 research review",
       "sources": [],
       "notes": "Root reread public prose and evidence/model controls. Seeds, provenance, illustrative examples and recovery limits remain explicit; runtime checks do not authenticate historical source records. 29 Oct 2026 research review R03/R04/R05/R06/R07/R08/R11: added image registration with coordinate transforms, a keyboard-accessible symbol inventory with split and merge, a hypothesis register, an investigation bundle with resume and guided examples, a second solver, historical-language profile selection and comparison, and a segmentation ambiguity view. All computation stays local; image bytes are never exported.",
@@ -5896,20 +5970,31 @@
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
       "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
-      "research_review_2026_10_29": "revised"
+      "research_review_2026_10_29": "revised",
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
+      }
     },
     {
       "path": "lab/modern-attack-evidence.html",
       "title": "What an Attack Result Actually Shows — The Cipher Museum",
       "words": 3940,
-      "sha256": "ccc959ef9c1e9a50b46ba1d0d6748fdd8392f5fecc4ef30f6dfe0c2883ed4e6b",
+      "sha256": "502b49a76bb3d22f610c4cbeb6065fa23223a44798524228a5de37a9974ca616",
       "status": "bounded review and local release validation complete; revised in the 29 October 2026 research review",
       "sources": [
         "GPU-SEARCH-2025",
         "GEA-FAULTS-2026",
         "CONDITIONAL-DES-2018",
         "BIHAM-SHAMIR-1993-2009",
-        "MANGARD-OSWALD-POPP-2007"
+        "MANGARD-OSWALD-POPP-2007",
+        "RESEARCH-CL646",
+        "RESEARCH-CL648",
+        "RESEARCH-CL655",
+        "RESEARCH-CL980",
+        "RESEARCH-CL984"
       ],
       "notes": "Research-case review checked KASUMI-64 repeated-key deployment versus independent 128-bit search, TEA3 target, GEA abstract-level controlled-fault result and corrected journal status, and conditional DES candidate-count experiments versus full key searches. Exact conditions and source-access limits retained. 29 Oct 2026 research review R01/R12/R14: replaced the obsolete full-paper-unavailable GPRS paragraph with the tested conditions and a phase table after reading the published paper; added five comparative attack-evidence cards; added a section separating four AI tasks with a matched-input recipe that is published as a procedure and was not executed.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -5944,7 +6029,13 @@
         "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
         "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
       },
-      "research_review_2026_10_29": "revised"
+      "research_review_2026_10_29": "revised",
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
+      }
     },
     {
       "path": "lab/workbench.html",
@@ -6033,14 +6124,19 @@
       "path": "modern.html",
       "title": "Modern Cryptography — The Cipher Museum",
       "words": 1799,
-      "sha256": "3c8ab175bb7e546a744cfc2d9c41da36479d7cf034c9762f519db53fef13e534",
+      "sha256": "315c0d1f2912a7c9d7a662418778a07960c56931d5e8608a45b456b6377e1a4c",
       "status": "ebook follow-up implementation and local validation complete",
       "sources": [
         "BONEH-SHOUP-2023",
         "HAC-1997",
         "SHANNON-1949",
         "ANDERSON-2020",
-        "WONG-2021"
+        "WONG-2021",
+        "RESEARCH-CL646",
+        "RESEARCH-CL648",
+        "RESEARCH-CL655",
+        "RESEARCH-CL980",
+        "RESEARCH-CL984"
       ],
       "notes": "Root reread full modern overview. Stream reuse, CDH, hash limits, signature attribution, finite-field sharing assumptions and proof soundness remain bounded to their models.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -6069,6 +6165,12 @@
         "browser_evidence": "docs/ebook-followup/browser.json",
         "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
         "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      },
+      "research_review_2026_10_30": {
+        "status": "Full affected-page prose reread complete; source/behavior/limit distinctions checked.",
+        "record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+        "validation": "docs/page-audit/research-2026-10-30-validation.json",
+        "scope": "Targeted new research and workflow corrections. Earlier reviews and deployed checks below are historical; this field does not claim new verification of every unchanged primary fact."
       }
     },
     {
@@ -6204,6 +6306,21 @@
       "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
+      "path": "sealed-letter.html",
+      "title": "The Curator’s Sealed Letter — The Cipher Museum",
+      "words": 1370,
+      "sha256": "b33e010145bcec0c3f2e1de348b0b8d056d204219a3de9ac59fd7b40a2f952f4",
+      "status": "bounded integration reading and static puzzle checks complete; no browser execution in this inventory pass",
+      "sources": [],
+      "notes": "Read the complete page, including hidden case documents, hints, answer reveals and conclusion, plus js/reader-companion.js. Independently followed the four invented clues: COMPARE / THE COPIES / BEFORE / YOU TRUST THEM. Confirmed that the instruction wording in the fictional copies differs only in destination room and that the conclusion does not attribute authorship, intention or theft from the supplied records. The page labels the exercise fictional and its cipher methods simplified.",
+      "integration_review": {
+        "date": "2026-10-30",
+        "source_pr": "https://github.com/systemslibrarian/cipher-museum/pull/16",
+        "scope": "Complete static HTML and checker-source reading, arithmetic/route/code-key consistency, and local link/fragment existence.",
+        "limits": "No historical ciphertext reproduced or primary historical source checked. No browser interaction, visual accessibility or deployment verification performed in this inventory pass; the prior 214-page review did not include this new page."
+      }
+    },
+    {
       "path": "search.html",
       "title": "Search — The Cipher Museum",
       "words": 68,
@@ -6232,9 +6349,9 @@
     {
       "path": "teaching.html",
       "title": "Corpus Teaching Guide — The Cipher Museum",
-      "words": 548,
-      "sha256": "3bc03cae8cc696e9ee1537f269796eacd17eea4a1ac033b0cadb3a04b15b5ab0",
-      "status": "ebook follow-up implementation and local validation complete",
+      "words": 580,
+      "sha256": "536dd3de4048dc41a75232a1d760d65561686350e9f001f1c00d66d931d27d15",
+      "status": "book companion integration: changed invitation and local links checked; earlier reviews remain historical evidence",
       "sources": [
         "LASRY-2018"
       ],
@@ -6266,6 +6383,30 @@
         "browser_evidence": "docs/ebook-followup/browser.json",
         "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
         "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      },
+      "previous_status": "ebook follow-up implementation and local validation complete",
+      "book_companion_integration": {
+        "date": "2026-10-30",
+        "source_pr": "https://github.com/systemslibrarian/cipher-museum/pull/16",
+        "source_merge_commit": "4600f1c97aea82bfbb78f86cd78e948badc63d8b",
+        "scope": "Read the added book-companion invitation and its surrounding page context; checked local href/src targets and HTML fragments. Refreshed this page inventory hash, title and static-body word count for the combined source.",
+        "historical_review_scope": "Existing prose, browser and release records describe their earlier snapshots. This integration does not repeat or extend those evidence claims to the current combined source.",
+        "limits": "No new external-source verification, browser run or deployment verification in this inventory update."
+      }
+    },
+    {
+      "path": "the-book.html",
+      "title": "Secrets of the Cipher Museum — Paul Clark — The Cipher Museum",
+      "words": 854,
+      "sha256": "eaeaf19e6298ef912384852c23742da684bb20428663c7e037907055a68e5561",
+      "status": "bounded integration reading and local link checks complete; historical excerpt sources not reverified",
+      "sources": [],
+      "notes": "Read the complete preview page, metadata, opening excerpt, image description, fictional reader-mystery invitation and reading-group questions. Confirmed its preview/publication-status wording and internal connections to the companion and Babington exhibit. The named chapter sources and the manuscript-dependent claims about chapter/diagram counts remain attributed to the book change; the manuscript and external historical sources were not reread for this integration.",
+      "integration_review": {
+        "date": "2026-10-30",
+        "source_pr": "https://github.com/systemslibrarian/cipher-museum/pull/16",
+        "scope": "Complete static HTML reading, metadata and navigation consistency, and local link/fragment existence.",
+        "limits": "No new independent verification of the Mary Stuart narrative, manuscript contents or cover pixels. No browser, visual or deployment verification performed in this inventory pass; the prior 214-page review did not include this new page."
       }
     },
     {
@@ -6393,5 +6534,45 @@
       "CM026 (IEEE TDSC 23(3); eprint 2026/1806)"
     ],
     "scope": "All fourteen recommendations implemented. Detailed technical claims were checked against the primary papers; claims that could not be checked were not published. Browser verification was headless Chromium at 1280px and 375px, not a cross-browser matrix. The R14 matched-input recipe is published as a procedure and was not executed."
+  },
+  "research_review_2026_10_30": {
+    "baseline": "8b5dd46f8e5cff70bea87b3a93fc349af52f91e1",
+    "items": 13,
+    "implementation_record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+    "full_papers_read": 12,
+    "full_pdf_pages_read": 364,
+    "changed_pages_reread": [
+      "ciphers/aes.html",
+      "ciphers/ecdsa.html",
+      "ciphers/one-time-pad.html",
+      "ciphers/rsa.html",
+      "ciphers/ua-8295.html",
+      "ciphers/vernam.html",
+      "hall-of-foundations/entropy.html",
+      "hall-of-foundations/finite-fields.html",
+      "lab/evidence-workbench.html",
+      "lab/modern-attack-evidence.html",
+      "modern.html"
+    ],
+    "scope": "Existing engines preserved; workflow repairs and bounded evidence/OTP extensions. No paper experiments independently reproduced."
+  },
+  "merge_integration_2026_10_30": {
+    "research_pr": "https://github.com/systemslibrarian/cipher-museum/pull/15",
+    "research_head_before_integration": "6821e47b5f67acd41349ae89f7925e3460ca1eb0",
+    "book_companion_pr": "https://github.com/systemslibrarian/cipher-museum/pull/16",
+    "book_companion_merge_commit": "4600f1c97aea82bfbb78f86cd78e948badc63d8b",
+    "public_html_pages": 216,
+    "new_inventory_pages": [
+      "sealed-letter.html",
+      "the-book.html"
+    ],
+    "updated_existing_page_metadata": [
+      "challenges.html",
+      "teaching.html"
+    ],
+    "scope": "Reconcile the research-audit inventory with the already merged book companion. Read both new pages and the existing-page invitations; check synthetic clue arithmetic and all local links/fragments on the four pages. Preserve the original 214-page review checkpoint and its historical evidence limits.",
+    "word_count_method": "Whitespace-delimited static body text nodes with script/style contents excluded; includes hidden hints and case text.",
+    "static_local_link_checks": 69,
+    "limits": "Inventory coverage and static consistency are not new source verification, runtime/visual testing or deployment approval. The historical 214-page review was not expanded into a claim of 216 reviewed historical exhibits. Combined-source tests, audit export/package checks and deployment evidence are recorded separately."
   }
 }
