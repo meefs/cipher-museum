@@ -16,7 +16,7 @@
  */
 'use strict';
 
-const VERSION = 'cipher-museum-868b5b92';
+const VERSION = 'cipher-museum-15d5405a';
 
 const CORE = [
   '/',
@@ -35,6 +35,7 @@ const CORE = [
   '/js/multiple-anagramming.js',
   '/css/pad-experiments.css',
   '/js/pad-experiments.js',
+  '/js/secrecy-experiments.js',
   '/css/detective-workspaces.css',
   '/js/detective/workspaces.js',
   '/js/detective/playback.js',

@@ -86,6 +86,11 @@ var PRIMARY_SOURCES = new Set([
   // stated for, and the proof pipeline with its trusted compiler boundary.
   "https://eprint.iacr.org/2015/1060",
   "https://doi.org/10.1109/SP.2019.00005",
+  // 30 October2026 full-paper review: complete-formula cost refinement and
+  // platform-relative constant-time assurance (not new sister-project links).
+  "https://eprint.iacr.org/2026/2667",
+  "https://eprint.iacr.org/2025/435",
+  "https://arxiv.org/abs/2610.37454",
   // §151 pooled-entropy and unicity sections: the dataset whose keys are independently
   // generated per text, and the Z340 unicity analysis with its three language assumptions.
   "https://aclanthology.org/2026.resourceful-4.2/",

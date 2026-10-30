@@ -108,6 +108,38 @@
   </div>
 </section>
 
+<section class="panel pad-experiment" id="secrecy-model" aria-labelledby="secrecy-title"><div class="panel-body">
+  <h2 id="secrecy-title">Does a flat ciphertext histogram prove secrecy?</h2>
+  <p>Choose a source distribution, then encrypt one bit with an independent pad bit: <code>C = M XOR K</code>. This table enumerates the declared model; it does not estimate randomness from a sample. Values are rounded to five decimal places.</p>
+  <div class="pad-fields">
+    <div><label for="secrecy-prior">Plaintext prior: Pr(M = 0)</label><select id="secrecy-prior"><option value="0">0 — always M = 1</option><option value=".1">0.1</option><option value=".5" selected>0.5 — uniform messages</option><option value=".9">0.9</option><option value="1">1 — always M = 0</option></select></div>
+    <div><label for="secrecy-bias">Independent pad: Pr(K = 1)</label><select id="secrecy-bias"><option value="0">0 — fixed zero pad</option><option value=".1">0.1</option><option value=".25">0.25 — biased pad</option><option value=".5" selected>0.5 — uniform pad</option><option value=".75">0.75</option><option value="1">1 — fixed one pad</option></select></div>
+  </div>
+  <div class="pad-table" tabindex="0" role="region" aria-label="Joint plaintext, pad and ciphertext distribution"><table><caption>All four plaintext/pad outcomes</caption><thead><tr><th scope="col">M</th><th scope="col">K</th><th scope="col">C</th><th scope="col">Probability</th></tr></thead><tbody id="secrecy-joint"></tbody></table></div>
+  <p id="secrecy-result" role="status" aria-live="polite"></p>
+  <p><strong>Try uniform messages and a biased pad.</strong> The ciphertext histogram stays flat, yet the two possible messages produce different ciphertext distributions. The pairwise total-variation distance compares encrypting a chosen M = 0 with encrypting a chosen M = 1; it remains defined even when your selected prior never produces one of them. Mutual information is measured in bits and depends on the chosen prior. With a constant plaintext, it is zero even for identity encryption. That says nothing about other possible messages.</p>
+  <h3>Individually hidden, jointly revealing</h3>
+  <p>Now take two independent uniform 2-bit messages and a uniform 2-bit pad. Reusing that pad reveals <code>C₁ XOR C₂ = M₁ XOR M₂</code>, although each message viewed with its own ciphertext has zero mutual information.</p>
+  <label class="pad-hide" for="secrecy-fresh"><input id="secrecy-fresh" type="checkbox">Use fresh independent pads for the two messages</label>
+  <p id="secrecy-reuse-result" role="status" aria-live="polite"></p>
+  <p>A perfect, zero-error guarantee for every sequence of T messages requires a key space at least as large as the whole message space: <code>|K| ≥ |M|<sup>T</sup></code>, in the cited information-theoretic model. This is a key-resource bound, not an attack runtime. Pseudorandom expansion changes the guarantee to a computational one. The paper starts with an authenticated communication resource; raw OTP does not supply that authentication.</p>
+  <p class="pad-sources">Source: Junji Shikata, <a href="https://eprint.iacr.org/2012/383">Formalization of Information-Theoretic Security for Encryption and Key Agreement, Revisited</a>, revised 4 September 2012, PDF pp. 7–16 and 24–31. These are our finite worked examples of its distinctions. Its strong definitions have specified stand-alone/composable relationships; this is not a claim that secrecy never composes.</p>
+  <p><strong>Teaching limits:</strong> These are small declared probability models, not a secure communication tool, an entropy-source test or a certification of browser randomness. Decryption correctness, secrecy and authentication are separate questions. <noscript>JavaScript is needed to recalculate the table. A uniform independent pad gives pairwise distance 0; a reused 2-bit pad leaks 2 bits jointly in this example.</noscript></p>
+</div></section>
+
+<section class="panel pad-experiment" id="three-security-goals" aria-labelledby="goals-title"><div class="panel-body">
+  <h2 id="goals-title">Secrecy, useful changes and rejection</h2>
+  <p>The tampering experiment above asks whether an attacker can change what arrives. Two further questions matter: did the message stay secret, and could the receiver reject a forgery? A single “secure” label cannot answer all three.</p>
+  <div class="pad-table" tabindex="0" role="region" aria-label="Different security goals under a single-observation model"><table><caption>Different promises in explicitly bounded models</caption><thead><tr><th scope="col">Construction</th><th scope="col">Message secrecy</th><th scope="col">Controlled changes</th><th scope="col">Forgery rejection</th></tr></thead><tbody>
+    <tr><th scope="row">Ideal fixed-length OTP</th><td>Perfect for one message under its assumptions</td><td>A ciphertext delta causes the same plaintext delta</td><td>None</td></tr>
+    <tr><th scope="row">Secret affine permutation over GF(q), q &gt; 2</th><td>The cited paper's secrecy for two distinct messages</td><td>Meets that paper's perfect non-malleability definition</td><td>None: every ciphertext decrypts</td></tr>
+    <tr><th scope="row">Message plus an information-theoretic authentication tag</th><td>None: the message is sent openly</td><td>Approximate non-malleability follows under the cited definition and error bound</td><td>Bounded forgery probability under the stated key/use conditions</td></tr>
+  </tbody></table></div>
+  <details><summary>The model behind the affine row</summary><p>Choose uniform a ≠ 0 and b in GF(q), encrypt C = aM + b, and decrypt M = a<sup>−1</sup>(C − b). The paper studies deterministic injective secret-key encodings with one observed ciphertext. For equal message/ciphertext alphabets of size greater than 2, its perfect non-malleability is equivalent to uniform mapping of ordered <em>distinct</em> message pairs. Equal-message repetition still leaks equality. This is not ordinary unrestricted multi-message secrecy, a reusable-key transport guarantee or message authentication. With q = 5 there are 20 keys; every ciphertext is valid, so there is no rejection. The approximate definition also treats invalid outcomes explicitly. Short authentication keys do not provide n-bit plaintext confidentiality.</p></details>
+  <details><summary>Perfect secrecy can coexist with frequent forgeries</summary><p>Paterson and Stinson's tiny five-key splitting code uses randomized encodings for two sources. Every transmitted symbol has probability 1/5 regardless of the source, but an optimal substitution succeeds 1/2 of the time and impersonation 4/5. “Optimal” means optimal for these deliberately weak toy parameters. Uniform independent keys, equiprobable encoding and one observed message are part of the model. Their bare algebraic manipulation detection (AMD) code instead assumes a blind additive offset; it is not a general MAC for a visible message. The keyed group-development construction adds secret translation and additional conditions.</p></details>
+  <p class="pad-sources">Sources: Kawachi, Portmann and Tanaka, <a href="https://eprint.iacr.org/2011/092">Characterization of the relations between information-theoretic non-malleability, secrecy, and authenticity</a>, full version revised 15 August 2012, §§2–6 and Appendix B. Section 6 and Appendices A/B extend the ICITS 2011 published version. Paterson and Stinson, <a href="https://eprint.iacr.org/2021/534">Splitting authentication codes with perfect secrecy</a>, manuscript 24 August 2021, PDF pp. 3–7, 10–15 and 22. Archive posting alone does not establish peer review of an uploaded version.</p>
+</div></section>
+
 <div class="exhibit-layout">
   <div class="exhibit-main">
 
@@ -325,6 +357,7 @@ of the possible plaintexts.</pre></div>
 <footer></footer>
 <script src="../js/trust-labels.js"></script>
 <script src="../js/pad-experiments.js" defer></script>
+<script src="../js/secrecy-experiments.js" defer></script>
 <script src="../js/ciphers/all-engines.min.js"></script>
 <script src="../js/demo-loader.min.js"></script>
 <script src="../js/nav.js" defer></script>

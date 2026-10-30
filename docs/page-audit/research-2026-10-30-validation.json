@@ -1,0 +1,284 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "8b5dd46f8e5cff70bea87b3a93fc349af52f91e1",
+  "full_suite": {
+    "command": "npm test",
+    "passed": true,
+    "top_level_suites": 73,
+    "log_sha256": "600d670aa999b3e6c301ef7c3a51e3ad017276932f88b45c7579aee7cede202c"
+  },
+  "post_full_suite": {
+    "reason": "Final legacy-receipt provenance clarification and UA label wording",
+    "checks_passed": [
+      "node tests/test-research-audit-dom.js",
+      "node tests/test-research-evidence-20261030.js",
+      "node tests/test-sw-version.js",
+      "npm run lint:html (214 files,0errors)",
+      "git diff --check"
+    ]
+  },
+  "browser": {
+    "browser": "153.0.8010.0",
+    "checks": 31,
+    "results": [
+      {
+        "file": "ciphers/aes.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/ecdsa.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/one-time-pad.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/rsa.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/ua-8295.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/vernam.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "hall-of-foundations/entropy.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "hall-of-foundations/finite-fields.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "lab/evidence-workbench.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "lab/modern-attack-evidence.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "modern.html",
+        "width": 1280,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/aes.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/ecdsa.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/one-time-pad.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/rsa.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/ua-8295.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "ciphers/vernam.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "hall-of-foundations/entropy.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "hall-of-foundations/finite-fields.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "lab/evidence-workbench.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "lab/modern-attack-evidence.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "file": "modern.html",
+        "width": 375,
+        "http": 200,
+        "scriptErrors": 0,
+        "overflow": false
+      },
+      {
+        "interaction": "image crop/rotation + reverse region selection",
+        "width": 1280,
+        "rotation": 0,
+        "pixelDifferenceMax": 0
+      },
+      {
+        "interaction": "image crop/rotation + reverse region selection",
+        "width": 1280,
+        "rotation": 90,
+        "pixelDifferenceMax": 0
+      },
+      {
+        "interaction": "image crop/rotation + reverse region selection",
+        "width": 1280,
+        "rotation": 180,
+        "pixelDifferenceMax": 0
+      },
+      {
+        "interaction": "image crop/rotation + reverse region selection",
+        "width": 1280,
+        "rotation": 270,
+        "pixelDifferenceMax": 0
+      },
+      {
+        "interaction": "image crop/rotation + reverse region selection",
+        "width": 375,
+        "rotation": 0,
+        "pixelDifferenceMax": 0.006249999999994316
+      },
+      {
+        "interaction": "image crop/rotation + reverse region selection",
+        "width": 375,
+        "rotation": 90,
+        "pixelDifferenceMax": 0.012499999999818101
+      },
+      {
+        "interaction": "image crop/rotation + reverse region selection",
+        "width": 375,
+        "rotation": 180,
+        "pixelDifferenceMax": 0.012500000000045475
+      },
+      {
+        "interaction": "image crop/rotation + reverse region selection",
+        "width": 375,
+        "rotation": 270,
+        "pixelDifferenceMax": 0.012500000000045475
+      },
+      {
+        "interaction": "real worker + seed0 + bundle import/export + stale historical candidates",
+        "passed": true
+      }
+    ],
+    "scope": "Local Chromium only. No paper experiment/security proof reproduction."
+  },
+  "baseline_guards_shown_to_fail": [
+    "saturated path counts",
+    "inventory archive retention",
+    "duplicate supporting reference",
+    "search/model binding mutations",
+    "segmentation binding mutations",
+    "nonexistent revision ID",
+    "legacy unbound receipt",
+    "seed0/model/layer/candidate round trip",
+    "actual image display frame",
+    "legacy reported producer identity",
+    "new resource/evidence scope guards"
+  ],
+  "targeted_mutations": [
+    {
+      "mutation": "ignored pad bias",
+      "guard_failed": true
+    },
+    {
+      "mutation": "fresh pad accidentally reused",
+      "guard_failed": true
+    },
+    {
+      "mutation": "missing quantum bit-flip condition",
+      "guard_failed": true
+    },
+    {
+      "mutation": "distinguisher misreported as recovery",
+      "guard_failed": true
+    }
+  ],
+  "full_prose_reread": [
+    "ciphers/aes.html",
+    "ciphers/ecdsa.html",
+    "ciphers/one-time-pad.html",
+    "ciphers/rsa.html",
+    "ciphers/ua-8295.html",
+    "ciphers/vernam.html",
+    "hall-of-foundations/entropy.html",
+    "hall-of-foundations/finite-fields.html",
+    "lab/evidence-workbench.html",
+    "lab/modern-attack-evidence.html",
+    "modern.html"
+  ],
+  "generated_data_diff_review": "Counts/trust/artifact data unchanged; search index updates only the finite-fields preview. v1 evaluation changes solver SHA only; v2 regenerated with original fixtures/tasks/tolerances, retains0/39exact for both solvers.",
+  "limits": [
+    "Local Chromium only; no cross-browser or deployed-site certification.",
+    "No compiler/device/FPGA/Proteus/quantum estimator reproduction or independent formal proof verification.",
+    "Historical-source interpretation is not a production security audit.",
+    "Independent-work language evaluation, larger multi-seed comparisons and live LLM matched-input recipe remain unexecuted."
+  ]
+}
