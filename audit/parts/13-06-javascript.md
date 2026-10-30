@@ -1,6 +1,6 @@
 # javascript appendix 6
 
-Snapshot: `51fc1e02338ac0b05976a769f51b401bf3f5a171`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `aa8f9f7c9193064b11b590f79f3df7888a89cde8`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
 ## JavaScript — js/research-ui.js
 
@@ -9,8 +9,8 @@ Supporting source for public page behavior; presence of code does not prove that
 Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
 
 - Served/distributed path: `js/research-ui.js`
-- Served SHA-256: `08e08c4ece2db4bf019cb8ab04f7aed993789b6206f6ae8d9300643223f45352`
-- Readable-source SHA-256: `08e08c4ece2db4bf019cb8ab04f7aed993789b6206f6ae8d9300643223f45352`
+- Served SHA-256: `3d4d5a2928754cb6947e457bdbdef0a1027974ed1924d5c42d52bf3ebc3e04d9`
+- Readable-source SHA-256: `3d4d5a2928754cb6947e457bdbdef0a1027974ed1924d5c42d52bf3ebc3e04d9`
 
 
 ```javascript
@@ -20,7 +20,8 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
   const R = window.MuseumResearch, $ = id => document.getElementById(id);
   let doc = R.create(''), previous = null, worker = null, receipt = null, searchGeneration = 0;
   let imageURL = null, pendingImage = null, activeImage = null, languageSet = null, languageError = '';
-  let selectedClass = '', selectedOccurrences = new Set(), lastCandidate = '';
+  let activeRegionSpan = '';
+  let selectedClass = '', selectedOccurrences = new Set(), lastCandidate = '', retainedBundle = null;
   const sourceFields = ['artifactId','archive','shelfmark','folio','transcriber','date','method','url','imageName'];
   const BASELINE = { id: 'museum-prose-quadgram-v1', label: 'Museum modern-English baseline (disclosed: modern, museum prose)' };
   function status(message, error = false) { $('record-status').textContent = message; $('record-status').dataset.error = String(error); }
@@ -47,7 +48,8 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
 
   // ── Images and coordinate transforms ──────────────────────────────────────
   function currentImage() { return doc.images.find(i => i.id === $('image-select').value) || null; }
-  function paintRegion(region, image) {
+  function paintRegion(region, image, spanId = '') {
+    activeRegionSpan = spanId;
     const box = $('image-region');
     if (!region || !image || !imageURL || !activeImage || activeImage.id !== image.id) { box.hidden = true; return; }
     const placed = R.regionToDisplay(image, region);
@@ -56,19 +58,37 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
     ['left','top','width','height'].forEach((f, i) => { box.style[f] = (placed.box[i] * 100) + '%'; });
     box.dataset.clipped = String(placed.clipped);
   }
+  $('image-region').onclick = guard(() => {
+    if (!activeRegionSpan) return;
+    const info = R.regionOccurrences(doc, activeRegionSpan);
+    if (info.classes.length) {
+      selectedClass = info.classes[0].id; selectedOccurrences = new Set(info.classes[0].occurrences);
+      renderInventory();
+    }
+    status('Highlighted region covers characters ' + (info.start + 1) + '–' + info.end +
+      ' of source revision ' + info.revision + ': “' + info.literal + '”.');
+  });
   function applyView(image) {
-    const img = $('source-image');
-    if (!image) { img.style.transform = ''; img.style.clipPath = ''; return; }
-    const c = image.crop;
-    // The crop is expressed as a clip of the whole image, so recorded region
-    // percentages and the visible picture stay in the same coordinate space.
-    img.style.clipPath = 'inset(' + (100 * c[1]) + '% ' + (100 * (1 - c[0] - c[2])) + '% ' + (100 * (1 - c[1] - c[3])) + '% ' + (100 * c[0]) + '%)';
-    img.style.transform = 'rotate(' + image.rotation + 'deg)';
+    if (!image) return;
+    const c = image.crop, a = R.displayAspect(image);
+    const x = c[0] * image.width, y = c[1] * image.height;
+    const w = c[2] * image.width, h = c[3] * image.height;
+    // SVG crops/rescales the image into the SAME frame as the normalized overlay.
+    const matrices = { 0:[1,0,0,1,-x,-y], 90:[0,1,-1,0,h+y,-x],
+      180:[-1,0,0,-1,w+x,h+y], 270:[0,-1,1,0,-y,w+x] };
+    $('image-view').setAttribute('viewBox', '0 0 ' + a.width + ' ' + a.height);
+    $('image-view').style.aspectRatio = a.width + ' / ' + a.height;
+    const pixels = $('image-pixels');
+    pixels.setAttribute('href', imageURL || '');
+    pixels.setAttribute('width', image.width); pixels.setAttribute('height', image.height);
+    pixels.setAttribute('transform', 'matrix(' + matrices[image.rotation].join(' ') + ')');
+    $('image-region').hidden = true; // Selection must be repainted after a view change.
   }
   function clearImage() {
     if (imageURL) URL.revokeObjectURL(imageURL);
     imageURL = null; activeImage = null; pendingImage = null;
     $('source-image').removeAttribute('src'); $('image-wrap').hidden = true;
+    $('image-pixels').removeAttribute('href');
     $('image-file').value = ''; $('image-register').disabled = true; $('image-apply-view').disabled = true;
     $('image-region').hidden = true;
   }
@@ -82,11 +102,16 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
     if (!['image/png','image/jpeg','image/webp'].includes(file.type) || file.size > 8000000) { note('image-status','Choose a PNG, JPEG or WebP image under 8 MB.',true); return; }
     if (imageURL) URL.revokeObjectURL(imageURL);
     imageURL = URL.createObjectURL(file);
+    activeImage = null;
+    const openedURL = imageURL;
     const img = $('source-image');
-    img.src = imageURL; $('image-wrap').hidden = false;
+    $('image-wrap').hidden = false;
     const hash = await sha256(file);
+    if (openedURL !== imageURL) return;
     img.onload = () => {
+      if (openedURL !== imageURL) return;
       pendingImage = { name: file.name, width: img.naturalWidth, height: img.naturalHeight, sha256: hash };
+      applyView({ ...pendingImage, id: 'local-preview', crop: [0,0,1,1], rotation: 0 });
       $('image-register').disabled = false; $('image-apply-view').disabled = false;
       const known = doc.images.find(i => i.name === file.name);
       if (known && hash && known.sha256 && known.sha256 !== hash) {
@@ -99,6 +124,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
       }
       render();
     };
+    img.src = openedURL;
   };
   $('source-image').onerror = () => { clearImage(); note('image-status','The selected file could not be decoded as an image.',true); };
   $('image-register').onclick = guard(() => {
@@ -155,7 +181,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
         const region = o.regions[0];
         if (region) {
           const image = doc.images.find(i => i.id === region.imageId) || doc.images.find(i => i.name === region.imageName);
-          paintRegion(region.region, image);
+          paintRegion(region.region, image, region.span);
           note('inventory-status','Occurrence ' + o.index + ' is linked to span ' + region.span + ' on ' + (image ? image.id : region.imageName) +
             (activeImage && image && activeImage.id === image.id ? '. Its region is highlighted above.' : '. Open that image to see the region.'));
         } else {
@@ -171,6 +197,12 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
     const select = $('class-select'), merge = $('merge-with');
     select.replaceChildren(); merge.replaceChildren();
     $('inventory-history').textContent = inv ? inv.history.map(h => h.step + '. ' + h.op + ' — ' + h.detail).join('\n\n') : '';
+    const archive = $('inventory-archive'); archive.replaceChildren();
+    doc.inventoryArchive.forEach((old, i) => {
+      const details = el('details', '', archive);
+      el('summary', 'Earlier inventory ' + (i + 1) + ' · source revision ' + old.revision + ' · ' + old.classes.length + ' classes', details);
+      el('pre', JSON.stringify(old, null, 2), details);
+    });
     if (!inv) { $('occurrence-list').replaceChildren(); return; }
     inv.classes.forEach(c => {
       const o = el('option', c.id + ' · ' + c.label + ' · ' + c.occurrences.length + ' occurrence(s)', select); o.value = c.id;
@@ -273,19 +305,24 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
           if (!activeImage || activeImage.id !== image.id) {
             $('image-region').hidden = true;
             status('Open ' + image.name + ' under “Register the source images” to display this region. A matching filename is not an authenticity check.');
-          } else { paintRegion(s.region, image); status('Region displayed on ' + image.id + '.'); }
+          } else { paintRegion(s.region, image, s.id); status('Region displayed on ' + image.id + '.'); }
           const classes = back.classes.map(c => c.id + ' (' + c.label + ', ' + c.occurrences.length + ' occurrence(s) here)').join('; ');
           el('p','This region covers characters ' + (back.start + 1) + '–' + back.end + ' of revision ' + back.revision + ': “' + back.literal + '”' +
             (classes ? '. Symbol classes: ' + classes : '. No inventory covers this revision yet.'), card);
         });
       }
     });
-    const layers = $('layer-list'), parent = $('layer-parent'); layers.replaceChildren(); parent.replaceChildren();
-    const op = el('option','Source revision ' + doc.revision,parent); op.value = 'revision-' + doc.revision;
+    const layers = $('layer-list'), parent = $('layer-parent'), keptParent = parent.value;
+    layers.replaceChildren(); parent.replaceChildren();
+    // Earlier selections can be restored/read, but new layers belong to the current revision.
+    [doc.revisions.at(-1), ...doc.revisions.slice(0,-1)].forEach(r => {
+      const op = el('option','Source revision ' + r.id,parent); op.value = 'revision-' + r.id; op.disabled = r.id !== doc.revision;
+    });
     doc.layers.forEach(l => {
-      if (l.revision === doc.revision) { const o = el('option',l.id + ' (' + l.kind + ')',parent); o.value = l.id; }
+      const o = el('option',l.id + ' (' + l.kind + ')',parent); o.value = l.id; o.disabled = l.revision !== doc.revision;
       const d = el('details','',layers); el('summary',l.id + ' · ' + l.kind + ' · revision ' + l.revision,d); el('p','Derived from ' + l.parent + '. ' + l.note,d); el('pre',l.text,d);
     });
+    if (Array.from(parent.options).some(o => o.value === keptParent && !o.disabled)) parent.value = keptParent;
     $('relations-list').textContent = JSON.stringify({keys:doc.keys,relations:doc.relations},null,2);
     renderInventory(); renderHypotheses();
   }
@@ -371,8 +408,9 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
     const open=segmentation.ambiguity.filter(a=>!a.forced&&!a.impossible);
     el('p',open.length?open.length+' of '+segmentation.ambiguity.length+' interior positions are genuinely ambiguous.':'No interior position is ambiguous under this key and these locks.',amb);
     el('pre',segmentation.ambiguity.map(a=>'after digit '+a.position+': '+
-      (a.impossible?'impossible':a.forced?'forced':a.pathsCutting+' of '+segmentation.total+' paths cut here')+
+      (a.impossible?'impossible':a.forced?'forced':segmentation.totalCapped?'ambiguous (path counts capped)':a.pathsCutting+' of '+segmentation.total+' paths cut here')+
       (a.locked?' (locked)':'')+(a.startingCodes.length?' · codes starting here: '+a.startingCodes.join(', '):'')).join('\n'),amb);
+    rememberResults('segmentation');
   });
 
   // ── Homophonic search and language comparison ─────────────────────────────
@@ -396,6 +434,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
       if(event.data.progress){$('search-status').textContent='Searching: '+event.data.progress.step+' / '+event.data.progress.steps+' steps.';return;}
       const r=event.data.result;worker.terminate();worker=null;$('search-run').disabled=false;$('search-cancel').disabled=true;
       receipt={version:2,kind:'cipher-museum-homophonic-search',raw,algorithm,model,options,result:r,elapsedMs:Math.round(performance.now()-started)};
+      rememberResults('search');
       lastCandidate=r.candidates[0]?r.candidates[0].plaintext:'';
       $('search-export').disabled=false;
       $('search-status').textContent=(r.task==='known-key-application'?'Known-key application: all symbols were locked.':'Search completed; these are unverified candidates.')+
@@ -436,25 +475,70 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
 
   // ── Investigation bundle ──────────────────────────────────────────────────
   function bundleState() {
-    return { title: $('bundle-title').value, created: new Date().toISOString().slice(0,10),
+    const saved = retainedBundle;
+    const keys = doc.keys.map(k => ({ at: doc.source.date || '', reason: 'Saved key ' + k.id + ': ' + k.title,
+      locks: Object.fromEntries(k.entries.filter(e => e.type === 'letter' && e.values.length === 1 && /^[A-Z]$/.test(e.values[0])).map(e => [e.symbol, e.values[0]])) }));
+    const keyRevisions = (saved ? saved.keyRevisions : []).slice();
+    keys.forEach((k,i) => {
+      if (!(saved && saved.evidence.keys.some(old => old.id === doc.keys[i].id)) &&
+        !keyRevisions.some(old => JSON.stringify(old) === JSON.stringify(k))) keyRevisions.push(k);
+    });
+    return { title: $('bundle-title').value, created: saved ? saved.created : new Date().toISOString().slice(0,10),
+      sourceFingerprint: saved ? saved.sourceFingerprint : undefined, legacyUnbound: saved ? saved.legacyUnbound : false,
       scoringModel: $('search-model').value, solver: $('search-algorithm').value,
       selectedLayer: $('layer-parent').value || ('revision-' + doc.revision),
-      keyRevisions: doc.keys.map(k => ({ at: doc.source.date || '', reason: 'Saved key ' + k.id + ': ' + k.title,
-        locks: Object.fromEntries(k.entries.filter(e => e.type === 'letter' && e.values.length === 1 && /^[A-Z]$/.test(e.values[0])).map(e => [e.symbol, e.values[0]])) })),
-      search: receipt ? { algorithm: receipt.algorithm, raw: receipt.raw, seed: receipt.options.seed || 0,
-        steps: receipt.options.steps || 1, beam: receipt.options.beam || 0, locks: receipt.options.locks || {},
-        elapsedMs: receipt.elapsedMs } : null,
-      segmentation: segmentation ? { digits: $('segment-digits').value, key: JSON.parse($('segment-key').value),
-        boundaries: segmentation.boundaries, budget: Number($('segment-budget').value),
-        scoring: $('segment-score').value, lineBreaks: segmentation.lineBreaks } : null,
+      keyRevisions,
+      search: receipt || (saved && saved.search) ? { ...(saved && saved.search || {}),
+        ...(saved && saved.search && !saved.search.producedWith ? { producedWith: saved.tool } : {}),
+        algorithm: $('search-algorithm').value, raw: $('search-raw').value, seed: Number($('search-seed').value),
+        steps: Number($('search-steps').value), beam: Number($('search-beam').value), locks: JSON.parse($('search-locks').value),
+        elapsedMs: receipt ? receipt.elapsedMs : saved.search.elapsedMs } : null,
+      segmentation: segmentation || (saved && saved.segmentation) ? { ...(saved && saved.segmentation || {}),
+        ...(saved && saved.segmentation && !saved.segmentation.producedWith ? { producedWith: saved.tool } : {}),
+        digits: $('segment-digits').value, key: JSON.parse($('segment-key').value),
+        boundaries: $('segment-locks').value.trim() ? $('segment-locks').value.split(',').map(x=>Number(x.trim())) : [],
+        budget: Number($('segment-budget').value), scoring: $('segment-score').value, lineBreaks: $('segment-lines').value } : null,
       candidates: receipt ? receipt.result.candidates.slice(0,5).map((c,i) => ({ plaintext: c.plaintext, score: c.score, key: c.key,
-        chosen: i === 0, provenance: receipt.algorithm + ' · ' + receipt.model + ' · ' + (receipt.options.seed !== undefined ? 'seed ' + receipt.options.seed : 'deterministic') })) : [] };
+        chosen: i === 0, provenance: receipt.algorithm + ' · ' + receipt.model + ' · ' + (receipt.options.seed !== undefined ? 'seed ' + receipt.options.seed : 'deterministic') })) : saved ? saved.candidates : [] };
+  }
+  function rememberResults(kind) {
+    const state = bundleState();
+    delete state.sourceFingerprint; state.legacyUnbound = false;
+    delete state[kind].configurationFingerprint; delete state[kind].inputFingerprint;
+    delete state[kind].producedWith;
+    retainedBundle = R.bundle(doc, state);
+  }
+  function restoreBundle(b) {
+    stopSearch('Imported investigation: recorded candidates are retained; rerun to reproduce them.');
+    invalidateSegments(); previous = doc; doc = b.evidence; retainedBundle = b;
+    $('restore-record').disabled = false; $('bundle-title').value = b.title;
+    clearImage(); selectedClass = ''; selectedOccurrences.clear();
+    if (b.search) {
+      $('search-raw').value = b.search.raw; $('search-locks').value = JSON.stringify(b.search.locks);
+      $('search-algorithm').value = b.search.algorithm;
+      $('search-seed').value = String(b.search.seed); $('search-steps').value = String(b.search.steps);
+      $('search-beam').value = String(b.search.beam);
+    }
+    if (b.segmentation) {
+      $('segment-digits').value = b.segmentation.digits; $('segment-key').value = JSON.stringify(b.segmentation.key);
+      $('segment-locks').value = b.segmentation.boundaries.join(', '); $('segment-budget').value = String(b.segmentation.budget);
+      $('segment-score').value = b.segmentation.scoring; $('segment-lines').value = b.segmentation.lineBreaks;
+    }
+    const model = b.tool.scoringModel || BASELINE.id;
+    if (!Array.from($('search-model').options).some(o => o.value === model)) {
+      const option = el('option', 'Saved model: ' + model + ' (not loaded)', $('search-model'));
+      option.value = model; option.dataset.saved = 'true';
+    }
+    $('search-model').value = model;
+    render();
+    if (b.selectedLayer) $('layer-parent').value = b.selectedLayer;
+    lastCandidate = b.candidates.length ? b.candidates[0].plaintext : '';
   }
   function describeBundle(b) {
     const flags = Object.entries(b.stale).filter(([,v]) => v).map(([k]) => k);
     $('bundle-state').textContent = JSON.stringify({ title: b.title, created: b.created, tool: b.tool,
       selectedLayer: b.selectedLayer, keyRevisions: b.keyRevisions.length, search: b.search,
-      segmentation: b.segmentation, candidates: b.candidates.length, images: b.images, stale: b.stale }, null, 2);
+      segmentation: b.segmentation, candidates: b.candidates.length, images: b.images, legacyUnbound: b.legacyUnbound, stale: b.stale }, null, 2);
     return flags;
   }
   $('bundle-export').onclick = guard(() => {
@@ -470,22 +554,11 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
       if (file.size > 1500000) throw new Error('A bundle is limited to 1,500,000 bytes.');
       const b = R.openBundle(JSON.parse(await file.text()));
       // Only once the bundle validates is the current record replaced.
-      previous = doc; doc = b.evidence; $('restore-record').disabled = false;
-      $('bundle-title').value = b.title; clearImage(); selectedClass=''; selectedOccurrences.clear();
-      if (b.search) { $('search-raw').value = b.search.raw; $('search-locks').value = JSON.stringify(b.search.locks);
-        $('search-algorithm').value = b.search.algorithm === 'beam' ? 'beam' : 'annealing';
-        if (b.search.seed) $('search-seed').value = String(b.search.seed);
-        if (b.search.steps) $('search-steps').value = String(b.search.steps);
-        if (b.search.beam) $('search-beam').value = String(b.search.beam); }
-      if (b.segmentation) { $('segment-digits').value = b.segmentation.digits; $('segment-key').value = JSON.stringify(b.segmentation.key);
-        $('segment-locks').value = b.segmentation.boundaries.join(', '); $('segment-budget').value = String(b.segmentation.budget);
-        $('segment-score').value = b.segmentation.scoring; $('segment-lines').value = b.segmentation.lineBreaks; }
-      stopSearch('Imported investigation: run the search again to reproduce its candidates.');
-      invalidateSegments(); render();
+      restoreBundle(b);
       const flags = describeBundle(b);
       note('bundle-status','Investigation restored: evidence record, selected layer, ' + b.keyRevisions.length + ' key revision(s), solver settings and ' +
         b.candidates.length + ' recorded candidate(s). ' + (flags.length
-          ? 'STALE: ' + flags.join(', ') + '. Those results no longer match their inputs and must be recomputed before they mean anything.'
+          ? 'STALE: ' + flags.join(', ') + '. These receipts lack a complete matching binding or no longer match the inputs. Retain them as historical results; recompute before reuse.'
           : 'No stale results. Reproducing a candidate still needs the same solver and scoring-model build, not only the same seed.'), flags.length > 0);
     } catch (e) { note('bundle-status','Bundle rejected; your current record was not touched. ' + e.message, true); }
     this.value = '';
@@ -537,12 +610,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
     if (!key) throw new Error('Choose an example first.');
     const made = EXAMPLES[key]();
     const b = R.bundle(made.doc, made.state);
-    previous = doc; doc = b.evidence; $('restore-record').disabled = false;
-    $('bundle-title').value = b.title; clearImage(); selectedClass=''; selectedOccurrences.clear();
-    if (b.segmentation) { $('segment-digits').value = b.segmentation.digits; $('segment-key').value = JSON.stringify(b.segmentation.key);
-      $('segment-locks').value = b.segmentation.boundaries.join(', '); $('segment-score').value = b.segmentation.scoring;
-      $('segment-lines').value = b.segmentation.lineBreaks; }
-    stopSearch('Example loaded. No search has been run.'); invalidateSegments(); render(); describeBundle(b);
+    restoreBundle(b); describeBundle(b);
     note('bundle-status', made.message);
   });
 
@@ -558,6 +626,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
       .then(data => {
         languageSet = window.MuseumResearchLanguage.buildProfiles(data);
         languageSet.profiles.forEach(p => {
+          Array.from(modelSelect.options).filter(o => o.value === p.id && o.dataset.saved).forEach(o => o.remove());
           el('option', p.language + ' — ' + p.period + ' (' + p.id + ')', modelSelect).value = p.id;
         });
       }).catch(e => { languageError = e.message; });
@@ -819,6 +888,74 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
     base: BASE
   };
 })();
+```
+
+
+## JavaScript — js/secrecy-experiments.js
+
+Supporting source for public page behavior; presence of code does not prove that every branch was exercised.
+
+Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
+
+- Served/distributed path: `js/secrecy-experiments.js`
+- Served SHA-256: `baeeea3ac4c134d997f354f9a8ce1392cc7fb515aad850c4fc2420ca04d21077`
+- Readable-source SHA-256: `baeeea3ac4c134d997f354f9a8ce1392cc7fb515aad850c4fc2420ca04d21077`
+
+
+```javascript
+/* Finite probability models for the OTP exhibit, not an encryption tool. */
+'use strict';
+(function(global){
+  function distribution(rows,left,right){
+    const joint=new Map(),a=new Map(),b=new Map();
+    for(const row of rows){const x=left(row),y=right(row),key=JSON.stringify([x,y]);
+      joint.set(key,(joint.get(key)||0)+row.p);a.set(x,(a.get(x)||0)+row.p);b.set(y,(b.get(y)||0)+row.p);}
+    let information=0,distance=0;
+    for(const [x,px] of a)for(const [y,py] of b){
+      const p=joint.get(JSON.stringify([x,y]))||0,independent=px*py;
+      if(p>0)information+=p*Math.log2(p/independent);
+      distance+=Math.abs(p-independent)/2;
+    }
+    return {information:Math.abs(information)<1e-12?0:information,distance};
+  }
+  function binary(priorZero,padOne){
+    if(![priorZero,padOne].every(x=>Number.isFinite(x)&&x>=0&&x<=1))throw new Error('Probabilities must be between0 and1.');
+    const rows=[];
+    for(let m=0;m<2;m++)for(let k=0;k<2;k++)rows.push({m,k,c:m^k,p:(m?1-priorZero:priorZero)*(k?padOne:1-padOne)});
+    const ciphertext=[0,1].map(c=>rows.filter(r=>r.c===c).reduce((sum,r)=>sum+r.p,0));
+    const posteriorZero=ciphertext.map((p,c)=>p?rows.filter(r=>r.m===0&&r.c===c).reduce((sum,r)=>sum+r.p,0)/p:null);
+    return {rows,ciphertext,posteriorZero,information:distribution(rows,r=>r.m,r=>r.c).information,
+      pairwiseDistance:Math.abs(1-2*padOne),decryptionError:0};
+  }
+  function twoMessages(fresh){
+    const rows=[],count=fresh?256:64;
+    for(let m1=0;m1<4;m1++)for(let m2=0;m2<4;m2++)for(let k1=0;k1<4;k1++){
+      for(let j=0;j<(fresh?4:1);j++){const k2=fresh?j:k1;rows.push({m1,m2,c1:m1^k1,c2:m2^k2,p:1/count});}
+    }
+    const joint=distribution(rows,r=>r.m1+','+r.m2,r=>r.c1+','+r.c2);
+    return {count,singleInformation:distribution(rows,r=>r.m1,r=>r.c1).information,
+      jointInformation:joint.information,jointDistance:joint.distance};
+  }
+  const api={binary,twoMessages};
+  if(typeof module!=='undefined'&&module.exports)module.exports=api;
+  global.MuseumSecrecy=api;
+  if(typeof document==='undefined'||!document.getElementById('secrecy-model'))return;
+  const $=id=>document.getElementById(id),fmt=x=>x===null?'undefined (impossible observation)':x.toFixed(5);
+  function render(){
+    const r=binary(Number($('secrecy-prior').value),Number($('secrecy-bias').value));
+    $('secrecy-joint').replaceChildren();
+    r.rows.forEach(row=>{const tr=document.createElement('tr');[row.m,row.k,row.c,fmt(row.p)].forEach(value=>{const td=document.createElement('td');td.textContent=String(value);tr.appendChild(td);});$('secrecy-joint').appendChild(tr);});
+    $('secrecy-result').textContent='Ciphertext probabilities: C=0: '+fmt(r.ciphertext[0])+', C=1: '+fmt(r.ciphertext[1])+'. '+
+      'Pr(M=0 | C=0): '+fmt(r.posteriorZero[0])+'. Pr(M=0 | C=1): '+fmt(r.posteriorZero[1])+'. '+
+      'Mutual information I(M;C): '+fmt(r.information)+' bits. Pairwise ciphertext total-variation distance: '+fmt(r.pairwiseDistance)+'. Decryption error:0.';
+    const t=twoMessages($('secrecy-fresh').checked);
+    $('secrecy-reuse-result').textContent=t.count+' equally likely message/message/pad outcomes. '+
+      'Single-message I(M₁;C₁): '+fmt(t.singleInformation)+' bits. Joint I((M₁,M₂);(C₁,C₂)): '+fmt(t.jointInformation)+' bits. '+
+      'Distance between the joint message/ciphertext-pair distribution and the product of its marginals: '+fmt(t.jointDistance)+'.';
+  }
+  ['secrecy-prior','secrecy-bias','secrecy-fresh'].forEach(id=>$(id).addEventListener('change',render));
+  render();
+})(typeof window!=='undefined'?window:globalThis);
 ```
 
 
@@ -1111,8 +1248,8 @@ Supporting source for public page behavior; presence of code does not prove that
 Any ebook URL is replaced by a stable omission ID. Redacted code is for inspection, not execution; the hashes below identify the unmodified source files.
 
 - Served/distributed path: `sw.js`
-- Served SHA-256: `c9e4f5cebc6f9f2befce23c17e95c91e10f2fc517d4a6ed0a7a9f9c645a1005a`
-- Readable-source SHA-256: `c9e4f5cebc6f9f2befce23c17e95c91e10f2fc517d4a6ed0a7a9f9c645a1005a`
+- Served SHA-256: `b8bd5766dd08d711294611ae0b65233504060f2d3efa1a72efbee22e848b88ec`
+- Readable-source SHA-256: `b8bd5766dd08d711294611ae0b65233504060f2d3efa1a72efbee22e848b88ec`
 
 
 ```javascript
@@ -1134,7 +1271,7 @@ Any ebook URL is replaced by a stable omission ID. Redacted code is for inspecti
  */
 'use strict';
 
-const VERSION = 'cipher-museum-868b5b92';
+const VERSION = 'cipher-museum-15d5405a';
 
 const CORE = [
   '/',
@@ -1153,6 +1290,7 @@ const CORE = [
   '/js/multiple-anagramming.js',
   '/css/pad-experiments.css',
   '/js/pad-experiments.js',
+  '/js/secrecy-experiments.js',
   '/css/detective-workspaces.css',
   '/js/detective/workspaces.js',
   '/js/detective/playback.js',

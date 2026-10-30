@@ -1,8 +1,8 @@
 # Source register and recorded access limits
 
-Snapshot: `51fc1e02338ac0b05976a769f51b401bf3f5a171`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
+Snapshot: `aa8f9f7c9193064b11b590f79f3df7888a89cde8`. Part of the Cipher Museum independent audit export. Read REVIEW_PROMPT.md and README.md first. Prior review notes are not independent proof.
 
-These 173 identities and reading scopes come from the prior review ledger. They are not the underlying books/papers and are not proof that a particular claim is established.
+These 185 identities and reading scopes come from the prior review ledger. They are not the underlying books/papers and are not proof that a particular claim is established.
 
 ## HAC-1997 — Handbook of Applied Cryptography
 
@@ -2790,5 +2790,262 @@ These 173 identities and reading scopes come from the prior review ledger. They 
     "SBT algorithm page: eleven steps over LFSRs, bit and box permutations, S-boxes and nibble switches; 64-bit user key; keystream generated a byte at a time; the LFSR stepped 64 times with primitive polynomial 1 + x^32 + x^63."
   ],
   "scope": "Public secondary source used to corroborate device lineage, firmware version/date/checksum coincidence and hardware details from the hardware side, alongside the primary preprint. Not a peer-reviewed publication."
+}
+```
+
+## RESEARCH-CL642 — Faster complete formulas and their application to curves with efficient endomorphisms
+
+```json
+{
+  "title": "Faster complete formulas and their application to curves with efficient endomorphisms",
+  "authors": [
+    "Diego F. Aranha",
+    "Paulo L. Barreto"
+  ],
+  "year": 2026,
+  "url": "https://eprint.iacr.org/2026/2667",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–13, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "aac8d7bc0940755c3031b21a742257aa1234344c81da9e4d2bb02e594671355a",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md"
+}
+```
+
+## RESEARCH-CL646 — Shor's algorithm compiled on cat qubits: 22 593 qubits for RSA-2048 in 3.14 days
+
+```json
+{
+  "title": "Shor's algorithm compiled on cat qubits: 22 593 qubits for RSA-2048 in 3.14 days",
+  "authors": [
+    "Axel Pappalardo",
+    "Dahmun Goudarzi",
+    "Victor Hertz",
+    "Hugo Jacinto",
+    "Larissa Kroell",
+    "André Schrottenloher",
+    "Peter Shanahan",
+    "Élie Gouzien",
+    "Rémi de La Vieuville",
+    "Vivien Londe"
+  ],
+  "year": 2026,
+  "url": "https://eprint.iacr.org/2026/2665",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–128, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "bb380e6919c9e82c485438b94e19766954256c3bdc383d6882b13d20208ff023",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+  "version_note": "Preprint received2026-10-28. Projected physical resources under stated architecture, noise, bit-flip and retry assumptions; not measured factoring."
+}
+```
+
+## RESEARCH-CL648 — SecDMP: Provably Secure Data Memory-Dependent Prefetching (Extended Version)
+
+```json
+{
+  "title": "SecDMP: Provably Secure Data Memory-Dependent Prefetching (Extended Version)",
+  "authors": [
+    "Jens Sprengers",
+    "Marton Bognar",
+    "Lesly-Ann Daniel",
+    "Frank Piessens"
+  ],
+  "year": 2026,
+  "url": "https://arxiv.org/abs/2610.37454",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–32, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "5aa5a5fc574776d13342aa9b90811bca5d88709193795ffbb9e05a644b806932",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+  "version_note": "Extended arXivv1 submitted2026-10-27; official author comment reports acceptedNDSS2027. Baseline-relative formal abstraction and research-core simulations."
+}
+```
+
+## RESEARCH-CL655 — Constant-Time Code: The Pessimist Case
+
+```json
+{
+  "title": "Constant-Time Code: The Pessimist Case",
+  "authors": [
+    "Thomas Pornin"
+  ],
+  "year": 2025,
+  "url": "https://eprint.iacr.org/2025/435",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–23, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "e3f38b155dc221a7328dc49c053639dea46215f75f79552c7a62123efd62b578",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md"
+}
+```
+
+## RESEARCH-CL686 — Implementing 4-Dimensional GLV Method on GLS Elliptic Curves with j-Invariant 0
+
+```json
+{
+  "title": "Implementing 4-Dimensional GLV Method on GLS Elliptic Curves with j-Invariant 0",
+  "authors": [
+    "Zhi Hu",
+    "Patrick Longa",
+    "Maozhi Xu"
+  ],
+  "year": 2011,
+  "url": "https://eprint.iacr.org/2011/315",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–16, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "f544d425767a15e1c6ee0ad2b0c65b16916c8c9711d3ef83a41bcf7464aa4afd",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md"
+}
+```
+
+## RESEARCH-CL687 — Efficient Arithmetic on Subfield Elliptic Curves over Small Odd Characteristics
+
+```json
+{
+  "title": "Efficient Arithmetic on Subfield Elliptic Curves over Small Odd Characteristics",
+  "authors": [
+    "Keisuke Hakuta",
+    "Hisayoshi Sato",
+    "Tsuyoshi Takagi"
+  ],
+  "year": 2005,
+  "url": "https://eprint.iacr.org/2005/454",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–20, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "1e1e0461c5351fe4927b227f85d7952386ce6f0fd0b5123dfca00bf8cc916e8f",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md"
+}
+```
+
+## RESEARCH-CL688 — Scalar Multiplication in Elliptic Curve Cryptosystems: Pipelining with Pre-computations
+
+```json
+{
+  "title": "Scalar Multiplication in Elliptic Curve Cryptosystems: Pipelining with Pre-computations",
+  "authors": [
+    "Pradeep Kumar Mishra"
+  ],
+  "year": 2004,
+  "url": "https://eprint.iacr.org/2004/191",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–15, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "9f60166b6d2f37b575c74eb0cfcb4f068e217339354416c4d339ccee8af70b4a",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md"
+}
+```
+
+## RESEARCH-CL952 — Splitting authentication codes with perfect secrecy: new results, constructions and connections with algebraic manipulation detection codes
+
+```json
+{
+  "title": "Splitting authentication codes with perfect secrecy: new results, constructions and connections with algebraic manipulation detection codes",
+  "authors": [
+    "Maura B.  Paterson",
+    "Douglas R.  Stinson"
+  ],
+  "year": 2021,
+  "url": "https://eprint.iacr.org/2021/534",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–24, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "d8e7ad4eeebc7742737d60ebcc56df98edd309020fed6733eed8162cfdbe2ca7",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md"
+}
+```
+
+## RESEARCH-CL967 — Formalization of Information-Theoretic Security for Encryption and Key Agreement, Revisited
+
+```json
+{
+  "title": "Formalization of Information-Theoretic Security for Encryption and Key Agreement, Revisited",
+  "authors": [
+    "Junji Shikata"
+  ],
+  "year": 2012,
+  "url": "https://eprint.iacr.org/2012/383",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–32, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "792f2738ceaeb7556e6c89e4274d2e8ce964bab8557ab798d5a51082291ccb05",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md"
+}
+```
+
+## RESEARCH-CL968 — Characterization of the relations between information-theoretic non-malleability, secrecy, and authenticity
+
+```json
+{
+  "title": "Characterization of the relations between information-theoretic non-malleability, secrecy, and authenticity",
+  "authors": [
+    "Akinori Kawachi",
+    "Christopher Portmann",
+    "Keisuke Tanaka"
+  ],
+  "year": 2011,
+  "url": "https://eprint.iacr.org/2011/092",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–28, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "bc36f8dd1fc3c674d069717ab55f36a96364ce6e79638fbf632cc71409b53447",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md",
+  "version_note": "Full version revised2012-08-15. Section6 and AppendicesA/B are additional to the ICITS2011 published version; exact theorem/model and alphabet conditions apply."
+}
+```
+
+## RESEARCH-CL980 — Software mitigations to hedge AES against cache-based software side channel vulnerabilities
+
+```json
+{
+  "title": "Software mitigations to hedge AES against cache-based software side channel vulnerabilities",
+  "authors": [
+    "Ernie Brickell",
+    "Gary Graunke",
+    "Michael Neve",
+    "Jean-Pierre Seifert"
+  ],
+  "year": 2006,
+  "url": "https://eprint.iacr.org/2006/052",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–17, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "e944507ec72d8d09789533de375cc2f5df0fe83d05f83778cf870a9cc3f5fa77",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md"
+}
+```
+
+## RESEARCH-CL984 — Electromagnetic Side Channels of an FPGA Implementation of AES
+
+```json
+{
+  "title": "Electromagnetic Side Channels of an FPGA Implementation of AES",
+  "authors": [
+    "Vincent Carlier",
+    "Hervé Chabanne",
+    "Emmanuelle Dottax",
+    "Hervé Pelletier"
+  ],
+  "year": 2004,
+  "url": "https://eprint.iacr.org/2004/145",
+  "passages_read": [
+    "Full saved manuscript: PDF pages1–16, including body, proof-bearing sections, appendices and references."
+  ],
+  "scope": "Full-text review for the30October2026 audit; not independent proof verification, paper-experiment reproduction or production assurance. Specialist CL686/687/688 are not adopted into Museum engines.",
+  "saved_pdf_sha256": "90db78391ccef289aebab2cb9db96dd52a6caf08e5664ab4f49de2343516eb84",
+  "review_record": "docs/RESEARCH_REVIEW_2026-10-30.md"
 }
 ```
