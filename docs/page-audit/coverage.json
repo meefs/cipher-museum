@@ -30,9 +30,9 @@
     {
       "path": "challenges.html",
       "title": "Cipher Challenges — The Cipher Museum",
-      "words": 126,
-      "sha256": "9a1716e3dd5803fc072e678d845c7ea219197118d806a5844c19dff089682a24",
-      "status": "bounded review and local release validation complete",
+      "words": 167,
+      "sha256": "a086b50ab9e8cad0e8ad57117f38f06cd8af5e5d9d6467b8d2202f550d7e880d",
+      "status": "book companion integration: changed invitation and local links checked; earlier reviews remain historical evidence",
       "sources": [],
       "notes": "Root reread all ten challenge JSON entries and explanations in addition to page prose; examples and conclusions checked within their stated cipher/model assumptions.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -50,7 +50,16 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "previous_status": "bounded review and local release validation complete",
+      "book_companion_integration": {
+        "date": "2026-10-30",
+        "source_pr": "https://github.com/systemslibrarian/cipher-museum/pull/16",
+        "source_merge_commit": "4600f1c97aea82bfbb78f86cd78e948badc63d8b",
+        "scope": "Read the added book-companion invitation and its surrounding page context; checked local href/src targets and HTML fragments. Refreshed this page inventory hash, title and static-body word count for the combined source.",
+        "historical_review_scope": "Existing prose, browser and release records describe their earlier snapshots. This integration does not repeat or extend those evidence claims to the current combined source.",
+        "limits": "No new external-source verification, browser run or deployment verification in this inventory update."
+      }
     },
     {
       "path": "cipher-corpus.html",
@@ -6297,6 +6306,21 @@
       "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
     },
     {
+      "path": "sealed-letter.html",
+      "title": "The Curator’s Sealed Letter — The Cipher Museum",
+      "words": 1370,
+      "sha256": "b33e010145bcec0c3f2e1de348b0b8d056d204219a3de9ac59fd7b40a2f952f4",
+      "status": "bounded integration reading and static puzzle checks complete; no browser execution in this inventory pass",
+      "sources": [],
+      "notes": "Read the complete page, including hidden case documents, hints, answer reveals and conclusion, plus js/reader-companion.js. Independently followed the four invented clues: COMPARE / THE COPIES / BEFORE / YOU TRUST THEM. Confirmed that the instruction wording in the fictional copies differs only in destination room and that the conclusion does not attribute authorship, intention or theft from the supplied records. The page labels the exercise fictional and its cipher methods simplified.",
+      "integration_review": {
+        "date": "2026-10-30",
+        "source_pr": "https://github.com/systemslibrarian/cipher-museum/pull/16",
+        "scope": "Complete static HTML and checker-source reading, arithmetic/route/code-key consistency, and local link/fragment existence.",
+        "limits": "No historical ciphertext reproduced or primary historical source checked. No browser interaction, visual accessibility or deployment verification performed in this inventory pass; the prior 214-page review did not include this new page."
+      }
+    },
+    {
       "path": "search.html",
       "title": "Search — The Cipher Museum",
       "words": 68,
@@ -6325,9 +6349,9 @@
     {
       "path": "teaching.html",
       "title": "Corpus Teaching Guide — The Cipher Museum",
-      "words": 548,
-      "sha256": "3bc03cae8cc696e9ee1537f269796eacd17eea4a1ac033b0cadb3a04b15b5ab0",
-      "status": "ebook follow-up implementation and local validation complete",
+      "words": 580,
+      "sha256": "536dd3de4048dc41a75232a1d760d65561686350e9f001f1c00d66d931d27d15",
+      "status": "book companion integration: changed invitation and local links checked; earlier reviews remain historical evidence",
       "sources": [
         "LASRY-2018"
       ],
@@ -6359,6 +6383,30 @@
         "browser_evidence": "docs/ebook-followup/browser.json",
         "browser_scope": "Both1280px and390px loaded without recorded script errors or document overflow; changed controls exercised separately.",
         "release_scope": "Local evidence only here; GitHub CI/deployment outcomes are tracked separately."
+      },
+      "previous_status": "ebook follow-up implementation and local validation complete",
+      "book_companion_integration": {
+        "date": "2026-10-30",
+        "source_pr": "https://github.com/systemslibrarian/cipher-museum/pull/16",
+        "source_merge_commit": "4600f1c97aea82bfbb78f86cd78e948badc63d8b",
+        "scope": "Read the added book-companion invitation and its surrounding page context; checked local href/src targets and HTML fragments. Refreshed this page inventory hash, title and static-body word count for the combined source.",
+        "historical_review_scope": "Existing prose, browser and release records describe their earlier snapshots. This integration does not repeat or extend those evidence claims to the current combined source.",
+        "limits": "No new external-source verification, browser run or deployment verification in this inventory update."
+      }
+    },
+    {
+      "path": "the-book.html",
+      "title": "Secrets of the Cipher Museum — Paul Clark — The Cipher Museum",
+      "words": 854,
+      "sha256": "eaeaf19e6298ef912384852c23742da684bb20428663c7e037907055a68e5561",
+      "status": "bounded integration reading and local link checks complete; historical excerpt sources not reverified",
+      "sources": [],
+      "notes": "Read the complete preview page, metadata, opening excerpt, image description, fictional reader-mystery invitation and reading-group questions. Confirmed its preview/publication-status wording and internal connections to the companion and Babington exhibit. The named chapter sources and the manuscript-dependent claims about chapter/diagram counts remain attributed to the book change; the manuscript and external historical sources were not reread for this integration.",
+      "integration_review": {
+        "date": "2026-10-30",
+        "source_pr": "https://github.com/systemslibrarian/cipher-museum/pull/16",
+        "scope": "Complete static HTML reading, metadata and navigation consistency, and local link/fragment existence.",
+        "limits": "No new independent verification of the Mary Stuart narrative, manuscript contents or cover pixels. No browser, visual or deployment verification performed in this inventory pass; the prior 214-page review did not include this new page."
       }
     },
     {
@@ -6507,5 +6555,24 @@
       "modern.html"
     ],
     "scope": "Existing engines preserved; workflow repairs and bounded evidence/OTP extensions. No paper experiments independently reproduced."
+  },
+  "merge_integration_2026_10_30": {
+    "research_pr": "https://github.com/systemslibrarian/cipher-museum/pull/15",
+    "research_head_before_integration": "6821e47b5f67acd41349ae89f7925e3460ca1eb0",
+    "book_companion_pr": "https://github.com/systemslibrarian/cipher-museum/pull/16",
+    "book_companion_merge_commit": "4600f1c97aea82bfbb78f86cd78e948badc63d8b",
+    "public_html_pages": 216,
+    "new_inventory_pages": [
+      "sealed-letter.html",
+      "the-book.html"
+    ],
+    "updated_existing_page_metadata": [
+      "challenges.html",
+      "teaching.html"
+    ],
+    "scope": "Reconcile the research-audit inventory with the already merged book companion. Read both new pages and the existing-page invitations; check synthetic clue arithmetic and all local links/fragments on the four pages. Preserve the original 214-page review checkpoint and its historical evidence limits.",
+    "word_count_method": "Whitespace-delimited static body text nodes with script/style contents excluded; includes hidden hints and case text.",
+    "static_local_link_checks": 69,
+    "limits": "Inventory coverage and static consistency are not new source verification, runtime/visual testing or deployment approval. The historical 214-page review was not expanded into a claim of 216 reviewed historical exhibits. Combined-source tests, audit export/package checks and deployment evidence are recorded separately."
   }
 }
