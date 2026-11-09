@@ -83,7 +83,20 @@
 
     <div class="panel">
       <div class="panel-head"><span class="panel-icon" aria-hidden="true"><svg class="icon" width="17" height="17"><use href="../images/icons.svg#i-gear"/></svg></span><span class="panel-title">How It Works</span></div>
-      <div class="panel-body"><p>A two-part codebook can provide two lookup directions; historical layouts varied:</p><ul style="margin:0.5rem 0 0 1.5rem;line-height:1.8;"><li>A <strong>plain index</strong> listing every English word or phrase the codebook covers, in alphabetical order, each beside its codeword.</li><li>A <strong>code index</strong> listing every codeword in alphabetical order, each beside its plaintext.</li></ul><p style="margin-top:1rem;">The museum’s CVCVC pattern uses 20 consonants (excluding Y) and five vowels, allowing 20³ × 5² = 200,000 combinations. If all 21 consonants were allowed, the count would be 231,525. Neither count is the number of entries in a particular historical book. Error-detecting designs restrict the vocabulary so that likely transmission errors are less likely to produce another valid codeword.</p><p style="margin-top:1rem;">The demo above operates on a small fixed wordlist using exactly the CVCVC encoding scheme. Words not in the wordlist fall through to a per-letter codebook so the round-trip stays clean for arbitrary input.</p></div>
+      <div class="panel-body"><p>In a <strong>one-part code</strong>, plaintext entries and their code groups follow corresponding orders, so one list can serve for both encoding and decoding. A <strong>two-part code</strong> breaks that correspondence: plaintext entries are ordered for encoding, but their assigned code groups are not in the same order. It therefore needs two lookup directions; historical layouts varied:</p><ul style="margin:0.5rem 0 0 1.5rem;line-height:1.8;"><li>A <strong>plain index</strong> listing every English word or phrase the codebook covers, in alphabetical order, each beside its codeword.</li><li>A <strong>code index</strong> listing every codeword in alphabetical order, each beside its plaintext.</li></ul>
+        <h3 id="codebook-order" style="margin-top:1.5rem;">Why the order matters</h3>
+        <table class="cipher-table">
+          <caption>Invented three-entry codebooks: the same code groups, ordered or shuffled</caption>
+          <thead><tr><th scope="col">Plaintext, sorted</th><th scope="col">One-part code</th><th scope="col">Two-part code</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">ARRIVE</th><td>1001</td><td>1003</td></tr>
+            <tr><th scope="row">ATTACK</th><td>1002</td><td>1001</td></tr>
+            <tr><th scope="row">RETREAT</th><td>1003</td><td>1002</td></tr>
+          </tbody>
+        </table>
+        <p>If an analyst knows only that 1001 means ARRIVE and 1003 means RETREAT in the one-part example, the unknown entry 1002 must lie between those plaintext entries alphabetically. That narrows the possibilities; it does not by itself identify ATTACK. In the shuffled two-part example, code-group order no longer supplies that clue. Repeated groups, message context and a captured codebook remain weaknesses.</p>
+        <p><strong>Reading:</strong> <cite>Encyclopedia of Cryptology</cite>, entries “One-Part Code” and “Two-Part Code,” pp. 202–203 and 281–282. The table is a teaching example, not a transcription of a historical codebook.</p>
+        <p style="margin-top:1rem;">The museum’s CVCVC pattern uses 20 consonants (excluding Y) and five vowels, allowing 20³ × 5² = 200,000 combinations. If all 21 consonants were allowed, the count would be 231,525. Neither count is the number of entries in a particular historical book. Error-detecting designs restrict the vocabulary so that likely transmission errors are less likely to produce another valid codeword.</p><p style="margin-top:1rem;">The demo above operates on a small fixed wordlist using exactly the CVCVC encoding scheme. Words not in the wordlist fall through to a per-letter codebook so the round-trip stays clean for arbitrary input.</p></div>
     </div>
 
     <div class="panel">
@@ -159,3 +172,4 @@
 <script src="../js/lightbox.js"></script>
 </body>
 </html>
+
