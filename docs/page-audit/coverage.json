@@ -1526,12 +1526,13 @@
     {
       "path": "ciphers/commercial-codebooks.html",
       "title": "Commercial Telegraph Codebooks (ABC, Bentley’s, Lieber’s · 1870s–1930s) — The Cipher Museum",
-      "words": 715,
-      "sha256": "2d2e9661ccb1b5029c57fde52435eadb9e2f28c29440af5a838d6d44965faf20",
-      "status": "bounded review and local release validation complete",
+      "words": 884,
+      "sha256": "aa894167af7fd5cfcfd7f1a796196e8553fa5de0829e64d6045bec573371895e",
+      "status": "codebook-order teaching addition reviewed; automated publication checks tracked separately",
       "sources": [
         "KAHN-1996",
-        "RFC7541"
+        "RFC7541",
+        "NEWTON-1997"
       ],
       "notes": "Read tariff/codeword history in Kahn Ch22; distinguished variable historic forms from the20-consonant museum model. 200000 model combinations versus231525 with21 consonants. HPACK length-based leakage corrected. Final public-prose consistency reread completed by exhibit_final_read; source and runtime limits remain separate.",
       "browser_smoke": "Local Chromium loaded without script errors or horizontal overflow; external resources blocked. Not a historical verification.",
@@ -1550,7 +1551,15 @@
         "evidence": "docs/page-audit/browser-final.json",
         "scope": "HTTP200, no uncaught script error or document overflow; external requests blocked; this is not factual certification."
       },
-      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json."
+      "release_validation": "Local checks and GitHub CI passed; complete artifact deployed.26representative live files checked separately in live-verification.json.",
+      "codebook_order_addition": {
+        "date": "2026-11-09",
+        "source_commit": "4c7997657b4360d7371d5bb9242e1195ee05f7a8",
+        "scope": "Clarified corresponding plaintext/code-group order in one-part codes versus shuffled assignments and two lookup directions in two-part codes. Added an explicitly invented three-entry comparison and explained the limited alphabetical clue, without claiming it identifies an unknown word.",
+        "evidence": "Encyclopedia of Cryptology, entries One-Part Code and Two-Part Code, printed pp. 202–203 and 281–282.",
+        "validation": "Checked sorted plaintext, increasing one-part groups, the shuffled reuse of the same group set, preserved demo controls and unique HTML IDs. Static body word count excludes script/style contents.",
+        "limits": "Review covers this teaching addition and its surrounding explanation. Earlier prose, browser and release records describe their earlier snapshots; this entry does not extend those claims or assert deployment."
+      }
     },
     {
       "path": "ciphers/confederate-vigenere.html",
@@ -8218,3 +8227,4 @@
     "limits": "Immutable corpus and historical review checkpoints preserved. New source records describe selected passages; automated exercises use declared original fixtures."
   }
 }
+

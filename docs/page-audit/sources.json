@@ -1,4 +1,16 @@
 {
+  "NEWTON-1997": {
+    "title": "Encyclopedia of Cryptology",
+    "authors": [
+      "David E. Newton"
+    ],
+    "year": 1997,
+    "passages_read": [
+      "One-Part Code, printed pp. 202–203",
+      "Two-Part Code, printed pp. 281–282"
+    ],
+    "scope": "Corresponding plaintext/code-group order in one-part codes, shuffled assignments and separate lookup directions in two-part codes. Supports the classification explanation; the displayed three-entry table is invented, not a historical transcription."
+  },
   "HAC-1997": {
     "title": "Handbook of Applied Cryptography",
     "authors": [
@@ -2294,3 +2306,4 @@
     "verification": "Real scorer substitutions, paired settings, full-result arithmetic and unchanged-matrix repeat; precise runtime and input hashes recorded with the results."
   }
 }
+
